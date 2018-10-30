@@ -72,6 +72,9 @@ jobs:
             - bundle-{{ arch }}-v5-{{ checksum "Gemfile.lock" }}
             - bundle-{{ arch }}-v5
       - run: bundle install
+      - run: wget https://releases.hashicorp.com/vault/0.10.1/vault_0.10.1_linux_amd64.zip -O ~/vault.zip
+      - run: unzip ~/vault.zip -d ~/vault/
+
       - save_cache:
           key: bundle-{{ arch }}-v5-{{ checksum "Gemfile.lock" }}
           paths:
@@ -91,6 +94,7 @@ jobs:
             - .gradle
             - ~/.gradle
 
+      - run: PATH=$PATH:$HOME/vault && bash ../scripts/pull_google_services.sh
       - run: ./gradlew :app:deliverArchives -x bundleReleaseJsAndAssets
 
       - run:
