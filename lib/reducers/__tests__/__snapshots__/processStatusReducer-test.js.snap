@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`clears all messages for section 1`] = `Object {}`;
+
+exports[`clears all messages for section 2`] = `Object {}`;
+
+exports[`clears messages for section 1`] = `Object {}`;
+
+exports[`clears messages for section 2`] = `
+Object {
+  "sensui": Object {
+    "working": true,
+  },
+}
+`;
+
+exports[`clears messages for section 3`] = `
+Object {
+  "unnu": Object {
+    "error": "nooooh",
+    "message": "Woohoo",
+  },
+}
+`;
+
+exports[`completes process for section 1`] = `
+Object {
+  "unnu": Object {
+    "completed": true,
+  },
+}
+`;
+
+exports[`completes process for section 2`] = `
+Object {
+  "sensui": Object {
+    "working": true,
+  },
+  "unnu": Object {
+    "completed": true,
+    "error": "nooooh",
+  },
+}
+`;
+
+exports[`completes process for section 3`] = `
+Object {
+  "sensui": Object {
+    "completed": true,
+  },
+  "unnu": Object {
+    "error": "nooooh",
+    "message": "Woohoo",
+  },
+}
+`;
+
+exports[`sets error for section 1`] = `
+Object {
+  "unnu": Object {
+    "error": "Dang it broke",
+  },
+}
+`;
+
+exports[`sets error for section 2`] = `
+Object {
+  "sensui": Object {
+    "working": true,
+  },
+  "unnu": Object {
+    "error": "Dang it broke",
+    "message": "Woohoo",
+  },
+}
+`;
+
+exports[`sets error for section 3`] = `
+Object {
+  "sensui": Object {
+    "error": "Dang it broke",
+    "working": true,
+  },
+  "unnu": Object {
+    "error": "nooooh",
+    "message": "Woohoo",
+  },
+}
+`;
+
+exports[`sets error for section 4`] = `
+Object {
+  "unnu": Object {
+    "error": "Dang it broke",
+  },
+}
+`;
+
+exports[`sets error for section 5`] = `
+Object {
+  "sensui": Object {
+    "working": true,
+  },
+  "unnu": Object {
+    "error": "Dang it broke",
+  },
+}
+`;
+
+exports[`sets error for section 6`] = `
+Object {
+  "sensui": Object {
+    "error": "Dang it broke",
+  },
+  "unnu": Object {
+    "error": "nooooh",
+    "message": "Woohoo",
+  },
+}
+`;
+
+exports[`sets message for section 1`] = `
+Object {
+  "unnu": Object {
+    "message": "Looking good",
+  },
+}
+`;
+
+exports[`sets message for section 2`] = `
+Object {
+  "sensui": Object {
+    "working": true,
+  },
+  "unnu": Object {
+    "message": "Looking good",
+  },
+}
+`;
+
+exports[`sets message for section 3`] = `
+Object {
+  "sensui": Object {
+    "message": "Looking good",
+    "working": true,
+  },
+  "unnu": Object {
+    "error": "nooooh",
+    "message": "Woohoo",
+  },
+}
+`;
+
+exports[`starts working for section 1`] = `
+Object {
+  "unnu": Object {
+    "working": true,
+  },
+}
+`;
+
+exports[`starts working for section 2`] = `
+Object {
+  "sensui": Object {
+    "working": true,
+  },
+  "unnu": Object {
+    "error": "nooooh",
+    "message": "Woohoo",
+    "working": true,
+  },
+}
+`;
+
+exports[`starts working for section 3`] = `
+Object {
+  "sensui": Object {
+    "working": true,
+  },
+  "unnu": Object {
+    "error": "nooooh",
+    "message": "Woohoo",
+  },
+}
+`;
+
+exports[`stops working for section 1`] = `
+Object {
+  "unnu": null,
+}
+`;
+
+exports[`stops working for section 2`] = `
+Object {
+  "sensui": Object {
+    "working": true,
+  },
+  "unnu": Object {
+    "error": "nooooh",
+    "message": "Woohoo",
+  },
+}
+`;
+
+exports[`stops working for section 3`] = `
+Object {
+  "sensui": Object {},
+  "unnu": Object {
+    "error": "nooooh",
+    "message": "Woohoo",
+  },
+}
+`;

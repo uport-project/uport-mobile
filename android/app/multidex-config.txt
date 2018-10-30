@@ -1,0 +1,6 @@
+com/google/android/gms/vision/face/internal/client/zzc.class
+com/google/android/gms/common/internal/safeparcel/zza.class
+com/reactnativenavigation/NavigationApplication.class
+com/uportMobile/MainApplication.class
+io/fabric/sdk/android/services/common/FirebaseInfo.class
+com/evollu/react/fcm/FIRMessagingPackage.class

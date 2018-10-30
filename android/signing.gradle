@@ -1,0 +1,227 @@
+/*
+ * Copyright (C) 2018 ConsenSys AG
+ *
+ * This file is part of uPort Mobile App.
+ *
+ * uPort Mobile App is free software: you can redistribute it and/or modify it under the terms of
+ * the GNU General Public License as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ *
+ * uPort Mobile App is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with uPort Mobile App.
+ * If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+import groovy.transform.Field
+
+@Field private String b64KeystoreFileData
+@Field private String vaultKeystorePassword
+@Field private String vaultKeyPassword
+@Field private String vaultKeyAlias
+@Field private File vaultKeystoreTempFile
+
+// hardcoded secret paths in vault
+@Field private static final String secretKeystoreFileData = "secret/android/keystore_file_data"
+@Field private static final String secretKeystorePassword = "secret/android/keystore_password"
+@Field private static final String secretKeyAlias = "secret/android/key_alias"
+@Field private static final String secretKeyPassword = "secret/android/key_password"
+
+/**
+ * Utility function to check if a file can be read from this process
+ * @param file
+ * @return
+ */
+static boolean fileReadable(File file) {
+    if (!file.exists() || !file.canRead())
+        return false
+
+    try {
+        FileReader fileReader = new FileReader(file.getAbsolutePath())
+        fileReader.read()
+        fileReader.close()
+    } catch (Exception ignored) {
+        return false
+    }
+    return true
+}
+
+/**
+ * rewrite a file with random bytes
+ * @param file
+ */
+static void fillWithGarbage(File file) {
+    if (file == null) {
+        return
+    }
+    byte[] buffer = new byte[file.size()]
+    RandomAccessFile raf = new RandomAccessFile(file, "rw")
+    raf.seek(0)
+    new Random().nextBytes(buffer)
+    raf.write(buffer)
+    raf.close()
+}
+
+def clearFields() {
+    b64KeystoreFileData = null
+    vaultKeystorePassword = null
+    vaultKeyAlias = null
+    vaultKeyPassword = null
+}
+
+
+def getReleaseKeystore() {
+    checkVaultEnvironment()
+    String keystoreFile
+    if (project.hasProperty("IGNORE_VAULT")) {
+        //build release using dummy signature
+        keystoreFile = "../keystores/dummy-release.keystore"
+    } else {
+        try {
+            b64KeystoreFileData = project?.vault?.get(secretKeystoreFileData.toString())['data']['value']
+        } catch (Exception e) {
+            throw new InvalidUserDataException("There was an error while reading the keystore data from vault.\n" +
+                    "Make sure to have $secretKeystoreFileData in the vault.\n" +
+                    "Run this task with -PIGNORE_VAULT to skip secrets and build a release apk using a dummy signature", e)
+        }
+        vaultKeystoreTempFile = File.createTempFile("datapipe-ks", ".jksdump")
+        byte[] keystoreBytes = Base64.decoder.decode(b64KeystoreFileData)
+
+        FileOutputStream stream = new FileOutputStream(vaultKeystoreTempFile)
+        try {
+            stream.write(keystoreBytes)
+        } finally {
+            stream.close()
+        }
+        keystoreFile = vaultKeystoreTempFile
+    }
+
+    return file(keystoreFile)
+}
+
+def getReleaseKeystorePassword() {
+    checkVaultEnvironment()
+    String keystorePassword
+    if (project.hasProperty("IGNORE_VAULT")) {
+        //build release using dummy signature
+        keystorePassword = "dummypassword"
+    } else {
+        try {
+            vaultKeystorePassword = project?.vault?.get(secretKeystorePassword)['data']['value']
+        } catch (Exception e) {
+            throw new InvalidUserDataException("There was an error while reading the keystore password from vault.\n" +
+                    "Make sure to have $secretKeystorePassword in the vault.\n" +
+                    "Run this task with -PIGNORE_VAULT to skip secrets and build a release apk using a dummy signature", e)
+        }
+        keystorePassword = vaultKeystorePassword
+    }
+    return keystorePassword
+}
+
+
+def getReleaseKeyAlias() {
+    checkVaultEnvironment()
+    String keyAlias
+    if (project.hasProperty("IGNORE_VAULT")) {
+        //build release using dummy signature
+        keyAlias = "dummy-alias"
+    } else {
+        try {
+            vaultKeyAlias = project?.vault?.get(secretKeyAlias)['data']['value']
+        } catch (Exception e) {
+            throw new InvalidUserDataException("There was an error while reading the key alias from vault.\n" +
+                    "Make sure to have $secretKeyAlias in the vault.\n" +
+                    "Run this task with -PIGNORE_VAULT to skip secrets and build a release apk using a dummy signature", e)
+        }
+        keyAlias = vaultKeyAlias
+    }
+    return keyAlias
+}
+
+def getReleaseKeyPassword() {
+    checkVaultEnvironment()
+    String keyPassword
+    if (project.hasProperty("IGNORE_VAULT")) {
+        //build release using dummy signature
+        keyPassword = "dummypassword"
+    } else {
+        try {
+            vaultKeyPassword = project?.vault?.get(secretKeyPassword)['data']['value']
+        } catch (Exception e) {
+            throw new InvalidUserDataException("There was an error while reading the key alias from vault.\n" +
+                    "Make sure to have $secretKeyPassword in the vault.\n" +
+                    "Run this task with -PIGNORE_VAULT to skip secrets and build a release apk using a dummy signature", e)
+        }
+        keyPassword = vaultKeyPassword
+    }
+    return keyPassword
+}
+
+
+def checkVaultEnvironment() {
+
+    if (project.hasProperty("IGNORE_VAULT")) {
+        //build release using dummy signature
+        return
+    }
+
+    File tokenFile = new File("${System.env.HOME}/.vault-token")
+
+    if (fileReadable(tokenFile)) {
+        if (System.env.VAULT_TOKEN == null || System.env.VAULT_TOKEN == "") {
+            project?.vault?.token = tokenFile.text
+        }
+    }
+
+    if (System.env.VAULT_ADDR == null || ( System.env.VAULT_TOKEN == null && !fileReadable(tokenFile) )) {
+        throw new InvalidUserDataException("Vault coordinates are not configured.\n" +
+                "VAULT_ADDR and VAULT_TOKEN need to be set as environment variables.\n" +
+                "Run this task with -PIGNORE_VAULT to skip secrets and build a release apk using a dummy signature")
+    }
+}
+
+def doClearSecrets() {
+    clearFields()
+    fillWithGarbage(vaultKeystoreTempFile)
+    println "deleting $vaultKeystoreTempFile"
+    vaultKeystoreTempFile?.delete()
+    println "deleted $vaultKeystoreTempFile"
+}
+
+ext {
+    getReleaseKeystore = this.&getReleaseKeystore
+    getReleaseKeystorePassword = this.&getReleaseKeystorePassword
+    getReleaseKeyAlias = this.&getReleaseKeyAlias
+    getReleaseKeyPassword = this.&getReleaseKeyPassword
+}
+
+task prepareVault {
+    doFirst {
+        checkVaultEnvironment()
+    }
+}
+
+task clearSecrets {
+    doLast {
+        doClearSecrets()
+    }
+}
+
+project.afterEvaluate {
+    Task signingTask = tasks.findByPath("validateSigningRelease")
+    signingTask?.dependsOn prepareVault
+
+    Task assemblyTask = tasks.findByPath("assembleRelease")
+    assemblyTask?.dependsOn prepareVault
+    assemblyTask?.finalizedBy clearSecrets
+}
+
+gradle.taskGraph.whenReady {
+    gradle.taskGraph.allTasks[-1].doLast {
+        doClearSecrets()
+    }
+}
+

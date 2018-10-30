@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates a CHECK_FOR_NOTIFICATIONS action containing the token 1`] = `
+Object {
+  "type": "CHECK_FOR_NOTIFICATIONS",
+}
+`;
+
+exports[`creates a HANDLE_ENCRYPTED_MESSAGE action containing the token 1`] = `
+Object {
+  "id": "012314",
+  "type": "HANDLE_ENCRYPTED_MESSAGE",
+}
+`;
+
+exports[`creates a INIT_NOTIFICATIONS action 1`] = `
+Object {
+  "type": "INIT_NOTIFICATIONS",
+}
+`;
+
+exports[`creates a POLL_FOR_NOTIFICATIONS action containing the token 1`] = `
+Object {
+  "type": "POLL_FOR_NOTIFICATIONS",
+}
+`;
+
+exports[`creates a RECEIVE_DEVICE_TOKEN action containing the token 1`] = `
+Object {
+  "deviceToken": "xxxxxx",
+  "type": "RECEIVE_DEVICE_TOKEN",
+}
+`;
+
+exports[`creates a REGISTER_DEVICE_FOR_NOTIFICATIONS action 1`] = `
+Object {
+  "type": "REGISTER_DEVICE_FOR_NOTIFICATIONS",
+}
+`;
+
+exports[`creates a SEND_LOCAL_NOTIFICATION action containing the activity id and message 1`] = `
+Object {
+  "activityId": 123,
+  "message": "You received a message",
+  "repeatInterval": undefined,
+  "type": "SEND_LOCAL_NOTIFICATION",
+}
+`;
+
+exports[`creates a STORE_DEVICE_TOKEN action containing the token 1`] = `
+Object {
+  "deviceToken": "xxxxxx",
+  "type": "STORE_DEVICE_TOKEN",
+}
+`;
+
+exports[`creates a STORE_ENDPOINT_ARN action containing the arn 1`] = `
+Object {
+  "endpointArn": "aws:arn:dddd",
+  "type": "STORE_ENDPOINT_ARN",
+}
+`;
+
+exports[`creates a UPDATE_BADGE_COUNT action 1`] = `
+Object {
+  "type": "UPDATE_BADGE_COUNT",
+}
+`;

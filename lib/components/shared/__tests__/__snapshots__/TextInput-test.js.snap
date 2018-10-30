@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders TextInput with label 1`] = `
+<View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "rgba(130, 130, 130, 1)",
+        "fontFamily": "NunitoSans-Bold",
+        "fontSize": 12,
+        "marginBottom": 5,
+      }
+    }
+  >
+    Test
+  </Text>
+  <View
+    style={
+      Array [
+        Object {
+          "borderColor": "rgba(224,223,230, 1)",
+          "borderRadius": 8,
+          "borderWidth": 0.5,
+          "flexDirection": "row",
+          "height": 54,
+          "marginBottom": 25,
+          "paddingLeft": 15,
+          "paddingRight": 15,
+        },
+        undefined,
+      ]
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      keyboardAppearance="light"
+      label="Test"
+      multiline={undefined}
+      placeholder="Placeholder"
+      placeholderTextColor="rgba(224,223,230, 1)"
+      style={
+        Array [
+          Object {
+            "color": "#3c3a49",
+            "flex": 1,
+            "fontFamily": "NunitoSans-Regular",
+            "fontSize": 16,
+          },
+          undefined,
+        ]
+      }
+      underlineColorAndroid="white"
+    />
+  </View>
+</View>
+`;
+
+exports[`renders TextInput without label 1`] = `
+<View>
+  <View
+    style={
+      Array [
+        Object {
+          "borderColor": "rgba(224,223,230, 1)",
+          "borderRadius": 8,
+          "borderWidth": 0.5,
+          "flexDirection": "row",
+          "height": 54,
+          "marginBottom": 25,
+          "paddingLeft": 15,
+          "paddingRight": 15,
+        },
+        undefined,
+      ]
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      keyboardAppearance="light"
+      multiline={undefined}
+      placeholder="Placeholder"
+      placeholderTextColor="rgba(224,223,230, 1)"
+      style={
+        Array [
+          Object {
+            "color": "#3c3a49",
+            "flex": 1,
+            "fontFamily": "NunitoSans-Regular",
+            "fontSize": 16,
+          },
+          undefined,
+        ]
+      }
+      underlineColorAndroid="white"
+    />
+  </View>
+</View>
+`;

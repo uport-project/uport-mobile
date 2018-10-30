@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates a CATCHUP_HUB action 1`] = `
+Object {
+  "type": "CATCHUP_HUB",
+}
+`;
+
+exports[`creates a CATCHUP_HUB action 2`] = `
+Object {
+  "type": "TAKE_QUEUED_EVENT",
+}
+`;
+
+exports[`creates a CLEAR_QUEUE action 1`] = `
+Object {
+  "type": "CLEAR_QUEUE",
+}
+`;
+
+exports[`creates a STORE_HUB_HEAD action 1`] = `
+Object {
+  "hash": "abcdefg",
+  "type": "STORE_HUB_HEAD",
+}
+`;
+
+exports[`creates a STORE_HUB_HEAD action 2`] = `
+Object {
+  "event": Object {
+    "data": "stuff",
+    "type": "SOME_EVENT",
+  },
+  "type": "QUEUE_EVENT",
+}
+`;
+
+exports[`creates an IMPORT_SNAPSHOT action 1`] = `
+Object {
+  "snapshot": Object {
+    "hdwallet": Object {},
+    "uport": Array [],
+  },
+  "type": "IMPORT_SNAPSHOT",
+}
+`;

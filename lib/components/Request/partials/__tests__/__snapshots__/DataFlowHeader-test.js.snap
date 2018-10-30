@@ -1,0 +1,268 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataFlowHeader renders unverified correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flexDirection": "row",
+      "justifyContent": "center",
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 0,
+            "justifyContent": "center",
+          },
+          Object {
+            "backgroundColor": "white",
+            "borderRadius": 3,
+            "height": 70,
+            "width": 70,
+          },
+        ]
+      }
+    >
+      <Image
+        resizeMode="cover"
+        source={
+          Object {
+            "testUri": "../../../images/default_profile_image.png",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "borderRadius": 3,
+              "height": 70,
+              "width": 70,
+            },
+            Object {
+              "position": "absolute",
+            },
+            Array [
+              Object {
+                "borderRadius": 3,
+                "height": 70,
+                "width": 70,
+              },
+              undefined,
+            ],
+          ]
+        }
+      />
+    </View>
+  </View>
+  <Image
+    source={
+      Object {
+        "testUri": "../../../images/ForwardArrow.png",
+      }
+    }
+    style={
+      Object {
+        "height": 18,
+        "marginLeft": 24,
+        "marginRight": 24,
+        "width": 26,
+      }
+    }
+  />
+  <View>
+    <View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flex": 0,
+              "justifyContent": "center",
+            },
+            Object {
+              "backgroundColor": "white",
+              "borderRadius": 3,
+              "height": 70,
+              "width": 70,
+            },
+          ]
+        }
+      >
+        <Image
+          resizeMode="cover"
+          source={
+            Object {
+              "testUri": "../../../images/default_profile_image.png",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "borderRadius": 3,
+                "height": 70,
+                "width": 70,
+              },
+              Object {
+                "position": "absolute",
+              },
+              Array [
+                Object {
+                  "borderRadius": 3,
+                  "height": 70,
+                  "width": 70,
+                },
+                undefined,
+              ],
+            ]
+          }
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`DataFlowHeader renders verified correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flexDirection": "row",
+      "justifyContent": "center",
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 0,
+            "justifyContent": "center",
+          },
+          Object {
+            "backgroundColor": "white",
+            "borderRadius": 3,
+            "height": 70,
+            "width": 70,
+          },
+        ]
+      }
+    >
+      <Image
+        resizeMode="cover"
+        source={
+          Object {
+            "testUri": "../../../images/default_profile_image.png",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "borderRadius": 3,
+              "height": 70,
+              "width": 70,
+            },
+            Object {
+              "position": "absolute",
+            },
+            Array [
+              Object {
+                "borderRadius": 3,
+                "height": 70,
+                "width": 70,
+              },
+              undefined,
+            ],
+          ]
+        }
+      />
+    </View>
+  </View>
+  <Image
+    source={
+      Object {
+        "testUri": "../../../images/ForwardArrow.png",
+      }
+    }
+    style={
+      Object {
+        "height": 18,
+        "marginLeft": 24,
+        "marginRight": 24,
+        "width": 26,
+      }
+    }
+  />
+  <View>
+    <View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flex": 0,
+              "justifyContent": "center",
+            },
+            Object {
+              "backgroundColor": "white",
+              "borderRadius": 3,
+              "height": 70,
+              "width": 70,
+            },
+          ]
+        }
+      >
+        <Image
+          resizeMode="cover"
+          source={
+            Object {
+              "testUri": "../../../images/default_profile_image.png",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "borderRadius": 3,
+                "height": 70,
+                "width": 70,
+              },
+              Object {
+                "position": "absolute",
+              },
+              Array [
+                Object {
+                  "borderRadius": 3,
+                  "height": 70,
+                  "width": 70,
+                },
+                undefined,
+              ],
+            ]
+          }
+        />
+      </View>
+    </View>
+    <Image
+      source={
+        Object {
+          "testUri": "../../../images/uport-verif.png",
+        }
+      }
+      style={
+        Object {
+          "height": 26,
+          "position": "absolute",
+          "right": -12,
+          "top": 18,
+        }
+      }
+    />
+  </View>
+</View>
+`;

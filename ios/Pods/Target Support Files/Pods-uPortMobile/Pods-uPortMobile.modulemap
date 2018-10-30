@@ -1,0 +1,6 @@
+framework module Pods_uPortMobile {
+  umbrella header "Pods-uPortMobile-umbrella.h"
+
+  export *
+  module * { export * }
+}

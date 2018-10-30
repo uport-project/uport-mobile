@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`performs EDIT_MY_INFO 1`] = `
+Object {
+  "changed": Object {
+    "name": "Barrington Levi",
+  },
+}
+`;
+
+exports[`performs EDIT_MY_INFO 2`] = `
+Object {
+  "changed": Object {
+    "name": "Barrington Levi",
+    "phone": "555-LOVE",
+  },
+}
+`;
+
+exports[`performs SAVE_SHARE_TOKEN 1`] = `
+Object {
+  "changed": Object {},
+  "shareToken": "JWT",
+}
+`;
+
+exports[`performs SAVE_SHARE_TOKEN 2`] = `
+Object {
+  "changed": Object {
+    "name": "Isaac Hayes",
+    "phone": "555-LOVE",
+  },
+  "shareToken": "JWT",
+}
+`;

@@ -1,0 +1,254 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with name and avatar 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flexDirection": "row",
+      "padding": 15,
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 0,
+            "justifyContent": "center",
+          },
+          Object {
+            "backgroundColor": "white",
+            "borderRadius": 3,
+            "height": 96,
+            "width": 96,
+          },
+        ]
+      }
+    >
+      <Image
+        resizeMode="cover"
+        source={
+          Object {
+            "uri": "http:/image.hello.jpg",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "borderRadius": 3,
+              "height": 96,
+              "width": 96,
+            },
+            Object {
+              "position": "absolute",
+            },
+            Array [
+              Object {
+                "borderRadius": 3,
+                "height": 96,
+                "width": 96,
+              },
+              undefined,
+            ],
+          ]
+        }
+      />
+    </View>
+  </View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "rgba(74,74,74,1)",
+          "fontFamily": "NunitoSans-Bold",
+          "fontSize": 24,
+          "lineHeight": 33,
+          "textAlign": "center",
+        },
+        Object {
+          "flex": 1,
+          "marginLeft": 24,
+          "paddingLeft": 2,
+          "textAlign": "left",
+        },
+      ]
+    }
+  >
+    Bill Jeffries Smith
+  </Text>
+</View>
+`;
+
+exports[`renders correctly with only avatar 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flexDirection": "row",
+      "padding": 15,
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 0,
+            "justifyContent": "center",
+          },
+          Object {
+            "backgroundColor": "white",
+            "borderRadius": 3,
+            "height": 96,
+            "width": 96,
+          },
+        ]
+      }
+    >
+      <Image
+        resizeMode="cover"
+        source={
+          Object {
+            "uri": "http:/image.hello.jpg",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "borderRadius": 3,
+              "height": 96,
+              "width": 96,
+            },
+            Object {
+              "position": "absolute",
+            },
+            Array [
+              Object {
+                "borderRadius": 3,
+                "height": 96,
+                "width": 96,
+              },
+              undefined,
+            ],
+          ]
+        }
+      />
+    </View>
+  </View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "rgba(74,74,74,1)",
+          "fontFamily": "NunitoSans-Bold",
+          "fontSize": 24,
+          "lineHeight": 33,
+          "textAlign": "center",
+        },
+        Object {
+          "flex": 1,
+          "marginLeft": 24,
+          "paddingLeft": 2,
+          "textAlign": "left",
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`renders correctly with only name 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flexDirection": "row",
+      "padding": 15,
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 0,
+            "justifyContent": "center",
+          },
+          Object {
+            "backgroundColor": "white",
+            "borderRadius": 3,
+            "height": 96,
+            "width": 96,
+          },
+        ]
+      }
+    >
+      <Image
+        resizeMode="cover"
+        source={
+          Object {
+            "testUri": "../../../images/default_profile_image.png",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "borderRadius": 3,
+              "height": 96,
+              "width": 96,
+            },
+            Object {
+              "position": "absolute",
+            },
+            Array [
+              Object {
+                "borderRadius": 3,
+                "height": 96,
+                "width": 96,
+              },
+              undefined,
+            ],
+          ]
+        }
+      />
+    </View>
+  </View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "rgba(74,74,74,1)",
+          "fontFamily": "NunitoSans-Bold",
+          "fontSize": 24,
+          "lineHeight": 33,
+          "textAlign": "center",
+        },
+        Object {
+          "flex": 1,
+          "marginLeft": 24,
+          "paddingLeft": 2,
+          "textAlign": "left",
+        },
+      ]
+    }
+  >
+    Bill Jeffries Smith
+  </Text>
+</View>
+`;

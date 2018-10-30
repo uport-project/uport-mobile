@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`performs AUTHORIZE_CAMERA 1`] = `
+Object {
+  "cameraAuthorized": "authorized",
+  "notificationsAuthorized": "undetermined",
+  "photoAuthorized": "undetermined",
+}
+`;
+
+exports[`performs AUTHORIZE_CAMERA 2`] = `
+Object {
+  "cameraAuthorized": "authorized",
+  "photoAuthorized": "denied",
+}
+`;
+
+exports[`performs AUTHORIZE_PHOTOS 1`] = `
+Object {
+  "cameraAuthorized": "undetermined",
+  "notificationsAuthorized": "undetermined",
+  "photoAuthorized": "authorized",
+}
+`;
+
+exports[`performs AUTHORIZE_PHOTOS 2`] = `
+Object {
+  "cameraAuthorized": "denied",
+  "photoAuthorized": "authorized",
+}
+`;

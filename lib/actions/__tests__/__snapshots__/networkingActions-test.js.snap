@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates a ANALYZE_ADDRESS action 1`] = `
+Object {
+  "address": "0x1231",
+  "type": "ANALYZE_ADDRESS",
+}
+`;
+
+exports[`creates a MARK_OFFLINE action 1`] = `
+Object {
+  "type": "MARK_OFFLINE",
+}
+`;
+
+exports[`creates a MARK_ONLINE action 1`] = `
+Object {
+  "type": "MARK_ONLINE",
+}
+`;
+
+exports[`creates a SAVE_GAS_PRICE action 1`] = `
+Object {
+  "gasPrice": 123123123123,
+  "type": "SAVE_GAS_PRICE",
+}
+`;

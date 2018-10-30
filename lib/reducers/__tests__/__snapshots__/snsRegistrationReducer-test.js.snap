@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sets device token 1`] = `
+Object {
+  "deviceToken": "xxxxxx",
+}
+`;
+
+exports[`sets device token 2`] = `
+Object {
+  "deviceToken": "xxxxxx",
+}
+`;
+
+exports[`sets device token 3`] = `
+Object {
+  "deviceToken": "xxxxxx",
+  "endpointArn": "aws:arn:b",
+}
+`;
+
+exports[`sets device token 4`] = `
+Object {
+  "deviceToken": "xxxxxx",
+}
+`;
+
+exports[`sets device token 5`] = `
+Object {
+  "deviceToken": "xxxxxx",
+}
+`;
+
+exports[`sets endpoint arn 1`] = `
+Object {
+  "endpointArn": "aws:arn:a",
+}
+`;
+
+exports[`sets endpoint arn 2`] = `
+Object {
+  "endpointArn": "aws:arn:a",
+}
+`;
+
+exports[`sets endpoint arn 3`] = `
+Object {
+  "endpointArn": "aws:arn:a",
+}
+`;
+
+exports[`sets endpoint arn 4`] = `
+Object {
+  "deviceToken": "yyyyyy",
+  "endpointArn": "aws:arn:a",
+}
+`;
+
+exports[`sets endpoint arn 5`] = `
+Object {
+  "endpointArn": "aws:arn:a",
+}
+`;
+
+exports[`sets skipPushNotifications 1`] = `
+Object {
+  "skippedPushNotifications": true,
+}
+`;
+
+exports[`sets skipPushNotifications 2`] = `
+Object {
+  "skippedPushNotifications": true,
+}
+`;
+
+exports[`sets skipPushNotifications 3`] = `
+Object {
+  "endpointArn": "aws:arn:b",
+  "skippedPushNotifications": true,
+}
+`;
+
+exports[`sets skipPushNotifications 4`] = `
+Object {
+  "deviceToken": "yyyyyy",
+  "skippedPushNotifications": true,
+}
+`;
+
+exports[`sets skipPushNotifications 5`] = `
+Object {
+  "skippedPushNotifications": true,
+}
+`;

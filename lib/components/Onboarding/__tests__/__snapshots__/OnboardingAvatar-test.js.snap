@@ -1,0 +1,1064 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OnboardingAvatar renders Onboarding Avatar screen 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "flex": 1,
+      "paddingTop": 10,
+    }
+  }
+>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "padding": 15,
+      }
+    }
+    contentInset={
+      Object {
+        "bottom": 0,
+      }
+    }
+    getTextInputRefs={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onScroll={[Function]}
+    overScrollMode="always"
+    scrollEventThrottle={200}
+    scrollToBottomOnKBShow={false}
+    scrollToInputAdditionalOffset={75}
+    startScrolledToBottom={false}
+    style={
+      Object {
+        "backgroundColor": "white",
+        "flex": 1,
+        "paddingTop": 10,
+      }
+    }
+  >
+    <View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#3c3a49",
+            },
+            undefined,
+            Object {
+              "color": "#3c3a49",
+              "fontFamily": "NunitoSans-Regular",
+              "fontSize": 24,
+              "lineHeight": 30,
+              "marginBottom": 40,
+              "marginTop": 25,
+              "textAlign": "center",
+            },
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+          ]
+        }
+      >
+        Enter Your Information
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#3c3a49",
+            },
+            undefined,
+            undefined,
+            undefined,
+            Object {
+              "color": "#3c3a49",
+              "fontFamily": "NunitoSans-Regular",
+              "fontSize": 16,
+              "lineHeight": 27,
+              "marginBottom": 15,
+              "textAlign": "center",
+            },
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+          ]
+        }
+      >
+        Your information is private and only stored on your device
+      </Text>
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignSelf": "center",
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <View
+          style={null}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "borderColor": "rgba(91,84,199,1)",
+                "borderRadius": 62,
+                "borderWidth": 2,
+                "flex": 0,
+                "height": 124,
+                "justifyContent": "center",
+                "width": 124,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "#3c3a49",
+                  },
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  Object {
+                    "color": "#5c50ca",
+                    "fontFamily": "NunitoSans-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 27,
+                    "marginBottom": 15,
+                    "textAlign": "center",
+                  },
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  Object {
+                    "marginBottom": 0,
+                  },
+                ]
+              }
+            >
+              Upload Photo
+            </Text>
+          </View>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#3c3a49",
+                },
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                Object {
+                  "color": "#5c50ca",
+                  "fontFamily": "NunitoSans-Regular",
+                  "fontSize": 16,
+                  "lineHeight": 27,
+                  "marginBottom": 15,
+                  "textAlign": "center",
+                },
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+              ]
+            }
+          >
+            Tap to upload
+          </Text>
+        </View>
+      </View>
+      <View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(130, 130, 130, 1)",
+              "fontFamily": "NunitoSans-Bold",
+              "fontSize": 12,
+              "marginBottom": 5,
+            }
+          }
+        >
+          Name
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "borderColor": "rgba(224,223,230, 1)",
+                "borderRadius": 8,
+                "borderWidth": 0.5,
+                "flexDirection": "row",
+                "height": 54,
+                "marginBottom": 25,
+                "paddingLeft": 15,
+                "paddingRight": 15,
+              },
+              undefined,
+            ]
+          }
+        >
+          <TextInput
+            allowFontScaling={true}
+            keyboardAppearance="light"
+            label="Name"
+            multiline={undefined}
+            onChangeText={[Function]}
+            placeholder="Enter your name"
+            placeholderTextColor="rgba(224,223,230, 1)"
+            returnKeyType="next"
+            style={
+              Array [
+                Object {
+                  "color": "#3c3a49",
+                  "flex": 1,
+                  "fontFamily": "NunitoSans-Regular",
+                  "fontSize": 16,
+                },
+                undefined,
+              ]
+            }
+            underlineColorAndroid="white"
+            value=""
+          />
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    enabled={true}
+    keyboardVerticalOffset={0}
+    onLayout={[Function]}
+    style={undefined}
+  >
+    <View
+      style={
+        Array [
+          undefined,
+          Object {
+            "bottom": 0,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "stretch",
+            "backgroundColor": "white",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "flex": 0,
+              "flexDirection": "row",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "borderRadius": 8,
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                  "margin": 15,
+                  "padding": 10,
+                },
+                Object {
+                  "backgroundColor": "rgba(0,0,0,0)",
+                  "borderColor": "rgba(185, 185, 185, 1)",
+                  "borderWidth": 1,
+                },
+              ]
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "fontFamily": "NunitoSans-Bold",
+                    "fontSize": 18,
+                    "textAlign": "center",
+                  },
+                  Array [
+                    Object {
+                      "color": "rgba(54,184,123,1)",
+                      "fontFamily": "NunitoSans-Bold",
+                      "fontSize": 18,
+                      "lineHeight": 25,
+                      "padding": 3,
+                    },
+                    Object {
+                      "color": "rgba(216,216,216,1)",
+                    },
+                  ],
+                  Object {
+                    "color": "rgba(185, 185, 185, 1)",
+                  },
+                ]
+              }
+            >
+              Next
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "flex": 0,
+              "flexDirection": "row",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "borderRadius": 8,
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                  "margin": 15,
+                  "padding": 10,
+                },
+                Object {
+                  "borderWidth": 0,
+                  "marginTop": 0,
+                },
+              ]
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "fontFamily": "NunitoSans-Bold",
+                    "fontSize": 18,
+                    "textAlign": "center",
+                  },
+                  Object {
+                    "color": "rgba(92,80,202,1)",
+                    "fontFamily": "NunitoSans-Regular",
+                    "fontSize": 18,
+                    "lineHeight": 25,
+                  },
+                  Object {},
+                ]
+              }
+            >
+              Skip
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`OnboardingAvatar renders Onboarding Avatar screen with an avatar 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "flex": 1,
+      "paddingTop": 10,
+    }
+  }
+>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "padding": 15,
+      }
+    }
+    contentInset={
+      Object {
+        "bottom": 0,
+      }
+    }
+    getTextInputRefs={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onScroll={[Function]}
+    overScrollMode="always"
+    scrollEventThrottle={200}
+    scrollToBottomOnKBShow={false}
+    scrollToInputAdditionalOffset={75}
+    startScrolledToBottom={false}
+    style={
+      Object {
+        "backgroundColor": "white",
+        "flex": 1,
+        "paddingTop": 10,
+      }
+    }
+  >
+    <View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#3c3a49",
+            },
+            undefined,
+            Object {
+              "color": "#3c3a49",
+              "fontFamily": "NunitoSans-Regular",
+              "fontSize": 24,
+              "lineHeight": 30,
+              "marginBottom": 40,
+              "marginTop": 25,
+              "textAlign": "center",
+            },
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+          ]
+        }
+      >
+        Enter Your Information
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#3c3a49",
+            },
+            undefined,
+            undefined,
+            undefined,
+            Object {
+              "color": "#3c3a49",
+              "fontFamily": "NunitoSans-Regular",
+              "fontSize": 16,
+              "lineHeight": 27,
+              "marginBottom": 15,
+              "textAlign": "center",
+            },
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+          ]
+        }
+      >
+        Your information is private and only stored on your device
+      </Text>
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignSelf": "center",
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <View
+          style={null}
+        >
+          <View>
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "flex": 0,
+                    "justifyContent": "center",
+                  },
+                  Object {
+                    "borderRadius": 3,
+                    "height": 124,
+                    "width": 124,
+                  },
+                  Object {
+                    "backgroundColor": "rgba(91,84,199,1)",
+                  },
+                  Object {
+                    "padding": 31,
+                  },
+                ]
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "fontFamily": "NunitoSans-Regular",
+                      "fontSize": 17.5,
+                      "textAlign": "center",
+                    },
+                    Object {
+                      "fontSize": 36,
+                    },
+                    Object {
+                      "color": "white",
+                      "fontSize": 31,
+                    },
+                  ]
+                }
+              >
+                
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(130, 130, 130, 1)",
+              "fontFamily": "NunitoSans-Bold",
+              "fontSize": 12,
+              "marginBottom": 5,
+            }
+          }
+        >
+          Name
+        </Text>
+        <View
+          style={
+            Array [
+              Object {
+                "borderColor": "rgba(224,223,230, 1)",
+                "borderRadius": 8,
+                "borderWidth": 0.5,
+                "flexDirection": "row",
+                "height": 54,
+                "marginBottom": 25,
+                "paddingLeft": 15,
+                "paddingRight": 15,
+              },
+              undefined,
+            ]
+          }
+        >
+          <TextInput
+            allowFontScaling={true}
+            keyboardAppearance="light"
+            label="Name"
+            multiline={undefined}
+            onChangeText={[Function]}
+            placeholder="Enter your name"
+            placeholderTextColor="rgba(224,223,230, 1)"
+            returnKeyType="next"
+            style={
+              Array [
+                Object {
+                  "color": "#3c3a49",
+                  "flex": 1,
+                  "fontFamily": "NunitoSans-Regular",
+                  "fontSize": 16,
+                },
+                undefined,
+              ]
+            }
+            underlineColorAndroid="white"
+            value=""
+          />
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    enabled={true}
+    keyboardVerticalOffset={0}
+    onLayout={[Function]}
+    style={undefined}
+  >
+    <View
+      style={
+        Array [
+          undefined,
+          Object {
+            "bottom": 0,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "stretch",
+            "backgroundColor": "white",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "flex": 0,
+              "flexDirection": "row",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "borderRadius": 8,
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                  "margin": 15,
+                  "padding": 10,
+                },
+                Object {
+                  "backgroundColor": "rgba(0,0,0,0)",
+                  "borderColor": "rgba(185, 185, 185, 1)",
+                  "borderWidth": 1,
+                },
+              ]
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "fontFamily": "NunitoSans-Bold",
+                    "fontSize": 18,
+                    "textAlign": "center",
+                  },
+                  Array [
+                    Object {
+                      "color": "rgba(54,184,123,1)",
+                      "fontFamily": "NunitoSans-Bold",
+                      "fontSize": 18,
+                      "lineHeight": 25,
+                      "padding": 3,
+                    },
+                    Object {
+                      "color": "rgba(216,216,216,1)",
+                    },
+                  ],
+                  Object {
+                    "color": "rgba(185, 185, 185, 1)",
+                  },
+                ]
+              }
+            >
+              Next
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "flex": 0,
+              "flexDirection": "row",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "borderRadius": 8,
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                  "margin": 15,
+                  "padding": 10,
+                },
+                Object {
+                  "borderWidth": 0,
+                  "marginTop": 0,
+                },
+              ]
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "fontFamily": "NunitoSans-Bold",
+                    "fontSize": 18,
+                    "textAlign": "center",
+                  },
+                  Object {
+                    "color": "rgba(92,80,202,1)",
+                    "fontFamily": "NunitoSans-Regular",
+                    "fontSize": 18,
+                    "lineHeight": 25,
+                  },
+                  Object {},
+                ]
+              }
+            >
+              Skip
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`OnboardingAvatar renders a connected component as expected 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ConectedComponent
+    addData={[Function]}
+    addImageOnboarding={[Function]}
+    address={null}
+    cameraStatus="authorized"
+    identity={null}
+    myInfo={null}
+    navigator={FakeNavigator {}}
+    offline={false}
+    photoStatus={undefined}
+    segmentId={null}
+    storeClaims={[Function]}
+    trackSegment={[Function]}
+    userData={Object {}}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <OnboardingAvatar
+        addData={[Function]}
+        addImageOnboarding={[Function]}
+        address={null}
+        cameraStatus="authorized"
+        identity={null}
+        myInfo={null}
+        navigator={FakeNavigator {}}
+        offline={false}
+        photoStatus={undefined}
+        segmentId={null}
+        storeClaims={[Function]}
+        trackSegment={[Function]}
+        userData={Object {}}
+      />,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "addData": [Function],
+        "addImageOnboarding": [Function],
+        "address": null,
+        "cameraStatus": "authorized",
+        "identity": null,
+        "myInfo": null,
+        "navigator": FakeNavigator {},
+        "offline": false,
+        "photoStatus": undefined,
+        "segmentId": null,
+        "storeClaims": [Function],
+        "trackSegment": [Function],
+        "userData": Object {},
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <OnboardingAvatar
+          addData={[Function]}
+          addImageOnboarding={[Function]}
+          address={null}
+          cameraStatus="authorized"
+          identity={null}
+          myInfo={null}
+          navigator={FakeNavigator {}}
+          offline={false}
+          photoStatus={undefined}
+          segmentId={null}
+          storeClaims={[Function]}
+          trackSegment={[Function]}
+          userData={Object {}}
+        />,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "addData": [Function],
+          "addImageOnboarding": [Function],
+          "address": null,
+          "cameraStatus": "authorized",
+          "identity": null,
+          "myInfo": null,
+          "navigator": FakeNavigator {},
+          "offline": false,
+          "photoStatus": undefined,
+          "segmentId": null,
+          "storeClaims": [Function],
+          "trackSegment": [Function],
+          "userData": Object {},
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "context": Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+    },
+  },
+}
+`;

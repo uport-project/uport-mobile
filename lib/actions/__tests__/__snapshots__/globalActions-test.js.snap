@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates a FORCE_PERSIST_DB action 1`] = `
+Object {
+  "type": "FORCE_PERSIST_DB",
+}
+`;
+
+exports[`creates a PERSIST_DB action 1`] = `
+Object {
+  "reducer": "uport",
+  "type": "PERSIST_DB",
+}
+`;
+
+exports[`creates a RELOAD_DB action 1`] = `
+Object {
+  "db": Object {
+    "uport": Object {},
+  },
+  "type": "RELOAD_DB",
+}
+`;
+
+exports[`creates a RESET_DEVICE action 1`] = `
+Object {
+  "type": "RESET_DEVICE",
+}
+`;

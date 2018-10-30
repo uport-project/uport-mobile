@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates a STORE_EVENTS action 1`] = `
+Object {
+  "_backup": true,
+  "contract": "0x010102",
+  "events": Array [
+    Object {
+      "type": "something",
+    },
+  ],
+  "type": "STORE_EVENTS",
+}
+`;
+
+exports[`creates a STORE_LAST_BLOCK_FOR_LOGS action 1`] = `
+Object {
+  "_backup": true,
+  "block": 12313,
+  "contract": "0x010102",
+  "type": "STORE_LAST_BLOCK_FOR_LOGS",
+}
+`;

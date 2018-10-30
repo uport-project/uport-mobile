@@ -1,0 +1,3488 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Country Selector Modal renders a connected component as expected 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CountrySelectorModal
+    navigator={FakeNavigator {}}
+    onSelect={[Function]}
+    selectedCountry="US"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": <CountrySelector
+        onSelect={[Function]}
+        selectedCountry="US"
+      />,
+      "navigator": FakeNavigator {},
+      "title": "Select your country",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "onSelect": [Function],
+        "selectedCountry": "US",
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <CountrySelector
+          onSelect={[Function]}
+          selectedCountry="US"
+        />,
+        "navigator": FakeNavigator {},
+        "title": "Select your country",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "onSelect": [Function],
+          "selectedCountry": "US",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "context": Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+    },
+  },
+}
+`;
+
+exports[`Country Selector Modal renders with country selected 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "alignSelf": "stretch",
+      "backgroundColor": "#FFFFFF",
+      "flex": 0,
+      "height": 1334,
+      "justifyContent": "flex-start",
+      "paddingTop": 26,
+      "width": 750,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "stretch",
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "margin": 16,
+        "marginTop": 16,
+      }
+    }
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={null}
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Icon
+        color="rgba(155,155,155,1)"
+        name="close"
+        size={24}
+        style={null}
+      />
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "rgba(74,74,74,1)",
+          "fontFamily": "NunitoSans-Regular",
+          "fontSize": 16,
+          "marginLeft": 16,
+        }
+      }
+    >
+      Select your country
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "backgroundColor": "#FFFFFF",
+        }
+      }
+      data={
+        Array [
+          Object {
+            "code": "AF",
+            "name": "Afghanistan",
+          },
+          Object {
+            "code": "AX",
+            "name": "Åland Islands",
+          },
+          Object {
+            "code": "AL",
+            "name": "Albania",
+          },
+          Object {
+            "code": "DZ",
+            "name": "Algeria",
+          },
+          Object {
+            "code": "AS",
+            "name": "American Samoa",
+          },
+          Object {
+            "code": "AD",
+            "name": "Andorra",
+          },
+          Object {
+            "code": "AO",
+            "name": "Angola",
+          },
+          Object {
+            "code": "AI",
+            "name": "Anguilla",
+          },
+          Object {
+            "code": "AQ",
+            "name": "Antarctica",
+          },
+          Object {
+            "code": "AG",
+            "name": "Antigua and Barbuda",
+          },
+          Object {
+            "code": "AR",
+            "name": "Argentina",
+          },
+          Object {
+            "code": "AM",
+            "name": "Armenia",
+          },
+          Object {
+            "code": "AW",
+            "name": "Aruba",
+          },
+          Object {
+            "code": "AU",
+            "name": "Australia",
+          },
+          Object {
+            "code": "AT",
+            "name": "Austria",
+          },
+          Object {
+            "code": "AZ",
+            "name": "Azerbaijan",
+          },
+          Object {
+            "code": "BS",
+            "name": "Bahamas",
+          },
+          Object {
+            "code": "BH",
+            "name": "Bahrain",
+          },
+          Object {
+            "code": "BD",
+            "name": "Bangladesh",
+          },
+          Object {
+            "code": "BB",
+            "name": "Barbados",
+          },
+          Object {
+            "code": "BY",
+            "name": "Belarus",
+          },
+          Object {
+            "code": "BE",
+            "name": "Belgium",
+          },
+          Object {
+            "code": "BZ",
+            "name": "Belize",
+          },
+          Object {
+            "code": "BJ",
+            "name": "Benin",
+          },
+          Object {
+            "code": "BM",
+            "name": "Bermuda",
+          },
+          Object {
+            "code": "BT",
+            "name": "Bhutan",
+          },
+          Object {
+            "code": "BO",
+            "name": "Bolivia",
+          },
+          Object {
+            "code": "BA",
+            "name": "Bosnia and Herzegovina",
+          },
+          Object {
+            "code": "BW",
+            "name": "Botswana",
+          },
+          Object {
+            "code": "BV",
+            "name": "Bouvet Island",
+          },
+          Object {
+            "code": "BR",
+            "name": "Brazil",
+          },
+          Object {
+            "code": "IO",
+            "name": "British Indian Ocean Territory",
+          },
+          Object {
+            "code": "VG",
+            "name": "British Virgin Islands",
+          },
+          Object {
+            "code": "BN",
+            "name": "Brunei",
+          },
+          Object {
+            "code": "BG",
+            "name": "Bulgaria",
+          },
+          Object {
+            "code": "BF",
+            "name": "Burkina Faso",
+          },
+          Object {
+            "code": "BI",
+            "name": "Burundi",
+          },
+          Object {
+            "code": "KH",
+            "name": "Cambodia",
+          },
+          Object {
+            "code": "CM",
+            "name": "Cameroon",
+          },
+          Object {
+            "code": "CA",
+            "name": "Canada",
+          },
+          Object {
+            "code": "CV",
+            "name": "Cape Verde",
+          },
+          Object {
+            "code": "KY",
+            "name": "Cayman Islands",
+          },
+          Object {
+            "code": "CF",
+            "name": "Central African Republic",
+          },
+          Object {
+            "code": "TD",
+            "name": "Chad",
+          },
+          Object {
+            "code": "CL",
+            "name": "Chile",
+          },
+          Object {
+            "code": "CN",
+            "name": "China",
+          },
+          Object {
+            "code": "CX",
+            "name": "Christmas Island",
+          },
+          Object {
+            "code": "CC",
+            "name": "Cocos (Keeling) Islands",
+          },
+          Object {
+            "code": "CO",
+            "name": "Colombia",
+          },
+          Object {
+            "code": "KM",
+            "name": "Comoros",
+          },
+          Object {
+            "code": "CK",
+            "name": "Cook Islands",
+          },
+          Object {
+            "code": "CR",
+            "name": "Costa Rica",
+          },
+          Object {
+            "code": "HR",
+            "name": "Croatia",
+          },
+          Object {
+            "code": "CU",
+            "name": "Cuba",
+          },
+          Object {
+            "code": "CW",
+            "name": "Curaçao",
+          },
+          Object {
+            "code": "CY",
+            "name": "Cyprus",
+          },
+          Object {
+            "code": "CZ",
+            "name": "Czech Republic",
+          },
+          Object {
+            "code": "DK",
+            "name": "Denmark",
+          },
+          Object {
+            "code": "DJ",
+            "name": "Djibouti",
+          },
+          Object {
+            "code": "DM",
+            "name": "Dominica",
+          },
+          Object {
+            "code": "DO",
+            "name": "Dominican Republic",
+          },
+          Object {
+            "code": "CD",
+            "name": "DR Congo",
+          },
+          Object {
+            "code": "EC",
+            "name": "Ecuador",
+          },
+          Object {
+            "code": "EG",
+            "name": "Egypt",
+          },
+          Object {
+            "code": "SV",
+            "name": "El Salvador",
+          },
+          Object {
+            "code": "GQ",
+            "name": "Equatorial Guinea",
+          },
+          Object {
+            "code": "ER",
+            "name": "Eritrea",
+          },
+          Object {
+            "code": "EE",
+            "name": "Estonia",
+          },
+          Object {
+            "code": "ET",
+            "name": "Ethiopia",
+          },
+          Object {
+            "code": "FK",
+            "name": "Falkland Islands",
+          },
+          Object {
+            "code": "FO",
+            "name": "Faroe Islands",
+          },
+          Object {
+            "code": "FJ",
+            "name": "Fiji",
+          },
+          Object {
+            "code": "FI",
+            "name": "Finland",
+          },
+          Object {
+            "code": "FR",
+            "name": "France",
+          },
+          Object {
+            "code": "GF",
+            "name": "French Guiana",
+          },
+          Object {
+            "code": "PF",
+            "name": "French Polynesia",
+          },
+          Object {
+            "code": "GA",
+            "name": "Gabon",
+          },
+          Object {
+            "code": "GM",
+            "name": "Gambia",
+          },
+          Object {
+            "code": "GE",
+            "name": "Georgia",
+          },
+          Object {
+            "code": "DE",
+            "name": "Germany",
+          },
+          Object {
+            "code": "GH",
+            "name": "Ghana",
+          },
+          Object {
+            "code": "GI",
+            "name": "Gibraltar",
+          },
+          Object {
+            "code": "GR",
+            "name": "Greece",
+          },
+          Object {
+            "code": "GL",
+            "name": "Greenland",
+          },
+          Object {
+            "code": "GD",
+            "name": "Grenada",
+          },
+          Object {
+            "code": "GP",
+            "name": "Guadeloupe",
+          },
+          Object {
+            "code": "GU",
+            "name": "Guam",
+          },
+          Object {
+            "code": "GT",
+            "name": "Guatemala",
+          },
+          Object {
+            "code": "GG",
+            "name": "Guernsey",
+          },
+          Object {
+            "code": "GN",
+            "name": "Guinea",
+          },
+          Object {
+            "code": "GW",
+            "name": "Guinea-Bissau",
+          },
+          Object {
+            "code": "GY",
+            "name": "Guyana",
+          },
+          Object {
+            "code": "HT",
+            "name": "Haiti",
+          },
+          Object {
+            "code": "HM",
+            "name": "Heard Island and McDonald Islands",
+          },
+          Object {
+            "code": "HN",
+            "name": "Honduras",
+          },
+          Object {
+            "code": "HK",
+            "name": "Hong Kong",
+          },
+          Object {
+            "code": "HU",
+            "name": "Hungary",
+          },
+          Object {
+            "code": "IS",
+            "name": "Iceland",
+          },
+          Object {
+            "code": "IN",
+            "name": "India",
+          },
+          Object {
+            "code": "ID",
+            "name": "Indonesia",
+          },
+          Object {
+            "code": "IR",
+            "name": "Iran",
+          },
+          Object {
+            "code": "IQ",
+            "name": "Iraq",
+          },
+          Object {
+            "code": "IE",
+            "name": "Ireland",
+          },
+          Object {
+            "code": "IM",
+            "name": "Isle of Man",
+          },
+          Object {
+            "code": "IL",
+            "name": "Israel",
+          },
+          Object {
+            "code": "IT",
+            "name": "Italy",
+          },
+          Object {
+            "code": "CI",
+            "name": "Ivory Coast",
+          },
+          Object {
+            "code": "JM",
+            "name": "Jamaica",
+          },
+          Object {
+            "code": "JP",
+            "name": "Japan",
+          },
+          Object {
+            "code": "JE",
+            "name": "Jersey",
+          },
+          Object {
+            "code": "JO",
+            "name": "Jordan",
+          },
+          Object {
+            "code": "KZ",
+            "name": "Kazakhstan",
+          },
+          Object {
+            "code": "KE",
+            "name": "Kenya",
+          },
+          Object {
+            "code": "KI",
+            "name": "Kiribati",
+          },
+          Object {
+            "code": "XK",
+            "name": "Kosovo",
+          },
+          Object {
+            "code": "KW",
+            "name": "Kuwait",
+          },
+          Object {
+            "code": "KG",
+            "name": "Kyrgyzstan",
+          },
+          Object {
+            "code": "LA",
+            "name": "Laos",
+          },
+          Object {
+            "code": "LV",
+            "name": "Latvia",
+          },
+          Object {
+            "code": "LB",
+            "name": "Lebanon",
+          },
+          Object {
+            "code": "LS",
+            "name": "Lesotho",
+          },
+          Object {
+            "code": "LR",
+            "name": "Liberia",
+          },
+          Object {
+            "code": "LY",
+            "name": "Libya",
+          },
+          Object {
+            "code": "LI",
+            "name": "Liechtenstein",
+          },
+          Object {
+            "code": "LT",
+            "name": "Lithuania",
+          },
+          Object {
+            "code": "LU",
+            "name": "Luxembourg",
+          },
+          Object {
+            "code": "MO",
+            "name": "Macau",
+          },
+          Object {
+            "code": "MK",
+            "name": "Macedonia",
+          },
+          Object {
+            "code": "MG",
+            "name": "Madagascar",
+          },
+          Object {
+            "code": "MW",
+            "name": "Malawi",
+          },
+          Object {
+            "code": "MY",
+            "name": "Malaysia",
+          },
+          Object {
+            "code": "MV",
+            "name": "Maldives",
+          },
+          Object {
+            "code": "ML",
+            "name": "Mali",
+          },
+          Object {
+            "code": "MT",
+            "name": "Malta",
+          },
+          Object {
+            "code": "MH",
+            "name": "Marshall Islands",
+          },
+          Object {
+            "code": "MQ",
+            "name": "Martinique",
+          },
+          Object {
+            "code": "MR",
+            "name": "Mauritania",
+          },
+          Object {
+            "code": "MU",
+            "name": "Mauritius",
+          },
+          Object {
+            "code": "YT",
+            "name": "Mayotte",
+          },
+          Object {
+            "code": "MX",
+            "name": "Mexico",
+          },
+          Object {
+            "code": "FM",
+            "name": "Micronesia",
+          },
+          Object {
+            "code": "MD",
+            "name": "Moldova",
+          },
+          Object {
+            "code": "MC",
+            "name": "Monaco",
+          },
+          Object {
+            "code": "MN",
+            "name": "Mongolia",
+          },
+          Object {
+            "code": "ME",
+            "name": "Montenegro",
+          },
+          Object {
+            "code": "MS",
+            "name": "Montserrat",
+          },
+          Object {
+            "code": "MA",
+            "name": "Morocco",
+          },
+          Object {
+            "code": "MZ",
+            "name": "Mozambique",
+          },
+          Object {
+            "code": "MM",
+            "name": "Myanmar",
+          },
+          Object {
+            "code": "NA",
+            "name": "Namibia",
+          },
+          Object {
+            "code": "NR",
+            "name": "Nauru",
+          },
+          Object {
+            "code": "NP",
+            "name": "Nepal",
+          },
+          Object {
+            "code": "NL",
+            "name": "Netherlands",
+          },
+          Object {
+            "code": "NC",
+            "name": "New Caledonia",
+          },
+          Object {
+            "code": "NZ",
+            "name": "New Zealand",
+          },
+          Object {
+            "code": "NI",
+            "name": "Nicaragua",
+          },
+          Object {
+            "code": "NE",
+            "name": "Niger",
+          },
+          Object {
+            "code": "NG",
+            "name": "Nigeria",
+          },
+          Object {
+            "code": "NU",
+            "name": "Niue",
+          },
+          Object {
+            "code": "NF",
+            "name": "Norfolk Island",
+          },
+          Object {
+            "code": "KP",
+            "name": "North Korea",
+          },
+          Object {
+            "code": "MP",
+            "name": "Northern Mariana Islands",
+          },
+          Object {
+            "code": "NO",
+            "name": "Norway",
+          },
+          Object {
+            "code": "OM",
+            "name": "Oman",
+          },
+          Object {
+            "code": "PK",
+            "name": "Pakistan",
+          },
+          Object {
+            "code": "PW",
+            "name": "Palau",
+          },
+          Object {
+            "code": "PS",
+            "name": "Palestine",
+          },
+          Object {
+            "code": "PA",
+            "name": "Panama",
+          },
+          Object {
+            "code": "PG",
+            "name": "Papua New Guinea",
+          },
+          Object {
+            "code": "PY",
+            "name": "Paraguay",
+          },
+          Object {
+            "code": "PE",
+            "name": "Peru",
+          },
+          Object {
+            "code": "PH",
+            "name": "Philippines",
+          },
+          Object {
+            "code": "PN",
+            "name": "Pitcairn Islands",
+          },
+          Object {
+            "code": "PL",
+            "name": "Poland",
+          },
+          Object {
+            "code": "PT",
+            "name": "Portugal",
+          },
+          Object {
+            "code": "PR",
+            "name": "Puerto Rico",
+          },
+          Object {
+            "code": "QA",
+            "name": "Qatar",
+          },
+          Object {
+            "code": "CG",
+            "name": "Republic of the Congo",
+          },
+          Object {
+            "code": "RE",
+            "name": "Réunion",
+          },
+          Object {
+            "code": "RO",
+            "name": "Romania",
+          },
+          Object {
+            "code": "RU",
+            "name": "Russia",
+          },
+          Object {
+            "code": "RW",
+            "name": "Rwanda",
+          },
+          Object {
+            "code": "BL",
+            "name": "Saint Barthélemy",
+          },
+          Object {
+            "code": "KN",
+            "name": "Saint Kitts and Nevis",
+          },
+          Object {
+            "code": "LC",
+            "name": "Saint Lucia",
+          },
+          Object {
+            "code": "MF",
+            "name": "Saint Martin",
+          },
+          Object {
+            "code": "PM",
+            "name": "Saint Pierre and Miquelon",
+          },
+          Object {
+            "code": "VC",
+            "name": "Saint Vincent and the Grenadines",
+          },
+          Object {
+            "code": "WS",
+            "name": "Samoa",
+          },
+          Object {
+            "code": "SM",
+            "name": "San Marino",
+          },
+          Object {
+            "code": "ST",
+            "name": "São Tomé and Príncipe",
+          },
+          Object {
+            "code": "SA",
+            "name": "Saudi Arabia",
+          },
+          Object {
+            "code": "SN",
+            "name": "Senegal",
+          },
+          Object {
+            "code": "RS",
+            "name": "Serbia",
+          },
+          Object {
+            "code": "SC",
+            "name": "Seychelles",
+          },
+          Object {
+            "code": "SL",
+            "name": "Sierra Leone",
+          },
+          Object {
+            "code": "SG",
+            "name": "Singapore",
+          },
+          Object {
+            "code": "SX",
+            "name": "Sint Maarten",
+          },
+          Object {
+            "code": "SK",
+            "name": "Slovakia",
+          },
+          Object {
+            "code": "SI",
+            "name": "Slovenia",
+          },
+          Object {
+            "code": "SB",
+            "name": "Solomon Islands",
+          },
+          Object {
+            "code": "SO",
+            "name": "Somalia",
+          },
+          Object {
+            "code": "ZA",
+            "name": "South Africa",
+          },
+          Object {
+            "code": "GS",
+            "name": "South Georgia",
+          },
+          Object {
+            "code": "KR",
+            "name": "South Korea",
+          },
+          Object {
+            "code": "SS",
+            "name": "South Sudan",
+          },
+          Object {
+            "code": "ES",
+            "name": "Spain",
+          },
+          Object {
+            "code": "LK",
+            "name": "Sri Lanka",
+          },
+          Object {
+            "code": "SD",
+            "name": "Sudan",
+          },
+          Object {
+            "code": "SR",
+            "name": "Suriname",
+          },
+          Object {
+            "code": "SZ",
+            "name": "Swaziland",
+          },
+          Object {
+            "code": "SE",
+            "name": "Sweden",
+          },
+          Object {
+            "code": "CH",
+            "name": "Switzerland",
+          },
+          Object {
+            "code": "SY",
+            "name": "Syria",
+          },
+          Object {
+            "code": "TW",
+            "name": "Taiwan",
+          },
+          Object {
+            "code": "TJ",
+            "name": "Tajikistan",
+          },
+          Object {
+            "code": "TZ",
+            "name": "Tanzania",
+          },
+          Object {
+            "code": "TH",
+            "name": "Thailand",
+          },
+          Object {
+            "code": "TL",
+            "name": "Timor-Leste",
+          },
+          Object {
+            "code": "TG",
+            "name": "Togo",
+          },
+          Object {
+            "code": "TK",
+            "name": "Tokelau",
+          },
+          Object {
+            "code": "TO",
+            "name": "Tonga",
+          },
+          Object {
+            "code": "TT",
+            "name": "Trinidad and Tobago",
+          },
+          Object {
+            "code": "TN",
+            "name": "Tunisia",
+          },
+          Object {
+            "code": "TR",
+            "name": "Turkey",
+          },
+          Object {
+            "code": "TM",
+            "name": "Turkmenistan",
+          },
+          Object {
+            "code": "TC",
+            "name": "Turks and Caicos Islands",
+          },
+          Object {
+            "code": "TV",
+            "name": "Tuvalu",
+          },
+          Object {
+            "code": "UG",
+            "name": "Uganda",
+          },
+          Object {
+            "code": "UA",
+            "name": "Ukraine",
+          },
+          Object {
+            "code": "AE",
+            "name": "United Arab Emirates",
+          },
+          Object {
+            "code": "GB",
+            "name": "United Kingdom",
+          },
+          Object {
+            "code": "US",
+            "name": "United States",
+          },
+          Object {
+            "code": "VI",
+            "name": "United States Virgin Islands",
+          },
+          Object {
+            "code": "UY",
+            "name": "Uruguay",
+          },
+          Object {
+            "code": "UZ",
+            "name": "Uzbekistan",
+          },
+          Object {
+            "code": "VU",
+            "name": "Vanuatu",
+          },
+          Object {
+            "code": "VA",
+            "name": "Vatican City",
+          },
+          Object {
+            "code": "VE",
+            "name": "Venezuela",
+          },
+          Object {
+            "code": "VN",
+            "name": "Vietnam",
+          },
+          Object {
+            "code": "WF",
+            "name": "Wallis and Futuna",
+          },
+          Object {
+            "code": "EH",
+            "name": "Western Sahara",
+          },
+          Object {
+            "code": "YE",
+            "name": "Yemen",
+          },
+          Object {
+            "code": "ZM",
+            "name": "Zambia",
+          },
+          Object {
+            "code": "ZW",
+            "name": "Zimbabwe",
+          },
+        ]
+      }
+      disableVirtualization={false}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={false}
+      initialNumToRender={10}
+      invertStickyHeaders={undefined}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      numColumns={1}
+      onContentSizeChange={[Function]}
+      onEndReachedThreshold={2}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+              }
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "rgba(216,216,216,1)",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "padding": 19,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "rgba(170,170,170,1)",
+                    "fontFamily": "NunitoSans-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
+                }
+              >
+                Afghanistan
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+              }
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "rgba(216,216,216,1)",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "padding": 19,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "rgba(170,170,170,1)",
+                    "fontFamily": "NunitoSans-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
+                }
+              >
+                Åland Islands
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+              }
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "rgba(216,216,216,1)",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "padding": 19,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "rgba(170,170,170,1)",
+                    "fontFamily": "NunitoSans-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
+                }
+              >
+                Albania
+              </Text>
+              <Icon
+                name="md-checkmark"
+                style={
+                  Object {
+                    "color": "rgba(74,74,74,1)",
+                    "fontSize": 24,
+                  }
+                }
+              />
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+              }
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "rgba(216,216,216,1)",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "padding": 19,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "rgba(170,170,170,1)",
+                    "fontFamily": "NunitoSans-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
+                }
+              >
+                Algeria
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+              }
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "rgba(216,216,216,1)",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "padding": 19,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "rgba(170,170,170,1)",
+                    "fontFamily": "NunitoSans-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
+                }
+              >
+                American Samoa
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+              }
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "rgba(216,216,216,1)",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "padding": 19,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "rgba(170,170,170,1)",
+                    "fontFamily": "NunitoSans-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
+                }
+              >
+                Andorra
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+              }
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "rgba(216,216,216,1)",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "padding": 19,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "rgba(170,170,170,1)",
+                    "fontFamily": "NunitoSans-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
+                }
+              >
+                Angola
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+              }
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "rgba(216,216,216,1)",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "padding": 19,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "rgba(170,170,170,1)",
+                    "fontFamily": "NunitoSans-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
+                }
+              >
+                Anguilla
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+              }
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "rgba(216,216,216,1)",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "padding": 19,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "rgba(170,170,170,1)",
+                    "fontFamily": "NunitoSans-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
+                }
+              >
+                Antarctica
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+              }
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "rgba(216,216,216,1)",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "padding": 19,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "rgba(170,170,170,1)",
+                    "fontFamily": "NunitoSans-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
+                }
+              >
+                Antigua and Barbuda
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "height": 0,
+            }
+          }
+        />
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;
+
+exports[`Country Selector Modal renders without country selected 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "alignSelf": "stretch",
+      "backgroundColor": "#FFFFFF",
+      "flex": 0,
+      "height": 1334,
+      "justifyContent": "flex-start",
+      "paddingTop": 26,
+      "width": 750,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "stretch",
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
+        "margin": 16,
+        "marginTop": 16,
+      }
+    }
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={null}
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Icon
+        color="rgba(155,155,155,1)"
+        name="close"
+        size={24}
+        style={null}
+      />
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "rgba(74,74,74,1)",
+          "fontFamily": "NunitoSans-Regular",
+          "fontSize": 16,
+          "marginLeft": 16,
+        }
+      }
+    >
+      Select your country
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "backgroundColor": "#FFFFFF",
+        }
+      }
+      data={
+        Array [
+          Object {
+            "code": "AF",
+            "name": "Afghanistan",
+          },
+          Object {
+            "code": "AX",
+            "name": "Åland Islands",
+          },
+          Object {
+            "code": "AL",
+            "name": "Albania",
+          },
+          Object {
+            "code": "DZ",
+            "name": "Algeria",
+          },
+          Object {
+            "code": "AS",
+            "name": "American Samoa",
+          },
+          Object {
+            "code": "AD",
+            "name": "Andorra",
+          },
+          Object {
+            "code": "AO",
+            "name": "Angola",
+          },
+          Object {
+            "code": "AI",
+            "name": "Anguilla",
+          },
+          Object {
+            "code": "AQ",
+            "name": "Antarctica",
+          },
+          Object {
+            "code": "AG",
+            "name": "Antigua and Barbuda",
+          },
+          Object {
+            "code": "AR",
+            "name": "Argentina",
+          },
+          Object {
+            "code": "AM",
+            "name": "Armenia",
+          },
+          Object {
+            "code": "AW",
+            "name": "Aruba",
+          },
+          Object {
+            "code": "AU",
+            "name": "Australia",
+          },
+          Object {
+            "code": "AT",
+            "name": "Austria",
+          },
+          Object {
+            "code": "AZ",
+            "name": "Azerbaijan",
+          },
+          Object {
+            "code": "BS",
+            "name": "Bahamas",
+          },
+          Object {
+            "code": "BH",
+            "name": "Bahrain",
+          },
+          Object {
+            "code": "BD",
+            "name": "Bangladesh",
+          },
+          Object {
+            "code": "BB",
+            "name": "Barbados",
+          },
+          Object {
+            "code": "BY",
+            "name": "Belarus",
+          },
+          Object {
+            "code": "BE",
+            "name": "Belgium",
+          },
+          Object {
+            "code": "BZ",
+            "name": "Belize",
+          },
+          Object {
+            "code": "BJ",
+            "name": "Benin",
+          },
+          Object {
+            "code": "BM",
+            "name": "Bermuda",
+          },
+          Object {
+            "code": "BT",
+            "name": "Bhutan",
+          },
+          Object {
+            "code": "BO",
+            "name": "Bolivia",
+          },
+          Object {
+            "code": "BA",
+            "name": "Bosnia and Herzegovina",
+          },
+          Object {
+            "code": "BW",
+            "name": "Botswana",
+          },
+          Object {
+            "code": "BV",
+            "name": "Bouvet Island",
+          },
+          Object {
+            "code": "BR",
+            "name": "Brazil",
+          },
+          Object {
+            "code": "IO",
+            "name": "British Indian Ocean Territory",
+          },
+          Object {
+            "code": "VG",
+            "name": "British Virgin Islands",
+          },
+          Object {
+            "code": "BN",
+            "name": "Brunei",
+          },
+          Object {
+            "code": "BG",
+            "name": "Bulgaria",
+          },
+          Object {
+            "code": "BF",
+            "name": "Burkina Faso",
+          },
+          Object {
+            "code": "BI",
+            "name": "Burundi",
+          },
+          Object {
+            "code": "KH",
+            "name": "Cambodia",
+          },
+          Object {
+            "code": "CM",
+            "name": "Cameroon",
+          },
+          Object {
+            "code": "CA",
+            "name": "Canada",
+          },
+          Object {
+            "code": "CV",
+            "name": "Cape Verde",
+          },
+          Object {
+            "code": "KY",
+            "name": "Cayman Islands",
+          },
+          Object {
+            "code": "CF",
+            "name": "Central African Republic",
+          },
+          Object {
+            "code": "TD",
+            "name": "Chad",
+          },
+          Object {
+            "code": "CL",
+            "name": "Chile",
+          },
+          Object {
+            "code": "CN",
+            "name": "China",
+          },
+          Object {
+            "code": "CX",
+            "name": "Christmas Island",
+          },
+          Object {
+            "code": "CC",
+            "name": "Cocos (Keeling) Islands",
+          },
+          Object {
+            "code": "CO",
+            "name": "Colombia",
+          },
+          Object {
+            "code": "KM",
+            "name": "Comoros",
+          },
+          Object {
+            "code": "CK",
+            "name": "Cook Islands",
+          },
+          Object {
+            "code": "CR",
+            "name": "Costa Rica",
+          },
+          Object {
+            "code": "HR",
+            "name": "Croatia",
+          },
+          Object {
+            "code": "CU",
+            "name": "Cuba",
+          },
+          Object {
+            "code": "CW",
+            "name": "Curaçao",
+          },
+          Object {
+            "code": "CY",
+            "name": "Cyprus",
+          },
+          Object {
+            "code": "CZ",
+            "name": "Czech Republic",
+          },
+          Object {
+            "code": "DK",
+            "name": "Denmark",
+          },
+          Object {
+            "code": "DJ",
+            "name": "Djibouti",
+          },
+          Object {
+            "code": "DM",
+            "name": "Dominica",
+          },
+          Object {
+            "code": "DO",
+            "name": "Dominican Republic",
+          },
+          Object {
+            "code": "CD",
+            "name": "DR Congo",
+          },
+          Object {
+            "code": "EC",
+            "name": "Ecuador",
+          },
+          Object {
+            "code": "EG",
+            "name": "Egypt",
+          },
+          Object {
+            "code": "SV",
+            "name": "El Salvador",
+          },
+          Object {
+            "code": "GQ",
+            "name": "Equatorial Guinea",
+          },
+          Object {
+            "code": "ER",
+            "name": "Eritrea",
+          },
+          Object {
+            "code": "EE",
+            "name": "Estonia",
+          },
+          Object {
+            "code": "ET",
+            "name": "Ethiopia",
+          },
+          Object {
+            "code": "FK",
+            "name": "Falkland Islands",
+          },
+          Object {
+            "code": "FO",
+            "name": "Faroe Islands",
+          },
+          Object {
+            "code": "FJ",
+            "name": "Fiji",
+          },
+          Object {
+            "code": "FI",
+            "name": "Finland",
+          },
+          Object {
+            "code": "FR",
+            "name": "France",
+          },
+          Object {
+            "code": "GF",
+            "name": "French Guiana",
+          },
+          Object {
+            "code": "PF",
+            "name": "French Polynesia",
+          },
+          Object {
+            "code": "GA",
+            "name": "Gabon",
+          },
+          Object {
+            "code": "GM",
+            "name": "Gambia",
+          },
+          Object {
+            "code": "GE",
+            "name": "Georgia",
+          },
+          Object {
+            "code": "DE",
+            "name": "Germany",
+          },
+          Object {
+            "code": "GH",
+            "name": "Ghana",
+          },
+          Object {
+            "code": "GI",
+            "name": "Gibraltar",
+          },
+          Object {
+            "code": "GR",
+            "name": "Greece",
+          },
+          Object {
+            "code": "GL",
+            "name": "Greenland",
+          },
+          Object {
+            "code": "GD",
+            "name": "Grenada",
+          },
+          Object {
+            "code": "GP",
+            "name": "Guadeloupe",
+          },
+          Object {
+            "code": "GU",
+            "name": "Guam",
+          },
+          Object {
+            "code": "GT",
+            "name": "Guatemala",
+          },
+          Object {
+            "code": "GG",
+            "name": "Guernsey",
+          },
+          Object {
+            "code": "GN",
+            "name": "Guinea",
+          },
+          Object {
+            "code": "GW",
+            "name": "Guinea-Bissau",
+          },
+          Object {
+            "code": "GY",
+            "name": "Guyana",
+          },
+          Object {
+            "code": "HT",
+            "name": "Haiti",
+          },
+          Object {
+            "code": "HM",
+            "name": "Heard Island and McDonald Islands",
+          },
+          Object {
+            "code": "HN",
+            "name": "Honduras",
+          },
+          Object {
+            "code": "HK",
+            "name": "Hong Kong",
+          },
+          Object {
+            "code": "HU",
+            "name": "Hungary",
+          },
+          Object {
+            "code": "IS",
+            "name": "Iceland",
+          },
+          Object {
+            "code": "IN",
+            "name": "India",
+          },
+          Object {
+            "code": "ID",
+            "name": "Indonesia",
+          },
+          Object {
+            "code": "IR",
+            "name": "Iran",
+          },
+          Object {
+            "code": "IQ",
+            "name": "Iraq",
+          },
+          Object {
+            "code": "IE",
+            "name": "Ireland",
+          },
+          Object {
+            "code": "IM",
+            "name": "Isle of Man",
+          },
+          Object {
+            "code": "IL",
+            "name": "Israel",
+          },
+          Object {
+            "code": "IT",
+            "name": "Italy",
+          },
+          Object {
+            "code": "CI",
+            "name": "Ivory Coast",
+          },
+          Object {
+            "code": "JM",
+            "name": "Jamaica",
+          },
+          Object {
+            "code": "JP",
+            "name": "Japan",
+          },
+          Object {
+            "code": "JE",
+            "name": "Jersey",
+          },
+          Object {
+            "code": "JO",
+            "name": "Jordan",
+          },
+          Object {
+            "code": "KZ",
+            "name": "Kazakhstan",
+          },
+          Object {
+            "code": "KE",
+            "name": "Kenya",
+          },
+          Object {
+            "code": "KI",
+            "name": "Kiribati",
+          },
+          Object {
+            "code": "XK",
+            "name": "Kosovo",
+          },
+          Object {
+            "code": "KW",
+            "name": "Kuwait",
+          },
+          Object {
+            "code": "KG",
+            "name": "Kyrgyzstan",
+          },
+          Object {
+            "code": "LA",
+            "name": "Laos",
+          },
+          Object {
+            "code": "LV",
+            "name": "Latvia",
+          },
+          Object {
+            "code": "LB",
+            "name": "Lebanon",
+          },
+          Object {
+            "code": "LS",
+            "name": "Lesotho",
+          },
+          Object {
+            "code": "LR",
+            "name": "Liberia",
+          },
+          Object {
+            "code": "LY",
+            "name": "Libya",
+          },
+          Object {
+            "code": "LI",
+            "name": "Liechtenstein",
+          },
+          Object {
+            "code": "LT",
+            "name": "Lithuania",
+          },
+          Object {
+            "code": "LU",
+            "name": "Luxembourg",
+          },
+          Object {
+            "code": "MO",
+            "name": "Macau",
+          },
+          Object {
+            "code": "MK",
+            "name": "Macedonia",
+          },
+          Object {
+            "code": "MG",
+            "name": "Madagascar",
+          },
+          Object {
+            "code": "MW",
+            "name": "Malawi",
+          },
+          Object {
+            "code": "MY",
+            "name": "Malaysia",
+          },
+          Object {
+            "code": "MV",
+            "name": "Maldives",
+          },
+          Object {
+            "code": "ML",
+            "name": "Mali",
+          },
+          Object {
+            "code": "MT",
+            "name": "Malta",
+          },
+          Object {
+            "code": "MH",
+            "name": "Marshall Islands",
+          },
+          Object {
+            "code": "MQ",
+            "name": "Martinique",
+          },
+          Object {
+            "code": "MR",
+            "name": "Mauritania",
+          },
+          Object {
+            "code": "MU",
+            "name": "Mauritius",
+          },
+          Object {
+            "code": "YT",
+            "name": "Mayotte",
+          },
+          Object {
+            "code": "MX",
+            "name": "Mexico",
+          },
+          Object {
+            "code": "FM",
+            "name": "Micronesia",
+          },
+          Object {
+            "code": "MD",
+            "name": "Moldova",
+          },
+          Object {
+            "code": "MC",
+            "name": "Monaco",
+          },
+          Object {
+            "code": "MN",
+            "name": "Mongolia",
+          },
+          Object {
+            "code": "ME",
+            "name": "Montenegro",
+          },
+          Object {
+            "code": "MS",
+            "name": "Montserrat",
+          },
+          Object {
+            "code": "MA",
+            "name": "Morocco",
+          },
+          Object {
+            "code": "MZ",
+            "name": "Mozambique",
+          },
+          Object {
+            "code": "MM",
+            "name": "Myanmar",
+          },
+          Object {
+            "code": "NA",
+            "name": "Namibia",
+          },
+          Object {
+            "code": "NR",
+            "name": "Nauru",
+          },
+          Object {
+            "code": "NP",
+            "name": "Nepal",
+          },
+          Object {
+            "code": "NL",
+            "name": "Netherlands",
+          },
+          Object {
+            "code": "NC",
+            "name": "New Caledonia",
+          },
+          Object {
+            "code": "NZ",
+            "name": "New Zealand",
+          },
+          Object {
+            "code": "NI",
+            "name": "Nicaragua",
+          },
+          Object {
+            "code": "NE",
+            "name": "Niger",
+          },
+          Object {
+            "code": "NG",
+            "name": "Nigeria",
+          },
+          Object {
+            "code": "NU",
+            "name": "Niue",
+          },
+          Object {
+            "code": "NF",
+            "name": "Norfolk Island",
+          },
+          Object {
+            "code": "KP",
+            "name": "North Korea",
+          },
+          Object {
+            "code": "MP",
+            "name": "Northern Mariana Islands",
+          },
+          Object {
+            "code": "NO",
+            "name": "Norway",
+          },
+          Object {
+            "code": "OM",
+            "name": "Oman",
+          },
+          Object {
+            "code": "PK",
+            "name": "Pakistan",
+          },
+          Object {
+            "code": "PW",
+            "name": "Palau",
+          },
+          Object {
+            "code": "PS",
+            "name": "Palestine",
+          },
+          Object {
+            "code": "PA",
+            "name": "Panama",
+          },
+          Object {
+            "code": "PG",
+            "name": "Papua New Guinea",
+          },
+          Object {
+            "code": "PY",
+            "name": "Paraguay",
+          },
+          Object {
+            "code": "PE",
+            "name": "Peru",
+          },
+          Object {
+            "code": "PH",
+            "name": "Philippines",
+          },
+          Object {
+            "code": "PN",
+            "name": "Pitcairn Islands",
+          },
+          Object {
+            "code": "PL",
+            "name": "Poland",
+          },
+          Object {
+            "code": "PT",
+            "name": "Portugal",
+          },
+          Object {
+            "code": "PR",
+            "name": "Puerto Rico",
+          },
+          Object {
+            "code": "QA",
+            "name": "Qatar",
+          },
+          Object {
+            "code": "CG",
+            "name": "Republic of the Congo",
+          },
+          Object {
+            "code": "RE",
+            "name": "Réunion",
+          },
+          Object {
+            "code": "RO",
+            "name": "Romania",
+          },
+          Object {
+            "code": "RU",
+            "name": "Russia",
+          },
+          Object {
+            "code": "RW",
+            "name": "Rwanda",
+          },
+          Object {
+            "code": "BL",
+            "name": "Saint Barthélemy",
+          },
+          Object {
+            "code": "KN",
+            "name": "Saint Kitts and Nevis",
+          },
+          Object {
+            "code": "LC",
+            "name": "Saint Lucia",
+          },
+          Object {
+            "code": "MF",
+            "name": "Saint Martin",
+          },
+          Object {
+            "code": "PM",
+            "name": "Saint Pierre and Miquelon",
+          },
+          Object {
+            "code": "VC",
+            "name": "Saint Vincent and the Grenadines",
+          },
+          Object {
+            "code": "WS",
+            "name": "Samoa",
+          },
+          Object {
+            "code": "SM",
+            "name": "San Marino",
+          },
+          Object {
+            "code": "ST",
+            "name": "São Tomé and Príncipe",
+          },
+          Object {
+            "code": "SA",
+            "name": "Saudi Arabia",
+          },
+          Object {
+            "code": "SN",
+            "name": "Senegal",
+          },
+          Object {
+            "code": "RS",
+            "name": "Serbia",
+          },
+          Object {
+            "code": "SC",
+            "name": "Seychelles",
+          },
+          Object {
+            "code": "SL",
+            "name": "Sierra Leone",
+          },
+          Object {
+            "code": "SG",
+            "name": "Singapore",
+          },
+          Object {
+            "code": "SX",
+            "name": "Sint Maarten",
+          },
+          Object {
+            "code": "SK",
+            "name": "Slovakia",
+          },
+          Object {
+            "code": "SI",
+            "name": "Slovenia",
+          },
+          Object {
+            "code": "SB",
+            "name": "Solomon Islands",
+          },
+          Object {
+            "code": "SO",
+            "name": "Somalia",
+          },
+          Object {
+            "code": "ZA",
+            "name": "South Africa",
+          },
+          Object {
+            "code": "GS",
+            "name": "South Georgia",
+          },
+          Object {
+            "code": "KR",
+            "name": "South Korea",
+          },
+          Object {
+            "code": "SS",
+            "name": "South Sudan",
+          },
+          Object {
+            "code": "ES",
+            "name": "Spain",
+          },
+          Object {
+            "code": "LK",
+            "name": "Sri Lanka",
+          },
+          Object {
+            "code": "SD",
+            "name": "Sudan",
+          },
+          Object {
+            "code": "SR",
+            "name": "Suriname",
+          },
+          Object {
+            "code": "SZ",
+            "name": "Swaziland",
+          },
+          Object {
+            "code": "SE",
+            "name": "Sweden",
+          },
+          Object {
+            "code": "CH",
+            "name": "Switzerland",
+          },
+          Object {
+            "code": "SY",
+            "name": "Syria",
+          },
+          Object {
+            "code": "TW",
+            "name": "Taiwan",
+          },
+          Object {
+            "code": "TJ",
+            "name": "Tajikistan",
+          },
+          Object {
+            "code": "TZ",
+            "name": "Tanzania",
+          },
+          Object {
+            "code": "TH",
+            "name": "Thailand",
+          },
+          Object {
+            "code": "TL",
+            "name": "Timor-Leste",
+          },
+          Object {
+            "code": "TG",
+            "name": "Togo",
+          },
+          Object {
+            "code": "TK",
+            "name": "Tokelau",
+          },
+          Object {
+            "code": "TO",
+            "name": "Tonga",
+          },
+          Object {
+            "code": "TT",
+            "name": "Trinidad and Tobago",
+          },
+          Object {
+            "code": "TN",
+            "name": "Tunisia",
+          },
+          Object {
+            "code": "TR",
+            "name": "Turkey",
+          },
+          Object {
+            "code": "TM",
+            "name": "Turkmenistan",
+          },
+          Object {
+            "code": "TC",
+            "name": "Turks and Caicos Islands",
+          },
+          Object {
+            "code": "TV",
+            "name": "Tuvalu",
+          },
+          Object {
+            "code": "UG",
+            "name": "Uganda",
+          },
+          Object {
+            "code": "UA",
+            "name": "Ukraine",
+          },
+          Object {
+            "code": "AE",
+            "name": "United Arab Emirates",
+          },
+          Object {
+            "code": "GB",
+            "name": "United Kingdom",
+          },
+          Object {
+            "code": "US",
+            "name": "United States",
+          },
+          Object {
+            "code": "VI",
+            "name": "United States Virgin Islands",
+          },
+          Object {
+            "code": "UY",
+            "name": "Uruguay",
+          },
+          Object {
+            "code": "UZ",
+            "name": "Uzbekistan",
+          },
+          Object {
+            "code": "VU",
+            "name": "Vanuatu",
+          },
+          Object {
+            "code": "VA",
+            "name": "Vatican City",
+          },
+          Object {
+            "code": "VE",
+            "name": "Venezuela",
+          },
+          Object {
+            "code": "VN",
+            "name": "Vietnam",
+          },
+          Object {
+            "code": "WF",
+            "name": "Wallis and Futuna",
+          },
+          Object {
+            "code": "EH",
+            "name": "Western Sahara",
+          },
+          Object {
+            "code": "YE",
+            "name": "Yemen",
+          },
+          Object {
+            "code": "ZM",
+            "name": "Zambia",
+          },
+          Object {
+            "code": "ZW",
+            "name": "Zimbabwe",
+          },
+        ]
+      }
+      disableVirtualization={false}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={false}
+      initialNumToRender={10}
+      invertStickyHeaders={undefined}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      numColumns={1}
+      onContentSizeChange={[Function]}
+      onEndReachedThreshold={2}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+              }
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "rgba(216,216,216,1)",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "padding": 19,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "rgba(170,170,170,1)",
+                    "fontFamily": "NunitoSans-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
+                }
+              >
+                Afghanistan
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+              }
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "rgba(216,216,216,1)",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "padding": 19,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "rgba(170,170,170,1)",
+                    "fontFamily": "NunitoSans-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
+                }
+              >
+                Åland Islands
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+              }
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "rgba(216,216,216,1)",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "padding": 19,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "rgba(170,170,170,1)",
+                    "fontFamily": "NunitoSans-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
+                }
+              >
+                Albania
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+              }
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "rgba(216,216,216,1)",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "padding": 19,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "rgba(170,170,170,1)",
+                    "fontFamily": "NunitoSans-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
+                }
+              >
+                Algeria
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+              }
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "rgba(216,216,216,1)",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "padding": 19,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "rgba(170,170,170,1)",
+                    "fontFamily": "NunitoSans-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
+                }
+              >
+                American Samoa
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+              }
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "rgba(216,216,216,1)",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "padding": 19,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "rgba(170,170,170,1)",
+                    "fontFamily": "NunitoSans-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
+                }
+              >
+                Andorra
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+              }
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "rgba(216,216,216,1)",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "padding": 19,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "rgba(170,170,170,1)",
+                    "fontFamily": "NunitoSans-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
+                }
+              >
+                Angola
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+              }
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "rgba(216,216,216,1)",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "padding": 19,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "rgba(170,170,170,1)",
+                    "fontFamily": "NunitoSans-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
+                }
+              >
+                Anguilla
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+              }
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "rgba(216,216,216,1)",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "padding": 19,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "rgba(170,170,170,1)",
+                    "fontFamily": "NunitoSans-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
+                }
+              >
+                Antarctica
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+              }
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "rgba(216,216,216,1)",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "padding": 19,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "rgba(170,170,170,1)",
+                    "fontFamily": "NunitoSans-Regular",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
+                }
+              >
+                Antigua and Barbuda
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "height": 0,
+            }
+          }
+        />
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;

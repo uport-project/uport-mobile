@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates a ADD_DATA action 1`] = `
+Object {
+  "data": Object {
+    "name": "Barrington Levi",
+  },
+  "type": "ADD_DATA",
+}
+`;
+
+exports[`creates a FETCH_CURRENT_COUNTRY action 1`] = `
+Object {
+  "type": "FETCH_CURRENT_COUNTRY",
+}
+`;
+
+exports[`creates a FLAG_NEWBIE action 1`] = `
+Object {
+  "type": "FLAG_NEWBIE",
+}
+`;
+
+exports[`creates a SET_ONBOARDING_NETWORK action 1`] = `
+Object {
+  "network": "0x42",
+  "type": "SET_ONBOARDING_NETWORK",
+}
+`;
+
+exports[`creates a UNFLAG_NEWBIE action 1`] = `
+Object {
+  "type": "UNFLAG_NEWBIE",
+}
+`;

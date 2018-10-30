@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`performs MARK_OFFLINE 1`] = `
+Object {
+  "online": false,
+}
+`;
+
+exports[`performs MARK_OFFLINE 2`] = `
+Object {
+  "gasPrice": 12310011,
+  "online": false,
+}
+`;
+
+exports[`performs MARK_OFFLINE 3`] = `
+Object {
+  "gasPrice": 12310011,
+  "online": false,
+}
+`;
+
+exports[`performs MARK_ONLINE 1`] = `
+Object {
+  "online": true,
+}
+`;
+
+exports[`performs MARK_ONLINE 2`] = `
+Object {
+  "gasPrice": 12310011,
+  "online": true,
+}
+`;
+
+exports[`performs MARK_ONLINE 3`] = `
+Object {
+  "gasPrice": 12310011,
+  "online": true,
+}
+`;
+
+exports[`performs SAVE_GAS_PRICE 1`] = `
+Object {
+  "gasPrice": 1231,
+}
+`;
+
+exports[`performs SAVE_GAS_PRICE 2`] = `
+Object {
+  "gasPrice": 1231,
+  "online": true,
+}
+`;
+
+exports[`performs SAVE_GAS_PRICE 3`] = `
+Object {
+  "gasPrice": 1231,
+  "online": false,
+}
+`;

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2018 ConsenSys AG
+  ~
+  ~ This file is part of uPort Mobile App.
+  ~
+  ~ uPort Mobile App is free software: you can redistribute it and/or modify it under the terms of
+  ~ the GNU General Public License as published by the Free Software Foundation, either version 3
+  ~ of the License, or (at your option) any later version.
+  ~
+  ~ uPort Mobile App is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+  ~ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  ~ See the GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along with uPort Mobile App.
+  ~ If not, see <http://www.gnu.org/licenses/>.
+  ~
+  -->
+
+<resources>
+    <color name="uport_background">@color/purple</color>
+    <color name="colorPrimary">@color/white246</color>
+    <color name="colorPrimaryDark">@color/pure_black</color>
+    <color name="textColorPrimary">@color/grey74</color>
+    <color name="colorAccent">@color/purple</color>
+
+    <color name="pure_black">#000</color>
+    <color name="white216">#d8d8d8</color>
+    <color name="white226">#e2e2e2</color>
+    <color name="white246">#f6f7f8</color>
+    <color name="red">#e74c3c</color>
+    <color name="purple">#5C50CA</color>
+    <color name="lightPurple">#FF5B54C7</color>
+    <color name="translucentPurple">#555c50ca</color>
+    <color name="translucentGrey">#b2fcfcfd</color>
+    <color name="green">#36b87b</color>
+    <color name="grey216">@color/white216</color>
+    <color name="grey185">#b9b9b9</color>
+    <color name="grey170">#aaaaaa</color>
+    <color name="grey155">#9b9b9b</color>
+    <color name="grey74">#4a4a4a</color>
+</resources>

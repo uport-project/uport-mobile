@@ -1,0 +1,247 @@
+version: 2
+jobs:
+  node:
+    working_directory: ~/uport-mobile
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - yarn-{{ arch }}-v2-{{ checksum "yarn.lock" }}
+            - yarn-{{ arch }}-v2
+      - restore_cache:
+          keys:
+            - node-{{ arch }}-v2-{{ checksum "package.json" }}
+            - node-{{ arch }}-v2
+
+      - run: yarn install
+
+      - save_cache:
+          key: yarn-{{ arch }}-v2-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+      - save_cache:
+          key: node-{{ arch }}-v2-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run:
+          name: jest tests
+          command: |
+            mkdir -p test-results/jest
+            yarn run test --ci --coverage --maxWorkers=3
+          environment:
+            JEST_JUNIT_OUTPUT: test-results/jest/junit.xml
+
+      - run:
+          name: package react native android bundle independently
+          command: yarn package-android --max-workers=3
+
+      - persist_to_workspace:
+          root: ~/uport-mobile
+          paths:
+            - node_modules
+            - android/app/build/jsbundle/assets
+            - android/app/build/jsbundle/res
+
+      - store_test_results:
+          path: test-results
+      - store_artifacts:
+          path: test-results
+
+
+  android:
+    working_directory: ~/uport-mobile/android
+    docker:
+      - image: circleci/android:api-27-node8-alpha
+        environment:
+          YARN_VERSION: 1.2.1
+          ANDROID_HOME:  /opt/android/sdk
+          GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xms256m -Xmx3072m -XX:+HeapDumpOnOutOfMemoryError" -Dorg.gradle.daemon=true -Dorg.gradle.parallel=true'
+          TERM: dumb
+          LC_ALL: en_US.UTF-8
+          LANG: en_US.UTF-8
+    steps:
+      - checkout:
+          path: ~/uport-mobile
+      - attach_workspace:
+          at: ~/uport-mobile
+
+      - restore_cache:
+          keys:
+            - bundle-{{ arch }}-v5-{{ checksum "Gemfile.lock" }}
+            - bundle-{{ arch }}-v5
+      - run: bundle install
+      - save_cache:
+          key: bundle-{{ arch }}-v5-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+            - .bundle
+            - ~/.bundle
+      - restore_cache:
+          keys:
+            - android-{{ arch }}-v2-{{ checksum "build.gradle" }}
+            - android-{{ arch }}-v2
+      - run:
+          name: get android dependencies
+          command: ./gradlew androidDependencies
+      - save_cache:
+          key: android-{{ arch }}-v2-{{ checksum "build.gradle" }}
+          paths:
+            - .gradle
+            - ~/.gradle
+
+      - run: ./gradlew :app:deliverArchives -x bundleReleaseJsAndAssets
+
+      - run:
+          name: tests
+          command: cd ~/uport-mobile/android && ./gradlew :app:lint :app:test -x bundleReleaseJsAndAssets
+
+      - persist_to_workspace:
+          root: ~/uport-mobile
+          paths:
+            - android/app/build/outputs
+
+      - store_artifacts:
+          path: build/artifacts
+
+      - store_artifacts:
+          path: app/build/reports
+
+  ios:
+    working_directory: ~/uport-mobile
+    environment:
+      FL_OUTPUT_DIR: ~/uport-mobile/ios
+      TERM: dumb
+      REACT_NATIVE_MAX_WORKERS: 2
+      LC_ALL: en_US.UTF-8
+      LANG: en_US.UTF-8
+    macos:
+      xcode: "9.3.0"
+    shell: /bin/bash --login -o pipefail
+    steps:
+      - checkout:
+          path: ~/uport-mobile
+      - run:
+          name: Fetch CocoaPods Specs
+          command: |
+            curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
+      - attach_workspace:
+          at: ~/uport-mobile
+      - restore_cache:
+          keys:
+            - bundle-{{ arch }}-v4-ios-{{ checksum "Gemfile.lock" }}
+            - bundle-{{ arch }}-v4-ios
+      - run: bundle install
+      - save_cache:
+          key: bundle-{{ arch }}-v4-ios-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+            - .bundle
+            - ~/.bundle
+      - run:
+          name: xcrun
+          command: |
+            cd ~/uport-mobile/ios && xcrun instruments -w "iPhone 8 (11.3) [" || true
+            pod install --verbose
+            npm install
+            yarn
+      - run:
+          name: Fastlane
+          command:
+            cd ~/uport-mobile/ios && bundle exec fastlane buildTheApp
+      - persist_to_workspace:
+          root: ~/uport-mobile
+          paths:
+            - ios/gym
+      - store_artifacts:
+          path: ~/uport-mobile/ios/gym
+
+  vault:
+    docker:
+      - image: vault:0.7.3
+    steps:
+      - run: vault token-renew > /dev/null
+
+  deploy-android:
+    working_directory: ~/uport-mobile/android
+    docker:
+      - image: circleci/android:api-27-node8-alpha
+    steps:
+      - checkout:
+          path: ~/uport-mobile
+      - attach_workspace:
+          at: ~/uport-mobile
+      - restore_cache:
+          keys:
+            - bundle-{{ arch }}-v5-{{ checksum "Gemfile.lock" }}
+            - bundle-{{ arch }}-v5
+      - run: bundle install
+
+      # TODO: these should be part of the container
+      - run: wget https://releases.hashicorp.com/vault/0.10.1/vault_0.10.1_linux_amd64.zip -O ~/vault.zip
+      - run: unzip ~/vault.zip -d ~/vault/
+
+      - run: PATH=$PATH:$HOME/vault && bash ../scripts/pull_service_key.sh && fastlane android alpha; rm -f ../google-play-key-file.json
+  deploy-ios:
+    working_directory: ~/uport-mobile
+    environment:
+      TERM: dumb
+      REACT_NATIVE_MAX_WORKERS: 2
+      LC_ALL: en_US.UTF-8
+      LANG: en_US.UTF-8
+    macos:
+      xcode: "9.3.0"
+    shell: /bin/bash --login -o pipefail
+    steps:
+      - checkout:
+          path: ~/uport-mobile
+      - attach_workspace:
+          at: ~/uport-mobile
+      - restore_cache:
+          keys:
+            - bundle-{{ arch }}-v4-ios-{{ checksum "Gemfile.lock" }}
+            - bundle-{{ arch }}-v4-ios
+      - run: bundle install
+      - run:
+          name: Upload To Testflight
+          command: cd ~/uport-mobile/ios && bundle exec fastlane uploadToTestflight
+workflows:
+  version: 2
+  node-android-ios:
+    jobs:
+      - vault:
+          filters:
+            tags:
+              only: /.*/
+      - node:
+          filters:
+            tags:
+              only: /.*/
+      - android:
+          requires:
+            - vault
+            - node
+          filters:
+            tags:
+              only: /.*/
+      - deploy-android:
+          requires:
+            - android
+          filters:
+            tags:
+              only: /^[v]*[0-9]+.*/
+            branches:
+              ignore: /.*/
+      - ios:
+          filters:
+            tags:
+              only: /.*/
+      - deploy-ios:
+          requires:
+            - ios
+          filters:
+            tags:
+              only: /^[v]*[0-9]+.*/
+            branches:
+              ignore: /.*/

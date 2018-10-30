@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`clears queue 1`] = `
+Object {
+  "events": Array [],
+  "head": null,
+}
+`;
+
+exports[`clears queue 2`] = `
+Object {
+  "events": Array [],
+  "head": null,
+}
+`;
+
+exports[`clears queue 3`] = `
+Object {
+  "events": Array [],
+  "head": "bcdefg",
+}
+`;
+
+exports[`clears queue 4`] = `
+Object {
+  "events": Array [],
+  "head": "bcdefg",
+}
+`;
+
+exports[`marks as doNotQueue 1`] = `
+Object {
+  "doNotQueue": true,
+  "events": Array [],
+  "head": null,
+}
+`;
+
+exports[`marks as doNotQueue 2`] = `
+Object {
+  "doNotQueue": true,
+  "events": Array [],
+  "head": null,
+}
+`;
+
+exports[`marks as doNotQueue 3`] = `
+Object {
+  "doNotQueue": true,
+  "events": Array [
+    Object {
+      "type": "HELLO1",
+    },
+    Object {
+      "type": "HELLO2",
+    },
+    Object {
+      "type": "HELLO3",
+    },
+  ],
+  "head": "bcdefg",
+}
+`;
+
+exports[`queues event 1`] = `
+Object {
+  "events": Array [
+    Object {
+      "name": "Quirp",
+      "type": "BOOM",
+    },
+  ],
+  "head": null,
+}
+`;
+
+exports[`queues event 2`] = `
+Object {
+  "events": Array [
+    Object {
+      "name": "Quirp",
+      "type": "BOOM",
+    },
+  ],
+  "head": null,
+}
+`;
+
+exports[`queues event 3`] = `
+Object {
+  "events": Array [
+    Object {
+      "type": "HELLO",
+    },
+    Object {
+      "name": "Quirp",
+      "type": "BOOM",
+    },
+  ],
+  "head": "bcdefg",
+}
+`;
+
+exports[`queues event 4`] = `
+Object {
+  "events": Array [
+    Object {
+      "type": "HELLO1",
+    },
+    Object {
+      "type": "HELLO2",
+    },
+    Object {
+      "type": "HELLO3",
+    },
+    Object {
+      "name": "Quirp",
+      "type": "BOOM",
+    },
+  ],
+  "head": "bcdefg",
+}
+`;
+
+exports[`sets head 1`] = `
+Object {
+  "events": Array [],
+  "head": "abcde",
+}
+`;
+
+exports[`sets head 2`] = `
+Object {
+  "events": Array [],
+  "head": "abcde",
+}
+`;
+
+exports[`sets head 3`] = `
+Object {
+  "events": Array [
+    Object {
+      "type": "HELLO",
+    },
+  ],
+  "head": "abcde",
+}
+`;
+
+exports[`sets head 4`] = `
+Object {
+  "events": Array [],
+  "head": "abcde",
+}
+`;
+
+exports[`takes queued event 1`] = `
+Object {
+  "events": Array [],
+  "head": null,
+}
+`;
+
+exports[`takes queued event 2`] = `
+Object {
+  "events": Array [],
+  "head": null,
+}
+`;
+
+exports[`takes queued event 3`] = `
+Object {
+  "events": Array [],
+  "head": "bcdefg",
+}
+`;
+
+exports[`takes queued event 4`] = `
+Object {
+  "events": Array [
+    Object {
+      "type": "HELLO2",
+    },
+    Object {
+      "type": "HELLO3",
+    },
+  ],
+  "head": "bcdefg",
+}
+`;

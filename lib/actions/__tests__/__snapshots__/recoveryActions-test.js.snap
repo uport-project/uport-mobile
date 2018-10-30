@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates a HIDE_RECOVERY_SEED action 1`] = `
+Object {
+  "type": "HIDE_RECOVERY_SEED",
+}
+`;
+
+exports[`creates a SAVE_RECOVERY_SEED action 1`] = `
+Object {
+  "seed": "secret seed",
+  "type": "SAVE_RECOVERY_SEED",
+}
+`;
+
+exports[`creates a SELECT_RECOVERY_SEED_WORD action 1`] = `
+Object {
+  "index": 8,
+  "type": "SELECT_RECOVERY_SEED_WORD",
+}
+`;
+
+exports[`creates a SHOW_RECOVERY_SEED action 1`] = `
+Object {
+  "type": "SHOW_RECOVERY_SEED",
+}
+`;
+
+exports[`creates a START_SEED_RECOVERY action 1`] = `
+Object {
+  "phrase": "some secret phase",
+  "type": "START_SEED_RECOVERY",
+}
+`;

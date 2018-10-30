@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createAttestationToken creates correct payload 1`] = `
+Object {
+  "data": "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NksifQ.eyJpYXQiOjE0ODUzMjExMzMsInN1YiI6IjM0d2pzeHd2ZHVhbm83TkZDOHVqTkpuRmpiYWNnWWVXQThtIiwiY2xhaW0iOnsibmFtZSI6IkZpbGRlcmJlcnQifSwiaXNzIjoiZGlkOnVwb3J0OjM0d2pzeHd2ZHVhbm83TkZDOHVqTkpuRmpiYWNnWWVXQThtIn0",
+  "header": Object {
+    "alg": "ES256K",
+    "typ": "JWT",
+  },
+  "payload": Object {
+    "claim": Object {
+      "name": "Filderbert",
+    },
+    "iat": 1485321133,
+    "iss": "did:uport:34wjsxwvduano7NFC8ujNJnFjbacgYeWA8m",
+    "sub": "34wjsxwvduano7NFC8ujNJnFjbacgYeWA8m",
+  },
+  "signature": "gTeosFvndygwFgw3sjpJ0eX3Ny1qnp2DinYzXvFvqG80sPoXYegeNBIykar0rJXDfjxOUIlD4mbrUMD0xuatSg",
+}
+`;
+
+exports[`createPututuAuthToken creates correct payload 1`] = `
+Object {
+  "data": "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NksifQ.eyJpYXQiOjE0ODUzMjExMzMsImV4cCI6MTQ4NTQwNzUzMywidHlwZSI6InVzZXItYXV0aCIsImlzcyI6ImRpZDp1cG9ydDozNHdqc3h3dmR1YW5vN05GQzh1ak5KbkZqYmFjZ1llV0E4bSJ9",
+  "header": Object {
+    "alg": "ES256K",
+    "typ": "JWT",
+  },
+  "payload": Object {
+    "exp": 1485407533,
+    "iat": 1485321133,
+    "iss": "did:uport:34wjsxwvduano7NFC8ujNJnFjbacgYeWA8m",
+    "type": "user-auth",
+  },
+  "signature": "85-ZtEJ-kF2vWRNadEh03GXHPWMgbl28Y4RkhnPnBLtxm1fxd6rii4xsIDoxywjOBJgLVBKRTlb53Qbw3UDRUQ",
+}
+`;
+
+exports[`createShareRequestToken creates correct payload 1`] = `
+Object {
+  "data": "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NksifQ.eyJpYXQiOjE0ODUzMjExMzMsImV4cCI6MTQ4NTMyMTczMywicmVxdWVzdGVkIjpbIm5hbWUiXSwidHlwZSI6InNoYXJlUmVxIiwiaXNzIjoiZGlkOnVwb3J0OjM0d2pzeHd2ZHVhbm83TkZDOHVqTkpuRmpiYWNnWWVXQThtIn0",
+  "header": Object {
+    "alg": "ES256K",
+    "typ": "JWT",
+  },
+  "payload": Object {
+    "exp": 1485321733,
+    "iat": 1485321133,
+    "iss": "did:uport:34wjsxwvduano7NFC8ujNJnFjbacgYeWA8m",
+    "requested": Array [
+      "name",
+    ],
+    "type": "shareReq",
+  },
+  "signature": "1-mkM7uUTDv4LAJy28XxnCMUh6vDbsiy7bmOYrej1hyTX2hidzBkLmdvs4Nuvahc9WD9ysdHwQy4b86xXKLqvQ",
+}
+`;
+
+exports[`createShareResponseToken creates correct payload 1`] = `
+Object {
+  "data": "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NksifQ.eyJpYXQiOjE0ODUzMjExMzMsImV4cCI6MTQ4NTMyMTczMywib3duIjp7Im5hbWUiOiJCb2IifSwidHlwZSI6InNoYXJlUmVzcCIsImlzcyI6ImRpZDp1cG9ydDozNHdqc3h3dmR1YW5vN05GQzh1ak5KbkZqYmFjZ1llV0E4bSJ9",
+  "header": Object {
+    "alg": "ES256K",
+    "typ": "JWT",
+  },
+  "payload": Object {
+    "exp": 1485321733,
+    "iat": 1485321133,
+    "iss": "did:uport:34wjsxwvduano7NFC8ujNJnFjbacgYeWA8m",
+    "own": Object {
+      "name": "Bob",
+    },
+    "type": "shareResp",
+  },
+  "signature": "YFu-0jxO_LlyXoFIJoIXJgPWHzNhZycxazJAotJzk0RrFENsNiIl5CsijbraMjw3SPqlK2EhwbAvBA_29rLvsQ",
+}
+`;

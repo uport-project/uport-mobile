@@ -1,0 +1,30 @@
+{
+  "name": "uPort-mobile-tests",
+  "version": "1.0.0",
+  "description": "uPort Mobile Tests",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/consensys/uport-mobile.git"
+  },
+  "author": "gbugyis",
+  "bugs": {
+    "url": "https://github.com/consensys/uport-mobile/issues"
+  },
+  "homepage": "https://github.com/consensys/uport-mobile",
+  "devDependencies": {
+    "appium": "^1.6.0",
+    "appium-doctor": "^1.2.5",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "colors": "^1.1.2",
+    "express": "^4.14.0",
+    "mocha": "^3.1.2",
+    "q": "^1.4.1",
+    "underscore": "^1.8.3",
+    "wd": "^1.0.0"
+  },
+  "scripts": {
+    "create-uport": "mocha create-uport.js"
+  }
+}

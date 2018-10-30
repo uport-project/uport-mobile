@@ -1,0 +1,2553 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`adds a number to the "request" stats for an address 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+      "stats": Object {
+        "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777": Object {
+          "request": 1,
+        },
+      },
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`adds a number to the "request" stats for an address 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+      "stats": Object {
+        "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777": Object {
+          "request": 1,
+        },
+      },
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`adds a number to the "request" stats for an address weve request before 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+      "stats": Object {
+        "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777": Object {
+          "request": 2,
+        },
+      },
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`adds a number to the "request" stats for an address weve request before 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+      "stats": Object {
+        "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777": Object {
+          "request": 2,
+        },
+      },
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`adds a number to the "sign" stats for an address weve request before 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+      "stats": Object {
+        "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777": Object {
+          "request": 1,
+          "sign": 1,
+        },
+      },
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`adds a number to the "sign" stats for an address weve request before 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+      "stats": Object {
+        "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777": Object {
+          "request": 1,
+          "sign": 1,
+        },
+      },
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`adds claims 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "John Dillinger",
+        "phone": "555-555-5555",
+        "ssno": "0001000",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`adds claims 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "John Dillinger",
+        "phone": "555-555-5555",
+        "ssno": "0001000",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`adds claims 3`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+        "ssno": "0001000",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`adds claims 4`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`adds ones with different parameters 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "pendingAttestations": Object {
+        "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777": Object {
+          "email": Object {},
+          "name": Object {
+            "applicant_id": 1234,
+          },
+        },
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`adds ones with different parameters 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "pendingAttestations": Object {
+        "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777": Object {
+          "name": Object {},
+        },
+        "0x8dd7ef5c99be7a454b4a9869683a3a394fde9778": Object {
+          "name": Object {},
+        },
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`increases nonce 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "nonce": 1,
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`increases nonce 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "nonce": 1,
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`opens activity 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "activities": Object {
+        "112313123": Object {
+          "id": "112313123",
+          "opened": true,
+          "target": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+        },
+      },
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`opens activity 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "activities": Object {
+        "112313123": Object {
+          "id": "112313123",
+          "opened": true,
+          "target": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+        },
+      },
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`opens activity 3`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "activities": Object {
+        "112313123": Object {
+          "id": "112313123",
+          "opened": true,
+          "target": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+        },
+      },
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`opens activity 4`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "activities": Object {
+        "112313123": Object {
+          "id": "112313123",
+          "opened": true,
+          "target": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+        },
+      },
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`removes activity 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "activities": Object {},
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`removes activity 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "activities": Object {},
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`removes claims 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`removes claims 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`removes claims 3`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`removes connection 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`removes connection 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`removes identity 1`] = `
+Object {
+  "byAddress": Object {},
+}
+`;
+
+exports[`removes identity 2`] = `
+Object {
+  "byAddress": Object {
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`removes identity 3`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+}
+`;
+
+exports[`removes pending attestations 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "pendingAttestations": Object {},
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`removes pending attestations 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "pendingAttestations": Object {},
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`removes pending attestations 3`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "pendingAttestations": Object {
+        "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777": null,
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`removes pending attestations 4`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "pendingAttestations": Object {
+        "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777": null,
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`removes the attestation from ledger 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "attestations": Object {},
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`removes the attestation from ledger 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "attestations": Object {},
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`save segment id 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+  "segmentId": "12313",
+}
+`;
+
+exports[`save segment id 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+  "segmentId": "12313",
+}
+`;
+
+exports[`saves balance in identity 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "balance": Object {
+        "ethBalance": 2,
+        "usdBalance": undefined,
+      },
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`saves balance in identity 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "balance": Object {
+        "ethBalance": 2,
+        "usdBalance": undefined,
+      },
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`saves fuel in identity 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "fuel": 2,
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`saves fuel in identity 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "fuel": 2,
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`saves ipfsHash in identity 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "ipfsProfile": "QmdNm7VZTNnux2LS6vMJXLZ5BGb3rPJV9mF5jA72uq9y7o",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`saves ipfsHash in identity 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "ipfsProfile": "QmdNm7VZTNnux2LS6vMJXLZ5BGb3rPJV9mF5jA72uq9y7o",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`saves meta nonce in identity 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "metaNonce": Object {
+        "nonce": 5,
+        "timestamp": 1516134092003,
+      },
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`saves meta nonce in identity 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "metaNonce": Object {
+        "nonce": 5,
+        "timestamp": 1516134092003,
+      },
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`saves nonce in identity 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "nonce": 2,
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`saves nonce in identity 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "nonce": 2,
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`stores a new sub identity correctly 1`] = `
+Object {
+  "byAddress": Object {
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "controllerAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6b",
+      "createdAt": 1492997058053,
+      "network": "kovan",
+      "parent": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "updatedAt": 1492997058053,
+    },
+  },
+}
+`;
+
+exports[`stores a new sub identity correctly 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "controllerAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6b",
+      "createdAt": 1492997058053,
+      "network": "kovan",
+      "parent": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "updatedAt": 1492997058053,
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`stores a new sub identity correctly 3`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "controllerAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6b",
+      "createdAt": 1492997058053,
+      "network": "kovan",
+      "parent": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "updatedAt": 1492997059053,
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`stores a pending attestation to the attestations ledger 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "pendingAttestations": Object {
+        "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777": Object {
+          "name": Object {},
+        },
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`stores a pending attestation to the attestations ledger 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "pendingAttestations": Object {
+        "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777": Object {
+          "name": Object {
+            "applicant_id": 1234,
+          },
+        },
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`stores a pending attestation to the attestations ledger 3`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "pendingAttestations": Object {
+        "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777": Object {
+          "name": Object {},
+        },
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`stores activity 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "activities": Object {
+        "112313123": Object {
+          "id": 112313123,
+          "target": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+        },
+      },
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`stores activity 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "activities": Object {
+        "112313123": Object {
+          "id": 112313123,
+          "target": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+        },
+      },
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`stores addRecoveryAddress 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x123afdasdfasdfasdf",
+      "recoveryType": "bip39",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`stores addRecoveryAddress 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x123afdasdfasdfasdf",
+      "recoveryType": "bip39",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`stores an attestation to the attestations ledger 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "attestations": Object {
+        "36612ea39733a3e604f5156b6ca75aec8e3c989547a00556282b70c4a3588993": Object {
+          "claims": Object {
+            "name": "Bob Smith",
+          },
+          "iss": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+          "sub": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+          "token": "SECRET_JWT_TOKEN",
+        },
+      },
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`stores an attestation to the attestations ledger 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "attestations": Object {
+        "36612ea39733a3e604f5156b6ca75aec8e3c989547a00556282b70c4a3588993": Object {
+          "claims": Object {
+            "name": "Bob Smith",
+          },
+          "iss": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+          "sub": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+          "token": "SECRET_JWT_TOKEN",
+        },
+      },
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`stores connection 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+          "worksWith": Array [
+            "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`stores connection 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+          "worksWith": Array [
+            "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`stores currentIdentity 1`] = `
+Object {
+  "currentStoredIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`stores currentIdentity 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+  "currentStoredIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`stores currentIdentity 3`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+  "currentStoredIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`stores encryption key 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicEncKey": "0x123afdasdfasdfasdf",
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`stores encryption key 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicEncKey": "0x123afdasdfasdfasdf",
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`stores external uport 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+  "external": Object {
+    "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01": Object {
+      "name": "Bob",
+    },
+  },
+}
+`;
+
+exports[`stores external uport 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+  "external": Object {
+    "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01": Object {
+      "name": "Bob",
+    },
+  },
+}
+`;
+
+exports[`stores external uport 3`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+  "external": Object {
+    "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01": Object {
+      "country": "ug",
+      "name": "Roberto Waters",
+    },
+  },
+}
+`;
+
+exports[`stores external uport 4`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+  "external": Object {
+    "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01": Object {
+      "country": "ug",
+      "name": "Bob",
+    },
+  },
+}
+`;
+
+exports[`stores fuel token 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "fuelToken": "0x123afdasdfasdfasdf",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`stores fuel token 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "fuelToken": "0x123afdasdfasdfasdf",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`stores keychain level 1`] = `
+Object {
+  "keychainSecurityLevel": "touch",
+}
+`;
+
+exports[`stores keychain level 2`] = `
+Object {
+  "keychainSecurityLevel": "touch",
+}
+`;
+
+exports[`stores keychain level 3`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+  "keychainSecurityLevel": "touch",
+}
+`;
+
+exports[`stores pututu token 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "pututuToken": "0x123afdasdfasdfasdf",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`stores pututu token 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "pututuToken": "0x123afdasdfasdfasdf",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`stores the new identity correctly 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`stores the new identity correctly 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`switches identity 1`] = `
+Object {
+  "currentIdentity": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+}
+`;
+
+exports[`switches identity 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+}
+`;
+
+exports[`switches identity 3`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+}
+`;
+
+exports[`updates activity 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "activities": Object {
+        "112313123": Object {
+          "hash": "0x123",
+          "id": "112313123",
+          "target": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+        },
+      },
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`updates activity 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "activities": Object {
+        "112313123": Object {
+          "hash": "0x123",
+          "id": "112313123",
+          "target": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+        },
+      },
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;
+
+exports[`updates existing ones if options change 1`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "pendingAttestations": Object {
+        "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777": Object {
+          "name": Object {
+            "applicant_id": 1234,
+            "failed": "You are on OFAC list",
+          },
+        },
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+  },
+  "currentIdentity": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+}
+`;
+
+exports[`updates existing ones if options change 2`] = `
+Object {
+  "byAddress": Object {
+    "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+      "controllerAddress": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
+      "deviceAddress": "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777",
+      "network": "ropsten",
+      "own": Object {
+        "connections": Object {
+          "knows": Array [
+            "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+          ],
+        },
+        "name": "Alice",
+        "phone": "555-555-5555",
+      },
+      "pendingAttestations": Object {
+        "0x8dd7ef5c99be7a454b4a9869683a3a394fde9777": Object {
+          "name": Object {
+            "failed": "You are on OFAC list",
+          },
+        },
+      },
+      "publicKey": "0xf09ef47d5359e36d8fb004be6bf96591836fcdf8421fe599f7e33fd97fc8d0746bbd509d00c90a8c5860bb097e4911b133d405238d67f524d892f6c13dd9b7dc",
+      "recoveryAddress": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    },
+    "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX": Object {
+      "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+      "network": "kovan",
+      "own": Object {
+        "connections": Object {},
+        "name": "Alice Kovan",
+        "phone": "555-555-5555",
+      },
+    },
+  },
+  "currentIdentity": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+}
+`;

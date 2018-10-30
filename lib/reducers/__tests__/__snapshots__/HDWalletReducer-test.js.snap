@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`performs ACCOUNT_RISK_SENT 1`] = `
+Object {
+  "accountRiskSent": true,
+  "identities": Array [
+    3,
+    2,
+    1,
+  ],
+  "root": "0x1234",
+}
+`;
+
+exports[`performs INC_ACCOUNT_INDEX 1`] = `
+Object {
+  "identities": Array [
+    4,
+    2,
+    1,
+  ],
+  "root": "0x1234",
+}
+`;
+
+exports[`performs INC_ACCOUNT_INDEX 2`] = `
+Object {
+  "identities": Array [
+    3,
+    3,
+    1,
+  ],
+  "root": "0x1234",
+}
+`;
+
+exports[`performs INC_ACCOUNT_INDEX 3`] = `
+Object {
+  "identities": Array [
+    3,
+    2,
+    2,
+  ],
+  "root": "0x1234",
+}
+`;
+
+exports[`performs INC_IDENTITY_INDEX 1`] = `
+Object {
+  "identities": Array [
+    0,
+  ],
+}
+`;
+
+exports[`performs INC_IDENTITY_INDEX 2`] = `
+Object {
+  "identities": Array [
+    0,
+  ],
+}
+`;
+
+exports[`performs INC_IDENTITY_INDEX 3`] = `
+Object {
+  "identities": Array [
+    3,
+    2,
+    1,
+    0,
+  ],
+  "root": "0x1234",
+}
+`;
+
+exports[`performs INC_IDENTITY_INDEX 4`] = `
+Object {
+  "identities": Array [
+    3,
+    2,
+    1,
+    0,
+  ],
+  "root": "0x1234",
+}
+`;
+
+exports[`performs RESET_HD_WALLET 1`] = `Object {}`;
+
+exports[`performs RESET_HD_WALLET 2`] = `Object {}`;
+
+exports[`performs RESET_HD_WALLET 3`] = `Object {}`;
+
+exports[`performs SEED_CONFIRMED 1`] = `
+Object {
+  "identities": Array [
+    3,
+    2,
+    1,
+  ],
+  "root": "0x1234",
+  "seedConfirmed": true,
+}
+`;
+
+exports[`performs STORE_ROOT_ADDRESS 1`] = `
+Object {
+  "identities": Array [
+    0,
+  ],
+  "root": "0x1234",
+}
+`;
+
+exports[`performs STORE_ROOT_ADDRESS 2`] = `
+Object {
+  "identities": Array [
+    0,
+  ],
+  "root": "0x1234",
+}
+`;
+
+exports[`performs STORE_ROOT_ADDRESS 3`] = `
+Object {
+  "identities": Array [
+    0,
+  ],
+  "root": "0x1234",
+}
+`;
+
+exports[`performs STORE_ROOT_ADDRESS 4`] = `
+Object {
+  "identities": Array [
+    0,
+  ],
+  "root": "0xabcde",
+}
+`;

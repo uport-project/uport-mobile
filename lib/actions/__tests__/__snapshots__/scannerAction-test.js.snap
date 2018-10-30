@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates a DISABLE_CAMERA action 1`] = `
+Object {
+  "type": "DISABLE_CAMERA",
+}
+`;
+
+exports[`creates a ENABLE_CAMERA action 1`] = `
+Object {
+  "type": "ENABLE_CAMERA",
+}
+`;

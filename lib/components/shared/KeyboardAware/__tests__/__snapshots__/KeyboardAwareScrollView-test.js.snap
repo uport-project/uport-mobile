@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`KeyboardAwareScrollView renders the KeyboardAwareScrollView 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "padding": 15,
+    }
+  }
+  contentInset={
+    Object {
+      "bottom": 0,
+    }
+  }
+  dataSource={
+    Object {
+      "rowIdentities": Array [],
+    }
+  }
+  getTextInputRefs={[Function]}
+  onContentSizeChange={[Function]}
+  onLayout={[Function]}
+  onScroll={[Function]}
+  scrollEventThrottle={200}
+  scrollToBottomOnKBShow={false}
+  scrollToInputAdditionalOffset={75}
+  startScrolledToBottom={false}
+  style={
+    Object {
+      "backgroundColor": "white",
+      "flex": 1,
+      "paddingTop": 10,
+    }
+  }
+>
+  <View />
+</RCTScrollView>
+`;

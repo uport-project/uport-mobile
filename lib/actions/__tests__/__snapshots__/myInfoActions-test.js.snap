@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates a EDIT_MY_INFO action 1`] = `
+Object {
+  "change": Object {
+    "name": "Bob Bixby",
+  },
+  "type": "EDIT_MY_INFO",
+}
+`;
+
+exports[`creates a SAVE_SHARE_TOKEN action 1`] = `
+Object {
+  "address": "0x01234",
+  "token": "JWT",
+  "type": "SAVE_SHARE_TOKEN",
+}
+`;
+
+exports[`creates a UPDATE_SHARE_TOKEN action 1`] = `
+Object {
+  "address": "0x01234",
+  "type": "UPDATE_SHARE_TOKEN",
+}
+`;

@@ -1,0 +1,723 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SettingsRoot renders Settings screen with 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "rgba(246,247,248,1)",
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView
+    contentContainerStyle={
+      Array [
+        Object {
+          "backgroundColor": "rgba(246,247,248,1)",
+          "flex": 0,
+        },
+        Object {},
+      ]
+    }
+    refreshControl={undefined}
+    style={
+      Array [
+        Object {
+          "borderBottomColor": "rgba(216,216,216,1)",
+          "borderBottomWidth": 1,
+        },
+        Object {
+          "flex": 1,
+        },
+      ]
+    }
+  >
+    <View>
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#FFFFFF",
+                "borderColor": "rgba(216,216,216,1)",
+                "borderTopWidth": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 19,
+              },
+              Object {},
+            ]
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(170,170,170,1)",
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 16,
+                "lineHeight": 22,
+              }
+            }
+          >
+            App Version
+          </Text>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "rgba(74,74,74,1)",
+                    "fontFamily": "NunitoSans-Light",
+                    "fontSize": 14,
+                    "lineHeight": 22,
+                  },
+                  Object {},
+                ]
+              }
+            >
+              256
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#FFFFFF",
+                "borderColor": "rgba(216,216,216,1)",
+                "borderTopWidth": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 19,
+              },
+              Object {},
+            ]
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(170,170,170,1)",
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 16,
+                "lineHeight": 22,
+              }
+            }
+          >
+            Privacy Policy
+          </Text>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "rgba(74,74,74,1)",
+                    "fontFamily": "NunitoSans-Light",
+                    "fontSize": 14,
+                    "lineHeight": 22,
+                  },
+                  Object {},
+                ]
+              }
+            >
+              v1.1 (5/24/2018)
+            </Text>
+            <Icon
+              color="rgba(216,216,216,1)"
+              name="ios-arrow-forward-outline"
+              size={20}
+              style={
+                Object {
+                  "marginLeft": 16,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#FFFFFF",
+                "borderColor": "rgba(216,216,216,1)",
+                "borderTopWidth": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 19,
+              },
+              Object {},
+            ]
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(170,170,170,1)",
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 16,
+                "lineHeight": 22,
+              }
+            }
+          >
+            Terms and Conditions
+          </Text>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "rgba(74,74,74,1)",
+                    "fontFamily": "NunitoSans-Light",
+                    "fontSize": 14,
+                    "lineHeight": 22,
+                  },
+                  Object {},
+                ]
+              }
+            >
+              v1.2 (5/24/2018)
+            </Text>
+            <Icon
+              color="rgba(216,216,216,1)"
+              name="ios-arrow-forward-outline"
+              size={20}
+              style={
+                Object {
+                  "marginLeft": 16,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#FFFFFF",
+                "borderColor": "rgba(216,216,216,1)",
+                "borderTopWidth": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "padding": 19,
+              },
+              Object {
+                "borderBottomColor": "rgba(216,216,216,1)",
+                "borderBottomWidth": 1,
+              },
+            ]
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(170,170,170,1)",
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 16,
+                "lineHeight": 22,
+              }
+            }
+          >
+            Support
+          </Text>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "rgba(74,74,74,1)",
+                    "fontFamily": "NunitoSans-Light",
+                    "fontSize": 14,
+                    "lineHeight": 22,
+                  },
+                  Object {},
+                ]
+              }
+            />
+            <Icon
+              color="rgba(216,216,216,1)"
+              name="ios-link-outline"
+              size={20}
+              style={
+                Object {
+                  "marginLeft": 16,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`SettingsRoot renders a connected SettingsRoot as expected 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SettingsRoot
+    channel={undefined}
+    navigator={
+      FakeNavigator {
+        "event": [Function],
+        "styles": Object {
+          "navBarBackgroundColor": "rgba(246,247,248,1)",
+          "navBarButtonColor": "rgba(92,80,202,1)",
+          "navBarFontFamily": "NunitoSans-Regular",
+          "navBarFontSize": 18,
+          "navBarNoBorder": true,
+          "navBarTextColor": "rgba(74,74,74,1)",
+        },
+      }
+    }
+    setFlag={[Function]}
+    version="256"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <MenuItem
+          onPress={[Function]}
+          title="App Version"
+          value="256"
+        />,
+        <MenuItem
+          destination="settings.privacy"
+          navigator={
+            FakeNavigator {
+              "event": [Function],
+              "styles": Object {
+                "navBarBackgroundColor": "rgba(246,247,248,1)",
+                "navBarButtonColor": "rgba(92,80,202,1)",
+                "navBarFontFamily": "NunitoSans-Regular",
+                "navBarFontSize": 18,
+                "navBarNoBorder": true,
+                "navBarTextColor": "rgba(74,74,74,1)",
+              },
+            }
+          }
+          title="Privacy Policy"
+          value="v1.1 (5/24/2018)"
+        />,
+        <MenuItem
+          destination="settings.terms"
+          navigator={
+            FakeNavigator {
+              "event": [Function],
+              "styles": Object {
+                "navBarBackgroundColor": "rgba(246,247,248,1)",
+                "navBarButtonColor": "rgba(92,80,202,1)",
+                "navBarFontFamily": "NunitoSans-Regular",
+                "navBarFontSize": 18,
+                "navBarNoBorder": true,
+                "navBarTextColor": "rgba(74,74,74,1)",
+              },
+            }
+          }
+          title="Terms and Conditions"
+          value="v1.2 (5/24/2018)"
+        />,
+        <MenuItem
+          href="https://chat.uport.me"
+          last={true}
+          title="Support"
+        />,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "onPress": [Function],
+          "title": "App Version",
+          "value": "256",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "destination": "settings.privacy",
+          "navigator": FakeNavigator {
+            "event": [Function],
+            "styles": Object {
+              "navBarBackgroundColor": "rgba(246,247,248,1)",
+              "navBarButtonColor": "rgba(92,80,202,1)",
+              "navBarFontFamily": "NunitoSans-Regular",
+              "navBarFontSize": 18,
+              "navBarNoBorder": true,
+              "navBarTextColor": "rgba(74,74,74,1)",
+            },
+          },
+          "title": "Privacy Policy",
+          "value": "v1.1 (5/24/2018)",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "destination": "settings.terms",
+          "navigator": FakeNavigator {
+            "event": [Function],
+            "styles": Object {
+              "navBarBackgroundColor": "rgba(246,247,248,1)",
+              "navBarButtonColor": "rgba(92,80,202,1)",
+              "navBarFontFamily": "NunitoSans-Regular",
+              "navBarFontSize": 18,
+              "navBarNoBorder": true,
+              "navBarTextColor": "rgba(74,74,74,1)",
+            },
+          },
+          "title": "Terms and Conditions",
+          "value": "v1.2 (5/24/2018)",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "href": "https://chat.uport.me",
+          "last": true,
+          "title": "Support",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <MenuItem
+            onPress={[Function]}
+            title="App Version"
+            value="256"
+          />,
+          <MenuItem
+            destination="settings.privacy"
+            navigator={
+              FakeNavigator {
+                "event": [Function],
+                "styles": Object {
+                  "navBarBackgroundColor": "rgba(246,247,248,1)",
+                  "navBarButtonColor": "rgba(92,80,202,1)",
+                  "navBarFontFamily": "NunitoSans-Regular",
+                  "navBarFontSize": 18,
+                  "navBarNoBorder": true,
+                  "navBarTextColor": "rgba(74,74,74,1)",
+                },
+              }
+            }
+            title="Privacy Policy"
+            value="v1.1 (5/24/2018)"
+          />,
+          <MenuItem
+            destination="settings.terms"
+            navigator={
+              FakeNavigator {
+                "event": [Function],
+                "styles": Object {
+                  "navBarBackgroundColor": "rgba(246,247,248,1)",
+                  "navBarButtonColor": "rgba(92,80,202,1)",
+                  "navBarFontFamily": "NunitoSans-Regular",
+                  "navBarFontSize": 18,
+                  "navBarNoBorder": true,
+                  "navBarTextColor": "rgba(74,74,74,1)",
+                },
+              }
+            }
+            title="Terms and Conditions"
+            value="v1.2 (5/24/2018)"
+          />,
+          <MenuItem
+            href="https://chat.uport.me"
+            last={true}
+            title="Support"
+          />,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "onPress": [Function],
+            "title": "App Version",
+            "value": "256",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "destination": "settings.privacy",
+            "navigator": FakeNavigator {
+              "event": [Function],
+              "styles": Object {
+                "navBarBackgroundColor": "rgba(246,247,248,1)",
+                "navBarButtonColor": "rgba(92,80,202,1)",
+                "navBarFontFamily": "NunitoSans-Regular",
+                "navBarFontSize": 18,
+                "navBarNoBorder": true,
+                "navBarTextColor": "rgba(74,74,74,1)",
+              },
+            },
+            "title": "Privacy Policy",
+            "value": "v1.1 (5/24/2018)",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "destination": "settings.terms",
+            "navigator": FakeNavigator {
+              "event": [Function],
+              "styles": Object {
+                "navBarBackgroundColor": "rgba(246,247,248,1)",
+                "navBarButtonColor": "rgba(92,80,202,1)",
+                "navBarFontFamily": "NunitoSans-Regular",
+                "navBarFontSize": 18,
+                "navBarNoBorder": true,
+                "navBarTextColor": "rgba(74,74,74,1)",
+              },
+            },
+            "title": "Terms and Conditions",
+            "value": "v1.2 (5/24/2018)",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "href": "https://chat.uport.me",
+            "last": true,
+            "title": "Support",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "context": Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+    },
+  },
+}
+`;

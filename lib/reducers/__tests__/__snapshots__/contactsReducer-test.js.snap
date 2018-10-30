@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`performs CONTACTS_SELECT_CONTACT 1`] = `
+Object {
+  "index": 0,
+  "key": "contacts",
+  "selectedContact": "0x134134",
+}
+`;
+
+exports[`performs CONTACTS_SELECT_CONTACT 2`] = `
+Object {
+  "index": 0,
+  "key": "contacts",
+  "selectedContact": "0x134134",
+}
+`;

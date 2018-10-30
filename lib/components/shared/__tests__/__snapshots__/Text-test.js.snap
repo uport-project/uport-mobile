@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Text p 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Array [
+      Object {
+        "color": "#3c3a49",
+      },
+      undefined,
+      undefined,
+      undefined,
+      Object {
+        "color": "#3c3a49",
+        "fontFamily": "NunitoSans-Regular",
+        "fontSize": 16,
+        "lineHeight": 27,
+        "marginBottom": 15,
+        "textAlign": "center",
+      },
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+    ]
+  }
+>
+  Test
+</Text>
+`;
+
+exports[`renders Text title 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Array [
+      Object {
+        "color": "#3c3a49",
+      },
+      undefined,
+      Object {
+        "color": "#3c3a49",
+        "fontFamily": "NunitoSans-Regular",
+        "fontSize": 24,
+        "lineHeight": 30,
+        "marginBottom": 40,
+        "marginTop": 25,
+        "textAlign": "center",
+      },
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+    ]
+  }
+>
+  Test
+</Text>
+`;

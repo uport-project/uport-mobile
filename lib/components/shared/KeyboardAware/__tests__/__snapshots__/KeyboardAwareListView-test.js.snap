@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`KeyboardAwareListView renders the KeyboardAwareListView 1`] = `
+<RCTScrollView
+  contentInset={
+    Object {
+      "bottom": 0,
+    }
+  }
+  dataSource={
+    Object {
+      "rowIdentities": Array [],
+    }
+  }
+  onContentSizeChange={[Function]}
+  onLayout={[Function]}
+  onScroll={[Function]}
+  opacity={1}
+  renderScrollComponent={[Function]}
+  scrollEventThrottle={200}
+  scrollToBottomOnKBShow={false}
+  scrollToInputAdditionalOffset={75}
+  startScrolledToBottom={false}
+>
+  <View />
+</RCTScrollView>
+`;

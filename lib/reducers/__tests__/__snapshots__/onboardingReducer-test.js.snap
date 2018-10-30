@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`performs ADD_DATA 1`] = `
+Object {
+  "newbie": false,
+  "userData": Object {
+    "name": "Barrington Levi",
+  },
+}
+`;
+
+exports[`performs ADD_DATA 2`] = `
+Object {
+  "network": "0x3",
+  "newbie": true,
+  "userData": Object {
+    "name": "Barrington Levi",
+  },
+}
+`;
+
+exports[`performs FLAG_NEWBIE 1`] = `
+Object {
+  "newbie": true,
+  "userData": Object {},
+}
+`;
+
+exports[`performs FLAG_NEWBIE 2`] = `
+Object {
+  "network": "0x3",
+  "newbie": true,
+  "userData": Object {
+    "name": "Isaac Hayes",
+  },
+}
+`;
+
+exports[`performs SET_ONBOARDING_NETWORK 1`] = `
+Object {
+  "network": "0x42",
+  "newbie": false,
+  "userData": Object {},
+}
+`;
+
+exports[`performs SET_ONBOARDING_NETWORK 2`] = `
+Object {
+  "network": "0x42",
+  "newbie": true,
+  "userData": Object {
+    "name": "Isaac Hayes",
+  },
+}
+`;
+
+exports[`performs UNFLAG_NEWBIE 1`] = `
+Object {
+  "newbie": false,
+  "userData": Object {},
+}
+`;
+
+exports[`performs UNFLAG_NEWBIE 2`] = `
+Object {
+  "network": "0x3",
+  "newbie": false,
+  "userData": Object {
+    "name": "Isaac Hayes",
+  },
+}
+`;

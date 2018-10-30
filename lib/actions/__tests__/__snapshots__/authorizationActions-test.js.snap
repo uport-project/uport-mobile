@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates a AUTHORIZE_CAMERA action 1`] = `
+Object {
+  "status": "done",
+  "type": "AUTHORIZE_CAMERA",
+}
+`;
+
+exports[`creates a AUTHORIZE_PHOTOS action 1`] = `
+Object {
+  "status": "authorized",
+  "type": "AUTHORIZE_PHOTOS",
+}
+`;

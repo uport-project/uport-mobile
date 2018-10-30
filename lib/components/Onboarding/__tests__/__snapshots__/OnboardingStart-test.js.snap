@@ -1,0 +1,392 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OnboardingStart renders Onboarding Start screen 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "white",
+      "flex": 1,
+      "paddingTop": 10,
+    }
+  }
+>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "padding": 15,
+      }
+    }
+    contentInset={
+      Object {
+        "bottom": 0,
+      }
+    }
+    getTextInputRefs={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onScroll={[Function]}
+    overScrollMode="always"
+    scrollEventThrottle={200}
+    scrollToBottomOnKBShow={false}
+    scrollToInputAdditionalOffset={75}
+    startScrolledToBottom={false}
+    style={
+      Object {
+        "backgroundColor": "white",
+        "flex": 1,
+        "paddingTop": 10,
+      }
+    }
+  >
+    <View>
+      <Image
+        source={
+          Object {
+            "testUri": "../../../images/uport-blurple.png",
+          }
+        }
+        style={
+          Object {
+            "alignSelf": "center",
+            "marginBottom": 40,
+            "marginTop": 50,
+          }
+        }
+      />
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#3c3a49",
+            },
+            undefined,
+            Object {
+              "color": "#3c3a49",
+              "fontFamily": "NunitoSans-Regular",
+              "fontSize": 24,
+              "lineHeight": 30,
+              "marginBottom": 40,
+              "marginTop": 25,
+              "textAlign": "center",
+            },
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+          ]
+        }
+      >
+        Mobile Identity
+      </Text>
+    </View>
+  </RCTScrollView>
+  <View
+    enabled={true}
+    keyboardVerticalOffset={0}
+    onLayout={[Function]}
+    style={undefined}
+  >
+    <View
+      style={
+        Array [
+          undefined,
+          Object {
+            "bottom": 0,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "stretch",
+            "backgroundColor": "white",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "flex": 0,
+              "flexDirection": "row",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "borderRadius": 8,
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                  "margin": 15,
+                  "padding": 10,
+                },
+                Array [
+                  Object {
+                    "borderColor": "rgba(54,184,123,1)",
+                    "borderWidth": 1,
+                    "marginLeft": 15,
+                    "marginRight": 15,
+                  },
+                  Object {
+                    "borderColor": "rgba(92,80,202,1)",
+                  },
+                ],
+              ]
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "fontFamily": "NunitoSans-Bold",
+                    "fontSize": 18,
+                    "textAlign": "center",
+                  },
+                  Array [
+                    Object {
+                      "color": "rgba(54,184,123,1)",
+                      "fontFamily": "NunitoSans-Bold",
+                      "fontSize": 18,
+                      "lineHeight": 25,
+                      "padding": 3,
+                    },
+                    Object {
+                      "color": "rgba(92,80,202,1)",
+                    },
+                  ],
+                  Object {},
+                ]
+              }
+            >
+              Create Identity
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignSelf": "stretch",
+              "flex": 0,
+              "flexDirection": "row",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hasTVPreferredFocus={undefined}
+            hitSlop={undefined}
+            isTVSelectable={true}
+            nativeID={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "borderRadius": 8,
+                  "flex": 1,
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                  "margin": 15,
+                  "padding": 10,
+                },
+                Object {
+                  "borderWidth": 0,
+                  "marginTop": 0,
+                },
+              ]
+            }
+            testID={undefined}
+            tvParallaxProperties={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "fontFamily": "NunitoSans-Bold",
+                    "fontSize": 18,
+                    "textAlign": "center",
+                  },
+                  Object {
+                    "color": "rgba(92,80,202,1)",
+                    "fontFamily": "NunitoSans-Regular",
+                    "fontSize": 18,
+                    "lineHeight": 25,
+                  },
+                  Object {},
+                ]
+              }
+            >
+              Recover Identity
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`OnboardingStart renders a connected component as expected 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ConectedComponent
+    fetchCurrentCountry={[Function]}
+    navigator={FakeNavigator {}}
+    otherIdentities={Array []}
+    segmentId={null}
+    storedIdentity={null}
+    switchIdentity={[Function]}
+    trackSegment={[Function]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <OnboardingStart
+        fetchCurrentCountry={[Function]}
+        navigator={FakeNavigator {}}
+        otherIdentities={Array []}
+        segmentId={null}
+        storedIdentity={null}
+        switchIdentity={[Function]}
+        trackSegment={[Function]}
+      />,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "fetchCurrentCountry": [Function],
+        "navigator": FakeNavigator {},
+        "otherIdentities": Array [],
+        "segmentId": null,
+        "storedIdentity": null,
+        "switchIdentity": [Function],
+        "trackSegment": [Function],
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <OnboardingStart
+          fetchCurrentCountry={[Function]}
+          navigator={FakeNavigator {}}
+          otherIdentities={Array []}
+          segmentId={null}
+          storedIdentity={null}
+          switchIdentity={[Function]}
+          trackSegment={[Function]}
+        />,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "fetchCurrentCountry": [Function],
+          "navigator": FakeNavigator {},
+          "otherIdentities": Array [],
+          "segmentId": null,
+          "storedIdentity": null,
+          "switchIdentity": [Function],
+          "trackSegment": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "context": Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+    },
+  },
+}
+`;

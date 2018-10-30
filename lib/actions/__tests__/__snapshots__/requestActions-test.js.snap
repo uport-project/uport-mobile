@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates a AUTHORIZE_REQUEST action 1`] = `
+Object {
+  "activityId": 123,
+  "type": "AUTHORIZE_REQUEST",
+}
+`;
+
+exports[`creates a CANCEL_REQUEST action 1`] = `
+Object {
+  "activityId": 123,
+  "type": "CANCEL_REQUEST",
+}
+`;
+
+exports[`creates a CLEAR_REQUEST action 1`] = `
+Object {
+  "type": "CLEAR_REQUEST",
+}
+`;
+
+exports[`creates a HANDLE_MESSAGE action with default postback 1`] = `
+Object {
+  "message": "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NksifQ.eyJpc3MiOiIzNHdqc3h3dmR1YW5vN05GQzh1ak5KbkZqYmFjZ1llV0E4bSIsImlhdCI6MTQ4NTMyMTEzMywiY2xhaW1zIjp7Im5hbWUiOiJCb2IifSwiZXhwIjoxNDg1NDA3NTMzfQ.sg1oJ7J_f2pWaX2JwqzA61oWMUK5v0LYVxUp3PvG7Y25CVYWPyQ6UhA7U9d4w3Ny74k7ryMaUz7En5RSL4pyXg",
+  "type": "HANDLE_MESSAGE",
+}
+`;
+
+exports[`creates a HANDLE_URL action with default postback 1`] = `
+Object {
+  "clientId": null,
+  "popup": true,
+  "postback": false,
+  "type": "HANDLE_URL",
+  "url": "ethereum:0x",
+}
+`;
+
+exports[`creates a HANDLE_URL action with postback 1`] = `
+Object {
+  "clientId": null,
+  "popup": true,
+  "postback": true,
+  "type": "HANDLE_URL",
+  "url": "ethereum:0x",
+}
+`;
+
+exports[`creates a HANDLE_URL action with postback, no popup and client id 1`] = `
+Object {
+  "clientId": "0x010203",
+  "popup": false,
+  "postback": true,
+  "type": "HANDLE_URL",
+  "url": "ethereum:0x",
+}
+`;
+
+exports[`creates a HANDLE_URL action without postback 1`] = `
+Object {
+  "clientId": null,
+  "popup": true,
+  "postback": false,
+  "type": "HANDLE_URL",
+  "url": "ethereum:0x",
+}
+`;
+
+exports[`creates a SAVE_REQUEST action 1`] = `
+Object {
+  "activityId": 123,
+  "type": "SAVE_REQUEST",
+}
+`;
+
+exports[`creates a SELECT_REQUEST action 1`] = `
+Object {
+  "activityId": 123,
+  "type": "SELECT_REQUEST",
+}
+`;
+
+exports[`creates a SELECT_REQUEST_FOR_ACCOUNT action 1`] = `
+Object {
+  "account": "0x234",
+  "activityId": 123,
+  "type": "SELECT_ACCOUNT_FOR_REQUEST",
+}
+`;

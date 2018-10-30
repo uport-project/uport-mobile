@@ -1,0 +1,228 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`returns activities 1`] = `Array []`;
+
+exports[`returns activities 2`] = `
+Array [
+  Object {
+    "client_id": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "id": "10",
+    "to": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+    "type": "sign",
+  },
+  Object {
+    "authorizedAt": 2017-01-25T05:12:13.000Z,
+    "id": "11",
+    "to": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+    "type": "connect",
+  },
+  Object {
+    "client_id": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc03",
+    "id": "12",
+    "type": "disclosure",
+  },
+  Object {
+    "id": "13",
+    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+    "type": "attestation",
+  },
+]
+`;
+
+exports[`returns activities 3`] = `
+Array [
+  Object {
+    "authorizedAt": 14834004807621990,
+    "client_id": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "id": "14",
+    "to": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+    "type": "sign",
+  },
+  Object {
+    "authorizedAt": 14834004807621990,
+    "id": "15",
+    "to": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc04",
+    "type": "connect",
+  },
+]
+`;
+
+exports[`returns clientProfile 1`] = `
+Object {
+  "address": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+  "name": "Gnosis",
+  "stats": Object {
+    "request": 3,
+    "sign": 1,
+  },
+}
+`;
+
+exports[`returns clientProfile 2`] = `
+Object {
+  "address": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+  "name": "Gnosis",
+  "stats": Object {
+    "request": 3,
+    "sign": 1,
+  },
+}
+`;
+
+exports[`returns clientProfile 3`] = `null`;
+
+exports[`returns clientProfile 4`] = `null`;
+
+exports[`returns clientProfile 5`] = `
+Object {
+  "address": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+  "name": "Gnosis",
+}
+`;
+
+exports[`returns clientProfile 6`] = `
+Object {
+  "address": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+  "name": "Gnosis",
+}
+`;
+
+exports[`returns clientProfile 7`] = `null`;
+
+exports[`returns clientProfile 8`] = `null`;
+
+exports[`returns clientProfile 9`] = `
+Object {
+  "address": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+  "name": "Gnosis",
+}
+`;
+
+exports[`returns clientProfile 10`] = `
+Object {
+  "address": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc04",
+  "name": "0x1bc5cbf71b06...c04",
+}
+`;
+
+exports[`returns currentRequest 1`] = `
+Object {
+  "client_id": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+  "id": "10",
+  "to": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+  "type": "sign",
+}
+`;
+
+exports[`returns currentRequest 2`] = `
+Object {
+  "client_id": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+  "id": "10",
+  "to": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+  "type": "sign",
+}
+`;
+
+exports[`returns currentRequest 3`] = `
+Object {
+  "authorizedAt": 14834004807621990,
+  "client_id": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+  "id": "14",
+  "to": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+  "type": "sign",
+}
+`;
+
+exports[`returns destinationProfile 1`] = `
+Object {
+  "address": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+  "name": "Gnosis",
+  "stats": Object {
+    "request": 3,
+    "sign": 1,
+  },
+}
+`;
+
+exports[`returns destinationProfile 2`] = `
+Object {
+  "address": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+  "name": "Gnosis",
+  "stats": Object {
+    "request": 3,
+    "sign": 1,
+  },
+}
+`;
+
+exports[`returns destinationProfile 3`] = `null`;
+
+exports[`returns destinationProfile 4`] = `null`;
+
+exports[`returns destinationProfile 5`] = `
+Object {
+  "address": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+  "name": "Gnosis",
+}
+`;
+
+exports[`returns destinationProfile 6`] = `
+Object {
+  "address": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+  "name": "Gnosis",
+}
+`;
+
+exports[`returns destinationProfile 7`] = `null`;
+
+exports[`returns destinationProfile 8`] = `null`;
+
+exports[`returns destinationProfile 9`] = `
+Object {
+  "address": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+  "name": "Gnosis",
+}
+`;
+
+exports[`returns destinationProfile 10`] = `
+Object {
+  "address": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc04",
+  "name": "0x1bc5cbf71b06...c04",
+}
+`;
+
+exports[`returns specific request 1`] = `
+Object {
+  "client_id": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+  "id": "10",
+  "to": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+  "type": "sign",
+}
+`;
+
+exports[`returns specific request 2`] = `
+Object {
+  "authorizedAt": 2017-01-25T05:12:13.000Z,
+  "id": "11",
+  "to": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+  "type": "connect",
+}
+`;
+
+exports[`returns specific request 3`] = `
+Object {
+  "client_id": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+  "id": "10",
+  "to": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+  "type": "sign",
+}
+`;
+
+exports[`returns specific request 4`] = `
+Object {
+  "authorizedAt": 2017-01-25T05:12:13.000Z,
+  "id": "11",
+  "to": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+  "type": "connect",
+}
+`;

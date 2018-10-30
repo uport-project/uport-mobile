@@ -1,0 +1,341 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`returns default networkSettings 1`] = `Object {}`;
+
+exports[`returns default networkSettings 2`] = `
+Object {
+  "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+  "balance": 13241341234,
+  "controllerAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6b",
+  "deviceAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6c",
+  "fuel": 1231231,
+  "fuelToken": "SENSUIFUELTOKENA",
+  "hexaddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+  "network": "ropsten",
+  "nonce": 12,
+  "recoveryAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6d",
+  "recoveryType": "seed",
+  "txRelayAddress": "0x12376dce9e9a85e6f9df7b09b2354da44cb44324",
+}
+`;
+
+exports[`returns default networkSettings 3`] = `
+Object {
+  "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+  "balance": 53241341234,
+  "controllerAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad61",
+  "deviceAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad62",
+  "fuel": 31231231,
+  "fuelToken": "SENSUIFUELTOKENB",
+  "hexaddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad60",
+  "network": "kovan",
+  "nonce": 2,
+  "recoveryAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad63",
+  "recoveryType": "social",
+  "txRelayAddress": "0x98776dce9e9a85e6f9df7b09b2354da44cb42345",
+}
+`;
+
+exports[`returns deviceMetaSignerForAddress 1`] = `
+Object {
+  "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6c",
+  "hdpath": undefined,
+  "root": undefined,
+  "type": "native_meta_signer",
+}
+`;
+
+exports[`returns deviceMetaSignerForAddress 2`] = `
+Object {
+  "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad62",
+  "hdpath": undefined,
+  "root": undefined,
+  "type": "native_meta_signer",
+}
+`;
+
+exports[`returns deviceMetaSignerForAddress 3`] = `
+Object {
+  "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad63",
+  "hdpath": undefined,
+  "root": undefined,
+  "type": "native_meta_signer",
+}
+`;
+
+exports[`returns deviceSignerForAddress 1`] = `
+Object {
+  "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6c",
+  "hdpath": undefined,
+  "root": undefined,
+  "type": "native_signer",
+}
+`;
+
+exports[`returns deviceSignerForAddress 2`] = `
+Object {
+  "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad62",
+  "hdpath": undefined,
+  "root": undefined,
+  "type": "native_signer",
+}
+`;
+
+exports[`returns deviceSignerForAddress 3`] = `
+Object {
+  "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad63",
+  "hdpath": undefined,
+  "root": undefined,
+  "type": "native_signer",
+}
+`;
+
+exports[`returns identityManagerSignerForAddress 1`] = `
+Signer {
+  "implementation": IMProxySigner {
+    "identity_manager_address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6b",
+    "proxy_address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+    "signer": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6c",
+      "hdpath": undefined,
+      "root": undefined,
+      "type": "native_signer",
+    },
+  },
+}
+`;
+
+exports[`returns identityManagerSignerForAddress 2`] = `
+Signer {
+  "implementation": IMProxySigner {
+    "identity_manager_address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad61",
+    "proxy_address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad60",
+    "signer": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad62",
+      "hdpath": undefined,
+      "root": undefined,
+      "type": "native_signer",
+    },
+  },
+}
+`;
+
+exports[`returns identityManagerSignerForAddress 3`] = `
+Signer {
+  "implementation": IMProxySigner {
+    "identity_manager_address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad69",
+    "proxy_address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDY",
+    "signer": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad63",
+      "hdpath": undefined,
+      "root": undefined,
+      "type": "native_signer",
+    },
+  },
+}
+`;
+
+exports[`returns metaIdentityManagerSignerForAddress 1`] = `
+Signer {
+  "implementation": MIMProxySigner {
+    "metaIdentityManagerAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6b",
+    "proxyAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+    "signer": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6c",
+      "hdpath": undefined,
+      "root": undefined,
+      "type": "native_signer",
+    },
+  },
+}
+`;
+
+exports[`returns metaIdentityManagerSignerForAddress 2`] = `
+Signer {
+  "implementation": MIMProxySigner {
+    "metaIdentityManagerAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad61",
+    "proxyAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad60",
+    "signer": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad62",
+      "hdpath": undefined,
+      "root": undefined,
+      "type": "native_signer",
+    },
+  },
+}
+`;
+
+exports[`returns metaIdentityManagerSignerForAddress 3`] = `
+Signer {
+  "implementation": MIMProxySigner {
+    "metaIdentityManagerAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad69",
+    "proxyAddress": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDY",
+    "signer": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad63",
+      "hdpath": undefined,
+      "root": undefined,
+      "type": "native_signer",
+    },
+  },
+}
+`;
+
+exports[`returns metaTxMIMSignerForAddress 1`] = `
+Signer {
+  "implementation": MIMProxySigner {
+    "metaIdentityManagerAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6b",
+    "proxyAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+    "signer": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6c",
+      "hdpath": undefined,
+      "root": undefined,
+      "type": "native_meta_signer",
+    },
+  },
+}
+`;
+
+exports[`returns metaTxMIMSignerForAddress 2`] = `
+Signer {
+  "implementation": MIMProxySigner {
+    "metaIdentityManagerAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad61",
+    "proxyAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad60",
+    "signer": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad62",
+      "hdpath": undefined,
+      "root": undefined,
+      "type": "native_meta_signer",
+    },
+  },
+}
+`;
+
+exports[`returns metaTxMIMSignerForAddress 3`] = `
+Signer {
+  "implementation": MIMProxySigner {
+    "metaIdentityManagerAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad69",
+    "proxyAddress": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDY",
+    "signer": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad63",
+      "hdpath": undefined,
+      "root": undefined,
+      "type": "native_meta_signer",
+    },
+  },
+}
+`;
+
+exports[`returns nativeSignerForAddress 1`] = `
+Object {
+  "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad63",
+  "hdpath": "m/7696500'/0'/0'/0'",
+  "root": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad63",
+  "type": "native_signer",
+}
+`;
+
+exports[`returns nativeSignerForAddress 2`] = `
+Object {
+  "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad64",
+  "hdpath": "m/7696500'/0'/1'/0'",
+  "root": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad63",
+  "type": "native_signer",
+}
+`;
+
+exports[`returns networkSettingsForAddress 1`] = `Object {}`;
+
+exports[`returns networkSettingsForAddress 2`] = `
+Object {
+  "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDX",
+  "balance": 53241341234,
+  "controllerAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad61",
+  "deviceAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad62",
+  "fuel": 31231231,
+  "fuelToken": "SENSUIFUELTOKENB",
+  "hexaddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad60",
+  "network": "kovan",
+  "nonce": 2,
+  "recoveryAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad63",
+  "recoveryType": "social",
+  "txRelayAddress": "0x98776dce9e9a85e6f9df7b09b2354da44cb42345",
+}
+`;
+
+exports[`returns networkSettingsForAddress 3`] = `
+Object {
+  "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+  "balance": 13241341234,
+  "controllerAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6b",
+  "deviceAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6c",
+  "fuel": 1231231,
+  "fuelToken": "SENSUIFUELTOKENA",
+  "hexaddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+  "network": "ropsten",
+  "nonce": 12,
+  "recoveryAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6d",
+  "recoveryType": "seed",
+  "txRelayAddress": "0x12376dce9e9a85e6f9df7b09b2354da44cb44324",
+}
+`;
+
+exports[`returns networkSettingsForAddress 4`] = `
+Object {
+  "address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDY",
+  "controllerAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad69",
+  "deviceAddress": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad63",
+  "faucetUrl": "https://brazil.uport.me/faucet",
+  "fuelToken": "SENSUIFUELTOKENC",
+  "network": "kovan",
+  "parent": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+  "registry": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad78",
+  "relayUrl": "https://brazil.uport.me/relay",
+  "rpcUrl": "https://brazil.uport.me/rpc",
+  "txRelayAddress": "0xda8c6dce9e9a85e6f9df7b09b2354da44cb48331",
+}
+`;
+
+exports[`returns proxySignerForAddress 1`] = `
+Signer {
+  "implementation": ProxySigner {
+    "controller_address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6b",
+    "proxy_address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
+    "signer": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6c",
+      "hdpath": undefined,
+      "root": undefined,
+      "type": "native_signer",
+    },
+  },
+}
+`;
+
+exports[`returns proxySignerForAddress 2`] = `
+Signer {
+  "implementation": ProxySigner {
+    "controller_address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad61",
+    "proxy_address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad60",
+    "signer": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad62",
+      "hdpath": undefined,
+      "root": undefined,
+      "type": "native_signer",
+    },
+  },
+}
+`;
+
+exports[`returns proxySignerForAddress 3`] = `
+Signer {
+  "implementation": ProxySigner {
+    "controller_address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad69",
+    "proxy_address": "34ukSmiK1oA1C5Du8aWpkjFGALoH7nsHeDY",
+    "signer": Object {
+      "address": "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad63",
+      "hdpath": undefined,
+      "root": undefined,
+      "type": "native_signer",
+    },
+  },
+}
+`;

@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`allMessages() 1`] = `Array []`;
+
+exports[`allMessages() 2`] = `
+Array [
+  Object {
+    "completed": true,
+    "section": "nisaba",
+  },
+  Object {
+    "section": "sensui",
+    "working": true,
+  },
+  Object {
+    "error": "nooooh",
+    "message": "Woohoo",
+    "section": "unnu",
+  },
+]
+`;
+
+exports[`messageHistory() 1`] = `Array []`;
+
+exports[`messageHistory() 2`] = `
+Array [
+  Object {
+    "message": "Woohoo",
+    "section": "unnu",
+  },
+  Object {
+    "error": "nooooh",
+    "section": "unnu",
+  },
+  Object {
+    "message": "funded",
+    "section": "sensui",
+  },
+]
+`;

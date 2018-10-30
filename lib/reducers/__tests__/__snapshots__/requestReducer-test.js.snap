@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`clears request id 1`] = `null`;
+
+exports[`leaves a null request id as is 1`] = `null`;
+
+exports[`replaces request id 1`] = `123`;
+
+exports[`sets request id 1`] = `123`;

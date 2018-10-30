@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sets error for section 1`] = `
+Array [
+  Object {
+    "_time": 1485321133000,
+    "error": "Dang it broke",
+    "section": "unnu",
+    "type": "SAVE_ERROR",
+  },
+]
+`;
+
+exports[`sets error for section 2`] = `
+Array [
+  Object {
+    "_time": 1485321133000,
+    "error": "Dang it broke",
+    "section": "unnu",
+    "type": "SAVE_ERROR",
+  },
+  Object {
+    "message": "Woohoo",
+    "section": "unnu",
+  },
+  Object {
+    "error": "nooooh",
+    "section": "unnu",
+  },
+  Object {
+    "message": "funded",
+    "section": "sensui",
+  },
+]
+`;
+
+exports[`sets error for section 3`] = `
+Array [
+  Object {
+    "_time": 1485321133000,
+    "error": "Dang it broke",
+    "section": "sensui",
+    "type": "SAVE_ERROR",
+  },
+  Object {
+    "message": "Woohoo",
+    "section": "unnu",
+  },
+  Object {
+    "error": "nooooh",
+    "section": "unnu",
+  },
+  Object {
+    "message": "funded",
+    "section": "sensui",
+  },
+]
+`;
+
+exports[`sets error for section 4`] = `
+Array [
+  Object {
+    "_time": 1485321133000,
+    "error": "Dang it broke",
+    "section": "unnu",
+    "type": "FAIL_PROCESS",
+  },
+]
+`;
+
+exports[`sets error for section 5`] = `
+Array [
+  Object {
+    "_time": 1485321133000,
+    "error": "Dang it broke",
+    "section": "unnu",
+    "type": "FAIL_PROCESS",
+  },
+  Object {
+    "message": "Woohoo",
+    "section": "unnu",
+  },
+  Object {
+    "error": "nooooh",
+    "section": "unnu",
+  },
+  Object {
+    "message": "funded",
+    "section": "sensui",
+  },
+]
+`;
+
+exports[`sets error for section 6`] = `
+Array [
+  Object {
+    "_time": 1485321133000,
+    "error": "Dang it broke",
+    "section": "sensui",
+    "type": "FAIL_PROCESS",
+  },
+  Object {
+    "message": "Woohoo",
+    "section": "unnu",
+  },
+  Object {
+    "error": "nooooh",
+    "section": "unnu",
+  },
+  Object {
+    "message": "funded",
+    "section": "sensui",
+  },
+]
+`;
+
+exports[`sets message for section 1`] = `
+Array [
+  Object {
+    "_time": 1485321133000,
+    "message": "Looking good",
+    "section": "unnu",
+    "type": "SAVE_MESSAGE",
+  },
+]
+`;
+
+exports[`sets message for section 2`] = `
+Array [
+  Object {
+    "_time": 1485321133000,
+    "message": "Looking good",
+    "section": "unnu",
+    "type": "SAVE_MESSAGE",
+  },
+  Object {
+    "message": "Woohoo",
+    "section": "unnu",
+  },
+  Object {
+    "error": "nooooh",
+    "section": "unnu",
+  },
+  Object {
+    "message": "funded",
+    "section": "sensui",
+  },
+]
+`;
+
+exports[`sets message for section 3`] = `
+Array [
+  Object {
+    "_time": 1485321133000,
+    "message": "Looking good",
+    "section": "sensui",
+    "type": "SAVE_MESSAGE",
+  },
+  Object {
+    "message": "Woohoo",
+    "section": "unnu",
+  },
+  Object {
+    "error": "nooooh",
+    "section": "unnu",
+  },
+  Object {
+    "message": "funded",
+    "section": "sensui",
+  },
+]
+`;

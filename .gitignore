@@ -1,0 +1,81 @@
+# OSX
+#
+.DS_Store
+
+# Xcode
+#
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+*.xcscheme
+project.xcworkspace
+.vscode
+# Android/IJ
+#
+android/.gradle
+.idea
+*.apk
+*.jks
+.gradual
+local.properties
+fabric.properties
+android/app/app-release.apk
+android/app/app.iml
+android/app/fragment.jks
+android/app/src/main/assets/index.android.bundle
+android/app/src/main/assets/index.android.bundle.meta
+android/app/src/main/res/drawable-hdpi/
+android/app/src/main/res/drawable-ldpi/
+android/app/src/main/res/drawable-mdpi/
+android/app/src/main/res/drawable-xhdpi/
+android/app/src/main/res/drawable-xxhdpi/
+android/app/src/main/res/drawable-xxxhdpi/
+android/uPortMobile.iml
+
+.gradle/
+
+
+# node.js
+#
+node_modules/
+npm-debug.log*
+
+tsconfig.json
+# BUCK
+buck-out/
+\.buckd/
+android/app/libs
+android/keystores/debug.keystore
+
+index.ios.bundle.js
+
+#TESTS
+test/helpers/apps.js
+yarn-error.log
+coverage
+test_output/
+
+# Cocoapods
+#ios/Pods/
+
+# google play credentials for service account
+google-play-key-file.json
+
+.bundle/
+vendor/bundle/
+
+# Fastlane
+report.xml

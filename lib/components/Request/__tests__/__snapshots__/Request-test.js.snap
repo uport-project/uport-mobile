@@ -1,0 +1,857 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Request Component renders a request without a type 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(255,255,255,1)",
+        "borderColor": "rgba(229,229,229,1)",
+        "borderRadius": 8,
+        "borderWidth": 0,
+        "flex": 1,
+        "marginBottom": 5,
+        "marginLeft": 8,
+        "marginRight": 8,
+        "marginTop": 26,
+        "shadowColor": "rgb(63,63,63)",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 0,
+        },
+        "shadowOpacity": 0.2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "marginBottom": 8,
+            "padding": 22,
+          },
+          Object {},
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(92,80,202,1)",
+            "flex": 1,
+            "fontFamily": "NunitoSans-Regular",
+            "fontSize": 20,
+            "textAlign": "center",
+          }
+        }
+      />
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "height": 44,
+            "justifyContent": "center",
+            "opacity": 1,
+            "position": "absolute",
+            "right": 16,
+            "top": 16,
+            "width": 44,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <Icon
+          color="rgba(155,155,155,1)"
+          name="close"
+          size={24}
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Request Component returns a AttestationCard when the request type is attestation 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(255,255,255,1)",
+        "borderColor": "rgba(229,229,229,1)",
+        "borderRadius": 8,
+        "borderWidth": 0,
+        "flex": 1,
+        "marginBottom": 5,
+        "marginLeft": 8,
+        "marginRight": 8,
+        "marginTop": 26,
+        "shadowColor": "rgb(63,63,63)",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 0,
+        },
+        "shadowOpacity": 0.2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "marginBottom": 8,
+            "padding": 22,
+          },
+          Object {},
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(92,80,202,1)",
+            "flex": 1,
+            "fontFamily": "NunitoSans-Regular",
+            "fontSize": 20,
+            "textAlign": "center",
+          }
+        }
+      />
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "height": 44,
+            "justifyContent": "center",
+            "opacity": 1,
+            "position": "absolute",
+            "right": 16,
+            "top": 16,
+            "width": 44,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <Icon
+          color="rgba(155,155,155,1)"
+          name="close"
+          size={24}
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Request Component returns a AttestationCard when the request type is attestation 2`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(255,255,255,1)",
+        "borderColor": "rgba(229,229,229,1)",
+        "borderRadius": 8,
+        "borderWidth": 0,
+        "flex": 1,
+        "marginBottom": 5,
+        "marginLeft": 8,
+        "marginRight": 8,
+        "marginTop": 26,
+        "shadowColor": "rgb(63,63,63)",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 0,
+        },
+        "shadowOpacity": 0.2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "marginBottom": 8,
+            "padding": 22,
+          },
+          Object {},
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(92,80,202,1)",
+            "flex": 1,
+            "fontFamily": "NunitoSans-Regular",
+            "fontSize": 20,
+            "textAlign": "center",
+          }
+        }
+      />
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "height": 44,
+            "justifyContent": "center",
+            "opacity": 1,
+            "position": "absolute",
+            "right": 16,
+            "top": 16,
+            "width": 44,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <Icon
+          color="rgba(155,155,155,1)"
+          name="close"
+          size={24}
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Request Component returns a ConnectionCard when the request type is connect 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(255,255,255,1)",
+        "borderColor": "rgba(229,229,229,1)",
+        "borderRadius": 8,
+        "borderWidth": 0,
+        "flex": 1,
+        "marginBottom": 5,
+        "marginLeft": 8,
+        "marginRight": 8,
+        "marginTop": 26,
+        "shadowColor": "rgb(63,63,63)",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 0,
+        },
+        "shadowOpacity": 0.2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "marginBottom": 8,
+            "padding": 22,
+          },
+          Object {},
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(92,80,202,1)",
+            "flex": 1,
+            "fontFamily": "NunitoSans-Regular",
+            "fontSize": 20,
+            "textAlign": "center",
+          }
+        }
+      />
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "height": 44,
+            "justifyContent": "center",
+            "opacity": 1,
+            "position": "absolute",
+            "right": 16,
+            "top": 16,
+            "width": 44,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <Icon
+          color="rgba(155,155,155,1)"
+          name="close"
+          size={24}
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Request Component returns a ConnectionCard when the request type is connect 2`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(255,255,255,1)",
+        "borderColor": "rgba(229,229,229,1)",
+        "borderRadius": 8,
+        "borderWidth": 0,
+        "flex": 1,
+        "marginBottom": 5,
+        "marginLeft": 8,
+        "marginRight": 8,
+        "marginTop": 26,
+        "shadowColor": "rgb(63,63,63)",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 0,
+        },
+        "shadowOpacity": 0.2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "marginBottom": 8,
+            "padding": 22,
+          },
+          Object {},
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(92,80,202,1)",
+            "flex": 1,
+            "fontFamily": "NunitoSans-Regular",
+            "fontSize": 20,
+            "textAlign": "center",
+          }
+        }
+      />
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "height": 44,
+            "justifyContent": "center",
+            "opacity": 1,
+            "position": "absolute",
+            "right": 16,
+            "top": 16,
+            "width": 44,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <Icon
+          color="rgba(155,155,155,1)"
+          name="close"
+          size={24}
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Request Component returns a DisclosureCard when the request type is disclosure 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(255,255,255,1)",
+        "borderColor": "rgba(229,229,229,1)",
+        "borderRadius": 8,
+        "borderWidth": 0,
+        "flex": 1,
+        "marginBottom": 5,
+        "marginLeft": 8,
+        "marginRight": 8,
+        "marginTop": 26,
+        "shadowColor": "rgb(63,63,63)",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 0,
+        },
+        "shadowOpacity": 0.2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "marginBottom": 8,
+            "padding": 22,
+          },
+          Object {},
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(92,80,202,1)",
+            "flex": 1,
+            "fontFamily": "NunitoSans-Regular",
+            "fontSize": 20,
+            "textAlign": "center",
+          }
+        }
+      />
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "height": 44,
+            "justifyContent": "center",
+            "opacity": 1,
+            "position": "absolute",
+            "right": 16,
+            "top": 16,
+            "width": 44,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <Icon
+          color="rgba(155,155,155,1)"
+          name="close"
+          size={24}
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Request Component returns a DisclosureCard when the request type is disclosure 2`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(255,255,255,1)",
+        "borderColor": "rgba(229,229,229,1)",
+        "borderRadius": 8,
+        "borderWidth": 0,
+        "flex": 1,
+        "marginBottom": 5,
+        "marginLeft": 8,
+        "marginRight": 8,
+        "marginTop": 26,
+        "shadowColor": "rgb(63,63,63)",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 0,
+        },
+        "shadowOpacity": 0.2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "marginBottom": 8,
+            "padding": 22,
+          },
+          Object {},
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(92,80,202,1)",
+            "flex": 1,
+            "fontFamily": "NunitoSans-Regular",
+            "fontSize": 20,
+            "textAlign": "center",
+          }
+        }
+      />
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "height": 44,
+            "justifyContent": "center",
+            "opacity": 1,
+            "position": "absolute",
+            "right": 16,
+            "top": 16,
+            "width": 44,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <Icon
+          color="rgba(155,155,155,1)"
+          name="close"
+          size={24}
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Request Component returns a TransactionCard when the request type is sign 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "rgba(255,255,255,1)",
+        "borderColor": "rgba(229,229,229,1)",
+        "borderRadius": 8,
+        "borderWidth": 0,
+        "flex": 1,
+        "marginBottom": 5,
+        "marginLeft": 8,
+        "marginRight": 8,
+        "marginTop": 26,
+        "shadowColor": "rgb(63,63,63)",
+        "shadowOffset": Object {
+          "height": 1,
+          "width": 0,
+        },
+        "shadowOpacity": 0.2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "marginBottom": 8,
+            "padding": 22,
+          },
+          Object {},
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(92,80,202,1)",
+            "flex": 1,
+            "fontFamily": "NunitoSans-Regular",
+            "fontSize": 20,
+            "textAlign": "center",
+          }
+        }
+      />
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "height": 44,
+            "justifyContent": "center",
+            "opacity": 1,
+            "position": "absolute",
+            "right": 16,
+            "top": 16,
+            "width": 44,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <Icon
+          color="rgba(155,155,155,1)"
+          name="close"
+          size={24}
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;

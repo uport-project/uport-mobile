@@ -1,0 +1,1732 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NetworkCard renders a connected Network Card index as expected 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <NetworkCard
+    address={undefined}
+    authorizeRequest={[Function]}
+    authorized={false}
+    cancelRequest={[Function]}
+    clearRequest={[Function]}
+    client={null}
+    currentIdentity={Object {}}
+    error={undefined}
+    navigator={FakeNavigator {}}
+    network={undefined}
+    request={
+      Object {
+        "callback_url": "https://testapp.uport.me",
+        "clientId": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+        "id": 14819973609293640,
+        "postback": false,
+        "subIdentity": Object {
+          "address": "5vZ6nCrJqwhb9nizRBxuPSddrzCBY3mXbu78KMa",
+          "network": "0xdeadbeef",
+        },
+        "type": "net",
+      }
+    }
+    requestId={undefined}
+    uportVerified={false}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <DataFlowHeader
+          recipient={Object {}}
+          sender={null}
+          verified={false}
+        />,
+        <Component
+          style={
+            Object {
+              "marginBottom": 40,
+              "marginTop": 22,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 20,
+                "lineHeight": 27,
+                "textAlign": "center",
+              }
+            }
+          >
+            This unidentified dApp
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+                "fontFamily": "NunitoSans-Light",
+                "fontSize": 16,
+                "lineHeight": 22,
+                "textAlign": "center",
+              }
+            }
+          >
+            has created this account for you
+          </Text>
+        </Component>,
+        <RequestItemList>
+          <RequestItem
+            type="Network"
+            value={undefined}
+          />
+          <RequestItem
+            type="Address"
+            value={undefined}
+          />
+        </RequestItemList>,
+        null,
+        <AcceptCancelGroup
+          acceptText="Add Account"
+          cancelText="Cancel"
+          disabled={false}
+          onAccept={[Function]}
+          onCancel={[Function]}
+        />,
+      ],
+      "style": Object {
+        "alignItems": "stretch",
+        "flex": 1,
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "recipient": Object {},
+          "sender": null,
+          "verified": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontFamily": "NunitoSans-Regular",
+                  "fontSize": 20,
+                  "lineHeight": 27,
+                  "textAlign": "center",
+                }
+              }
+            >
+              This unidentified dApp
+            </Text>,
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontFamily": "NunitoSans-Light",
+                  "fontSize": 16,
+                  "lineHeight": 22,
+                  "textAlign": "center",
+                }
+              }
+            >
+              has created this account for you
+            </Text>,
+          ],
+          "style": Object {
+            "marginBottom": 40,
+            "marginTop": 22,
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "This unidentified dApp",
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "color": "rgba(74,74,74,1)",
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 20,
+                "lineHeight": 27,
+                "textAlign": "center",
+              },
+            },
+            "ref": null,
+            "rendered": "This unidentified dApp",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "has created this account for you",
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "color": "rgba(74,74,74,1)",
+                "fontFamily": "NunitoSans-Light",
+                "fontSize": 16,
+                "lineHeight": 22,
+                "textAlign": "center",
+              },
+            },
+            "ref": null,
+            "rendered": "has created this account for you",
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <RequestItem
+              type="Network"
+              value={undefined}
+            />,
+            <RequestItem
+              type="Address"
+              value={undefined}
+            />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "network",
+            "nodeType": "function",
+            "props": Object {
+              "type": "Network",
+              "value": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "address",
+            "nodeType": "function",
+            "props": Object {
+              "type": "Address",
+              "value": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      null,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "acceptText": "Add Account",
+          "cancelText": "Cancel",
+          "disabled": false,
+          "onAccept": [Function],
+          "onCancel": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <DataFlowHeader
+            recipient={Object {}}
+            sender={null}
+            verified={false}
+          />,
+          <Component
+            style={
+              Object {
+                "marginBottom": 40,
+                "marginTop": 22,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontFamily": "NunitoSans-Regular",
+                  "fontSize": 20,
+                  "lineHeight": 27,
+                  "textAlign": "center",
+                }
+              }
+            >
+              This unidentified dApp
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontFamily": "NunitoSans-Light",
+                  "fontSize": 16,
+                  "lineHeight": 22,
+                  "textAlign": "center",
+                }
+              }
+            >
+              has created this account for you
+            </Text>
+          </Component>,
+          <RequestItemList>
+            <RequestItem
+              type="Network"
+              value={undefined}
+            />
+            <RequestItem
+              type="Address"
+              value={undefined}
+            />
+          </RequestItemList>,
+          null,
+          <AcceptCancelGroup
+            acceptText="Add Account"
+            cancelText="Cancel"
+            disabled={false}
+            onAccept={[Function]}
+            onCancel={[Function]}
+          />,
+        ],
+        "style": Object {
+          "alignItems": "stretch",
+          "flex": 1,
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "recipient": Object {},
+            "sender": null,
+            "verified": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "rgba(74,74,74,1)",
+                    "fontFamily": "NunitoSans-Regular",
+                    "fontSize": 20,
+                    "lineHeight": 27,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                This unidentified dApp
+              </Text>,
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "rgba(74,74,74,1)",
+                    "fontFamily": "NunitoSans-Light",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                has created this account for you
+              </Text>,
+            ],
+            "style": Object {
+              "marginBottom": 40,
+              "marginTop": 22,
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "accessible": true,
+                "allowFontScaling": true,
+                "children": "This unidentified dApp",
+                "ellipsizeMode": "tail",
+                "style": Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontFamily": "NunitoSans-Regular",
+                  "fontSize": 20,
+                  "lineHeight": 27,
+                  "textAlign": "center",
+                },
+              },
+              "ref": null,
+              "rendered": "This unidentified dApp",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "accessible": true,
+                "allowFontScaling": true,
+                "children": "has created this account for you",
+                "ellipsizeMode": "tail",
+                "style": Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontFamily": "NunitoSans-Light",
+                  "fontSize": 16,
+                  "lineHeight": 22,
+                  "textAlign": "center",
+                },
+              },
+              "ref": null,
+              "rendered": "has created this account for you",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <RequestItem
+                type="Network"
+                value={undefined}
+              />,
+              <RequestItem
+                type="Address"
+                value={undefined}
+              />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "network",
+              "nodeType": "function",
+              "props": Object {
+                "type": "Network",
+                "value": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "address",
+              "nodeType": "function",
+              "props": Object {
+                "type": "Address",
+                "value": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        null,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "acceptText": "Add Account",
+            "cancelText": "Cancel",
+            "disabled": false,
+            "onAccept": [Function],
+            "onCancel": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "context": Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+    },
+  },
+}
+`;
+
+exports[`NetworkCard renders authorized request correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flex": 0,
+              "justifyContent": "center",
+            },
+            Object {
+              "borderRadius": 3,
+              "height": 70,
+              "width": 70,
+            },
+            Object {
+              "backgroundColor": "rgba(91,84,199,1)",
+            },
+            Object {
+              "padding": 17.5,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 17.5,
+                "textAlign": "center",
+              },
+              undefined,
+              Object {
+                "color": "white",
+                "fontSize": 17.5,
+              },
+            ]
+          }
+        >
+          BF
+        </Text>
+      </View>
+    </View>
+    <Image
+      source={
+        Object {
+          "testUri": "../../../images/ForwardArrow.png",
+        }
+      }
+      style={
+        Object {
+          "height": 18,
+          "marginLeft": 24,
+          "marginRight": 24,
+          "width": 26,
+        }
+      }
+    />
+    <View>
+      <View>
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flex": 0,
+                "justifyContent": "center",
+              },
+              Object {
+                "borderRadius": 3,
+                "height": 70,
+                "width": 70,
+              },
+              Object {
+                "backgroundColor": "rgba(91,84,199,1)",
+              },
+              Object {
+                "padding": 17.5,
+              },
+            ]
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "fontFamily": "NunitoSans-Regular",
+                  "fontSize": 17.5,
+                  "textAlign": "center",
+                },
+                undefined,
+                Object {
+                  "color": "white",
+                  "fontSize": 17.5,
+                },
+              ]
+            }
+          >
+            RC
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 40,
+        "marginTop": 22,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "rgba(74,74,74,1)",
+          "fontFamily": "NunitoSans-Regular",
+          "fontSize": 20,
+          "lineHeight": 27,
+          "textAlign": "center",
+        }
+      }
+    >
+      Brazil Ministry of Finance
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "rgba(74,74,74,1)",
+          "fontFamily": "NunitoSans-Light",
+          "fontSize": 16,
+          "lineHeight": 22,
+          "textAlign": "center",
+        }
+      }
+    >
+      has created this account for you
+    </Text>
+  </View>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "alignItems": "stretch",
+        "borderTopColor": "rgba(226,226,226,1)",
+        "borderTopWidth": 1,
+        "flex": 0,
+        "justifyContent": "flex-start",
+      }
+    }
+    style={
+      Object {
+        "flex": 0,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "alignItems": "stretch",
+            "alignSelf": "stretch",
+            "borderBottomColor": "rgba(226,226,226,1)",
+            "borderBottomWidth": 1,
+            "flex": 0,
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "padding": 10,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(155,155,155,1)",
+              "flex": 0,
+              "fontFamily": "NunitoSans-Light",
+              "fontSize": 14,
+              "lineHeight": 23,
+              "marginLeft": 10,
+              "textAlign": "left",
+              "width": 83,
+            }
+          }
+        >
+          N
+          etwork
+          :
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(130,130,130,1)",
+              "flex": 1,
+              "fontFamily": "NunitoSans-Bold",
+              "fontSize": 14,
+              "lineHeight": 23,
+              "marginRight": 10,
+              "textAlign": "right",
+            }
+          }
+        >
+          0xdeadbeef
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "stretch",
+            "alignSelf": "stretch",
+            "borderBottomColor": "rgba(226,226,226,1)",
+            "borderBottomWidth": 1,
+            "flex": 0,
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "padding": 10,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(155,155,155,1)",
+              "flex": 0,
+              "fontFamily": "NunitoSans-Light",
+              "fontSize": 14,
+              "lineHeight": 23,
+              "marginLeft": 10,
+              "textAlign": "left",
+              "width": 83,
+            }
+          }
+        >
+          A
+          ddress
+          :
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(130,130,130,1)",
+              "flex": 1,
+              "fontFamily": "NunitoSans-Bold",
+              "fontSize": 14,
+              "lineHeight": 23,
+              "marginRight": 10,
+              "textAlign": "right",
+            }
+          }
+        >
+          5vZ6nCrJqwhb9nizRBxuPSddrzCBY3mXbu78KMa
+        </Text>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View />
+</View>
+`;
+
+exports[`NetworkCard renders new request correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flex": 0,
+              "justifyContent": "center",
+            },
+            Object {
+              "borderRadius": 3,
+              "height": 70,
+              "width": 70,
+            },
+            Object {
+              "backgroundColor": "rgba(91,84,199,1)",
+            },
+            Object {
+              "padding": 17.5,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 17.5,
+                "textAlign": "center",
+              },
+              undefined,
+              Object {
+                "color": "white",
+                "fontSize": 17.5,
+              },
+            ]
+          }
+        >
+          BF
+        </Text>
+      </View>
+    </View>
+    <Image
+      source={
+        Object {
+          "testUri": "../../../images/ForwardArrow.png",
+        }
+      }
+      style={
+        Object {
+          "height": 18,
+          "marginLeft": 24,
+          "marginRight": 24,
+          "width": 26,
+        }
+      }
+    />
+    <View>
+      <View>
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flex": 0,
+                "justifyContent": "center",
+              },
+              Object {
+                "borderRadius": 3,
+                "height": 70,
+                "width": 70,
+              },
+              Object {
+                "backgroundColor": "rgba(91,84,199,1)",
+              },
+              Object {
+                "padding": 17.5,
+              },
+            ]
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "fontFamily": "NunitoSans-Regular",
+                  "fontSize": 17.5,
+                  "textAlign": "center",
+                },
+                undefined,
+                Object {
+                  "color": "white",
+                  "fontSize": 17.5,
+                },
+              ]
+            }
+          >
+            RC
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 40,
+        "marginTop": 22,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "rgba(74,74,74,1)",
+          "fontFamily": "NunitoSans-Regular",
+          "fontSize": 20,
+          "lineHeight": 27,
+          "textAlign": "center",
+        }
+      }
+    >
+      Brazil Ministry of Finance
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "rgba(74,74,74,1)",
+          "fontFamily": "NunitoSans-Light",
+          "fontSize": 16,
+          "lineHeight": 22,
+          "textAlign": "center",
+        }
+      }
+    >
+      has created this account for you
+    </Text>
+  </View>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "alignItems": "stretch",
+        "borderTopColor": "rgba(226,226,226,1)",
+        "borderTopWidth": 1,
+        "flex": 0,
+        "justifyContent": "flex-start",
+      }
+    }
+    style={
+      Object {
+        "flex": 0,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "alignItems": "stretch",
+            "alignSelf": "stretch",
+            "borderBottomColor": "rgba(226,226,226,1)",
+            "borderBottomWidth": 1,
+            "flex": 0,
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "padding": 10,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(155,155,155,1)",
+              "flex": 0,
+              "fontFamily": "NunitoSans-Light",
+              "fontSize": 14,
+              "lineHeight": 23,
+              "marginLeft": 10,
+              "textAlign": "left",
+              "width": 83,
+            }
+          }
+        >
+          N
+          etwork
+          :
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(130,130,130,1)",
+              "flex": 1,
+              "fontFamily": "NunitoSans-Bold",
+              "fontSize": 14,
+              "lineHeight": 23,
+              "marginRight": 10,
+              "textAlign": "right",
+            }
+          }
+        >
+          0xdeadbeef
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "stretch",
+            "alignSelf": "stretch",
+            "borderBottomColor": "rgba(226,226,226,1)",
+            "borderBottomWidth": 1,
+            "flex": 0,
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "padding": 10,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(155,155,155,1)",
+              "flex": 0,
+              "fontFamily": "NunitoSans-Light",
+              "fontSize": 14,
+              "lineHeight": 23,
+              "marginLeft": 10,
+              "textAlign": "left",
+              "width": 83,
+            }
+          }
+        >
+          A
+          ddress
+          :
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(130,130,130,1)",
+              "flex": 1,
+              "fontFamily": "NunitoSans-Bold",
+              "fontSize": 14,
+              "lineHeight": 23,
+              "marginRight": 10,
+              "textAlign": "right",
+            }
+          }
+        >
+          5vZ6nCrJqwhb9nizRBxuPSddrzCBY3mXbu78KMa
+        </Text>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    style={
+      Object {
+        "flex": 0,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "borderRadius": 8,
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "margin": 15,
+            "padding": 10,
+          },
+          Array [
+            Object {
+              "borderColor": "rgba(74,74,74,1)",
+              "borderWidth": 1,
+            },
+            Object {
+              "marginRight": 10,
+            },
+          ],
+        ]
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "fontFamily": "NunitoSans-Bold",
+              "fontSize": 18,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "rgba(74,74,74,1)",
+            },
+            Object {},
+          ]
+        }
+      >
+        Cancel
+      </Text>
+    </View>
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "borderRadius": 8,
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "margin": 15,
+            "padding": 10,
+          },
+          Array [
+            Object {
+              "backgroundColor": "rgba(91,84,199,1)",
+              "marginLeft": 10,
+            },
+            undefined,
+          ],
+        ]
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "fontFamily": "NunitoSans-Bold",
+              "fontSize": 18,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#FFFFFF",
+            },
+            Object {},
+          ]
+        }
+      >
+        Add Account
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`NetworkCard renders request with errors 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flex": 0,
+              "justifyContent": "center",
+            },
+            Object {
+              "borderRadius": 3,
+              "height": 70,
+              "width": 70,
+            },
+            Object {
+              "backgroundColor": "rgba(91,84,199,1)",
+            },
+            Object {
+              "padding": 17.5,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 17.5,
+                "textAlign": "center",
+              },
+              undefined,
+              Object {
+                "color": "white",
+                "fontSize": 17.5,
+              },
+            ]
+          }
+        >
+          BF
+        </Text>
+      </View>
+    </View>
+    <Image
+      source={
+        Object {
+          "testUri": "../../../images/ForwardArrow.png",
+        }
+      }
+      style={
+        Object {
+          "height": 18,
+          "marginLeft": 24,
+          "marginRight": 24,
+          "width": 26,
+        }
+      }
+    />
+    <View>
+      <View>
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flex": 0,
+                "justifyContent": "center",
+              },
+              Object {
+                "borderRadius": 3,
+                "height": 70,
+                "width": 70,
+              },
+              Object {
+                "backgroundColor": "rgba(91,84,199,1)",
+              },
+              Object {
+                "padding": 17.5,
+              },
+            ]
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "fontFamily": "NunitoSans-Regular",
+                  "fontSize": 17.5,
+                  "textAlign": "center",
+                },
+                undefined,
+                Object {
+                  "color": "white",
+                  "fontSize": 17.5,
+                },
+              ]
+            }
+          >
+            RC
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 40,
+        "marginTop": 22,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "rgba(74,74,74,1)",
+          "fontFamily": "NunitoSans-Regular",
+          "fontSize": 20,
+          "lineHeight": 27,
+          "textAlign": "center",
+        }
+      }
+    >
+      Brazil Ministry of Finance
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "rgba(74,74,74,1)",
+          "fontFamily": "NunitoSans-Light",
+          "fontSize": 16,
+          "lineHeight": 22,
+          "textAlign": "center",
+        }
+      }
+    >
+      has created this account for you
+    </Text>
+  </View>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "alignItems": "stretch",
+        "borderTopColor": "rgba(226,226,226,1)",
+        "borderTopWidth": 1,
+        "flex": 0,
+        "justifyContent": "flex-start",
+      }
+    }
+    style={
+      Object {
+        "flex": 0,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "alignItems": "stretch",
+            "alignSelf": "stretch",
+            "borderBottomColor": "rgba(226,226,226,1)",
+            "borderBottomWidth": 1,
+            "flex": 0,
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "padding": 10,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(155,155,155,1)",
+              "flex": 0,
+              "fontFamily": "NunitoSans-Light",
+              "fontSize": 14,
+              "lineHeight": 23,
+              "marginLeft": 10,
+              "textAlign": "left",
+              "width": 83,
+            }
+          }
+        >
+          N
+          etwork
+          :
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(130,130,130,1)",
+              "flex": 1,
+              "fontFamily": "NunitoSans-Bold",
+              "fontSize": 14,
+              "lineHeight": 23,
+              "marginRight": 10,
+              "textAlign": "right",
+            }
+          }
+        >
+          0xdeadbeef
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "stretch",
+            "alignSelf": "stretch",
+            "borderBottomColor": "rgba(226,226,226,1)",
+            "borderBottomWidth": 1,
+            "flex": 0,
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "padding": 10,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(155,155,155,1)",
+              "flex": 0,
+              "fontFamily": "NunitoSans-Light",
+              "fontSize": 14,
+              "lineHeight": 23,
+              "marginLeft": 10,
+              "textAlign": "left",
+              "width": 83,
+            }
+          }
+        >
+          A
+          ddress
+          :
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(130,130,130,1)",
+              "flex": 1,
+              "fontFamily": "NunitoSans-Bold",
+              "fontSize": 14,
+              "lineHeight": 23,
+              "marginRight": 10,
+              "textAlign": "right",
+            }
+          }
+        >
+          5vZ6nCrJqwhb9nizRBxuPSddrzCBY3mXbu78KMa
+        </Text>
+      </View>
+    </View>
+  </RCTScrollView>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "rgba(155,155,155,1)",
+          "fontFamily": "NunitoSans-Light",
+          "fontSize": 14,
+          "lineHeight": 19,
+          "textAlign": "center",
+        },
+        Object {
+          "color": "red",
+        },
+      ]
+    }
+  >
+    This doesnt work for some reason
+  </Text>
+  <View
+    style={
+      Object {
+        "flex": 0,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "borderRadius": 8,
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "margin": 15,
+            "padding": 10,
+          },
+          Array [
+            Object {
+              "borderColor": "rgba(74,74,74,1)",
+              "borderWidth": 1,
+            },
+            Object {
+              "marginRight": 10,
+            },
+          ],
+        ]
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "fontFamily": "NunitoSans-Bold",
+              "fontSize": 18,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "rgba(74,74,74,1)",
+            },
+            Object {},
+          ]
+        }
+      >
+        Cancel
+      </Text>
+    </View>
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "borderRadius": 8,
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "margin": 15,
+            "padding": 10,
+          },
+          Object {
+            "backgroundColor": "rgba(0,0,0,0)",
+            "borderColor": "rgba(185, 185, 185, 1)",
+            "borderWidth": 1,
+          },
+        ]
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "fontFamily": "NunitoSans-Bold",
+              "fontSize": 18,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#FFFFFF",
+            },
+            Object {
+              "color": "rgba(185, 185, 185, 1)",
+            },
+          ]
+        }
+      >
+        Add Account
+      </Text>
+    </View>
+  </View>
+</View>
+`;

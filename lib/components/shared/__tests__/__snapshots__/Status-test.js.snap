@@ -1,0 +1,428 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`container renders empty status 1`] = `null`;
+
+exports[`container renders error status 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 0,
+      "flexDirection": "row",
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "rgba(155,155,155,1)",
+          "fontFamily": "NunitoSans-Light",
+          "fontSize": 14,
+          "lineHeight": 19,
+          "textAlign": "center",
+        },
+        Object {
+          "color": "red",
+        },
+      ]
+    }
+  >
+    Server is down
+  </Text>
+</View>
+`;
+
+exports[`container renders offline status 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 0,
+      "flexDirection": "row",
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "rgba(155,155,155,1)",
+          "fontFamily": "NunitoSans-Light",
+          "fontSize": 14,
+          "lineHeight": 19,
+          "textAlign": "center",
+        },
+        Object {},
+      ]
+    }
+  >
+    offline
+  </Text>
+</View>
+`;
+
+exports[`container renders working status 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 0,
+      "flexDirection": "row",
+      "justifyContent": "center",
+    }
+  }
+>
+  <ActivityIndicator
+    animating={true}
+    color="rgba(74,74,74,1)"
+    hidesWhenStopped={true}
+    size="small"
+    style={
+      Object {
+        "margin": 16,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`container renders working status 2`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 0,
+      "flexDirection": "row",
+      "justifyContent": "center",
+    }
+  }
+>
+  <ActivityIndicator
+    animating={true}
+    color="rgba(74,74,74,1)"
+    hidesWhenStopped={true}
+    size="small"
+    style={
+      Object {
+        "margin": 16,
+      }
+    }
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "rgba(155,155,155,1)",
+          "fontFamily": "NunitoSans-Light",
+          "fontSize": 14,
+          "lineHeight": 19,
+          "textAlign": "center",
+        },
+        Object {},
+      ]
+    }
+  >
+    sending number
+  </Text>
+</View>
+`;
+
+exports[`renders activity indicator and error if working 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 0,
+      "flexDirection": "row",
+      "justifyContent": "center",
+    }
+  }
+>
+  <ActivityIndicator
+    animating={true}
+    color="rgba(74,74,74,1)"
+    hidesWhenStopped={true}
+    size="small"
+    style={
+      Object {
+        "margin": 16,
+      }
+    }
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "rgba(155,155,155,1)",
+          "fontFamily": "NunitoSans-Light",
+          "fontSize": 14,
+          "lineHeight": 19,
+          "textAlign": "center",
+        },
+        Object {
+          "color": "red",
+        },
+      ]
+    }
+  >
+    It did not work
+  </Text>
+</View>
+`;
+
+exports[`renders activity indicator and message if working 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 0,
+      "flexDirection": "row",
+      "justifyContent": "center",
+    }
+  }
+>
+  <ActivityIndicator
+    animating={true}
+    color="rgba(74,74,74,1)"
+    hidesWhenStopped={true}
+    size="small"
+    style={
+      Object {
+        "margin": 16,
+      }
+    }
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "rgba(155,155,155,1)",
+          "fontFamily": "NunitoSans-Light",
+          "fontSize": 14,
+          "lineHeight": 19,
+          "textAlign": "center",
+        },
+        Object {},
+      ]
+    }
+  >
+    Doing stuff
+  </Text>
+</View>
+`;
+
+exports[`renders activity indicator if working 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 0,
+      "flexDirection": "row",
+      "justifyContent": "center",
+    }
+  }
+>
+  <ActivityIndicator
+    animating={true}
+    color="rgba(74,74,74,1)"
+    hidesWhenStopped={true}
+    size="small"
+    style={
+      Object {
+        "margin": 16,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`renders error 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 0,
+      "flexDirection": "row",
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "rgba(155,155,155,1)",
+          "fontFamily": "NunitoSans-Light",
+          "fontSize": 14,
+          "lineHeight": 19,
+          "textAlign": "center",
+        },
+        Object {
+          "color": "red",
+        },
+      ]
+    }
+  >
+    It did not work
+  </Text>
+</View>
+`;
+
+exports[`renders message 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 0,
+      "flexDirection": "row",
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "rgba(155,155,155,1)",
+          "fontFamily": "NunitoSans-Light",
+          "fontSize": 14,
+          "lineHeight": 19,
+          "textAlign": "center",
+        },
+        Object {},
+      ]
+    }
+  >
+    Doing stuff
+  </Text>
+</View>
+`;
+
+exports[`renders message with custom color 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 0,
+      "flexDirection": "row",
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "rgba(155,155,155,1)",
+          "fontFamily": "NunitoSans-Light",
+          "fontSize": 14,
+          "lineHeight": 19,
+          "textAlign": "center",
+        },
+        Object {
+          "color": "white",
+        },
+      ]
+    }
+  >
+    Doing stuff
+  </Text>
+</View>
+`;
+
+exports[`renders nothing if no status 1`] = `null`;
+
+exports[`renders offline message if offline 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 0,
+      "flexDirection": "row",
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "rgba(155,155,155,1)",
+          "fontFamily": "NunitoSans-Light",
+          "fontSize": 14,
+          "lineHeight": 19,
+          "textAlign": "center",
+        },
+        Object {},
+      ]
+    }
+  >
+    offline
+  </Text>
+</View>
+`;
+
+exports[`renders offline message in custom color if offline 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 0,
+      "flexDirection": "row",
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "rgba(155,155,155,1)",
+          "fontFamily": "NunitoSans-Light",
+          "fontSize": 14,
+          "lineHeight": 19,
+          "textAlign": "center",
+        },
+        Object {
+          "color": "white",
+        },
+      ]
+    }
+  >
+    offline
+  </Text>
+</View>
+`;

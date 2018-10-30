@@ -1,0 +1,260 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OnboardingComplete renders disabled button by default 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#FFFFFF",
+        "flex": 1,
+        "flexDirection": "column",
+        "justifyContent": "space-between",
+        "padding": 30,
+        "paddingBottom": 15,
+        "paddingTop": 50,
+      },
+      Object {
+        "backgroundColor": "rgba(92,80,202,1)",
+        "justifyContent": "space-around",
+        "padding": 50,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../images/uport-white.png",
+        }
+      }
+    />
+  </View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "rgba(74,74,74,1)",
+          "fontFamily": "NunitoSans-Light",
+          "fontSize": 16,
+          "lineHeight": 22,
+          "textAlign": "center",
+        },
+        Object {
+          "color": "#FFFFFF",
+        },
+      ]
+    }
+  >
+    Registering your identity may take up to a few minutes.
+  </Text>
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "flex": 0,
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "borderRadius": 8,
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "margin": 15,
+            "padding": 10,
+          },
+          Object {
+            "backgroundColor": "rgba(0,0,0,0)",
+            "borderColor": "rgba(185, 185, 185, 1)",
+            "borderWidth": 1,
+          },
+        ]
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "fontFamily": "NunitoSans-Bold",
+              "fontSize": 18,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#FFFFFF",
+            },
+            Object {
+              "color": "rgba(185, 185, 185, 1)",
+            },
+          ]
+        }
+      >
+        Continue
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`OnboardingComplete renders enabled button when complete 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#FFFFFF",
+        "flex": 1,
+        "flexDirection": "column",
+        "justifyContent": "space-between",
+        "padding": 30,
+        "paddingBottom": 15,
+        "paddingTop": 50,
+      },
+      Object {
+        "backgroundColor": "rgba(92,80,202,1)",
+        "justifyContent": "space-around",
+        "padding": 50,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "testUri": "../../../images/uport-white.png",
+        }
+      }
+    />
+  </View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "rgba(74,74,74,1)",
+          "fontFamily": "NunitoSans-Light",
+          "fontSize": 16,
+          "lineHeight": 22,
+          "textAlign": "center",
+        },
+        Object {
+          "color": "#FFFFFF",
+        },
+      ]
+    }
+  >
+    Congratulations! You created your identity.
+  </Text>
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "flex": 0,
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "borderRadius": 8,
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "margin": 15,
+            "padding": 10,
+          },
+          Object {
+            "borderColor": "#FFFFFF",
+            "borderWidth": 1,
+          },
+        ]
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "fontFamily": "NunitoSans-Bold",
+              "fontSize": 18,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#FFFFFF",
+            },
+            Object {},
+          ]
+        }
+      >
+        Continue
+      </Text>
+    </View>
+  </View>
+</View>
+`;

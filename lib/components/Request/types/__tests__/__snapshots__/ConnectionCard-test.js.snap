@@ -1,0 +1,2299 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConnectionCard renders a connected Connection Card index as expected 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ConnectionCard
+    authorizeRequest={[Function]}
+    cancelRequest={[Function]}
+    clearRequest={[Function]}
+    contact={Object {}}
+    currentAddress={undefined}
+    navigator={FakeNavigator {}}
+    request={Object {}}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <Component
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "flexDirection": "row",
+              "height": 120.00000000000001,
+              "justifyContent": "flex-start",
+              "width": 750,
+            }
+          }
+        >
+          <TouchableOpacity
+            activeOpacity={0.2}
+            onPress={[Function]}
+            style={
+              Object {
+                "height": 80,
+                "marginBottom": 15,
+                "width": 80,
+              }
+            }
+          >
+            <Icon
+              name="ios-close"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontSize": 40,
+                  "marginLeft": 20,
+                  "marginTop": 20,
+                }
+              }
+            />
+          </TouchableOpacity>
+        </Component>,
+        <Component
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "borderColor": "#FFFFFF",
+              "borderRadius": 5,
+              "height": 200,
+              "justifyContent": "center",
+              "marginTop": -100,
+              "shadowColor": "rgb(16,18,32)",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.2,
+              "width": 200,
+            }
+          }
+        >
+          <Avatar
+            size={184}
+            source={Object {}}
+          />
+        </Component>,
+        <Component
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": undefined,
+              "borderRadius": 60,
+              "height": 58,
+              "justifyContent": "center",
+              "marginTop": 30.000000000000004,
+              "paddingLeft": 8,
+              "paddingRight": 8,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#FFFFFF",
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 13,
+                "letterSpacing": 1,
+                "lineHeight": 15,
+                "textAlign": "center",
+              }
+            }
+          >
+            CONTRACT
+          </Text>
+        </Component>,
+        <Component
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": undefined,
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 20,
+                "lineHeight": 24,
+                "marginBottom": 20,
+                "marginTop": 16,
+                "textAlign": "center",
+              }
+            }
+          />
+        </Component>,
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Cannot add yourself
+        </Text>,
+      ],
+      "style": Object {
+        "alignItems": "stretch",
+        "flex": 1,
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <TouchableOpacity
+            activeOpacity={0.2}
+            onPress={[Function]}
+            style={
+              Object {
+                "height": 80,
+                "marginBottom": 15,
+                "width": 80,
+              }
+            }
+          >
+            <Icon
+              name="ios-close"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontSize": 40,
+                  "marginLeft": 20,
+                  "marginTop": 20,
+                }
+              }
+            />
+          </TouchableOpacity>,
+          "style": Object {
+            "backgroundColor": undefined,
+            "flexDirection": "row",
+            "height": 120.00000000000001,
+            "justifyContent": "flex-start",
+            "width": 750,
+          },
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "activeOpacity": 0.2,
+            "children": <Icon
+              name="ios-close"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontSize": 40,
+                  "marginLeft": 20,
+                  "marginTop": 20,
+                }
+              }
+            />,
+            "onPress": [Function],
+            "style": Object {
+              "height": 80,
+              "marginBottom": 15,
+              "width": 80,
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "name": "ios-close",
+              "style": Object {
+                "color": "#FFFFFF",
+                "fontSize": 40,
+                "marginLeft": 20,
+                "marginTop": 20,
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <Avatar
+            size={184}
+            source={Object {}}
+          />,
+          "style": Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "borderColor": "#FFFFFF",
+            "borderRadius": 5,
+            "height": 200,
+            "justifyContent": "center",
+            "marginTop": -100,
+            "shadowColor": "rgb(16,18,32)",
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.2,
+            "width": 200,
+          },
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "size": 184,
+            "source": Object {},
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#FFFFFF",
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 13,
+                "letterSpacing": 1,
+                "lineHeight": 15,
+                "textAlign": "center",
+              }
+            }
+          >
+            CONTRACT
+          </Text>,
+          "style": Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "backgroundColor": undefined,
+            "borderRadius": 60,
+            "height": 58,
+            "justifyContent": "center",
+            "marginTop": 30.000000000000004,
+            "paddingLeft": 8,
+            "paddingRight": 8,
+          },
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "accessible": true,
+            "allowFontScaling": true,
+            "children": "CONTRACT",
+            "ellipsizeMode": "tail",
+            "style": Object {
+              "color": "#FFFFFF",
+              "fontFamily": "NunitoSans-Regular",
+              "fontSize": 13,
+              "letterSpacing": 1,
+              "lineHeight": 15,
+              "textAlign": "center",
+            },
+          },
+          "ref": null,
+          "rendered": "CONTRACT",
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": undefined,
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 20,
+                "lineHeight": 24,
+                "marginBottom": 20,
+                "marginTop": 16,
+                "textAlign": "center",
+              }
+            }
+          />,
+          "style": Object {
+            "flex": 1,
+          },
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "accessible": true,
+            "allowFontScaling": true,
+            "children": null,
+            "ellipsizeMode": "tail",
+            "style": Object {
+              "color": undefined,
+              "fontFamily": "NunitoSans-Regular",
+              "fontSize": 20,
+              "lineHeight": 24,
+              "marginBottom": 20,
+              "marginTop": 16,
+              "textAlign": "center",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "accessible": true,
+          "allowFontScaling": true,
+          "children": "Cannot add yourself",
+          "ellipsizeMode": "tail",
+        },
+        "ref": null,
+        "rendered": "Cannot add yourself",
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <Component
+            style={
+              Object {
+                "backgroundColor": undefined,
+                "flexDirection": "row",
+                "height": 120.00000000000001,
+                "justifyContent": "flex-start",
+                "width": 750,
+              }
+            }
+          >
+            <TouchableOpacity
+              activeOpacity={0.2}
+              onPress={[Function]}
+              style={
+                Object {
+                  "height": 80,
+                  "marginBottom": 15,
+                  "width": 80,
+                }
+              }
+            >
+              <Icon
+                name="ios-close"
+                style={
+                  Object {
+                    "color": "#FFFFFF",
+                    "fontSize": 40,
+                    "marginLeft": 20,
+                    "marginTop": 20,
+                  }
+                }
+              />
+            </TouchableOpacity>
+          </Component>,
+          <Component
+            style={
+              Object {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "borderColor": "#FFFFFF",
+                "borderRadius": 5,
+                "height": 200,
+                "justifyContent": "center",
+                "marginTop": -100,
+                "shadowColor": "rgb(16,18,32)",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 0,
+                },
+                "shadowOpacity": 0.2,
+                "width": 200,
+              }
+            }
+          >
+            <Avatar
+              size={184}
+              source={Object {}}
+            />
+          </Component>,
+          <Component
+            style={
+              Object {
+                "alignItems": "center",
+                "alignSelf": "center",
+                "backgroundColor": undefined,
+                "borderRadius": 60,
+                "height": 58,
+                "justifyContent": "center",
+                "marginTop": 30.000000000000004,
+                "paddingLeft": 8,
+                "paddingRight": 8,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontFamily": "NunitoSans-Regular",
+                  "fontSize": 13,
+                  "letterSpacing": 1,
+                  "lineHeight": 15,
+                  "textAlign": "center",
+                }
+              }
+            >
+              CONTRACT
+            </Text>
+          </Component>,
+          <Component
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": undefined,
+                  "fontFamily": "NunitoSans-Regular",
+                  "fontSize": 20,
+                  "lineHeight": 24,
+                  "marginBottom": 20,
+                  "marginTop": 16,
+                  "textAlign": "center",
+                }
+              }
+            />
+          </Component>,
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            Cannot add yourself
+          </Text>,
+        ],
+        "style": Object {
+          "alignItems": "stretch",
+          "flex": 1,
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <TouchableOpacity
+              activeOpacity={0.2}
+              onPress={[Function]}
+              style={
+                Object {
+                  "height": 80,
+                  "marginBottom": 15,
+                  "width": 80,
+                }
+              }
+            >
+              <Icon
+                name="ios-close"
+                style={
+                  Object {
+                    "color": "#FFFFFF",
+                    "fontSize": 40,
+                    "marginLeft": 20,
+                    "marginTop": 20,
+                  }
+                }
+              />
+            </TouchableOpacity>,
+            "style": Object {
+              "backgroundColor": undefined,
+              "flexDirection": "row",
+              "height": 120.00000000000001,
+              "justifyContent": "flex-start",
+              "width": 750,
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "activeOpacity": 0.2,
+              "children": <Icon
+                name="ios-close"
+                style={
+                  Object {
+                    "color": "#FFFFFF",
+                    "fontSize": 40,
+                    "marginLeft": 20,
+                    "marginTop": 20,
+                  }
+                }
+              />,
+              "onPress": [Function],
+              "style": Object {
+                "height": 80,
+                "marginBottom": 15,
+                "width": 80,
+              },
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "name": "ios-close",
+                "style": Object {
+                  "color": "#FFFFFF",
+                  "fontSize": 40,
+                  "marginLeft": 20,
+                  "marginTop": 20,
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <Avatar
+              size={184}
+              source={Object {}}
+            />,
+            "style": Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "borderColor": "#FFFFFF",
+              "borderRadius": 5,
+              "height": 200,
+              "justifyContent": "center",
+              "marginTop": -100,
+              "shadowColor": "rgb(16,18,32)",
+              "shadowOffset": Object {
+                "height": 2,
+                "width": 0,
+              },
+              "shadowOpacity": 0.2,
+              "width": 200,
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "size": 184,
+              "source": Object {},
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontFamily": "NunitoSans-Regular",
+                  "fontSize": 13,
+                  "letterSpacing": 1,
+                  "lineHeight": 15,
+                  "textAlign": "center",
+                }
+              }
+            >
+              CONTRACT
+            </Text>,
+            "style": Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": undefined,
+              "borderRadius": 60,
+              "height": 58,
+              "justifyContent": "center",
+              "marginTop": 30.000000000000004,
+              "paddingLeft": 8,
+              "paddingRight": 8,
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "CONTRACT",
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "color": "#FFFFFF",
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 13,
+                "letterSpacing": 1,
+                "lineHeight": 15,
+                "textAlign": "center",
+              },
+            },
+            "ref": null,
+            "rendered": "CONTRACT",
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": undefined,
+                  "fontFamily": "NunitoSans-Regular",
+                  "fontSize": 20,
+                  "lineHeight": 24,
+                  "marginBottom": 20,
+                  "marginTop": 16,
+                  "textAlign": "center",
+                }
+              }
+            />,
+            "style": Object {
+              "flex": 1,
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": null,
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "color": undefined,
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 20,
+                "lineHeight": 24,
+                "marginBottom": 20,
+                "marginTop": 16,
+                "textAlign": "center",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "accessible": true,
+            "allowFontScaling": true,
+            "children": "Cannot add yourself",
+            "ellipsizeMode": "tail",
+          },
+          "ref": null,
+          "rendered": "Cannot add yourself",
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "context": Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+    },
+  },
+}
+`;
+
+exports[`ConnectionCard renders correctly with a authorizedAt Request 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": undefined,
+        "flexDirection": "row",
+        "height": 120.00000000000001,
+        "justifyContent": "flex-start",
+        "width": 750,
+      }
+    }
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      collapsable={undefined}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "height": 80,
+          "marginBottom": 15,
+          "opacity": 1,
+          "width": 80,
+        }
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Icon
+        name="ios-close"
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 40,
+            "marginLeft": 20,
+            "marginTop": 20,
+          }
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "borderColor": "#FFFFFF",
+        "borderRadius": 5,
+        "height": 200,
+        "justifyContent": "center",
+        "marginTop": -100,
+        "shadowColor": "rgb(16,18,32)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.2,
+        "width": 200,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flex": 0,
+              "justifyContent": "center",
+            },
+            Object {
+              "borderRadius": 3,
+              "height": 184,
+              "width": 184,
+            },
+            Object {
+              "backgroundColor": "rgba(91,84,199,1)",
+            },
+            Object {
+              "padding": 46,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 17.5,
+                "textAlign": "center",
+              },
+              undefined,
+              Object {
+                "color": "white",
+                "fontSize": 46,
+              },
+            ]
+          }
+        >
+          JH
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "backgroundColor": undefined,
+        "borderRadius": 60,
+        "height": 58,
+        "justifyContent": "center",
+        "marginTop": 30.000000000000004,
+        "paddingLeft": 8,
+        "paddingRight": 8,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "fontFamily": "NunitoSans-Regular",
+          "fontSize": 13,
+          "letterSpacing": 1,
+          "lineHeight": 15,
+          "textAlign": "center",
+        }
+      }
+    >
+      PERSON
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": undefined,
+          "fontFamily": "NunitoSans-Regular",
+          "fontSize": 20,
+          "lineHeight": 24,
+          "marginBottom": 20,
+          "marginTop": 16,
+          "textAlign": "center",
+        }
+      }
+    >
+      Joanna Hayek
+    </Text>
+  </View>
+  <View
+    style={undefined}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#ffffff",
+          "fontFamily": "Rubik-Medium",
+          "fontSize": 13,
+          "letterSpacing": 1,
+          "textAlign": "center",
+        }
+      }
+    >
+      TRANSACTION CANCELED
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`ConnectionCard renders correctly with a cancelled Request 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": undefined,
+        "flexDirection": "row",
+        "height": 120.00000000000001,
+        "justifyContent": "flex-start",
+        "width": 750,
+      }
+    }
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      collapsable={undefined}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "height": 80,
+          "marginBottom": 15,
+          "opacity": 1,
+          "width": 80,
+        }
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Icon
+        name="ios-close"
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 40,
+            "marginLeft": 20,
+            "marginTop": 20,
+          }
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "borderColor": "#FFFFFF",
+        "borderRadius": 5,
+        "height": 200,
+        "justifyContent": "center",
+        "marginTop": -100,
+        "shadowColor": "rgb(16,18,32)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.2,
+        "width": 200,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flex": 0,
+              "justifyContent": "center",
+            },
+            Object {
+              "borderRadius": 3,
+              "height": 184,
+              "width": 184,
+            },
+            Object {
+              "backgroundColor": "rgba(91,84,199,1)",
+            },
+            Object {
+              "padding": 46,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 17.5,
+                "textAlign": "center",
+              },
+              undefined,
+              Object {
+                "color": "white",
+                "fontSize": 46,
+              },
+            ]
+          }
+        >
+          JH
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "backgroundColor": undefined,
+        "borderRadius": 60,
+        "height": 58,
+        "justifyContent": "center",
+        "marginTop": 30.000000000000004,
+        "paddingLeft": 8,
+        "paddingRight": 8,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "fontFamily": "NunitoSans-Regular",
+          "fontSize": 13,
+          "letterSpacing": 1,
+          "lineHeight": 15,
+          "textAlign": "center",
+        }
+      }
+    >
+      PERSON
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": undefined,
+          "fontFamily": "NunitoSans-Regular",
+          "fontSize": 20,
+          "lineHeight": 24,
+          "marginBottom": 20,
+          "marginTop": 16,
+          "textAlign": "center",
+        }
+      }
+    >
+      Joanna Hayek
+    </Text>
+  </View>
+  <View
+    style={undefined}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#ffffff",
+          "fontFamily": "Rubik-Medium",
+          "fontSize": 13,
+          "letterSpacing": 1,
+          "textAlign": "center",
+        }
+      }
+    >
+      TRANSACTION CANCELED
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`ConnectionCard renders correctly with a complete profile 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": undefined,
+        "flexDirection": "row",
+        "height": 120.00000000000001,
+        "justifyContent": "flex-start",
+        "width": 750,
+      }
+    }
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      collapsable={undefined}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "height": 80,
+          "marginBottom": 15,
+          "opacity": 1,
+          "width": 80,
+        }
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Icon
+        name="ios-close"
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 40,
+            "marginLeft": 20,
+            "marginTop": 20,
+          }
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "borderColor": "#FFFFFF",
+        "borderRadius": 5,
+        "height": 200,
+        "justifyContent": "center",
+        "marginTop": -100,
+        "shadowColor": "rgb(16,18,32)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.2,
+        "width": 200,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flex": 0,
+              "justifyContent": "center",
+            },
+            Object {
+              "borderRadius": 3,
+              "height": 184,
+              "width": 184,
+            },
+            Object {
+              "backgroundColor": "rgba(91,84,199,1)",
+            },
+            Object {
+              "padding": 46,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 17.5,
+                "textAlign": "center",
+              },
+              undefined,
+              Object {
+                "color": "white",
+                "fontSize": 46,
+              },
+            ]
+          }
+        >
+          JH
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "backgroundColor": undefined,
+        "borderRadius": 60,
+        "height": 58,
+        "justifyContent": "center",
+        "marginTop": 30.000000000000004,
+        "paddingLeft": 8,
+        "paddingRight": 8,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "fontFamily": "NunitoSans-Regular",
+          "fontSize": 13,
+          "letterSpacing": 1,
+          "lineHeight": 15,
+          "textAlign": "center",
+        }
+      }
+    >
+      PERSON
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": undefined,
+          "fontFamily": "NunitoSans-Regular",
+          "fontSize": 20,
+          "lineHeight": 24,
+          "marginBottom": 20,
+          "marginTop": 16,
+          "textAlign": "center",
+        }
+      }
+    >
+      Joanna Hayek
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 0,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "borderRadius": 8,
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "margin": 15,
+            "padding": 10,
+          },
+          Array [
+            Object {
+              "borderColor": "rgba(74,74,74,1)",
+              "borderWidth": 1,
+            },
+            Object {
+              "marginRight": 10,
+            },
+          ],
+        ]
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "fontFamily": "NunitoSans-Bold",
+              "fontSize": 18,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "rgba(74,74,74,1)",
+            },
+            Object {},
+          ]
+        }
+      >
+        Reject
+      </Text>
+    </View>
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "borderRadius": 8,
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "margin": 15,
+            "padding": 10,
+          },
+          Array [
+            Object {
+              "backgroundColor": "rgba(91,84,199,1)",
+              "marginLeft": 10,
+            },
+            undefined,
+          ],
+        ]
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "fontFamily": "NunitoSans-Bold",
+              "fontSize": 18,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#FFFFFF",
+            },
+            Object {},
+          ]
+        }
+      >
+        Add Contact
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ConnectionCard renders correctly with a contact that is me 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": undefined,
+        "flexDirection": "row",
+        "height": 120.00000000000001,
+        "justifyContent": "flex-start",
+        "width": 750,
+      }
+    }
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      collapsable={undefined}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "height": 80,
+          "marginBottom": 15,
+          "opacity": 1,
+          "width": 80,
+        }
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Icon
+        name="ios-close"
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 40,
+            "marginLeft": 20,
+            "marginTop": 20,
+          }
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "borderColor": "#FFFFFF",
+        "borderRadius": 5,
+        "height": 200,
+        "justifyContent": "center",
+        "marginTop": -100,
+        "shadowColor": "rgb(16,18,32)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.2,
+        "width": 200,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flex": 0,
+              "justifyContent": "center",
+            },
+            Object {
+              "borderRadius": 3,
+              "height": 184,
+              "width": 184,
+            },
+            Object {
+              "backgroundColor": "rgba(91,84,199,1)",
+            },
+            Object {
+              "padding": 46,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 17.5,
+                "textAlign": "center",
+              },
+              undefined,
+              Object {
+                "color": "white",
+                "fontSize": 46,
+              },
+            ]
+          }
+        >
+          JH
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "backgroundColor": undefined,
+        "borderRadius": 60,
+        "height": 58,
+        "justifyContent": "center",
+        "marginTop": 30.000000000000004,
+        "paddingLeft": 8,
+        "paddingRight": 8,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "fontFamily": "NunitoSans-Regular",
+          "fontSize": 13,
+          "letterSpacing": 1,
+          "lineHeight": 15,
+          "textAlign": "center",
+        }
+      }
+    >
+      PERSON
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": undefined,
+          "fontFamily": "NunitoSans-Regular",
+          "fontSize": 20,
+          "lineHeight": 24,
+          "marginBottom": 20,
+          "marginTop": 16,
+          "textAlign": "center",
+        }
+      }
+    >
+      Joanna Hayek
+    </Text>
+  </View>
+  <View
+    style={undefined}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#ffffff",
+          "fontFamily": "Rubik-Medium",
+          "fontSize": 13,
+          "letterSpacing": 1,
+          "textAlign": "center",
+        }
+      }
+    >
+      TRANSACTION CANCELED
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`ConnectionCard renders correctly with a existing Request 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": undefined,
+        "flexDirection": "row",
+        "height": 120.00000000000001,
+        "justifyContent": "flex-start",
+        "width": 750,
+      }
+    }
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      collapsable={undefined}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "height": 80,
+          "marginBottom": 15,
+          "opacity": 1,
+          "width": 80,
+        }
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Icon
+        name="ios-close"
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 40,
+            "marginLeft": 20,
+            "marginTop": 20,
+          }
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "borderColor": "#FFFFFF",
+        "borderRadius": 5,
+        "height": 200,
+        "justifyContent": "center",
+        "marginTop": -100,
+        "shadowColor": "rgb(16,18,32)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.2,
+        "width": 200,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flex": 0,
+              "justifyContent": "center",
+            },
+            Object {
+              "borderRadius": 3,
+              "height": 184,
+              "width": 184,
+            },
+            Object {
+              "backgroundColor": "rgba(91,84,199,1)",
+            },
+            Object {
+              "padding": 46,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 17.5,
+                "textAlign": "center",
+              },
+              undefined,
+              Object {
+                "color": "white",
+                "fontSize": 46,
+              },
+            ]
+          }
+        >
+          JH
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "backgroundColor": undefined,
+        "borderRadius": 60,
+        "height": 58,
+        "justifyContent": "center",
+        "marginTop": 30.000000000000004,
+        "paddingLeft": 8,
+        "paddingRight": 8,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "fontFamily": "NunitoSans-Regular",
+          "fontSize": 13,
+          "letterSpacing": 1,
+          "lineHeight": 15,
+          "textAlign": "center",
+        }
+      }
+    >
+      PERSON
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": undefined,
+          "fontFamily": "NunitoSans-Regular",
+          "fontSize": 20,
+          "lineHeight": 24,
+          "marginBottom": 20,
+          "marginTop": 16,
+          "textAlign": "center",
+        }
+      }
+    >
+      Joanna Hayek
+    </Text>
+  </View>
+  <View
+    style={undefined}
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#ffffff",
+          "fontFamily": "Rubik-Medium",
+          "fontSize": 13,
+          "letterSpacing": 1,
+          "textAlign": "center",
+        }
+      }
+    >
+      TRANSACTION CANCELED
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`ConnectionCard renders correctly with an unkown contact 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": undefined,
+        "flexDirection": "row",
+        "height": 120.00000000000001,
+        "justifyContent": "flex-start",
+        "width": 750,
+      }
+    }
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      collapsable={undefined}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "height": 80,
+          "marginBottom": 15,
+          "opacity": 1,
+          "width": 80,
+        }
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Icon
+        name="ios-close"
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 40,
+            "marginLeft": 20,
+            "marginTop": 20,
+          }
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "borderColor": "#FFFFFF",
+        "borderRadius": 5,
+        "height": 200,
+        "justifyContent": "center",
+        "marginTop": -100,
+        "shadowColor": "rgb(16,18,32)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.2,
+        "width": 200,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flex": 0,
+              "justifyContent": "center",
+            },
+            Object {
+              "borderRadius": 3,
+              "height": 184,
+              "width": 184,
+            },
+            Object {
+              "backgroundColor": "rgba(91,84,199,1)",
+            },
+            Object {
+              "padding": 46,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 17.5,
+                "textAlign": "center",
+              },
+              undefined,
+              Object {
+                "color": "white",
+                "fontSize": 46,
+              },
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "backgroundColor": undefined,
+        "borderRadius": 60,
+        "height": 58,
+        "justifyContent": "center",
+        "marginTop": 30.000000000000004,
+        "paddingLeft": 8,
+        "paddingRight": 8,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "fontFamily": "NunitoSans-Regular",
+          "fontSize": 13,
+          "letterSpacing": 1,
+          "lineHeight": 15,
+          "textAlign": "center",
+        }
+      }
+    >
+      CONTRACT
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": undefined,
+          "fontFamily": "NunitoSans-Regular",
+          "fontSize": 20,
+          "lineHeight": 24,
+          "marginBottom": 20,
+          "marginTop": 16,
+          "textAlign": "center",
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 0,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "borderRadius": 8,
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "margin": 15,
+            "padding": 10,
+          },
+          Array [
+            Object {
+              "borderColor": "rgba(74,74,74,1)",
+              "borderWidth": 1,
+            },
+            Object {
+              "marginRight": 10,
+            },
+          ],
+        ]
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "fontFamily": "NunitoSans-Bold",
+              "fontSize": 18,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "rgba(74,74,74,1)",
+            },
+            Object {},
+          ]
+        }
+      >
+        Reject
+      </Text>
+    </View>
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "borderRadius": 8,
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "margin": 15,
+            "padding": 10,
+          },
+          Array [
+            Object {
+              "backgroundColor": "rgba(91,84,199,1)",
+              "marginLeft": 10,
+            },
+            undefined,
+          ],
+        ]
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "fontFamily": "NunitoSans-Bold",
+              "fontSize": 18,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#FFFFFF",
+            },
+            Object {},
+          ]
+        }
+      >
+        Add Contact
+      </Text>
+    </View>
+  </View>
+</View>
+`;

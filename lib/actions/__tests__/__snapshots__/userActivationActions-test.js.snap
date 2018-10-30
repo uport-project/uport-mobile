@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates a ACTIVATION_EVENT action with default postback 1`] = `
+Object {
+  "event": "SIGN_TX",
+  "type": "ACTIVATION_EVENT",
+}
+`;

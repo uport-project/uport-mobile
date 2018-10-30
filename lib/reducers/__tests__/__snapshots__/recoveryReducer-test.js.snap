@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`clears Recovery Seed 1`] = `null`;
+
+exports[`clears Recovery Seed 2`] = `Object {}`;
+
+exports[`saves Recovery Seed 1`] = `
+Object {
+  "seed": "HELLO THIS IS SECRET",
+  "wordNo": 0,
+}
+`;
+
+exports[`saves Recovery Seed 2`] = `
+Object {
+  "seed": "HELLO THIS IS SECRET",
+  "wordNo": 0,
+}
+`;
+
+exports[`select Recovery word 1`] = `null`;
+
+exports[`select Recovery word 2`] = `
+Object {
+  "seed": "SECRET SIDE",
+  "wordNo": 3,
+}
+`;

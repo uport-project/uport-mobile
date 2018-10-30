@@ -1,0 +1,92 @@
+/*
+ * Copyright (C) 2018 ConsenSys AG
+ *
+ * This file is part of uPort Mobile App.
+ *
+ * uPort Mobile App is free software: you can redistribute it and/or modify it under the terms of
+ * the GNU General Public License as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ *
+ * uPort Mobile App is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with uPort Mobile App.
+ * If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    ext {
+        kotlin_version = "1.2.61"
+        build_tools_version = "27.0.3"
+        gradle_tools_version = "3.1.4"
+        google_tools_version = "3.1.2"
+
+        //check for updates at https://docs.fabric.io/android/changelog.html#fabric-gradle-plugin
+        fabric_tools_version = "1.25.4"
+
+        min_sdk_version = 21
+        compile_sdk_version = 27
+
+        target_sdk_version = compile_sdk_version
+
+        constraint_layout_version = "1.1.2"
+        support_lib_version = "27.1.1"
+        play_services_version = "12.0.1"
+        aws_lib_version = "2.6.7"
+        okhttp_version = "3.10.0"
+        crashlytics_version = "2.9.4"
+
+        react_native_version = "0.55.3"
+
+        spongy_castle_version = "1.58.0.0"
+        uport_signer_version = "0.2.1"
+
+        test_runner_version = "1.0.1"
+        espresso_version = "3.0.1"
+        junit_version = "4.12"
+        mockito_version = "2.12.0"
+    }
+
+    repositories {
+        jcenter()
+        google()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradle_tools_version"
+        classpath "com.google.gms:google-services:$google_tools_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        mavenLocal()
+        jcenter()
+        google()
+        maven {
+            // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+            url "$rootDir/../node_modules/react-native/android"
+        }
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+subprojects { subproject ->
+    afterEvaluate {
+        if ((subproject.plugins.hasPlugin('android') || subproject.plugins.hasPlugin('android-library'))) {
+            android {
+                compileSdkVersion compile_sdk_version
+                buildToolsVersion build_tools_version
+            }
+        }
+    }
+}

@@ -1,0 +1,100 @@
+# Customize this file, documentation can be found here:
+# https://docs.fastlane.tools/actions/
+# All available actions: https://docs.fastlane.tools/actions
+# can also be listed using the `fastlane actions` command
+
+# Change the syntax highlighting to Ruby
+# All lines starting with a # are ignored when running `fastlane`
+
+# If you want to automatically update fastlane if a new version is available:
+# update_fastlane
+
+
+#################################################
+# If you are seeing errors with fastlane:
+# this script expects the app to already be built and the key file to exist
+#
+#  you'll need to have vault configured for general usage first.
+#    https://consensys.quip.com/UIuJAQmkdQuY/Production-Vault#ePPACAkbcsb
+#
+#  to get the key file:
+#    bash scripts/pull_service_key.sh
+#
+#  to build a release locally
+#    ./gradlew deliverArchives
+#
+#
+#################################################
+
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+min_fastlane_version("2.72.0")
+
+default_platform(:android)
+
+platform :android do
+  before_all do
+    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
+  end
+
+  desc "Runs all the tests"
+  lane :test do
+    gradle(task: "test")
+  end
+
+  desc "run a local debug build"
+  lane :local do
+    gradle(
+      task: 'assembleDebug'
+    )
+  end
+
+  desc "Submit a new Release Build to Google Play Alpha channel"
+  lane :alpha do
+
+    ## the app should already be built by CircleCI, no need to call this again
+    # gradle(
+    #  task: 'deliverArchives'
+    # )
+
+    upload_to_play_store(
+      track: 'alpha',
+      apk_paths: [
+        './app/build/outputs/apk/release/app-armeabi-v7a-release.apk',
+        './app/build/outputs/apk/release/app-x86-release.apk'
+        ],
+  ## uncomment this to disable apk upload
+  #    validate_only: true,
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true  
+    )
+
+    # You can also use other beta testing services here
+  end
+
+  # You can define as many lanes as you want
+
+  after_all do |lane|
+    # This block is called, only if the executed lane was successful
+
+    # slack(
+    #   message: "Successfully deployed new App Update."
+    # )
+
+  end
+
+  error do |lane, exception|
+    # slack(
+    #   message: exception.message,
+    #   success: false
+    # )
+
+  end
+end
+
+# More information about multiple platforms in fastlane: https://docs.fastlane.tools/advanced/#control-configuration-by-lane-and-by-platform
+# All available actions: https://docs.fastlane.tools/actions
+
+# fastlane reports which actions are used. No personal data is recorded.
+# Learn more at https://docs.fastlane.tools/#metrics

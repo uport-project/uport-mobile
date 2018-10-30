@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates a ACCOUNT_RISK_SENT action 1`] = `
+Object {
+  "_backup": true,
+  "type": "ACCOUNT_RISK_SENT",
+}
+`;
+
+exports[`creates a INC_ACCOUNT_INDEX action 1`] = `
+Object {
+  "_backup": true,
+  "identity": 0,
+  "type": "INC_ACCOUNT_INDEX",
+}
+`;
+
+exports[`creates a INC_IDENTITY_INDEX action 1`] = `
+Object {
+  "_backup": true,
+  "type": "INC_IDENTITY_INDEX",
+}
+`;
+
+exports[`creates a RESET_HD_WALLET action 1`] = `
+Object {
+  "type": "RESET_HD_WALLET",
+}
+`;
+
+exports[`creates a SEED_CONFIRMED action 1`] = `
+Object {
+  "_backup": true,
+  "type": "SEED_CONFIRMED",
+}
+`;
+
+exports[`creates a STORE_ROOT_ADDRESS action with given address 1`] = `
+Object {
+  "_backup": true,
+  "root": "0xabcde",
+  "type": "STORE_ROOT_ADDRESS",
+}
+`;

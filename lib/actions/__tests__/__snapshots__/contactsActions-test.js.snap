@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates a CONTACTS_SELECT_CONTACT action 1`] = `
+Object {
+  "contact": Object {
+    "address": "0x1231",
+  },
+  "type": "CONTACTS_SELECT_CONTACT",
+}
+`;

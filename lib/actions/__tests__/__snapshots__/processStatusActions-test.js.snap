@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates a CLEAR_ALL_MESSAGES action 1`] = `
+Object {
+  "type": "CLEAR_ALL_MESSAGES",
+}
+`;
+
+exports[`creates a CLEAR_MESSAGE action without postback 1`] = `
+Object {
+  "section": "unnu",
+  "type": "CLEAR_MESSAGE",
+}
+`;
+
+exports[`creates a COMPLETE_PROCESS action 1`] = `
+Object {
+  "section": "unnu",
+  "type": "COMPLETE_PROCESS",
+}
+`;
+
+exports[`creates a FAIL_PROCESS action 1`] = `
+Object {
+  "error": "request failed",
+  "section": "unnu",
+  "type": "FAIL_PROCESS",
+}
+`;
+
+exports[`creates a SAVE_ERROR action with postback 1`] = `
+Object {
+  "error": "request failed",
+  "section": "unnu",
+  "type": "SAVE_ERROR",
+}
+`;
+
+exports[`creates a SAVE_MESSAGE action with default postback 1`] = `
+Object {
+  "message": "Request succeeded",
+  "section": "unnu",
+  "type": "SAVE_MESSAGE",
+}
+`;
+
+exports[`creates a START_WORKING action 1`] = `
+Object {
+  "section": "unnu",
+  "type": "START_WORKING",
+}
+`;
+
+exports[`creates a STOP_WORKING action 1`] = `
+Object {
+  "section": "unnu",
+  "type": "STOP_WORKING",
+}
+`;

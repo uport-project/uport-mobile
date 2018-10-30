@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`returns the snapshot of current uport state 1`] = `
+Object {
+  "hdwallet": Object {
+    "accountRiskSent": true,
+    "identities": Array [
+      3,
+      2,
+      1,
+    ],
+    "root": "0x1234",
+    "seedConfirmed": true,
+  },
+  "uport": Object {
+    "byAddress": Object {
+      "0x1234": Object {
+        "hdindex": 0,
+      },
+      "0x2345": Object {
+        "hdindex": 1,
+        "parent": "0x1234",
+      },
+      "0x3456": Object {
+        "hdindex": 2,
+        "parent": "0x1234",
+      },
+    },
+  },
+}
+`;

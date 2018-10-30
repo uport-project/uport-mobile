@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates a STORE_EVENTS action 1`] = `
+Object {
+  "0x010102": Object {
+    "events": Array [
+      Object {
+        "type": "something",
+      },
+    ],
+  },
+}
+`;
+
+exports[`creates a STORE_EVENTS action 2`] = `
+Object {
+  "0x010101": Object {
+    "block": 10000,
+    "events": Array [
+      Object {
+        "type": "test",
+      },
+    ],
+  },
+  "0x010102": Object {
+    "block": 10000,
+    "events": Array [
+      Object {
+        "type": "test",
+      },
+      Object {
+        "type": "something",
+      },
+    ],
+  },
+}
+`;
+
+exports[`creates a STORE_LAST_BLOCK_FOR_LOGS action 1`] = `
+Object {
+  "0x010102": Object {
+    "block": "3019",
+  },
+}
+`;
+
+exports[`creates a STORE_LAST_BLOCK_FOR_LOGS action 2`] = `
+Object {
+  "0x010101": Object {
+    "block": 10000,
+    "events": Array [
+      Object {
+        "type": "test",
+      },
+    ],
+  },
+  "0x010102": Object {
+    "block": "3019",
+    "events": Array [
+      Object {
+        "type": "test",
+      },
+    ],
+  },
+}
+`;

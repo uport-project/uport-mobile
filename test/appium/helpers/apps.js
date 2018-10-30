@@ -1,0 +1,1 @@
+exports.iosTestApp = '/Users/gbugyis/Library/Developer/Xcode/DerivedData/uPortMobile-cetwjbmuijmutwbdxqfsfbyfuhkw/Build/Products/Debug-iphonesimulator/uPort.app'

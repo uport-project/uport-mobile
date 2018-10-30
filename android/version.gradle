@@ -1,0 +1,250 @@
+
+buildscript {
+
+    repositories {
+        jcenter()
+        maven {
+            url "https://maven.google.com"
+        }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradle_tools_version"
+    }
+}
+
+/*
+ * Copyright (C) 2018 ConsenSys AG
+ *
+ * This file is part of uPort Mobile App.
+ *
+ * uPort Mobile App is free software: you can redistribute it and/or modify it under the terms of
+ * the GNU General Public License as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ *
+ * uPort Mobile App is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with uPort Mobile App.
+ * If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+/**
+ * Generates a {@code long} version code
+ * calculated from the {@code <Major>.<Minor>.<Build>} integer components of a version name String.
+ *
+ * It should support versions of the form:
+ * <ul>
+ * <li>2.65.97                          -> 2065097 - simple style</li>
+  * <li>2.65.97 SNAPSHOT                -> 2065097 - can have text after version, separated by space</li>
+ * <li>2.65.97 feature/2681-bla-bla     -> 2065097 - text can be a branch name</li>
+ * <li>2.65.97 746d9836a6f5ee5f         -> 2065097 - or a commit hash</li>
+ * <li>2.65.97-SNAPSHOT                 -> 2065097 - text can be separated by a dash</li>
+ * <li>2.657.912                        -> 2057012 - each component can have 2 figures</li>
+ * <li>2.2657.1912                      -> 2057012 - component values are modulo 1000</li>
+ * <li></li>
+ * <li>2.6                              -> 2006000 - build number can be missing </li>
+ * <li>2                                -> 2000000 - only major version </li>
+ * </ul>
+ *
+ * @param versionName a String having one of the above forms
+ */
+static def computeVersionCode(String versionName) {
+
+    String versionString = normalizeVersionString(versionName)
+
+    def components = versionString.tokenize(".")
+
+    //actual computation
+    long versionCode = 0L;
+    for (String component : components) {
+        versionCode *= 1000L;
+        versionCode += (Integer.valueOf(component) % 1000L);
+    }
+
+    if (versionCode == 0L) {
+        //fallback to nonzero
+        versionCode = 42
+    }
+
+    return versionCode
+}
+
+/**
+ * Normalizes a versionName String to a {@code <Major>.<Minor>.<Build>} representation
+ *
+ * @param versionName a String having one of the forms described in `computeVersionCode`
+ */
+static def normalizeVersionString(String versionName) {
+    //trim and separate by spaces or `-`
+    String[] tokens = versionName.trim().tokenize('- \t');
+
+    def components = new ArrayDeque<String>(tokens[0].tokenize("."))
+
+    //ignore the first components if there are more than 3
+    while (components.size() > 3) {
+        components.poll()
+    }
+
+    //make sure there are enough components to go around
+    while (components.size() < 3) {
+        components.offer("0")
+    }
+
+    return components.join(".")
+}
+
+/**
+ * Check repo to see if it is clean, throws an exception otherwise
+ */
+task checkCleanRepo() {
+    group = "playstore"
+    doLast {
+        boolean ignoreState = false;
+        if (project.hasProperty("IGNORE_REPOSITORY_STATE") && Boolean.valueOf(IGNORE_REPOSITORY_STATE)) {
+            ignoreState = true;
+        }
+
+        String gitStatus = "";
+
+        try {
+            gitStatus = "git status".execute().text
+        } catch (IOException ignored) {
+            //git executable not found
+            ignoreState = true;
+        }
+
+        if (!ignoreState && !gitStatus.contains('nothing to commit')) {
+            throw new GradleException("There are some uncommited changes in your local git copy. "
+                    + "Please clean your repo and try again!"
+                    + "\n\nTo ignore this message, start gradle with -PIGNORE_REPOSITORY_STATE=true"
+                    + " or add `IGNORE_REPOSITORY_STATE=true` to your `gradle.properties` file" )
+        }
+    }
+}
+
+def getBuildVersionCode() {
+    Properties props = new Properties()
+    props.load(new FileInputStream("${rootDir}/version.properties"))
+    return Integer.valueOf(props.get('BUILD_NUMBER', '42'))
+}
+
+def getBumpedVersion() {
+    int buildNumber = getBuildVersionCode() + 1
+    if (project.hasProperty("_BUILD_NUMBER")) {
+        buildNumber = Integer.valueOf(_BUILD_NUMBER)
+    }
+    return buildNumber
+}
+
+task bumpVersion() {
+    group "playstore"
+
+    doLast {
+        def newVersion = getBumpedVersion()
+        logger.lifecycle "Bumping build number from ${getBuildVersionCode()} to ${newVersion} \n"
+
+        Properties props = new Properties()
+        props.load(new FileInputStream("${rootDir}/version.properties"))
+
+        props.put('BUILD_NUMBER', "$newVersion".toString())
+        props.store(new FileOutputStream("${rootDir}/version.properties"),
+                "This is a generated file so things tend to get overwritten.\n" +
+                        "Use `gradlew bumpVersion` to increment the version by 1\n" +
+                        "or `gradlew bumpVersion -P_BUILD_NUMBER=<your specific version>` to set it manually")
+    }
+}
+
+def getBuildArtifactsDir() {
+    def outDir = System.env.CIRCLE_ARTIFACTS ?: "${rootDir}/build/artifacts"
+    return file(outDir)
+}
+
+///////////////apply the versions to the outside
+ext {
+    getBuildVersionCode = this.&getBuildVersionCode
+    getBuildArtifactsDir = this.&getBuildArtifactsDir
+}
+///////////////////
+
+/**
+ * Defines a task that copies the APKs for all the flavors
+ * along with their respective test-variants
+ * and proguard mappings
+ * to the publishing dir
+ */
+/////////////// publishing
+task deliverArchives {
+    group = "playstore"
+}
+
+import com.android.build.OutputFile
+
+android.applicationVariants.all { variant ->
+
+    if (!variant.name.toLowerCase().contains("release")) {
+        return
+    }
+
+    def taskDependencies = ["checkCleanRepo", "assemble${variant.name.capitalize()}"]
+    Task androidTestTask = project.tasks.findByName("assemble${variant.name.capitalize()}AndroidTest");
+    if (androidTestTask != null) {
+        taskDependencies.add("${androidTestTask.getName()}")
+    }
+
+    Task deliveryTask = task(type: Copy, dependsOn: taskDependencies, "deliver${variant.name.capitalize()}") {
+        group "playstore"
+
+        //copy the proguard mapping
+        if (variant.getBuildType().isMinifyEnabled()) {
+            logger.debug "mapping file is ${variant.mappingFile}"
+
+            from("${variant.mappingFile.parent}") {
+                include "mapping.txt"
+                rename { String oldName ->
+                    def flavor = variant.flavorName?:variant.buildType.name
+                    "${rootProject.name}-${getVersionName()}-${flavor}-mapping.txt".replaceAll(/\s/, "-")
+                }
+            }
+        }
+
+        //go through each output and apply a proper name
+        variant.outputs.each { output ->
+
+            def abi = output.getFilter(OutputFile.ABI) ?: ""
+
+            from(output.outputFile) {
+                exclude "*release-unaligned.apk", "*debug-unaligned.apk"
+                rename { String oldName ->
+                    def flavor = variant.flavorName?:variant.buildType.name
+                    "${rootProject.name}-${getVersionName()}-${flavor}-${abi}.apk".replaceAll(/\s/, "-")
+                }
+            }
+        }
+
+        //also copy the test-apk
+        variant.testVariant?.outputs?.each {
+            from(it.outputFile)
+        }
+
+        into "${getBuildArtifactsDir()}"
+
+        doLast {
+            logger.lifecycle "publishing ${rootProject.name}:${variant.name}:${variant.versionName} to: ${getBuildArtifactsDir()}"
+        }
+    }
+
+    //if a non-null, non-whitespace flavorName exists
+    if (variant.flavorName?.trim()) {
+        def flavorTaskName = "deliver${variant.flavorName.capitalize()}"
+        //find or create a task named flavorTaskName
+        Task deliverByFlavor = project.tasks.findByName(flavorTaskName) ?: task(flavorTaskName) {
+            group = "playstore"
+        }
+        deliverByFlavor.dependsOn deliveryTask
+    }
+
+    deliverArchives.dependsOn deliveryTask
+
+}

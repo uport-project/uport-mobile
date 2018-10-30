@@ -1,0 +1,432 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates a ADD_CLAIMS action 1`] = `
+Object {
+  "_backup": true,
+  "address": "0x0102030405",
+  "claims": Object {
+    "name": "Bob",
+  },
+  "type": "ADD_OWN_CLAIMS",
+}
+`;
+
+exports[`creates a ADD_IDENTITY action 1`] = `
+Object {
+  "network": "kovan",
+  "type": "ADD_IDENTITY",
+}
+`;
+
+exports[`creates a ADD_IMAGE action 1`] = `
+Object {
+  "address": "0x0102030405",
+  "claimType": "avatar",
+  "image": Object {
+    "uri": "data:....",
+  },
+  "type": "ADD_IMAGE",
+}
+`;
+
+exports[`creates a ADD_IMAGE_ONBOARDING action 1`] = `
+Object {
+  "avatarObj": Object {
+    "avatar": Object {
+      "uri": "data:....",
+    },
+  },
+  "type": "ADD_IMAGE_ONBOARDING",
+}
+`;
+
+exports[`creates a ADD_RECOVERY_ADDRESS action 1`] = `
+Object {
+  "_backup": true,
+  "address": "0x123afdasdfasdfasdf",
+  "recoveryAddress": "0x0202",
+  "recoveryType": "bip39",
+  "type": "ADD_RECOVERY_ADDRESS",
+}
+`;
+
+exports[`creates a CALL_FAUCET action 1`] = `
+Object {
+  "address": "0x123",
+  "type": "CALL_FAUCET",
+}
+`;
+
+exports[`creates a CREATE_ACCOUNT action 1`] = `
+Object {
+  "clientId": "0xgnosis",
+  "network": "rinkeby",
+  "parent": "0xabcde",
+  "type": "CREATE_ACCOUNT",
+}
+`;
+
+exports[`creates a CREATE_ACCOUNT action 2`] = `
+Object {
+  "clientId": undefined,
+  "network": "kovan",
+  "parent": "0xabcde",
+  "type": "CREATE_ACCOUNT",
+}
+`;
+
+exports[`creates a CREATE_ENCRYPTION_KEY action 1`] = `
+Object {
+  "address": "0x0102030405",
+  "type": "CREATE_ENCRYPTION_KEY",
+}
+`;
+
+exports[`creates a CREATE_IDENTITY action 1`] = `
+Object {
+  "type": "CREATE_IDENTITY",
+}
+`;
+
+exports[`creates a INC_NONCE action 1`] = `
+Object {
+  "address": "0x0102030405",
+  "type": "INCREASE_NONCE",
+}
+`;
+
+exports[`creates a OPEN_ACTIVITY action 1`] = `
+Object {
+  "_backup": true,
+  "activityId": "112313123",
+  "type": "OPEN_ACTIVITY",
+}
+`;
+
+exports[`creates a REFRESH_BALANCE action 1`] = `
+Object {
+  "address": "0x0102030405",
+  "type": "FETCH_BALANCE",
+}
+`;
+
+exports[`creates a REFRESH_EXTERNAL_UPORT action 1`] = `
+Object {
+  "clientId": "0x123",
+  "type": "REFRESH_EXTERNAL_UPORT",
+}
+`;
+
+exports[`creates a REFRESH_FUEL_BALANCE action 1`] = `
+Object {
+  "address": "0x0102030405",
+  "type": "FETCH_FUEL_BALANCE",
+}
+`;
+
+exports[`creates a REFRESH_NONCE action 1`] = `
+Object {
+  "address": "0x0102030405",
+  "type": "FETCH_NONCE",
+}
+`;
+
+exports[`creates a REFRESH_SETTINGS action 1`] = `
+Object {
+  "address": "0x0102030405",
+  "type": "REFRESH_SETTINGS",
+}
+`;
+
+exports[`creates a REMOVE_ACTIVITY action 1`] = `
+Object {
+  "_backup": true,
+  "activityId": "112313123",
+  "type": "REMOVE_ACTIVITY",
+}
+`;
+
+exports[`creates a REMOVE_ATTESTATION action 1`] = `
+Object {
+  "_backup": true,
+  "address": "0x0102030405",
+  "attestationHash": "0xdsasdfasdf",
+  "type": "REMOVE_ATTESTATION",
+}
+`;
+
+exports[`creates a REMOVE_CLAIMS action 1`] = `
+Object {
+  "_backup": true,
+  "address": "0x0102030405",
+  "claimType": "name",
+  "type": "REMOVE_OWN_CLAIM",
+}
+`;
+
+exports[`creates a REMOVE_CONNECTION action 1`] = `
+Object {
+  "_backup": true,
+  "address": "0x0102030405",
+  "connection": "0x123",
+  "connectionType": "knows",
+  "type": "REMOVE_CONNECTION",
+}
+`;
+
+exports[`creates a REMOVE_IDENTITY action 1`] = `
+Object {
+  "_backup": true,
+  "address": "0x123",
+  "type": "REMOVE_IDENTITY",
+}
+`;
+
+exports[`creates a RESET_IDENTITY action 1`] = `
+Object {
+  "type": "RESET_IDENTITY",
+}
+`;
+
+exports[`creates a SAVE_BALANCE action 1`] = `
+Object {
+  "address": "0x0102030405",
+  "balance": 2,
+  "type": "SAVE_BALANCE",
+  "usdBalance": undefined,
+}
+`;
+
+exports[`creates a SAVE_FUEL action 1`] = `
+Object {
+  "address": "0x0102030405",
+  "balance": 2,
+  "type": "SAVE_FUEL_BALANCE",
+}
+`;
+
+exports[`creates a SAVE_IPFS_PROFILE action 1`] = `
+Object {
+  "address": "0x0102030405",
+  "ipfsHash": "QmdNm7VZTNnux2LS6vMJXLZ5BGb3rPJV9mF5jA72uq9y7o",
+  "type": "SAVE_IPFS_PROFILE",
+}
+`;
+
+exports[`creates a SAVE_META_NONCE action 1`] = `
+Object {
+  "address": "0x0102030405",
+  "nonce": 5,
+  "timestamp": 1516134091907,
+  "type": "SAVE_META_NONCE",
+}
+`;
+
+exports[`creates a SAVE_NONCE action 1`] = `
+Object {
+  "address": "0x0102030405",
+  "nonce": 2,
+  "type": "SAVE_NONCE",
+}
+`;
+
+exports[`creates a SAVE_PUBLIC_UPORT action 1`] = `
+Object {
+  "address": "0x123",
+  "type": "SAVE_PUBLIC_UPORT",
+}
+`;
+
+exports[`creates a SAVE_SEGMENT_ID action 1`] = `
+Object {
+  "_backup": true,
+  "segmentId": "0x123",
+  "type": "SAVE_SEGMENT_ID",
+}
+`;
+
+exports[`creates a STORE_ACTIVITY action 1`] = `
+Object {
+  "_backup": true,
+  "activity": Object {
+    "id": 112313123,
+    "target": "0x0101",
+  },
+  "type": "STORE_ACTIVITY",
+}
+`;
+
+exports[`creates a STORE_CONNECTION action 1`] = `
+Object {
+  "_backup": true,
+  "address": "0x0102030405",
+  "connection": "0x123",
+  "connectionType": "knows",
+  "type": "STORE_CONNECTION",
+}
+`;
+
+exports[`creates a STORE_CURRENT_IDENTITY action 1`] = `
+Object {
+  "_backup": true,
+  "address": "0x123",
+  "type": "STORE_CURRENT_IDENTITY",
+}
+`;
+
+exports[`creates a STORE_ENCRYPTION_KEY action 1`] = `
+Object {
+  "_backup": true,
+  "address": "0x0102030405",
+  "publicEncKey": "0x123afdasdfasdfasdf",
+  "type": "STORE_ENCRYPTION_KEY",
+}
+`;
+
+exports[`creates a STORE_EXTERNAL_UPORT action 1`] = `
+Object {
+  "_backup": true,
+  "address": "0x123",
+  "profile": Object {
+    "name": "Bob",
+  },
+  "type": "STORE_EXTERNAL_UPORT",
+}
+`;
+
+exports[`creates a STORE_FUEL_TOKEN action 1`] = `
+Object {
+  "_backup": true,
+  "address": "0x0102030405",
+  "token": "0x123afdasdfasdfasdf",
+  "type": "STORE_FUEL_TOKEN",
+}
+`;
+
+exports[`creates a STORE_IDENTITY action 1`] = `
+Object {
+  "_backup": true,
+  "identity": Object {
+    "address": "0x123",
+  },
+  "type": "STORE_IDENTITY",
+}
+`;
+
+exports[`creates a STORE_KEYCHAIN_LEVEL action 1`] = `
+Object {
+  "level": "touch",
+  "type": "STORE_KEYCHAIN_LEVEL",
+}
+`;
+
+exports[`creates a STORE_PUTUTU_TOKEN action 1`] = `
+Object {
+  "address": "0x0102030405",
+  "pututuToken": "0x123afdasdfasdfasdf",
+  "type": "STORE_PUTUTU_TOKEN",
+}
+`;
+
+exports[`creates a STORE_SUB_ACCOUNT action 1`] = `
+Object {
+  "_backup": true,
+  "identity": Object {
+    "address": "0x123",
+  },
+  "type": "ADD_SUB_IDENTITY",
+}
+`;
+
+exports[`creates a SWITCH_IDENTITY action 1`] = `
+Object {
+  "address": "0x123",
+  "type": "SWITCH_IDENTITY",
+}
+`;
+
+exports[`creates a UPDATE_ACTIVITY action 1`] = `
+Object {
+  "_backup": true,
+  "activityId": "112313123",
+  "changes": Object {
+    "hash": "0x123",
+  },
+  "type": "UPDATE_ACTIVITY",
+}
+`;
+
+exports[`creates a UPDATE_INTERACTION_STATS action 1`] = `
+Object {
+  "_backup": true,
+  "address": "0x0102030405",
+  "interactionType": "sign",
+  "party": "0x0123",
+  "type": "UPDATE_INTERACTION_STATS",
+}
+`;
+
+exports[`creates a VERIFY_BY_CALL action 1`] = `
+Object {
+  "type": "VERIFY_BY_PHONE",
+}
+`;
+
+exports[`creates a VERIFY_BY_SMS action 1`] = `
+Object {
+  "phone": "+18001234",
+  "type": "VERIFY_BY_SMS",
+}
+`;
+
+exports[`creates a VERIFY_PHONE_CODE action 1`] = `
+Object {
+  "address": "0x01234",
+  "code": "123456",
+  "type": "VERIFY_PHONE_CODE",
+}
+`;
+
+exports[`creates an ADD_PENDING_ATTESTATION action 1`] = `
+Object {
+  "_backup": true,
+  "address": "0x123afdasdfasdfasdf",
+  "claimType": "name",
+  "iss": "0xdsasdfasdf",
+  "options": Object {},
+  "type": "ADD_PENDING_ATTESTATION",
+}
+`;
+
+exports[`creates an ADD_PENDING_ATTESTATION action 2`] = `
+Object {
+  "_backup": true,
+  "address": "0x123afdasdfasdfasdf",
+  "claimType": "name",
+  "iss": "0xdsasdfasdf",
+  "options": Object {
+    "applicant_id": 1234,
+  },
+  "type": "ADD_PENDING_ATTESTATION",
+}
+`;
+
+exports[`creates an REMOVE_PENDING_ATTESTATION action 1`] = `
+Object {
+  "_backup": true,
+  "address": "0x123afdasdfasdfasdf",
+  "claimType": "name",
+  "iss": "0xdsasdfasdf",
+  "type": "REMOVE_PENDING_ATTESTATION",
+}
+`;
+
+exports[`creates an STORE_ATTESTATION action 1`] = `
+Object {
+  "_backup": true,
+  "attestation": Object {
+    "token": "0x0000",
+  },
+  "type": "STORE_ATTESTATION",
+}
+`;
