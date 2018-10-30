@@ -34,7 +34,7 @@ jest.mock('../../node_modules/react-native-camera/src/index.js', () => {
   }
 })
 
-import {startMain, startOnboarding} from '../start.js'
+import { startMain, startOnboarding } from 'uPortMobile/lib/start'
 import { Navigation } from 'react-native-navigation'
 
 describe('start', () => {

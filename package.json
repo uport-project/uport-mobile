@@ -3,7 +3,7 @@
   "version": "0.0.8",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "start": "node node_modules/react-native/local-cli/cli.js start --config rn-cli.config.js",
     "build-solidity-coder": "browserify node_modules/web3/lib/solidity/coder.js --s Coder | derequire > lib/browserified/coder.js",
     "build-bip39": "browserify node_modules/bip39/index.js --s BIP39 | derequire > lib/browserified/bip39.js",
     "build-mnid": "browserify node_modules/mnid/lib/index.js --s MNID | derequire > lib/browserified/mnid.js",
@@ -31,6 +31,10 @@
       "lib/utilities/__tests__/mock_native_module.js",
       "lib/helpers/"
     ],
+    "transform": {
+      "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest",
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
     "collectCoverageFrom": [
       "lib/**/*.js"
     ],
@@ -40,6 +44,9 @@
       "lib/browserified/",
       "-test"
     ],
+    "moduleNameMapper": {
+      "uPortMobile(.*)$": "<rootDir>$1"
+    },
     "testEnvironment": "node",
     "coverageDirectory": "./coverage/",
     "collectCoverage": false
@@ -107,6 +114,7 @@
     "reselect": "^3.0.1",
     "rlp": "^2.0.0",
     "string": "^3.3.1",
+    "tslib": "^1.9.3",
     "uport-credentials": "^1.0.0-alpha-3",
     "uport-did-resolver": "^0.0.2",
     "uport-identity": "2.0.0-beta",
@@ -118,6 +126,11 @@
   },
   "devDependencies": {
     "@babel/runtime": "^7.1.2",
+    "@types/jest": "^23.3.8",
+    "@types/react": "^16.4.18",
+    "@types/react-native": "^0.57.7",
+    "@types/react-native-navigation": "1.x",
+    "@types/react-redux": "^6.0.9",
     "babel-jest": "^22.4.3",
     "babel-plugin-transform-imports": "^1.5.0",
     "babel-polyfill": "^6.26.0",
@@ -137,6 +150,7 @@
     "jsontokens": "^0.7.7",
     "mockdate": "^2.0.2",
     "nock": "^9.0.18",
+    "react-native-typescript-transformer": "^1.2.10",
     "react-test-renderer": "^16.3.1",
     "reactotron-react-native": "^1.12.3",
     "reactotron-redux": "^1.12.2",
@@ -145,7 +159,12 @@
     "redux-saga-test-plan": "^3.3.1",
     "sinon": "^4.0.1",
     "standard": "^10.0.3",
-    "timekeeper": "^1.0.0"
+    "timekeeper": "^1.0.0",
+    "ts-jest": "^23.10.4",
+    "tslint": "^5.11.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.1.4"
   },
   "browser": {
     "stream": false,
