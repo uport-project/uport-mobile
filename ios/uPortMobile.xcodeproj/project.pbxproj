@@ -352,6 +352,13 @@
 			remoteGlobalIDString = 708720D71F948CFF00652388;
 			remoteInfo = "RNSVG-tvOS";
 		};
+		70EB19A821887F78006CC357 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 83CBBA2D1A601D0E00E9B192;
+			remoteInfo = React;
+		};
 		78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
@@ -1423,6 +1430,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				70EB19A921887F78006CC357 /* PBXTargetDependency */,
 			);
 			name = uPortMobile;
 			productName = "Hello World";
@@ -2176,6 +2184,11 @@
 			isa = PBXTargetDependency;
 			target = 13B07F861A680F5B00A75B9A /* uPortMobile */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+		};
+		70EB19A921887F78006CC357 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = React;
+			targetProxy = 70EB19A821887F78006CC357 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
