@@ -69,18 +69,19 @@ jobs:
 
       - restore_cache:
           keys:
-            - bundle-{{ arch }}-v5-{{ checksum "Gemfile.lock" }}
-            - bundle-{{ arch }}-v5
+            - bundle-{{ arch }}-v6-{{ checksum "Gemfile.lock" }}
+            - bundle-{{ arch }}-v6
       - run: bundle install
       - run: wget https://releases.hashicorp.com/vault/0.10.1/vault_0.10.1_linux_amd64.zip -O ~/vault.zip
       - run: unzip ~/vault.zip -d ~/vault/
 
       - save_cache:
-          key: bundle-{{ arch }}-v5-{{ checksum "Gemfile.lock" }}
+          key: bundle-{{ arch }}-v6-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
             - .bundle
             - ~/.bundle
+            - ~/vault
       - restore_cache:
           keys:
             - android-{{ arch }}-v2-{{ checksum "build.gradle" }}
@@ -178,11 +179,9 @@ jobs:
           at: ~/uport-mobile
       - restore_cache:
           keys:
-            - bundle-{{ arch }}-v5-{{ checksum "Gemfile.lock" }}
-            - bundle-{{ arch }}-v5
+            - bundle-{{ arch }}-v6-{{ checksum "Gemfile.lock" }}
+            - bundle-{{ arch }}-v6
       - run: bundle install
-
-      # TODO: these should be part of the container
       - run: wget https://releases.hashicorp.com/vault/0.10.1/vault_0.10.1_linux_amd64.zip -O ~/vault.zip
       - run: unzip ~/vault.zip -d ~/vault/
 
