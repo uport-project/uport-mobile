@@ -3,7 +3,7 @@
   "version": "0.0.8",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start --config rn-cli.config.js",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
     "build-solidity-coder": "browserify node_modules/web3/lib/solidity/coder.js --s Coder | derequire > lib/browserified/coder.js",
     "build-bip39": "browserify node_modules/bip39/index.js --s BIP39 | derequire > lib/browserified/bip39.js",
     "build-mnid": "browserify node_modules/mnid/lib/index.js --s MNID | derequire > lib/browserified/mnid.js",
