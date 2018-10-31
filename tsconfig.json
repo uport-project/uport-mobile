@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+      "target": "es2015", 
+      "module": "es2015",
+      "importHelpers": true,
+      "lib": ["es2017"],
+      "jsx": "react-native",
+      "noEmit": true,
+      "strict": true,
+      "allowJs": true,
+      "allowSyntheticDefaultImports": true,
+      "moduleResolution": "node",
+      "baseUrl": ".",
+      "paths": {
+          "uPortMobile/*": ["./*"]
+      }
+    },
+    "types": ["jest"],
+    "exclude": [
+      "node_modules",
+    ],
+  }

@@ -16,7 +16,6 @@
 // along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-
 import { Navigation, ScreenVisibilityListener as RNNScreenVisibilityListener } from 'react-native-navigation'
 import requestQueue from './utilities/requestQueue'
 import { Provider } from 'react-redux'
@@ -25,30 +24,26 @@ import { registerScreens } from './screens'
 import { Platform, NativeModules } from 'react-native'
 
 import { handleURL } from './actions/requestActions'
-import { windowWidth } from 'uPortMobile/lib/styles/globalStyles'
-
 import { registerDeviceForNotifications } from 'uPortMobile/lib/actions/snsRegistrationActions'
 import { track, screen } from 'uPortMobile/lib/actions/metricActions'
-
-import { trafficAccidentClaim } from 'uPortMobile/lib/utilities/sampleClaims'
 
 registerScreens(store, Provider)
 
 // This method doesn't do much. I just want to ensure that this library is not optimized away
-export async function start () {
-  console.log('starting uport')
+export async function start() {
+  // console.log('starting uport')
 }
 
 // Actual initialization is done by startupSaga during initialization of `store`.
 // When DB is ready it calls one of these.
 export const screenVisibilityListener = new RNNScreenVisibilityListener({
-  didAppear: async (event) => {
+  didAppear: async (event: any) => {
     store.dispatch(screen(event.screen, event))
-  }
+  },
 })
 
 // Add GUI startup tasks here for already onboarded user
-export async function startMain () {
+export async function startMain(this: any) {
   Platform.OS === 'android' ? store.dispatch(registerDeviceForNotifications()) : null
   Navigation.startSingleScreenApp({
     screen: {
@@ -57,18 +52,18 @@ export async function startMain () {
       // navigatorButtons: {} // override the nav buttons for the screen, see "Adding buttons to the navigator" below (optional)
       navigatorStyle: {
         navBarTextFontFamily: 'Nunito Sans',
-        navBarHidden: true
-      } // override the navigator style for the screen, see "Styling the navigator" below (optional)
+        navBarHidden: true,
+      }, // override the navigator style for the screen, see "Styling the navigator" below (optional)
     },
     // passProps: {}, // simple serializable object that will pass as props to all top screens (optional)
-    animationType: 'none' // optional, add transition animation to root change: 'none', 'slide-down', 'fade'
+    animationType: 'none', // optional, add transition animation to root change: 'none', 'slide-down', 'fade'
   })
   this.listener = screenVisibilityListener.register()
-  requestQueue(url => store.dispatch(handleURL(url)))
+  requestQueue((url: string) => store.dispatch(handleURL(url)))
 }
 
 // Add GUI startup tasks here for onboarding new user
-export async function startOnboarding () {
+export async function startOnboarding() {
   let startupScreen = 'onboarding.start'
 
   if (NativeModules.NativeSignerModule && NativeModules.NativeSignerModule.hasSecureKeyguard) {
@@ -85,8 +80,8 @@ export async function startOnboarding () {
       navigatorStyle: {
         navBarHidden: true,
         navBarTextFontFamily: 'Nunito Sans',
-      } // override the navigator style for the screen, see "Styling the navigator" below (optional)
+      }, // override the navigator style for the screen, see "Styling the navigator" below (optional)
     },
-    animationType: 'slide-down' // optional, add transition animation to root change: 'none', 'slide-down', 'fade'
+    animationType: 'slide-down', // optional, add transition animation to root change: 'none', 'slide-down', 'fade'
   })
 }
