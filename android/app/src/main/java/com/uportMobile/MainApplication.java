@@ -42,6 +42,7 @@ import io.fabric.sdk.android.Fabric;
 import io.invertase.firebase.RNFirebasePackage;
 import io.invertase.firebase.analytics.RNFirebaseAnalyticsPackage;
 import io.invertase.firebase.config.RNFirebaseRemoteConfigPackage;
+import org.pgsqlite.SQLitePluginPackage;
 
 public class MainApplication extends NavigationApplication {
 
@@ -85,7 +86,8 @@ public class MainApplication extends NavigationApplication {
                 new MySNSPackage(),
                 new IntentLauncherPackage(),
                 new NativeSignerPackage(),
-                new RNFirebaseAnalyticsPackage()
+                new RNFirebaseAnalyticsPackage(),
+                new SQLitePluginPackage()
         );
     }
 
