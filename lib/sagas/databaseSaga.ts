@@ -36,14 +36,6 @@ export function * initializeSQLDatabase() {
 function * insertVc(action: any) {
   const vc = action.vc[0]
   db.transaction((tx) => {
-    console.log({aaa: [
-      vc.payload.iss,
-      vc.payload.sub,
-      'todo',
-      JSON.stringify(vc.payload),
-      vc.payload.iat,
-      vc.jwt
-    ]})
     tx.executeSql('INSERT INTO signed_data (iss, sub, type, value, iat, raw) values (?, ?, ?, ?, ?, ?)', [
       vc.payload.iss,
       vc.payload.sub,
