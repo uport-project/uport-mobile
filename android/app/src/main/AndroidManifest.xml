@@ -125,7 +125,7 @@
 
             </intent-filter>
 
-            <intent-filter>
+            <intent-filter tools:ignore="AppLinkUrlError">
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.EDIT" />
                 <category android:name="android.intent.category.DEFAULT" />
