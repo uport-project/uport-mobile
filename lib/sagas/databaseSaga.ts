@@ -25,8 +25,14 @@ const db = openDatabase({ name: 'uport.sqlite', location: 'default' }, () => {},
 export function * initializeSQLDatabase() {
 
   db.transaction((tx) => {
-    tx.executeSql('CREATE TABLE IF NOT EXISTS signed_data (iss, aud, sub, type, value, iat, raw, sourceId, sourceType, previous, context, internal)', [], (tx, results) => {
+    tx.executeSql('CREATE TABLE IF NOT EXISTS signed_data (iss, aud, sub, type, _value, iat, raw, sourceId, sourceType, previous, context, internal)', [], (tx, results) => {
       console.log({tx, results})
+    });
+    tx.executeSql("select a.sub, b.key, b.value from signed_data a, json_tree(_value) b where b.path = '$.claim';", [], (tx, results) => {
+      console.log({tx, results})
+      for (let x = 0; x < results.rows.length; x++) {
+        console.log('res: ', results.rows.item(x))
+      }
     });
   });
 
@@ -36,7 +42,7 @@ export function * initializeSQLDatabase() {
 function * insertVc(action: any) {
   const vc = action.vc[0]
   db.transaction((tx) => {
-    tx.executeSql('INSERT INTO signed_data (iss, sub, type, value, iat, raw) values (?, ?, ?, ?, ?, ?)', [
+    tx.executeSql('INSERT INTO signed_data (iss, sub, type, _value, iat, raw) values (?, ?, ?, ?, ?, ?)', [
       vc.payload.iss,
       vc.payload.sub,
       'todo',
