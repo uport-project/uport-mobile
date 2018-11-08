@@ -148,6 +148,7 @@ ShallowWrapper {
               </TouchableOpacity>
             </Component>
             <PrimaryButton
+              disabled={false}
               onPress={[Function]}
               style={
                 Object {
@@ -317,6 +318,7 @@ ShallowWrapper {
               </TouchableOpacity>
             </Component>
             <PrimaryButton
+              disabled={false}
               onPress={[Function]}
               style={
                 Object {
@@ -416,6 +418,7 @@ ShallowWrapper {
               null,
               null,
               <PrimaryButton
+                disabled={false}
                 onPress={[Function]}
                 style={
                   Object {
@@ -603,6 +606,7 @@ ShallowWrapper {
                 >
                    CREATE NEW ACCOUNT 
                 </Text>,
+                "disabled": false,
                 "onPress": [Function],
                 "style": Object {
                   "marginBottom": 30,
@@ -744,6 +748,7 @@ ShallowWrapper {
                 </TouchableOpacity>
               </Component>
               <PrimaryButton
+                disabled={false}
                 onPress={[Function]}
                 style={
                   Object {
@@ -913,6 +918,7 @@ ShallowWrapper {
                 </TouchableOpacity>
               </Component>
               <PrimaryButton
+                disabled={false}
                 onPress={[Function]}
                 style={
                   Object {
@@ -1012,6 +1018,7 @@ ShallowWrapper {
                 null,
                 null,
                 <PrimaryButton
+                  disabled={false}
                   onPress={[Function]}
                   style={
                     Object {
@@ -1199,6 +1206,7 @@ ShallowWrapper {
                   >
                      CREATE NEW ACCOUNT 
                   </Text>,
+                  "disabled": false,
                   "onPress": [Function],
                   "style": Object {
                     "marginBottom": 30,
