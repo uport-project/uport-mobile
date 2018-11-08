@@ -18,9 +18,9 @@
 import { delay } from 'redux-saga'
 import { Alert, NativeModules } from 'react-native'
 import { takeEvery, call, put, select, all, spawn } from 'redux-saga/effects'
-import { openDatabase } from 'react-native-sqlite-storage'
+import { openDatabase } from 'react-native-sqlcipher-storage'
 import { ADD_VC } from '../constants/VcActionTypes'
-const db = openDatabase({ name: 'uport.sqlite', location: 'default' }, () => {}, () => {})
+const db = openDatabase({ name: 'uport.sqlite', location: 'default', "key": "password" }, () => {}, () => {})
 
 export function * initializeSQLDatabase() {
 

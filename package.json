@@ -106,7 +106,7 @@
     "react-native-permissions": "^1.0.6",
     "react-native-qrcode": "^0.2.6",
     "react-native-randombytes": "^3.0.0",
-    "react-native-sqlite-storage": "^3.3.7",
+    "react-native-sqlcipher-storage": "https://github.com/axsy-dev/react-native-sqlcipher-storage",
     "react-native-svg": "5.5.1",
     "react-native-touch-id": "^3.0.0",
     "react-native-vector-icons": "^4.5.0",
