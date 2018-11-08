@@ -1,5 +1,13 @@
 # Change Log
 
+## [v384](https://github.com/uport-project/uport-mobile/tree/v384) (2018-11-08)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v383...v384)
+
+**Merged pull requests:**
+
+- \[Fixes \#161808467\] Disabling "Create new account" while push is regis… [\#10](https://github.com/uport-project/uport-mobile/pull/10) ([simonas-notcat](https://github.com/simonas-notcat))
+- Support for \*.uPort file type [\#6](https://github.com/uport-project/uport-mobile/pull/6) ([simonas-notcat](https://github.com/simonas-notcat))
+
 ## [v383](https://github.com/uport-project/uport-mobile/tree/v383) (2018-11-02)
 **Merged pull requests:**
 
