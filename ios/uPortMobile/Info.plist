@@ -2,10 +2,27 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>This app does not require location usage.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeIconFiles</key>
+			<array>
+				<string>file-icon.png</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>uPort Signed Data</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSHandlerRank</key>
+			<string>Owner</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>me.uport.extension</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -35,7 +52,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>383</string>
+	<string>384</string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
@@ -94,6 +111,8 @@
 	<string>Required to scan QR codes and for document and facial capture.</string>
 	<key>NSFaceIDUsageDescription</key>
 	<string>uPort uses Face ID to confirm transactions.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This app does not require location usage.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>This app does not require location usage.</string>
 	<key>NSMainNibFile</key>
@@ -149,5 +168,25 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.data</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>uPort Signed Data</string>
+			<key>UTTypeIdentifier</key>
+			<string>me.uport.extension</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<string>uPort</string>
+				<key>public.mime-type</key>
+				<string>application/octet-stream</string>
+			</dict>
+		</dict>
+	</array>
 </dict>
 </plist>
