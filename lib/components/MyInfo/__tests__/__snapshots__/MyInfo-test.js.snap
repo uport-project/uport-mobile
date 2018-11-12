@@ -223,16 +223,8 @@ exports[`MyInformation Component renders info correctly 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -246,8 +238,6 @@ exports[`MyInformation Component renders info correctly 1`] = `
           "width": 44,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Icon
         color="rgba(92,80,202,1)"
@@ -256,16 +246,8 @@ exports[`MyInformation Component renders info correctly 1`] = `
       />
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -279,8 +261,6 @@ exports[`MyInformation Component renders info correctly 1`] = `
           "width": 44,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Icon
         color="rgba(92,80,202,1)"

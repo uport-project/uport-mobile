@@ -2,49 +2,46 @@
 
 exports[`renders Fab 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
-  accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
-  isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
   style={
     Object {
-      "backgroundColor": "rgba(92,80,202,1)",
-      "borderRadius": 28,
-      "bottom": 24,
-      "elevation": 10,
-      "height": 56,
-      "opacity": 1,
-      "padding": 16,
-      "position": "absolute",
-      "right": 347,
-      "shadowColor": "rgb(0,0,0)",
-      "shadowOffset": Object {
-        "height": 2,
-        "width": 1,
-      },
-      "shadowOpacity": 0.3,
-      "width": 56,
+      "alignSelf": "center",
+      "flex": 0,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
-  <Icon
-    color="rgba(216,216,216,1)"
-    name="qrcode-scan"
-    size={24}
-  />
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "rgba(92,80,202,1)",
+        "borderRadius": 28,
+        "bottom": 24,
+        "elevation": 10,
+        "height": 56,
+        "opacity": 1,
+        "padding": 16,
+        "shadowColor": "rgb(0,0,0)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 1,
+        },
+        "shadowOpacity": 0.3,
+        "width": 56,
+      }
+    }
+  >
+    <Icon
+      color="rgba(216,216,216,1)"
+      name="qrcode-scan"
+      size={24}
+    />
+  </View>
 </View>
 `;

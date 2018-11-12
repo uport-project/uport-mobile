@@ -135,7 +135,6 @@ exports[`renders Onboarding Security Block screen 1`] = `
     enabled={true}
     keyboardVerticalOffset={0}
     onLayout={[Function]}
-    style={undefined}
   >
     <View
       style={
@@ -166,15 +165,8 @@ exports[`renders Onboarding Security Block screen 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -204,8 +196,6 @@ exports[`renders Onboarding Security Block screen 1`] = `
                 ],
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}

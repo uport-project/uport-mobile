@@ -7,14 +7,11 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <AccountInfo
     address="0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a"
     balance={0}
-    explorerUrl={undefined}
-    hexaddress={undefined}
     navigator={
       FakeNavigator {
         "event": [Function],
       }
     }
-    network={undefined}
     refreshBalance={[Function]}
     usdBalance={0}
     working={false}
@@ -32,23 +29,34 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "children": <AccountTile
-        accountProfile={undefined}
         balance={0}
         buttonIcon="plus-square"
-        network={undefined}
         tileButton={[Function]}
         usdBalance={0}
       />,
-      "contentContainerStyle": Object {
-        "alignItems": "center",
-        "backgroundColor": "#FFFFFF",
-        "flex": 1,
-        "padding": 30,
-      },
+      "contentContainerStyle": Array [
+        Object {
+          "backgroundColor": "rgba(246,247,248,1)",
+          "flex": 0,
+        },
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "padding": 30,
+        },
+      ],
       "refreshControl": <RefreshControlMock
         onRefresh={[Function]}
         refreshing={false}
       />,
+      "style": Array [
+        Object {
+          "borderBottomColor": "rgba(216,216,216,1)",
+          "borderBottomWidth": 1,
+        },
+        Object {
+          "flex": 1,
+        },
+      ],
     },
     "ref": null,
     "rendered": Object {
@@ -72,26 +80,42 @@ ShallowWrapper {
         Array [
           Object {
             "children": <AccountTile
-              accountProfile={undefined}
               balance={0}
               buttonIcon="plus-square"
-              network={undefined}
               tileButton={[Function]}
-              usdBalance={undefined}
             />,
-            "contentContainerStyle": Object {
-              "alignItems": "center",
-              "backgroundColor": "#FFFFFF",
-              "flex": 1,
-              "padding": 30,
-            },
+            "contentContainerStyle": Array [
+              Object {
+                "backgroundColor": "rgba(246,247,248,1)",
+                "flex": 0,
+              },
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "padding": 30,
+              },
+            ],
             "refreshControl": <RefreshControlMock
               onRefresh={[Function]}
               refreshing={false}
             />,
+            "style": Array [
+              Object {
+                "borderBottomColor": "rgba(216,216,216,1)",
+                "borderBottomWidth": 1,
+              },
+              Object {
+                "flex": 1,
+              },
+            ],
           },
           Object {},
         ],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
       ],
     },
   },
@@ -102,23 +126,34 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "children": <AccountTile
-          accountProfile={undefined}
           balance={0}
           buttonIcon="plus-square"
-          network={undefined}
           tileButton={[Function]}
           usdBalance={0}
         />,
-        "contentContainerStyle": Object {
-          "alignItems": "center",
-          "backgroundColor": "#FFFFFF",
-          "flex": 1,
-          "padding": 30,
-        },
+        "contentContainerStyle": Array [
+          Object {
+            "backgroundColor": "rgba(246,247,248,1)",
+            "flex": 0,
+          },
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "padding": 30,
+          },
+        ],
         "refreshControl": <RefreshControlMock
           onRefresh={[Function]}
           refreshing={false}
         />,
+        "style": Array [
+          Object {
+            "borderBottomColor": "rgba(216,216,216,1)",
+            "borderBottomWidth": 1,
+          },
+          Object {
+            "flex": 1,
+          },
+        ],
       },
       "ref": null,
       "rendered": Object {
@@ -142,26 +177,42 @@ ShallowWrapper {
           Array [
             Object {
               "children": <AccountTile
-                accountProfile={undefined}
                 balance={0}
                 buttonIcon="plus-square"
-                network={undefined}
                 tileButton={[Function]}
-                usdBalance={undefined}
               />,
-              "contentContainerStyle": Object {
-                "alignItems": "center",
-                "backgroundColor": "#FFFFFF",
-                "flex": 1,
-                "padding": 30,
-              },
+              "contentContainerStyle": Array [
+                Object {
+                  "backgroundColor": "rgba(246,247,248,1)",
+                  "flex": 0,
+                },
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "padding": 30,
+                },
+              ],
               "refreshControl": <RefreshControlMock
                 onRefresh={[Function]}
                 refreshing={false}
               />,
+              "style": Array [
+                Object {
+                  "borderBottomColor": "rgba(216,216,216,1)",
+                  "borderBottomWidth": 1,
+                },
+                Object {
+                  "flex": 1,
+                },
+              ],
             },
             Object {},
           ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
         ],
       },
     },
@@ -189,18 +240,33 @@ ShallowWrapper {
 exports[`AccountInfo Component renders info correctly 1`] = `
 <RCTScrollView
   contentContainerStyle={
-    Object {
-      "alignItems": "center",
-      "backgroundColor": "#FFFFFF",
-      "flex": 1,
-      "padding": 30,
-    }
+    Array [
+      Object {
+        "backgroundColor": "rgba(246,247,248,1)",
+        "flex": 0,
+      },
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "padding": 30,
+      },
+    ]
   }
   refreshControl={
     <RefreshControlMock
       onRefresh={[Function]}
       refreshing={false}
     />
+  }
+  style={
+    Array [
+      Object {
+        "borderBottomColor": "rgba(216,216,216,1)",
+        "borderBottomWidth": 1,
+      },
+      Object {
+        "flex": 1,
+      },
+    ]
   }
 >
   <RCTRefreshControl />
@@ -209,18 +275,18 @@ exports[`AccountInfo Component renders info correctly 1`] = `
       elevation={10}
       style={
         Object {
-          "alignSelf": "center",
+          "alignSelf": "stretch",
           "backgroundColor": "white",
           "borderRadius": 16,
           "borderTopWidth": 0,
           "elevation": 10,
           "flexDirection": "column",
-          "height": 320.15999999999997,
           "marginTop": 5,
           "overflow": "visible",
-          "paddingLeft": 24.75,
-          "paddingRight": 24.75,
-          "paddingTop": 44.022000000000006,
+          "paddingBottom": 25,
+          "paddingLeft": 30,
+          "paddingRight": 30,
+          "paddingTop": 25,
           "shadowColor": "rgb(33, 21, 100)",
           "shadowOffset": Object {
             "height": 2,
@@ -228,7 +294,6 @@ exports[`AccountInfo Component renders info correctly 1`] = `
           },
           "shadowOpacity": 0.1,
           "shadowRadius": 16,
-          "width": 697.5,
           "zIndex": 10,
         }
       }
@@ -237,7 +302,6 @@ exports[`AccountInfo Component renders info correctly 1`] = `
         style={
           Object {
             "flexDirection": "row",
-            "height": 133.4,
           }
         }
       >
@@ -253,8 +317,8 @@ exports[`AccountInfo Component renders info correctly 1`] = `
                 Object {
                   "backgroundColor": "white",
                   "borderRadius": 3,
-                  "height": 120,
-                  "width": 120,
+                  "height": 70,
+                  "width": 70,
                 },
               ]
             }
@@ -270,8 +334,8 @@ exports[`AccountInfo Component renders info correctly 1`] = `
                 Array [
                   Object {
                     "borderRadius": 3,
-                    "height": 120,
-                    "width": 120,
+                    "height": 70,
+                    "width": 70,
                   },
                   Object {
                     "position": "absolute",
@@ -279,8 +343,8 @@ exports[`AccountInfo Component renders info correctly 1`] = `
                   Array [
                     Object {
                       "borderRadius": 3,
-                      "height": 120,
-                      "width": 120,
+                      "height": 70,
+                      "width": 70,
                     },
                     undefined,
                   ],
@@ -294,7 +358,7 @@ exports[`AccountInfo Component renders info correctly 1`] = `
             Object {
               "alignItems": "flex-end",
               "flex": 1,
-              "paddingTop": 24.011999999999997,
+              "paddingTop": 15,
             }
           }
         >
@@ -304,7 +368,7 @@ exports[`AccountInfo Component renders info correctly 1`] = `
             ellipsizeMode="tail"
             style={
               Object {
-                "fontSize": 52.50000000000001,
+                "fontSize": 24,
               }
             }
           >
@@ -329,8 +393,8 @@ exports[`AccountInfo Component renders info correctly 1`] = `
             "alignItems": "center",
             "flex": 0,
             "flexDirection": "row",
-            "height": 133.4,
             "justifyContent": "space-between",
+            "marginTop": 25,
           }
         }
       >
@@ -341,7 +405,7 @@ exports[`AccountInfo Component renders info correctly 1`] = `
             ellipsizeMode="tail"
             style={
               Object {
-                "fontSize": 37.5,
+                "fontSize": 14,
               }
             }
           >
@@ -351,22 +415,19 @@ exports[`AccountInfo Component renders info correctly 1`] = `
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(92,80,202,1)",
+                "fontSize": 14,
+              }
+            }
           >
-             
              
           </Text>
         </View>
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -390,8 +451,6 @@ exports[`AccountInfo Component renders info correctly 1`] = `
               "shadowRadius": 12,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Text
             accessible={true}
@@ -401,7 +460,7 @@ exports[`AccountInfo Component renders info correctly 1`] = `
               Array [
                 Object {
                   "color": "rgba(0,0,0,0.7)",
-                  "fontSize": 26.68,
+                  "fontSize": 14,
                 },
                 undefined,
                 Object {
@@ -420,7 +479,7 @@ exports[`AccountInfo Component renders info correctly 1`] = `
             ellipsizeMode="tail"
             style={
               Object {
-                "fontSize": 22.5,
+                "fontSize": 14,
                 "marginLeft": 8,
               }
             }
