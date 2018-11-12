@@ -1,5 +1,12 @@
 # Change Log
 
+## [v385](https://github.com/uport-project/uport-mobile/tree/v385) (2018-11-12)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v384...v385)
+
+**Merged pull requests:**
+
+- Adding pull to refresh on account funding screen [\#13](https://github.com/uport-project/uport-mobile/pull/13) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v384](https://github.com/uport-project/uport-mobile/tree/v384) (2018-11-08)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v383...v384)
 
