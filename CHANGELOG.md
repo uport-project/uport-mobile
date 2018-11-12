@@ -1,5 +1,12 @@
 # Change Log
 
+## [v386](https://github.com/uport-project/uport-mobile/tree/v386) (2018-11-12)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v385...v386)
+
+**Merged pull requests:**
+
+- Https did resolver, URL in request cards [\#14](https://github.com/uport-project/uport-mobile/pull/14) ([simonas-notcat](https://github.com/simonas-notcat))
+
 ## [v385](https://github.com/uport-project/uport-mobile/tree/v385) (2018-11-12)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v384...v385)
 
