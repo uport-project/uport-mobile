@@ -193,6 +193,7 @@ ShallowWrapper {
                 }
               }
             />,
+            null,
             <InteractionStats
               actionText="interacted"
               counterParty={null}
@@ -225,6 +226,7 @@ ShallowWrapper {
             "rendered": null,
             "type": [Function],
           },
+          null,
           Object {
             "instance": null,
             "key": undefined,
@@ -793,6 +795,7 @@ ShallowWrapper {
                   }
                 }
               />,
+              null,
               <InteractionStats
                 actionText="interacted"
                 counterParty={null}
@@ -825,6 +828,7 @@ ShallowWrapper {
               "rendered": null,
               "type": [Function],
             },
+            null,
             Object {
               "instance": null,
               "key": undefined,

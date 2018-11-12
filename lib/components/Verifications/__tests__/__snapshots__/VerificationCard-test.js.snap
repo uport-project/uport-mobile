@@ -11,45 +11,52 @@ exports[`VerificationCard renders VerificationCard 1`] = `
   <View
     style={
       Object {
-        "alignItems": "stretch",
         "backgroundColor": "#FFFFFF",
-        "flex": 0,
-        "flexDirection": "row",
-        "justifyContent": "space-between",
         "padding": 22,
       }
     }
   >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+    <View
       style={
         Object {
-          "color": "rgba(74,74,74,1)",
-          "fontFamily": "NunitoSans-Light",
-          "fontSize": 14,
-          "lineHeight": 19,
+          "alignItems": "stretch",
+          "flex": 0,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
         }
       }
     >
-      from: 
       <Text
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
         style={
           Object {
-            "fontWeight": "600",
+            "color": "rgba(74,74,74,1)",
+            "fontFamily": "NunitoSans-Light",
+            "fontSize": 14,
+            "lineHeight": 19,
           }
         }
       >
-        testName
+        from: 
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "fontWeight": "600",
+            }
+          }
+        >
+          testName
+        </Text>
       </Text>
-    </Text>
-    <ExpirationItem
-      d={1482354617248}
-    />
+      <ExpirationItem
+        d={1482354617248}
+      />
+    </View>
   </View>
   <View
     style={
@@ -257,43 +264,52 @@ exports[`VerificationCard renders VerificationCard with no issuer 1`] = `
   <View
     style={
       Object {
-        "alignItems": "stretch",
         "backgroundColor": "#FFFFFF",
-        "flex": 0,
-        "flexDirection": "row",
-        "justifyContent": "space-between",
         "padding": 22,
       }
     }
   >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+    <View
       style={
         Object {
-          "color": "rgba(74,74,74,1)",
-          "fontFamily": "NunitoSans-Light",
-          "fontSize": 14,
-          "lineHeight": 19,
+          "alignItems": "stretch",
+          "flex": 0,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
         }
       }
     >
-      from: 
       <Text
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
         style={
           Object {
-            "fontWeight": "600",
+            "color": "rgba(74,74,74,1)",
+            "fontFamily": "NunitoSans-Light",
+            "fontSize": 14,
+            "lineHeight": 19,
           }
         }
+      >
+        from: 
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "fontWeight": "600",
+            }
+          }
+        >
+          0x88647b5a94cd83
+        </Text>
+      </Text>
+      <ExpirationItem
+        d={1482354617248}
       />
-    </Text>
-    <ExpirationItem
-      d={1482354617248}
-    />
+    </View>
   </View>
   <View
     style={
@@ -501,45 +517,52 @@ exports[`VerificationCard renders VerificationCard without logo 1`] = `
   <View
     style={
       Object {
-        "alignItems": "stretch",
         "backgroundColor": "#FFFFFF",
-        "flex": 0,
-        "flexDirection": "row",
-        "justifyContent": "space-between",
         "padding": 22,
       }
     }
   >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+    <View
       style={
         Object {
-          "color": "rgba(74,74,74,1)",
-          "fontFamily": "NunitoSans-Light",
-          "fontSize": 14,
-          "lineHeight": 19,
+          "alignItems": "stretch",
+          "flex": 0,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
         }
       }
     >
-      from: 
       <Text
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
         style={
           Object {
-            "fontWeight": "600",
+            "color": "rgba(74,74,74,1)",
+            "fontFamily": "NunitoSans-Light",
+            "fontSize": 14,
+            "lineHeight": 19,
           }
         }
       >
-        testName
+        from: 
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "fontWeight": "600",
+            }
+          }
+        >
+          testName
+        </Text>
       </Text>
-    </Text>
-    <ExpirationItem
-      d={1482354617248}
-    />
+      <ExpirationItem
+        d={1482354617248}
+      />
+    </View>
   </View>
   <View
     style={
@@ -744,7 +767,12 @@ ShallowWrapper {
     address="0x88647b5a94cd8347c8f76c7b79c85bbfbf0e13a9"
     authorizeRequest={[Function]}
     cancelRequest={[Function]}
-    issuer={Object {}}
+    issuer={
+      Object {
+        "address": "0x88647b5a94cd8347c8f76c7b79c85bbfbf0e13a9",
+        "name": "0x88647b5a94cd...3a9",
+      }
+    }
     navigator={
       FakeNavigator {
         "event": [Function],
@@ -780,43 +808,52 @@ ShallowWrapper {
         <Component
           style={
             Object {
-              "alignItems": "stretch",
               "backgroundColor": "#FFFFFF",
-              "flex": 0,
-              "flexDirection": "row",
-              "justifyContent": "space-between",
               "padding": 22,
             }
           }
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
+          <Component
             style={
               Object {
-                "color": "rgba(74,74,74,1)",
-                "fontFamily": "NunitoSans-Light",
-                "fontSize": 14,
-                "lineHeight": 19,
+                "alignItems": "stretch",
+                "flex": 0,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
               }
             }
           >
-            from: 
             <Text
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
               style={
                 Object {
-                  "fontWeight": "600",
+                  "color": "rgba(74,74,74,1)",
+                  "fontFamily": "NunitoSans-Light",
+                  "fontSize": 14,
+                  "lineHeight": 19,
                 }
               }
+            >
+              from: 
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                0x88647b5a94cd...3a9
+              </Text>
+            </Text>
+            <ExpirationItem
+              d={1482354617248}
             />
-          </Text>
-          <ExpirationItem
-            d={1482354617248}
-          />
+          </Component>
         </Component>,
         <Component
           style={
@@ -853,41 +890,51 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": Array [
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+            <Component
               style={
                 Object {
-                  "color": "rgba(74,74,74,1)",
-                  "fontFamily": "NunitoSans-Light",
-                  "fontSize": 14,
-                  "lineHeight": 19,
+                  "alignItems": "stretch",
+                  "flex": 0,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
                 }
               }
             >
-              from: 
               <Text
                 accessible={true}
                 allowFontScaling={true}
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "fontWeight": "600",
+                    "color": "rgba(74,74,74,1)",
+                    "fontFamily": "NunitoSans-Light",
+                    "fontSize": 14,
+                    "lineHeight": 19,
                   }
                 }
+              >
+                from: 
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "fontWeight": "600",
+                    }
+                  }
+                >
+                  0x88647b5a94cd...3a9
+                </Text>
+              </Text>
+              <ExpirationItem
+                d={1482354617248}
               />
-            </Text>,
-            <ExpirationItem
-              d={1482354617248}
-            />,
+            </Component>,
+            false,
           ],
           "style": Object {
-            "alignItems": "stretch",
             "backgroundColor": "#FFFFFF",
-            "flex": 0,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
             "padding": 22,
           },
         },
@@ -898,32 +945,47 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "accessible": true,
-              "allowFontScaling": true,
               "children": Array [
-                "from: ",
                 <Text
                   accessible={true}
                   allowFontScaling={true}
                   ellipsizeMode="tail"
                   style={
                     Object {
-                      "fontWeight": "600",
+                      "color": "rgba(74,74,74,1)",
+                      "fontFamily": "NunitoSans-Light",
+                      "fontSize": 14,
+                      "lineHeight": 19,
                     }
                   }
+                >
+                  from: 
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "fontWeight": "600",
+                      }
+                    }
+                  >
+                    0x88647b5a94cd...3a9
+                  </Text>
+                </Text>,
+                <ExpirationItem
+                  d={1482354617248}
                 />,
               ],
-              "ellipsizeMode": "tail",
               "style": Object {
-                "color": "rgba(74,74,74,1)",
-                "fontFamily": "NunitoSans-Light",
-                "fontSize": 14,
-                "lineHeight": 19,
+                "alignItems": "stretch",
+                "flex": 0,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
               },
             },
             "ref": null,
             "rendered": Array [
-              "from: ",
               Object {
                 "instance": null,
                 "key": undefined,
@@ -931,30 +993,67 @@ ShallowWrapper {
                 "props": Object {
                   "accessible": true,
                   "allowFontScaling": true,
-                  "children": undefined,
+                  "children": Array [
+                    "from: ",
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "fontWeight": "600",
+                        }
+                      }
+                    >
+                      0x88647b5a94cd...3a9
+                    </Text>,
+                  ],
                   "ellipsizeMode": "tail",
                   "style": Object {
-                    "fontWeight": "600",
+                    "color": "rgba(74,74,74,1)",
+                    "fontFamily": "NunitoSans-Light",
+                    "fontSize": 14,
+                    "lineHeight": 19,
                   },
                 },
                 "ref": null,
-                "rendered": null,
+                "rendered": Array [
+                  "from: ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "accessible": true,
+                      "allowFontScaling": true,
+                      "children": "0x88647b5a94cd...3a9",
+                      "ellipsizeMode": "tail",
+                      "style": Object {
+                        "fontWeight": "600",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": "0x88647b5a94cd...3a9",
+                    "type": [Function],
+                  },
+                ],
                 "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "d": 1482354617248,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "ExpirationItem",
               },
             ],
             "type": [Function],
           },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "d": 1482354617248,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "ExpirationItem",
-          },
+          false,
         ],
         "type": [Function],
       },
@@ -1013,43 +1112,52 @@ ShallowWrapper {
           <Component
             style={
               Object {
-                "alignItems": "stretch",
                 "backgroundColor": "#FFFFFF",
-                "flex": 0,
-                "flexDirection": "row",
-                "justifyContent": "space-between",
                 "padding": 22,
               }
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+            <Component
               style={
                 Object {
-                  "color": "rgba(74,74,74,1)",
-                  "fontFamily": "NunitoSans-Light",
-                  "fontSize": 14,
-                  "lineHeight": 19,
+                  "alignItems": "stretch",
+                  "flex": 0,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
                 }
               }
             >
-              from: 
               <Text
                 accessible={true}
                 allowFontScaling={true}
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "fontWeight": "600",
+                    "color": "rgba(74,74,74,1)",
+                    "fontFamily": "NunitoSans-Light",
+                    "fontSize": 14,
+                    "lineHeight": 19,
                   }
                 }
+              >
+                from: 
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "fontWeight": "600",
+                    }
+                  }
+                >
+                  0x88647b5a94cd...3a9
+                </Text>
+              </Text>
+              <ExpirationItem
+                d={1482354617248}
               />
-            </Text>
-            <ExpirationItem
-              d={1482354617248}
-            />
+            </Component>
           </Component>,
           <Component
             style={
@@ -1086,41 +1194,51 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": Array [
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
+              <Component
                 style={
                   Object {
-                    "color": "rgba(74,74,74,1)",
-                    "fontFamily": "NunitoSans-Light",
-                    "fontSize": 14,
-                    "lineHeight": 19,
+                    "alignItems": "stretch",
+                    "flex": 0,
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
                   }
                 }
               >
-                from: 
                 <Text
                   accessible={true}
                   allowFontScaling={true}
                   ellipsizeMode="tail"
                   style={
                     Object {
-                      "fontWeight": "600",
+                      "color": "rgba(74,74,74,1)",
+                      "fontFamily": "NunitoSans-Light",
+                      "fontSize": 14,
+                      "lineHeight": 19,
                     }
                   }
+                >
+                  from: 
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "fontWeight": "600",
+                      }
+                    }
+                  >
+                    0x88647b5a94cd...3a9
+                  </Text>
+                </Text>
+                <ExpirationItem
+                  d={1482354617248}
                 />
-              </Text>,
-              <ExpirationItem
-                d={1482354617248}
-              />,
+              </Component>,
+              false,
             ],
             "style": Object {
-              "alignItems": "stretch",
               "backgroundColor": "#FFFFFF",
-              "flex": 0,
-              "flexDirection": "row",
-              "justifyContent": "space-between",
               "padding": 22,
             },
           },
@@ -1131,32 +1249,47 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "accessible": true,
-                "allowFontScaling": true,
                 "children": Array [
-                  "from: ",
                   <Text
                     accessible={true}
                     allowFontScaling={true}
                     ellipsizeMode="tail"
                     style={
                       Object {
-                        "fontWeight": "600",
+                        "color": "rgba(74,74,74,1)",
+                        "fontFamily": "NunitoSans-Light",
+                        "fontSize": 14,
+                        "lineHeight": 19,
                       }
                     }
+                  >
+                    from: 
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "fontWeight": "600",
+                        }
+                      }
+                    >
+                      0x88647b5a94cd...3a9
+                    </Text>
+                  </Text>,
+                  <ExpirationItem
+                    d={1482354617248}
                   />,
                 ],
-                "ellipsizeMode": "tail",
                 "style": Object {
-                  "color": "rgba(74,74,74,1)",
-                  "fontFamily": "NunitoSans-Light",
-                  "fontSize": 14,
-                  "lineHeight": 19,
+                  "alignItems": "stretch",
+                  "flex": 0,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
                 },
               },
               "ref": null,
               "rendered": Array [
-                "from: ",
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -1164,30 +1297,67 @@ ShallowWrapper {
                   "props": Object {
                     "accessible": true,
                     "allowFontScaling": true,
-                    "children": undefined,
+                    "children": Array [
+                      "from: ",
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "fontWeight": "600",
+                          }
+                        }
+                      >
+                        0x88647b5a94cd...3a9
+                      </Text>,
+                    ],
                     "ellipsizeMode": "tail",
                     "style": Object {
-                      "fontWeight": "600",
+                      "color": "rgba(74,74,74,1)",
+                      "fontFamily": "NunitoSans-Light",
+                      "fontSize": 14,
+                      "lineHeight": 19,
                     },
                   },
                   "ref": null,
-                  "rendered": null,
+                  "rendered": Array [
+                    "from: ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "accessible": true,
+                        "allowFontScaling": true,
+                        "children": "0x88647b5a94cd...3a9",
+                        "ellipsizeMode": "tail",
+                        "style": Object {
+                          "fontWeight": "600",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": "0x88647b5a94cd...3a9",
+                      "type": [Function],
+                    },
+                  ],
                   "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "d": 1482354617248,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "ExpirationItem",
                 },
               ],
               "type": [Function],
             },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "d": 1482354617248,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "ExpirationItem",
-            },
+            false,
           ],
           "type": [Function],
         },
@@ -1268,45 +1438,52 @@ exports[`VerificationCard renders complex VerificationCard 1`] = `
   <View
     style={
       Object {
-        "alignItems": "stretch",
         "backgroundColor": "#FFFFFF",
-        "flex": 0,
-        "flexDirection": "row",
-        "justifyContent": "space-between",
         "padding": 22,
       }
     }
   >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+    <View
       style={
         Object {
-          "color": "rgba(74,74,74,1)",
-          "fontFamily": "NunitoSans-Light",
-          "fontSize": 14,
-          "lineHeight": 19,
+          "alignItems": "stretch",
+          "flex": 0,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
         }
       }
     >
-      from: 
       <Text
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
         style={
           Object {
-            "fontWeight": "600",
+            "color": "rgba(74,74,74,1)",
+            "fontFamily": "NunitoSans-Light",
+            "fontSize": 14,
+            "lineHeight": 19,
           }
         }
       >
-        testName
+        from: 
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "fontWeight": "600",
+            }
+          }
+        >
+          testName
+        </Text>
       </Text>
-    </Text>
-    <ExpirationItem
-      d={1482354617248}
-    />
+      <ExpirationItem
+        d={1482354617248}
+      />
+    </View>
   </View>
   <View
     style={
