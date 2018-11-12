@@ -50,43 +50,50 @@ ShallowWrapper {
         <Component
           style={
             Object {
-              "alignItems": "stretch",
               "backgroundColor": "#FFFFFF",
-              "flex": 0,
-              "flexDirection": "row",
-              "justifyContent": "space-between",
               "padding": 22,
             }
           }
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
+          <Component
             style={
               Object {
-                "color": "rgba(74,74,74,1)",
-                "fontFamily": "NunitoSans-Light",
-                "fontSize": 14,
-                "lineHeight": 19,
+                "alignItems": "stretch",
+                "flex": 0,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
               }
             }
           >
-            from: 
             <Text
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
               style={
                 Object {
-                  "fontWeight": "600",
+                  "color": "rgba(74,74,74,1)",
+                  "fontFamily": "NunitoSans-Light",
+                  "fontSize": 14,
+                  "lineHeight": 19,
                 }
               }
+            >
+              from: 
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "fontWeight": "600",
+                  }
+                }
+              />
+            </Text>
+            <ExpirationItem
+              d={undefined}
             />
-          </Text>
-          <ExpirationItem
-            d={undefined}
-          />
+          </Component>
         </Component>,
         <Component
           style={
@@ -128,41 +135,49 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": Array [
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+            <Component
               style={
                 Object {
-                  "color": "rgba(74,74,74,1)",
-                  "fontFamily": "NunitoSans-Light",
-                  "fontSize": 14,
-                  "lineHeight": 19,
+                  "alignItems": "stretch",
+                  "flex": 0,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
                 }
               }
             >
-              from: 
               <Text
                 accessible={true}
                 allowFontScaling={true}
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "fontWeight": "600",
+                    "color": "rgba(74,74,74,1)",
+                    "fontFamily": "NunitoSans-Light",
+                    "fontSize": 14,
+                    "lineHeight": 19,
                   }
                 }
+              >
+                from: 
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "fontWeight": "600",
+                    }
+                  }
+                />
+              </Text>
+              <ExpirationItem
+                d={undefined}
               />
-            </Text>,
-            <ExpirationItem
-              d={undefined}
-            />,
+            </Component>,
+            false,
           ],
           "style": Object {
-            "alignItems": "stretch",
             "backgroundColor": "#FFFFFF",
-            "flex": 0,
-            "flexDirection": "row",
-            "justifyContent": "space-between",
             "padding": 22,
           },
         },
@@ -173,32 +188,45 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "accessible": true,
-              "allowFontScaling": true,
               "children": Array [
-                "from: ",
                 <Text
                   accessible={true}
                   allowFontScaling={true}
                   ellipsizeMode="tail"
                   style={
                     Object {
-                      "fontWeight": "600",
+                      "color": "rgba(74,74,74,1)",
+                      "fontFamily": "NunitoSans-Light",
+                      "fontSize": 14,
+                      "lineHeight": 19,
                     }
                   }
+                >
+                  from: 
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "fontWeight": "600",
+                      }
+                    }
+                  />
+                </Text>,
+                <ExpirationItem
+                  d={undefined}
                 />,
               ],
-              "ellipsizeMode": "tail",
               "style": Object {
-                "color": "rgba(74,74,74,1)",
-                "fontFamily": "NunitoSans-Light",
-                "fontSize": 14,
-                "lineHeight": 19,
+                "alignItems": "stretch",
+                "flex": 0,
+                "flexDirection": "row",
+                "justifyContent": "space-between",
               },
             },
             "ref": null,
             "rendered": Array [
-              "from: ",
               Object {
                 "instance": null,
                 "key": undefined,
@@ -206,11 +234,56 @@ ShallowWrapper {
                 "props": Object {
                   "accessible": true,
                   "allowFontScaling": true,
-                  "children": undefined,
+                  "children": Array [
+                    "from: ",
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "fontWeight": "600",
+                        }
+                      }
+                    />,
+                  ],
                   "ellipsizeMode": "tail",
                   "style": Object {
-                    "fontWeight": "600",
+                    "color": "rgba(74,74,74,1)",
+                    "fontFamily": "NunitoSans-Light",
+                    "fontSize": 14,
+                    "lineHeight": 19,
                   },
+                },
+                "ref": null,
+                "rendered": Array [
+                  "from: ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "accessible": true,
+                      "allowFontScaling": true,
+                      "children": undefined,
+                      "ellipsizeMode": "tail",
+                      "style": Object {
+                        "fontWeight": "600",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "d": undefined,
                 },
                 "ref": null,
                 "rendered": null,
@@ -219,17 +292,7 @@ ShallowWrapper {
             ],
             "type": [Function],
           },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "d": undefined,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
+          false,
         ],
         "type": [Function],
       },
@@ -301,43 +364,50 @@ ShallowWrapper {
           <Component
             style={
               Object {
-                "alignItems": "stretch",
                 "backgroundColor": "#FFFFFF",
-                "flex": 0,
-                "flexDirection": "row",
-                "justifyContent": "space-between",
                 "padding": 22,
               }
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+            <Component
               style={
                 Object {
-                  "color": "rgba(74,74,74,1)",
-                  "fontFamily": "NunitoSans-Light",
-                  "fontSize": 14,
-                  "lineHeight": 19,
+                  "alignItems": "stretch",
+                  "flex": 0,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
                 }
               }
             >
-              from: 
               <Text
                 accessible={true}
                 allowFontScaling={true}
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "fontWeight": "600",
+                    "color": "rgba(74,74,74,1)",
+                    "fontFamily": "NunitoSans-Light",
+                    "fontSize": 14,
+                    "lineHeight": 19,
                   }
                 }
+              >
+                from: 
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "fontWeight": "600",
+                    }
+                  }
+                />
+              </Text>
+              <ExpirationItem
+                d={undefined}
               />
-            </Text>
-            <ExpirationItem
-              d={undefined}
-            />
+            </Component>
           </Component>,
           <Component
             style={
@@ -379,41 +449,49 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": Array [
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
+              <Component
                 style={
                   Object {
-                    "color": "rgba(74,74,74,1)",
-                    "fontFamily": "NunitoSans-Light",
-                    "fontSize": 14,
-                    "lineHeight": 19,
+                    "alignItems": "stretch",
+                    "flex": 0,
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
                   }
                 }
               >
-                from: 
                 <Text
                   accessible={true}
                   allowFontScaling={true}
                   ellipsizeMode="tail"
                   style={
                     Object {
-                      "fontWeight": "600",
+                      "color": "rgba(74,74,74,1)",
+                      "fontFamily": "NunitoSans-Light",
+                      "fontSize": 14,
+                      "lineHeight": 19,
                     }
                   }
+                >
+                  from: 
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "fontWeight": "600",
+                      }
+                    }
+                  />
+                </Text>
+                <ExpirationItem
+                  d={undefined}
                 />
-              </Text>,
-              <ExpirationItem
-                d={undefined}
-              />,
+              </Component>,
+              false,
             ],
             "style": Object {
-              "alignItems": "stretch",
               "backgroundColor": "#FFFFFF",
-              "flex": 0,
-              "flexDirection": "row",
-              "justifyContent": "space-between",
               "padding": 22,
             },
           },
@@ -424,32 +502,45 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "accessible": true,
-                "allowFontScaling": true,
                 "children": Array [
-                  "from: ",
                   <Text
                     accessible={true}
                     allowFontScaling={true}
                     ellipsizeMode="tail"
                     style={
                       Object {
-                        "fontWeight": "600",
+                        "color": "rgba(74,74,74,1)",
+                        "fontFamily": "NunitoSans-Light",
+                        "fontSize": 14,
+                        "lineHeight": 19,
                       }
                     }
+                  >
+                    from: 
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "fontWeight": "600",
+                        }
+                      }
+                    />
+                  </Text>,
+                  <ExpirationItem
+                    d={undefined}
                   />,
                 ],
-                "ellipsizeMode": "tail",
                 "style": Object {
-                  "color": "rgba(74,74,74,1)",
-                  "fontFamily": "NunitoSans-Light",
-                  "fontSize": 14,
-                  "lineHeight": 19,
+                  "alignItems": "stretch",
+                  "flex": 0,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
                 },
               },
               "ref": null,
               "rendered": Array [
-                "from: ",
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -457,11 +548,56 @@ ShallowWrapper {
                   "props": Object {
                     "accessible": true,
                     "allowFontScaling": true,
-                    "children": undefined,
+                    "children": Array [
+                      "from: ",
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "fontWeight": "600",
+                          }
+                        }
+                      />,
+                    ],
                     "ellipsizeMode": "tail",
                     "style": Object {
-                      "fontWeight": "600",
+                      "color": "rgba(74,74,74,1)",
+                      "fontFamily": "NunitoSans-Light",
+                      "fontSize": 14,
+                      "lineHeight": 19,
                     },
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "from: ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "accessible": true,
+                        "allowFontScaling": true,
+                        "children": undefined,
+                        "ellipsizeMode": "tail",
+                        "style": Object {
+                          "fontWeight": "600",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "d": undefined,
                   },
                   "ref": null,
                   "rendered": null,
@@ -470,17 +606,7 @@ ShallowWrapper {
               ],
               "type": [Function],
             },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "d": undefined,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
+            false,
           ],
           "type": [Function],
         },
