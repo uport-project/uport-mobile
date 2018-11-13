@@ -1,5 +1,12 @@
 # Change Log
 
+## [v387](https://github.com/uport-project/uport-mobile/tree/v387) (2018-11-13)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v386...v387)
+
+**Merged pull requests:**
+
+- \[Fixes \#161468315\] Backing up app branding [\#15](https://github.com/uport-project/uport-mobile/pull/15) ([simonas-notcat](https://github.com/simonas-notcat))
+
 ## [v386](https://github.com/uport-project/uport-mobile/tree/v386) (2018-11-12)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v385...v386)
 
