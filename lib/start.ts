@@ -26,6 +26,7 @@ import { Platform, NativeModules } from 'react-native'
 import { handleURL } from './actions/requestActions'
 import { registerDeviceForNotifications } from 'uPortMobile/lib/actions/snsRegistrationActions'
 import { track, screen } from 'uPortMobile/lib/actions/metricActions'
+import Instabug from 'instabug-reactnative';
 
 registerScreens(store, Provider)
 
@@ -44,6 +45,8 @@ export const screenVisibilityListener = new RNNScreenVisibilityListener({
 
 // Add GUI startup tasks here for already onboarded user
 export async function startMain(this: any) {
+  Instabug.startWithToken('0744351f931d1476a9d20ecb39c19d50', [Instabug.invocationEvent.shake]);
+
   Platform.OS === 'android' ? store.dispatch(registerDeviceForNotifications()) : null
   Navigation.startSingleScreenApp({
     screen: {

@@ -32,6 +32,7 @@ import com.oblador.vectoricons.VectorIconsPackage;
 import com.poberwong.launcher.IntentLauncherPackage;
 import com.reactnativenavigation.NavigationApplication;
 import com.uport.sdk.react.signer.NativeSignerPackage;
+import com.instabug.reactlibrary.RNInstabugReactnativePackage;
 
 import org.reactnative.camera.RNCameraPackage;
 
@@ -71,6 +72,12 @@ public class MainApplication extends NavigationApplication {
     protected List<ReactPackage> getPackages() {
         return Arrays.<ReactPackage>asList(
                 new MainReactPackage(),
+            		new RNInstabugReactnativePackage.Builder("0744351f931d1476a9d20ecb39c19d50",MainApplication.this)
+							.setInvocationEvent("shake")
+							.setPrimaryColor("#1D82DC")
+							.setFloatingEdge("left")
+							.setFloatingButtonOffsetFromTop(250)
+							.build(),
                 new RNFirebasePackage(),
                 new RNFirebaseRemoteConfigPackage(),
                 new SvgPackage(),
@@ -85,8 +92,7 @@ public class MainApplication extends NavigationApplication {
                 new MySNSPackage(),
                 new IntentLauncherPackage(),
                 new NativeSignerPackage(),
-                new RNFirebaseAnalyticsPackage()
-        );
+                new RNFirebaseAnalyticsPackage(),
     }
 
 }
