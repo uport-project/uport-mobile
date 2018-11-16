@@ -1,5 +1,12 @@
 # Change Log
 
+## [v388](https://github.com/uport-project/uport-mobile/tree/v388) (2018-11-16)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v387...v388)
+
+**Merged pull requests:**
+
+- Reverting fix for push registration waiting [\#20](https://github.com/uport-project/uport-mobile/pull/20) ([simonas-notcat](https://github.com/simonas-notcat))
+
 ## [v387](https://github.com/uport-project/uport-mobile/tree/v387) (2018-11-13)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v386...v387)
 
