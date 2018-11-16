@@ -59,6 +59,7 @@
 		70002150218CA4A5009C38A1 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7000214F218CA4A5009C38A1 /* libsqlite3.0.tbd */; };
 		70A1A99E21905CE70012423D /* libSQLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A1A99D21905CBD0012423D /* libSQLite.a */; };
 		70D18C85218C53CB0004E667 /* file-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 70D18C4D218C53CB0004E667 /* file-icon.png */; };
+		70F00DE3219F00F000B79DB7 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 70F00DE2219F00EF00B79DB7 /* www */; };
 		70F06EA01FC5C160000BD332 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70F06E6E1FC5C15F000BD332 /* GoogleService-Info.plist */; };
 		7F465938BBBE499DA8ECEFF4 /* libTouchID.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B137393457A4411B6A82656 /* libTouchID.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
@@ -677,6 +678,7 @@
 		7000214F218CA4A5009C38A1 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		70A1A99821905CBD0012423D /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../node_modules/react-native-sqlcipher-storage/src/ios/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		70D18C4D218C53CB0004E667 /* file-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "file-icon.png"; sourceTree = "<group>"; };
+		70F00DE2219F00EF00B79DB7 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = uPortMobile/www; sourceTree = "<group>"; };
 		70F06E6E1FC5C15F000BD332 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "uPortMobile/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		78E4063D3A3E492FA32B40D9 /* NunitoSans-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NunitoSans-SemiBold.ttf"; path = "../fonts/NunitoSans-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -1025,6 +1027,7 @@
 		13B07FAE1A68108700A75B9A /* uPortMobile */ = {
 			isa = PBXGroup;
 			children = (
+				70F00DE2219F00EF00B79DB7 /* www */,
 				70F06E6E1FC5C15F000BD332 /* GoogleService-Info.plist */,
 				038F15CB1F9692D500DF45E1 /* SupportingFiles */,
 				037EA1F41F75D8820015DD6A /* Classes */,
@@ -2049,6 +2052,7 @@
 				608169E51D0EB3FC004D33EA /* uport-logo-white.png in Resources */,
 				70D18C85218C53CB0004E667 /* file-icon.png in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				70F00DE3219F00F000B79DB7 /* www in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				C9AA0D89D8B94DBE8563DBB8 /* EvilIcons.ttf in Resources */,
 				647D557D6BF24E09AAD7D010 /* NunitoSans-Black.ttf in Resources */,
