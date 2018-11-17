@@ -162,69 +162,73 @@ NSDictionary *genericSignature(BTCKey *keypair, NSData *hash, BOOL lowS) {
   BTCMutableBigNumber* privkeyBN = [[BTCMutableBigNumber alloc] initWithBIGNUM:privkeyBIGNUM];
   BTCBigNumber* n = [BTCCurvePoint curveOrder];
   
-  NSMutableData* kdata = [keypair signatureNonceForHash:hash];
-  BTCMutableBigNumber* k = [[BTCMutableBigNumber alloc] initWithUnsignedBigEndian:kdata];
-  [k mod:n]; // make sure k belongs to [0, n - 1]
+  // I'm sure there is a better way of doing this
+  const BIGNUM* zero = [[BTCBigNumber alloc] initWithInt32:0].BIGNUM;
   
-  BTCDataClear(kdata);
+  for (int iter = 0; true; iter++ ) {
+    NSMutableData* kdata = [keypair signatureNonceForHash:hash];
+    BTCMutableBigNumber* k = [[BTCMutableBigNumber alloc] initWithUnsignedBigEndian:kdata];
+    
+    if (BN_cmp(k.BIGNUM, zero) <= 0 && BN_cmp(k.BIGNUM, n.BIGNUM) >= 0) continue;
+      
+    [k mod:n]; // make sure k belongs to [0, n - 1]
   
-  BTCCurvePoint* K = [[BTCCurvePoint generator] multiply:k];
-  if ([K isInfinity]) {
+    BTCDataClear(kdata);
+  
+    BTCCurvePoint* K = [[BTCCurvePoint generator] multiply:k];
     // K was infinity and does not work, redo it
-    return genericSignature(keypair, hash, lowS);
-  }
-  BTCBigNumber* Kx = K.x;
+    if ([K isInfinity]) continue;
+    BTCBigNumber* Kx = K.x;
   
-  BTCBigNumber* hashBN = [[BTCBigNumber alloc] initWithUnsignedBigEndian:hash];
+    BTCBigNumber* hashBN = [[BTCBigNumber alloc] initWithUnsignedBigEndian:hash];
   
-  // Compute s = (k^-1)*(h + Kx*privkey)
+    // Compute s = (k^-1)*(h + Kx*privkey)
   
-  BTCBigNumber* signatureBN = [[[privkeyBN multiply:Kx mod:n] add:hashBN mod:n] multiply:[k inverseMod:n] mod:n];
+    BTCBigNumber* signatureBN = [[[privkeyBN multiply:Kx] add:hashBN] multiply:[k inverseMod:n] mod:n];
   
-  if ([Kx isZero] || [signatureBN isZero]) {
     // Neither r nor s can be zero
-    return genericSignature(keypair, hash, lowS);
-  }
+    if ([Kx isZero] || [signatureBN isZero]) continue;
   
-  BIGNUM r; BN_init(&r); BN_copy(&r, Kx.BIGNUM);
-  BIGNUM s; BN_init(&s); BN_copy(&s, signatureBN.BIGNUM);
-  uint8_t recoveryParam = BN_is_odd(K.y.BIGNUM) ? 1 : 0;
-  BN_clear_free(bignum);
-  BTCDataClear(privateKey);
-  [privkeyBN clear];
-  [k clear];
-  [hashBN clear];
-  [K clear];
-  [Kx clear];
-  [signatureBN clear];
-  
-  BN_CTX *ctx = BN_CTX_new();
-  BN_CTX_start(ctx);
-  
-  const EC_GROUP *group = EC_KEY_get0_group(key);
-  BIGNUM *order = BN_CTX_get(ctx);
-  BIGNUM *halforder = BN_CTX_get(ctx);
-  EC_GROUP_get_order(group, order, ctx);
-  BN_rshift1(halforder, order);
-  if (lowS && BN_cmp(&s, halforder) > 0) {
-    // enforce low S values, by negating the value (modulo the order) if above order/2.
-    BN_sub(&s, order, &s);
-  }
-  EC_KEY_free(key);
-  
-  BN_CTX_end(ctx);
-  BN_CTX_free(ctx);
-  NSMutableData* rData = [NSMutableData dataWithLength:32];
-  NSMutableData* sData = [NSMutableData dataWithLength:32];
-  
-  BN_bn2bin(&r,rData.mutableBytes);
-  BN_bn2bin(&s,sData.mutableBytes);
-  return @{
-           @"r": rData,
-           @"s": sData,
-           @"recoveryParam": @(recoveryParam)
-           };
+    BIGNUM *r = BN_new();
+    BN_copy(r, Kx.BIGNUM);
+    BIGNUM *s = BN_new();
+    BN_copy(s, signatureBN.BIGNUM);
+    uint8_t recoveryParam = BN_is_odd(K.y.BIGNUM) ? 1 : 0;
+    
+    BN_clear_free(bignum);
+    BTCDataClear(privateKey);
+    [privkeyBN clear];
+    [k clear];
+    [hashBN clear];
+    [K clear];
+    [Kx clear];
+    [signatureBN clear];
+    EC_KEY_free(key);
 
+    BIGNUM *twiceS = BN_new();
+    BN_add(twiceS, s, s);
+    if (lowS && BN_cmp(twiceS, n.BIGNUM) > 0) {
+      // enforce low S values, by negating the value (modulo the order) if above order/2.
+      BN_sub(s, n.BIGNUM, s);
+      recoveryParam ^= 1;
+    }
+    BN_clear_free(twiceS);
+
+    NSMutableData* rData = [NSMutableData dataWithLength:32];
+    NSMutableData* sData = [NSMutableData dataWithLength:32];
+  
+    BN_bn2bin(r,rData.mutableBytes);
+    BN_bn2bin(s,sData.mutableBytes);
+    
+    BN_clear_free(r);
+    BN_clear_free(s);
+    return @{
+             @"r": rData,
+             @"s": sData,
+             @"recoveryParam": @(recoveryParam)
+             };
+  }
+  return @{};
 }
 
 NSData *simpleSignature(BTCKey *keypair, NSData *hash) {
