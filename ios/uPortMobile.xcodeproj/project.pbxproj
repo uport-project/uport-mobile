@@ -53,6 +53,7 @@
 		608BFCF61FA0A40E00672B36 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 608BFCC51FA0A40E00672B36 /* MaterialCommunityIcons.ttf */; };
 		6411C89C207C2310005033A9 /* libRNCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6411C89B207C22ED005033A9 /* libRNCamera.a */; };
 		641C9A161E17390C008A4D38 /* libRCTPushNotification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 641C9A131E1738F3008A4D38 /* libRCTPushNotification.a */; };
+		641CA98D21A0AE09008FB9ED /* EthereumSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 641CA98C21A0AE09008FB9ED /* EthereumSigner.m */; };
 		647D557D6BF24E09AAD7D010 /* NunitoSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD898EC7D861492DB6C6D6F8 /* NunitoSans-Black.ttf */; };
 		64E31FBD1DF234CF0062465A /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D17E3DCF1DEDEF6B00C460F9 /* libRCTAnimation.a */; };
 		69E63DA9211AB50D0037D567 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96745A031AA4489B8C047926 /* Feather.ttf */; };
@@ -650,6 +651,8 @@
 		6411C896207C22ED005033A9 /* RNCamera.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RNCamera.xcodeproj"; sourceTree = "<group>"; };
 		641915B2200ECEB70042DA49 /* ReactNativePermissions.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativePermissions.xcodeproj; path = "../node_modules/react-native-permissions/ios/ReactNativePermissions.xcodeproj"; sourceTree = "<group>"; };
 		641C9A0D1E1738F3008A4D38 /* RCTPushNotification.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTPushNotification.xcodeproj; path = "../node_modules/react-native/Libraries/PushNotificationIOS/RCTPushNotification.xcodeproj"; sourceTree = "<group>"; };
+		641CA95421A0ADB9008FB9ED /* EthereumSigner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EthereumSigner.h; path = uPortMobile/Classes/EthereumSigner.h; sourceTree = "<group>"; };
+		641CA98C21A0AE09008FB9ED /* EthereumSigner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = EthereumSigner.m; path = uPortMobile/Classes/EthereumSigner.m; sourceTree = "<group>"; };
 		6443EDF61E47808400D4DFF8 /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rubik-Black.ttf"; path = "../../../resources/fonts/rubik/Rubik-Black.ttf"; sourceTree = "<group>"; };
 		6443EDF71E47808400D4DFF8 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rubik-BlackItalic.ttf"; path = "../../../resources/fonts/rubik/Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
 		6443EDF81E47808400D4DFF8 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Rubik-Bold.ttf"; path = "../../../resources/fonts/rubik/Rubik-Bold.ttf"; sourceTree = "<group>"; };
@@ -974,6 +977,8 @@
 				03459E711F97F397004DDC10 /* UPTEthSignerReactNativeBridge.m */,
 				0314F6821FFEDDEE00912E04 /* HDSigner */,
 				038F15CD1F96977300DF45E1 /* EthSigner */,
+				641CA95421A0ADB9008FB9ED /* EthereumSigner.h */,
+				641CA98C21A0AE09008FB9ED /* EthereumSigner.m */,
 			);
 			name = Signer;
 			sourceTree = "<group>";
@@ -2161,6 +2166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03459E791F97F5AA004DDC10 /* UPTEthSigner.m in Sources */,
+				641CA98D21A0AE09008FB9ED /* EthereumSigner.m in Sources */,
 				03459E6B1F97F372004DDC10 /* AppDelegate.m in Sources */,
 				03459E731F97F397004DDC10 /* UPTEthSignerReactNativeBridge.m in Sources */,
 				032BD33E200975780062A379 /* UPTHDSignerReactNativeBridge.m in Sources */,

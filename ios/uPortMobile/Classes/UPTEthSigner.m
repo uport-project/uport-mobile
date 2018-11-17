@@ -17,7 +17,7 @@
 //
 
 #import "UPTEthSigner.h"
-
+#import "EthereumSigner.h"
 #import <Valet/VALValet.h>
 #import <Valet/VALSecureEnclaveValet.h>
 #import <Valet/VALSynchronizableValet.h>
@@ -73,135 +73,6 @@ NSString * const UPTSignerErrorCodeLevelPrivateKeyNotFound = @"-12";
     return data;
 }
 
-// Handles most of the signing code
-+ (NSDictionary *) genericSignature:(BTCKey*)keypair forHash:(NSData*)hash enforceLowS: (BOOL)lowS {
-    NSMutableData *privateKey = [keypair privateKey];
-    EC_KEY* key = EC_KEY_new_by_curve_name(NID_secp256k1);
-
-    BIGNUM *bignum = BN_bin2bn(privateKey.bytes, (int)privateKey.length, BN_new());
-    BTCRegenerateKey(key, bignum);
-
-
-    const BIGNUM *privkeyBIGNUM = EC_KEY_get0_private_key(key);
-
-    BTCMutableBigNumber* privkeyBN = [[BTCMutableBigNumber alloc] initWithBIGNUM:privkeyBIGNUM];
-    BTCBigNumber* n = [BTCCurvePoint curveOrder];
-
-    NSMutableData* kdata = [keypair signatureNonceForHash:hash];
-    BTCMutableBigNumber* k = [[BTCMutableBigNumber alloc] initWithUnsignedBigEndian:kdata];
-    [k mod:n]; // make sure k belongs to [0, n - 1]
-
-    BTCDataClear(kdata);
-
-    BTCCurvePoint* K = [[BTCCurvePoint generator] multiply:k];
-    if ([K isInfinity]) {
-      // K was infinity and does not work, redo it
-      return [self genericSignature:keypair forHash:hash enforceLowS:lowS];
-    }
-    BTCBigNumber* Kx = K.x;
-
-    BTCBigNumber* hashBN = [[BTCBigNumber alloc] initWithUnsignedBigEndian:hash];
-
-    // Compute s = (k^-1)*(h + Kx*privkey)
-
-    BTCBigNumber* signatureBN = [[[privkeyBN multiply:Kx mod:n] add:hashBN mod:n] multiply:[k inverseMod:n] mod:n];
-
-    if ([Kx isZero] || [signatureBN isZero]) {
-      // Neither r nor s can be zero
-      return [self genericSignature:keypair forHash:hash enforceLowS:lowS];
-    }
-
-    BIGNUM r; BN_init(&r); BN_copy(&r, Kx.BIGNUM);
-    BIGNUM s; BN_init(&s); BN_copy(&s, signatureBN.BIGNUM);
-  
-    BN_clear_free(bignum);
-    BTCDataClear(privateKey);
-    [privkeyBN clear];
-    [k clear];
-    [hashBN clear];
-    [K clear];
-    [Kx clear];
-    [signatureBN clear];
-
-    BN_CTX *ctx = BN_CTX_new();
-    BN_CTX_start(ctx);
-
-    const EC_GROUP *group = EC_KEY_get0_group(key);
-    BIGNUM *order = BN_CTX_get(ctx);
-    BIGNUM *halforder = BN_CTX_get(ctx);
-    EC_GROUP_get_order(group, order, ctx);
-    BN_rshift1(halforder, order);
-    if (lowS && BN_cmp(&s, halforder) > 0) {
-        // enforce low S values, by negating the value (modulo the order) if above order/2.
-        BN_sub(&s, order, &s);
-    }
-    EC_KEY_free(key);
-
-    BN_CTX_end(ctx);
-    BN_CTX_free(ctx);
-    NSMutableData* rData = [NSMutableData dataWithLength:32];
-    NSMutableData* sData = [NSMutableData dataWithLength:32];
-  
-    BN_bn2bin(&r,rData.mutableBytes);
-    BN_bn2bin(&s,sData.mutableBytes);
-    return @{
-             @"r": rData,
-             @"s": sData
-             };
-}
-
-+ (NSDictionary*) ethereumSignature:(BTCKey*)keypair forHash:(NSData*)hash {
-  for (uint attempts = 0; attempts < 10; attempts ++) {
-    NSDictionary *sig = [self genericSignature: keypair forHash: hash enforceLowS: YES];
-    NSData *rData = (NSData *)sig[@"r"];
-    NSData *sData = (NSData *)sig[@"s"];
-    int rec = -1;
-    const unsigned char* hashbytes = hash.bytes;
-    int hashlength = (int)hash.length;
-    BIGNUM r; BN_init(&r); BN_bin2bn(rData.bytes ,32, &r);
-    BIGNUM s; BN_init(&s); BN_bin2bn(sData.bytes ,32, &s);
-    int nBitsR = BN_num_bits(&r);
-    int nBitsS = BN_num_bits(&s);
-    BOOL foundMatchingPubkey = NO;
-    if (nBitsR <= 256 && nBitsS <= 256) {
-        NSData* pubkey = [keypair compressedPublicKey];
-        for (int i=0; i < 4; i++) {
-            EC_KEY* key2 = EC_KEY_new_by_curve_name(NID_secp256k1);
-            if (ECDSA_SIG_recover_key_GFp(key2, &r, &s, hashbytes, hashlength, i, 1) == 1) {
-                NSData* pubkey2 = [self compressedPublicKey: key2];
-                if ([pubkey isEqual:pubkey2]) {
-                    rec = i;
-                    foundMatchingPubkey = YES;
-                    break;
-                }
-            }
-            EC_KEY_free(key2);          
-        }
-    }
-    if (foundMatchingPubkey) {
-      NSDictionary *signatureDictionary = @{ @"v": @(0x1b + rec),
-                                             @"r": [rData base64EncodedStringWithOptions:0],
-                                             @"s":[sData base64EncodedStringWithOptions:0]};
-      return signatureDictionary;
-    }
-  }
-  NSAssert(false, @"At least one signature must work.");
-  return NULL;
-}
-
-+ (NSData*) simpleSignature:(BTCKey*)keypair forHash:(NSData*)hash {
-    NSDictionary *sig = [self genericSignature: keypair forHash: hash enforceLowS: NO];
-    NSData *rData = (NSData *)sig[@"r"];
-    NSData *sData = (NSData *)sig[@"s"];
-    ///////
-    NSMutableData *sigData = [NSMutableData dataWithLength:64];
-    unsigned char* sigBytes = sigData.mutableBytes;
-    memset(sigBytes, 0, 64);
-
-    memcpy(sigBytes, rData.bytes, 32);
-    memcpy(sigBytes+32, sData.bytes, 32);
-    return sigData;
-}
 
 + (void)signTransaction:(NSString *)ethAddress data:(NSString *)payload userPrompt:(NSString*)userPromptText  result:(UPTEthSignerTransactionSigningResult)result {
     UPTEthKeychainProtectionLevel protectionLevel = [UPTEthSigner protectionLevelWithEthAddress:ethAddress];
@@ -215,7 +86,7 @@ NSString * const UPTSignerErrorCodeLevelPrivateKeyNotFound = @"-12";
     if (key) {
         NSData *payloadData = [[NSData alloc] initWithBase64EncodedString:payload options:0];
         NSData *hash = [UPTEthSigner keccak256:payloadData];
-        NSDictionary *signature = [self ethereumSignature: key forHash:hash];
+        NSDictionary *signature = ethereumSignature(key, hash, NULL);
         result(signature, nil);
     } else {
         NSError *protectionLevelError = [[NSError alloc] initWithDomain:@"UPTError" code:UPTSignerErrorCodeLevelPrivateKeyNotFound.integerValue userInfo:@{@"message": @"private key not found for eth address"}];
@@ -235,7 +106,7 @@ NSString * const UPTSignerErrorCodeLevelPrivateKeyNotFound = @"-12";
     BTCKey *key = [self keyPairWithEthAddress:ethAddress userPromptText:userPromptText protectionLevel:protectionLevel];
     if (key) {
         NSData *hash = [payload SHA256];
-        NSDictionary *signature = [self ethereumSignature:key forHash:hash];
+        NSDictionary *signature = ethereumSignature(key, hash, NULL);
         result(signature, nil);
     } else {
         NSError *protectionLevelError = [[NSError alloc] initWithDomain:@"UPTError" code:UPTSignerErrorCodeLevelPrivateKeyNotFound.integerValue userInfo:@{@"message": @"private key not found for eth address"}];
