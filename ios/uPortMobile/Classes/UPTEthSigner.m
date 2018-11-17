@@ -94,6 +94,10 @@ NSString * const UPTSignerErrorCodeLevelPrivateKeyNotFound = @"-12";
     BTCDataClear(kdata);
 
     BTCCurvePoint* K = [[BTCCurvePoint generator] multiply:k];
+    if ([K isInfinity]) {
+      // K was infinity and does not work, redo it
+      return [self genericSignature:keypair forHash:hash enforceLowS:lowS];
+    }
     BTCBigNumber* Kx = K.x;
 
     BTCBigNumber* hashBN = [[BTCBigNumber alloc] initWithUnsignedBigEndian:hash];
@@ -101,6 +105,11 @@ NSString * const UPTSignerErrorCodeLevelPrivateKeyNotFound = @"-12";
     // Compute s = (k^-1)*(h + Kx*privkey)
 
     BTCBigNumber* signatureBN = [[[privkeyBN multiply:Kx mod:n] add:hashBN mod:n] multiply:[k inverseMod:n] mod:n];
+
+    if ([Kx isZero] || [signatureBN isZero]) {
+      // Neither r nor s can be zero
+      return [self genericSignature:keypair forHash:hash enforceLowS:lowS];
+    }
 
     BIGNUM r; BN_init(&r); BN_copy(&r, Kx.BIGNUM);
     BIGNUM s; BN_init(&s); BN_copy(&s, signatureBN.BIGNUM);
@@ -142,6 +151,7 @@ NSString * const UPTSignerErrorCodeLevelPrivateKeyNotFound = @"-12";
 }
 
 + (NSDictionary*) ethereumSignature:(BTCKey*)keypair forHash:(NSData*)hash {
+  for (uint attempts = 0; attempts < 10; attempts ++) {
     NSDictionary *sig = [self genericSignature: keypair forHash: hash enforceLowS: YES];
     NSData *rData = (NSData *)sig[@"r"];
     NSData *sData = (NSData *)sig[@"s"];
@@ -152,9 +162,9 @@ NSString * const UPTSignerErrorCodeLevelPrivateKeyNotFound = @"-12";
     BIGNUM s; BN_init(&s); BN_bin2bn(sData.bytes ,32, &s);
     int nBitsR = BN_num_bits(&r);
     int nBitsS = BN_num_bits(&s);
+    BOOL foundMatchingPubkey = NO;
     if (nBitsR <= 256 && nBitsS <= 256) {
         NSData* pubkey = [keypair compressedPublicKey];
-        BOOL foundMatchingPubkey = NO;
         for (int i=0; i < 4; i++) {
             EC_KEY* key2 = EC_KEY_new_by_curve_name(NID_secp256k1);
             if (ECDSA_SIG_recover_key_GFp(key2, &r, &s, hashbytes, hashlength, i, 1) == 1) {
@@ -165,13 +175,18 @@ NSString * const UPTSignerErrorCodeLevelPrivateKeyNotFound = @"-12";
                     break;
                 }
             }
+            EC_KEY_free(key2);          
         }
-        NSAssert(foundMatchingPubkey, @"At least one signature must work.");
     }
-    NSDictionary *signatureDictionary = @{ @"v": @(0x1b + rec),
-            @"r": [rData base64EncodedStringWithOptions:0],
-            @"s":[sData base64EncodedStringWithOptions:0]};
-    return signatureDictionary;
+    if (foundMatchingPubkey) {
+      NSDictionary *signatureDictionary = @{ @"v": @(0x1b + rec),
+                                             @"r": [rData base64EncodedStringWithOptions:0],
+                                             @"s":[sData base64EncodedStringWithOptions:0]};
+      return signatureDictionary;
+    }
+  }
+  NSAssert(false, @"At least one signature must work.");
+  return NULL;
 }
 
 + (NSData*) simpleSignature:(BTCKey*)keypair forHash:(NSData*)hash {
