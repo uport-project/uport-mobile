@@ -58,16 +58,8 @@ exports[`Request Component renders a request without a type 1`] = `
         }
       />
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -86,8 +78,6 @@ exports[`Request Component renders a request without a type 1`] = `
             "width": 44,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Icon
           color="rgba(155,155,155,1)"
@@ -165,16 +155,8 @@ exports[`Request Component returns a AttestationCard when the request type is at
         }
       />
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -193,8 +175,6 @@ exports[`Request Component returns a AttestationCard when the request type is at
             "width": 44,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Icon
           color="rgba(155,155,155,1)"
@@ -272,16 +252,8 @@ exports[`Request Component returns a AttestationCard when the request type is at
         }
       />
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -300,8 +272,6 @@ exports[`Request Component returns a AttestationCard when the request type is at
             "width": 44,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Icon
           color="rgba(155,155,155,1)"
@@ -379,16 +349,8 @@ exports[`Request Component returns a ConnectionCard when the request type is con
         }
       />
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -407,8 +369,6 @@ exports[`Request Component returns a ConnectionCard when the request type is con
             "width": 44,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Icon
           color="rgba(155,155,155,1)"
@@ -486,16 +446,8 @@ exports[`Request Component returns a ConnectionCard when the request type is con
         }
       />
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -514,8 +466,6 @@ exports[`Request Component returns a ConnectionCard when the request type is con
             "width": 44,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Icon
           color="rgba(155,155,155,1)"
@@ -593,16 +543,8 @@ exports[`Request Component returns a DisclosureCard when the request type is dis
         }
       />
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -621,8 +563,6 @@ exports[`Request Component returns a DisclosureCard when the request type is dis
             "width": 44,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Icon
           color="rgba(155,155,155,1)"
@@ -700,16 +640,8 @@ exports[`Request Component returns a DisclosureCard when the request type is dis
         }
       />
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -728,8 +660,6 @@ exports[`Request Component returns a DisclosureCard when the request type is dis
             "width": 44,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Icon
           color="rgba(155,155,155,1)"
@@ -807,16 +737,8 @@ exports[`Request Component returns a TransactionCard when the request type is si
         }
       />
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -835,8 +757,6 @@ exports[`Request Component returns a TransactionCard when the request type is si
             "width": 44,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Icon
           color="rgba(155,155,155,1)"

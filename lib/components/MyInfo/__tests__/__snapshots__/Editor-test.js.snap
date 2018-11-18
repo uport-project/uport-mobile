@@ -20,15 +20,8 @@ exports[`MyInformation Component renders info correctly 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -36,8 +29,6 @@ exports[`MyInformation Component renders info correctly 1`] = `
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
       style={null}
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <View
         style={null}
@@ -211,7 +202,6 @@ exports[`MyInformation Component renders info correctly 1`] = `
           ]
         }
         underlineColorAndroid="rgba(0,0,0,0)"
-        value={undefined}
       />
     </View>
     <View
@@ -264,7 +254,6 @@ exports[`MyInformation Component renders info correctly 1`] = `
           ]
         }
         underlineColorAndroid="rgba(0,0,0,0)"
-        value={undefined}
       />
     </View>
     <View
@@ -318,7 +307,6 @@ exports[`MyInformation Component renders info correctly 1`] = `
           ]
         }
         underlineColorAndroid="rgba(0,0,0,0)"
-        value={undefined}
       />
     </View>
   </View>

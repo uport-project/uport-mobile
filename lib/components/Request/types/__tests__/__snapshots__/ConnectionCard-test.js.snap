@@ -9,7 +9,6 @@ ShallowWrapper {
     cancelRequest={[Function]}
     clearRequest={[Function]}
     contact={Object {}}
-    currentAddress={undefined}
     navigator={FakeNavigator {}}
     request={Object {}}
   />,
@@ -841,16 +840,8 @@ exports[`ConnectionCard renders correctly with a authorizedAt Request 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -865,8 +856,6 @@ exports[`ConnectionCard renders correctly with a authorizedAt Request 1`] = `
           "width": 80,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Icon
         name="ios-close"
@@ -1007,9 +996,7 @@ exports[`ConnectionCard renders correctly with a authorizedAt Request 1`] = `
       Joanna Hayek
     </Text>
   </View>
-  <View
-    style={undefined}
-  >
+  <View>
     <Text
       accessible={true}
       allowFontScaling={true}
@@ -1051,16 +1038,8 @@ exports[`ConnectionCard renders correctly with a cancelled Request 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -1075,8 +1054,6 @@ exports[`ConnectionCard renders correctly with a cancelled Request 1`] = `
           "width": 80,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Icon
         name="ios-close"
@@ -1217,9 +1194,7 @@ exports[`ConnectionCard renders correctly with a cancelled Request 1`] = `
       Joanna Hayek
     </Text>
   </View>
-  <View
-    style={undefined}
-  >
+  <View>
     <Text
       accessible={true}
       allowFontScaling={true}
@@ -1261,16 +1236,8 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -1285,8 +1252,6 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
           "width": 80,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Icon
         name="ios-close"
@@ -1437,15 +1402,8 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -1473,8 +1431,6 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -1498,15 +1454,8 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -1532,8 +1481,6 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -1581,16 +1528,8 @@ exports[`ConnectionCard renders correctly with a contact that is me 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -1605,8 +1544,6 @@ exports[`ConnectionCard renders correctly with a contact that is me 1`] = `
           "width": 80,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Icon
         name="ios-close"
@@ -1747,9 +1684,7 @@ exports[`ConnectionCard renders correctly with a contact that is me 1`] = `
       Joanna Hayek
     </Text>
   </View>
-  <View
-    style={undefined}
-  >
+  <View>
     <Text
       accessible={true}
       allowFontScaling={true}
@@ -1791,16 +1726,8 @@ exports[`ConnectionCard renders correctly with a existing Request 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -1815,8 +1742,6 @@ exports[`ConnectionCard renders correctly with a existing Request 1`] = `
           "width": 80,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Icon
         name="ios-close"
@@ -1957,9 +1882,7 @@ exports[`ConnectionCard renders correctly with a existing Request 1`] = `
       Joanna Hayek
     </Text>
   </View>
-  <View
-    style={undefined}
-  >
+  <View>
     <Text
       accessible={true}
       allowFontScaling={true}
@@ -2001,16 +1924,8 @@ exports[`ConnectionCard renders correctly with an unkown contact 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      collapsable={undefined}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -2025,8 +1940,6 @@ exports[`ConnectionCard renders correctly with an unkown contact 1`] = `
           "width": 80,
         }
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Icon
         name="ios-close"
@@ -2175,15 +2088,8 @@ exports[`ConnectionCard renders correctly with an unkown contact 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -2211,8 +2117,6 @@ exports[`ConnectionCard renders correctly with an unkown contact 1`] = `
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -2236,15 +2140,8 @@ exports[`ConnectionCard renders correctly with an unkown contact 1`] = `
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -2270,8 +2167,6 @@ exports[`ConnectionCard renders correctly with an unkown contact 1`] = `
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
