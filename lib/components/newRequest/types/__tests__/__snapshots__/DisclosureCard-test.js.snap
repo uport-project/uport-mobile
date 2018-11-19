@@ -103,8 +103,9 @@ ShallowWrapper {
                   Object {
                     "color": "#3F3D4B",
                     "flex": 1,
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 24,
+                    "fontWeight": "bold",
                   },
                   Object {
                     "textAlign": "left",
@@ -132,7 +133,7 @@ ShallowWrapper {
               <Icon
                 color="rgba(155,155,155,1)"
                 name="close"
-                size={24}
+                size={30}
               />
             </TouchableOpacity>
           </Component>
@@ -162,11 +163,11 @@ ShallowWrapper {
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "fontSize": 14,
+                    "fontSize": 18,
                   }
                 }
               >
-                 CREATE NEW ACCOUNT 
+                 Create New Account 
               </Text>
             </PrimaryButton>
           </Component>
@@ -246,8 +247,9 @@ ShallowWrapper {
                     Object {
                       "color": "#3F3D4B",
                       "flex": 1,
-                      "fontFamily": "NunitoSans-Bold",
+                      "fontFamily": "Montserrat",
                       "fontSize": 24,
+                      "fontWeight": "bold",
                     },
                     Object {
                       "textAlign": "left",
@@ -275,7 +277,7 @@ ShallowWrapper {
                 <Icon
                   color="rgba(155,155,155,1)"
                   name="close"
-                  size={24}
+                  size={30}
                 />
               </TouchableOpacity>
             </Component>,
@@ -305,11 +307,11 @@ ShallowWrapper {
                   ellipsizeMode="tail"
                   style={
                     Object {
-                      "fontSize": 14,
+                      "fontSize": 18,
                     }
                   }
                 >
-                   CREATE NEW ACCOUNT 
+                   Create New Account 
                 </Text>
               </PrimaryButton>
             </Component>,
@@ -340,8 +342,9 @@ ShallowWrapper {
                       Object {
                         "color": "#3F3D4B",
                         "flex": 1,
-                        "fontFamily": "NunitoSans-Bold",
+                        "fontFamily": "Montserrat",
                         "fontSize": 24,
+                        "fontWeight": "bold",
                       },
                       Object {
                         "textAlign": "left",
@@ -369,7 +372,7 @@ ShallowWrapper {
                   <Icon
                     color="rgba(155,155,155,1)"
                     name="close"
-                    size={24}
+                    size={30}
                   />
                 </TouchableOpacity>,
               ],
@@ -403,8 +406,9 @@ ShallowWrapper {
                     Object {
                       "color": "#3F3D4B",
                       "flex": 1,
-                      "fontFamily": "NunitoSans-Bold",
+                      "fontFamily": "Montserrat",
                       "fontSize": 24,
+                      "fontWeight": "bold",
                     },
                     Object {
                       "textAlign": "left",
@@ -424,7 +428,7 @@ ShallowWrapper {
                   "children": <Icon
                     color="rgba(155,155,155,1)"
                     name="close"
-                    size={24}
+                    size={30}
                   />,
                   "onPress": [Function],
                   "style": Object {
@@ -445,7 +449,7 @@ ShallowWrapper {
                   "props": Object {
                     "color": "rgba(155,155,155,1)",
                     "name": "close",
-                    "size": 24,
+                    "size": 30,
                   },
                   "ref": null,
                   "rendered": null,
@@ -486,11 +490,11 @@ ShallowWrapper {
                     ellipsizeMode="tail"
                     style={
                       Object {
-                        "fontSize": 14,
+                        "fontSize": 18,
                       }
                     }
                   >
-                     CREATE NEW ACCOUNT 
+                     Create New Account 
                   </Text>
                 </PrimaryButton>,
                 null,
@@ -519,11 +523,11 @@ ShallowWrapper {
                     ellipsizeMode="tail"
                     style={
                       Object {
-                        "fontSize": 14,
+                        "fontSize": 18,
                       }
                     }
                   >
-                     CREATE NEW ACCOUNT 
+                     Create New Account 
                   </Text>,
                   "disabled": false,
                   "onPress": [Function],
@@ -542,14 +546,14 @@ ShallowWrapper {
                   "props": Object {
                     "accessible": true,
                     "allowFontScaling": true,
-                    "children": " CREATE NEW ACCOUNT ",
+                    "children": " Create New Account ",
                     "ellipsizeMode": "tail",
                     "style": Object {
-                      "fontSize": 14,
+                      "fontSize": 18,
                     },
                   },
                   "ref": null,
-                  "rendered": " CREATE NEW ACCOUNT ",
+                  "rendered": " Create New Account ",
                   "type": [Function],
                 },
                 "type": [Function],
@@ -629,8 +633,9 @@ ShallowWrapper {
                     Object {
                       "color": "#3F3D4B",
                       "flex": 1,
-                      "fontFamily": "NunitoSans-Bold",
+                      "fontFamily": "Montserrat",
                       "fontSize": 24,
+                      "fontWeight": "bold",
                     },
                     Object {
                       "textAlign": "left",
@@ -658,7 +663,7 @@ ShallowWrapper {
                 <Icon
                   color="rgba(155,155,155,1)"
                   name="close"
-                  size={24}
+                  size={30}
                 />
               </TouchableOpacity>
             </Component>
@@ -688,11 +693,11 @@ ShallowWrapper {
                   ellipsizeMode="tail"
                   style={
                     Object {
-                      "fontSize": 14,
+                      "fontSize": 18,
                     }
                   }
                 >
-                   CREATE NEW ACCOUNT 
+                   Create New Account 
                 </Text>
               </PrimaryButton>
             </Component>
@@ -772,8 +777,9 @@ ShallowWrapper {
                       Object {
                         "color": "#3F3D4B",
                         "flex": 1,
-                        "fontFamily": "NunitoSans-Bold",
+                        "fontFamily": "Montserrat",
                         "fontSize": 24,
+                        "fontWeight": "bold",
                       },
                       Object {
                         "textAlign": "left",
@@ -801,7 +807,7 @@ ShallowWrapper {
                   <Icon
                     color="rgba(155,155,155,1)"
                     name="close"
-                    size={24}
+                    size={30}
                   />
                 </TouchableOpacity>
               </Component>,
@@ -831,11 +837,11 @@ ShallowWrapper {
                     ellipsizeMode="tail"
                     style={
                       Object {
-                        "fontSize": 14,
+                        "fontSize": 18,
                       }
                     }
                   >
-                     CREATE NEW ACCOUNT 
+                     Create New Account 
                   </Text>
                 </PrimaryButton>
               </Component>,
@@ -866,8 +872,9 @@ ShallowWrapper {
                         Object {
                           "color": "#3F3D4B",
                           "flex": 1,
-                          "fontFamily": "NunitoSans-Bold",
+                          "fontFamily": "Montserrat",
                           "fontSize": 24,
+                          "fontWeight": "bold",
                         },
                         Object {
                           "textAlign": "left",
@@ -895,7 +902,7 @@ ShallowWrapper {
                     <Icon
                       color="rgba(155,155,155,1)"
                       name="close"
-                      size={24}
+                      size={30}
                     />
                   </TouchableOpacity>,
                 ],
@@ -929,8 +936,9 @@ ShallowWrapper {
                       Object {
                         "color": "#3F3D4B",
                         "flex": 1,
-                        "fontFamily": "NunitoSans-Bold",
+                        "fontFamily": "Montserrat",
                         "fontSize": 24,
+                        "fontWeight": "bold",
                       },
                       Object {
                         "textAlign": "left",
@@ -950,7 +958,7 @@ ShallowWrapper {
                     "children": <Icon
                       color="rgba(155,155,155,1)"
                       name="close"
-                      size={24}
+                      size={30}
                     />,
                     "onPress": [Function],
                     "style": Object {
@@ -971,7 +979,7 @@ ShallowWrapper {
                     "props": Object {
                       "color": "rgba(155,155,155,1)",
                       "name": "close",
-                      "size": 24,
+                      "size": 30,
                     },
                     "ref": null,
                     "rendered": null,
@@ -1012,11 +1020,11 @@ ShallowWrapper {
                       ellipsizeMode="tail"
                       style={
                         Object {
-                          "fontSize": 14,
+                          "fontSize": 18,
                         }
                       }
                     >
-                       CREATE NEW ACCOUNT 
+                       Create New Account 
                     </Text>
                   </PrimaryButton>,
                   null,
@@ -1045,11 +1053,11 @@ ShallowWrapper {
                       ellipsizeMode="tail"
                       style={
                         Object {
-                          "fontSize": 14,
+                          "fontSize": 18,
                         }
                       }
                     >
-                       CREATE NEW ACCOUNT 
+                       Create New Account 
                     </Text>,
                     "disabled": false,
                     "onPress": [Function],
@@ -1068,14 +1076,14 @@ ShallowWrapper {
                     "props": Object {
                       "accessible": true,
                       "allowFontScaling": true,
-                      "children": " CREATE NEW ACCOUNT ",
+                      "children": " Create New Account ",
                       "ellipsizeMode": "tail",
                       "style": Object {
-                        "fontSize": 14,
+                        "fontSize": 18,
                       },
                     },
                     "ref": null,
-                    "rendered": " CREATE NEW ACCOUNT ",
+                    "rendered": " Create New Account ",
                     "type": [Function],
                   },
                   "type": [Function],
@@ -1232,8 +1240,9 @@ exports[`DisclosureCard renders correctly with a full disclosure request 1`] = `
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 24,
+              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -1268,7 +1277,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request 1`] = `
         <Icon
           color="rgba(155,155,155,1)"
           name="close"
-          size={24}
+          size={30}
         />
       </View>
     </View>
@@ -1405,8 +1414,9 @@ exports[`DisclosureCard renders correctly with a full disclosure request and cli
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 24,
+              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -1441,7 +1451,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request and cli
         <Icon
           color="rgba(155,155,155,1)"
           name="close"
-          size={24}
+          size={30}
         />
       </View>
     </View>
@@ -1578,8 +1588,9 @@ exports[`DisclosureCard renders correctly with a full disclosure request and ver
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 24,
+              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -1614,7 +1625,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request and ver
         <Icon
           color="rgba(155,155,155,1)"
           name="close"
-          size={24}
+          size={30}
         />
       </View>
     </View>
@@ -1751,8 +1762,9 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 24,
+              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -1787,7 +1799,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
         <Icon
           color="rgba(155,155,155,1)"
           name="close"
-          size={24}
+          size={30}
         />
       </View>
     </View>
@@ -1924,8 +1936,9 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 24,
+              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -1960,7 +1973,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
         <Icon
           color="rgba(155,155,155,1)"
           name="close"
-          size={24}
+          size={30}
         />
       </View>
     </View>
@@ -2097,8 +2110,9 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 24,
+              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -2133,7 +2147,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
         <Icon
           color="rgba(155,155,155,1)"
           name="close"
-          size={24}
+          size={30}
         />
       </View>
     </View>
@@ -2270,8 +2284,9 @@ exports[`DisclosureCard renders correctly with a segregated account request and 
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 24,
+              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -2306,7 +2321,7 @@ exports[`DisclosureCard renders correctly with a segregated account request and 
         <Icon
           color="rgba(155,155,155,1)"
           name="close"
-          size={24}
+          size={30}
         />
       </View>
     </View>
@@ -2443,8 +2458,9 @@ exports[`DisclosureCard renders correctly with a simple request and client info 
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 24,
+              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -2479,7 +2495,7 @@ exports[`DisclosureCard renders correctly with a simple request and client info 
         <Icon
           color="rgba(155,155,155,1)"
           name="close"
-          size={24}
+          size={30}
         />
       </View>
     </View>
@@ -2616,8 +2632,9 @@ exports[`DisclosureCard renders correctly with error 1`] = `
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 24,
+              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -2652,7 +2669,7 @@ exports[`DisclosureCard renders correctly with error 1`] = `
         <Icon
           color="rgba(155,155,155,1)"
           name="close"
-          size={24}
+          size={30}
         />
       </View>
     </View>
@@ -2809,8 +2826,9 @@ exports[`DisclosureCard unpublished identity renders correctly after publishing 
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 24,
+              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -2845,7 +2863,7 @@ exports[`DisclosureCard unpublished identity renders correctly after publishing 
         <Icon
           color="rgba(155,155,155,1)"
           name="close"
-          size={24}
+          size={30}
         />
       </View>
     </View>
@@ -2982,8 +3000,9 @@ exports[`DisclosureCard unpublished identity renders correctly with identity not
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 24,
+              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -3018,7 +3037,7 @@ exports[`DisclosureCard unpublished identity renders correctly with identity not
         <Icon
           color="rgba(155,155,155,1)"
           name="close"
-          size={24}
+          size={30}
         />
       </View>
     </View>
@@ -3155,8 +3174,9 @@ exports[`DisclosureCard with network with no existing account for network render
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 24,
+              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -3191,7 +3211,7 @@ exports[`DisclosureCard with network with no existing account for network render
         <Icon
           color="rgba(155,155,155,1)"
           name="close"
-          size={24}
+          size={30}
         />
       </View>
     </View>
@@ -3328,8 +3348,9 @@ exports[`DisclosureCard with network with no existing segregated account for cli
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 24,
+              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -3364,7 +3385,7 @@ exports[`DisclosureCard with network with no existing segregated account for cli
         <Icon
           color="rgba(155,155,155,1)"
           name="close"
-          size={24}
+          size={30}
         />
       </View>
     </View>
@@ -3501,8 +3522,9 @@ exports[`DisclosureCard with network with pre-existing account renders correctly
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 24,
+              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -3537,7 +3559,7 @@ exports[`DisclosureCard with network with pre-existing account renders correctly
         <Icon
           color="rgba(155,155,155,1)"
           name="close"
-          size={24}
+          size={30}
         />
       </View>
     </View>

@@ -11,15 +11,15 @@ exports[`renders address initials if only address is passed in 1`] = `
           "justifyContent": "center",
         },
         Object {
-          "borderRadius": 3,
-          "height": 70,
-          "width": 70,
+          "borderRadius": 30,
+          "height": 60,
+          "width": 60,
         },
         Object {
           "backgroundColor": "rgba(91,84,199,1)",
         },
         Object {
-          "padding": 17.5,
+          "padding": 15,
         },
       ]
     }
@@ -32,13 +32,13 @@ exports[`renders address initials if only address is passed in 1`] = `
         Array [
           Object {
             "fontFamily": "NunitoSans-Regular",
-            "fontSize": 17.5,
+            "fontSize": 15,
             "textAlign": "center",
           },
           undefined,
           Object {
             "color": "white",
-            "fontSize": 17.5,
+            "fontSize": 15,
           },
         ]
       }
@@ -60,7 +60,7 @@ exports[`renders address initials if only address passed in and custom size 1`] 
           "justifyContent": "center",
         },
         Object {
-          "borderRadius": 3,
+          "borderRadius": 50,
           "height": 100,
           "width": 100,
         },
@@ -81,7 +81,7 @@ exports[`renders address initials if only address passed in and custom size 1`] 
         Array [
           Object {
             "fontFamily": "NunitoSans-Regular",
-            "fontSize": 17.5,
+            "fontSize": 15,
             "textAlign": "center",
           },
           undefined,
@@ -110,9 +110,9 @@ exports[`renders image if avatar is passed in 1`] = `
         },
         Object {
           "backgroundColor": "white",
-          "borderRadius": 3,
-          "height": 70,
-          "width": 70,
+          "borderRadius": 50,
+          "height": 60,
+          "width": 60,
         },
       ]
     }
@@ -127,18 +127,18 @@ exports[`renders image if avatar is passed in 1`] = `
       style={
         Array [
           Object {
-            "borderRadius": 3,
-            "height": 70,
-            "width": 70,
+            "borderRadius": 30,
+            "height": 60,
+            "width": 60,
           },
           Object {
             "position": "absolute",
           },
           Array [
             Object {
-              "borderRadius": 3,
-              "height": 70,
-              "width": 70,
+              "borderRadius": 30,
+              "height": 60,
+              "width": 60,
             },
             undefined,
           ],
@@ -161,7 +161,7 @@ exports[`renders image if avatar is passed in and custom size 1`] = `
         },
         Object {
           "backgroundColor": "white",
-          "borderRadius": 3,
+          "borderRadius": 50,
           "height": 100,
           "width": 100,
         },
@@ -178,7 +178,7 @@ exports[`renders image if avatar is passed in and custom size 1`] = `
       style={
         Array [
           Object {
-            "borderRadius": 3,
+            "borderRadius": 50,
             "height": 100,
             "width": 100,
           },
@@ -187,7 +187,7 @@ exports[`renders image if avatar is passed in and custom size 1`] = `
           },
           Array [
             Object {
-              "borderRadius": 3,
+              "borderRadius": 50,
               "height": 100,
               "width": 100,
             },
@@ -212,9 +212,9 @@ exports[`renders image if uri is passed in 1`] = `
         },
         Object {
           "backgroundColor": "white",
-          "borderRadius": 3,
-          "height": 70,
-          "width": 70,
+          "borderRadius": 50,
+          "height": 60,
+          "width": 60,
         },
       ]
     }
@@ -230,18 +230,18 @@ exports[`renders image if uri is passed in 1`] = `
       style={
         Array [
           Object {
-            "borderRadius": 3,
-            "height": 70,
-            "width": 70,
+            "borderRadius": 30,
+            "height": 60,
+            "width": 60,
           },
           Object {
             "position": "absolute",
           },
           Array [
             Object {
-              "borderRadius": 3,
-              "height": 70,
-              "width": 70,
+              "borderRadius": 30,
+              "height": 60,
+              "width": 60,
             },
             undefined,
           ],
@@ -264,7 +264,7 @@ exports[`renders image if uri is passed in and custom size 1`] = `
         },
         Object {
           "backgroundColor": "white",
-          "borderRadius": 3,
+          "borderRadius": 50,
           "height": 100,
           "width": 100,
         },
@@ -282,7 +282,7 @@ exports[`renders image if uri is passed in and custom size 1`] = `
       style={
         Array [
           Object {
-            "borderRadius": 3,
+            "borderRadius": 50,
             "height": 100,
             "width": 100,
           },
@@ -291,7 +291,7 @@ exports[`renders image if uri is passed in and custom size 1`] = `
           },
           Array [
             Object {
-              "borderRadius": 3,
+              "borderRadius": 50,
               "height": 100,
               "width": 100,
             },
@@ -315,15 +315,15 @@ exports[`renders initials if only name is passed in 1`] = `
           "justifyContent": "center",
         },
         Object {
-          "borderRadius": 3,
-          "height": 70,
-          "width": 70,
+          "borderRadius": 30,
+          "height": 60,
+          "width": 60,
         },
         Object {
           "backgroundColor": "rgba(91,84,199,1)",
         },
         Object {
-          "padding": 17.5,
+          "padding": 15,
         },
       ]
     }
@@ -336,13 +336,13 @@ exports[`renders initials if only name is passed in 1`] = `
         Array [
           Object {
             "fontFamily": "NunitoSans-Regular",
-            "fontSize": 17.5,
+            "fontSize": 15,
             "textAlign": "center",
           },
           undefined,
           Object {
             "color": "white",
-            "fontSize": 17.5,
+            "fontSize": 15,
           },
         ]
       }
@@ -364,7 +364,7 @@ exports[`renders initials if only name passed in and custom size 1`] = `
           "justifyContent": "center",
         },
         Object {
-          "borderRadius": 3,
+          "borderRadius": 50,
           "height": 100,
           "width": 100,
         },
@@ -385,7 +385,7 @@ exports[`renders initials if only name passed in and custom size 1`] = `
         Array [
           Object {
             "fontFamily": "NunitoSans-Regular",
-            "fontSize": 17.5,
+            "fontSize": 15,
             "textAlign": "center",
           },
           undefined,

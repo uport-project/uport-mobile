@@ -21,9 +21,9 @@ exports[`DataFlowHeader renders unverified correctly 1`] = `
           },
           Object {
             "backgroundColor": "white",
-            "borderRadius": 3,
-            "height": 70,
-            "width": 70,
+            "borderRadius": 50,
+            "height": 60,
+            "width": 60,
           },
         ]
       }
@@ -32,24 +32,24 @@ exports[`DataFlowHeader renders unverified correctly 1`] = `
         resizeMode="cover"
         source={
           Object {
-            "testUri": "../../../images/default_profile_image.png",
+            "testUri": "../../../assets/images/default_profile_image.png",
           }
         }
         style={
           Array [
             Object {
-              "borderRadius": 3,
-              "height": 70,
-              "width": 70,
+              "borderRadius": 30,
+              "height": 60,
+              "width": 60,
             },
             Object {
               "position": "absolute",
             },
             Array [
               Object {
-                "borderRadius": 3,
-                "height": 70,
-                "width": 70,
+                "borderRadius": 30,
+                "height": 60,
+                "width": 60,
               },
               undefined,
             ],
@@ -61,7 +61,7 @@ exports[`DataFlowHeader renders unverified correctly 1`] = `
   <Image
     source={
       Object {
-        "testUri": "../../../images/ForwardArrow.png",
+        "testUri": "../../../assets/images/ForwardArrow.png",
       }
     }
     style={
@@ -85,9 +85,9 @@ exports[`DataFlowHeader renders unverified correctly 1`] = `
             },
             Object {
               "backgroundColor": "white",
-              "borderRadius": 3,
-              "height": 70,
-              "width": 70,
+              "borderRadius": 50,
+              "height": 60,
+              "width": 60,
             },
           ]
         }
@@ -96,24 +96,24 @@ exports[`DataFlowHeader renders unverified correctly 1`] = `
           resizeMode="cover"
           source={
             Object {
-              "testUri": "../../../images/default_profile_image.png",
+              "testUri": "../../../assets/images/default_profile_image.png",
             }
           }
           style={
             Array [
               Object {
-                "borderRadius": 3,
-                "height": 70,
-                "width": 70,
+                "borderRadius": 30,
+                "height": 60,
+                "width": 60,
               },
               Object {
                 "position": "absolute",
               },
               Array [
                 Object {
-                  "borderRadius": 3,
-                  "height": 70,
-                  "width": 70,
+                  "borderRadius": 30,
+                  "height": 60,
+                  "width": 60,
                 },
                 undefined,
               ],
@@ -147,9 +147,9 @@ exports[`DataFlowHeader renders verified correctly 1`] = `
           },
           Object {
             "backgroundColor": "white",
-            "borderRadius": 3,
-            "height": 70,
-            "width": 70,
+            "borderRadius": 50,
+            "height": 60,
+            "width": 60,
           },
         ]
       }
@@ -158,24 +158,24 @@ exports[`DataFlowHeader renders verified correctly 1`] = `
         resizeMode="cover"
         source={
           Object {
-            "testUri": "../../../images/default_profile_image.png",
+            "testUri": "../../../assets/images/default_profile_image.png",
           }
         }
         style={
           Array [
             Object {
-              "borderRadius": 3,
-              "height": 70,
-              "width": 70,
+              "borderRadius": 30,
+              "height": 60,
+              "width": 60,
             },
             Object {
               "position": "absolute",
             },
             Array [
               Object {
-                "borderRadius": 3,
-                "height": 70,
-                "width": 70,
+                "borderRadius": 30,
+                "height": 60,
+                "width": 60,
               },
               undefined,
             ],
@@ -187,7 +187,7 @@ exports[`DataFlowHeader renders verified correctly 1`] = `
   <Image
     source={
       Object {
-        "testUri": "../../../images/ForwardArrow.png",
+        "testUri": "../../../assets/images/ForwardArrow.png",
       }
     }
     style={
@@ -211,9 +211,9 @@ exports[`DataFlowHeader renders verified correctly 1`] = `
             },
             Object {
               "backgroundColor": "white",
-              "borderRadius": 3,
-              "height": 70,
-              "width": 70,
+              "borderRadius": 50,
+              "height": 60,
+              "width": 60,
             },
           ]
         }
@@ -222,24 +222,24 @@ exports[`DataFlowHeader renders verified correctly 1`] = `
           resizeMode="cover"
           source={
             Object {
-              "testUri": "../../../images/default_profile_image.png",
+              "testUri": "../../../assets/images/default_profile_image.png",
             }
           }
           style={
             Array [
               Object {
-                "borderRadius": 3,
-                "height": 70,
-                "width": 70,
+                "borderRadius": 30,
+                "height": 60,
+                "width": 60,
               },
               Object {
                 "position": "absolute",
               },
               Array [
                 Object {
-                  "borderRadius": 3,
-                  "height": 70,
-                  "width": 70,
+                  "borderRadius": 30,
+                  "height": 60,
+                  "width": 60,
                 },
                 undefined,
               ],
@@ -251,7 +251,7 @@ exports[`DataFlowHeader renders verified correctly 1`] = `
     <Image
       source={
         Object {
-          "testUri": "../../../images/uport-verif.png",
+          "testUri": "../../../assets/images/uport-verif.png",
         }
       }
       style={

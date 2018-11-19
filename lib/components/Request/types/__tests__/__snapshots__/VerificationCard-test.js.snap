@@ -101,7 +101,7 @@ ShallowWrapper {
             }
           }
         >
-          <ConectedComponent
+          <NestedInfo
             data={
               Object {
                 "loading": "loading",
@@ -295,7 +295,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": <ConectedComponent
+          "children": <NestedInfo
             data={
               Object {
                 "loading": "loading",
@@ -409,7 +409,7 @@ ShallowWrapper {
               }
             }
           >
-            <ConectedComponent
+            <NestedInfo
               data={
                 Object {
                   "loading": "loading",
@@ -603,7 +603,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": <ConectedComponent
+            "children": <NestedInfo
               data={
                 Object {
                   "loading": "loading",

@@ -153,7 +153,7 @@ exports[`disabled button error 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
@@ -299,7 +299,7 @@ exports[`disabled button invalid state 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
@@ -482,7 +482,7 @@ exports[`disabled button offline 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
@@ -650,7 +650,7 @@ exports[`disabled button working 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
@@ -839,7 +839,7 @@ exports[`disabled button working and message 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
@@ -992,7 +992,7 @@ exports[`event handling calls onComplete if onProcess returns true 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
@@ -1143,7 +1143,7 @@ exports[`event handling calls onComplete if onProcess returns true 2`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
@@ -1294,7 +1294,7 @@ exports[`event handling calls onContinue if no onProcess 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
@@ -1445,7 +1445,7 @@ exports[`event handling calls onContinue if no onProcess 2`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
@@ -1596,7 +1596,7 @@ exports[`event handling calls only onProcess 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
@@ -1747,7 +1747,7 @@ exports[`event handling calls only onProcess 2`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
@@ -1898,7 +1898,7 @@ exports[`renders continue button 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
@@ -2049,7 +2049,7 @@ exports[`renders skip button if skippable 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
@@ -2116,7 +2116,7 @@ exports[`renders skip button if skippable 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },

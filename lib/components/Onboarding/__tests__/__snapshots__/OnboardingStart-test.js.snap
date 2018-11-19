@@ -42,7 +42,7 @@ exports[`OnboardingStart renders Onboarding Start screen 1`] = `
       <Image
         source={
           Object {
-            "testUri": "../../../images/uport-blurple.png",
+            "testUri": "../../../assets/images/uport-blurple.png",
           }
         }
         style={
@@ -169,7 +169,7 @@ exports[`OnboardingStart renders Onboarding Start screen 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
@@ -236,7 +236,7 @@ exports[`OnboardingStart renders Onboarding Start screen 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
