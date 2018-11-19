@@ -26,7 +26,7 @@ exports[`renders Settings screen with 1`] = `
         undefined,
         Object {
           "color": "rgba(130, 130, 130, 1)",
-          "fontFamily": "NunitoSans-Bold",
+          "fontFamily": undefined,
           "fontSize": 12,
           "lineHeight": 19,
           "marginBottom": 25,
@@ -77,7 +77,6 @@ exports[`renders Settings screen with 1`] = `
       Object {
         "backgroundColor": "white",
         "flex": 1,
-        "paddingTop": 10,
       }
     }
   >
@@ -97,7 +96,7 @@ exports[`renders Settings screen with 1`] = `
             undefined,
             Object {
               "color": "#3c3a49",
-              "fontFamily": "NunitoSans-Regular",
+              "fontFamily": undefined,
               "fontSize": 16,
               "lineHeight": 27,
               "marginBottom": 15,
@@ -163,7 +162,7 @@ By using the uPort app, you acknowledge, accept and consent to the creation of a
             undefined,
             Object {
               "color": "#3c3a49",
-              "fontFamily": "NunitoSans-Regular",
+              "fontFamily": undefined,
               "fontSize": 16,
               "lineHeight": 27,
               "marginBottom": 15,
@@ -234,7 +233,7 @@ uPort allows you to affirmatively opt-in and choose to send and store an encrypt
             undefined,
             Object {
               "color": "#3c3a49",
-              "fontFamily": "NunitoSans-Regular",
+              "fontFamily": undefined,
               "fontSize": 16,
               "lineHeight": 27,
               "marginBottom": 15,
@@ -290,7 +289,7 @@ The following provisions of the Terms survive any termination of these Terms: IN
             undefined,
             Object {
               "color": "#3c3a49",
-              "fontFamily": "NunitoSans-Regular",
+              "fontFamily": undefined,
               "fontSize": 16,
               "lineHeight": 27,
               "marginBottom": 15,

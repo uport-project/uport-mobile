@@ -6,7 +6,6 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
     Object {
       "backgroundColor": "white",
       "flex": 1,
-      "paddingTop": 10,
     }
   }
 >
@@ -34,7 +33,6 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
       Object {
         "backgroundColor": "white",
         "flex": 1,
-        "paddingTop": 10,
       }
     }
   >
@@ -51,7 +49,7 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
             undefined,
             Object {
               "color": "#3c3a49",
-              "fontFamily": "NunitoSans-Regular",
+              "fontFamily": undefined,
               "fontSize": 24,
               "lineHeight": 30,
               "marginBottom": 40,
@@ -94,7 +92,7 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
             undefined,
             Object {
               "color": "#3c3a49",
-              "fontFamily": "NunitoSans-Regular",
+              "fontFamily": undefined,
               "fontSize": 16,
               "lineHeight": 27,
               "marginBottom": 15,
@@ -174,7 +172,7 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
                 undefined,
                 Object {
                   "color": "rgba(74,74,74,1)",
-                  "fontFamily": "NunitoSans-Light",
+                  "fontFamily": undefined,
                   "fontSize": 16,
                   "lineHeight": 22,
                   "marginLeft": 16,
@@ -231,7 +229,7 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
                 undefined,
                 Object {
                   "color": "rgba(74,74,74,1)",
-                  "fontFamily": "NunitoSans-Light",
+                  "fontFamily": undefined,
                   "fontSize": 16,
                   "lineHeight": 22,
                   "marginLeft": 16,
@@ -288,7 +286,7 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
                 undefined,
                 Object {
                   "color": "rgba(74,74,74,1)",
-                  "fontFamily": "NunitoSans-Light",
+                  "fontFamily": undefined,
                   "fontSize": 16,
                   "lineHeight": 22,
                   "marginLeft": 16,
@@ -345,7 +343,7 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
                 undefined,
                 Object {
                   "color": "rgba(74,74,74,1)",
-                  "fontFamily": "NunitoSans-Light",
+                  "fontFamily": undefined,
                   "fontSize": 16,
                   "lineHeight": 22,
                   "marginLeft": 16,
@@ -440,7 +438,7 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
                   Array [
                     Object {
                       "color": "rgba(54,184,123,1)",
-                      "fontFamily": "NunitoSans-Bold",
+                      "fontFamily": undefined,
                       "fontSize": 18,
                       "lineHeight": 25,
                       "padding": 3,
@@ -506,7 +504,7 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
                   },
                   Object {
                     "color": "rgba(92,80,202,1)",
-                    "fontFamily": "NunitoSans-Regular",
+                    "fontFamily": undefined,
                     "fontSize": 18,
                     "lineHeight": 25,
                   },

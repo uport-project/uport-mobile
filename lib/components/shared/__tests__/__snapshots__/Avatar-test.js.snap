@@ -31,7 +31,7 @@ exports[`renders address initials if only address is passed in 1`] = `
       style={
         Array [
           Object {
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 15,
             "textAlign": "center",
           },
@@ -80,7 +80,7 @@ exports[`renders address initials if only address passed in and custom size 1`] 
       style={
         Array [
           Object {
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 15,
             "textAlign": "center",
           },
@@ -335,7 +335,7 @@ exports[`renders initials if only name is passed in 1`] = `
       style={
         Array [
           Object {
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 15,
             "textAlign": "center",
           },
@@ -384,7 +384,7 @@ exports[`renders initials if only name passed in and custom size 1`] = `
       style={
         Array [
           Object {
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 15,
             "textAlign": "center",
           },

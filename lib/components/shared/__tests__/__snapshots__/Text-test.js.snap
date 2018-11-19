@@ -15,7 +15,7 @@ exports[`renders Text p 1`] = `
       undefined,
       Object {
         "color": "#3c3a49",
-        "fontFamily": "NunitoSans-Regular",
+        "fontFamily": undefined,
         "fontSize": 16,
         "lineHeight": 27,
         "marginBottom": 15,
@@ -56,7 +56,7 @@ exports[`renders Text title 1`] = `
       undefined,
       Object {
         "color": "#3c3a49",
-        "fontFamily": "NunitoSans-Regular",
+        "fontFamily": undefined,
         "fontSize": 24,
         "lineHeight": 30,
         "marginBottom": 40,

@@ -16,7 +16,6 @@ exports[`renders Settings screen with 1`] = `
       Array [
         Object {
           "color": "rgba(155,155,155,1)",
-          "fontFamily": "NunitoSans-Light",
           "fontSize": 14,
           "lineHeight": 19,
           "textAlign": "center",
@@ -44,7 +43,7 @@ exports[`renders Settings screen with 1`] = `
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 16,
             "lineHeight": 22,
             "margin": 22,
@@ -82,7 +81,7 @@ Information We Get From Others. We may get information about you from other thir
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 16,
             "lineHeight": 22,
             "margin": 22,
@@ -129,7 +128,7 @@ We may use your personal information to protect, investigate, and deter against 
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 16,
             "lineHeight": 22,
             "margin": 22,
@@ -182,7 +181,7 @@ You may exercise choices regarding the use of cookies from Google Analytics by g
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 16,
             "lineHeight": 22,
             "margin": 22,
@@ -253,7 +252,7 @@ Legal Basis
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 16,
             "lineHeight": 22,
             "margin": 22,
@@ -309,7 +308,7 @@ To better understand the interests of our customers and our website visitors.
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 16,
             "lineHeight": 22,
             "margin": 22,
