@@ -195,7 +195,6 @@ exports[`Avanced - Network renders gasPrice 1`] = `
         Object {},
       ]
     }
-    refreshControl={undefined}
     style={
       Array [
         Object {
@@ -337,7 +336,6 @@ exports[`Avanced - Network renders gasPrice working 1`] = `
         Object {},
       ]
     }
-    refreshControl={undefined}
     style={
       Array [
         Object {

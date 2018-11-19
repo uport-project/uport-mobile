@@ -19,7 +19,6 @@ exports[`renders correctly with error 1`] = `
         Object {},
       ]
     }
-    refreshControl={undefined}
     style={
       Array [
         Object {
@@ -215,7 +214,6 @@ exports[`renders correctly with message 1`] = `
         Object {},
       ]
     }
-    refreshControl={undefined}
     style={
       Array [
         Object {

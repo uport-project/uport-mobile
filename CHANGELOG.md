@@ -1,5 +1,13 @@
 # Change Log
 
+## [v389](https://github.com/uport-project/uport-mobile/tree/v389) (2018-11-19)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v388...v389)
+
+**Merged pull requests:**
+
+- Update Jest and Friends [\#23](https://github.com/uport-project/uport-mobile/pull/23) ([pelle](https://github.com/pelle))
+- Don't show backup screens for preHD wallets [\#21](https://github.com/uport-project/uport-mobile/pull/21) ([pelle](https://github.com/pelle))
+
 ## [v388](https://github.com/uport-project/uport-mobile/tree/v388) (2018-11-16)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v387...v388)
 

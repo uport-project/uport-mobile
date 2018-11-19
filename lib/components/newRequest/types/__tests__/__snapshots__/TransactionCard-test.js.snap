@@ -82,16 +82,8 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -107,8 +99,6 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
                 "paddingTop": 14,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -291,16 +281,8 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
              DETAILS 
           </Text>
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -313,8 +295,6 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
                 "padding": 3,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Icon
               color="rgba(92,80,202,1)"
@@ -382,15 +362,8 @@ there
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -421,8 +394,6 @@ there
                 ],
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -540,16 +511,8 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -565,8 +528,6 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
                 "paddingTop": 14,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -749,16 +710,8 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
              DETAILS 
           </Text>
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -771,8 +724,6 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
                 "padding": 3,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Icon
               color="rgba(92,80,202,1)"
@@ -834,15 +785,8 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -873,8 +817,6 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
                 ],
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -992,16 +934,8 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -1017,8 +951,6 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
                 "paddingTop": 14,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -1201,16 +1133,8 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
              DETAILS 
           </Text>
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -1223,8 +1147,6 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
                 "padding": 3,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Icon
               color="rgba(92,80,202,1)"
@@ -1241,15 +1163,8 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -1280,8 +1195,6 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
                 ],
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -1399,16 +1312,8 @@ exports[`TransactionCard renders correctly with destination being invalid destin
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -1424,8 +1329,6 @@ exports[`TransactionCard renders correctly with destination being invalid destin
                 "paddingTop": 14,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -1608,16 +1511,8 @@ exports[`TransactionCard renders correctly with destination being invalid destin
              DETAILS 
           </Text>
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -1630,8 +1525,6 @@ exports[`TransactionCard renders correctly with destination being invalid destin
                 "padding": 3,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Icon
               color="rgba(92,80,202,1)"
@@ -1732,7 +1625,6 @@ exports[`TransactionCard renders correctly with destination being invalid destin
             }
           >
             <Icon
-              color={undefined}
               name="ios-alert"
               style={
                 Object {
@@ -1833,16 +1725,8 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -1858,8 +1742,6 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
                 "paddingTop": 14,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -2042,16 +1924,8 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
              DETAILS 
           </Text>
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -2064,8 +1938,6 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
                 "padding": 3,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Icon
               color="rgba(92,80,202,1)"
@@ -2082,15 +1954,8 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -2121,8 +1986,6 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
                 ],
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -2240,16 +2103,8 @@ exports[`TransactionCard renders correctly with only request 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -2265,8 +2120,6 @@ exports[`TransactionCard renders correctly with only request 1`] = `
                 "paddingTop": 14,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -2449,16 +2302,8 @@ exports[`TransactionCard renders correctly with only request 1`] = `
              DETAILS 
           </Text>
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -2471,8 +2316,6 @@ exports[`TransactionCard renders correctly with only request 1`] = `
                 "padding": 3,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Icon
               color="rgba(92,80,202,1)"
@@ -2489,15 +2332,8 @@ exports[`TransactionCard renders correctly with only request 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -2528,8 +2364,6 @@ exports[`TransactionCard renders correctly with only request 1`] = `
                 ],
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -2647,16 +2481,8 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -2672,8 +2498,6 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
                 "paddingTop": 14,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -2856,16 +2680,8 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
              DETAILS 
           </Text>
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -2878,8 +2694,6 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
                 "padding": 3,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Icon
               color="rgba(92,80,202,1)"
@@ -2943,15 +2757,8 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -2982,8 +2789,6 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
                 ],
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -3101,16 +2906,8 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -3126,8 +2923,6 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
                 "paddingTop": 14,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -3310,16 +3105,8 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
              DETAILS 
           </Text>
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -3332,8 +3119,6 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
                 "padding": 3,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Icon
               color="rgba(92,80,202,1)"
@@ -3350,15 +3135,8 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -3389,8 +3167,6 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
                 ],
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -3508,16 +3284,8 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -3533,8 +3301,6 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
                 "paddingTop": 14,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -3717,16 +3483,8 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
              DETAILS 
           </Text>
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -3739,8 +3497,6 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
                 "padding": 3,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Icon
               color="rgba(92,80,202,1)"
@@ -3757,15 +3513,8 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -3796,8 +3545,6 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
                 ],
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -3915,16 +3662,8 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -3940,8 +3679,6 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
                 "paddingTop": 14,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -4124,16 +3861,8 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
              DETAILS 
           </Text>
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -4146,8 +3875,6 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
                 "padding": 3,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Icon
               color="rgba(92,80,202,1)"
@@ -4164,15 +3891,8 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -4203,8 +3923,6 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
                 ],
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}

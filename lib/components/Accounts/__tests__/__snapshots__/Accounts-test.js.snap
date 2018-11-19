@@ -2,16 +2,8 @@
 
 exports[`Accounts Index Account Item renders an item correctly 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -30,8 +22,6 @@ exports[`Accounts Index Account Item renders an item correctly 1`] = `
       "padding": 19,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View>
     <View
@@ -356,7 +346,6 @@ exports[`Accounts Index renders accounts correctly 1`] = `
     getItemCount={[Function]}
     horizontal={false}
     initialNumToRender={10}
-    invertStickyHeaders={undefined}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
     numColumns={1}
@@ -475,7 +464,6 @@ exports[`Accounts Index renders multiple accounts correctly 1`] = `
     getItemCount={[Function]}
     horizontal={false}
     initialNumToRender={10}
-    invertStickyHeaders={undefined}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
     numColumns={1}

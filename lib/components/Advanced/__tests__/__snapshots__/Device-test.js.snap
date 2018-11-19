@@ -19,7 +19,6 @@ exports[`Advanced - Device doesnt break when empty 1`] = `
         Object {},
       ]
     }
-    refreshControl={undefined}
     style={
       Array [
         Object {
@@ -34,16 +33,8 @@ exports[`Advanced - Device doesnt break when empty 1`] = `
   >
     <View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -55,8 +46,6 @@ exports[`Advanced - Device doesnt break when empty 1`] = `
             "opacity": 1,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <View
           style={
@@ -227,9 +216,7 @@ ShallowWrapper {
     deviceAddress="0x8dd7ef5c99be7a454b4a9869683a3a394fde9777"
     dispatch={[Function]}
     explorerUrl="https://rinkeby.etherscan.io"
-    fuel={undefined}
     navigator={FakeNavigator {}}
-    nonce={undefined}
     workingFuel={false}
     workingNonce={false}
   />,
@@ -475,7 +462,6 @@ exports[`Advanced - Device renders fuel of 0 and nonce of 0 1`] = `
         Object {},
       ]
     }
-    refreshControl={undefined}
     style={
       Array [
         Object {
@@ -490,16 +476,8 @@ exports[`Advanced - Device renders fuel of 0 and nonce of 0 1`] = `
   >
     <View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -511,8 +489,6 @@ exports[`Advanced - Device renders fuel of 0 and nonce of 0 1`] = `
             "opacity": 1,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <View
           style={
@@ -696,7 +672,6 @@ exports[`Advanced - Device renders fuel of 11210000000000100111 1`] = `
         Object {},
       ]
     }
-    refreshControl={undefined}
     style={
       Array [
         Object {
@@ -711,16 +686,8 @@ exports[`Advanced - Device renders fuel of 11210000000000100111 1`] = `
   >
     <View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -732,8 +699,6 @@ exports[`Advanced - Device renders fuel of 11210000000000100111 1`] = `
             "opacity": 1,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <View
           style={
@@ -935,7 +900,6 @@ exports[`Advanced - Device renders working status 1`] = `
         Object {},
       ]
     }
-    refreshControl={undefined}
     style={
       Array [
         Object {
@@ -950,16 +914,8 @@ exports[`Advanced - Device renders working status 1`] = `
   >
     <View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -971,8 +927,6 @@ exports[`Advanced - Device renders working status 1`] = `
             "opacity": 1,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <View
           style={
