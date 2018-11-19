@@ -143,7 +143,7 @@ exports[`Country Selector Modal renders with country selected 1`] = `
       style={
         Object {
           "color": "rgba(74,74,74,1)",
-          "fontFamily": "NunitoSans-Regular",
+          "fontFamily": undefined,
           "fontSize": 16,
           "marginLeft": 16,
         }
@@ -1196,11 +1196,11 @@ exports[`Country Selector Modal renders with country selected 1`] = `
                 Object {
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
+                  "borderBottomWidth": 0.5,
                   "borderColor": "rgba(216,216,216,1)",
-                  "borderTopWidth": 1,
                   "flexDirection": "row",
                   "justifyContent": "space-between",
-                  "padding": 19,
+                  "padding": 15,
                 }
               }
             >
@@ -1210,9 +1210,8 @@ exports[`Country Selector Modal renders with country selected 1`] = `
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "rgba(170,170,170,1)",
-                    "fontFamily": "NunitoSans-Regular",
-                    "fontSize": 16,
+                    "color": "rgba(74,74,74,1)",
+                    "fontSize": 17,
                     "lineHeight": 22,
                   }
                 }
@@ -1246,11 +1245,11 @@ exports[`Country Selector Modal renders with country selected 1`] = `
                 Object {
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
+                  "borderBottomWidth": 0.5,
                   "borderColor": "rgba(216,216,216,1)",
-                  "borderTopWidth": 1,
                   "flexDirection": "row",
                   "justifyContent": "space-between",
-                  "padding": 19,
+                  "padding": 15,
                 }
               }
             >
@@ -1260,9 +1259,8 @@ exports[`Country Selector Modal renders with country selected 1`] = `
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "rgba(170,170,170,1)",
-                    "fontFamily": "NunitoSans-Regular",
-                    "fontSize": 16,
+                    "color": "rgba(74,74,74,1)",
+                    "fontSize": 17,
                     "lineHeight": 22,
                   }
                 }
@@ -1296,11 +1294,11 @@ exports[`Country Selector Modal renders with country selected 1`] = `
                 Object {
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
+                  "borderBottomWidth": 0.5,
                   "borderColor": "rgba(216,216,216,1)",
-                  "borderTopWidth": 1,
                   "flexDirection": "row",
                   "justifyContent": "space-between",
-                  "padding": 19,
+                  "padding": 15,
                 }
               }
             >
@@ -1310,9 +1308,8 @@ exports[`Country Selector Modal renders with country selected 1`] = `
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "rgba(170,170,170,1)",
-                    "fontFamily": "NunitoSans-Regular",
-                    "fontSize": 16,
+                    "color": "rgba(74,74,74,1)",
+                    "fontSize": 17,
                     "lineHeight": 22,
                   }
                 }
@@ -1355,11 +1352,11 @@ exports[`Country Selector Modal renders with country selected 1`] = `
                 Object {
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
+                  "borderBottomWidth": 0.5,
                   "borderColor": "rgba(216,216,216,1)",
-                  "borderTopWidth": 1,
                   "flexDirection": "row",
                   "justifyContent": "space-between",
-                  "padding": 19,
+                  "padding": 15,
                 }
               }
             >
@@ -1369,9 +1366,8 @@ exports[`Country Selector Modal renders with country selected 1`] = `
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "rgba(170,170,170,1)",
-                    "fontFamily": "NunitoSans-Regular",
-                    "fontSize": 16,
+                    "color": "rgba(74,74,74,1)",
+                    "fontSize": 17,
                     "lineHeight": 22,
                   }
                 }
@@ -1405,11 +1401,11 @@ exports[`Country Selector Modal renders with country selected 1`] = `
                 Object {
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
+                  "borderBottomWidth": 0.5,
                   "borderColor": "rgba(216,216,216,1)",
-                  "borderTopWidth": 1,
                   "flexDirection": "row",
                   "justifyContent": "space-between",
-                  "padding": 19,
+                  "padding": 15,
                 }
               }
             >
@@ -1419,9 +1415,8 @@ exports[`Country Selector Modal renders with country selected 1`] = `
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "rgba(170,170,170,1)",
-                    "fontFamily": "NunitoSans-Regular",
-                    "fontSize": 16,
+                    "color": "rgba(74,74,74,1)",
+                    "fontSize": 17,
                     "lineHeight": 22,
                   }
                 }
@@ -1455,11 +1450,11 @@ exports[`Country Selector Modal renders with country selected 1`] = `
                 Object {
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
+                  "borderBottomWidth": 0.5,
                   "borderColor": "rgba(216,216,216,1)",
-                  "borderTopWidth": 1,
                   "flexDirection": "row",
                   "justifyContent": "space-between",
-                  "padding": 19,
+                  "padding": 15,
                 }
               }
             >
@@ -1469,9 +1464,8 @@ exports[`Country Selector Modal renders with country selected 1`] = `
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "rgba(170,170,170,1)",
-                    "fontFamily": "NunitoSans-Regular",
-                    "fontSize": 16,
+                    "color": "rgba(74,74,74,1)",
+                    "fontSize": 17,
                     "lineHeight": 22,
                   }
                 }
@@ -1505,11 +1499,11 @@ exports[`Country Selector Modal renders with country selected 1`] = `
                 Object {
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
+                  "borderBottomWidth": 0.5,
                   "borderColor": "rgba(216,216,216,1)",
-                  "borderTopWidth": 1,
                   "flexDirection": "row",
                   "justifyContent": "space-between",
-                  "padding": 19,
+                  "padding": 15,
                 }
               }
             >
@@ -1519,9 +1513,8 @@ exports[`Country Selector Modal renders with country selected 1`] = `
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "rgba(170,170,170,1)",
-                    "fontFamily": "NunitoSans-Regular",
-                    "fontSize": 16,
+                    "color": "rgba(74,74,74,1)",
+                    "fontSize": 17,
                     "lineHeight": 22,
                   }
                 }
@@ -1555,11 +1548,11 @@ exports[`Country Selector Modal renders with country selected 1`] = `
                 Object {
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
+                  "borderBottomWidth": 0.5,
                   "borderColor": "rgba(216,216,216,1)",
-                  "borderTopWidth": 1,
                   "flexDirection": "row",
                   "justifyContent": "space-between",
-                  "padding": 19,
+                  "padding": 15,
                 }
               }
             >
@@ -1569,9 +1562,8 @@ exports[`Country Selector Modal renders with country selected 1`] = `
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "rgba(170,170,170,1)",
-                    "fontFamily": "NunitoSans-Regular",
-                    "fontSize": 16,
+                    "color": "rgba(74,74,74,1)",
+                    "fontSize": 17,
                     "lineHeight": 22,
                   }
                 }
@@ -1605,11 +1597,11 @@ exports[`Country Selector Modal renders with country selected 1`] = `
                 Object {
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
+                  "borderBottomWidth": 0.5,
                   "borderColor": "rgba(216,216,216,1)",
-                  "borderTopWidth": 1,
                   "flexDirection": "row",
                   "justifyContent": "space-between",
-                  "padding": 19,
+                  "padding": 15,
                 }
               }
             >
@@ -1619,9 +1611,8 @@ exports[`Country Selector Modal renders with country selected 1`] = `
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "rgba(170,170,170,1)",
-                    "fontFamily": "NunitoSans-Regular",
-                    "fontSize": 16,
+                    "color": "rgba(74,74,74,1)",
+                    "fontSize": 17,
                     "lineHeight": 22,
                   }
                 }
@@ -1655,11 +1646,11 @@ exports[`Country Selector Modal renders with country selected 1`] = `
                 Object {
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
+                  "borderBottomWidth": 0.5,
                   "borderColor": "rgba(216,216,216,1)",
-                  "borderTopWidth": 1,
                   "flexDirection": "row",
                   "justifyContent": "space-between",
-                  "padding": 19,
+                  "padding": 15,
                 }
               }
             >
@@ -1669,9 +1660,8 @@ exports[`Country Selector Modal renders with country selected 1`] = `
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "rgba(170,170,170,1)",
-                    "fontFamily": "NunitoSans-Regular",
-                    "fontSize": 16,
+                    "color": "rgba(74,74,74,1)",
+                    "fontSize": 17,
                     "lineHeight": 22,
                   }
                 }
@@ -1745,7 +1735,7 @@ exports[`Country Selector Modal renders without country selected 1`] = `
       style={
         Object {
           "color": "rgba(74,74,74,1)",
-          "fontFamily": "NunitoSans-Regular",
+          "fontFamily": undefined,
           "fontSize": 16,
           "marginLeft": 16,
         }
@@ -2798,11 +2788,11 @@ exports[`Country Selector Modal renders without country selected 1`] = `
                 Object {
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
+                  "borderBottomWidth": 0.5,
                   "borderColor": "rgba(216,216,216,1)",
-                  "borderTopWidth": 1,
                   "flexDirection": "row",
                   "justifyContent": "space-between",
-                  "padding": 19,
+                  "padding": 15,
                 }
               }
             >
@@ -2812,9 +2802,8 @@ exports[`Country Selector Modal renders without country selected 1`] = `
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "rgba(170,170,170,1)",
-                    "fontFamily": "NunitoSans-Regular",
-                    "fontSize": 16,
+                    "color": "rgba(74,74,74,1)",
+                    "fontSize": 17,
                     "lineHeight": 22,
                   }
                 }
@@ -2848,11 +2837,11 @@ exports[`Country Selector Modal renders without country selected 1`] = `
                 Object {
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
+                  "borderBottomWidth": 0.5,
                   "borderColor": "rgba(216,216,216,1)",
-                  "borderTopWidth": 1,
                   "flexDirection": "row",
                   "justifyContent": "space-between",
-                  "padding": 19,
+                  "padding": 15,
                 }
               }
             >
@@ -2862,9 +2851,8 @@ exports[`Country Selector Modal renders without country selected 1`] = `
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "rgba(170,170,170,1)",
-                    "fontFamily": "NunitoSans-Regular",
-                    "fontSize": 16,
+                    "color": "rgba(74,74,74,1)",
+                    "fontSize": 17,
                     "lineHeight": 22,
                   }
                 }
@@ -2898,11 +2886,11 @@ exports[`Country Selector Modal renders without country selected 1`] = `
                 Object {
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
+                  "borderBottomWidth": 0.5,
                   "borderColor": "rgba(216,216,216,1)",
-                  "borderTopWidth": 1,
                   "flexDirection": "row",
                   "justifyContent": "space-between",
-                  "padding": 19,
+                  "padding": 15,
                 }
               }
             >
@@ -2912,9 +2900,8 @@ exports[`Country Selector Modal renders without country selected 1`] = `
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "rgba(170,170,170,1)",
-                    "fontFamily": "NunitoSans-Regular",
-                    "fontSize": 16,
+                    "color": "rgba(74,74,74,1)",
+                    "fontSize": 17,
                     "lineHeight": 22,
                   }
                 }
@@ -2948,11 +2935,11 @@ exports[`Country Selector Modal renders without country selected 1`] = `
                 Object {
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
+                  "borderBottomWidth": 0.5,
                   "borderColor": "rgba(216,216,216,1)",
-                  "borderTopWidth": 1,
                   "flexDirection": "row",
                   "justifyContent": "space-between",
-                  "padding": 19,
+                  "padding": 15,
                 }
               }
             >
@@ -2962,9 +2949,8 @@ exports[`Country Selector Modal renders without country selected 1`] = `
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "rgba(170,170,170,1)",
-                    "fontFamily": "NunitoSans-Regular",
-                    "fontSize": 16,
+                    "color": "rgba(74,74,74,1)",
+                    "fontSize": 17,
                     "lineHeight": 22,
                   }
                 }
@@ -2998,11 +2984,11 @@ exports[`Country Selector Modal renders without country selected 1`] = `
                 Object {
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
+                  "borderBottomWidth": 0.5,
                   "borderColor": "rgba(216,216,216,1)",
-                  "borderTopWidth": 1,
                   "flexDirection": "row",
                   "justifyContent": "space-between",
-                  "padding": 19,
+                  "padding": 15,
                 }
               }
             >
@@ -3012,9 +2998,8 @@ exports[`Country Selector Modal renders without country selected 1`] = `
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "rgba(170,170,170,1)",
-                    "fontFamily": "NunitoSans-Regular",
-                    "fontSize": 16,
+                    "color": "rgba(74,74,74,1)",
+                    "fontSize": 17,
                     "lineHeight": 22,
                   }
                 }
@@ -3048,11 +3033,11 @@ exports[`Country Selector Modal renders without country selected 1`] = `
                 Object {
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
+                  "borderBottomWidth": 0.5,
                   "borderColor": "rgba(216,216,216,1)",
-                  "borderTopWidth": 1,
                   "flexDirection": "row",
                   "justifyContent": "space-between",
-                  "padding": 19,
+                  "padding": 15,
                 }
               }
             >
@@ -3062,9 +3047,8 @@ exports[`Country Selector Modal renders without country selected 1`] = `
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "rgba(170,170,170,1)",
-                    "fontFamily": "NunitoSans-Regular",
-                    "fontSize": 16,
+                    "color": "rgba(74,74,74,1)",
+                    "fontSize": 17,
                     "lineHeight": 22,
                   }
                 }
@@ -3098,11 +3082,11 @@ exports[`Country Selector Modal renders without country selected 1`] = `
                 Object {
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
+                  "borderBottomWidth": 0.5,
                   "borderColor": "rgba(216,216,216,1)",
-                  "borderTopWidth": 1,
                   "flexDirection": "row",
                   "justifyContent": "space-between",
-                  "padding": 19,
+                  "padding": 15,
                 }
               }
             >
@@ -3112,9 +3096,8 @@ exports[`Country Selector Modal renders without country selected 1`] = `
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "rgba(170,170,170,1)",
-                    "fontFamily": "NunitoSans-Regular",
-                    "fontSize": 16,
+                    "color": "rgba(74,74,74,1)",
+                    "fontSize": 17,
                     "lineHeight": 22,
                   }
                 }
@@ -3148,11 +3131,11 @@ exports[`Country Selector Modal renders without country selected 1`] = `
                 Object {
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
+                  "borderBottomWidth": 0.5,
                   "borderColor": "rgba(216,216,216,1)",
-                  "borderTopWidth": 1,
                   "flexDirection": "row",
                   "justifyContent": "space-between",
-                  "padding": 19,
+                  "padding": 15,
                 }
               }
             >
@@ -3162,9 +3145,8 @@ exports[`Country Selector Modal renders without country selected 1`] = `
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "rgba(170,170,170,1)",
-                    "fontFamily": "NunitoSans-Regular",
-                    "fontSize": 16,
+                    "color": "rgba(74,74,74,1)",
+                    "fontSize": 17,
                     "lineHeight": 22,
                   }
                 }
@@ -3198,11 +3180,11 @@ exports[`Country Selector Modal renders without country selected 1`] = `
                 Object {
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
+                  "borderBottomWidth": 0.5,
                   "borderColor": "rgba(216,216,216,1)",
-                  "borderTopWidth": 1,
                   "flexDirection": "row",
                   "justifyContent": "space-between",
-                  "padding": 19,
+                  "padding": 15,
                 }
               }
             >
@@ -3212,9 +3194,8 @@ exports[`Country Selector Modal renders without country selected 1`] = `
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "rgba(170,170,170,1)",
-                    "fontFamily": "NunitoSans-Regular",
-                    "fontSize": 16,
+                    "color": "rgba(74,74,74,1)",
+                    "fontSize": 17,
                     "lineHeight": 22,
                   }
                 }
@@ -3248,11 +3229,11 @@ exports[`Country Selector Modal renders without country selected 1`] = `
                 Object {
                   "alignItems": "center",
                   "backgroundColor": "#FFFFFF",
+                  "borderBottomWidth": 0.5,
                   "borderColor": "rgba(216,216,216,1)",
-                  "borderTopWidth": 1,
                   "flexDirection": "row",
                   "justifyContent": "space-between",
-                  "padding": 19,
+                  "padding": 15,
                 }
               }
             >
@@ -3262,9 +3243,8 @@ exports[`Country Selector Modal renders without country selected 1`] = `
                 ellipsizeMode="tail"
                 style={
                   Object {
-                    "color": "rgba(170,170,170,1)",
-                    "fontFamily": "NunitoSans-Regular",
-                    "fontSize": 16,
+                    "color": "rgba(74,74,74,1)",
+                    "fontSize": 17,
                     "lineHeight": 22,
                   }
                 }

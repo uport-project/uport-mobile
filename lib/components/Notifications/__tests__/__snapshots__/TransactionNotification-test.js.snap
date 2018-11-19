@@ -57,7 +57,7 @@ exports[`Transaction Notification renders an send ether notification correctly 1
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 22,
             "lineHeight": 30,
             "padding": 19,
@@ -192,7 +192,6 @@ exports[`Transaction Notification renders an send ether notification correctly 1
         Array [
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
             "fontSize": 20,
             "lineHeight": 27,
             "textAlign": "center",
@@ -212,7 +211,6 @@ exports[`Transaction Notification renders an send ether notification correctly 1
       style={
         Object {
           "color": "rgba(74,74,74,1)",
-          "fontFamily": "NunitoSans-Light",
           "fontSize": 16,
           "lineHeight": 22,
           "textAlign": "center",
@@ -395,7 +393,7 @@ exports[`Transaction Notification renders an transaction notification correctly 
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 22,
             "lineHeight": 30,
             "padding": 19,
@@ -530,7 +528,6 @@ exports[`Transaction Notification renders an transaction notification correctly 
         Array [
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
             "fontSize": 20,
             "lineHeight": 27,
             "textAlign": "center",
@@ -550,7 +547,6 @@ exports[`Transaction Notification renders an transaction notification correctly 
       style={
         Object {
           "color": "rgba(74,74,74,1)",
-          "fontFamily": "NunitoSans-Light",
           "fontSize": 16,
           "lineHeight": 22,
           "textAlign": "center",
@@ -733,7 +729,7 @@ exports[`Transaction Notification renders an transaction notification that has b
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 22,
             "lineHeight": 30,
             "padding": 19,
@@ -868,7 +864,6 @@ exports[`Transaction Notification renders an transaction notification that has b
         Array [
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
             "fontSize": 20,
             "lineHeight": 27,
             "textAlign": "center",
@@ -888,7 +883,6 @@ exports[`Transaction Notification renders an transaction notification that has b
       style={
         Object {
           "color": "rgba(74,74,74,1)",
-          "fontFamily": "NunitoSans-Light",
           "fontSize": 16,
           "lineHeight": 22,
           "textAlign": "center",
@@ -958,7 +952,7 @@ exports[`Transaction Notification renders an transaction notification that has b
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 22,
             "lineHeight": 30,
             "padding": 19,
@@ -1093,7 +1087,6 @@ exports[`Transaction Notification renders an transaction notification that has b
         Array [
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
             "fontSize": 20,
             "lineHeight": 27,
             "textAlign": "center",
@@ -1113,7 +1106,6 @@ exports[`Transaction Notification renders an transaction notification that has b
       style={
         Object {
           "color": "rgba(74,74,74,1)",
-          "fontFamily": "NunitoSans-Light",
           "fontSize": 16,
           "lineHeight": 22,
           "textAlign": "center",
@@ -1183,7 +1175,7 @@ exports[`Transaction Notification renders an txhash notification correctly 1`] =
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 22,
             "lineHeight": 30,
             "padding": 19,
@@ -1318,7 +1310,6 @@ exports[`Transaction Notification renders an txhash notification correctly 1`] =
         Array [
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
             "fontSize": 20,
             "lineHeight": 27,
             "textAlign": "center",
@@ -1338,7 +1329,6 @@ exports[`Transaction Notification renders an txhash notification correctly 1`] =
       style={
         Object {
           "color": "rgba(74,74,74,1)",
-          "fontFamily": "NunitoSans-Light",
           "fontSize": 16,
           "lineHeight": 22,
           "textAlign": "center",
@@ -1521,7 +1511,7 @@ exports[`Transaction Notification renders an update uport transaction notificati
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 22,
             "lineHeight": 30,
             "padding": 19,
@@ -1656,7 +1646,6 @@ exports[`Transaction Notification renders an update uport transaction notificati
         Array [
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
             "fontSize": 20,
             "lineHeight": 27,
             "textAlign": "center",
@@ -1676,7 +1665,6 @@ exports[`Transaction Notification renders an update uport transaction notificati
       style={
         Object {
           "color": "rgba(74,74,74,1)",
-          "fontFamily": "NunitoSans-Light",
           "fontSize": 16,
           "lineHeight": 22,
           "textAlign": "center",

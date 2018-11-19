@@ -28,51 +28,6 @@ exports[`Scanner renders as disabled by default 1`] = `
         }
       }
     >
-<<<<<<< HEAD
-      Cancel
-    </Text>
-  </TouchableOpacity>
-</Component>
-`;
-
-exports[`Scanner renders correctly when enabled 1`] = `
-<div
-  captureAudio={false}
-  onBarCodeRead={[Function]}
-  style={
-    Object {
-      "alignItems": "center",
-      "flex": 1,
-      "justifyContent": "flex-end",
-    }
-  }
->
-  <View
-    accessible={true}
-    isTVSelectable={true}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "rgba(0,0,0,0.1)",
-        "borderRadius": 5,
-        "justifyContent": "center",
-        "marginBottom": 30,
-        "opacity": 1,
-        "padding": 10,
-      }
-    }
-  >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-=======
       <Text
         accessible={true}
         allowFontScaling={true}
@@ -2420,7 +2375,6 @@ exports[`Scanner renders correctly when enabled 1`] = `
       />
     </Component>
     <Component
->>>>>>> Updating tests
       style={
         Object {
           "backgroundColor": "black",
@@ -4906,19 +4860,6 @@ exports[`Scanner renders correctly when enabled 1`] = `
           }
         }
       >
-<<<<<<< HEAD
-        To scan QR codes, go to your phone's settings to allow camera access
-      </Text>
-      <View
-        accessible={true}
-        isTVSelectable={true}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-=======
         <TouchableOpacity
           activeOpacity={0.2}
           onPress={[Function]}
@@ -4932,7 +4873,6 @@ exports[`Scanner renders correctly when enabled 1`] = `
         </TouchableOpacity>
       </Component>
       <Component
->>>>>>> Updating tests
         style={
           Object {
             "alignItems": "center",

@@ -105,10 +105,23 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
             allowFontScaling={true}
             ellipsizeMode="tail"
             style={
+<<<<<<< HEAD
               Object {
                 "color": "rgba(92,80,202,1)",
                 "fontSize": 16,
               }
+=======
+              Array [
+                Object {
+                  "color": "rgba(138,155,161,1.0)",
+                  "fontFamily": undefined,
+                  "fontSize": 13,
+                },
+                Object {
+                  "color": "rgba(255, 255, 255, 0.7)",
+                },
+              ]
+>>>>>>> Fix tests after merge
             }
           >
             Close
@@ -591,6 +604,7 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
             }
           }
         >
+<<<<<<< HEAD
            DETAILS 
         </Text>
         <View
@@ -606,6 +620,23 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
             Object {
               "opacity": 1,
               "padding": 3,
+=======
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "rgba(138,155,161,1.0)",
+                  "fontFamily": undefined,
+                  "fontSize": 13,
+                },
+                Object {
+                  "color": "rgba(255, 255, 255, 0.7)",
+                },
+              ]
+>>>>>>> Fix tests after merge
             }
           }
         >
@@ -1091,11 +1122,37 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
             ]
           }
         >
+<<<<<<< HEAD
           You have never 
           interacted
            with 
           this dApp
         </Text>
+=======
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "rgba(138,155,161,1.0)",
+                  "fontFamily": undefined,
+                  "fontSize": 13,
+                },
+                Object {
+                  "color": "rgba(255, 255, 255, 0.7)",
+                },
+              ]
+            }
+          >
+            You have never 
+            interacted
+             with 
+            this dApp
+          </Text>
+        </View>
+>>>>>>> Fix tests after merge
       </View>
     </View>
   </View>
@@ -1296,11 +1353,15 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
                   Array [
                     Object {
 <<<<<<< HEAD
+<<<<<<< HEAD
                       "borderRadius": 3,
                       "height": 70,
                       "width": 70,
 =======
                       "fontFamily": "NunitoSans-Regular",
+=======
+                      "fontFamily": undefined,
+>>>>>>> Fix tests after merge
                       "fontSize": 15,
                       "textAlign": "center",
                     },
@@ -1499,6 +1560,7 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
             }
           }
         >
+<<<<<<< HEAD
            DETAILS 
         </Text>
         <View
@@ -1514,6 +1576,23 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
             Object {
               "opacity": 1,
               "padding": 3,
+=======
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "rgba(138,155,161,1.0)",
+                  "fontFamily": undefined,
+                  "fontSize": 13,
+                },
+                Object {
+                  "color": "rgba(255, 255, 255, 0.7)",
+                },
+              ]
+>>>>>>> Fix tests after merge
             }
           }
         >
@@ -1702,7 +1781,7 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
                 style={
                   Array [
                     Object {
-                      "fontFamily": "NunitoSans-Regular",
+                      "fontFamily": undefined,
                       "fontSize": 15,
                       "textAlign": "center",
                     },
@@ -1854,6 +1933,7 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
             style={
               Array [
                 Object {
+<<<<<<< HEAD
                   "fontFamily": "NunitoSans-Bold",
                   "fontSize": 18,
                   "textAlign": "center",
@@ -1863,6 +1943,55 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
                 },
                 Object {},
               ]
+=======
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": undefined,
+                    "fontFamily": undefined,
+                    "fontSize": 18,
+                    "letterSpacing": 1,
+                    "lineHeight": 24,
+                    "paddingRight": 5,
+                  }
+                }
+              >
+                Error:
+              </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": undefined,
+                    "fontFamily": undefined,
+                    "fontSize": 12,
+                    "letterSpacing": 1,
+                    "lineHeight": 15,
+                  }
+                }
+              >
+                Unverifiable ropsten address
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexBasis": 40,
+                "flexDirection": "row",
+                "justifyContent": "center",
+              }
+>>>>>>> Fix tests after merge
             }
           >
 <<<<<<< HEAD
@@ -1937,7 +2066,7 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
             Array [
               Object {
                 "color": "rgba(138,155,161,1.0)",
-                "fontFamily": "NunitoSans-Regular",
+                "fontFamily": undefined,
                 "fontSize": 13,
               },
               Object {
@@ -2092,7 +2221,7 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Regular",
+                    "fontFamily": undefined,
                     "fontSize": 15,
                     "textAlign": "center",
                   },
@@ -2329,7 +2458,7 @@ exports[`TransactionCard renders correctly with destination being invalid destin
             Array [
               Object {
                 "color": "rgba(138,155,161,1.0)",
-                "fontFamily": "NunitoSans-Regular",
+                "fontFamily": undefined,
                 "fontSize": 13,
               },
               Object {
@@ -2484,7 +2613,7 @@ exports[`TransactionCard renders correctly with destination being invalid destin
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Regular",
+                    "fontFamily": undefined,
                     "fontSize": 15,
                     "textAlign": "center",
                   },
@@ -2659,7 +2788,7 @@ exports[`TransactionCard renders correctly with destination being invalid destin
               style={
                 Object {
                   "color": undefined,
-                  "fontFamily": "NunitoSans-Bold",
+                  "fontFamily": undefined,
                   "fontSize": 18,
                   "letterSpacing": 1,
                   "lineHeight": 24,
@@ -2676,7 +2805,7 @@ exports[`TransactionCard renders correctly with destination being invalid destin
               style={
                 Object {
                   "color": undefined,
-                  "fontFamily": "NunitoSans-Bold",
+                  "fontFamily": undefined,
                   "fontSize": 12,
                   "letterSpacing": 1,
                   "lineHeight": 15,
@@ -2762,7 +2891,7 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
             Array [
               Object {
                 "color": "rgba(138,155,161,1.0)",
-                "fontFamily": "NunitoSans-Regular",
+                "fontFamily": undefined,
                 "fontSize": 13,
               },
               Object {
@@ -2917,7 +3046,7 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Regular",
+                    "fontFamily": undefined,
                     "fontSize": 15,
                     "textAlign": "center",
                   },
@@ -3212,10 +3341,23 @@ exports[`TransactionCard renders correctly with only request 1`] = `
             allowFontScaling={true}
             ellipsizeMode="tail"
             style={
+<<<<<<< HEAD
               Object {
                 "color": "rgba(92,80,202,1)",
                 "fontSize": 16,
               }
+=======
+              Array [
+                Object {
+                  "color": "rgba(138,155,161,1.0)",
+                  "fontFamily": undefined,
+                  "fontSize": 13,
+                },
+                Object {
+                  "color": "rgba(255, 255, 255, 0.7)",
+                },
+              ]
+>>>>>>> Fix tests after merge
             }
           >
             Close
@@ -4120,10 +4262,23 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
             allowFontScaling={true}
             ellipsizeMode="tail"
             style={
+<<<<<<< HEAD
               Object {
                 "color": "rgba(92,80,202,1)",
                 "fontSize": 16,
               }
+=======
+              Array [
+                Object {
+                  "color": "rgba(138,155,161,1.0)",
+                  "fontFamily": undefined,
+                  "fontSize": 13,
+                },
+                Object {
+                  "color": "rgba(255, 255, 255, 0.7)",
+                },
+              ]
+>>>>>>> Fix tests after merge
             }
           >
             Close
@@ -4753,10 +4908,23 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
             allowFontScaling={true}
             ellipsizeMode="tail"
             style={
+<<<<<<< HEAD
               Object {
                 "color": "rgba(92,80,202,1)",
                 "fontSize": 16,
               }
+=======
+              Array [
+                Object {
+                  "color": "rgba(138,155,161,1.0)",
+                  "fontFamily": undefined,
+                  "fontSize": 13,
+                },
+                Object {
+                  "color": "rgba(255, 255, 255, 0.7)",
+                },
+              ]
+>>>>>>> Fix tests after merge
             }
           >
             Close
@@ -5387,10 +5555,23 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
             allowFontScaling={true}
             ellipsizeMode="tail"
             style={
+<<<<<<< HEAD
               Object {
                 "color": "rgba(92,80,202,1)",
                 "fontSize": 16,
               }
+=======
+              Array [
+                Object {
+                  "color": "rgba(138,155,161,1.0)",
+                  "fontFamily": undefined,
+                  "fontSize": 13,
+                },
+                Object {
+                  "color": "rgba(255, 255, 255, 0.7)",
+                },
+              ]
+>>>>>>> Fix tests after merge
             }
           >
             Close

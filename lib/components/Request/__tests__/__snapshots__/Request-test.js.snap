@@ -51,7 +51,7 @@ exports[`Request Component renders a request without a type 1`] = `
           Object {
             "color": "rgba(92,80,202,1)",
             "flex": 1,
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 20,
             "textAlign": "center",
           }
@@ -148,7 +148,7 @@ exports[`Request Component returns a AttestationCard when the request type is at
           Object {
             "color": "rgba(92,80,202,1)",
             "flex": 1,
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 20,
             "textAlign": "center",
           }
@@ -245,7 +245,7 @@ exports[`Request Component returns a AttestationCard when the request type is at
           Object {
             "color": "rgba(92,80,202,1)",
             "flex": 1,
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 20,
             "textAlign": "center",
           }
@@ -342,7 +342,7 @@ exports[`Request Component returns a ConnectionCard when the request type is con
           Object {
             "color": "rgba(92,80,202,1)",
             "flex": 1,
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 20,
             "textAlign": "center",
           }
@@ -439,7 +439,7 @@ exports[`Request Component returns a ConnectionCard when the request type is con
           Object {
             "color": "rgba(92,80,202,1)",
             "flex": 1,
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 20,
             "textAlign": "center",
           }

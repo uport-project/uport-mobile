@@ -6,7 +6,6 @@ exports[`OnboardingStart renders Onboarding Start screen 1`] = `
     Object {
       "backgroundColor": "white",
       "flex": 1,
-      "paddingTop": 10,
     }
   }
 >
@@ -34,7 +33,6 @@ exports[`OnboardingStart renders Onboarding Start screen 1`] = `
       Object {
         "backgroundColor": "white",
         "flex": 1,
-        "paddingTop": 10,
       }
     }
   >
@@ -65,7 +63,7 @@ exports[`OnboardingStart renders Onboarding Start screen 1`] = `
             undefined,
             Object {
               "color": "#3c3a49",
-              "fontFamily": "NunitoSans-Regular",
+              "fontFamily": undefined,
               "fontSize": 24,
               "lineHeight": 30,
               "marginBottom": 40,
@@ -176,7 +174,7 @@ exports[`OnboardingStart renders Onboarding Start screen 1`] = `
                   Array [
                     Object {
                       "color": "rgba(54,184,123,1)",
-                      "fontFamily": "NunitoSans-Bold",
+                      "fontFamily": undefined,
                       "fontSize": 18,
                       "lineHeight": 25,
                       "padding": 3,
@@ -242,7 +240,7 @@ exports[`OnboardingStart renders Onboarding Start screen 1`] = `
                   },
                   Object {
                     "color": "rgba(92,80,202,1)",
-                    "fontFamily": "NunitoSans-Regular",
+                    "fontFamily": undefined,
                     "fontSize": 18,
                     "lineHeight": 25,
                   },
