@@ -32,6 +32,7 @@ import com.oblador.vectoricons.VectorIconsPackage;
 import com.poberwong.launcher.IntentLauncherPackage;
 import com.reactnativenavigation.NavigationApplication;
 import com.uport.sdk.react.signer.NativeSignerPackage;
+import com.airbnb.android.react.lottie.LottiePackage;
 
 import org.reactnative.camera.RNCameraPackage;
 
@@ -85,7 +86,8 @@ public class MainApplication extends NavigationApplication {
                 new MySNSPackage(),
                 new IntentLauncherPackage(),
                 new NativeSignerPackage(),
-                new RNFirebaseAnalyticsPackage()
+                new RNFirebaseAnalyticsPackage(),
+                new LottiePackage()
         );
     }
 

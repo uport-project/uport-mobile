@@ -272,6 +272,7 @@ dependencies {
         exclude group: "com.google.android.gms"
         exclude group: "com.facebook.infer.annotation"
     }
+    implementation project(':lottie-react-native')
     implementation project(':react-native-intent-launcher')
 
     implementation project(':react-native-signer-wrapper')
