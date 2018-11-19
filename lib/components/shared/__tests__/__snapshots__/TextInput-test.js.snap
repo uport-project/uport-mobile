@@ -38,7 +38,6 @@ exports[`renders TextInput with label 1`] = `
       allowFontScaling={true}
       keyboardAppearance="light"
       label="Test"
-      multiline={undefined}
       placeholder="Placeholder"
       placeholderTextColor="rgba(224,223,230, 1)"
       style={
@@ -80,7 +79,6 @@ exports[`renders TextInput without label 1`] = `
     <TextInput
       allowFontScaling={true}
       keyboardAppearance="light"
-      multiline={undefined}
       placeholder="Placeholder"
       placeholderTextColor="rgba(224,223,230, 1)"
       style={

@@ -439,15 +439,8 @@ Users with questions, complaints or claims with respect to the Service may conta
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -477,8 +470,6 @@ Users with questions, complaints or claims with respect to the Service may conta
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}

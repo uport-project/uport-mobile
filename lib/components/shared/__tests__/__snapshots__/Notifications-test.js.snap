@@ -4,16 +4,8 @@ exports[`Notifications renders nothing with no unread notificatios 1`] = `null`;
 
 exports[`Notifications renders the amount of unread notifications 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -32,8 +24,6 @@ exports[`Notifications renders the amount of unread notifications 1`] = `
       "width": 64,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
@@ -83,16 +73,8 @@ exports[`Notifications renders the amount of unread notifications 1`] = `
 
 exports[`Notifications renders the singular amount of unread notifications 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -111,8 +93,6 @@ exports[`Notifications renders the singular amount of unread notifications 1`] =
       "width": 64,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={

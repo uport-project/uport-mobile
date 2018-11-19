@@ -2,16 +2,8 @@
 
 exports[`Connection Notification renders an connection notification correctly 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -36,8 +28,6 @@ exports[`Connection Notification renders an connection notification correctly 1`
       "shadowRadius": 12,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
@@ -177,15 +167,8 @@ exports[`Connection Notification renders an connection notification correctly 1`
       }
     >
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -213,8 +196,6 @@ exports[`Connection Notification renders an connection notification correctly 1`
             ],
           ]
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Text
           accessible={true}
@@ -238,15 +219,8 @@ exports[`Connection Notification renders an connection notification correctly 1`
         </Text>
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -272,8 +246,6 @@ exports[`Connection Notification renders an connection notification correctly 1`
             ],
           ]
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Text
           accessible={true}
@@ -303,16 +275,8 @@ exports[`Connection Notification renders an connection notification correctly 1`
 
 exports[`Connection Notification renders an connection notification that has been authorized correctly 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -337,8 +301,6 @@ exports[`Connection Notification renders an connection notification that has bee
       "shadowRadius": 12,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
@@ -474,16 +436,8 @@ exports[`Connection Notification renders an connection notification that has bee
 
 exports[`Connection Notification renders an connection notification that has been canceled correctly 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -508,8 +462,6 @@ exports[`Connection Notification renders an connection notification that has bee
       "shadowRadius": 12,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={

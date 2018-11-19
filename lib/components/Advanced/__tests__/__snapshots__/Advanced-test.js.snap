@@ -19,7 +19,6 @@ exports[`hd wallet renders Advanced screen 1`] = `
         Object {},
       ]
     }
-    refreshControl={undefined}
     style={
       Array [
         Object {
@@ -34,16 +33,8 @@ exports[`hd wallet renders Advanced screen 1`] = `
   >
     <View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -55,8 +46,6 @@ exports[`hd wallet renders Advanced screen 1`] = `
             "opacity": 1,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <View
           style={
@@ -126,16 +115,8 @@ exports[`hd wallet renders Advanced screen 1`] = `
         </View>
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -147,8 +128,6 @@ exports[`hd wallet renders Advanced screen 1`] = `
             "opacity": 1,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <View
           style={
@@ -218,16 +197,8 @@ exports[`hd wallet renders Advanced screen 1`] = `
         </View>
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -239,8 +210,6 @@ exports[`hd wallet renders Advanced screen 1`] = `
             "opacity": 1,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <View
           style={
@@ -310,16 +279,8 @@ exports[`hd wallet renders Advanced screen 1`] = `
         </View>
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -331,8 +292,6 @@ exports[`hd wallet renders Advanced screen 1`] = `
             "opacity": 1,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <View
           style={
@@ -402,16 +361,8 @@ exports[`hd wallet renders Advanced screen 1`] = `
         </View>
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -423,8 +374,6 @@ exports[`hd wallet renders Advanced screen 1`] = `
             "opacity": 1,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <View
           style={
@@ -520,7 +469,6 @@ exports[`legacy wallet renders Advanced screen without identity hub 1`] = `
         Object {},
       ]
     }
-    refreshControl={undefined}
     style={
       Array [
         Object {
@@ -535,16 +483,8 @@ exports[`legacy wallet renders Advanced screen without identity hub 1`] = `
   >
     <View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -556,8 +496,6 @@ exports[`legacy wallet renders Advanced screen without identity hub 1`] = `
             "opacity": 1,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <View
           style={
@@ -627,16 +565,8 @@ exports[`legacy wallet renders Advanced screen without identity hub 1`] = `
         </View>
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -648,8 +578,6 @@ exports[`legacy wallet renders Advanced screen without identity hub 1`] = `
             "opacity": 1,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <View
           style={
@@ -719,16 +647,8 @@ exports[`legacy wallet renders Advanced screen without identity hub 1`] = `
         </View>
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -740,8 +660,6 @@ exports[`legacy wallet renders Advanced screen without identity hub 1`] = `
             "opacity": 1,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <View
           style={
@@ -811,16 +729,8 @@ exports[`legacy wallet renders Advanced screen without identity hub 1`] = `
         </View>
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -832,8 +742,6 @@ exports[`legacy wallet renders Advanced screen without identity hub 1`] = `
             "opacity": 1,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <View
           style={
@@ -903,16 +811,8 @@ exports[`legacy wallet renders Advanced screen without identity hub 1`] = `
         </View>
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -924,8 +824,6 @@ exports[`legacy wallet renders Advanced screen without identity hub 1`] = `
             "opacity": 1,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <View
           style={

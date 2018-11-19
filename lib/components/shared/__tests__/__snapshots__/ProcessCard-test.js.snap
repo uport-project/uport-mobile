@@ -84,7 +84,6 @@ exports[`disabled button error 1`] = `
     enabled={true}
     keyboardVerticalOffset={0}
     onLayout={[Function]}
-    style={undefined}
   >
     <View
       style={
@@ -115,15 +114,8 @@ exports[`disabled button error 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -153,8 +145,6 @@ exports[`disabled button error 1`] = `
                 ],
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -245,7 +235,6 @@ exports[`disabled button invalid state 1`] = `
     enabled={true}
     keyboardVerticalOffset={0}
     onLayout={[Function]}
-    style={undefined}
   >
     <View
       style={
@@ -276,15 +265,8 @@ exports[`disabled button invalid state 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -308,8 +290,6 @@ exports[`disabled button invalid state 1`] = `
                 },
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -432,7 +412,6 @@ exports[`disabled button offline 1`] = `
     enabled={true}
     keyboardVerticalOffset={0}
     onLayout={[Function]}
-    style={undefined}
   >
     <View
       style={
@@ -463,15 +442,8 @@ exports[`disabled button offline 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -501,8 +473,6 @@ exports[`disabled button offline 1`] = `
                 ],
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -615,7 +585,6 @@ exports[`disabled button working 1`] = `
     enabled={true}
     keyboardVerticalOffset={0}
     onLayout={[Function]}
-    style={undefined}
   >
     <View
       style={
@@ -646,15 +615,8 @@ exports[`disabled button working 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -678,8 +640,6 @@ exports[`disabled button working 1`] = `
                 },
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -813,7 +773,6 @@ exports[`disabled button working and message 1`] = `
     enabled={true}
     keyboardVerticalOffset={0}
     onLayout={[Function]}
-    style={undefined}
   >
     <View
       style={
@@ -844,15 +803,8 @@ exports[`disabled button working and message 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -876,8 +828,6 @@ exports[`disabled button working and message 1`] = `
                 },
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -970,7 +920,6 @@ exports[`event handling calls onComplete if onProcess returns true 1`] = `
     enabled={true}
     keyboardVerticalOffset={0}
     onLayout={[Function]}
-    style={undefined}
   >
     <View
       style={
@@ -1001,15 +950,8 @@ exports[`event handling calls onComplete if onProcess returns true 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -1039,8 +981,6 @@ exports[`event handling calls onComplete if onProcess returns true 1`] = `
                 ],
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -1131,7 +1071,6 @@ exports[`event handling calls onComplete if onProcess returns true 2`] = `
     enabled={true}
     keyboardVerticalOffset={0}
     onLayout={[Function]}
-    style={undefined}
   >
     <View
       style={
@@ -1162,15 +1101,8 @@ exports[`event handling calls onComplete if onProcess returns true 2`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -1200,8 +1132,6 @@ exports[`event handling calls onComplete if onProcess returns true 2`] = `
                 ],
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -1292,7 +1222,6 @@ exports[`event handling calls onContinue if no onProcess 1`] = `
     enabled={true}
     keyboardVerticalOffset={0}
     onLayout={[Function]}
-    style={undefined}
   >
     <View
       style={
@@ -1323,15 +1252,8 @@ exports[`event handling calls onContinue if no onProcess 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -1361,8 +1283,6 @@ exports[`event handling calls onContinue if no onProcess 1`] = `
                 ],
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -1453,7 +1373,6 @@ exports[`event handling calls onContinue if no onProcess 2`] = `
     enabled={true}
     keyboardVerticalOffset={0}
     onLayout={[Function]}
-    style={undefined}
   >
     <View
       style={
@@ -1484,15 +1403,8 @@ exports[`event handling calls onContinue if no onProcess 2`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -1522,8 +1434,6 @@ exports[`event handling calls onContinue if no onProcess 2`] = `
                 ],
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -1614,7 +1524,6 @@ exports[`event handling calls only onProcess 1`] = `
     enabled={true}
     keyboardVerticalOffset={0}
     onLayout={[Function]}
-    style={undefined}
   >
     <View
       style={
@@ -1645,15 +1554,8 @@ exports[`event handling calls only onProcess 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -1683,8 +1585,6 @@ exports[`event handling calls only onProcess 1`] = `
                 ],
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -1775,7 +1675,6 @@ exports[`event handling calls only onProcess 2`] = `
     enabled={true}
     keyboardVerticalOffset={0}
     onLayout={[Function]}
-    style={undefined}
   >
     <View
       style={
@@ -1806,15 +1705,8 @@ exports[`event handling calls only onProcess 2`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -1844,8 +1736,6 @@ exports[`event handling calls only onProcess 2`] = `
                 ],
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -1936,7 +1826,6 @@ exports[`renders continue button 1`] = `
     enabled={true}
     keyboardVerticalOffset={0}
     onLayout={[Function]}
-    style={undefined}
   >
     <View
       style={
@@ -1967,15 +1856,8 @@ exports[`renders continue button 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -2005,8 +1887,6 @@ exports[`renders continue button 1`] = `
                 ],
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -2097,7 +1977,6 @@ exports[`renders skip button if skippable 1`] = `
     enabled={true}
     keyboardVerticalOffset={0}
     onLayout={[Function]}
-    style={undefined}
   >
     <View
       style={
@@ -2128,15 +2007,8 @@ exports[`renders skip button if skippable 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -2166,8 +2038,6 @@ exports[`renders skip button if skippable 1`] = `
                 ],
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -2211,15 +2081,8 @@ exports[`renders skip button if skippable 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -2242,8 +2105,6 @@ exports[`renders skip button if skippable 1`] = `
                 },
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}

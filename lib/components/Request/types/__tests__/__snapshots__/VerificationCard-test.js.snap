@@ -90,9 +90,7 @@ ShallowWrapper {
                 }
               />
             </Text>
-            <ExpirationItem
-              d={undefined}
-            />
+            <ExpirationItem />
           </Component>
         </Component>,
         <Component
@@ -170,9 +168,7 @@ ShallowWrapper {
                   }
                 />
               </Text>
-              <ExpirationItem
-                d={undefined}
-              />
+              <ExpirationItem />
             </Component>,
             false,
           ],
@@ -214,9 +210,7 @@ ShallowWrapper {
                     }
                   />
                 </Text>,
-                <ExpirationItem
-                  d={undefined}
-                />,
+                <ExpirationItem />,
               ],
               "style": Object {
                 "alignItems": "stretch",
@@ -404,9 +398,7 @@ ShallowWrapper {
                   }
                 />
               </Text>
-              <ExpirationItem
-                d={undefined}
-              />
+              <ExpirationItem />
             </Component>
           </Component>,
           <Component
@@ -484,9 +476,7 @@ ShallowWrapper {
                     }
                   />
                 </Text>
-                <ExpirationItem
-                  d={undefined}
-                />
+                <ExpirationItem />
               </Component>,
               false,
             ],
@@ -528,9 +518,7 @@ ShallowWrapper {
                       }
                     />
                   </Text>,
-                  <ExpirationItem
-                    d={undefined}
-                  />,
+                  <ExpirationItem />,
                 ],
                 "style": Object {
                   "alignItems": "stretch",

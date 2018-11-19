@@ -19,7 +19,6 @@ exports[`renders empty menu 1`] = `
         Object {},
       ]
     }
-    refreshControl={undefined}
     style={
       Array [
         Object {
@@ -56,7 +55,6 @@ exports[`renders with MenuItems 1`] = `
         Object {},
       ]
     }
-    refreshControl={undefined}
     style={
       Array [
         Object {
