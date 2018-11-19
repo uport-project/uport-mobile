@@ -478,7 +478,7 @@ Users with questions, complaints or claims with respect to the Service may conta
         style={
           Array [
             Object {
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 18,
               "textAlign": "center",
             },

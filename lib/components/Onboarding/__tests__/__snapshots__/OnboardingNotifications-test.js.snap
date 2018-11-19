@@ -433,7 +433,7 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
@@ -500,7 +500,7 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },

@@ -900,7 +900,7 @@ exports[`ConnectionCard renders correctly with a authorizedAt Request 1`] = `
               "justifyContent": "center",
             },
             Object {
-              "borderRadius": 3,
+              "borderRadius": 92,
               "height": 184,
               "width": 184,
             },
@@ -921,7 +921,7 @@ exports[`ConnectionCard renders correctly with a authorizedAt Request 1`] = `
             Array [
               Object {
                 "fontFamily": "NunitoSans-Regular",
-                "fontSize": 17.5,
+                "fontSize": 15,
                 "textAlign": "center",
               },
               undefined,
@@ -1098,7 +1098,7 @@ exports[`ConnectionCard renders correctly with a cancelled Request 1`] = `
               "justifyContent": "center",
             },
             Object {
-              "borderRadius": 3,
+              "borderRadius": 92,
               "height": 184,
               "width": 184,
             },
@@ -1119,7 +1119,7 @@ exports[`ConnectionCard renders correctly with a cancelled Request 1`] = `
             Array [
               Object {
                 "fontFamily": "NunitoSans-Regular",
-                "fontSize": 17.5,
+                "fontSize": 15,
                 "textAlign": "center",
               },
               undefined,
@@ -1296,7 +1296,7 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
               "justifyContent": "center",
             },
             Object {
-              "borderRadius": 3,
+              "borderRadius": 92,
               "height": 184,
               "width": 184,
             },
@@ -1317,7 +1317,7 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
             Array [
               Object {
                 "fontFamily": "NunitoSans-Regular",
-                "fontSize": 17.5,
+                "fontSize": 15,
                 "textAlign": "center",
               },
               undefined,
@@ -1440,7 +1440,7 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
         style={
           Array [
             Object {
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 18,
               "textAlign": "center",
             },
@@ -1490,7 +1490,7 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
         style={
           Array [
             Object {
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 18,
               "textAlign": "center",
             },
@@ -1589,7 +1589,7 @@ exports[`ConnectionCard renders correctly with a contact that is me 1`] = `
               "justifyContent": "center",
             },
             Object {
-              "borderRadius": 3,
+              "borderRadius": 92,
               "height": 184,
               "width": 184,
             },
@@ -1610,7 +1610,7 @@ exports[`ConnectionCard renders correctly with a contact that is me 1`] = `
             Array [
               Object {
                 "fontFamily": "NunitoSans-Regular",
-                "fontSize": 17.5,
+                "fontSize": 15,
                 "textAlign": "center",
               },
               undefined,
@@ -1787,7 +1787,7 @@ exports[`ConnectionCard renders correctly with a existing Request 1`] = `
               "justifyContent": "center",
             },
             Object {
-              "borderRadius": 3,
+              "borderRadius": 92,
               "height": 184,
               "width": 184,
             },
@@ -1808,7 +1808,7 @@ exports[`ConnectionCard renders correctly with a existing Request 1`] = `
             Array [
               Object {
                 "fontFamily": "NunitoSans-Regular",
-                "fontSize": 17.5,
+                "fontSize": 15,
                 "textAlign": "center",
               },
               undefined,
@@ -1985,7 +1985,7 @@ exports[`ConnectionCard renders correctly with an unkown contact 1`] = `
               "justifyContent": "center",
             },
             Object {
-              "borderRadius": 3,
+              "borderRadius": 92,
               "height": 184,
               "width": 184,
             },
@@ -2006,7 +2006,7 @@ exports[`ConnectionCard renders correctly with an unkown contact 1`] = `
             Array [
               Object {
                 "fontFamily": "NunitoSans-Regular",
-                "fontSize": 17.5,
+                "fontSize": 15,
                 "textAlign": "center",
               },
               undefined,
@@ -2127,7 +2127,7 @@ exports[`ConnectionCard renders correctly with an unkown contact 1`] = `
         style={
           Array [
             Object {
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 18,
               "textAlign": "center",
             },
@@ -2177,7 +2177,7 @@ exports[`ConnectionCard renders correctly with an unkown contact 1`] = `
         style={
           Array [
             Object {
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 18,
               "textAlign": "center",
             },

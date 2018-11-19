@@ -21,7 +21,7 @@ exports[`renders correctly with name and avatar 1`] = `
           },
           Object {
             "backgroundColor": "white",
-            "borderRadius": 3,
+            "borderRadius": 50,
             "height": 96,
             "width": 96,
           },
@@ -38,7 +38,7 @@ exports[`renders correctly with name and avatar 1`] = `
         style={
           Array [
             Object {
-              "borderRadius": 3,
+              "borderRadius": 48,
               "height": 96,
               "width": 96,
             },
@@ -47,7 +47,7 @@ exports[`renders correctly with name and avatar 1`] = `
             },
             Array [
               Object {
-                "borderRadius": 3,
+                "borderRadius": 48,
                 "height": 96,
                 "width": 96,
               },
@@ -106,7 +106,7 @@ exports[`renders correctly with only avatar 1`] = `
           },
           Object {
             "backgroundColor": "white",
-            "borderRadius": 3,
+            "borderRadius": 50,
             "height": 96,
             "width": 96,
           },
@@ -123,7 +123,7 @@ exports[`renders correctly with only avatar 1`] = `
         style={
           Array [
             Object {
-              "borderRadius": 3,
+              "borderRadius": 48,
               "height": 96,
               "width": 96,
             },
@@ -132,7 +132,7 @@ exports[`renders correctly with only avatar 1`] = `
             },
             Array [
               Object {
-                "borderRadius": 3,
+                "borderRadius": 48,
                 "height": 96,
                 "width": 96,
               },
@@ -189,7 +189,7 @@ exports[`renders correctly with only name 1`] = `
           },
           Object {
             "backgroundColor": "white",
-            "borderRadius": 3,
+            "borderRadius": 50,
             "height": 96,
             "width": 96,
           },
@@ -200,13 +200,13 @@ exports[`renders correctly with only name 1`] = `
         resizeMode="cover"
         source={
           Object {
-            "testUri": "../../../images/default_profile_image.png",
+            "testUri": "../../../assets/images/default_profile_image.png",
           }
         }
         style={
           Array [
             Object {
-              "borderRadius": 3,
+              "borderRadius": 48,
               "height": 96,
               "width": 96,
             },
@@ -215,7 +215,7 @@ exports[`renders correctly with only name 1`] = `
             },
             Array [
               Object {
-                "borderRadius": 3,
+                "borderRadius": 48,
                 "height": 96,
                 "width": 96,
               },

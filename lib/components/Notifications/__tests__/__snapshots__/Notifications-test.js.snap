@@ -807,15 +807,15 @@ exports[`Notifications renders correctly with notifications 1`] = `
                           "justifyContent": "center",
                         },
                         Object {
-                          "borderRadius": 3,
-                          "height": 70,
-                          "width": 70,
+                          "borderRadius": 30,
+                          "height": 60,
+                          "width": 60,
                         },
                         Object {
                           "backgroundColor": "rgba(91,84,199,1)",
                         },
                         Object {
-                          "padding": 17.5,
+                          "padding": 15,
                         },
                       ]
                     }
@@ -828,13 +828,13 @@ exports[`Notifications renders correctly with notifications 1`] = `
                         Array [
                           Object {
                             "fontFamily": "NunitoSans-Regular",
-                            "fontSize": 17.5,
+                            "fontSize": 15,
                             "textAlign": "center",
                           },
                           undefined,
                           Object {
                             "color": "white",
-                            "fontSize": 17.5,
+                            "fontSize": 15,
                           },
                         ]
                       }
@@ -846,7 +846,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                 <Image
                   source={
                     Object {
-                      "testUri": "../../../images/ForwardArrow.png",
+                      "testUri": "../../../assets/images/ForwardArrow.png",
                     }
                   }
                   style={
@@ -869,15 +869,15 @@ exports[`Notifications renders correctly with notifications 1`] = `
                             "justifyContent": "center",
                           },
                           Object {
-                            "borderRadius": 3,
-                            "height": 70,
-                            "width": 70,
+                            "borderRadius": 30,
+                            "height": 60,
+                            "width": 60,
                           },
                           Object {
                             "backgroundColor": "rgba(91,84,199,1)",
                           },
                           Object {
-                            "padding": 17.5,
+                            "padding": 15,
                           },
                         ]
                       }
@@ -890,13 +890,13 @@ exports[`Notifications renders correctly with notifications 1`] = `
                           Array [
                             Object {
                               "fontFamily": "NunitoSans-Regular",
-                              "fontSize": 17.5,
+                              "fontSize": 15,
                               "textAlign": "center",
                             },
                             undefined,
                             Object {
                               "color": "white",
-                              "fontSize": 17.5,
+                              "fontSize": 15,
                             },
                           ]
                         }
@@ -992,7 +992,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                     style={
                       Array [
                         Object {
-                          "fontFamily": "NunitoSans-Bold",
+                          "fontFamily": "Montserrat",
                           "fontSize": 18,
                           "textAlign": "center",
                         },
@@ -1042,7 +1042,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                     style={
                       Array [
                         Object {
-                          "fontFamily": "NunitoSans-Bold",
+                          "fontFamily": "Montserrat",
                           "fontSize": 18,
                           "textAlign": "center",
                         },
@@ -1144,7 +1144,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                         "justifyContent": "center",
                       },
                       Object {
-                        "borderRadius": 3,
+                        "borderRadius": 36,
                         "height": 72,
                         "width": 72,
                       },
@@ -1165,7 +1165,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                       Array [
                         Object {
                           "fontFamily": "NunitoSans-Regular",
-                          "fontSize": 17.5,
+                          "fontSize": 15,
                           "textAlign": "center",
                         },
                         undefined,
@@ -1249,7 +1249,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                     style={
                       Array [
                         Object {
-                          "fontFamily": "NunitoSans-Bold",
+                          "fontFamily": "Montserrat",
                           "fontSize": 18,
                           "textAlign": "center",
                         },
@@ -1299,7 +1299,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                     style={
                       Array [
                         Object {
-                          "fontFamily": "NunitoSans-Bold",
+                          "fontFamily": "Montserrat",
                           "fontSize": 18,
                           "textAlign": "center",
                         },
@@ -1439,7 +1439,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                     style={
                       Array [
                         Object {
-                          "fontFamily": "NunitoSans-Bold",
+                          "fontFamily": "Montserrat",
                           "fontSize": 18,
                           "textAlign": "center",
                         },
@@ -1489,7 +1489,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                     style={
                       Array [
                         Object {
-                          "fontFamily": "NunitoSans-Bold",
+                          "fontFamily": "Montserrat",
                           "fontSize": 18,
                           "textAlign": "center",
                         },
@@ -1591,7 +1591,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                         "justifyContent": "center",
                       },
                       Object {
-                        "borderRadius": 3,
+                        "borderRadius": 36,
                         "height": 72,
                         "width": 72,
                       },
@@ -1612,7 +1612,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                       Array [
                         Object {
                           "fontFamily": "NunitoSans-Regular",
-                          "fontSize": 17.5,
+                          "fontSize": 15,
                           "textAlign": "center",
                         },
                         undefined,
@@ -1717,7 +1717,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                     style={
                       Array [
                         Object {
-                          "fontFamily": "NunitoSans-Bold",
+                          "fontFamily": "Montserrat",
                           "fontSize": 18,
                           "textAlign": "center",
                         },
@@ -1767,7 +1767,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                     style={
                       Array [
                         Object {
-                          "fontFamily": "NunitoSans-Bold",
+                          "fontFamily": "Montserrat",
                           "fontSize": 18,
                           "textAlign": "center",
                         },
@@ -1984,7 +1984,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                     style={
                       Array [
                         Object {
-                          "fontFamily": "NunitoSans-Bold",
+                          "fontFamily": "Montserrat",
                           "fontSize": 18,
                           "textAlign": "center",
                         },
@@ -2034,7 +2034,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                     style={
                       Array [
                         Object {
-                          "fontFamily": "NunitoSans-Bold",
+                          "fontFamily": "Montserrat",
                           "fontSize": 18,
                           "textAlign": "center",
                         },

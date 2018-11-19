@@ -47,11 +47,7 @@ exports[`renders MenuItem with title and internal link 1`] = `
   onResponderTerminate={[Function]}
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
+  style={null}
 >
   <View
     style={
@@ -65,7 +61,7 @@ exports[`renders MenuItem with title and internal link 1`] = `
           "justifyContent": "space-between",
           "padding": 19,
         },
-        Object {},
+        undefined,
       ]
     }
   >
@@ -132,11 +128,7 @@ exports[`renders MenuItem with title and link 1`] = `
   onResponderTerminate={[Function]}
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
+  style={null}
 >
   <View
     style={
@@ -150,7 +142,7 @@ exports[`renders MenuItem with title and link 1`] = `
           "justifyContent": "space-between",
           "padding": 19,
         },
-        Object {},
+        undefined,
       ]
     }
   >
@@ -217,11 +209,7 @@ exports[`renders MenuItem with title and onPress 1`] = `
   onResponderTerminate={[Function]}
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
+  style={null}
 >
   <View
     style={
@@ -235,7 +223,7 @@ exports[`renders MenuItem with title and onPress 1`] = `
           "justifyContent": "space-between",
           "padding": 19,
         },
-        Object {},
+        undefined,
       ]
     }
   >
@@ -347,11 +335,7 @@ exports[`renders MenuItem with title, value and internal link 1`] = `
   onResponderTerminate={[Function]}
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
+  style={null}
 >
   <View
     style={
@@ -365,7 +349,7 @@ exports[`renders MenuItem with title, value and internal link 1`] = `
           "justifyContent": "space-between",
           "padding": 19,
         },
-        Object {},
+        undefined,
       ]
     }
   >
@@ -434,11 +418,7 @@ exports[`renders MenuItem with title, value and link 1`] = `
   onResponderTerminate={[Function]}
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
+  style={null}
 >
   <View
     style={
@@ -452,7 +432,7 @@ exports[`renders MenuItem with title, value and link 1`] = `
           "justifyContent": "space-between",
           "padding": 19,
         },
-        Object {},
+        undefined,
       ]
     }
   >
@@ -521,11 +501,7 @@ exports[`renders MenuItem with title, value and onPress 1`] = `
   onResponderTerminate={[Function]}
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
+  style={null}
 >
   <View
     style={
@@ -539,7 +515,7 @@ exports[`renders MenuItem with title, value and onPress 1`] = `
           "justifyContent": "space-between",
           "padding": 19,
         },
-        Object {},
+        undefined,
       ]
     }
   >

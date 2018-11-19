@@ -79,7 +79,7 @@ exports[`Attestation Notifications renders an attestation notification correctly
               "justifyContent": "center",
             },
             Object {
-              "borderRadius": 3,
+              "borderRadius": 36,
               "height": 72,
               "width": 72,
             },
@@ -100,7 +100,7 @@ exports[`Attestation Notifications renders an attestation notification correctly
             Array [
               Object {
                 "fontFamily": "NunitoSans-Regular",
-                "fontSize": 17.5,
+                "fontSize": 15,
                 "textAlign": "center",
               },
               undefined,
@@ -184,7 +184,7 @@ exports[`Attestation Notifications renders an attestation notification correctly
           style={
             Array [
               Object {
-                "fontFamily": "NunitoSans-Bold",
+                "fontFamily": "Montserrat",
                 "fontSize": 18,
                 "textAlign": "center",
               },
@@ -234,7 +234,7 @@ exports[`Attestation Notifications renders an attestation notification correctly
           style={
             Array [
               Object {
-                "fontFamily": "NunitoSans-Bold",
+                "fontFamily": "Montserrat",
                 "fontSize": 18,
                 "textAlign": "center",
               },
@@ -332,7 +332,7 @@ exports[`Attestation Notifications renders an attestation notification that has 
               "justifyContent": "center",
             },
             Object {
-              "borderRadius": 3,
+              "borderRadius": 36,
               "height": 72,
               "width": 72,
             },
@@ -353,7 +353,7 @@ exports[`Attestation Notifications renders an attestation notification that has 
             Array [
               Object {
                 "fontFamily": "NunitoSans-Regular",
-                "fontSize": 17.5,
+                "fontSize": 15,
                 "textAlign": "center",
               },
               undefined,
@@ -472,7 +472,7 @@ exports[`Attestation Notifications renders an attestation notification that has 
               "justifyContent": "center",
             },
             Object {
-              "borderRadius": 3,
+              "borderRadius": 36,
               "height": 72,
               "width": 72,
             },
@@ -493,7 +493,7 @@ exports[`Attestation Notifications renders an attestation notification that has 
             Array [
               Object {
                 "fontFamily": "NunitoSans-Regular",
-                "fontSize": 17.5,
+                "fontSize": 15,
                 "textAlign": "center",
               },
               undefined,
