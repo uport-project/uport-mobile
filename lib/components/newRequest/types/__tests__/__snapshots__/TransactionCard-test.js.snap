@@ -188,17 +188,15 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
         <View>
           <View
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             accessibilityComponentType={undefined}
             accessibilityLabel={undefined}
             accessibilityTraits={undefined}
+=======
+>>>>>>> Fixing snapshots
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -221,8 +219,6 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
                 },
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Image
               resizeMode="cover"
@@ -419,16 +415,8 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
              DETAILS 
           </Text>
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -441,8 +429,6 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
                 "padding": 3,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Icon
               color="rgba(92,80,202,1)"
@@ -509,15 +495,8 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
           />
 =======
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -548,8 +527,6 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
                 ],
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -679,16 +656,8 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -704,8 +673,6 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
                 "paddingTop": 14,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -897,16 +864,8 @@ there
              DETAILS 
           </Text>
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -919,8 +878,6 @@ there
                 "padding": 3,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Icon
               color="rgba(92,80,202,1)"
@@ -995,15 +952,8 @@ there
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -1024,8 +974,6 @@ there
                 Object {},
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
 <<<<<<< HEAD
             Approve Transaction
@@ -1199,16 +1147,8 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
             ellipsizeMode="tail"
 =======
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -1222,8 +1162,6 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
                 "fontSize": 16,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             Close
           </Text>
@@ -1410,16 +1348,8 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
             ellipsizeMode="tail"
 =======
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -1432,9 +1362,12 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
                 "padding": 3,
               }
             }
+<<<<<<< HEAD
             testID={undefined}
             tvParallaxProperties={undefined}
 >>>>>>> Updating tests
+=======
+>>>>>>> Fixing snapshots
           >
              
             $0
@@ -1465,15 +1398,8 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
           />
 =======
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -1504,8 +1430,6 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
                 ],
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -1635,16 +1559,8 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -1660,8 +1576,6 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
                 "paddingTop": 14,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -1859,16 +1773,8 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
              DETAILS 
           </Text>
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -1881,8 +1787,6 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
                 "padding": 3,
               }
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Icon
               color="rgba(92,80,202,1)"
@@ -1999,7 +1903,6 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
           </Text>
 =======
             <Icon
-              color={undefined}
               name="ios-alert"
               style={
                 Object {
@@ -3424,17 +3327,15 @@ exports[`TransactionCard renders correctly with only request 1`] = `
         <View>
           <View
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             accessibilityComponentType={undefined}
             accessibilityLabel={undefined}
             accessibilityTraits={undefined}
+=======
+>>>>>>> Fixing snapshots
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -3457,8 +3358,6 @@ exports[`TransactionCard renders correctly with only request 1`] = `
                 },
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Image
               resizeMode="cover"
@@ -3868,15 +3767,13 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
                     "width": 70,
 =======
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
+<<<<<<< HEAD
             hasTVPreferredFocus={undefined}
             hitSlop={undefined}
+=======
+>>>>>>> Fixing snapshots
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -3907,8 +3804,6 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
                 ],
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -4130,10 +4025,22 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
             ]
           }
         >
+<<<<<<< HEAD
           <Text
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+=======
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+>>>>>>> Fixing snapshots
             style={
               Array [
                 Object {
@@ -4345,17 +4252,15 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
         <View>
           <View
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             accessibilityComponentType={undefined}
             accessibilityLabel={undefined}
             accessibilityTraits={undefined}
+=======
+>>>>>>> Fixing snapshots
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -4378,8 +4283,6 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
                 },
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Image
               resizeMode="cover"
@@ -4567,16 +4470,8 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
             ellipsizeMode="tail"
 =======
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -4589,6 +4484,7 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
                 "padding": 3,
               }
             }
+<<<<<<< HEAD
             testID={undefined}
             tvParallaxProperties={undefined}
 >>>>>>> Updating tests
@@ -4620,6 +4516,15 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
             name="ios-refresh-outline"
             size={24}
           />
+=======
+          >
+            <Icon
+              color="rgba(92,80,202,1)"
+              name="ios-information-circle-outline"
+              size={15}
+            />
+          </View>
+>>>>>>> Fixing snapshots
         </View>
       </View>
       <View
@@ -4717,15 +4622,8 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
             ellipsizeMode="tail"
 =======
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -4765,8 +4663,6 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
                 ],
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -4991,17 +4887,15 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
         <View>
           <View
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             accessibilityComponentType={undefined}
             accessibilityLabel={undefined}
             accessibilityTraits={undefined}
+=======
+>>>>>>> Fixing snapshots
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -5024,8 +4918,6 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
                 },
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Image
               resizeMode="cover"
@@ -5213,16 +5105,8 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
             ellipsizeMode="tail"
 =======
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -5235,9 +5119,12 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
                 "padding": 3,
               }
             }
+<<<<<<< HEAD
             testID={undefined}
             tvParallaxProperties={undefined}
 >>>>>>> Updating tests
+=======
+>>>>>>> Fixing snapshots
           >
              
             $0
@@ -5344,15 +5231,8 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
               },
 =======
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -5412,8 +5292,6 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
                 ],
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Text
               accessible={true}
@@ -5638,17 +5516,15 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
         <View>
           <View
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             accessibilityComponentType={undefined}
             accessibilityLabel={undefined}
             accessibilityTraits={undefined}
+=======
+>>>>>>> Fixing snapshots
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -5671,8 +5547,6 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
                 },
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <Image
               resizeMode="cover"
@@ -5860,16 +5734,8 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
             ellipsizeMode="tail"
 =======
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            collapsable={undefined}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -5882,9 +5748,12 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
                 "padding": 3,
               }
             }
+<<<<<<< HEAD
             testID={undefined}
             tvParallaxProperties={undefined}
 >>>>>>> Updating tests
+=======
+>>>>>>> Fixing snapshots
           >
              
             $0
@@ -6010,15 +5879,8 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
             ellipsizeMode="tail"
 =======
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -6039,8 +5901,6 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
                 Object {},
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
 <<<<<<< HEAD
             Approve Transaction
