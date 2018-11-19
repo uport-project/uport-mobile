@@ -1,5 +1,12 @@
 # Change Log
 
+## [v390](https://github.com/uport-project/uport-mobile/tree/v390) (2018-11-19)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v389...v390)
+
+**Merged pull requests:**
+
+- Setting required params in Info.plist for iOS [\#24](https://github.com/uport-project/uport-mobile/pull/24) ([simonas-notcat](https://github.com/simonas-notcat))
+
 ## [v389](https://github.com/uport-project/uport-mobile/tree/v389) (2018-11-19)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v388...v389)
 
