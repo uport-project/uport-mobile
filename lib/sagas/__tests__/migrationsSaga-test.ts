@@ -91,10 +91,13 @@ describe('runMigrations', () => {
   })
 
   describe('with targets', () => {
-    it('should not run any steps', () => {
+    it('should run all steps', () => {
       return expectSaga(migrationsSaga)
         .provide([
           [select(migrationTargets), [MigrationTarget.PreHD]],
+          [select(migrationStatus, MigrationStep.IdentityManagerChangeOwner), MigrationStatus.Completed],
+          [select(migrationStatus, MigrationStep.UpdatePreHDRootToHD), MigrationStatus.Completed],
+          [select(migrationStatus, MigrationStep.UportRegistryDDORefresh), MigrationStatus.Completed],
           [matchers.call.fn(performStep), undefined]
         ])
         .call(performStep, MigrationStep.IdentityManagerChangeOwner)
@@ -104,6 +107,22 @@ describe('runMigrations', () => {
         .silentRun()
     })
   })
+
+  it('should stop running unless a step was completed', () => {
+    return expectSaga(migrationsSaga)
+      .provide([
+        [select(migrationTargets), [MigrationTarget.PreHD]],
+        [select(migrationStatus, MigrationStep.IdentityManagerChangeOwner), MigrationStatus.Completed],
+        [select(migrationStatus, MigrationStep.UpdatePreHDRootToHD), MigrationStatus.Error],
+        [matchers.call.fn(performStep), undefined]
+      ])
+      .call(performStep, MigrationStep.IdentityManagerChangeOwner)
+      .call(performStep, MigrationStep.UpdatePreHDRootToHD)
+      .not.call(performStep, MigrationStep.UportRegistryDDORefresh)
+      .dispatch(runMigrations(MigrationTarget.PreHD))
+      .silentRun()
+  })
+
 })
 
 describe('performStep', () => {

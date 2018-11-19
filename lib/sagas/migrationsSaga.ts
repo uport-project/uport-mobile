@@ -76,6 +76,8 @@ export function * runMigrations ({target} : TargetAction) : any {
     const steps = targetRecipes[target]||[]
     for (let step of steps) {
       yield call(performStep, step)
+      const status = yield select(migrationStatus, step)
+      if (status !== MigrationStatus.Completed) break
     }  
   }
 }
