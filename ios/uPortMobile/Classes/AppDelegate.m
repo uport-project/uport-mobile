@@ -30,7 +30,7 @@
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
 
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-  self.window.backgroundColor =  [[UIColor alloc] initWithRed:0.3607843137f green:0.3137254902f blue:0.7921568627f alpha:1];
+  self.window.backgroundColor =  [UIColor colorWithRed:0.99 green:0.99 blue:0.99 alpha:1];
   [[RCCManager sharedInstance] initBridgeWithBundleURL:jsCodeLocation launchOptions:launchOptions];
 
   [Fabric with:@[[Crashlytics class]]];
