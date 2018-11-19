@@ -15,8 +15,18 @@
 // You should have received a copy of the GNU General Public License
 // along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
 //
-export const RESET_DEVICE = 'RESET_DEVICE'
-export const RELOAD_DB = 'RELOAD_DB'
-export const LOADED_DB = 'LOADED_DB'
-export const PERSIST_DB = 'PERSIST_DB'
-export const FORCE_PERSIST_DB = 'FORCE_PERSIST_DB'
+import { all, takeEvery, call, select, put } from 'redux-saga/effects'
+import { 
+  MigrationStep
+} from 'uPortMobile/lib/constants/MigrationActionTypes'
+import {
+  saveMessage,
+} from 'uPortMobile/lib/actions/processStatusActions'
+
+const step = MigrationStep.UportRegistryDDORefresh
+
+function * migrate () : any {
+  
+}
+
+export default migrate
