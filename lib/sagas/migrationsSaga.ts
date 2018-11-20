@@ -85,7 +85,7 @@ export function * runMigrations ({target} : TargetAction) : any {
 export function * runImplementationStep (step: MigrationStep) : any {
   const migration = implementations[step]
   if (migration) {
-    yield call(migration)
+    return yield call(migration)
   }
 }
 
@@ -95,9 +95,12 @@ export function * performStep (step: MigrationStep) : any {
   yield put(startedMigrationStep(step))
   yield put(startWorking(step))
   try {
-    yield call(runImplementationStep, step)
-    yield put(completeProcess(step))
-    yield put(completedMigrationStep(step))
+    if (yield call(runImplementationStep, step)) {
+      yield put(completeProcess(step))
+      yield put(completedMigrationStep(step))  
+    } else {
+      yield put(failedMigrationStep(step))  
+    }
   } catch (error) {
     yield put(failedMigrationStep(step))
     yield put(failProcess(step, error.message))

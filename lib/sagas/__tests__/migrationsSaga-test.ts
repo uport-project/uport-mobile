@@ -148,7 +148,7 @@ describe('performStep', () => {
         return expectSaga(performStep, step)
           .provide([
             [select(migrationStatus, step), status],
-            [call(runImplementationStep, step), undefined]
+            [call(runImplementationStep, step), true]
           ])
           .put(startedMigrationStep(step))
           .put(startWorking(step))
@@ -158,6 +158,18 @@ describe('performStep', () => {
       })
 
       it('should handle failure', () => {
+        return expectSaga(performStep, step)
+          .provide([
+            [select(migrationStatus, step), status],
+            [call(runImplementationStep, step), false]
+          ])
+          .put(startedMigrationStep(step))
+          .put(startWorking(step))
+          .put(failedMigrationStep(step))
+          .run()
+      })
+
+      it('should handle errors thrown', () => {
         return expectSaga(performStep, step)
           .provide([
             [select(migrationStatus, step), status],
@@ -177,9 +189,10 @@ describe('runImplementationStep', () => {
   it('should select and run actual migration', () => {
     return expectSaga(runImplementationStep, MigrationStep.IdentityManagerChangeOwner)
       .provide([
-        [call(IdentityManagerChangeOwner), undefined]
+        [call(IdentityManagerChangeOwner), true]
       ])
       .call(IdentityManagerChangeOwner)
+      .returns(true)
       .run()
   })
 })
