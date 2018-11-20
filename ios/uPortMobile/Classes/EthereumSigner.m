@@ -228,7 +228,6 @@ NSDictionary *genericSignature(BTCKey *keypair, NSData *hash, BOOL lowS) {
              @"recoveryParam": @(recoveryParam)
              };
   }
-  return @{};
 }
 
 NSData *simpleSignature(BTCKey *keypair, NSData *hash) {
