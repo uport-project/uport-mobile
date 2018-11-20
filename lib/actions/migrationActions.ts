@@ -17,11 +17,13 @@
 
 import { ADD_MIGRATION_TARGET, STARTED_MIGRATION_STEP, COMPLETED_MIGRATION_STEP, FAILED_MIGRATION_STEP, RUN_MIGRATIONS, RUN_MIGRATION_STEP, MigrationStep, MigrationTarget, TargetAction, StepAction } from 'uPortMobile/lib/constants/MigrationActionTypes'
 
+const _backup = true
 
 export function addMigrationTarget(target: MigrationTarget) : TargetAction {
   return {
     type: ADD_MIGRATION_TARGET,
-    target
+    target,
+    _backup
   }
 }
 
@@ -42,20 +44,23 @@ export function runMigrationStep(step: MigrationStep) : StepAction {
 export function startedMigrationStep(step: MigrationStep) : StepAction {
   return {
     type: STARTED_MIGRATION_STEP,
-    step
+    step,
+    _backup
   }
 }
 
 export function completedMigrationStep(step: MigrationStep) : StepAction {
   return {
     type: COMPLETED_MIGRATION_STEP,
-    step
+    step,
+    _backup
   }
 }
 
 export function failedMigrationStep(step: MigrationStep) : StepAction {
   return {
     type: FAILED_MIGRATION_STEP,
-    step
+    step,
+    _backup
   }
 }

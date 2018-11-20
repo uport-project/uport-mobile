@@ -42,10 +42,12 @@ export enum MigrationStatus {
 
 export interface TargetAction {
   type: 'ADD_MIGRATION_TARGET' | 'RUN_MIGRATIONS',
-  target: MigrationTarget
+  target: MigrationTarget,
+  _backup?: boolean
 }
 
 export interface StepAction {
   type: 'RUN_MIGRATION_STEP' | 'STARTED_MIGRATION_STEP' | 'COMPLETED_MIGRATION_STEP' | 'FAILED_MIGRATION_STEP',
-  step: MigrationStep
+  step: MigrationStep,
+  _backup?: boolean
 }
