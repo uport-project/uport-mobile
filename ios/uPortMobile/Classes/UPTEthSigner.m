@@ -294,29 +294,4 @@ NSString * const UPTSignerErrorCodeLevelPrivateKeyNotFound = @"-12";
     return keystore;
 }
 
-static int BTCRegenerateKey(EC_KEY *eckey, BIGNUM *priv_key) {
-    BN_CTX *ctx = NULL;
-    EC_POINT *pub_key = NULL;
-
-    if (!eckey) return 0;
-
-    const EC_GROUP *group = EC_KEY_get0_group(eckey);
-
-    BOOL success = NO;
-    if ((ctx = BN_CTX_new())) {
-        if ((pub_key = EC_POINT_new(group))) {
-            if (EC_POINT_mul(group, pub_key, priv_key, NULL, NULL, ctx)) {
-                EC_KEY_set_private_key(eckey, priv_key);
-                EC_KEY_set_public_key(eckey, pub_key);
-                success = YES;
-            }
-        }
-    }
-
-    if (pub_key) EC_POINT_free(pub_key);
-    if (ctx) BN_CTX_free(ctx);
-
-    return success;
-}
-
 @end

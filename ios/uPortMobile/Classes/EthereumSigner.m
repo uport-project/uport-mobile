@@ -23,31 +23,148 @@
 #include <openssl/ec.h>
 #include <openssl/obj_mac.h>
 
-static int BTCRegenerateKey(EC_KEY *eckey, BIGNUM *priv_key) {
+static BTCBigNumber *keyPairToBigNumber(BTCKey *keypair) {
+  NSMutableData *privateKey = [keypair privateKey];
+  EC_KEY* eckey = EC_KEY_new_by_curve_name(NID_secp256k1);
+  BIGNUM *priv_keyBN = BN_bin2bn(privateKey.bytes, (int)privateKey.length, BN_new());
   BN_CTX *ctx = NULL;
   EC_POINT *pub_key = NULL;
-  
-  if (!eckey) return 0;
-  
   const EC_GROUP *group = EC_KEY_get0_group(eckey);
   
-  BOOL success = NO;
+  BTCBigNumber* privkeyBigNumber;
+  
   if ((ctx = BN_CTX_new())) {
     if ((pub_key = EC_POINT_new(group))) {
-      if (EC_POINT_mul(group, pub_key, priv_key, NULL, NULL, ctx)) {
-        EC_KEY_set_private_key(eckey, priv_key);
+      if (EC_POINT_mul(group, pub_key, priv_keyBN, NULL, NULL, ctx)) {
+        EC_KEY_set_private_key(eckey, priv_keyBN);
         EC_KEY_set_public_key(eckey, pub_key);
-        success = YES;
+        const BIGNUM *privkeyBIGNUM = EC_KEY_get0_private_key(eckey);
+        privkeyBigNumber = [[BTCBigNumber alloc] initWithBIGNUM:privkeyBIGNUM];
       }
     }
   }
   
   if (pub_key) EC_POINT_free(pub_key);
   if (ctx) BN_CTX_free(ctx);
-  
-  return success;
+  BN_clear_free(priv_keyBN);
+  BTCDataClear(privateKey);
+  EC_KEY_free(eckey);
+
+
+  return privkeyBigNumber;
 }
 
+NSMutableData *compressedPublicKey(EC_KEY *key) {
+  if (!key) return nil;
+  EC_KEY_set_conv_form(key, POINT_CONVERSION_COMPRESSED);
+  int length = i2o_ECPublicKey(key, NULL);
+  if (!length) return nil;
+  NSCAssert(length <= 65, @"Pubkey length must be up to 65 bytes.");
+  NSMutableData* data = [[NSMutableData alloc] initWithLength:length];
+  unsigned char* bytes = [data mutableBytes];
+  if (i2o_ECPublicKey(key, &bytes) != length) return nil;
+  return data;
+}
+
+
+NSDictionary *ethereumSignature(BTCKey *keypair, NSData *hash, NSData *chainId) {
+  NSDictionary *sig = genericSignature(keypair, hash, YES);
+  NSData *rData = (NSData *)sig[@"r"];
+  NSData *sData = (NSData *)sig[@"s"];
+  BN_ULONG base = 0x1b; // pre-EIP155
+  if (chainId) {
+    BIGNUM *v = BN_new(); BN_bin2bn(chainId.bytes, chainId.length, v);
+    // TODO support longer chainIDs
+    base = BN_get_word(v) * 2 + 35;
+    BN_clear_free(v);
+  }
+  
+  NSDictionary *signatureDictionary = @{ @"v": @(base + [sig[@"recoveryParam"] intValue]),
+                                         @"r": [rData base64EncodedStringWithOptions:0],
+                                         @"s":[sData base64EncodedStringWithOptions:0]};
+  return signatureDictionary;
+}
+
+
+NSDictionary *genericSignature(BTCKey *keypair, NSData *hash, BOOL lowS) {
+  BTCBigNumber* privkeyBN = keyPairToBigNumber(keypair);
+  BTCBigNumber* n = [BTCCurvePoint curveOrder];
+  
+  for (int iter = 0; true; iter++ ) {
+    NSMutableData* kdata = [keypair signatureNonceForHash:hash];
+    BTCMutableBigNumber* k = [[BTCMutableBigNumber alloc] initWithUnsignedBigEndian:kdata];
+    [k mod:n]; // make sure k belongs to [0, n - 1]
+    
+    if (BN_cmp(k.BIGNUM, [BTCBigNumber zero].BIGNUM) <= 0 && BN_cmp(k.BIGNUM, n.BIGNUM) >= 0) continue;
+
+    BTCDataClear(kdata);
+  
+    BTCCurvePoint* K = [[BTCCurvePoint generator] multiply:k];
+    // K was infinity and does not work, redo it
+    if ([K isInfinity]) continue;
+    BTCMutableBigNumber* Kx = [K.x mutableCopy];
+    [Kx mod: n];
+    
+    BTCBigNumber* hashBN = [[BTCBigNumber alloc] initWithUnsignedBigEndian:hash];
+  
+    // Compute s = (k^-1)*(h + Kx*privkey)
+  
+    BTCMutableBigNumber* signatureBN = [[[[privkeyBN mutableCopy] multiply:Kx mod:n] add:hashBN mod: n] multiply:[k inverseMod:n] mod:n];
+
+    // Neither r nor s can be zero
+    if ([Kx isZero] || [signatureBN isZero]) continue;
+  
+    BTCBigNumber *r = [Kx copy];
+    uint8_t recoveryParam = BN_is_odd(K.y.BIGNUM) ? 1 : 0;
+    
+    [privkeyBN clear];
+    [k clear];
+    [hashBN clear];
+    [K clear];
+    [Kx clear];
+
+    BTCBigNumber *twiceS = [[signatureBN mutableCopy] add: signatureBN];
+    
+    BTCBigNumber *s;
+    if (lowS && BN_cmp(twiceS.BIGNUM, n.BIGNUM) > 0) {
+      // enforce low S values, by negating the value (modulo the order) if above order/2.
+      s = [[n mutableCopy] subtract: signatureBN]; // Maybe this should be swapped
+      recoveryParam ^= 1;
+    } else {
+      s = [signatureBN copy];
+    }
+
+    [twiceS clear];
+    [signatureBN clear];
+
+    NSData* rData = [r unsignedBigEndian];
+    NSData* sData = [s unsignedBigEndian];
+    [r clear];
+    [s clear];
+    
+    return @{
+             @"r": rData,
+             @"s": sData,
+             @"recoveryParam": @(recoveryParam)
+             };
+  }
+}
+
+NSData *simpleSignature(BTCKey *keypair, NSData *hash) {
+  NSDictionary *sig = genericSignature(keypair, hash, NO);
+  NSData *rData = (NSData *)sig[@"r"];
+  NSData *sData = (NSData *)sig[@"s"];
+  ///////
+  NSMutableData *sigData = [NSMutableData dataWithLength:64];
+  unsigned char* sigBytes = sigData.mutableBytes;
+  memset(sigBytes, 0, 64);
+  
+  memcpy(sigBytes, rData.bytes, 32);
+  memcpy(sigBytes+32, sData.bytes, 32);
+  return sigData;
+}
+
+// Not used here but leave in for use in library when pulling out again
 static int ECDSA_SIG_recover_key_GFp(EC_KEY *eckey, BIGNUM *r, BIGNUM *s, const unsigned char *msg, int msglen, int recid, int check) {
   if (!eckey) return 0;
   
@@ -115,131 +232,4 @@ err:
   if (O != NULL) EC_POINT_free(O);
   if (Q != NULL) EC_POINT_free(Q);
   return ret;
-}
-
-NSMutableData *compressedPublicKey(EC_KEY *key) {
-  if (!key) return nil;
-  EC_KEY_set_conv_form(key, POINT_CONVERSION_COMPRESSED);
-  int length = i2o_ECPublicKey(key, NULL);
-  if (!length) return nil;
-  NSCAssert(length <= 65, @"Pubkey length must be up to 65 bytes.");
-  NSMutableData* data = [[NSMutableData alloc] initWithLength:length];
-  unsigned char* bytes = [data mutableBytes];
-  if (i2o_ECPublicKey(key, &bytes) != length) return nil;
-  return data;
-}
-
-
-NSDictionary *ethereumSignature(BTCKey *keypair, NSData *hash, NSData *chainId) {
-  NSDictionary *sig = genericSignature(keypair, hash, YES);
-  NSData *rData = (NSData *)sig[@"r"];
-  NSData *sData = (NSData *)sig[@"s"];
-  BN_ULONG base = 0x1b; // pre-EIP155
-  if (chainId) {
-    BIGNUM *v = BN_new(); BN_bin2bn(chainId.bytes, chainId.length, v);
-    // TODO support longer chainIDs
-    base = BN_get_word(v) * 2 + 35;
-    BN_clear_free(v);
-  }
-  
-  NSDictionary *signatureDictionary = @{ @"v": @(base + [sig[@"recoveryParam"] intValue]),
-                                         @"r": [rData base64EncodedStringWithOptions:0],
-                                         @"s":[sData base64EncodedStringWithOptions:0]};
-  return signatureDictionary;
-}
-
-
-NSDictionary *genericSignature(BTCKey *keypair, NSData *hash, BOOL lowS) {
-  NSMutableData *privateKey = [keypair privateKey];
-  EC_KEY* key = EC_KEY_new_by_curve_name(NID_secp256k1);
-  
-  BIGNUM *bignum = BN_bin2bn(privateKey.bytes, (int)privateKey.length, BN_new());
-  BTCRegenerateKey(key, bignum);
-  
-  
-  const BIGNUM *privkeyBIGNUM = EC_KEY_get0_private_key(key);
-  
-  BTCMutableBigNumber* privkeyBN = [[BTCMutableBigNumber alloc] initWithBIGNUM:privkeyBIGNUM];
-  BTCBigNumber* n = [BTCCurvePoint curveOrder];
-  
-  // I'm sure there is a better way of doing this
-  const BIGNUM* zero = [[BTCBigNumber alloc] initWithInt32:0].BIGNUM;
-  
-  for (int iter = 0; true; iter++ ) {
-    NSMutableData* kdata = [keypair signatureNonceForHash:hash];
-    BTCMutableBigNumber* k = [[BTCMutableBigNumber alloc] initWithUnsignedBigEndian:kdata];
-    
-    if (BN_cmp(k.BIGNUM, zero) <= 0 && BN_cmp(k.BIGNUM, n.BIGNUM) >= 0) continue;
-      
-    [k mod:n]; // make sure k belongs to [0, n - 1]
-  
-    BTCDataClear(kdata);
-  
-    BTCCurvePoint* K = [[BTCCurvePoint generator] multiply:k];
-    // K was infinity and does not work, redo it
-    if ([K isInfinity]) continue;
-    BTCBigNumber* Kx = K.x;
-  
-    BTCBigNumber* hashBN = [[BTCBigNumber alloc] initWithUnsignedBigEndian:hash];
-  
-    // Compute s = (k^-1)*(h + Kx*privkey)
-  
-    BTCBigNumber* signatureBN = [[[privkeyBN multiply:Kx] add:hashBN] multiply:[k inverseMod:n] mod:n];
-  
-    // Neither r nor s can be zero
-    if ([Kx isZero] || [signatureBN isZero]) continue;
-  
-    BIGNUM *r = BN_new();
-    BN_copy(r, Kx.BIGNUM);
-    BIGNUM *s = BN_new();
-    BN_copy(s, signatureBN.BIGNUM);
-    uint8_t recoveryParam = BN_is_odd(K.y.BIGNUM) ? 1 : 0;
-    
-    BN_clear_free(bignum);
-    BTCDataClear(privateKey);
-    [privkeyBN clear];
-    [k clear];
-    [hashBN clear];
-    [K clear];
-    [Kx clear];
-    [signatureBN clear];
-    EC_KEY_free(key);
-
-    BIGNUM *twiceS = BN_new();
-    BN_add(twiceS, s, s);
-    if (lowS && BN_cmp(twiceS, n.BIGNUM) > 0) {
-      // enforce low S values, by negating the value (modulo the order) if above order/2.
-      BN_sub(s, n.BIGNUM, s);
-      recoveryParam ^= 1;
-    }
-    BN_clear_free(twiceS);
-
-    NSMutableData* rData = [NSMutableData dataWithLength:32];
-    NSMutableData* sData = [NSMutableData dataWithLength:32];
-  
-    BN_bn2bin(r,rData.mutableBytes);
-    BN_bn2bin(s,sData.mutableBytes);
-    
-    BN_clear_free(r);
-    BN_clear_free(s);
-    return @{
-             @"r": rData,
-             @"s": sData,
-             @"recoveryParam": @(recoveryParam)
-             };
-  }
-}
-
-NSData *simpleSignature(BTCKey *keypair, NSData *hash) {
-  NSDictionary *sig = genericSignature(keypair, hash, NO);
-  NSData *rData = (NSData *)sig[@"r"];
-  NSData *sData = (NSData *)sig[@"s"];
-  ///////
-  NSMutableData *sigData = [NSMutableData dataWithLength:64];
-  unsigned char* sigBytes = sigData.mutableBytes;
-  memset(sigBytes, 0, 64);
-  
-  memcpy(sigBytes, rData.bytes, 32);
-  memcpy(sigBytes+32, sData.bytes, 32);
-  return sigData;
 }
