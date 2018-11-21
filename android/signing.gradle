@@ -70,13 +70,16 @@ def clearFields() {
     vaultKeystorePassword = null
     vaultKeyAlias = null
     vaultKeyPassword = null
+    project.ext.signingProps = null
 }
 
 
 def getReleaseKeystore() {
     checkVaultEnvironment()
     String keystoreFile
-    if (project.hasProperty("IGNORE_VAULT")) {
+    if (project.signingProps?.get("storeFile") != null){
+        keystoreFile = project.signingProps?.get("storeFile")
+    } else if (project.hasProperty("IGNORE_VAULT")) {
         //build release using dummy signature
         keystoreFile = "../keystores/dummy-release.keystore"
     } else {
@@ -105,7 +108,9 @@ def getReleaseKeystore() {
 def getReleaseKeystorePassword() {
     checkVaultEnvironment()
     String keystorePassword
-    if (project.hasProperty("IGNORE_VAULT")) {
+    if (project.signingProps?.get("storePassword") != null){
+        keystorePassword = project.signingProps?.get("storePassword")
+    } else if (project.hasProperty("IGNORE_VAULT")) {
         //build release using dummy signature
         keystorePassword = "dummypassword"
     } else {
@@ -125,7 +130,9 @@ def getReleaseKeystorePassword() {
 def getReleaseKeyAlias() {
     checkVaultEnvironment()
     String keyAlias
-    if (project.hasProperty("IGNORE_VAULT")) {
+    if (project.signingProps?.get("keyAlias") != null){
+        keyAlias = project.signingProps?.get("keyAlias")
+    } else if (project.hasProperty("IGNORE_VAULT")) {
         //build release using dummy signature
         keyAlias = "dummy-alias"
     } else {
@@ -144,7 +151,9 @@ def getReleaseKeyAlias() {
 def getReleaseKeyPassword() {
     checkVaultEnvironment()
     String keyPassword
-    if (project.hasProperty("IGNORE_VAULT")) {
+    if (project.signingProps?.get("keyPassword") != null){
+        keyPassword = project.signingProps?.get("keyPassword")
+    } else if (project.hasProperty("IGNORE_VAULT")) {
         //build release using dummy signature
         keyPassword = "dummypassword"
     } else {
@@ -160,6 +169,17 @@ def getReleaseKeyPassword() {
     return keyPassword
 }
 
+def checkLocalSigningData() {
+    def propFile = file("${rootDir}/signing.properties")
+    if (fileReadable(propFile)) {
+
+        Properties signingProps = new Properties()
+        propFile.withInputStream {
+            signingProps.load(it)
+        }
+        project.ext.signingProps = signingProps
+    }
+}
 
 def checkVaultEnvironment() {
 
@@ -185,10 +205,13 @@ def checkVaultEnvironment() {
 
 def doClearSecrets() {
     clearFields()
-    fillWithGarbage(vaultKeystoreTempFile)
-    println "deleting $vaultKeystoreTempFile"
-    vaultKeystoreTempFile?.delete()
-    println "deleted $vaultKeystoreTempFile"
+    vaultKeystoreTempFile?.with {
+        fillWithGarbage(vaultKeystoreTempFile)
+        println "deleting $vaultKeystoreTempFile"
+        vaultKeystoreTempFile?.delete()
+        println "deleted $vaultKeystoreTempFile"
+    }
+    vaultKeystoreTempFile = null
 }
 
 ext {
@@ -199,6 +222,7 @@ ext {
 }
 
 task prepareVault {
+    checkLocalSigningData()
     doFirst {
         checkVaultEnvironment()
     }

@@ -1,5 +1,13 @@
 # Change Log
 
+## [v391](https://github.com/uport-project/uport-mobile/tree/v391) (2018-11-21)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v390...v391)
+
+**Merged pull requests:**
+
+- \[support\] enable local release builds for android [\#28](https://github.com/uport-project/uport-mobile/pull/28) ([mirceanis](https://github.com/mirceanis))
+- Improve ECDSA Signing on iOS [\#22](https://github.com/uport-project/uport-mobile/pull/22) ([pelle](https://github.com/pelle))
+
 ## [v390](https://github.com/uport-project/uport-mobile/tree/v390) (2018-11-19)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v389...v390)
 
