@@ -49,6 +49,7 @@ NSString *const UPTProtectionLevelLookupKeyNamePrefix = @"level-address-";
 
 NSString * const UPTSignerErrorCodeLevelParamNotRecognized = @"-11";
 NSString * const UPTSignerErrorCodeLevelPrivateKeyNotFound = @"-12";
+NSString * const UPTSignerErrorCodeLevelSigningFailed = @"-13";
 
 @implementation UPTEthSigner
 
@@ -84,7 +85,12 @@ NSString * const UPTSignerErrorCodeLevelPrivateKeyNotFound = @"-12";
         NSData *payloadData = [[NSData alloc] initWithBase64EncodedString:payload options:0];
         NSData *hash = [UPTEthSigner keccak256:payloadData];
         NSDictionary *signature = ethereumSignature(key, hash, NULL);
-        result(signature, nil);
+        if (signature) {
+            result(signature, nil);
+        } else {
+            NSError *signingError = [[NSError alloc] initWithDomain:@"UPTError" code:UPTSignerErrorCodeLevelSigningFailed.integerValue userInfo:@{@"message": @"signing failed due to invalid values"}];
+            result( nil, signingError);
+        }
     } else {
         NSError *protectionLevelError = [[NSError alloc] initWithDomain:@"UPTError" code:UPTSignerErrorCodeLevelPrivateKeyNotFound.integerValue userInfo:@{@"message": @"private key not found for eth address"}];
         result( nil, protectionLevelError);
@@ -104,7 +110,12 @@ NSString * const UPTSignerErrorCodeLevelPrivateKeyNotFound = @"-12";
     if (key) {
         NSData *hash = [payload SHA256];
         NSDictionary *signature = ethereumSignature(key, hash, NULL);
-        result(signature, nil);
+        if (signature) {
+            result(signature, nil);
+        } else {
+            NSError *signingError = [[NSError alloc] initWithDomain:@"UPTError" code:UPTSignerErrorCodeLevelSigningFailed.integerValue userInfo:@{@"message": @"signing failed due to invalid values"}];
+            result( nil, signingError);
+        }
     } else {
         NSError *protectionLevelError = [[NSError alloc] initWithDomain:@"UPTError" code:UPTSignerErrorCodeLevelPrivateKeyNotFound.integerValue userInfo:@{@"message": @"private key not found for eth address"}];
         result( nil, protectionLevelError);

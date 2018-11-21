@@ -38,6 +38,7 @@ NSMutableData *compressedPublicKey(EC_KEY *key) {
 
 NSDictionary *ethereumSignature(BTCKey *keypair, NSData *hash, NSData *chainId) {
   NSDictionary *sig = genericSignature(keypair, hash, YES);
+  if (!sig) return NULL;
   NSData *rData = (NSData *)sig[@"r"];
   NSData *sData = (NSData *)sig[@"s"];
   BN_ULONG base = 0x1b; // pre-EIP155
@@ -56,21 +57,20 @@ NSDictionary *ethereumSignature(BTCKey *keypair, NSData *hash, NSData *chainId) 
 
 
 NSDictionary *genericSignature(BTCKey *keypair, NSData *hash, BOOL lowS) {
-  BTCBigNumber* privkeyBN = [[BTCBigNumber alloc] initWithUnsignedBigEndian:[keypair privateKey]];
-  BTCBigNumber* n = [BTCCurvePoint curveOrder];
+    BTCBigNumber* privkeyBN = [[BTCBigNumber alloc] initWithUnsignedBigEndian:[keypair privateKey]];
+    BTCBigNumber* n = [BTCCurvePoint curveOrder];
   
-  for (int iter = 0; true; iter++ ) {
     NSMutableData* kdata = [keypair signatureNonceForHash:hash];
     BTCMutableBigNumber* k = [[BTCMutableBigNumber alloc] initWithUnsignedBigEndian:kdata];
     [k mod:n]; // make sure k belongs to [0, n - 1]
     
-    if (BN_cmp(k.BIGNUM, [BTCBigNumber zero].BIGNUM) <= 0 && BN_cmp(k.BIGNUM, n.BIGNUM) >= 0) continue;
+    if (BN_cmp(k.BIGNUM, [BTCBigNumber zero].BIGNUM) <= 0 && BN_cmp(k.BIGNUM, n.BIGNUM) >= 0) return NULL;
 
     BTCDataClear(kdata);
   
     BTCCurvePoint* K = [[BTCCurvePoint generator] multiply:k];
     // K was infinity and does not work, redo it
-    if ([K isInfinity]) continue;
+    if ([K isInfinity])  return NULL;
     BTCMutableBigNumber* Kx = [K.x mutableCopy];
     [Kx mod: n];
     
@@ -81,8 +81,7 @@ NSDictionary *genericSignature(BTCKey *keypair, NSData *hash, BOOL lowS) {
     BTCMutableBigNumber* signatureBN = [[[[privkeyBN mutableCopy] multiply:Kx mod:n] add:hashBN mod: n] multiply:[k inverseMod:n] mod:n];
 
     // Neither r nor s can be zero
-    if ([Kx isZero] || [signatureBN isZero]) continue;
-  
+    if ([Kx isZero] || [signatureBN isZero]) return NULL;
     BTCBigNumber *r = [Kx copy];
     uint8_t recoveryParam = BN_is_odd(K.y.BIGNUM) ? 1 : 0;
     
@@ -116,11 +115,11 @@ NSDictionary *genericSignature(BTCKey *keypair, NSData *hash, BOOL lowS) {
              @"s": sData,
              @"recoveryParam": @(recoveryParam)
              };
-  }
 }
 
 NSData *simpleSignature(BTCKey *keypair, NSData *hash) {
   NSDictionary *sig = genericSignature(keypair, hash, NO);
+  if (!sig) return NULL;
   NSData *rData = (NSData *)sig[@"r"];
   NSData *sData = (NSData *)sig[@"s"];
   ///////

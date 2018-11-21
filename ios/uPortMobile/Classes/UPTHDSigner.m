@@ -46,6 +46,7 @@ NSString *const UPTHDEntropyProtectionLevelLookupKeyNamePrefix = @"level-seed-";
 
 NSString * const UPTHDSignerErrorCodeLevelParamNotRecognized = @"-11";
 NSString * const UPTHDSignerErrorCodeLevelPrivateKeyNotFound = @"-12";
+NSString * const UPTHDSignerErrorCodeLevelSigningFailed = @"-13";
 
 @implementation UPTHDSigner
 
@@ -186,7 +187,12 @@ NSString * const UPTHDSignerErrorCodeLevelPrivateKeyNotFound = @"-12";
     NSData *payloadData = [[NSData alloc] initWithBase64EncodedString:txPayload options:0];
     NSData *hash = [UPTHDSigner keccak256:payloadData];
     NSDictionary *signature = ethereumSignature(derivedKeychain.key, hash, NULL);
-    callback(signature, nil);
+    if (signature) {
+      callback(signature, nil);
+    } else {
+      NSError *signingError = [[NSError alloc] initWithDomain:@"UPTHDSignerError" code:UPTHDSignerErrorCodeLevelSigningFailed.integerValue userInfo:@{@"message": [NSString stringWithFormat:@"signing failed due to invalid values for eth address: signJWT %@", rootAddress]}];
+      callback( nil, signingError);
+    }
 }
 
 + (void)signJWT:(NSString *)rootAddress derivationPath:(NSString *)derivationPath data:(NSString *)data prompt:(NSString *)prompt callback:(UPTHDSignerTransactionSigningResult)callback {
@@ -211,7 +217,12 @@ NSString * const UPTHDSignerErrorCodeLevelPrivateKeyNotFound = @"-12";
     NSData *payloadData = [[NSData alloc] initWithBase64EncodedString:data options:0];
     NSData *hash = [payloadData SHA256];
     NSDictionary *signature = ethereumSignature(derivedKeychain.key, hash, NULL);
-    callback(signature, nil);
+    if (signature) {
+        callback(signature, nil);
+    } else {
+        NSError *signingError = [[NSError alloc] initWithDomain:@"UPTHDSignerError" code:UPTHDSignerErrorCodeLevelSigningFailed.integerValue userInfo:@{@"message": [NSString stringWithFormat:@"signing failed due to invalid values for eth address: signJWT %@", rootAddress]}];
+        callback( nil, signingError);
+    }
 }
 
 + (void)privateKeyForPath:(NSString *)rootAddress derivationPath:(NSString *)derivationPath prompt:(NSString *)prompt callback:(UPTHDSignerPrivateKeyResult)callback {
