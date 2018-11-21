@@ -23,37 +23,6 @@
 #include <openssl/ec.h>
 #include <openssl/obj_mac.h>
 
-static BTCBigNumber *keyPairToBigNumber(BTCKey *keypair) {
-  NSMutableData *privateKey = [keypair privateKey];
-  EC_KEY* eckey = EC_KEY_new_by_curve_name(NID_secp256k1);
-  BIGNUM *priv_keyBN = BN_bin2bn(privateKey.bytes, (int)privateKey.length, BN_new());
-  BN_CTX *ctx = NULL;
-  EC_POINT *pub_key = NULL;
-  const EC_GROUP *group = EC_KEY_get0_group(eckey);
-  
-  BTCBigNumber* privkeyBigNumber;
-  
-  if ((ctx = BN_CTX_new())) {
-    if ((pub_key = EC_POINT_new(group))) {
-      if (EC_POINT_mul(group, pub_key, priv_keyBN, NULL, NULL, ctx)) {
-        EC_KEY_set_private_key(eckey, priv_keyBN);
-        EC_KEY_set_public_key(eckey, pub_key);
-        const BIGNUM *privkeyBIGNUM = EC_KEY_get0_private_key(eckey);
-        privkeyBigNumber = [[BTCBigNumber alloc] initWithBIGNUM:privkeyBIGNUM];
-      }
-    }
-  }
-  
-  if (pub_key) EC_POINT_free(pub_key);
-  if (ctx) BN_CTX_free(ctx);
-  BN_clear_free(priv_keyBN);
-  BTCDataClear(privateKey);
-  EC_KEY_free(eckey);
-
-
-  return privkeyBigNumber;
-}
-
 NSMutableData *compressedPublicKey(EC_KEY *key) {
   if (!key) return nil;
   EC_KEY_set_conv_form(key, POINT_CONVERSION_COMPRESSED);
@@ -87,7 +56,7 @@ NSDictionary *ethereumSignature(BTCKey *keypair, NSData *hash, NSData *chainId) 
 
 
 NSDictionary *genericSignature(BTCKey *keypair, NSData *hash, BOOL lowS) {
-  BTCBigNumber* privkeyBN = keyPairToBigNumber(keypair);
+  BTCBigNumber* privkeyBN = [[BTCBigNumber alloc] initWithUnsignedBigEndian:[keypair privateKey]];
   BTCBigNumber* n = [BTCCurvePoint curveOrder];
   
   for (int iter = 0; true; iter++ ) {
