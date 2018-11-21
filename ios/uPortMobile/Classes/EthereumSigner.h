@@ -1,3 +1,5 @@
+// EthereumSigner.h
+// uPort Mobile App
 // Copyright (C) 2018 ConsenSys AG
 //
 // This file is part of uPort Mobile App.

@@ -88,12 +88,16 @@ NSString * const UPTSignerErrorCodeLevelSigningFailed = @"-13";
         if (signature) {
             result(signature, nil);
         } else {
-            NSError *signingError = [[NSError alloc] initWithDomain:@"UPTError" code:UPTSignerErrorCodeLevelSigningFailed.integerValue userInfo:@{@"message": @"signing failed due to invalid values"}];
-            result( nil, signingError);
+            NSError *signingError = [[NSError alloc] initWithDomain:@"UPTError"
+                                                               code:UPTSignerErrorCodeLevelSigningFailed.integerValue
+                                                           userInfo:@{@"message": @"signing failed due to invalid values"}];
+            result(nil, signingError);
         }
     } else {
-        NSError *protectionLevelError = [[NSError alloc] initWithDomain:@"UPTError" code:UPTSignerErrorCodeLevelPrivateKeyNotFound.integerValue userInfo:@{@"message": @"private key not found for eth address"}];
-        result( nil, protectionLevelError);
+        NSError *protectionLevelError = [[NSError alloc] initWithDomain:@"UPTError"
+                                                                   code:UPTSignerErrorCodeLevelPrivateKeyNotFound.integerValue
+                                                               userInfo:@{@"message": @"private key not found for eth address"}];
+        result(nil, protectionLevelError);
     }
 
 }
@@ -101,8 +105,10 @@ NSString * const UPTSignerErrorCodeLevelSigningFailed = @"-13";
 + (void)signJwt:(NSString *)ethAddress userPrompt:(NSString*)userPromptText data:(NSData *)payload result:(UPTEthSignerTransactionSigningResult)result {
     UPTEthKeychainProtectionLevel protectionLevel = [UPTEthSigner protectionLevelWithEthAddress:ethAddress];
     if ( protectionLevel == UPTEthKeychainProtectionLevelNotRecognized ) {
-      NSError *protectionLevelError = [[NSError alloc] initWithDomain:@"UPTError" code:UPTSignerErrorCodeLevelParamNotRecognized.integerValue userInfo:@{@"message": [NSString stringWithFormat:@"protection level not found for eth address: signJwt %@", ethAddress]}];
-        result( nil, protectionLevelError);
+      NSError *protectionLevelError = [[NSError alloc] initWithDomain:@"UPTError"
+                                                                 code:UPTSignerErrorCodeLevelParamNotRecognized.integerValue
+                                                             userInfo:@{ @"message": [NSString stringWithFormat:@"protection level not found for eth address: signJwt %@", ethAddress]}];
+        result(nil, protectionLevelError);
         return;
     }
 
@@ -113,12 +119,16 @@ NSString * const UPTSignerErrorCodeLevelSigningFailed = @"-13";
         if (signature) {
             result(signature, nil);
         } else {
-            NSError *signingError = [[NSError alloc] initWithDomain:@"UPTError" code:UPTSignerErrorCodeLevelSigningFailed.integerValue userInfo:@{@"message": @"signing failed due to invalid values"}];
-            result( nil, signingError);
+            NSError *signingError = [[NSError alloc] initWithDomain:@"UPTError"
+                                                               code:UPTSignerErrorCodeLevelSigningFailed.integerValue
+                                                           userInfo:@{@"message": @"signing failed due to invalid values"}];
+            result(nil, signingError);
         }
     } else {
-        NSError *protectionLevelError = [[NSError alloc] initWithDomain:@"UPTError" code:UPTSignerErrorCodeLevelPrivateKeyNotFound.integerValue userInfo:@{@"message": @"private key not found for eth address"}];
-        result( nil, protectionLevelError);
+        NSError *protectionLevelError = [[NSError alloc] initWithDomain:@"UPTError"
+                                                                   code:UPTSignerErrorCodeLevelPrivateKeyNotFound.integerValue
+                                                               userInfo:@{@"message": @"private key not found for eth address"}];
+        result(nil, protectionLevelError);
     }
 }
 

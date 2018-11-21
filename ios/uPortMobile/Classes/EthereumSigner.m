@@ -1,3 +1,5 @@
+// EthereumSigner.m
+// uPort Mobile App
 // Copyright (C) 2018 ConsenSys AG
 //
 // This file is part of uPort Mobile App.
@@ -24,37 +26,35 @@
 #include <openssl/obj_mac.h>
 
 NSMutableData *compressedPublicKey(EC_KEY *key) {
-  if (!key) return nil;
-  EC_KEY_set_conv_form(key, POINT_CONVERSION_COMPRESSED);
-  int length = i2o_ECPublicKey(key, NULL);
-  if (!length) return nil;
-  NSCAssert(length <= 65, @"Pubkey length must be up to 65 bytes.");
-  NSMutableData* data = [[NSMutableData alloc] initWithLength:length];
-  unsigned char* bytes = [data mutableBytes];
-  if (i2o_ECPublicKey(key, &bytes) != length) return nil;
-  return data;
+    if (!key) return nil;
+    EC_KEY_set_conv_form(key, POINT_CONVERSION_COMPRESSED);
+    int length = i2o_ECPublicKey(key, NULL);
+    if (!length) return nil;
+    NSCAssert(length <= 65, @"Pubkey length must be up to 65 bytes.");
+    NSMutableData* data = [[NSMutableData alloc] initWithLength:length];
+    unsigned char* bytes = [data mutableBytes];
+    if (i2o_ECPublicKey(key, &bytes) != length) return nil;
+    return data;
 }
-
 
 NSDictionary *ethereumSignature(BTCKey *keypair, NSData *hash, NSData *chainId) {
-  NSDictionary *sig = genericSignature(keypair, hash, YES);
-  if (!sig) return NULL;
-  NSData *rData = (NSData *)sig[@"r"];
-  NSData *sData = (NSData *)sig[@"s"];
-  BN_ULONG base = 0x1b; // pre-EIP155
-  if (chainId) {
-    BIGNUM *v = BN_new(); BN_bin2bn(chainId.bytes, chainId.length, v);
-    // TODO support longer chainIDs
-    base = BN_get_word(v) * 2 + 35;
-    BN_clear_free(v);
-  }
+    NSDictionary *sig = genericSignature(keypair, hash, YES);
+    if (sig == nil) return NULL;
+    NSData *rData = (NSData *)sig[@"r"];
+    NSData *sData = (NSData *)sig[@"s"];
+    BN_ULONG base = 0x1b; // pre-EIP155
+    if (chainId) {
+        BIGNUM *v = BN_new(); BN_bin2bn(chainId.bytes, chainId.length, v);
+        // TODO support longer chainIDs
+        base = BN_get_word(v) * 2 + 35;
+        BN_clear_free(v);
+    }
   
-  NSDictionary *signatureDictionary = @{ @"v": @(base + [sig[@"recoveryParam"] intValue]),
-                                         @"r": [rData base64EncodedStringWithOptions:0],
-                                         @"s":[sData base64EncodedStringWithOptions:0]};
-  return signatureDictionary;
+    NSDictionary *signatureDictionary = @{ @"v" : @(base + [sig[@"recoveryParam"] intValue]),
+                                           @"r" : [rData base64EncodedStringWithOptions:0],
+                                           @"s" :[sData base64EncodedStringWithOptions:0] };
+    return signatureDictionary;
 }
-
 
 NSDictionary *genericSignature(BTCKey *keypair, NSData *hash, BOOL lowS) {
     BTCBigNumber* privkeyBN = [[BTCBigNumber alloc] initWithUnsignedBigEndian:[keypair privateKey]];
@@ -78,7 +78,7 @@ NSDictionary *genericSignature(BTCKey *keypair, NSData *hash, BOOL lowS) {
   
     // Compute s = (k^-1)*(h + Kx*privkey)
   
-    BTCMutableBigNumber* signatureBN = [[[[privkeyBN mutableCopy] multiply:Kx mod:n] add:hashBN mod: n] multiply:[k inverseMod:n] mod:n];
+    BTCMutableBigNumber* signatureBN = [[[[privkeyBN mutableCopy] multiply:Kx mod:n] add:hashBN mod:n] multiply:[k inverseMod:n] mod:n];
 
     // Neither r nor s can be zero
     if ([Kx isZero] || [signatureBN isZero]) return NULL;
@@ -91,12 +91,12 @@ NSDictionary *genericSignature(BTCKey *keypair, NSData *hash, BOOL lowS) {
     [K clear];
     [Kx clear];
 
-    BTCBigNumber *twiceS = [[signatureBN mutableCopy] add: signatureBN];
+    BTCBigNumber *twiceS = [[signatureBN mutableCopy] add:signatureBN];
     
     BTCBigNumber *s;
     if (lowS && BN_cmp(twiceS.BIGNUM, n.BIGNUM) > 0) {
       // enforce low S values, by negating the value (modulo the order) if above order/2.
-      s = [[n mutableCopy] subtract: signatureBN]; // Maybe this should be swapped
+      s = [[n mutableCopy] subtract:signatureBN]; // Maybe this should be swapped
       recoveryParam ^= 1;
     } else {
       s = [signatureBN copy];
@@ -110,26 +110,23 @@ NSDictionary *genericSignature(BTCKey *keypair, NSData *hash, BOOL lowS) {
     [r clear];
     [s clear];
     
-    return @{
-             @"r": rData,
-             @"s": sData,
-             @"recoveryParam": @(recoveryParam)
-             };
+    return @{ @"r" : rData,
+              @"s" : sData,
+              @"recoveryParam" : @(recoveryParam) };
 }
 
 NSData *simpleSignature(BTCKey *keypair, NSData *hash) {
-  NSDictionary *sig = genericSignature(keypair, hash, NO);
-  if (!sig) return NULL;
-  NSData *rData = (NSData *)sig[@"r"];
-  NSData *sData = (NSData *)sig[@"s"];
-  ///////
-  NSMutableData *sigData = [NSMutableData dataWithLength:64];
-  unsigned char* sigBytes = sigData.mutableBytes;
-  memset(sigBytes, 0, 64);
+    NSDictionary *sig = genericSignature(keypair, hash, NO);
+    if (sig  == nil) return NULL;
+    NSData *rData = (NSData *)sig[@"r"];
+    NSData *sData = (NSData *)sig[@"s"];
+    NSMutableData *sigData = [NSMutableData dataWithLength:64];
+    unsigned char* sigBytes = sigData.mutableBytes;
+    memset(sigBytes, 0, 64);
   
-  memcpy(sigBytes, rData.bytes, 32);
-  memcpy(sigBytes+32, sData.bytes, 32);
-  return sigData;
+    memcpy(sigBytes, rData.bytes, 32);
+    memcpy(sigBytes + 32, sData.bytes, 32);
+    return sigData;
 }
 
 // Not used here but leave in for use in library when pulling out again
