@@ -72,12 +72,11 @@ NSDictionary *genericSignature(BTCKey *keypair, NSData *hash, BOOL lowS) {
     // K was infinity and does not work, redo it
     if ([K isInfinity])  return NULL;
     BTCMutableBigNumber* Kx = [K.x mutableCopy];
-    [Kx mod: n];
+    [Kx mod:n];
     
     BTCBigNumber* hashBN = [[BTCBigNumber alloc] initWithUnsignedBigEndian:hash];
   
     // Compute s = (k^-1)*(h + Kx*privkey)
-  
     BTCMutableBigNumber* signatureBN = [[[[privkeyBN mutableCopy] multiply:Kx mod:n] add:hashBN mod:n] multiply:[k inverseMod:n] mod:n];
 
     // Neither r nor s can be zero
