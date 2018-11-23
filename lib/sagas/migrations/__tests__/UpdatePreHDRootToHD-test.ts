@@ -59,11 +59,6 @@ describe('UpdatePreHDRootToHD', () => {
   }
   const publicEncKey = '0xPUBLICENCKEY'
 
-  // const address = yield select(currentAddress)
-  // const kp = yield call(createIdentityAddress)
-  // const publicEncKey = yield call(encryptionPublicKey, {idIndex: kp.hdindex, actIndex: 0})
-  // yield put(updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: kp.hdindex, securityLevel: DEFAULT_LEVEL}))  
-
   describe('migrate()', () => {
     describe('Working hdwallet', () => {
       it('should update data', () => {

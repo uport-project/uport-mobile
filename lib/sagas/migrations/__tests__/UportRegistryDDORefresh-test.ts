@@ -15,26 +15,49 @@
 // You should have received a copy of the GNU General Public License
 // along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
 //
-import { all, takeEvery, call, select, put } from 'redux-saga/effects'
+import { expectSaga } from 'redux-saga-test-plan'
+import * as matchers from 'redux-saga-test-plan/matchers'
+import { throwError } from 'redux-saga-test-plan/providers'
+import { select, call } from 'redux-saga/effects'
+
+import migrate from '../UportRegistryDDORefresh'
+
 import {
   savePublicUport
 } from 'uPortMobile/lib/sagas/persona'
-import { 
+
+import {
   MigrationStep
 } from 'uPortMobile/lib/constants/MigrationActionTypes'
+
 import {
   saveMessage,
+  failProcess
 } from 'uPortMobile/lib/actions/processStatusActions'
+
 import {
   currentAddress
 } from 'uPortMobile/lib/selectors/identities'
 
 const step = MigrationStep.UportRegistryDDORefresh
 
-function * migrate () : any {
-  const address = yield select(currentAddress)
-  yield put(saveMessage(step, `Updating uPort Registry for ${address}`))
-  return yield call(savePublicUport, {address})
-}
+describe('UportRegistryDDORefresh', () => {
+  const address = '0xroot'
 
-export default migrate
+  describe('migrate()', () => {
+    describe('Working hdwallet', () => {
+      it('should update data', () => {
+        return expectSaga(migrate)
+          .provide([
+            [select(currentAddress), address],
+            [call(savePublicUport, {address}), true]
+          ])
+          .put(saveMessage(step, `Updating uPort Registry for ${address}`))
+          .call(savePublicUport, {address})
+          .returns(true)
+          .run()
+      })
+    })
+  })
+})
+
