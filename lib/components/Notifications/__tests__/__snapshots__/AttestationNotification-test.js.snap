@@ -84,7 +84,7 @@ exports[`Attestation Notifications renders an attestation notification correctly
               "width": 72,
             },
             Object {
-              "backgroundColor": "rgba(91,84,199,1)",
+              "backgroundColor": "#FFFFFF",
             },
             Object {
               "padding": 18,
@@ -105,7 +105,6 @@ exports[`Attestation Notifications renders an attestation notification correctly
               },
               undefined,
               Object {
-                "color": "white",
                 "fontSize": 18,
               },
             ]
@@ -336,7 +335,7 @@ exports[`Attestation Notifications renders an attestation notification that has 
               "width": 72,
             },
             Object {
-              "backgroundColor": "rgba(91,84,199,1)",
+              "backgroundColor": "#FFFFFF",
             },
             Object {
               "padding": 18,
@@ -357,7 +356,6 @@ exports[`Attestation Notifications renders an attestation notification that has 
               },
               undefined,
               Object {
-                "color": "white",
                 "fontSize": 18,
               },
             ]
@@ -475,7 +473,7 @@ exports[`Attestation Notifications renders an attestation notification that has 
               "width": 72,
             },
             Object {
-              "backgroundColor": "rgba(91,84,199,1)",
+              "backgroundColor": "#FFFFFF",
             },
             Object {
               "padding": 18,
@@ -496,7 +494,6 @@ exports[`Attestation Notifications renders an attestation notification that has 
               },
               undefined,
               Object {
-                "color": "white",
                 "fontSize": 18,
               },
             ]

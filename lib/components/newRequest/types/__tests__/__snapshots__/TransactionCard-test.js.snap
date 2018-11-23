@@ -1295,8 +1295,12 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
                     "width": 97.5,
                   },
                   Object {
+<<<<<<< HEAD
                     "backgroundColor": "rgba(91,84,199,1)",
 >>>>>>> Updating tests
+=======
+                    "backgroundColor": "#FFFFFF",
+>>>>>>> Show default icon if name is did:
                   },
                   Object {
                     "position": "absolute",
@@ -1320,7 +1324,6 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
                       "fontSize": 36,
                     },
                     Object {
-                      "color": "white",
                       "fontSize": 24.375,
 >>>>>>> Updating tests
                     },
@@ -1693,7 +1696,7 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
                     "width": 97.5,
                   },
                   Object {
-                    "backgroundColor": "rgba(91,84,199,1)",
+                    "backgroundColor": "#FFFFFF",
                   },
                   Object {
                     "padding": 24.375,
@@ -1716,7 +1719,6 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
                       "fontSize": 36,
                     },
                     Object {
-                      "color": "white",
                       "fontSize": 24.375,
                     },
                   ]
@@ -2122,7 +2124,7 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
                   "width": 60,
                 },
                 Object {
-                  "backgroundColor": "rgba(91,84,199,1)",
+                  "backgroundColor": "#FFFFFF",
                 },
                 Object {
                   "padding": 15,
@@ -2145,7 +2147,6 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
                     "fontSize": 36,
                   },
                   Object {
-                    "color": "white",
                     "fontSize": 15,
                   },
                 ]
@@ -2514,7 +2515,7 @@ exports[`TransactionCard renders correctly with destination being invalid destin
                   "width": 60,
                 },
                 Object {
-                  "backgroundColor": "rgba(91,84,199,1)",
+                  "backgroundColor": "#FFFFFF",
                 },
                 Object {
                   "padding": 15,
@@ -2537,7 +2538,6 @@ exports[`TransactionCard renders correctly with destination being invalid destin
                     "fontSize": 36,
                   },
                   Object {
-                    "color": "white",
                     "fontSize": 15,
                   },
                 ]
@@ -2947,7 +2947,7 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
                   "width": 60,
                 },
                 Object {
-                  "backgroundColor": "rgba(91,84,199,1)",
+                  "backgroundColor": "#FFFFFF",
                 },
                 Object {
                   "padding": 15,
@@ -2970,7 +2970,6 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
                     "fontSize": 36,
                   },
                   Object {
-                    "color": "white",
                     "fontSize": 15,
                   },
                 ]

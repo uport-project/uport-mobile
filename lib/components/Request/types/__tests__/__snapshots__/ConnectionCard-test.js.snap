@@ -905,7 +905,7 @@ exports[`ConnectionCard renders correctly with a authorizedAt Request 1`] = `
               "width": 184,
             },
             Object {
-              "backgroundColor": "rgba(91,84,199,1)",
+              "backgroundColor": "#FFFFFF",
             },
             Object {
               "padding": 46,
@@ -926,7 +926,6 @@ exports[`ConnectionCard renders correctly with a authorizedAt Request 1`] = `
               },
               undefined,
               Object {
-                "color": "white",
                 "fontSize": 46,
               },
             ]
@@ -1102,7 +1101,7 @@ exports[`ConnectionCard renders correctly with a cancelled Request 1`] = `
               "width": 184,
             },
             Object {
-              "backgroundColor": "rgba(91,84,199,1)",
+              "backgroundColor": "#FFFFFF",
             },
             Object {
               "padding": 46,
@@ -1123,7 +1122,6 @@ exports[`ConnectionCard renders correctly with a cancelled Request 1`] = `
               },
               undefined,
               Object {
-                "color": "white",
                 "fontSize": 46,
               },
             ]
@@ -1299,7 +1297,7 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
               "width": 184,
             },
             Object {
-              "backgroundColor": "rgba(91,84,199,1)",
+              "backgroundColor": "#FFFFFF",
             },
             Object {
               "padding": 46,
@@ -1320,7 +1318,6 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
               },
               undefined,
               Object {
-                "color": "white",
                 "fontSize": 46,
               },
             ]
@@ -1592,7 +1589,7 @@ exports[`ConnectionCard renders correctly with a contact that is me 1`] = `
               "width": 184,
             },
             Object {
-              "backgroundColor": "rgba(91,84,199,1)",
+              "backgroundColor": "#FFFFFF",
             },
             Object {
               "padding": 46,
@@ -1613,7 +1610,6 @@ exports[`ConnectionCard renders correctly with a contact that is me 1`] = `
               },
               undefined,
               Object {
-                "color": "white",
                 "fontSize": 46,
               },
             ]
@@ -1789,7 +1785,7 @@ exports[`ConnectionCard renders correctly with a existing Request 1`] = `
               "width": 184,
             },
             Object {
-              "backgroundColor": "rgba(91,84,199,1)",
+              "backgroundColor": "#FFFFFF",
             },
             Object {
               "padding": 46,
@@ -1810,7 +1806,6 @@ exports[`ConnectionCard renders correctly with a existing Request 1`] = `
               },
               undefined,
               Object {
-                "color": "white",
                 "fontSize": 46,
               },
             ]
@@ -1985,36 +1980,37 @@ exports[`ConnectionCard renders correctly with an unkown contact 1`] = `
               "height": 184,
               "width": 184,
             },
-            Object {
-              "backgroundColor": "rgba(91,84,199,1)",
-            },
-            Object {
-              "padding": 46,
-            },
           ]
         }
       >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+        <Image
+          resizeMode="cover"
+          source={
+            Object {
+              "testUri": "../../../assets/images/ethereum-white-icon.png",
+            }
+          }
           style={
             Array [
               Object {
-                "fontFamily": undefined,
-                "fontSize": 15,
-                "textAlign": "center",
+                "borderRadius": 92,
+                "height": 184,
+                "width": 184,
               },
-              undefined,
               Object {
-                "color": "white",
-                "fontSize": 46,
+                "position": "absolute",
               },
+              Array [
+                Object {
+                  "borderRadius": 92,
+                  "height": 184,
+                  "width": 184,
+                },
+                undefined,
+              ],
             ]
           }
-        >
-          
-        </Text>
+        />
       </View>
     </View>
   </View>
