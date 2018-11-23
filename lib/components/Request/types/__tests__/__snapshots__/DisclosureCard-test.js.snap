@@ -1032,6 +1032,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request 1`] = `
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -1083,7 +1084,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request 1`] = `
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
@@ -1616,6 +1617,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request and cli
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -1667,7 +1669,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request and cli
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
@@ -2220,6 +2222,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request and ver
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -2271,7 +2274,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request and ver
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
@@ -2858,6 +2861,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -2910,6 +2914,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
             "backgroundColor": "rgba(0,0,0,0)",
             "borderColor": "rgba(185, 185, 185, 1)",
             "borderWidth": 1,
+            "padding": 15,
           },
         ]
       }
@@ -3496,6 +3501,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -3547,7 +3553,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
@@ -4134,6 +4140,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -4185,7 +4192,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
@@ -4718,6 +4725,7 @@ exports[`DisclosureCard renders correctly with a segregated account request and 
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -4769,7 +4777,7 @@ exports[`DisclosureCard renders correctly with a segregated account request and 
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
@@ -5302,6 +5310,7 @@ exports[`DisclosureCard renders correctly with a simple request and client info 
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -5353,7 +5362,7 @@ exports[`DisclosureCard renders correctly with a simple request and client info 
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
@@ -5907,6 +5916,7 @@ exports[`DisclosureCard renders correctly with error 1`] = `
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -5959,6 +5969,7 @@ exports[`DisclosureCard renders correctly with error 1`] = `
             "backgroundColor": "rgba(0,0,0,0)",
             "borderColor": "rgba(185, 185, 185, 1)",
             "borderWidth": 1,
+            "padding": 15,
           },
         ]
       }
@@ -6491,6 +6502,7 @@ exports[`DisclosureCard unpublished identity renders correctly after publishing 
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -6542,7 +6554,7 @@ exports[`DisclosureCard unpublished identity renders correctly after publishing 
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
@@ -7075,6 +7087,7 @@ exports[`DisclosureCard unpublished identity renders correctly with identity not
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -7126,7 +7139,7 @@ exports[`DisclosureCard unpublished identity renders correctly with identity not
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
@@ -7765,6 +7778,7 @@ exports[`DisclosureCard with network with no existing account for network render
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -7816,7 +7830,7 @@ exports[`DisclosureCard with network with no existing account for network render
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
@@ -8455,6 +8469,7 @@ exports[`DisclosureCard with network with no existing segregated account for cli
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -8506,7 +8521,7 @@ exports[`DisclosureCard with network with no existing segregated account for cli
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
@@ -9145,6 +9160,7 @@ exports[`DisclosureCard with network with pre-existing account renders correctly
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -9196,7 +9212,7 @@ exports[`DisclosureCard with network with pre-existing account renders correctly
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],

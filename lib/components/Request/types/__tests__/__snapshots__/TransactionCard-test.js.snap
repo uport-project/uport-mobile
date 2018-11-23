@@ -272,7 +272,7 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
             Array [
               Object {
                 "backgroundColor": "rgba(91,84,199,1)",
-                "marginLeft": 10,
+                "padding": 15,
               },
               Object {
                 "marginBottom": 30,
@@ -617,6 +617,7 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
               Object {
                 "borderColor": "rgba(74,74,74,1)",
                 "borderWidth": 1,
+                "padding": 15,
               },
               Object {
                 "alignItems": "center",
@@ -937,7 +938,7 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
             Array [
               Object {
                 "backgroundColor": "rgba(91,84,199,1)",
-                "marginLeft": 10,
+                "padding": 15,
               },
               Object {
                 "marginBottom": 30,
@@ -1524,7 +1525,7 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
             Array [
               Object {
                 "backgroundColor": "rgba(91,84,199,1)",
-                "marginLeft": 10,
+                "padding": 15,
               },
               Object {
                 "marginBottom": 30,
@@ -1840,7 +1841,7 @@ exports[`TransactionCard renders correctly with only request 1`] = `
             Array [
               Object {
                 "backgroundColor": "rgba(91,84,199,1)",
-                "marginLeft": 10,
+                "padding": 15,
               },
               Object {
                 "marginBottom": 30,
@@ -2156,7 +2157,7 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
             Array [
               Object {
                 "backgroundColor": "rgba(91,84,199,1)",
-                "marginLeft": 10,
+                "padding": 15,
               },
               Object {
                 "marginBottom": 30,
@@ -2472,7 +2473,7 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
             Array [
               Object {
                 "backgroundColor": "rgba(91,84,199,1)",
-                "marginLeft": 10,
+                "padding": 15,
               },
               Object {
                 "marginBottom": 30,
@@ -2788,7 +2789,7 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
             Array [
               Object {
                 "backgroundColor": "rgba(91,84,199,1)",
-                "marginLeft": 10,
+                "padding": 15,
               },
               Object {
                 "marginBottom": 30,
@@ -3104,7 +3105,7 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
             Array [
               Object {
                 "backgroundColor": "rgba(91,84,199,1)",
-                "marginLeft": 10,
+                "padding": 15,
               },
               Object {
                 "marginBottom": 30,

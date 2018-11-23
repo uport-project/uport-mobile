@@ -1424,6 +1424,7 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -1475,7 +1476,7 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
@@ -2110,6 +2111,7 @@ exports[`ConnectionCard renders correctly with an unkown contact 1`] = `
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -2161,7 +2163,7 @@ exports[`ConnectionCard renders correctly with an unkown contact 1`] = `
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
