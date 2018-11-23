@@ -109,8 +109,7 @@ exports[`renders image if avatar is passed in 1`] = `
           "justifyContent": "center",
         },
         Object {
-          "backgroundColor": "white",
-          "borderRadius": 50,
+          "borderRadius": 30,
           "height": 60,
           "width": 60,
         },
@@ -160,7 +159,6 @@ exports[`renders image if avatar is passed in and custom size 1`] = `
           "justifyContent": "center",
         },
         Object {
-          "backgroundColor": "white",
           "borderRadius": 50,
           "height": 100,
           "width": 100,
@@ -211,8 +209,7 @@ exports[`renders image if uri is passed in 1`] = `
           "justifyContent": "center",
         },
         Object {
-          "backgroundColor": "white",
-          "borderRadius": 50,
+          "borderRadius": 30,
           "height": 60,
           "width": 60,
         },
@@ -263,7 +260,6 @@ exports[`renders image if uri is passed in and custom size 1`] = `
           "justifyContent": "center",
         },
         Object {
-          "backgroundColor": "white",
           "borderRadius": 50,
           "height": 100,
           "width": 100,
