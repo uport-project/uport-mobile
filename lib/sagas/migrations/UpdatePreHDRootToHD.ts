@@ -16,17 +16,36 @@
 // along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
 //
 import { all, takeEvery, call, select, put } from 'redux-saga/effects'
+import {
+  createIdentityAddress,
+  encryptionPublicKey,
+  DEFAULT_LEVEL
+} from 'uPortMobile/lib/sagas/keychain'
 import { 
   MigrationStep
 } from 'uPortMobile/lib/constants/MigrationActionTypes'
 import {
   saveMessage,
 } from 'uPortMobile/lib/actions/processStatusActions'
+import {
+  hdRootAddress
+} from 'uPortMobile/lib/selectors/hdWallet'
+import {
+  currentAddress
+} from 'uPortMobile/lib/selectors/identities'
+import {
+  updateIdentity
+} from 'uPortMobile/lib/actions/uportActions'
 
 const step = MigrationStep.UpdatePreHDRootToHD
 
 function * migrate () : any {
-  
+  const address = yield select(currentAddress)
+  const kp = yield call(createIdentityAddress)
+  const publicEncKey = yield call(encryptionPublicKey, {idIndex: kp.hdindex, actIndex: 0})
+  yield put(updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: kp.hdindex, securityLevel: DEFAULT_LEVEL}))
+  yield put(saveMessage(step, 'Updated Internal Identity Record'))
+  return true
 }
 
 export default migrate
