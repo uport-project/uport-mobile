@@ -103,9 +103,8 @@ ShallowWrapper {
                   Object {
                     "color": "#3F3D4B",
                     "flex": 1,
-                    "fontFamily": "Montserrat",
+                    "fontFamily": undefined,
                     "fontSize": 24,
-                    "fontWeight": "bold",
                   },
                   Object {
                     "textAlign": "left",
@@ -247,9 +246,8 @@ ShallowWrapper {
                     Object {
                       "color": "#3F3D4B",
                       "flex": 1,
-                      "fontFamily": "Montserrat",
+                      "fontFamily": undefined,
                       "fontSize": 24,
-                      "fontWeight": "bold",
                     },
                     Object {
                       "textAlign": "left",
@@ -342,9 +340,8 @@ ShallowWrapper {
                       Object {
                         "color": "#3F3D4B",
                         "flex": 1,
-                        "fontFamily": "Montserrat",
+                        "fontFamily": undefined,
                         "fontSize": 24,
-                        "fontWeight": "bold",
                       },
                       Object {
                         "textAlign": "left",
@@ -406,9 +403,8 @@ ShallowWrapper {
                     Object {
                       "color": "#3F3D4B",
                       "flex": 1,
-                      "fontFamily": "Montserrat",
+                      "fontFamily": undefined,
                       "fontSize": 24,
-                      "fontWeight": "bold",
                     },
                     Object {
                       "textAlign": "left",
@@ -633,9 +629,8 @@ ShallowWrapper {
                     Object {
                       "color": "#3F3D4B",
                       "flex": 1,
-                      "fontFamily": "Montserrat",
+                      "fontFamily": undefined,
                       "fontSize": 24,
-                      "fontWeight": "bold",
                     },
                     Object {
                       "textAlign": "left",
@@ -777,9 +772,8 @@ ShallowWrapper {
                       Object {
                         "color": "#3F3D4B",
                         "flex": 1,
-                        "fontFamily": "Montserrat",
+                        "fontFamily": undefined,
                         "fontSize": 24,
-                        "fontWeight": "bold",
                       },
                       Object {
                         "textAlign": "left",
@@ -872,9 +866,8 @@ ShallowWrapper {
                         Object {
                           "color": "#3F3D4B",
                           "flex": 1,
-                          "fontFamily": "Montserrat",
+                          "fontFamily": undefined,
                           "fontSize": 24,
-                          "fontWeight": "bold",
                         },
                         Object {
                           "textAlign": "left",
@@ -936,9 +929,8 @@ ShallowWrapper {
                       Object {
                         "color": "#3F3D4B",
                         "flex": 1,
-                        "fontFamily": "Montserrat",
+                        "fontFamily": undefined,
                         "fontSize": 24,
-                        "fontWeight": "bold",
                       },
                       Object {
                         "textAlign": "left",
@@ -1240,9 +1232,8 @@ exports[`DisclosureCard renders correctly with a full disclosure request 1`] = `
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "Montserrat",
+              "fontFamily": undefined,
               "fontSize": 24,
-              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -1414,9 +1405,8 @@ exports[`DisclosureCard renders correctly with a full disclosure request and cli
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "Montserrat",
+              "fontFamily": undefined,
               "fontSize": 24,
-              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -1588,9 +1578,8 @@ exports[`DisclosureCard renders correctly with a full disclosure request and ver
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "Montserrat",
+              "fontFamily": undefined,
               "fontSize": 24,
-              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -1762,9 +1751,8 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "Montserrat",
+              "fontFamily": undefined,
               "fontSize": 24,
-              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -1936,9 +1924,8 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "Montserrat",
+              "fontFamily": undefined,
               "fontSize": 24,
-              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -2110,9 +2097,8 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "Montserrat",
+              "fontFamily": undefined,
               "fontSize": 24,
-              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -2284,9 +2270,8 @@ exports[`DisclosureCard renders correctly with a segregated account request and 
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "Montserrat",
+              "fontFamily": undefined,
               "fontSize": 24,
-              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -2458,9 +2443,8 @@ exports[`DisclosureCard renders correctly with a simple request and client info 
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "Montserrat",
+              "fontFamily": undefined,
               "fontSize": 24,
-              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -2632,9 +2616,8 @@ exports[`DisclosureCard renders correctly with error 1`] = `
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "Montserrat",
+              "fontFamily": undefined,
               "fontSize": 24,
-              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -2826,9 +2809,8 @@ exports[`DisclosureCard unpublished identity renders correctly after publishing 
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "Montserrat",
+              "fontFamily": undefined,
               "fontSize": 24,
-              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -3000,9 +2982,8 @@ exports[`DisclosureCard unpublished identity renders correctly with identity not
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "Montserrat",
+              "fontFamily": undefined,
               "fontSize": 24,
-              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -3174,9 +3155,8 @@ exports[`DisclosureCard with network with no existing account for network render
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "Montserrat",
+              "fontFamily": undefined,
               "fontSize": 24,
-              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -3348,9 +3328,8 @@ exports[`DisclosureCard with network with no existing segregated account for cli
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "Montserrat",
+              "fontFamily": undefined,
               "fontSize": 24,
-              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",
@@ -3522,9 +3501,8 @@ exports[`DisclosureCard with network with pre-existing account renders correctly
             Object {
               "color": "#3F3D4B",
               "flex": 1,
-              "fontFamily": "Montserrat",
+              "fontFamily": undefined,
               "fontSize": 24,
-              "fontWeight": "bold",
             },
             Object {
               "textAlign": "left",

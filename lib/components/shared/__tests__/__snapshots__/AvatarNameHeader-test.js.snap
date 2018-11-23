@@ -20,8 +20,7 @@ exports[`renders correctly with name and avatar 1`] = `
             "justifyContent": "center",
           },
           Object {
-            "backgroundColor": "white",
-            "borderRadius": 50,
+            "borderRadius": 48,
             "height": 96,
             "width": 96,
           },
@@ -104,8 +103,7 @@ exports[`renders correctly with only avatar 1`] = `
             "justifyContent": "center",
           },
           Object {
-            "backgroundColor": "white",
-            "borderRadius": 50,
+            "borderRadius": 48,
             "height": 96,
             "width": 96,
           },
@@ -186,8 +184,7 @@ exports[`renders correctly with only name 1`] = `
             "justifyContent": "center",
           },
           Object {
-            "backgroundColor": "white",
-            "borderRadius": 50,
+            "borderRadius": 48,
             "height": 96,
             "width": 96,
           },

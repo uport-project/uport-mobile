@@ -308,8 +308,7 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
                     "justifyContent": "center",
                   },
                   Object {
-                    "backgroundColor": "white",
-                    "borderRadius": 50,
+                    "borderRadius": 48.75,
                     "height": 97.5,
                     "width": 97.5,
 >>>>>>> Updating tests
@@ -516,7 +515,7 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
                 Array [
                   Object {
                     "backgroundColor": "rgba(91,84,199,1)",
-                    "marginLeft": 10,
+                    "padding": 15,
                   },
                   Object {
                     "marginBottom": 30,
@@ -747,8 +746,7 @@ there
                     "justifyContent": "center",
                   },
                   Object {
-                    "backgroundColor": "white",
-                    "borderRadius": 50,
+                    "borderRadius": 48.75,
                     "height": 97.5,
                     "width": 97.5,
                   },
@@ -968,10 +966,25 @@ there
                   "fontSize": 18,
                   "textAlign": "center",
                 },
+<<<<<<< HEAD
                 Object {
                   "color": "#FFFFFF",
                 },
                 Object {},
+=======
+                Array [
+                  Object {
+                    "backgroundColor": "rgba(91,84,199,1)",
+                    "padding": 15,
+                  },
+                  Object {
+                    "marginBottom": 30,
+                    "marginLeft": 30,
+                    "marginRight": 30,
+                    "marginTop": 10,
+                  },
+                ],
+>>>>>>> Update snapshots
               ]
             }
           >
@@ -1419,7 +1432,7 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
                 Array [
                   Object {
                     "backgroundColor": "rgba(91,84,199,1)",
-                    "marginLeft": 10,
+                    "padding": 15,
                   },
                   Object {
                     "marginBottom": 30,
@@ -4048,10 +4061,25 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
                   "fontSize": 18,
                   "textAlign": "center",
                 },
+<<<<<<< HEAD
                 Object {
                   "color": "#FFFFFF",
                 },
                 Object {},
+=======
+                Array [
+                  Object {
+                    "backgroundColor": "rgba(91,84,199,1)",
+                    "padding": 15,
+                  },
+                  Object {
+                    "marginBottom": 30,
+                    "marginLeft": 30,
+                    "marginRight": 30,
+                    "marginTop": 10,
+                  },
+                ],
+>>>>>>> Update snapshots
               ]
             }
           >
@@ -4372,8 +4400,7 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
                     "justifyContent": "center",
                   },
                   Object {
-                    "backgroundColor": "white",
-                    "borderRadius": 50,
+                    "borderRadius": 48.75,
                     "height": 97.5,
                     "width": 97.5,
 >>>>>>> Updating tests
@@ -4652,7 +4679,7 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
                 Array [
                   Object {
                     "backgroundColor": "rgba(91,84,199,1)",
-                    "marginLeft": 10,
+                    "padding": 15,
                   },
                   Object {
                     "marginBottom": 30,
@@ -5007,8 +5034,7 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
                     "justifyContent": "center",
                   },
                   Object {
-                    "backgroundColor": "white",
-                    "borderRadius": 50,
+                    "borderRadius": 48.75,
                     "height": 97.5,
                     "width": 97.5,
 >>>>>>> Updating tests
@@ -5281,7 +5307,7 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
                 Array [
                   Object {
                     "backgroundColor": "rgba(91,84,199,1)",
-                    "marginLeft": 10,
+                    "padding": 15,
                   },
                   Object {
                     "marginBottom": 30,
@@ -5636,8 +5662,7 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
                     "justifyContent": "center",
                   },
                   Object {
-                    "backgroundColor": "white",
-                    "borderRadius": 50,
+                    "borderRadius": 48.75,
                     "height": 97.5,
                     "width": 97.5,
 >>>>>>> Updating tests
@@ -5895,10 +5920,25 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
                   "fontSize": 18,
                   "textAlign": "center",
                 },
+<<<<<<< HEAD
                 Object {
                   "color": "#FFFFFF",
                 },
                 Object {},
+=======
+                Array [
+                  Object {
+                    "backgroundColor": "rgba(91,84,199,1)",
+                    "padding": 15,
+                  },
+                  Object {
+                    "marginBottom": 30,
+                    "marginLeft": 30,
+                    "marginRight": 30,
+                    "marginTop": 10,
+                  },
+                ],
+>>>>>>> Update snapshots
               ]
             }
           >
