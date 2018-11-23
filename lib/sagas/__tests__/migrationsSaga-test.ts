@@ -50,22 +50,16 @@ import {
 
 import { migrationStatus, migrationTargets } from 'uPortMobile/lib/selectors/migrations'
 import { isFullyHD } from 'uPortMobile/lib/selectors/chains'
-import { hdRootAddress, seedAddresses } from 'uPortMobile/lib/selectors/hdWallet'
 
 describe('checkup', () => {
-  const rootAddress = '0xroot'
-  const hdRoot = '0xhdRoot'
 
   describe('hd wallet', () => {
     it('does not Add Migration Target', () => {
       return expectSaga(migrationsSaga)
           .provide([
-            [select(isFullyHD), true],
-            [select(hdRootAddress), hdRoot],
-            [select(seedAddresses), [hdRoot]]
+            [select(isFullyHD), true]
           ])
           .not.put(addMigrationTarget(MigrationTarget.PreHD))
-          .not.put(addMigrationTarget(MigrationTarget.MissingSeed))
           .dispatch(loadedDB())
           .silentRun()
     })  
@@ -75,12 +69,9 @@ describe('checkup', () => {
     it('adds a Migration Target', () => {
       return expectSaga(migrationsSaga)
           .provide([
-            [select(isFullyHD), false],
-            [select(hdRootAddress), hdRoot],
-            [select(seedAddresses), [rootAddress]]
+            [select(isFullyHD), false]
           ])
           .put(addMigrationTarget(MigrationTarget.PreHD))
-          .put(addMigrationTarget(MigrationTarget.MissingSeed))
           .dispatch(loadedDB())
           .silentRun()
     })  
@@ -105,11 +96,13 @@ describe('runMigrations', () => {
       return expectSaga(migrationsSaga)
         .provide([
           [select(migrationTargets), [MigrationTarget.PreHD]],
+          [select(migrationStatus, MigrationStep.CleanUpAfterMissingSeed), MigrationStatus.Completed],
           [select(migrationStatus, MigrationStep.IdentityManagerChangeOwner), MigrationStatus.Completed],
           [select(migrationStatus, MigrationStep.UpdatePreHDRootToHD), MigrationStatus.Completed],
           [select(migrationStatus, MigrationStep.UportRegistryDDORefresh), MigrationStatus.Completed],
           [matchers.call.fn(performStep), undefined]
         ])
+        .call(performStep, MigrationStep.CleanUpAfterMissingSeed)
         .call(performStep, MigrationStep.IdentityManagerChangeOwner)
         .call(performStep, MigrationStep.UpdatePreHDRootToHD)
         .call(performStep, MigrationStep.UportRegistryDDORefresh)
@@ -122,10 +115,12 @@ describe('runMigrations', () => {
     return expectSaga(migrationsSaga)
       .provide([
         [select(migrationTargets), [MigrationTarget.PreHD]],
+        [select(migrationStatus, MigrationStep.CleanUpAfterMissingSeed), MigrationStatus.Completed],
         [select(migrationStatus, MigrationStep.IdentityManagerChangeOwner), MigrationStatus.Completed],
         [select(migrationStatus, MigrationStep.UpdatePreHDRootToHD), MigrationStatus.Error],
         [matchers.call.fn(performStep), undefined]
       ])
+      .call(performStep, MigrationStep.CleanUpAfterMissingSeed)
       .call(performStep, MigrationStep.IdentityManagerChangeOwner)
       .call(performStep, MigrationStep.UpdatePreHDRootToHD)
       .not.call(performStep, MigrationStep.UportRegistryDDORefresh)

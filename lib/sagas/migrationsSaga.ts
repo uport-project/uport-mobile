@@ -58,18 +58,6 @@ export function * checkup () : any {
   if (!hd) {
     yield put(addMigrationTarget(MigrationTarget.PreHD))
   }
-  try {
-    const root = yield select(hdRootAddress)
-    const seeds = yield select(seedAddresses)
-    if (!seeds.includes(root)) {
-      console.log('SEED IS MISSING')
-      yield put(addMigrationTarget(MigrationTarget.MissingSeed))
-    }
-  } catch (e) {
-    console.log(e)
-    yield put(addMigrationTarget(MigrationTarget.MissingSeed))
-  }
-
 }
 
 interface Recipes {
@@ -77,8 +65,7 @@ interface Recipes {
 }
 
 const targetRecipes : Recipes = {
-  PreHD: [MigrationStep.IdentityManagerChangeOwner, MigrationStep.UpdatePreHDRootToHD, MigrationStep.UportRegistryDDORefresh],
-  MissingSeed: [MigrationStep.CleanUpAfterMissingSeed]
+  PreHD: [MigrationStep.CleanUpAfterMissingSeed, MigrationStep.IdentityManagerChangeOwner, MigrationStep.UpdatePreHDRootToHD, MigrationStep.UportRegistryDDORefresh]
 }
 
 const implementations = {

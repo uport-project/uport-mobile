@@ -24,8 +24,7 @@ export const FAILED_MIGRATION_STEP = 'FAILED_MIGRATION_STEP'
 
 
 export enum MigrationTarget {
-  PreHD = "PreHD",
-  MissingSeed = "MissingSeed"
+  PreHD = "PreHD"
 }
 
 export enum MigrationStep {
