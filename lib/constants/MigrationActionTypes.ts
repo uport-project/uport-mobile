@@ -24,13 +24,15 @@ export const FAILED_MIGRATION_STEP = 'FAILED_MIGRATION_STEP'
 
 
 export enum MigrationTarget {
-  PreHD = "PreHD"
+  PreHD = "PreHD",
+  MissingSeed = "MissingSeed"
 }
 
 export enum MigrationStep {
   IdentityManagerChangeOwner = 'IdentityManagerChangeOwner',
   UpdatePreHDRootToHD = 'UpdatePreHDRootToHD',
-  UportRegistryDDORefresh = 'UportRegistryDDORefresh'
+  UportRegistryDDORefresh = 'UportRegistryDDORefresh',
+  CleanUpAfterMissingSeed = 'CleanUpAfterMissingSeed'
 }
 
 export enum MigrationStatus {
@@ -51,3 +53,4 @@ export interface StepAction {
   step: MigrationStep,
   _backup?: boolean
 }
+

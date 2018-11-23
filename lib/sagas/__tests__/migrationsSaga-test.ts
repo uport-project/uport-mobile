@@ -50,15 +50,22 @@ import {
 
 import { migrationStatus, migrationTargets } from 'uPortMobile/lib/selectors/migrations'
 import { isFullyHD } from 'uPortMobile/lib/selectors/chains'
+import { hdRootAddress, seedAddresses } from 'uPortMobile/lib/selectors/hdWallet'
 
 describe('checkup', () => {
+  const rootAddress = '0xroot'
+  const hdRoot = '0xhdRoot'
+
   describe('hd wallet', () => {
     it('does not Add Migration Target', () => {
       return expectSaga(migrationsSaga)
           .provide([
-            [select(isFullyHD), true]
+            [select(isFullyHD), true],
+            [select(hdRootAddress), hdRoot],
+            [select(seedAddresses), [hdRoot]]
           ])
           .not.put(addMigrationTarget(MigrationTarget.PreHD))
+          .not.put(addMigrationTarget(MigrationTarget.MissingSeed))
           .dispatch(loadedDB())
           .silentRun()
     })  
@@ -68,9 +75,12 @@ describe('checkup', () => {
     it('adds a Migration Target', () => {
       return expectSaga(migrationsSaga)
           .provide([
-            [select(isFullyHD), false]
+            [select(isFullyHD), false],
+            [select(hdRootAddress), hdRoot],
+            [select(seedAddresses), [rootAddress]]
           ])
           .put(addMigrationTarget(MigrationTarget.PreHD))
+          .put(addMigrationTarget(MigrationTarget.MissingSeed))
           .dispatch(loadedDB())
           .silentRun()
     })  

@@ -44,16 +44,32 @@ import {
 
 import { migrationStatus, migrationTargets } from 'uPortMobile/lib/selectors/migrations'
 import { isFullyHD } from 'uPortMobile/lib/selectors/chains'
+import { hdRootAddress, seedAddresses } from 'uPortMobile/lib/selectors/hdWallet'
 
 import IdentityManagerChangeOwner from './migrations/IdentityManagerChangeOwner'
 import UpdatePreHDRootToHD from './migrations/UpdatePreHDRootToHD'
 import UportRegistryDDORefresh from './migrations/UportRegistryDDORefresh'
+import CleanUpAfterMissingSeed from './migrations/CleanUpAfterMissingSeed'
+
+import { resetKey } from 'uPortMobile/lib/sagas/keychain'
 
 export function * checkup () : any {
   const hd = yield select(isFullyHD)
   if (!hd) {
     yield put(addMigrationTarget(MigrationTarget.PreHD))
   }
+  try {
+    const root = yield select(hdRootAddress)
+    const seeds = yield select(seedAddresses)
+    if (!seeds.includes(root)) {
+      console.log('SEED IS MISSING')
+      yield put(addMigrationTarget(MigrationTarget.MissingSeed))
+    }
+  } catch (e) {
+    console.log(e)
+    yield put(addMigrationTarget(MigrationTarget.MissingSeed))
+  }
+
 }
 
 interface Recipes {
@@ -61,13 +77,15 @@ interface Recipes {
 }
 
 const targetRecipes : Recipes = {
-  PreHD: [MigrationStep.IdentityManagerChangeOwner, MigrationStep.UpdatePreHDRootToHD, MigrationStep.UportRegistryDDORefresh]
+  PreHD: [MigrationStep.IdentityManagerChangeOwner, MigrationStep.UpdatePreHDRootToHD, MigrationStep.UportRegistryDDORefresh],
+  MissingSeed: [MigrationStep.CleanUpAfterMissingSeed]
 }
 
 const implementations = {
   IdentityManagerChangeOwner,
   UpdatePreHDRootToHD,
-  UportRegistryDDORefresh
+  UportRegistryDDORefresh,
+  CleanUpAfterMissingSeed
 }
 
 export function * runMigrations ({target} : TargetAction) : any {
