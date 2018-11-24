@@ -102,10 +102,12 @@ describe('runMigrations', () => {
           [select(migrationStatus, MigrationStep.UportRegistryDDORefresh), MigrationStatus.Completed],
           [matchers.call.fn(performStep), undefined]
         ])
+        .put(startWorking(MigrationTarget.PreHD))
         .call(performStep, MigrationStep.CleanUpAfterMissingSeed)
         .call(performStep, MigrationStep.IdentityManagerChangeOwner)
         .call(performStep, MigrationStep.UpdatePreHDRootToHD)
         .call(performStep, MigrationStep.UportRegistryDDORefresh)
+        .put(completeProcess(MigrationTarget.PreHD))
         .dispatch(runMigrations(MigrationTarget.PreHD))
         .silentRun()
     })
@@ -118,12 +120,14 @@ describe('runMigrations', () => {
         [select(migrationStatus, MigrationStep.CleanUpAfterMissingSeed), MigrationStatus.Completed],
         [select(migrationStatus, MigrationStep.IdentityManagerChangeOwner), MigrationStatus.Completed],
         [select(migrationStatus, MigrationStep.UpdatePreHDRootToHD), MigrationStatus.Error],
+        [select(migrationStatus, MigrationStep.UportRegistryDDORefresh), undefined],
         [matchers.call.fn(performStep), undefined]
       ])
       .call(performStep, MigrationStep.CleanUpAfterMissingSeed)
       .call(performStep, MigrationStep.IdentityManagerChangeOwner)
       .call(performStep, MigrationStep.UpdatePreHDRootToHD)
       .not.call(performStep, MigrationStep.UportRegistryDDORefresh)
+      .not.put(completeProcess(MigrationTarget.PreHD))
       .dispatch(runMigrations(MigrationTarget.PreHD))
       .silentRun()
   })

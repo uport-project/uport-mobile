@@ -86,12 +86,17 @@ const implementations = {
 export function * runMigrations ({target} : TargetAction) : any {
   const targets = yield select(migrationTargets)
   if (targets.includes(target)) {
+    yield put(startWorking(target))
     const steps = targetRecipes[target]||[]
     for (let step of steps) {
       yield call(performStep, step)
       const status = yield select(migrationStatus, step)
       if (status !== MigrationStatus.Completed) break
     }  
+    const last: MigrationStatus = yield select(migrationStatus, MigrationStep.UportRegistryDDORefresh)
+    if (last === MigrationStatus.Completed) {
+      yield put(completeProcess(target))
+    }
   }
 }
 

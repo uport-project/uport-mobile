@@ -23,13 +23,16 @@ import {
   View,
   Image
 } from 'react-native'
-import {Base as ProcessCard} from 'uPortMobile/lib/components/shared/ProcessCard'
+import ProcessCard from 'uPortMobile/lib/components/shared/ProcessCard'
 import { Text } from 'uPortMobile/lib/components/shared'
 import { ConnectedStatusList } from 'uPortMobile/lib/components/Advanced/StatusMessages'
 // Selectors
 import {
   currentAddress
 } from 'uPortMobile/lib/selectors/identities'
+import {
+  working
+} from 'uPortMobile/lib/selectors/processStatus'
 
 import { MigrationTarget } from 'uPortMobile/lib/constants/MigrationActionTypes'
 import { track } from 'uPortMobile/lib/actions/metricActions'
@@ -41,20 +44,27 @@ interface Navigator {
 
 interface MigrateProps {
   navigator: Navigator,
-  migrate: Function
+  migrate: Function,
+  working: boolean
 }
 
 const Migrate: React.SFC<MigrateProps> = (props) => {
   return <ProcessCard
+    process={MigrationTarget.PreHD}
     actionText='Migrate Identity'
     onContinue={props.migrate}
     skipTitle='Cancel'
     skippable
     onSkip={props.navigator.dismissModal}
     >
-    <Text title>Migrate old Pre HD Identity</Text>
-    <Text p>You have an old Identity that can not be safely backed up.</Text>
-    <ConnectedStatusList />
+    { props.working
+    ? <ConnectedStatusList />
+    : <View>
+      <Text title>Migrate old Pre HD Identity</Text>
+      <Text p>You have an old Identity that can not be safely backed up.</Text>
+    </View>}
+}
+    
   </ProcessCard>
 }
 
@@ -62,7 +72,8 @@ const Migrate: React.SFC<MigrateProps> = (props) => {
 const mapStateToProps = (state: any, ownProps: object) => {
   return {
     ...ownProps,
-    address: currentAddress(state)
+    address: currentAddress(state),
+    working: working(state, MigrationTarget.PreHD)
   }
 }
 
