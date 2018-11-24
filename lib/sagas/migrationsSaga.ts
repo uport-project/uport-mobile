@@ -16,6 +16,7 @@
 // along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
 //
 import { all, takeEvery, call, select, put } from 'redux-saga/effects'
+import { delay } from 'redux-saga'
 import { 
   RUN_MIGRATIONS,
   RUN_MIGRATION_STEP, 
@@ -51,12 +52,19 @@ import UpdatePreHDRootToHD from './migrations/UpdatePreHDRootToHD'
 import UportRegistryDDORefresh from './migrations/UportRegistryDDORefresh'
 import CleanUpAfterMissingSeed from './migrations/CleanUpAfterMissingSeed'
 
+import { NavigationActions } from 'uPortMobile/lib/utilities/NavigationActions'
 import { resetKey } from 'uPortMobile/lib/sagas/keychain'
 
 export function * checkup () : any {
   const hd = yield select(isFullyHD)
   if (!hd) {
+    console.log('PREHD')
     yield put(addMigrationTarget(MigrationTarget.PreHD))
+    yield call(delay, 3000)
+    yield call(NavigationActions.showModal, {
+      screen: 'migrations.prehd',
+      animationType: 'slide-up'
+    })
   }
 }
 
