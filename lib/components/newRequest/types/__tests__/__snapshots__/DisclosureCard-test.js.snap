@@ -78,6 +78,7 @@ ShallowWrapper {
                 "alignItems": "stretch",
                 "backgroundColor": "#F6F5FE",
                 "flex": 1,
+                "paddingBottom": 20,
               }
             }
           >
@@ -249,6 +250,7 @@ ShallowWrapper {
                 "alignItems": "stretch",
                 "backgroundColor": "#F6F5FE",
                 "flex": 1,
+                "paddingBottom": 20,
               }
             }
           >
@@ -441,6 +443,7 @@ ShallowWrapper {
               "alignItems": "stretch",
               "backgroundColor": "#F6F5FE",
               "flex": 1,
+              "paddingBottom": 20,
             },
           },
           "ref": null,
@@ -599,6 +602,7 @@ ShallowWrapper {
                 >
                    CREATE NEW ACCOUNT 
                 </Text>,
+                "disabled": undefined,
                 "onPress": [Function],
                 "style": Object {
                   "marginBottom": 30,
@@ -676,6 +680,7 @@ ShallowWrapper {
                   "alignItems": "stretch",
                   "backgroundColor": "#F6F5FE",
                   "flex": 1,
+                  "paddingBottom": 20,
                 }
               }
             >
@@ -847,6 +852,7 @@ ShallowWrapper {
                   "alignItems": "stretch",
                   "backgroundColor": "#F6F5FE",
                   "flex": 1,
+                  "paddingBottom": 20,
                 }
               }
             >
@@ -1039,6 +1045,7 @@ ShallowWrapper {
                 "alignItems": "stretch",
                 "backgroundColor": "#F6F5FE",
                 "flex": 1,
+                "paddingBottom": 20,
               },
             },
             "ref": null,
@@ -1197,6 +1204,7 @@ ShallowWrapper {
                   >
                      CREATE NEW ACCOUNT 
                   </Text>,
+                  "disabled": undefined,
                   "onPress": [Function],
                   "style": Object {
                     "marginBottom": 30,
@@ -1343,6 +1351,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request 1`] = `
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -1506,6 +1515,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request and cli
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -1669,6 +1679,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request and ver
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -1832,6 +1843,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -1995,6 +2007,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -2158,6 +2171,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -2321,6 +2335,7 @@ exports[`DisclosureCard renders correctly with a segregated account request and 
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -2484,6 +2499,7 @@ exports[`DisclosureCard renders correctly with a simple request and client info 
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -2647,6 +2663,7 @@ exports[`DisclosureCard renders correctly with error 1`] = `
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -2722,18 +2739,16 @@ exports[`DisclosureCard renders correctly with error 1`] = `
         allowFontScaling={true}
         ellipsizeMode="tail"
         style={
-          Array [
-            Object {
-              "color": "rgba(155,155,155,1)",
-              "fontFamily": "NunitoSans-Light",
-              "fontSize": 14,
-              "lineHeight": 19,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "red",
-            },
-          ]
+          Object {
+            "backgroundColor": "#E86B6B",
+            "borderColor": "#C94444",
+            "color": "#FFFFFF",
+            "fontSize": 14,
+            "margin": 15,
+            "marginBottom": 0,
+            "padding": 10,
+            "textAlign": "center",
+          }
         }
       >
         JWT has Expired
@@ -2831,6 +2846,7 @@ exports[`DisclosureCard unpublished identity renders correctly after publishing 
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -2994,6 +3010,7 @@ exports[`DisclosureCard unpublished identity renders correctly with identity not
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -3157,6 +3174,7 @@ exports[`DisclosureCard with network with no existing account for network render
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -3320,6 +3338,7 @@ exports[`DisclosureCard with network with no existing segregated account for cli
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -3483,6 +3502,7 @@ exports[`DisclosureCard with network with pre-existing account renders correctly
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
