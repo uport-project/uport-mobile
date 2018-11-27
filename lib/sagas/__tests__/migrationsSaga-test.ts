@@ -47,8 +47,9 @@ import {
   completeProcess,
   failProcess
 } from 'uPortMobile/lib/actions/processStatusActions'
+import { NavigationActions } from 'uPortMobile/lib/utilities/NavigationActions'
 
-import { migrationStatus, migrationTargets } from 'uPortMobile/lib/selectors/migrations'
+import { migrationStepStatus, migrationTargets, pendingMigrations } from 'uPortMobile/lib/selectors/migrations'
 import { isFullyHD } from 'uPortMobile/lib/selectors/chains'
 
 describe('checkup', () => {
@@ -57,7 +58,8 @@ describe('checkup', () => {
     it('does not Add Migration Target', () => {
       return expectSaga(migrationsSaga)
           .provide([
-            [select(isFullyHD), true]
+            [select(isFullyHD), true],
+            [select(pendingMigrations), []]
           ])
           .not.put(addMigrationTarget(MigrationTarget.PreHD))
           .dispatch(loadedDB())
@@ -69,9 +71,14 @@ describe('checkup', () => {
     it('adds a Migration Target', () => {
       return expectSaga(migrationsSaga)
           .provide([
-            [select(isFullyHD), false]
+            [select(isFullyHD), false],
+            [select(pendingMigrations), [MigrationTarget.PreHD]]
           ])
           .put(addMigrationTarget(MigrationTarget.PreHD))
+          .call(NavigationActions.showModal, {
+            screen: `migrations.PreHD`,
+            animationType: 'slide-up'
+          })
           .dispatch(loadedDB())
           .silentRun()
     })  
@@ -96,10 +103,10 @@ describe('runMigrations', () => {
       return expectSaga(migrationsSaga)
         .provide([
           [select(migrationTargets), [MigrationTarget.PreHD]],
-          [select(migrationStatus, MigrationStep.CleanUpAfterMissingSeed), MigrationStatus.Completed],
-          [select(migrationStatus, MigrationStep.IdentityManagerChangeOwner), MigrationStatus.Completed],
-          [select(migrationStatus, MigrationStep.UpdatePreHDRootToHD), MigrationStatus.Completed],
-          [select(migrationStatus, MigrationStep.UportRegistryDDORefresh), MigrationStatus.Completed],
+          [select(migrationStepStatus, MigrationStep.CleanUpAfterMissingSeed), MigrationStatus.Completed],
+          [select(migrationStepStatus, MigrationStep.IdentityManagerChangeOwner), MigrationStatus.Completed],
+          [select(migrationStepStatus, MigrationStep.UpdatePreHDRootToHD), MigrationStatus.Completed],
+          [select(migrationStepStatus, MigrationStep.UportRegistryDDORefresh), MigrationStatus.Completed],
           [matchers.call.fn(performStep), undefined]
         ])
         .put(startWorking(MigrationTarget.PreHD))
@@ -117,10 +124,10 @@ describe('runMigrations', () => {
     return expectSaga(migrationsSaga)
       .provide([
         [select(migrationTargets), [MigrationTarget.PreHD]],
-        [select(migrationStatus, MigrationStep.CleanUpAfterMissingSeed), MigrationStatus.Completed],
-        [select(migrationStatus, MigrationStep.IdentityManagerChangeOwner), MigrationStatus.Completed],
-        [select(migrationStatus, MigrationStep.UpdatePreHDRootToHD), MigrationStatus.Error],
-        [select(migrationStatus, MigrationStep.UportRegistryDDORefresh), undefined],
+        [select(migrationStepStatus, MigrationStep.CleanUpAfterMissingSeed), MigrationStatus.Completed],
+        [select(migrationStepStatus, MigrationStep.IdentityManagerChangeOwner), MigrationStatus.Completed],
+        [select(migrationStepStatus, MigrationStep.UpdatePreHDRootToHD), MigrationStatus.Error],
+        [select(migrationStepStatus, MigrationStep.UportRegistryDDORefresh), undefined],
         [matchers.call.fn(performStep), undefined]
       ])
       .call(performStep, MigrationStep.CleanUpAfterMissingSeed)
@@ -140,7 +147,7 @@ describe('performStep', () => {
     it('should not do anything', () => {
       return expectSaga(performStep, step)
         .provide([
-          [select(migrationStatus, step), MigrationStatus.Completed]
+          [select(migrationStepStatus, step), MigrationStatus.Completed]
         ])
         .not.put(startedMigrationStep(step))
         .not.put(startWorking(step))
@@ -156,7 +163,7 @@ describe('performStep', () => {
       it('should go through all steps', () => {
         return expectSaga(performStep, step)
           .provide([
-            [select(migrationStatus, step), status],
+            [select(migrationStepStatus, step), status],
             [call(runImplementationStep, step), true]
           ])
           .put(startedMigrationStep(step))
@@ -169,7 +176,7 @@ describe('performStep', () => {
       it('should handle failure', () => {
         return expectSaga(performStep, step)
           .provide([
-            [select(migrationStatus, step), status],
+            [select(migrationStepStatus, step), status],
             [call(runImplementationStep, step), false]
           ])
           .put(startedMigrationStep(step))
@@ -181,7 +188,7 @@ describe('performStep', () => {
       it('should handle errors thrown', () => {
         return expectSaga(performStep, step)
           .provide([
-            [select(migrationStatus, step), status],
+            [select(migrationStepStatus, step), status],
             [call(runImplementationStep, step), throwError(new Error('Something bad happend'))]
           ])
           .put(startedMigrationStep(step))

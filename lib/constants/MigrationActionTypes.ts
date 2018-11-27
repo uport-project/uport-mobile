@@ -41,6 +41,14 @@ export enum MigrationStatus {
   Error
 }
 
+export interface Recipes {
+  [index: string]: MigrationStep[]
+}
+
+export const targetRecipes : Recipes = {
+  PreHD: [MigrationStep.CleanUpAfterMissingSeed, MigrationStep.IdentityManagerChangeOwner, MigrationStep.UpdatePreHDRootToHD, MigrationStep.UportRegistryDDORefresh]
+}
+
 export interface TargetAction {
   type: 'ADD_MIGRATION_TARGET' | 'RUN_MIGRATIONS',
   target: MigrationTarget,

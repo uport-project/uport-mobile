@@ -18,7 +18,9 @@
 import { 
   MigrationStep, 
   MigrationTarget, 
-  MigrationStatus
+  MigrationStatus,
+  Recipes,
+  targetRecipes
 } from 'uPortMobile/lib/constants/MigrationActionTypes'
 
 import {
@@ -33,13 +35,26 @@ export interface globalState {
 
 const migrations = (state: globalState): MigrationState => state.migrations
 const currentStep = (state: globalState, step: MigrationStep) => step
+const currentTarget = (state: globalState, target: MigrationTarget) => target
 
 export const migrationTargets = createSelector(
   [migrations],
   state => state.targets
 )
 
-export const migrationStatus = createSelector(
+export const migrationStepStatus = createSelector(
   [migrations, currentStep],
   (state, step) => state.steps[MigrationStep[step]] || MigrationStatus.NotStarted
+)
+
+const targetCompleted = (state: MigrationState, target: MigrationTarget) => (targetRecipes[target] || []).every(step => state.steps[step] === MigrationStatus.Completed)
+
+export const migrationCompleted = createSelector(
+  [migrations, currentTarget],
+  targetCompleted
+)
+
+export const pendingMigrations = createSelector(
+  [migrations],
+  state => state.targets.filter(target => !targetCompleted(state, target))
 )

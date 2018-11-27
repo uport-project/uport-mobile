@@ -34,6 +34,7 @@ const step = MigrationStep.UportRegistryDDORefresh
 function * migrate () : any {
   const address = yield select(currentAddress)
   yield put(saveMessage(step, `Updating uPort Registry for ${address}`))
+  
   return yield call(savePublicUport, {address})
 }
 

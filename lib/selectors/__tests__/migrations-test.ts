@@ -16,7 +16,7 @@
 // along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
 //
 import {
-  migrationStatus, migrationTargets, globalState
+  migrationStepStatus, migrationTargets, globalState, migrationCompleted, pendingMigrations
 } from 'uPortMobile/lib/selectors/migrations'
 
 import { MigrationStep, MigrationTarget, MigrationStatus } from 'uPortMobile/lib/constants/MigrationActionTypes'
@@ -37,6 +37,17 @@ const populated: globalState = {
 }
 populated.migrations.steps[MigrationStep[MigrationStep.IdentityManagerChangeOwner]] = MigrationStatus.Started
 
+const completed: globalState = {
+  migrations: {
+    targets: [MigrationTarget.PreHD],
+    steps: {}
+  }
+}
+completed.migrations.steps[MigrationStep[MigrationStep.CleanUpAfterMissingSeed]] = MigrationStatus.Completed
+completed.migrations.steps[MigrationStep[MigrationStep.IdentityManagerChangeOwner]] = MigrationStatus.Completed
+completed.migrations.steps[MigrationStep[MigrationStep.UpdatePreHDRootToHD]] = MigrationStatus.Completed
+completed.migrations.steps[MigrationStep[MigrationStep.UportRegistryDDORefresh]] = MigrationStatus.Completed
+
 describe('migrationTargets', () => {
   describe('empty', () => {
     it('should return an empty list', () => {
@@ -52,17 +63,56 @@ describe('migrationTargets', () => {
 })
 
 
-describe('migrationStatus', () => {
+describe('migrationStepStatus', () => {
   describe('empty', () => {
     it('should return NotStarted', () => {
-      expect(migrationStatus(empty, MigrationStep.IdentityManagerChangeOwner)).toEqual(MigrationStatus.NotStarted)
+      expect(migrationStepStatus(empty, MigrationStep.IdentityManagerChangeOwner)).toEqual(MigrationStatus.NotStarted)
     })
   })
 
   describe('started', () => {
     it('should return Started', () => {
-      expect(migrationStatus(populated, MigrationStep.IdentityManagerChangeOwner)).toEqual(MigrationStatus.Started)
+      expect(migrationStepStatus(populated, MigrationStep.IdentityManagerChangeOwner)).toEqual(MigrationStatus.Started)
+    })
+  })
+})
+
+describe('migrationCompleted', () => {
+  describe('empty', () => {
+    it('should not be completed', () => {
+      expect(migrationCompleted(empty, MigrationTarget.PreHD)).toBeFalsy()
     })
   })
 
+  describe('populated', () => {
+    it('should not be completed', () => {
+      expect(migrationCompleted(populated, MigrationTarget.PreHD)).toBeFalsy()
+    })
+  })
+
+  describe('completed', () => {
+    it('should be completed', () => {
+      expect(migrationCompleted(completed, MigrationTarget.PreHD)).toBeTruthy()
+    })
+  })
+})
+
+describe('pendingMigrations', () => {
+  describe('empty', () => {
+    it('should not be completed', () => {
+      expect(pendingMigrations(empty)).toEqual([])
+    })
+  })
+
+  describe('populated', () => {
+    it('should not be completed', () => {
+      expect(pendingMigrations(populated)).toEqual([MigrationTarget.PreHD])
+    })
+  })
+
+  describe('completed', () => {
+    it('should be completed', () => {
+      expect(pendingMigrations(completed)).toEqual([])
+    })
+  })
 })

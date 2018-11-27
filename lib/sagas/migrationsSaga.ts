@@ -24,7 +24,9 @@ import {
   MigrationTarget,
   MigrationStatus,
   TargetAction, 
-  StepAction
+  StepAction,
+  Recipes,
+  targetRecipes
 } from 'uPortMobile/lib/constants/MigrationActionTypes'
 import {
   LOADED_DB
@@ -43,7 +45,7 @@ import {
   failProcess
 } from 'uPortMobile/lib/actions/processStatusActions'
 
-import { migrationStatus, migrationTargets } from 'uPortMobile/lib/selectors/migrations'
+import { migrationStepStatus, migrationTargets, pendingMigrations } from 'uPortMobile/lib/selectors/migrations'
 import { isFullyHD } from 'uPortMobile/lib/selectors/chains'
 import { hdRootAddress, seedAddresses } from 'uPortMobile/lib/selectors/hdWallet'
 
@@ -58,22 +60,18 @@ import { resetKey } from 'uPortMobile/lib/sagas/keychain'
 export function * checkup () : any {
   const hd = yield select(isFullyHD)
   if (!hd) {
-    console.log('PREHD')
     yield put(addMigrationTarget(MigrationTarget.PreHD))
-    yield call(delay, 3000)
-    yield call(NavigationActions.showModal, {
-      screen: 'migrations.prehd',
-      animationType: 'slide-up'
-    })
   }
-}
-
-interface Recipes {
-  [index: string]: MigrationStep[]
-}
-
-const targetRecipes : Recipes = {
-  PreHD: [MigrationStep.CleanUpAfterMissingSeed, MigrationStep.IdentityManagerChangeOwner, MigrationStep.UpdatePreHDRootToHD, MigrationStep.UportRegistryDDORefresh]
+  const pending = yield select(pendingMigrations)
+  // console.log('pending', pending)
+  if (pending.length > 0 ) {
+    const target = pending[0]
+    // yield call(delay, 1000)
+    yield call(NavigationActions.showModal, {
+      screen: `migrations.${target}`,
+      animationType: 'slide-up'
+    })  
+  }
 }
 
 const implementations = {
@@ -89,11 +87,12 @@ export function * runMigrations ({target} : TargetAction) : any {
     yield put(startWorking(target))
     const steps = targetRecipes[target]||[]
     for (let step of steps) {
+      let status = yield select(migrationStepStatus, step)
       yield call(performStep, step)
-      const status = yield select(migrationStatus, step)
+      status = yield select(migrationStepStatus, step)
       if (status !== MigrationStatus.Completed) break
     }  
-    const last: MigrationStatus = yield select(migrationStatus, MigrationStep.UportRegistryDDORefresh)
+    const last: MigrationStatus = yield select(migrationStepStatus, MigrationStep.UportRegistryDDORefresh)
     if (last === MigrationStatus.Completed) {
       yield put(completeProcess(target))
     }
@@ -108,7 +107,7 @@ export function * runImplementationStep (step: MigrationStep) : any {
 }
 
 export function * performStep (step: MigrationStep) : any {
-  const status = yield select(migrationStatus, step)
+  const status = yield select(migrationStepStatus, step)
   if (status === MigrationStatus.Completed) return
   yield put(startedMigrationStep(step))
   yield put(startWorking(step))
