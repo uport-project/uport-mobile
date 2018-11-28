@@ -24,13 +24,6 @@ Object {
 }
 `;
 
-exports[`creates a RUN_MIGRATION_STEP action 1`] = `
-Object {
-  "step": "IdentityManagerChangeOwner",
-  "type": "RUN_MIGRATION_STEP",
-}
-`;
-
 exports[`creates a RUN_MIGRATIONS action 1`] = `
 Object {
   "target": "PreHD",

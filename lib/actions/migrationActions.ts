@@ -15,7 +15,7 @@
 // along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-import { ADD_MIGRATION_TARGET, STARTED_MIGRATION_STEP, COMPLETED_MIGRATION_STEP, FAILED_MIGRATION_STEP, RUN_MIGRATIONS, RUN_MIGRATION_STEP, MigrationStep, MigrationTarget, TargetAction, StepAction } from 'uPortMobile/lib/constants/MigrationActionTypes'
+import { ADD_MIGRATION_TARGET, STARTED_MIGRATION_STEP, COMPLETED_MIGRATION_STEP, FAILED_MIGRATION_STEP, RUN_MIGRATIONS, MigrationStep, MigrationTarget, TargetAction, StepAction } from 'uPortMobile/lib/constants/MigrationActionTypes'
 
 const _backup = true
 
@@ -31,13 +31,6 @@ export function runMigrations(target: MigrationTarget) : TargetAction {
   return {
     type: RUN_MIGRATIONS,
     target
-  }
-}
-
-export function runMigrationStep(step: MigrationStep) : StepAction {
-  return {
-    type: RUN_MIGRATION_STEP,
-    step
   }
 }
 

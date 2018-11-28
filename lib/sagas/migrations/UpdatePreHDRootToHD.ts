@@ -40,12 +40,19 @@ import {
 const step = MigrationStep.UpdatePreHDRootToHD
 
 function * migrate () : any {
-  const address = yield select(currentAddress)
-  const kp = yield call(createIdentityAddress)
-  const publicEncKey = yield call(encryptionPublicKey, {idIndex: kp.hdindex, actIndex: 0})
-  yield put(updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: kp.hdindex, securityLevel: DEFAULT_LEVEL}))
-  yield put(saveMessage(step, 'Updated Internal Identity Record'))
-  return true
+  try {
+    const address = yield select(currentAddress)
+    const kp = yield call(createIdentityAddress)
+    const publicEncKey = yield call(encryptionPublicKey, {idIndex: kp.hdindex, actIndex: 0})
+    console.log('new profile', updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: kp.hdindex, securityLevel: DEFAULT_LEVEL}))
+    yield put(updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: kp.hdindex, securityLevel: DEFAULT_LEVEL}))
+    yield put(saveMessage(step, 'Updated Internal Identity Record'))
+    return true  
+  } catch (error) {
+    console.log(error)
+    yield put(failProcess(step, error.message))
+    return false
+  }
 }
 
 export default migrate

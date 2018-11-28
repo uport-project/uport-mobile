@@ -15,7 +15,7 @@
 
 // (C) Copyright 2016-2018 ConsenSys AG
 
-import { addMigrationTarget, runMigrations, runMigrationStep, startedMigrationStep, completedMigrationStep, failedMigrationStep } from '../migrationActions'
+import { addMigrationTarget, runMigrations, startedMigrationStep, completedMigrationStep, failedMigrationStep } from '../migrationActions'
 import { MigrationStep, MigrationTarget } from 'uPortMobile/lib/constants/MigrationActionTypes'
 
 it('creates a ADD_MIGRATION_TARGET action', () => {
@@ -24,10 +24,6 @@ it('creates a ADD_MIGRATION_TARGET action', () => {
 
 it('creates a RUN_MIGRATIONS action', () => {
   expect(runMigrations(MigrationTarget.PreHD)).toMatchSnapshot()
-})
-
-it('creates a RUN_MIGRATION_STEP action', () => {
-  expect(runMigrationStep(MigrationStep.IdentityManagerChangeOwner)).toMatchSnapshot()
 })
 
 it('creates a STARTED_MIGRATION_STEP action', () => {

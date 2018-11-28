@@ -24,6 +24,7 @@ import {
 } from 'uPortMobile/lib/constants/MigrationActionTypes'
 import {
   saveMessage,
+  failProcess
 } from 'uPortMobile/lib/actions/processStatusActions'
 import {
   currentAddress
@@ -32,10 +33,17 @@ import {
 const step = MigrationStep.UportRegistryDDORefresh
 
 function * migrate () : any {
-  const address = yield select(currentAddress)
-  yield put(saveMessage(step, `Updating uPort Registry for ${address}`))
-  
-  return yield call(savePublicUport, {address})
+  try {
+    const address = yield select(currentAddress)
+    yield put(saveMessage(step, `Updating uPort Registry for ${address}`))
+    
+    return yield call(savePublicUport, {address})  
+  } catch (error) {
+    console.log(error)
+    yield put(failProcess(step, error.message))
+    return false
+  }
+
 }
 
 export default migrate

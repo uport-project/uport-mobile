@@ -19,13 +19,12 @@ import { expectSaga } from 'redux-saga-test-plan'
 import * as matchers from 'redux-saga-test-plan/matchers'
 import { throwError } from 'redux-saga-test-plan/providers'
 import { select, call } from 'redux-saga/effects'
-
+import { delay } from 'redux-saga'
 import migrationsSaga, { performStep, runImplementationStep } from '../migrationsSaga'
 import IdentityManagerChangeOwner from '../migrations/IdentityManagerChangeOwner'
-
+import { listSeedAddresses } from 'uPortMobile/lib/sagas/keychain'
 import { 
   RUN_MIGRATIONS,
-  RUN_MIGRATION_STEP, 
   MigrationStep, 
   MigrationTarget, 
   MigrationStatus,
@@ -49,39 +48,88 @@ import {
 } from 'uPortMobile/lib/actions/processStatusActions'
 import { NavigationActions } from 'uPortMobile/lib/utilities/NavigationActions'
 
-import { migrationStepStatus, migrationTargets, pendingMigrations } from 'uPortMobile/lib/selectors/migrations'
+import { migrationStepStatus, migrationTargets, pendingMigrations, migrationCompleted } from 'uPortMobile/lib/selectors/migrations'
 import { isFullyHD } from 'uPortMobile/lib/selectors/chains'
+import { hdRootAddress } from 'uPortMobile/lib/selectors/hdWallet'
 
 describe('checkup', () => {
+  const root = '0xroot'
 
   describe('hd wallet', () => {
     it('does not Add Migration Target', () => {
       return expectSaga(migrationsSaga)
           .provide([
             [select(isFullyHD), true],
+            [select(hdRootAddress), root],
+            [call(listSeedAddresses), [root]],
             [select(pendingMigrations), []]
           ])
           .not.put(addMigrationTarget(MigrationTarget.PreHD))
           .dispatch(loadedDB())
           .silentRun()
-    })  
+    })
   })
 
   describe('pre hd', () => {
-    it('adds a Migration Target', () => {
-      return expectSaga(migrationsSaga)
-          .provide([
-            [select(isFullyHD), false],
-            [select(pendingMigrations), [MigrationTarget.PreHD]]
-          ])
-          .put(addMigrationTarget(MigrationTarget.PreHD))
-          .call(NavigationActions.showModal, {
-            screen: `migrations.PreHD`,
-            animationType: 'slide-up'
-          })
-          .dispatch(loadedDB())
-          .silentRun()
-    })  
+    describe('no seed', () => {
+      it('adds a Migration Target', () => {
+        return expectSaga(migrationsSaga)
+            .provide([
+              [select(isFullyHD), false],
+              [select(hdRootAddress), undefined],
+              [call(listSeedAddresses), []],
+              [call(delay, 2000), undefined],
+              [select(pendingMigrations), [MigrationTarget.PreHD]]
+            ])
+            .put(addMigrationTarget(MigrationTarget.PreHD))
+            .call(NavigationActions.showModal, {
+              screen: `migrations.PreHD`,
+              animationType: 'slide-up'
+            })
+            .dispatch(loadedDB())
+            .silentRun()
+      })  
+    })
+
+    describe('with working seed', () => {
+      it('adds a Migration Target', () => {
+        return expectSaga(migrationsSaga)
+            .provide([
+              [select(isFullyHD), false],
+              [select(hdRootAddress), root],
+              [call(listSeedAddresses), [root]],
+              [call(delay, 2000), undefined],
+              [select(pendingMigrations), [MigrationTarget.PreHD]]
+            ])
+            .put(addMigrationTarget(MigrationTarget.PreHD))
+            .call(NavigationActions.showModal, {
+              screen: `migrations.PreHD`,
+              animationType: 'slide-up'
+            })
+            .dispatch(loadedDB())
+            .silentRun()
+      })  
+    })
+
+    describe('with missing seed', () => {
+      it('adds a Migration Target', () => {
+        return expectSaga(migrationsSaga)
+            .provide([
+              [select(isFullyHD), false],
+              [select(hdRootAddress), root],
+              [call(listSeedAddresses), []],
+              [call(delay, 2000), undefined],
+              [select(pendingMigrations), [MigrationTarget.PreHD]]
+            ])
+            .put(addMigrationTarget(MigrationTarget.PreHD))
+            .call(NavigationActions.showModal, {
+              screen: `migrations.PreHD`,
+              animationType: 'slide-up'
+            })
+            .dispatch(loadedDB())
+            .silentRun()
+      })  
+    })
   })
 })
 
@@ -107,6 +155,7 @@ describe('runMigrations', () => {
           [select(migrationStepStatus, MigrationStep.IdentityManagerChangeOwner), MigrationStatus.Completed],
           [select(migrationStepStatus, MigrationStep.UpdatePreHDRootToHD), MigrationStatus.Completed],
           [select(migrationStepStatus, MigrationStep.UportRegistryDDORefresh), MigrationStatus.Completed],
+          [select(migrationCompleted, MigrationTarget.PreHD), true],
           [matchers.call.fn(performStep), undefined]
         ])
         .put(startWorking(MigrationTarget.PreHD))
@@ -128,6 +177,7 @@ describe('runMigrations', () => {
         [select(migrationStepStatus, MigrationStep.IdentityManagerChangeOwner), MigrationStatus.Completed],
         [select(migrationStepStatus, MigrationStep.UpdatePreHDRootToHD), MigrationStatus.Error],
         [select(migrationStepStatus, MigrationStep.UportRegistryDDORefresh), undefined],
+        [select(migrationCompleted, MigrationTarget.PreHD), false],
         [matchers.call.fn(performStep), undefined]
       ])
       .call(performStep, MigrationStep.CleanUpAfterMissingSeed)
@@ -168,6 +218,7 @@ describe('performStep', () => {
           ])
           .put(startedMigrationStep(step))
           .put(startWorking(step))
+          .call(runImplementationStep, step)
           .put(completedMigrationStep(step))
           .put(completeProcess(step))
           .run()
@@ -181,7 +232,10 @@ describe('performStep', () => {
           ])
           .put(startedMigrationStep(step))
           .put(startWorking(step))
+          .call(runImplementationStep, step)
           .put(failedMigrationStep(step))
+          .not.put(completedMigrationStep(step))
+          .not.put(completeProcess(step))
           .run()
       })
 
@@ -193,8 +247,11 @@ describe('performStep', () => {
           ])
           .put(startedMigrationStep(step))
           .put(startWorking(step))
+          .call(runImplementationStep, step)
           .put(failedMigrationStep(step))
           .put(failProcess(step, 'Something bad happend'))
+          .not.put(completedMigrationStep(step))
+          .not.put(completeProcess(step))
           .run()
       })
     })
