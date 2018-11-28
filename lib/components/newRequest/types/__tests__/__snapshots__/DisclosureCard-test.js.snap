@@ -72,6 +72,7 @@ ShallowWrapper {
               "flex": 0,
               "flexDirection": "column",
               "justifyContent": "flex-end",
+              "paddingBottom": 20,
             }
           }
         >
@@ -319,6 +320,7 @@ ShallowWrapper {
             "flex": 0,
             "flexDirection": "column",
             "justifyContent": "flex-end",
+            "paddingBottom": 20,
           },
         },
         "ref": null,
@@ -596,6 +598,7 @@ ShallowWrapper {
                 "flex": 0,
                 "flexDirection": "column",
                 "justifyContent": "flex-end",
+                "paddingBottom": 20,
               }
             }
           >
@@ -843,6 +846,7 @@ ShallowWrapper {
               "flex": 0,
               "flexDirection": "column",
               "justifyContent": "flex-end",
+              "paddingBottom": 20,
             },
           },
           "ref": null,
@@ -1197,6 +1201,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request 1`] = `
         "flex": 0,
         "flexDirection": "column",
         "justifyContent": "flex-end",
+        "paddingBottom": 20,
       }
     }
   >
@@ -1369,6 +1374,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request and cli
         "flex": 0,
         "flexDirection": "column",
         "justifyContent": "flex-end",
+        "paddingBottom": 20,
       }
     }
   >
@@ -1541,6 +1547,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request and ver
         "flex": 0,
         "flexDirection": "column",
         "justifyContent": "flex-end",
+        "paddingBottom": 20,
       }
     }
   >
@@ -1713,6 +1720,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
         "flex": 0,
         "flexDirection": "column",
         "justifyContent": "flex-end",
+        "paddingBottom": 20,
       }
     }
   >
@@ -1885,6 +1893,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
         "flex": 0,
         "flexDirection": "column",
         "justifyContent": "flex-end",
+        "paddingBottom": 20,
       }
     }
   >
@@ -2057,6 +2066,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
         "flex": 0,
         "flexDirection": "column",
         "justifyContent": "flex-end",
+        "paddingBottom": 20,
       }
     }
   >
@@ -2229,6 +2239,7 @@ exports[`DisclosureCard renders correctly with a segregated account request and 
         "flex": 0,
         "flexDirection": "column",
         "justifyContent": "flex-end",
+        "paddingBottom": 20,
       }
     }
   >
@@ -2401,6 +2412,7 @@ exports[`DisclosureCard renders correctly with a simple request and client info 
         "flex": 0,
         "flexDirection": "column",
         "justifyContent": "flex-end",
+        "paddingBottom": 20,
       }
     }
   >
@@ -2573,6 +2585,7 @@ exports[`DisclosureCard renders correctly with error 1`] = `
         "flex": 0,
         "flexDirection": "column",
         "justifyContent": "flex-end",
+        "paddingBottom": 20,
       }
     }
   >
@@ -2765,6 +2778,7 @@ exports[`DisclosureCard unpublished identity renders correctly after publishing 
         "flex": 0,
         "flexDirection": "column",
         "justifyContent": "flex-end",
+        "paddingBottom": 20,
       }
     }
   >
@@ -2937,6 +2951,7 @@ exports[`DisclosureCard unpublished identity renders correctly with identity not
         "flex": 0,
         "flexDirection": "column",
         "justifyContent": "flex-end",
+        "paddingBottom": 20,
       }
     }
   >
@@ -3109,6 +3124,7 @@ exports[`DisclosureCard with network with no existing account for network render
         "flex": 0,
         "flexDirection": "column",
         "justifyContent": "flex-end",
+        "paddingBottom": 20,
       }
     }
   >
@@ -3281,6 +3297,7 @@ exports[`DisclosureCard with network with no existing segregated account for cli
         "flex": 0,
         "flexDirection": "column",
         "justifyContent": "flex-end",
+        "paddingBottom": 20,
       }
     }
   >
@@ -3453,6 +3470,7 @@ exports[`DisclosureCard with network with pre-existing account renders correctly
         "flex": 0,
         "flexDirection": "column",
         "justifyContent": "flex-end",
+        "paddingBottom": 20,
       }
     }
   >
