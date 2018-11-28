@@ -89,16 +89,8 @@ exports[`CameraAuthLightbox renders correctly 1`] = `
             }
           >
             <View
-              accessibilityComponentType={undefined}
-              accessibilityLabel={undefined}
-              accessibilityTraits={undefined}
               accessible={true}
-              collapsable={undefined}
-              hasTVPreferredFocus={undefined}
-              hitSlop={undefined}
               isTVSelectable={true}
-              nativeID={undefined}
-              onLayout={undefined}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -111,8 +103,6 @@ exports[`CameraAuthLightbox renders correctly 1`] = `
                   "padding": 8,
                 }
               }
-              testID={undefined}
-              tvParallaxProperties={undefined}
             >
               <Text
                 accessible={true}
@@ -140,16 +130,8 @@ exports[`CameraAuthLightbox renders correctly 1`] = `
             }
           >
             <View
-              accessibilityComponentType={undefined}
-              accessibilityLabel={undefined}
-              accessibilityTraits={undefined}
               accessible={true}
-              collapsable={undefined}
-              hasTVPreferredFocus={undefined}
-              hitSlop={undefined}
               isTVSelectable={true}
-              nativeID={undefined}
-              onLayout={undefined}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -162,8 +144,6 @@ exports[`CameraAuthLightbox renders correctly 1`] = `
                   "padding": 8,
                 }
               }
-              testID={undefined}
-              tvParallaxProperties={undefined}
             >
               <Text
                 accessible={true}

@@ -5,8 +5,6 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DisclosureCard
-    account={undefined}
-    actType={undefined}
     authorizeRequest={[Function]}
     authorized={false}
     cancelRequest={[Function]}
@@ -14,19 +12,15 @@ ShallowWrapper {
     client={null}
     createSubAccount={false}
     currentIdentity={Object {}}
-    error={undefined}
     interactionStats={
       Object {
         "shared": 0,
       }
     }
     navigator={FakeNavigator {}}
-    network={undefined}
-    networkName={undefined}
     pushError={null}
     pushPermissions={false}
     pushWorking={false}
-    requestId={undefined}
     requested={Object {}}
     snsRegistered={false}
     uportVerified={false}
@@ -1016,15 +1010,8 @@ exports[`DisclosureCard renders correctly with a full disclosure request 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -1045,6 +1032,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request 1`] = `
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -1052,8 +1040,6 @@ exports[`DisclosureCard renders correctly with a full disclosure request 1`] = `
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -1077,15 +1063,8 @@ exports[`DisclosureCard renders correctly with a full disclosure request 1`] = `
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -1105,14 +1084,12 @@ exports[`DisclosureCard renders correctly with a full disclosure request 1`] = `
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -1618,15 +1595,8 @@ exports[`DisclosureCard renders correctly with a full disclosure request and cli
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -1647,6 +1617,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request and cli
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -1654,8 +1625,6 @@ exports[`DisclosureCard renders correctly with a full disclosure request and cli
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -1679,15 +1648,8 @@ exports[`DisclosureCard renders correctly with a full disclosure request and cli
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -1707,14 +1669,12 @@ exports[`DisclosureCard renders correctly with a full disclosure request and cli
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -2240,15 +2200,8 @@ exports[`DisclosureCard renders correctly with a full disclosure request and ver
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -2269,6 +2222,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request and ver
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -2276,8 +2230,6 @@ exports[`DisclosureCard renders correctly with a full disclosure request and ver
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -2301,15 +2253,8 @@ exports[`DisclosureCard renders correctly with a full disclosure request and ver
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -2329,14 +2274,12 @@ exports[`DisclosureCard renders correctly with a full disclosure request and ver
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -2896,15 +2839,8 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -2925,6 +2861,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -2932,8 +2869,6 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -2957,15 +2892,8 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -2986,11 +2914,10 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
             "backgroundColor": "rgba(0,0,0,0)",
             "borderColor": "rgba(185, 185, 185, 1)",
             "borderWidth": 1,
+            "padding": 15,
           },
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -3552,15 +3479,8 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -3581,6 +3501,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -3588,8 +3509,6 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -3613,15 +3532,8 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -3641,14 +3553,12 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -4208,15 +4118,8 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -4237,6 +4140,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -4244,8 +4148,6 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -4269,15 +4171,8 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -4297,14 +4192,12 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -4810,15 +4703,8 @@ exports[`DisclosureCard renders correctly with a segregated account request and 
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -4839,6 +4725,7 @@ exports[`DisclosureCard renders correctly with a segregated account request and 
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -4846,8 +4733,6 @@ exports[`DisclosureCard renders correctly with a segregated account request and 
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -4871,15 +4756,8 @@ exports[`DisclosureCard renders correctly with a segregated account request and 
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -4899,14 +4777,12 @@ exports[`DisclosureCard renders correctly with a segregated account request and 
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -5412,15 +5288,8 @@ exports[`DisclosureCard renders correctly with a simple request and client info 
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -5441,6 +5310,7 @@ exports[`DisclosureCard renders correctly with a simple request and client info 
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -5448,8 +5318,6 @@ exports[`DisclosureCard renders correctly with a simple request and client info 
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -5473,15 +5341,8 @@ exports[`DisclosureCard renders correctly with a simple request and client info 
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -5501,14 +5362,12 @@ exports[`DisclosureCard renders correctly with a simple request and client info 
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -6035,15 +5894,8 @@ exports[`DisclosureCard renders correctly with error 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -6064,6 +5916,7 @@ exports[`DisclosureCard renders correctly with error 1`] = `
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -6071,8 +5924,6 @@ exports[`DisclosureCard renders correctly with error 1`] = `
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -6096,15 +5947,8 @@ exports[`DisclosureCard renders correctly with error 1`] = `
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -6125,11 +5969,10 @@ exports[`DisclosureCard renders correctly with error 1`] = `
             "backgroundColor": "rgba(0,0,0,0)",
             "borderColor": "rgba(185, 185, 185, 1)",
             "borderWidth": 1,
+            "padding": 15,
           },
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -6637,15 +6480,8 @@ exports[`DisclosureCard unpublished identity renders correctly after publishing 
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -6666,6 +6502,7 @@ exports[`DisclosureCard unpublished identity renders correctly after publishing 
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -6673,8 +6510,6 @@ exports[`DisclosureCard unpublished identity renders correctly after publishing 
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -6698,15 +6533,8 @@ exports[`DisclosureCard unpublished identity renders correctly after publishing 
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -6726,14 +6554,12 @@ exports[`DisclosureCard unpublished identity renders correctly after publishing 
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -7239,15 +7065,8 @@ exports[`DisclosureCard unpublished identity renders correctly with identity not
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -7268,6 +7087,7 @@ exports[`DisclosureCard unpublished identity renders correctly with identity not
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -7275,8 +7095,6 @@ exports[`DisclosureCard unpublished identity renders correctly with identity not
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -7300,15 +7118,8 @@ exports[`DisclosureCard unpublished identity renders correctly with identity not
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -7328,14 +7139,12 @@ exports[`DisclosureCard unpublished identity renders correctly with identity not
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -7947,15 +7756,8 @@ exports[`DisclosureCard with network with no existing account for network render
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -7976,6 +7778,7 @@ exports[`DisclosureCard with network with no existing account for network render
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -7983,8 +7786,6 @@ exports[`DisclosureCard with network with no existing account for network render
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -8008,15 +7809,8 @@ exports[`DisclosureCard with network with no existing account for network render
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -8036,14 +7830,12 @@ exports[`DisclosureCard with network with no existing account for network render
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -8655,15 +8447,8 @@ exports[`DisclosureCard with network with no existing segregated account for cli
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -8684,6 +8469,7 @@ exports[`DisclosureCard with network with no existing segregated account for cli
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -8691,8 +8477,6 @@ exports[`DisclosureCard with network with no existing segregated account for cli
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -8716,15 +8500,8 @@ exports[`DisclosureCard with network with no existing segregated account for cli
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -8744,14 +8521,12 @@ exports[`DisclosureCard with network with no existing segregated account for cli
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -9363,15 +9138,8 @@ exports[`DisclosureCard with network with pre-existing account renders correctly
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -9392,6 +9160,7 @@ exports[`DisclosureCard with network with pre-existing account renders correctly
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -9399,8 +9168,6 @@ exports[`DisclosureCard with network with pre-existing account renders correctly
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -9424,15 +9191,8 @@ exports[`DisclosureCard with network with pre-existing account renders correctly
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -9452,14 +9212,12 @@ exports[`DisclosureCard with network with pre-existing account renders correctly
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}

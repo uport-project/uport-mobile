@@ -1,5 +1,35 @@
 # Change Log
 
+## [v391](https://github.com/uport-project/uport-mobile/tree/v391) (2018-11-21)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v390...v391)
+
+**Merged pull requests:**
+
+- \[support\] enable local release builds for android [\#28](https://github.com/uport-project/uport-mobile/pull/28) ([mirceanis](https://github.com/mirceanis))
+- Improve ECDSA Signing on iOS [\#22](https://github.com/uport-project/uport-mobile/pull/22) ([pelle](https://github.com/pelle))
+
+## [v390](https://github.com/uport-project/uport-mobile/tree/v390) (2018-11-19)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v389...v390)
+
+**Merged pull requests:**
+
+- Setting required params in Info.plist for iOS [\#24](https://github.com/uport-project/uport-mobile/pull/24) ([simonas-notcat](https://github.com/simonas-notcat))
+
+## [v389](https://github.com/uport-project/uport-mobile/tree/v389) (2018-11-19)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v388...v389)
+
+**Merged pull requests:**
+
+- Update Jest and Friends [\#23](https://github.com/uport-project/uport-mobile/pull/23) ([pelle](https://github.com/pelle))
+- Don't show backup screens for preHD wallets [\#21](https://github.com/uport-project/uport-mobile/pull/21) ([pelle](https://github.com/pelle))
+
+## [v388](https://github.com/uport-project/uport-mobile/tree/v388) (2018-11-16)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v387...v388)
+
+**Merged pull requests:**
+
+- Reverting fix for push registration waiting [\#20](https://github.com/uport-project/uport-mobile/pull/20) ([simonas-notcat](https://github.com/simonas-notcat))
+
 ## [v387](https://github.com/uport-project/uport-mobile/tree/v387) (2018-11-13)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v386...v387)
 

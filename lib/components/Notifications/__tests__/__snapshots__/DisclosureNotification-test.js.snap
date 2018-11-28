@@ -2,16 +2,8 @@
 
 exports[`Disclosure Notification renders an disclosure notification correctly 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -36,8 +28,6 @@ exports[`Disclosure Notification renders an disclosure notification correctly 1`
       "shadowRadius": 12,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
@@ -89,15 +79,8 @@ exports[`Disclosure Notification renders an disclosure notification correctly 1`
       }
     >
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -118,6 +101,7 @@ exports[`Disclosure Notification renders an disclosure notification correctly 1`
               Object {
                 "borderColor": "rgba(74,74,74,1)",
                 "borderWidth": 1,
+                "padding": 15,
               },
               Object {
                 "marginRight": 10,
@@ -125,8 +109,6 @@ exports[`Disclosure Notification renders an disclosure notification correctly 1`
             ],
           ]
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Text
           accessible={true}
@@ -150,15 +132,8 @@ exports[`Disclosure Notification renders an disclosure notification correctly 1`
         </Text>
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -178,14 +153,12 @@ exports[`Disclosure Notification renders an disclosure notification correctly 1`
             Array [
               Object {
                 "backgroundColor": "rgba(91,84,199,1)",
-                "marginLeft": 10,
+                "padding": 15,
               },
               undefined,
             ],
           ]
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Text
           accessible={true}
@@ -215,16 +188,8 @@ exports[`Disclosure Notification renders an disclosure notification correctly 1`
 
 exports[`Disclosure Notification renders an disclosure notification that has been authorized correctly 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -249,8 +214,6 @@ exports[`Disclosure Notification renders an disclosure notification that has bee
       "shadowRadius": 12,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
@@ -298,16 +261,8 @@ exports[`Disclosure Notification renders an disclosure notification that has bee
 
 exports[`Disclosure Notification renders an disclosure notification that has been canceled correctly 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -332,8 +287,6 @@ exports[`Disclosure Notification renders an disclosure notification that has bee
       "shadowRadius": 12,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={

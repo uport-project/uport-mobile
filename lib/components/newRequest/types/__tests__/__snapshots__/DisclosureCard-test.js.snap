@@ -5,11 +5,9 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <DisclosureCard
-    account={undefined}
     accountAuthorized={false}
     accountProfile={null}
     accountProfileLookup={[Function]}
-    actType={undefined}
     authorizeAccount={[Function]}
     authorizeRequest={[Function]}
     authorized={false}
@@ -18,7 +16,6 @@ ShallowWrapper {
     client={null}
     createSubAccount={false}
     currentIdentity={Object {}}
-    error={undefined}
     ethBalance={0}
     interactionStats={
       Object {
@@ -26,12 +23,9 @@ ShallowWrapper {
       }
     }
     navigator={FakeNavigator {}}
-    network={undefined}
-    networkName={undefined}
     pushError={null}
     pushPermissions={false}
     pushWorking={false}
-    requestId={undefined}
     requested={Object {}}
     snsRegistered={false}
     uportVerified={false}
@@ -84,6 +78,7 @@ ShallowWrapper {
                 "alignItems": "stretch",
                 "backgroundColor": "#F6F5FE",
                 "flex": 1,
+                "paddingBottom": 20,
               }
             }
           >
@@ -148,7 +143,6 @@ ShallowWrapper {
               </TouchableOpacity>
             </Component>
             <PrimaryButton
-              disabled={false}
               onPress={[Function]}
               style={
                 Object {
@@ -256,6 +250,7 @@ ShallowWrapper {
                 "alignItems": "stretch",
                 "backgroundColor": "#F6F5FE",
                 "flex": 1,
+                "paddingBottom": 20,
               }
             }
           >
@@ -320,7 +315,6 @@ ShallowWrapper {
               </TouchableOpacity>
             </Component>
             <PrimaryButton
-              disabled={false}
               onPress={[Function]}
               style={
                 Object {
@@ -420,7 +414,6 @@ ShallowWrapper {
               null,
               null,
               <PrimaryButton
-                disabled={false}
                 onPress={[Function]}
                 style={
                   Object {
@@ -450,6 +443,7 @@ ShallowWrapper {
               "alignItems": "stretch",
               "backgroundColor": "#F6F5FE",
               "flex": 1,
+              "paddingBottom": 20,
             },
           },
           "ref": null,
@@ -608,7 +602,7 @@ ShallowWrapper {
                 >
                    CREATE NEW ACCOUNT 
                 </Text>,
-                "disabled": false,
+                "disabled": undefined,
                 "onPress": [Function],
                 "style": Object {
                   "marginBottom": 30,
@@ -686,6 +680,7 @@ ShallowWrapper {
                   "alignItems": "stretch",
                   "backgroundColor": "#F6F5FE",
                   "flex": 1,
+                  "paddingBottom": 20,
                 }
               }
             >
@@ -750,7 +745,6 @@ ShallowWrapper {
                 </TouchableOpacity>
               </Component>
               <PrimaryButton
-                disabled={false}
                 onPress={[Function]}
                 style={
                   Object {
@@ -858,6 +852,7 @@ ShallowWrapper {
                   "alignItems": "stretch",
                   "backgroundColor": "#F6F5FE",
                   "flex": 1,
+                  "paddingBottom": 20,
                 }
               }
             >
@@ -922,7 +917,6 @@ ShallowWrapper {
                 </TouchableOpacity>
               </Component>
               <PrimaryButton
-                disabled={false}
                 onPress={[Function]}
                 style={
                   Object {
@@ -1022,7 +1016,6 @@ ShallowWrapper {
                 null,
                 null,
                 <PrimaryButton
-                  disabled={false}
                   onPress={[Function]}
                   style={
                     Object {
@@ -1052,6 +1045,7 @@ ShallowWrapper {
                 "alignItems": "stretch",
                 "backgroundColor": "#F6F5FE",
                 "flex": 1,
+                "paddingBottom": 20,
               },
             },
             "ref": null,
@@ -1210,7 +1204,7 @@ ShallowWrapper {
                   >
                      CREATE NEW ACCOUNT 
                   </Text>,
-                  "disabled": false,
+                  "disabled": undefined,
                   "onPress": [Function],
                   "style": Object {
                     "marginBottom": 30,
@@ -1357,6 +1351,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request 1`] = `
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -1399,16 +1394,8 @@ exports[`DisclosureCard renders correctly with a full disclosure request 1`] = `
           Login
         </Text>
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -1427,8 +1414,6 @@ exports[`DisclosureCard renders correctly with a full disclosure request 1`] = `
               "width": 44,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Icon
             color="rgba(155,155,155,1)"
@@ -1530,6 +1515,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request and cli
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -1572,16 +1558,8 @@ exports[`DisclosureCard renders correctly with a full disclosure request and cli
           Login
         </Text>
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -1600,8 +1578,6 @@ exports[`DisclosureCard renders correctly with a full disclosure request and cli
               "width": 44,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Icon
             color="rgba(155,155,155,1)"
@@ -1703,6 +1679,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request and ver
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -1745,16 +1722,8 @@ exports[`DisclosureCard renders correctly with a full disclosure request and ver
           Login
         </Text>
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -1773,8 +1742,6 @@ exports[`DisclosureCard renders correctly with a full disclosure request and ver
               "width": 44,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Icon
             color="rgba(155,155,155,1)"
@@ -1876,6 +1843,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -1918,16 +1886,8 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
           Login
         </Text>
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -1946,8 +1906,6 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
               "width": 44,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Icon
             color="rgba(155,155,155,1)"
@@ -2049,6 +2007,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -2091,16 +2050,8 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
           Login
         </Text>
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -2119,8 +2070,6 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
               "width": 44,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Icon
             color="rgba(155,155,155,1)"
@@ -2222,6 +2171,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -2264,16 +2214,8 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
           Login
         </Text>
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -2292,8 +2234,6 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
               "width": 44,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Icon
             color="rgba(155,155,155,1)"
@@ -2395,6 +2335,7 @@ exports[`DisclosureCard renders correctly with a segregated account request and 
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -2437,16 +2378,8 @@ exports[`DisclosureCard renders correctly with a segregated account request and 
           Login
         </Text>
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -2465,8 +2398,6 @@ exports[`DisclosureCard renders correctly with a segregated account request and 
               "width": 44,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Icon
             color="rgba(155,155,155,1)"
@@ -2568,6 +2499,7 @@ exports[`DisclosureCard renders correctly with a simple request and client info 
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -2610,16 +2542,8 @@ exports[`DisclosureCard renders correctly with a simple request and client info 
           Login
         </Text>
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -2638,8 +2562,6 @@ exports[`DisclosureCard renders correctly with a simple request and client info 
               "width": 44,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Icon
             color="rgba(155,155,155,1)"
@@ -2741,6 +2663,7 @@ exports[`DisclosureCard renders correctly with error 1`] = `
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -2783,16 +2706,8 @@ exports[`DisclosureCard renders correctly with error 1`] = `
           Login
         </Text>
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -2811,8 +2726,6 @@ exports[`DisclosureCard renders correctly with error 1`] = `
               "width": 44,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Icon
             color="rgba(155,155,155,1)"
@@ -2826,18 +2739,16 @@ exports[`DisclosureCard renders correctly with error 1`] = `
         allowFontScaling={true}
         ellipsizeMode="tail"
         style={
-          Array [
-            Object {
-              "color": "rgba(155,155,155,1)",
-              "fontFamily": "NunitoSans-Light",
-              "fontSize": 14,
-              "lineHeight": 19,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "red",
-            },
-          ]
+          Object {
+            "backgroundColor": "#E86B6B",
+            "borderColor": "#C94444",
+            "color": "#FFFFFF",
+            "fontSize": 14,
+            "margin": 15,
+            "marginBottom": 0,
+            "padding": 10,
+            "textAlign": "center",
+          }
         }
       >
         JWT has Expired
@@ -2935,6 +2846,7 @@ exports[`DisclosureCard unpublished identity renders correctly after publishing 
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -2977,16 +2889,8 @@ exports[`DisclosureCard unpublished identity renders correctly after publishing 
           Login
         </Text>
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -3005,8 +2909,6 @@ exports[`DisclosureCard unpublished identity renders correctly after publishing 
               "width": 44,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Icon
             color="rgba(155,155,155,1)"
@@ -3108,6 +3010,7 @@ exports[`DisclosureCard unpublished identity renders correctly with identity not
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -3150,16 +3053,8 @@ exports[`DisclosureCard unpublished identity renders correctly with identity not
           Login
         </Text>
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -3178,8 +3073,6 @@ exports[`DisclosureCard unpublished identity renders correctly with identity not
               "width": 44,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Icon
             color="rgba(155,155,155,1)"
@@ -3281,6 +3174,7 @@ exports[`DisclosureCard with network with no existing account for network render
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -3323,16 +3217,8 @@ exports[`DisclosureCard with network with no existing account for network render
           Login
         </Text>
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -3351,8 +3237,6 @@ exports[`DisclosureCard with network with no existing account for network render
               "width": 44,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Icon
             color="rgba(155,155,155,1)"
@@ -3454,6 +3338,7 @@ exports[`DisclosureCard with network with no existing segregated account for cli
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -3496,16 +3381,8 @@ exports[`DisclosureCard with network with no existing segregated account for cli
           Login
         </Text>
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -3524,8 +3401,6 @@ exports[`DisclosureCard with network with no existing segregated account for cli
               "width": 44,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Icon
             color="rgba(155,155,155,1)"
@@ -3627,6 +3502,7 @@ exports[`DisclosureCard with network with pre-existing account renders correctly
           "alignItems": "stretch",
           "backgroundColor": "#F6F5FE",
           "flex": 1,
+          "paddingBottom": 20,
         }
       }
     >
@@ -3669,16 +3545,8 @@ exports[`DisclosureCard with network with pre-existing account renders correctly
           Login
         </Text>
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -3697,8 +3565,6 @@ exports[`DisclosureCard with network with pre-existing account renders correctly
               "width": 44,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Icon
             color="rgba(155,155,155,1)"

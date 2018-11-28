@@ -5,16 +5,13 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <NetworkCard
-    address={undefined}
     authorizeRequest={[Function]}
     authorized={false}
     cancelRequest={[Function]}
     clearRequest={[Function]}
     client={null}
     currentIdentity={Object {}}
-    error={undefined}
     navigator={FakeNavigator {}}
-    network={undefined}
     request={
       Object {
         "callback_url": "https://testapp.uport.me",
@@ -28,7 +25,6 @@ ShallowWrapper {
         "type": "net",
       }
     }
-    requestId={undefined}
     uportVerified={false}
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -93,11 +89,9 @@ ShallowWrapper {
         <RequestItemList>
           <RequestItem
             type="Network"
-            value={undefined}
           />
           <RequestItem
             type="Address"
-            value={undefined}
           />
         </RequestItemList>,
         null,
@@ -228,11 +222,9 @@ ShallowWrapper {
           "children": Array [
             <RequestItem
               type="Network"
-              value={undefined}
             />,
             <RequestItem
               type="Address"
-              value={undefined}
             />,
           ],
         },
@@ -340,11 +332,9 @@ ShallowWrapper {
           <RequestItemList>
             <RequestItem
               type="Network"
-              value={undefined}
             />
             <RequestItem
               type="Address"
-              value={undefined}
             />
           </RequestItemList>,
           null,
@@ -475,11 +465,9 @@ ShallowWrapper {
             "children": Array [
               <RequestItem
                 type="Network"
-                value={undefined}
               />,
               <RequestItem
                 type="Address"
-                value={undefined}
               />,
             ],
           },
@@ -1158,15 +1146,8 @@ exports[`NetworkCard renders new request correctly 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -1187,6 +1168,7 @@ exports[`NetworkCard renders new request correctly 1`] = `
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -1194,8 +1176,6 @@ exports[`NetworkCard renders new request correctly 1`] = `
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -1219,15 +1199,8 @@ exports[`NetworkCard renders new request correctly 1`] = `
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -1247,14 +1220,12 @@ exports[`NetworkCard renders new request correctly 1`] = `
           Array [
             Object {
               "backgroundColor": "rgba(91,84,199,1)",
-              "marginLeft": 10,
+              "padding": 15,
             },
             undefined,
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -1608,15 +1579,8 @@ exports[`NetworkCard renders request with errors 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -1637,6 +1601,7 @@ exports[`NetworkCard renders request with errors 1`] = `
             Object {
               "borderColor": "rgba(74,74,74,1)",
               "borderWidth": 1,
+              "padding": 15,
             },
             Object {
               "marginRight": 10,
@@ -1644,8 +1609,6 @@ exports[`NetworkCard renders request with errors 1`] = `
           ],
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}
@@ -1669,15 +1632,8 @@ exports[`NetworkCard renders request with errors 1`] = `
       </Text>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
       isTVSelectable={true}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -1698,11 +1654,10 @@ exports[`NetworkCard renders request with errors 1`] = `
             "backgroundColor": "rgba(0,0,0,0)",
             "borderColor": "rgba(185, 185, 185, 1)",
             "borderWidth": 1,
+            "padding": 15,
           },
         ]
       }
-      testID={undefined}
-      tvParallaxProperties={undefined}
     >
       <Text
         accessible={true}

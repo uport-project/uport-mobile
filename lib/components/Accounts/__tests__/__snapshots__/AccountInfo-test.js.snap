@@ -7,14 +7,11 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <AccountInfo
     address="0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a"
     balance={0}
-    explorerUrl={undefined}
-    hexaddress={undefined}
     navigator={
       FakeNavigator {
         "event": [Function],
       }
     }
-    network={undefined}
     refreshBalance={[Function]}
     usdBalance={0}
     working={false}
@@ -32,10 +29,8 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "children": <AccountTile
-        accountProfile={undefined}
         balance={0}
         buttonIcon="plus-square"
-        network={undefined}
         tileButton={[Function]}
         usdBalance={0}
       />,
@@ -72,12 +67,9 @@ ShallowWrapper {
         Array [
           Object {
             "children": <AccountTile
-              accountProfile={undefined}
               balance={0}
               buttonIcon="plus-square"
-              network={undefined}
               tileButton={[Function]}
-              usdBalance={undefined}
             />,
             "contentContainerStyle": Object {
               "alignItems": "center",
@@ -93,6 +85,12 @@ ShallowWrapper {
           Object {},
         ],
       ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
     },
   },
   Symbol(enzyme.__nodes__): Array [
@@ -102,10 +100,8 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "children": <AccountTile
-          accountProfile={undefined}
           balance={0}
           buttonIcon="plus-square"
-          network={undefined}
           tileButton={[Function]}
           usdBalance={0}
         />,
@@ -142,12 +138,9 @@ ShallowWrapper {
           Array [
             Object {
               "children": <AccountTile
-                accountProfile={undefined}
                 balance={0}
                 buttonIcon="plus-square"
-                network={undefined}
                 tileButton={[Function]}
-                usdBalance={undefined}
               />,
               "contentContainerStyle": Object {
                 "alignItems": "center",
@@ -162,6 +155,12 @@ ShallowWrapper {
             },
             Object {},
           ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
         ],
       },
     },
@@ -357,16 +356,8 @@ exports[`AccountInfo Component renders info correctly 1`] = `
           </Text>
         </View>
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -390,8 +381,6 @@ exports[`AccountInfo Component renders info correctly 1`] = `
               "shadowRadius": 12,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <Text
             accessible={true}

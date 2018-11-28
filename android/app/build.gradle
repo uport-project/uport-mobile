@@ -140,7 +140,7 @@ def enableProguardInReleaseBuilds = false
 // this is not bullet proof since there may exist some tasks that call for release but are not explicitly run
 boolean releaseRequested = false
 gradle.startParameter.taskNames.each {
-    if (it.toLowerCase() ==~ /.*(release|deliver|build).*/) {
+    if (it.toLowerCase() ==~ /.*(release|deliver|build|signingreport).*/) {
         releaseRequested = true
     }
 }

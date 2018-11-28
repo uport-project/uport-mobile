@@ -2,16 +2,8 @@
 
 exports[`Transaction Notification renders an send ether notification correctly 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -36,8 +28,6 @@ exports[`Transaction Notification renders an send ether notification correctly 1
       "shadowRadius": 12,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
@@ -241,15 +231,8 @@ exports[`Transaction Notification renders an send ether notification correctly 1
       }
     >
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -270,6 +253,7 @@ exports[`Transaction Notification renders an send ether notification correctly 1
               Object {
                 "borderColor": "rgba(74,74,74,1)",
                 "borderWidth": 1,
+                "padding": 15,
               },
               Object {
                 "marginRight": 10,
@@ -277,8 +261,6 @@ exports[`Transaction Notification renders an send ether notification correctly 1
             ],
           ]
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Text
           accessible={true}
@@ -302,15 +284,8 @@ exports[`Transaction Notification renders an send ether notification correctly 1
         </Text>
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -330,14 +305,12 @@ exports[`Transaction Notification renders an send ether notification correctly 1
             Array [
               Object {
                 "backgroundColor": "rgba(91,84,199,1)",
-                "marginLeft": 10,
+                "padding": 15,
               },
               undefined,
             ],
           ]
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Text
           accessible={true}
@@ -367,16 +340,8 @@ exports[`Transaction Notification renders an send ether notification correctly 1
 
 exports[`Transaction Notification renders an transaction notification correctly 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -401,8 +366,6 @@ exports[`Transaction Notification renders an transaction notification correctly 
       "shadowRadius": 12,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
@@ -606,15 +569,8 @@ exports[`Transaction Notification renders an transaction notification correctly 
       }
     >
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -635,6 +591,7 @@ exports[`Transaction Notification renders an transaction notification correctly 
               Object {
                 "borderColor": "rgba(74,74,74,1)",
                 "borderWidth": 1,
+                "padding": 15,
               },
               Object {
                 "marginRight": 10,
@@ -642,8 +599,6 @@ exports[`Transaction Notification renders an transaction notification correctly 
             ],
           ]
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Text
           accessible={true}
@@ -667,15 +622,8 @@ exports[`Transaction Notification renders an transaction notification correctly 
         </Text>
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -695,14 +643,12 @@ exports[`Transaction Notification renders an transaction notification correctly 
             Array [
               Object {
                 "backgroundColor": "rgba(91,84,199,1)",
-                "marginLeft": 10,
+                "padding": 15,
               },
               undefined,
             ],
           ]
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Text
           accessible={true}
@@ -732,16 +678,8 @@ exports[`Transaction Notification renders an transaction notification correctly 
 
 exports[`Transaction Notification renders an transaction notification that has been authorized correctly 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -766,8 +704,6 @@ exports[`Transaction Notification renders an transaction notification that has b
       "shadowRadius": 12,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
@@ -967,16 +903,8 @@ exports[`Transaction Notification renders an transaction notification that has b
 
 exports[`Transaction Notification renders an transaction notification that has been canceled correctly 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -1001,8 +929,6 @@ exports[`Transaction Notification renders an transaction notification that has b
       "shadowRadius": 12,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
@@ -1202,16 +1128,8 @@ exports[`Transaction Notification renders an transaction notification that has b
 
 exports[`Transaction Notification renders an txhash notification correctly 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -1236,8 +1154,6 @@ exports[`Transaction Notification renders an txhash notification correctly 1`] =
       "shadowRadius": 12,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
@@ -1441,15 +1357,8 @@ exports[`Transaction Notification renders an txhash notification correctly 1`] =
       }
     >
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -1470,6 +1379,7 @@ exports[`Transaction Notification renders an txhash notification correctly 1`] =
               Object {
                 "borderColor": "rgba(74,74,74,1)",
                 "borderWidth": 1,
+                "padding": 15,
               },
               Object {
                 "marginRight": 10,
@@ -1477,8 +1387,6 @@ exports[`Transaction Notification renders an txhash notification correctly 1`] =
             ],
           ]
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Text
           accessible={true}
@@ -1502,15 +1410,8 @@ exports[`Transaction Notification renders an txhash notification correctly 1`] =
         </Text>
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -1530,14 +1431,12 @@ exports[`Transaction Notification renders an txhash notification correctly 1`] =
             Array [
               Object {
                 "backgroundColor": "rgba(91,84,199,1)",
-                "marginLeft": 10,
+                "padding": 15,
               },
               undefined,
             ],
           ]
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Text
           accessible={true}
@@ -1567,16 +1466,8 @@ exports[`Transaction Notification renders an txhash notification correctly 1`] =
 
 exports[`Transaction Notification renders an update uport transaction notification correctly 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -1601,8 +1492,6 @@ exports[`Transaction Notification renders an update uport transaction notificati
       "shadowRadius": 12,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
     style={
@@ -1806,15 +1695,8 @@ exports[`Transaction Notification renders an update uport transaction notificati
       }
     >
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -1835,6 +1717,7 @@ exports[`Transaction Notification renders an update uport transaction notificati
               Object {
                 "borderColor": "rgba(74,74,74,1)",
                 "borderWidth": 1,
+                "padding": 15,
               },
               Object {
                 "marginRight": 10,
@@ -1842,8 +1725,6 @@ exports[`Transaction Notification renders an update uport transaction notificati
             ],
           ]
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Text
           accessible={true}
@@ -1867,15 +1748,8 @@ exports[`Transaction Notification renders an update uport transaction notificati
         </Text>
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -1895,14 +1769,12 @@ exports[`Transaction Notification renders an update uport transaction notificati
             Array [
               Object {
                 "backgroundColor": "rgba(91,84,199,1)",
-                "marginLeft": 10,
+                "padding": 15,
               },
               undefined,
             ],
           ]
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Text
           accessible={true}
