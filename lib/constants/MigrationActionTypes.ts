@@ -21,7 +21,8 @@ export const RUN_MIGRATION_STEP = 'RUN_MIGRATION_STEP'
 export const STARTED_MIGRATION_STEP = 'STARTED_MIGRATION_STEP'
 export const COMPLETED_MIGRATION_STEP = 'COMPLETED_MIGRATION_STEP'
 export const FAILED_MIGRATION_STEP = 'FAILED_MIGRATION_STEP'
-
+// TODO remove when finished testing
+export const SIMULATE_ROUVEN = 'SIMULATE_ROUVEN'
 
 export enum MigrationTarget {
   PreHD = "PreHD"

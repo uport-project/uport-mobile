@@ -19,7 +19,8 @@ import { all, takeEvery, call, select, put } from 'redux-saga/effects'
 import { delay } from 'redux-saga'
 import { 
   RUN_MIGRATIONS,
-  RUN_MIGRATION_STEP, 
+  RUN_MIGRATION_STEP,
+  SIMULATE_ROUVEN,
   MigrationStep, 
   MigrationTarget,
   MigrationStatus,
@@ -56,6 +57,14 @@ import CleanUpAfterMissingSeed from './migrations/CleanUpAfterMissingSeed'
 
 import { NavigationActions } from 'uPortMobile/lib/utilities/NavigationActions'
 import { resetKey } from 'uPortMobile/lib/sagas/keychain'
+
+export function * simulateRouven () {
+  const root = yield select(hdRootAddress)
+  if (root) {
+    yield call(resetKey, root, true)
+    yield put(saveMessage('migration', 'Removed seed from KeyChain'))
+  }
+}
 
 export function * checkup () : any {
   const hd = yield select(isFullyHD)
@@ -133,6 +142,7 @@ function * migrationsSaga () {
     takeEvery(LOADED_DB, checkup),
     takeEvery(RUN_MIGRATIONS, runMigrations),
     takeEvery(RUN_MIGRATION_STEP, runStep),
+    takeEvery(SIMULATE_ROUVEN, simulateRouven)
   ])
 }
 
