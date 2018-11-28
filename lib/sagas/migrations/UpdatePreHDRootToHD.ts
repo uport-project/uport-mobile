@@ -26,6 +26,7 @@ import {
 } from 'uPortMobile/lib/constants/MigrationActionTypes'
 import {
   saveMessage,
+  failProcess
 } from 'uPortMobile/lib/actions/processStatusActions'
 import {
   hdRootAddress
