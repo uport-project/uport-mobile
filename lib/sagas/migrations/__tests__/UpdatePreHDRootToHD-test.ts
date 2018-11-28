@@ -23,7 +23,7 @@ import { select, call } from 'redux-saga/effects'
 import migrate from '../UpdatePreHDRootToHD'
 
 import {
-  createIdentityAddress,
+  addressFor,
   encryptionPublicKey,
   DEFAULT_LEVEL
 } from 'uPortMobile/lib/sagas/keychain'
@@ -54,8 +54,7 @@ describe('UpdatePreHDRootToHD', () => {
   const hdRoot = '0xhdRoot'
   const kp = {
     address: hdRoot,
-    publicKey: '0xPUBLICSIGNKEY',
-    hdindex: 0
+    publicKey: '0xPUBLICSIGNKEY'
   }
   const publicEncKey = '0xPUBLICENCKEY'
 
@@ -65,10 +64,10 @@ describe('UpdatePreHDRootToHD', () => {
         return expectSaga(migrate)
           .provide([
             [select(currentAddress), address],
-            [call(createIdentityAddress), kp],
+            [call(addressFor, 0, 0), kp],
             [call(encryptionPublicKey, {idIndex: 0, actIndex: 0}), publicEncKey]
           ])
-          .put(updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: kp.hdindex, securityLevel: DEFAULT_LEVEL}))
+          .put(updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: 0, securityLevel: DEFAULT_LEVEL}))
           .put(saveMessage(step, 'Updated Internal Identity Record'))
           .returns(true)
           .run()

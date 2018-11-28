@@ -17,7 +17,7 @@
 //
 import { all, takeEvery, call, select, put } from 'redux-saga/effects'
 import {
-  createIdentityAddress,
+  addressFor,
   encryptionPublicKey,
   DEFAULT_LEVEL
 } from 'uPortMobile/lib/sagas/keychain'
@@ -43,10 +43,10 @@ const step = MigrationStep.UpdatePreHDRootToHD
 function * migrate () : any {
   try {
     const address = yield select(currentAddress)
-    const kp = yield call(createIdentityAddress)
-    const publicEncKey = yield call(encryptionPublicKey, {idIndex: kp.hdindex, actIndex: 0})
-    console.log('new profile', updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: kp.hdindex, securityLevel: DEFAULT_LEVEL}))
-    yield put(updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: kp.hdindex, securityLevel: DEFAULT_LEVEL}))
+    const kp = yield call(addressFor, 0, 0)
+    const publicEncKey = yield call(encryptionPublicKey, {idIndex: 0, actIndex: 0})
+    console.log('new profile', updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: 0, securityLevel: DEFAULT_LEVEL}))
+    yield put(updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: 0, securityLevel: DEFAULT_LEVEL}))
     yield put(saveMessage(step, 'Updated Internal Identity Record'))
     return true  
   } catch (error) {
