@@ -184,7 +184,7 @@ describe('runMigrations', () => {
       .call(performStep, MigrationStep.IdentityManagerChangeOwner)
       .call(performStep, MigrationStep.UpdatePreHDRootToHD)
       .not.call(performStep, MigrationStep.UportRegistryDDORefresh)
-      .not.put(completeProcess(MigrationTarget.PreHD))
+      .put(completeProcess(MigrationTarget.PreHD))
       .dispatch(runMigrations(MigrationTarget.PreHD))
       .silentRun()
   })

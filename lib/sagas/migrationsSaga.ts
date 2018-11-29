@@ -107,9 +107,7 @@ export function * runMigrations ({target} : TargetAction) : any {
       const status = yield select(migrationStepStatus, step)
       if (status !== MigrationStatus.Completed) break
     }  
-    if (yield select(migrationCompleted, target)) {
-      yield put(completeProcess(target))
-    }
+    yield put(completeProcess(target))
   }
 }
 
