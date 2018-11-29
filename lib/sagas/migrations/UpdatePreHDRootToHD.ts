@@ -25,8 +25,10 @@ import {
   MigrationStep
 } from 'uPortMobile/lib/constants/MigrationActionTypes'
 import {
+  startWorking,
   saveMessage,
-  failProcess
+  failProcess,
+  completeProcess
 } from 'uPortMobile/lib/actions/processStatusActions'
 import {
   hdRootAddress
@@ -35,18 +37,73 @@ import {
   currentAddress
 } from 'uPortMobile/lib/selectors/identities'
 import {
+  fuelTokenForAddress,
+  deviceAddress
+} from 'uPortMobile/lib/selectors/chains'
+import {
   updateIdentity
 } from 'uPortMobile/lib/actions/uportActions'
+import { connected, waitUntilConnected } from 'uPortMobile/lib/sagas/networkState'
+import { createToken } from 'uPortMobile/lib/sagas/jwt'
 
 const step = MigrationStep.UpdatePreHDRootToHD
 
+export const FETCH_FUEL_TOKEN_ROUTE = 'https://api.uport.me/nisaba/newDeviceKey'
+
+export function * fetchFuelToken (parent: string, deviceAddress: string) : any {
+  try {
+    yield put(startWorking('fetchFuelToken'))
+    yield put(saveMessage('fetchFuelToken', 'Fetching new fuel token'))
+    yield call(waitUntilConnected)
+    const fuelToken = yield select(fuelTokenForAddress, parent)
+    if (!fuelToken) {
+      yield put(failProcess('fetchFuelToken', 'You do not have a valid fuel token'))
+      return false
+    }
+    // TODO check in with Andres for proper API
+    const requestToken = yield call(createToken, parent, {newDeviceKey: deviceAddress})
+    const response = yield call(fetch, FETCH_FUEL_TOKEN_ROUTE, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${fuelToken}`
+      },
+      body: JSON.stringify({requestToken})})
+    const responseJson = yield call(response.json.bind(response))
+    if (response.status === 200) {
+      yield put(completeProcess('fetchFuelToken'))
+      return responseJson.data
+    } else {
+      console.log(response)
+      yield put(failProcess('fetchFuelToken', 'Unable to request fueltoken')) // TODO discuss and maybe do Funcaptch as a failure case
+      return false
+    }
+  } catch (error) {
+    yield put(failProcess('fetchFuelToken', "Can't connect to verification service"))
+    return false
+  }
+}
+
 function * migrate () : any {
   try {
+    // TODO update fuel token, also why is device not the same as root
     const address = yield select(currentAddress)
+    const parent = yield select(deviceAddress)
+    const root = yield select(hdRootAddress)
     const kp = yield call(addressFor, 0, 0)
+    if (root !== kp.address) {
+      yield put(failProcess(step, 'Incorrect device address returned'))
+      return false  
+    }
     const publicEncKey = yield call(encryptionPublicKey, {idIndex: 0, actIndex: 0})
-    console.log('new profile', updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: 0, securityLevel: DEFAULT_LEVEL}))
-    yield put(updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: 0, securityLevel: DEFAULT_LEVEL}))
+    const fuelToken = yield call(fetchFuelToken, parent, kp.address)
+    if (!fuelToken) {
+      yield put(failProcess(step, 'could not create new fuel token'))
+      return false  
+    }
+    console.log('new profile', updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: 0, securityLevel: DEFAULT_LEVEL, fuelToken}))
+    yield put(updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: 0, securityLevel: DEFAULT_LEVEL, fuelToken}))
     yield put(saveMessage(step, 'Updated Internal Identity Record'))
     return true  
   } catch (error) {
