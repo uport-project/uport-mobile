@@ -38,7 +38,8 @@ import {
 } from 'uPortMobile/lib/selectors/identities'
 import {
   fuelTokenForAddress,
-  deviceAddress
+  deviceAddress,
+  networkSettings
 } from 'uPortMobile/lib/selectors/chains'
 import {
   updateIdentity
@@ -75,7 +76,6 @@ export function * fetchFuelToken (parent: string, deviceAddress: string) : any {
       yield put(completeProcess('fetchFuelToken'))
       return responseJson.data
     } else {
-      console.log(response)
       yield put(failProcess('fetchFuelToken', 'Unable to request fueltoken')) // TODO discuss and maybe do Funcaptch as a failure case
       return false
     }
@@ -97,17 +97,15 @@ function * migrate () : any {
       return false  
     }
     const publicEncKey = yield call(encryptionPublicKey, {idIndex: 0, actIndex: 0})
-    const fuelToken = yield call(fetchFuelToken, parent, kp.address)
+    const fuelToken = yield call(fetchFuelToken, address, kp.address)
     if (!fuelToken) {
       yield put(failProcess(step, 'could not create new fuel token'))
       return false  
     }
-    console.log('new profile', updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: 0, securityLevel: DEFAULT_LEVEL, fuelToken}))
     yield put(updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: 0, securityLevel: DEFAULT_LEVEL, fuelToken}))
     yield put(saveMessage(step, 'Updated Internal Identity Record'))
     return true  
   } catch (error) {
-    console.log(error)
     yield put(failProcess(step, error.message))
     return false
   }

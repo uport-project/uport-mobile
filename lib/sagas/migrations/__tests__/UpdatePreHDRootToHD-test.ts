@@ -80,7 +80,7 @@ describe('UpdatePreHDRootToHD', () => {
             [select(hdRootAddress), hdRoot],
             [call(addressFor, 0, 0), kp],
             [call(encryptionPublicKey, {idIndex: 0, actIndex: 0}), publicEncKey],
-            [call(fetchFuelToken, oldDevice, hdRoot), fuelToken]
+            [call(fetchFuelToken, address, hdRoot), fuelToken]
           ])
           .put(updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: 0, securityLevel: DEFAULT_LEVEL, fuelToken}))
           .put(saveMessage(step, 'Updated Internal Identity Record'))
@@ -117,7 +117,7 @@ describe('UpdatePreHDRootToHD', () => {
             [select(deviceAddress), oldDevice],
             [call(addressFor, 0, 0), kp],
             [call(encryptionPublicKey, {idIndex: 0, actIndex: 0}), publicEncKey],
-            [call(fetchFuelToken, oldDevice, hdRoot), false]
+            [call(fetchFuelToken, address, hdRoot), false]
           ])
           .put(failProcess(step, 'could not create new fuel token'))
           .returns(false)
