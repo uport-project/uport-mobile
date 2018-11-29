@@ -70,15 +70,15 @@ export function * checkup () : any {
   const hd = yield select(hdRootAddress)
   const addresses = yield call(listSeedAddresses)
   // const settings = yield select(networkSettings)
-  console.log('fullHD', fullHD)
-  console.log('hd', hd)
-  console.log('addresses', addresses)
+  // console.log('fullHD', fullHD)
+  // console.log('hd', hd)
+  // console.log('addresses', addresses)
   // console.log('settings', settings)
   if (!fullHD || !addresses.includes(hd)) {
     yield put(addMigrationTarget(MigrationTarget.PreHD))
   }
   const pending = yield select(pendingMigrations)
-  console.log('pending', pending)
+  // console.log('pending', pending)
   if (pending.length > 0 ) {
     const target = pending[0]
     yield call(delay, 2000)
@@ -127,7 +127,7 @@ export function * performStep (step: MigrationStep) : any {
   yield put(startWorking(step))
   try {
     const success = yield call(runImplementationStep, step)
-    console.log(step, `success: ${success}`)
+    // console.log(step, `success: ${success}`)
     if (success) {
       yield put(completeProcess(step))
       yield put(completedMigrationStep(step))  
@@ -135,7 +135,7 @@ export function * performStep (step: MigrationStep) : any {
       yield put(failedMigrationStep(step))  
     }
   } catch (error) {
-    console.log(step, error)
+    // console.log(step, error)
     yield put(failedMigrationStep(step))
     yield put(failProcess(step, error.message))
   }
