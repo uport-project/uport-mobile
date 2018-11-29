@@ -39,6 +39,7 @@ import {
 } from 'uPortMobile/lib/actions/migrationActions'
 import {
   startWorking,
+  stopWorking,
   saveMessage,
   completeProcess,
   failProcess
@@ -127,7 +128,7 @@ export function * performStep (step: MigrationStep) : any {
     const success = yield call(runImplementationStep, step)
     // console.log(step, `success: ${success}`)
     if (success) {
-      yield put(completeProcess(step))
+      yield put(stopWorking(step))
       yield put(completedMigrationStep(step))  
     } else {
       yield put(failedMigrationStep(step))  

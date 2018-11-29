@@ -19,52 +19,93 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import {
-  StyleSheet,
   View,
-  Image
+  ActivityIndicator
 } from 'react-native'
 import ProcessCard from 'uPortMobile/lib/components/shared/ProcessCard'
 import { Text } from 'uPortMobile/lib/components/shared'
-import { ConnectedStatusList } from 'uPortMobile/lib/components/Advanced/StatusMessages'
 // Selectors
 import {
   currentAddress
 } from 'uPortMobile/lib/selectors/identities'
 import {
-  working
+  working,
+  statusMessage,
+  errorMessage
 } from 'uPortMobile/lib/selectors/processStatus'
-
-import { MigrationTarget } from 'uPortMobile/lib/constants/MigrationActionTypes'
+import {
+  migrationStepStatus,
+  migrationCompleted
+} from 'uPortMobile/lib/selectors/migrations'
+import { MigrationTarget, MigrationStep, MigrationStatus, targetRecipes } from 'uPortMobile/lib/constants/MigrationActionTypes'
 import { track } from 'uPortMobile/lib/actions/metricActions'
 import { runMigrations } from 'uPortMobile/lib/actions/migrationActions'
+
+const S = require('string')
 
 interface Navigator {
   dismissModal: Function
 }
 
+interface StepProps {
+  step: MigrationStep,
+  working: boolean,
+  status: MigrationStatus,
+  message: string,
+  error: string
+}
+
+const StepView: React.SFC<StepProps> = ({step, working, status, message, error}) => {
+  const title = S(step).humanize().s
+  return <View style={{marginBottom: 16}}>
+    <Text bold style={{fontSize: 18}}>{title} 
+    {working ? <View style={{width: 18, height: 18, marginRight: 9}}><ActivityIndicator /></View> : null}
+    </Text>
+    <Text small secondary style={error ? {color: 'red'} : {}}>{error || message || (status ? MigrationStatus[status] : '...')}</Text>
+  </View>
+}
+
+interface withStep {
+  step: MigrationStep
+}
+
+const Step = connect((state: any, ownProps: withStep) : StepProps => {
+  const step = ownProps.step
+  return {
+    ...ownProps,
+    working: working(state, step),
+    status: migrationStepStatus(state, step),
+    message: statusMessage(state, step),
+    error: errorMessage(state, step)
+  }
+})(StepView)
+
 interface MigrateProps {
   navigator: Navigator,
   migrate: Function,
-  working: boolean
+  working: boolean,
+  completed: boolean
 }
 
 const Migrate: React.SFC<MigrateProps> = (props) => {
   return <ProcessCard
     process={MigrationTarget.PreHD}
     actionText='Migrate Identity'
-    onContinue={props.migrate}
+    onlyOnline
+    onProcess={props.migrate}
+    onContinue={false}
     skipTitle='Cancel'
-    skippable
+    skippable={!props.working && !props.completed}
     onSkip={props.navigator.dismissModal}
     >
-    { props.working
-    ? <ConnectedStatusList />
-    : <View>
+    <View>
       <Text title>Migrate old Pre HD Identity</Text>
       <Text p>You have an old Identity that can not be safely backed up.</Text>
-    </View>}
-}
-    
+      <Step step={MigrationStep.CleanUpAfterMissingSeed} />
+      <Step step={MigrationStep.IdentityManagerChangeOwner} />
+      <Step step={MigrationStep.UpdatePreHDRootToHD} />
+      <Step step={MigrationStep.UportRegistryDDORefresh} />
+    </View>
   </ProcessCard>
 }
 
@@ -73,7 +114,8 @@ const mapStateToProps = (state: any, ownProps: object) => {
   return {
     ...ownProps,
     address: currentAddress(state),
-    working: working(state, MigrationTarget.PreHD)
+    working: working(state, MigrationTarget.PreHD),
+    completed: migrationCompleted(state, MigrationTarget.PreHD)
   }
 }
 

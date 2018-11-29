@@ -48,7 +48,6 @@ function * migrate () : any {
     yield put(saveMessage(step, 'HD Cleanup Not Needed'))
     return true
   }
-
   const identity = yield select(currentAddress)
   const accounts = yield select(subAccounts)
 
