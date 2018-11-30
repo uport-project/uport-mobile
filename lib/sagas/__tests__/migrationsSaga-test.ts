@@ -42,6 +42,7 @@ import {
 } from 'uPortMobile/lib/actions/migrationActions'
 import {
   startWorking,
+  stopWorking,
   saveMessage,
   completeProcess,
   failProcess
@@ -82,7 +83,7 @@ describe('checkup', () => {
               [select(pendingMigrations), [MigrationTarget.PreHD]]
             ])
             .put(addMigrationTarget(MigrationTarget.PreHD))
-            .call(NavigationActions.showModal, {
+            .call(NavigationActions.push, {
               screen: `migrations.PreHD`,
               animationType: 'slide-up'
             })
@@ -102,7 +103,7 @@ describe('checkup', () => {
               [select(pendingMigrations), [MigrationTarget.PreHD]]
             ])
             .put(addMigrationTarget(MigrationTarget.PreHD))
-            .call(NavigationActions.showModal, {
+            .call(NavigationActions.push, {
               screen: `migrations.PreHD`,
               animationType: 'slide-up'
             })
@@ -122,7 +123,7 @@ describe('checkup', () => {
               [select(pendingMigrations), [MigrationTarget.PreHD]]
             ])
             .put(addMigrationTarget(MigrationTarget.PreHD))
-            .call(NavigationActions.showModal, {
+            .call(NavigationActions.push, {
               screen: `migrations.PreHD`,
               animationType: 'slide-up'
             })
@@ -202,7 +203,7 @@ describe('performStep', () => {
         .not.put(startedMigrationStep(step))
         .not.put(startWorking(step))
         .not.call(runImplementationStep, step)
-        .not.put(completeProcess(step))
+        .not.put(stopWorking(step))
         .not.put(completedMigrationStep(step))
         .run()
     })
@@ -220,7 +221,7 @@ describe('performStep', () => {
           .put(startWorking(step))
           .call(runImplementationStep, step)
           .put(completedMigrationStep(step))
-          .put(completeProcess(step))
+          .put(stopWorking(step))
           .run()
       })
 
@@ -235,7 +236,7 @@ describe('performStep', () => {
           .call(runImplementationStep, step)
           .put(failedMigrationStep(step))
           .not.put(completedMigrationStep(step))
-          .not.put(completeProcess(step))
+          .not.put(stopWorking(step))
           .run()
       })
 
@@ -251,7 +252,7 @@ describe('performStep', () => {
           .put(failedMigrationStep(step))
           .put(failProcess(step, 'Something bad happend'))
           .not.put(completedMigrationStep(step))
-          .not.put(completeProcess(step))
+          .not.put(stopWorking(step))
           .run()
       })
     })

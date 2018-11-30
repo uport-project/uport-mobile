@@ -92,6 +92,7 @@ function * migrate () : any {
     const parent = yield select(deviceAddress)
     const root = yield select(hdRootAddress)
     const kp = yield call(addressFor, 0, 0)
+    console.log('newkey', kp)
     if (root !== kp.address) {
       yield put(failProcess(step, 'Incorrect device address returned'))
       return false  

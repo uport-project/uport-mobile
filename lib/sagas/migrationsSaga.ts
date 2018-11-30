@@ -70,20 +70,14 @@ export function * checkup () : any {
   const fullHD = yield select(isFullyHD)
   const hd = yield select(hdRootAddress)
   const addresses = yield call(listSeedAddresses)
-  // const settings = yield select(networkSettings)
-  // console.log('fullHD', fullHD)
-  // console.log('hd', hd)
-  // console.log('addresses', addresses)
-  // console.log('settings', settings)
   if (!fullHD || !addresses.includes(hd)) {
     yield put(addMigrationTarget(MigrationTarget.PreHD))
   }
   const pending = yield select(pendingMigrations)
-  // console.log('pending', pending)
   if (pending.length > 0 ) {
     const target = pending[0]
     yield call(delay, 2000)
-    yield call(NavigationActions.showModal, {
+    yield call(NavigationActions.push, {
       screen: `migrations.${target}`,
       animationType: 'slide-up'
     })  

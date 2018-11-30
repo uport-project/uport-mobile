@@ -38,13 +38,16 @@ import {
   migrationCompleted
 } from 'uPortMobile/lib/selectors/migrations'
 import { MigrationTarget, MigrationStep, MigrationStatus, targetRecipes } from 'uPortMobile/lib/constants/MigrationActionTypes'
-import { track } from 'uPortMobile/lib/actions/metricActions'
 import { runMigrations } from 'uPortMobile/lib/actions/migrationActions'
+import Icon from 'react-native-vector-icons/Ionicons'
+import { colors } from 'uPortMobile/lib/styles/globalStyles'
 
 const S = require('string')
 
 interface Navigator {
-  dismissModal: Function
+  dismissModal: Function,
+  push: Function,
+  popToRoot: Function
 }
 
 interface StepProps {
@@ -55,11 +58,36 @@ interface StepProps {
   error: string
 }
 
+interface StatusIcon {
+  [index: number] : string;
+}
+
+const icons : StatusIcon = {
+  2 : 'ios-checkmark',
+  3 : 'ios-alert'
+}
+
+interface StatusProps {
+  status: MigrationStatus,
+  working: boolean
+}
+
+const Status: React.SFC<StatusProps> = ({status, working}) => {
+  if (working) {
+    return <View style={{width: 18, height: 18, marginRight: 9}}><ActivityIndicator /></View>
+  }
+  const icon = icons[status]
+  if (icon) {
+    return <View style={{paddingLeft: 20}}><Icon name={icon} color={status === MigrationStatus.Completed ? colors.green : colors.red } size={20} /></View>
+  }
+  return null
+}
+
 const StepView: React.SFC<StepProps> = ({step, working, status, message, error}) => {
   const title = S(step).humanize().s
   return <View style={{marginBottom: 16}}>
     <Text bold style={{fontSize: 18}}>{title} 
-    {working ? <View style={{width: 18, height: 18, marginRight: 9}}><ActivityIndicator /></View> : null}
+      <Status working={working} status={status} />
     </Text>
     <Text small secondary style={error ? {color: 'red'} : {}}>{error || message || (status ? MigrationStatus[status] : '...')}</Text>
   </View>
@@ -93,10 +121,10 @@ const Migrate: React.SFC<MigrateProps> = (props) => {
     actionText='Migrate Identity'
     onlyOnline
     onProcess={props.migrate}
-    onContinue={false}
+    onContinue={() => props.navigator.push({screen: 'migrations.complete'})}
     skipTitle='Cancel'
     skippable={!props.working && !props.completed}
-    onSkip={props.navigator.dismissModal}
+    onSkip={() => props.navigator.popToRoot({animated: true})}
     >
     <View>
       <Text title>Migrate old Pre HD Identity</Text>
@@ -123,9 +151,6 @@ export const mapDispatchToProps = (dispatch: Function) => {
   return {
     migrate: () => {
       dispatch(runMigrations(MigrationTarget.PreHD))
-    },
-    trackSegment: (event: any) => {
-      dispatch(track(`Onboarding ${event}`))
     }
   }
 }
