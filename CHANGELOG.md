@@ -1,5 +1,12 @@
 # Change Log
 
+## [v393](https://github.com/uport-project/uport-mobile/tree/v393) (2018-11-30)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v392...v393)
+
+**Merged pull requests:**
+
+- Add issue templates [\#36](https://github.com/uport-project/uport-mobile/pull/36) ([Eseoghene](https://github.com/Eseoghene))
+
 ## [v392](https://github.com/uport-project/uport-mobile/tree/v392) (2018-11-28)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v391...v392)
 
