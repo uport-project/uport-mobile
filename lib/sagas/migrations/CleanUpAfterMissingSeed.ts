@@ -51,7 +51,7 @@ function * migrate () : any {
   const identity = yield select(currentAddress)
   const accounts = yield select(subAccounts)
 
-  console.log('affected accounts', accounts)
+  // console.log('affected accounts', accounts)
   for (let account of accounts) {
     if (account.hdindex) {
       yield put(updateIdentity(account.address, {
