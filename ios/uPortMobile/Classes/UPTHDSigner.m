@@ -192,7 +192,7 @@ NSString * const UPTHDSignerErrorCodeLevelSigningFailed = @"-13";
     } else {
       NSError *signingError = [[NSError alloc] initWithDomain:@"UPTHDSignerError"
                                                          code:UPTHDSignerErrorCodeLevelSigningFailed.integerValue
-                                                     userInfo:@{@"message": [NSString stringWithFormat:@"signing failed due to invalid values for eth address: signJWT %@", rootAddress]}];
+                                                     userInfo:@{@"message": [NSString stringWithFormat:@"signing failed due to invalid values for eth address: signTransaction %@", rootAddress]}];
       callback(nil, signingError);
     }
 }
@@ -223,7 +223,7 @@ NSString * const UPTHDSignerErrorCodeLevelSigningFailed = @"-13";
     NSData *hash = [payloadData SHA256];
     NSDictionary *signature = ethereumSignature(derivedKeychain.key, hash, NULL);
     if (signature) {
-        callback(signature, nil);
+      callback(@{@"r":signature[@"r"], @"s":signature[@"s"], @"v": @([signature[@"v"] intValue] - 27)}, nil);
     } else {
         NSError *signingError = [[NSError alloc] initWithDomain:@"UPTHDSignerError"
                                                            code:UPTHDSignerErrorCodeLevelSigningFailed.integerValue

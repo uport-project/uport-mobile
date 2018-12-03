@@ -52,7 +52,7 @@
     NSDictionary *referenceSignature = @{
                                        @"r": @"19oGuThPgIlJ9Bq93/79CXL78eO/mDvUnlXvmKJck0g=",
                                        @"s": @"bwNq1IFx1OcoE1L2uCCfkr4ZvjOsFwL5K7m9hjv5KEg=",
-                                       @"v": @27
+                                       @"v": @0
                                        };
     NSData *dataHelloWorld = [@"Hello world" dataUsingEncoding:NSUTF8StringEncoding];
     NSString *base64HelloWorld = [dataHelloWorld base64EncodedStringWithOptions:0];

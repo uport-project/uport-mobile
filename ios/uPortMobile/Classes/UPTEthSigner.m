@@ -117,7 +117,7 @@ NSString * const UPTSignerErrorCodeLevelSigningFailed = @"-13";
         NSData *hash = [payload SHA256];
         NSDictionary *signature = ethereumSignature(key, hash, NULL);
         if (signature) {
-            result(signature, nil);
+            result(@{@"r":signature[@"r"], @"s":signature[@"s"], @"v": @([signature[@"v"] intValue] - 27)}, nil);
         } else {
             NSError *signingError = [[NSError alloc] initWithDomain:@"UPTError"
                                                                code:UPTSignerErrorCodeLevelSigningFailed.integerValue
