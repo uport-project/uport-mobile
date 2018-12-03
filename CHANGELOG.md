@@ -1,5 +1,20 @@
 # Change Log
 
+## [v393](https://github.com/uport-project/uport-mobile/tree/v393) (2018-11-30)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v392...v393)
+
+**Merged pull requests:**
+
+- Add issue templates [\#36](https://github.com/uport-project/uport-mobile/pull/36) ([Eseoghene](https://github.com/Eseoghene))
+
+## [v392](https://github.com/uport-project/uport-mobile/tree/v392) (2018-11-28)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v391...v392)
+
+**Merged pull requests:**
+
+- Disable disclosure buttons when error [\#29](https://github.com/uport-project/uport-mobile/pull/29) ([jasonhealy](https://github.com/jasonhealy))
+- Better iPad support [\#12](https://github.com/uport-project/uport-mobile/pull/12) ([pelle](https://github.com/pelle))
+
 ## [v391](https://github.com/uport-project/uport-mobile/tree/v391) (2018-11-21)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v390...v391)
 

@@ -49,11 +49,9 @@
     NSString *referenceSeedPhrase = @"vessel ladder alter error federal sibling chat ability sun glass valve picture";
     NSString *referenceRootAddress = @"0x794adde0672914159c1b77dd06d047904fe96ac8";
 //    NSString *referenceSignature = @"lnEso6Io2pJvlC6sWDLRkvxvpXqcUpZpvr4sdpHcTGA66Y1zher8KlrnWzQ2tt_lpxpx2YYdbfdtkfVmwjex2Q";
-    NSDictionary *referenceSignature = @{
-                                       @"r": @"19oGuThPgIlJ9Bq93/79CXL78eO/mDvUnlXvmKJck0g=",
-                                       @"s": @"bwNq1IFx1OcoE1L2uCCfkr4ZvjOsFwL5K7m9hjv5KEg=",
-                                       @"v": @27
-                                       };
+    NSDictionary *referenceSignature = @{ @"r": @"19oGuThPgIlJ9Bq93/79CXL78eO/mDvUnlXvmKJck0g=",
+                                          @"s": @"bwNq1IFx1OcoE1L2uCCfkr4ZvjOsFwL5K7m9hjv5KEg=",
+                                          @"v": @0 };
     NSData *dataHelloWorld = [@"Hello world" dataUsingEncoding:NSUTF8StringEncoding];
     NSString *base64HelloWorld = [dataHelloWorld base64EncodedStringWithOptions:0];
 
