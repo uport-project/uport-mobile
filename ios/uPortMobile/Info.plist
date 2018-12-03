@@ -172,8 +172,6 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>UISupportsDocumentBrowser</key>
-	<false/>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -181,6 +179,8 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UISupportsDocumentBrowser</key>
+	<false/>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 	<key>UTExportedTypeDeclarations</key>
