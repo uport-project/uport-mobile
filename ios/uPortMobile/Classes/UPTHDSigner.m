@@ -176,7 +176,7 @@ NSString * const UPTHDSignerErrorCodeLevelSigningFailed = @"-13";
     NSData *masterEntropy = [UPTHDSigner entropyWithEthAddress:rootAddress userPromptText:prompt protectionLevel:protectionLevel];
     if (!masterEntropy) {
         NSError *protectionLevelError = [[NSError alloc] initWithDomain:@"UPTError" code:UPTHDSignerErrorCodeLevelPrivateKeyNotFound.integerValue userInfo:@{@"message": @"private key not found for eth address"}];
-        callback( nil, protectionLevelError);
+        callback(nil, protectionLevelError);
         return;
     }
 
@@ -192,14 +192,14 @@ NSString * const UPTHDSignerErrorCodeLevelSigningFailed = @"-13";
     } else {
       NSError *signingError = [[NSError alloc] initWithDomain:@"UPTHDSignerError"
                                                          code:UPTHDSignerErrorCodeLevelSigningFailed.integerValue
-                                                     userInfo:@{@"message": [NSString stringWithFormat:@"signing failed due to invalid values for eth address: signTransaction %@", rootAddress]}];
+                                                     userInfo:@{ @"message": [NSString stringWithFormat:@"signing failed due to invalid values for eth address: signTransaction %@", rootAddress] }];
       callback(nil, signingError);
     }
 }
 
 + (void)signJWT:(NSString *)rootAddress derivationPath:(NSString *)derivationPath data:(NSString *)data prompt:(NSString *)prompt callback:(UPTHDSignerTransactionSigningResult)callback {
     UPTHDSignerProtectionLevel protectionLevel = [UPTHDSigner protectionLevelWithEthAddress:rootAddress];
-    if ( protectionLevel == UPTHDSignerProtectionLevelNotRecognized ) {
+    if (protectionLevel == UPTHDSignerProtectionLevelNotRecognized) {
       NSError *protectionLevelError = [[NSError alloc] initWithDomain:@"UPTHDSignerError"
                                                                  code:UPTHDSignerErrorCodeLevelParamNotRecognized.integerValue
                                                              userInfo:@{@"message": [NSString stringWithFormat:@"protection level not found for eth address: signJWT %@", rootAddress]}];
