@@ -19,7 +19,13 @@ import { delay } from 'redux-saga'
 import { Alert, NativeModules } from 'react-native'
 import { takeEvery, call, put, select, all, spawn } from 'redux-saga/effects'
 import { openDatabase, DEBUG, enablePromise } from 'react-native-sqlcipher-storage'
-import { ADD_VC } from '../constants/VcActionTypes'
+import { 
+  ADD_VC,
+  UPDATE_CONTACT_LIST,
+  UPDATE_CONTACT_DETAILS,
+  SIGN_VC,
+  SHARE_VC
+ } from '../constants/VcActionTypes'
 
 DEBUG(true)
 
@@ -152,6 +158,10 @@ function * shareVc(action: { type: string, vc: JwtDetails[] }) {
 function * databaseSaga () {
   yield all([
     takeEvery(ADD_VC, insertVc),
+    takeEvery(UPDATE_CONTACT_LIST, updateContactList),
+    takeEvery(UPDATE_CONTACT_DETAILS, updateContactDetails),
+    takeEvery(SIGN_VC, signVc),
+    takeEvery(SHARE_VC, shareVc),
   ])
   return true
 }
