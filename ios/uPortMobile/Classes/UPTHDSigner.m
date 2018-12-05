@@ -176,7 +176,7 @@ NSString * const UPTHDSignerErrorCodeLevelSigningFailed = @"-13";
     NSData *masterEntropy = [UPTHDSigner entropyWithEthAddress:rootAddress userPromptText:prompt protectionLevel:protectionLevel];
     if (!masterEntropy) {
         NSError *protectionLevelError = [[NSError alloc] initWithDomain:@"UPTError" code:UPTHDSignerErrorCodeLevelPrivateKeyNotFound.integerValue userInfo:@{@"message": @"private key not found for eth address"}];
-        callback( nil, protectionLevelError);
+        callback(nil, protectionLevelError);
         return;
     }
 
@@ -192,14 +192,14 @@ NSString * const UPTHDSignerErrorCodeLevelSigningFailed = @"-13";
     } else {
       NSError *signingError = [[NSError alloc] initWithDomain:@"UPTHDSignerError"
                                                          code:UPTHDSignerErrorCodeLevelSigningFailed.integerValue
-                                                     userInfo:@{@"message": [NSString stringWithFormat:@"signing failed due to invalid values for eth address: signJWT %@", rootAddress]}];
+                                                     userInfo:@{ @"message": [NSString stringWithFormat:@"signing failed due to invalid values for eth address: signTransaction %@", rootAddress] }];
       callback(nil, signingError);
     }
 }
 
 + (void)signJWT:(NSString *)rootAddress derivationPath:(NSString *)derivationPath data:(NSString *)data prompt:(NSString *)prompt callback:(UPTHDSignerTransactionSigningResult)callback {
     UPTHDSignerProtectionLevel protectionLevel = [UPTHDSigner protectionLevelWithEthAddress:rootAddress];
-    if ( protectionLevel == UPTHDSignerProtectionLevelNotRecognized ) {
+    if (protectionLevel == UPTHDSignerProtectionLevelNotRecognized) {
       NSError *protectionLevelError = [[NSError alloc] initWithDomain:@"UPTHDSignerError"
                                                                  code:UPTHDSignerErrorCodeLevelParamNotRecognized.integerValue
                                                              userInfo:@{@"message": [NSString stringWithFormat:@"protection level not found for eth address: signJWT %@", rootAddress]}];
@@ -223,7 +223,7 @@ NSString * const UPTHDSignerErrorCodeLevelSigningFailed = @"-13";
     NSData *hash = [payloadData SHA256];
     NSDictionary *signature = ethereumSignature(derivedKeychain.key, hash, NULL);
     if (signature) {
-        callback(signature, nil);
+      callback(@{@"r":signature[@"r"], @"s":signature[@"s"], @"v": @([signature[@"v"] intValue] - 27)}, nil);
     } else {
         NSError *signingError = [[NSError alloc] initWithDomain:@"UPTHDSignerError"
                                                            code:UPTHDSignerErrorCodeLevelSigningFailed.integerValue

@@ -1,5 +1,13 @@
 # Change Log
 
+## [v394](https://github.com/uport-project/uport-mobile/tree/v394) (2018-12-05)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v393...v394)
+
+**Merged pull requests:**
+
+- Attempt to be liberal with v and throw better errors [\#40](https://github.com/uport-project/uport-mobile/pull/40) ([pelle](https://github.com/pelle))
+- Properly encode v value as 0 or 1 just like android [\#37](https://github.com/uport-project/uport-mobile/pull/37) ([pelle](https://github.com/pelle))
+
 ## [v393](https://github.com/uport-project/uport-mobile/tree/v393) (2018-11-30)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v392...v393)
 
