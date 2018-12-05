@@ -47,7 +47,8 @@ import {
 } from 'uPortMobile/lib/selectors/identities'
 import {
   fuelTokenForAddress,
-  deviceAddress
+  deviceAddress,
+  networkSettings
 } from 'uPortMobile/lib/selectors/chains'
 import {
   updateIdentity
@@ -69,12 +70,16 @@ describe('UpdatePreHDRootToHD', () => {
   }
   const publicEncKey = '0xPUBLICENCKEY'
   const fuelToken = 'FUEL_TOKEN'
+  const preMigration = {
+    device: oldDevice
+  }
 
   describe('migrate()', () => {
     describe('happy path', () => {
       it('should update data', () => {
         return expectSaga(migrate)
           .provide([
+            [select(networkSettings), preMigration],
             [select(currentAddress), address],
             [select(deviceAddress), oldDevice],
             [select(hdRootAddress), hdRoot],
@@ -82,7 +87,7 @@ describe('UpdatePreHDRootToHD', () => {
             [call(encryptionPublicKey, {idIndex: 0, actIndex: 0}), publicEncKey],
             [call(fetchFuelToken, address, hdRoot), fuelToken]
           ])
-          .put(updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: 0, securityLevel: DEFAULT_LEVEL, fuelToken}))
+          .put(updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: 0, securityLevel: DEFAULT_LEVEL, fuelToken, preMigration}))
           .put(saveMessage(step, 'Updated Internal Identity Record'))
           .returns(true)
           .run()

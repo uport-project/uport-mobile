@@ -16,6 +16,7 @@
 // along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
 //
 import { all, takeEvery, call, select, put, cps } from 'redux-saga/effects'
+import { delay } from 'redux-saga'
 import {
   savePublicUport,
   registry,
@@ -36,15 +37,20 @@ import { isEqual } from 'lodash'
 const step = MigrationStep.UportRegistryDDORefresh
 
 export function * isProfileUpToDate (address: string, seq?: number) { // seq is just for easy mocking in tests
-  const fetchedProfile = yield cps(registry, address)
-  // console.log(`fetched profile ${address}`, fetchedProfile)
-  const attributes = yield select(publicUportForAddress, address)
-  const profile = {...profileTemplate, ...attributes}
-  // console.log('local profile', profile)
-  return isEqual(profile, fetchedProfile)
+  try {
+    const fetchedProfile = yield cps(registry, address)
+    // console.log(`fetched profile ${address}`, fetchedProfile)
+    const attributes = yield select(publicUportForAddress, address)
+    const profile = {...profileTemplate, ...attributes}
+    // console.log('local profile', profile)
+    return isEqual(profile, fetchedProfile)  
+  } catch (error) {
+    console.log('problem calling registry', error)
+    return false
+  }
 }
 
-function * migrate () : any {
+function * migrate (attempt = 0) : any {
   try {
     const address = yield select(currentAddress)
     if (yield call(isProfileUpToDate, address, 1)) {
@@ -54,17 +60,25 @@ function * migrate () : any {
 
     yield put(saveMessage(step, `Updating uPort Registry for ${address}`))
     
-    if (yield call(savePublicUport, {address})) {
+    if (yield call(savePublicUport, {address, force: attempt > 0})) {
+      // Sometimes nodes are not uptodate
+      yield call(delay, 5000)
+
       if (yield call(isProfileUpToDate, address)) {
         return true
       } else {
-        yield put(failProcess(step, 'Transaction updating profile failed'))
-        return false
+        if (attempt > 2) {
+          yield put(failProcess(step, 'Transaction updating profile failed'))
+          return false  
+        }
       }
     } else {
-      yield put(failProcess(step, 'Did not successfully update profile'))
-      return false
+      if (attempt > 2) {
+        yield put(failProcess(step, 'Did not successfully update profile'))
+        return false  
+      }
     }
+    return yield call(migrate, ++attempt)
   } catch (error) {
     console.log(error)
     yield put(failProcess(step, error.message))

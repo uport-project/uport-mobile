@@ -19,6 +19,7 @@ import { expectSaga } from 'redux-saga-test-plan'
 import * as matchers from 'redux-saga-test-plan/matchers'
 import { throwError } from 'redux-saga-test-plan/providers'
 import { select, call, cps } from 'redux-saga/effects'
+import { delay } from 'redux-saga'
 
 import migrate, { isProfileUpToDate } from '../UportRegistryDDORefresh'
 
@@ -52,11 +53,10 @@ describe('UportRegistryDDORefresh', () => {
         return expectSaga(migrate)
           .provide([
             [select(currentAddress), address],
-            [call(isProfileUpToDate, address, 1), true],
-            [call(savePublicUport, {address}), true]
+            [call(isProfileUpToDate, address, 1), true]
           ])
           .put(saveMessage(step, `Profile is already up to date for ${address}`))
-          .not.call(savePublicUport, {address})
+          .not.call(savePublicUport, {address, force: false})
           .returns(true)
           .run()
       })
@@ -68,12 +68,13 @@ describe('UportRegistryDDORefresh', () => {
           .provide([
             [select(currentAddress), address],
             [call(isProfileUpToDate, address, 1), false],
-            [call(savePublicUport, {address}), true],
-            [call(isProfileUpToDate, address), true]
+            [call(savePublicUport, {address, force: false}), true],
+            [call(isProfileUpToDate, address), true],
+            [call(delay, 5000), undefined]
           ])
           .call(isProfileUpToDate, address, 1)
           .put(saveMessage(step, `Updating uPort Registry for ${address}`))
-          .call(savePublicUport, {address})
+          .call(savePublicUport, {address, force: false})
           .call(isProfileUpToDate, address)
           .returns(true)
           .run()
@@ -81,38 +82,86 @@ describe('UportRegistryDDORefresh', () => {
     })
 
     describe('saving fails', () => {
-      it('should fail', () => {
-        return expectSaga(migrate)
-          .provide([
-            [select(currentAddress), address],
-            [call(isProfileUpToDate, address, 1), false],
-            [call(savePublicUport, {address}), false]
-          ])
-          .put(saveMessage(step, `Updating uPort Registry for ${address}`))
-          .put(failProcess(step, 'Did not successfully update profile'))
-          .call(savePublicUport, {address})
-          .returns(false)
-          .run()
+      for (let attempt = 0; attempt < 2 ; attempt ++) {
+        describe(`attempt: ${attempt + 1}`, () => {
+          it('should retry', () => {
+            let force = attempt > 0
+            return expectSaga(migrate, attempt)
+              .provide([
+                [select(currentAddress), address],
+                [call(isProfileUpToDate, address, 1), false],
+                [call(savePublicUport, {address, force}), false],
+                [call(migrate, attempt + 1), false]
+              ])
+              .put(saveMessage(step, `Updating uPort Registry for ${address}`))
+              .call(savePublicUport, {address, force})
+              .call(migrate, attempt + 1)
+              .returns(false)
+              .run()
+          })  
+        })
+      }  
+
+      describe(`attempt: 4`, () => {
+        it('should fail', () => {
+          return expectSaga(migrate, 3)
+            .provide([
+              [select(currentAddress), address],
+              [call(isProfileUpToDate, address, 1), false],
+              [call(savePublicUport, {address, force: true}), false]
+            ])
+            .put(saveMessage(step, `Updating uPort Registry for ${address}`))
+            .put(failProcess(step, 'Did not successfully update profile'))
+            .call(savePublicUport, {address, force: true})
+            .not.call(migrate, 4)
+            .returns(false)
+            .run()
+        })  
       })
     })
 
     describe('transaction mined but failed', () => {
-      it('should fail', () => {
-        return expectSaga(migrate)
-          .provide([
-            [select(currentAddress), address],
-            [call(isProfileUpToDate, address, 1), false],
-            [call(savePublicUport, {address}), true],
-            [call(isProfileUpToDate, address), false]
-          ])
-          .put(saveMessage(step, `Updating uPort Registry for ${address}`))
-          .put(failProcess(step, 'Transaction updating profile failed'))
-          .call(savePublicUport, {address})
-          .returns(false)
-          .run()
+      for (let attempt = 0; attempt < 2 ; attempt ++) {
+        describe(`attempt: ${attempt + 1}`, () => {
+          it('should retry', () => {
+            let force = attempt > 0
+            return expectSaga(migrate, attempt)
+              .provide([
+                [select(currentAddress), address],
+                [call(isProfileUpToDate, address, 1), false],
+                [call(savePublicUport, {address, force}), true],
+                [call(isProfileUpToDate, address), false],
+                [call(migrate, attempt + 1), false],
+                [call(delay, 5000), undefined]
+              ])
+              .put(saveMessage(step, `Updating uPort Registry for ${address}`))
+              .call(savePublicUport, {address, force})
+              .call(migrate, attempt + 1)
+              .returns(false)
+              .run()
+          })
+        })
+      }  
+
+      describe(`attempt: 4`, () => {
+        it('should fail', () => {
+          return expectSaga(migrate, 3)
+            .provide([
+              [select(currentAddress), address],
+              [call(isProfileUpToDate, address, 1), false],
+              [call(savePublicUport, {address, force: true}), true],
+              [call(isProfileUpToDate, address), false],
+              [call(delay, 5000), undefined]
+            ])
+            .put(saveMessage(step, `Updating uPort Registry for ${address}`))
+            .put(failProcess(step, 'Transaction updating profile failed'))
+            .call(savePublicUport, {address, force: true})
+            .not.call(migrate, 4)
+            .returns(false)
+            .run()
+        })  
       })
     })
-
   })
 
   describe('isProfileUpToDate()', () => {

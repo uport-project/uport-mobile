@@ -102,7 +102,8 @@ function * migrate () : any {
       yield put(failProcess(step, 'could not create new fuel token'))
       return false  
     }
-    yield put(updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: 0, securityLevel: DEFAULT_LEVEL, fuelToken}))
+    const preMigration = yield select(networkSettings)
+    yield put(updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: 0, securityLevel: DEFAULT_LEVEL, fuelToken, preMigration}))
     yield put(saveMessage(step, 'Updated Internal Identity Record'))
     return true  
   } catch (error) {
