@@ -1,5 +1,14 @@
 # Change Log
 
+## [v395](https://github.com/uport-project/uport-mobile/tree/v395) (2018-12-10)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v394...v395)
+
+**Merged pull requests:**
+
+- fix build for react-native subprojects [\#43](https://github.com/uport-project/uport-mobile/pull/43) ([mirceanis](https://github.com/mirceanis))
+- Showing client avatar image [\#42](https://github.com/uport-project/uport-mobile/pull/42) ([simonas-notcat](https://github.com/simonas-notcat))
+- Feature/\#162383488/personal sign function [\#39](https://github.com/uport-project/uport-mobile/pull/39) ([mi-xu](https://github.com/mi-xu))
+
 ## [v394](https://github.com/uport-project/uport-mobile/tree/v394) (2018-12-05)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v393...v394)
 

@@ -80,6 +80,18 @@ allprojects {
 }
 
 subprojects { subproject ->
+
+    def name = subproject.name
+    if (name.contains('react-native')) {
+        buildscript {
+            repositories {
+                google()
+                jcenter()
+                maven { url "https://dl.bintray.com/android/android-tools/"  }
+            }
+        }
+    }
+
     afterEvaluate {
         if ((subproject.plugins.hasPlugin('android') || subproject.plugins.hasPlugin('android-library'))) {
             android {
