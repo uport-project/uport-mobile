@@ -52,6 +52,7 @@
     "collectCoverage": false
   },
   "dependencies": {
+    "@types/lodash": "^4.14.118",
     "@types/react-native-sqlite-storage": "^3.3.1",
     "analytics-react-native": "^1.1.0",
     "babel-plugin-transform-runtime": "^6.23.0",

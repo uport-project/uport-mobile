@@ -15,23 +15,28 @@
 // You should have received a copy of the GNU General Public License
 // along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
 //
-import { ADD_VC } from 'uPortMobile/lib/constants/VcActionTypes'
+import { SET_CONTACT_LIST, SET_CONTACT_DETAILS } from 'uPortMobile/lib/constants/VcActionTypes'
 import { RESET_DEVICE } from 'uPortMobile/lib/constants/GlobalActionTypes'
-import { uniqBy } from 'lodash'
 
-const initialState = {
-  jwt: []
+const initialState: ReducerState = {
+  jwt: [],
+  contactList: [],
+  contactDetails: {},
 }
 
-function settingsReducer (state = initialState, action) {
+function databaseReducer(state = initialState, action: any) {
   switch (action.type) {
-    case ADD_VC:
-      return { ...state, jwt: uniqBy([...state.jwt, ...action.vc], 'jwt') }
+    case SET_CONTACT_LIST:
+      return { ...state, contactList: action.contactList }
+    case SET_CONTACT_DETAILS:
+      const contactDetails = { ...state.contactDetails }
+      contactDetails[action.did] = action.claims
+      return { ...state, contactDetails }
     case RESET_DEVICE:
-      return {...initialState}
+      return { ...initialState }
     default:
       return state
   }
 }
 
-export default settingsReducer
+export default databaseReducer

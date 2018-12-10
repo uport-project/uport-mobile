@@ -19,34 +19,106 @@ import { delay } from 'redux-saga'
 import { Alert, NativeModules } from 'react-native'
 import { takeEvery, call, put, select, all, spawn } from 'redux-saga/effects'
 import { openDatabase, DEBUG, enablePromise } from 'react-native-sqlcipher-storage'
-import { 
-  ADD_VC,
-  UPDATE_CONTACT_LIST,
-  UPDATE_CONTACT_DETAILS,
-  SIGN_VC,
-  SHARE_VC
- } from '../constants/VcActionTypes'
+import { ADD_VC } from '../constants/VcActionTypes'
+import { updateContactList } from '../actions/vcActions'
+import { normalizeUrl } from '../utilities/ipfs'
 
 DEBUG(true)
+const noop = () => true
 
-const db = openDatabase({ name: 'data.sqlite', location : 'default', "key": "password" }, () => {}, () => {})
+const db = openDatabase({ name: 'data.sqlite', location : 'default', "key": "password" }, noop, noop)
 
 export function * initializeSQLDatabase() {
 
   db.transaction((tx) => {
-    // tx.executeSql(`CREATE TABLE signed_data (iss TEXT, sub TEXT, _value TEXT, raw TEXT);`, [], (tx, results) => {});
-    // tx.executeSql(`CREATE TABLE profile_data (parent_id INTEGER, iss TEXT, sub TEXT, claim_type TEXT, claim_value TEXT);`, [], (tx, results) => {});
-    // tx.executeSql(`CREATE INDEX "sub" ON "signed_data" ("sub");`, [], (tx, results) => {});
-    // tx.executeSql(`CREATE INDEX "profile_data_sub" ON "profile_data" ("sub");`, [], (tx, results) => {});
-    // tx.executeSql(`CREATE INDEX "profile_data_claim_type" ON "profile_data" ("claim_type");`, [], (tx, results) => {});
-    // tx.executeSql(`CREATE TRIGGER insert_profile_data AFTER INSERT ON "signed_data" BEGIN INSERT INTO profile_data select new.rowid, a.iss, a.sub, b.key as claim_type, b.value as claim_value from signed_data a, json_tree(_value) b where b.path = '$.claim' and a.rowid = new.rowid; END;`, [], (tx, results) => {});
-    // tx.executeSql(`CREATE TRIGGER delete_profile_data BEFORE DELETE ON "signed_data" BEGIN DELETE FROM profile_data where parent_id = old.rowid; END;`, [], (tx, results) => {});
-    // tx.executeSql(`CREATE VIEW popular_name as select * from ( select sub, claim_value as name from "profile_data" where claim_type='name' group by sub, claim_type, claim_value order by count( claim_value) asc) group by sub;`, [], (tx, results) => {});
-    // tx.executeSql(`CREATE VIEW popular_first_name as select * from ( select sub, claim_value as firstName from "profile_data"  where claim_type='firstName' group by sub, claim_type, claim_value order by count( claim_value) asc ) group by sub;`, [], (tx, results) => {});
-    // tx.executeSql(`CREATE VIEW popular_last_name as select * from ( select sub, claim_value as lastName from "profile_data"  where claim_type='lastName' group by sub, claim_type, claim_value order by count( claim_value) asc ) group by sub;`, [], (tx, results) => {});
-    // tx.executeSql(`CREATE VIEW popular_profile_image as select * from ( select sub, claim_value as profileImage from "profile_data"  where claim_type='profileImage' group by sub, claim_type, claim_value order by count( claim_value) asc ) group by sub;`, [], (tx, results) => {});
-    // tx.executeSql(`CREATE VIEW distinct_dids as select distinct sub from profile_data;`, [], (tx, results) => {});
-    // tx.executeSql(`CREATE VIEW profiles as select distinct_dids.sub, popular_name.name, popular_first_name.firstName, popular_last_name.lastName, popular_profile_image.profileImage from distinct_dids left outer join popular_name on distinct_dids.sub = popular_name.sub left outer join popular_first_name on distinct_dids.sub = popular_first_name.sub left outer join popular_last_name on popular_last_name.sub = distinct_dids.sub left outer join popular_profile_image on distinct_dids.sub = popular_profile_image.sub;`, [], (tx, results) => {});
+    tx.executeSql(`CREATE TABLE IF NOT EXISTS signed_data (iss TEXT, sub TEXT, _value TEXT, raw TEXT);`, [], (t, results) => true)
+    tx.executeSql(`CREATE TABLE IF NOT EXISTS profile_data (parent_id INTEGER, iss TEXT, sub TEXT, claim_type TEXT, claim_value TEXT);`, [], (t, results) => true)
+
+    tx.executeSql(`CREATE INDEX IF NOT EXISTS "sub" ON "signed_data" ("sub");`, [], (t, results) => true)
+    tx.executeSql(`CREATE INDEX IF NOT EXISTS "profile_data_sub" ON "profile_data" ("sub");`, [], (t, results) => true)
+    tx.executeSql(`CREATE INDEX IF NOT EXISTS "profile_data_claim_type" ON "profile_data" ("claim_type");`, [], (t, results) => true)
+
+    tx.executeSql(`CREATE TRIGGER IF NOT EXISTS insert_profile_data AFTER INSERT ON "signed_data" BEGIN
+      INSERT INTO profile_data select new.rowid, a.iss, a.sub, b.key as claim_type, b.value as claim_value from signed_data a, json_tree(_value) b
+      where b.path = '$.claim' and a.rowid = new.rowid; END;`, [], (t, results) => true)
+
+    tx.executeSql(`CREATE TRIGGER IF NOT EXISTS delete_profile_data BEFORE DELETE ON "signed_data" BEGIN
+      DELETE FROM profile_data where parent_id = old.rowid; END;`, [], (t, results) => true)
+
+    tx.executeSql(`CREATE VIEW IF NOT EXISTS distinct_dids as select distinct sub from profile_data;`, [], (t, results) => true)
+
+    tx.executeSql(`CREATE VIEW IF NOT EXISTS popular_name as select * from (
+      select sub, claim_value as name from "profile_data" where claim_type='name' group by sub, claim_type, claim_value
+      order by count( claim_value) asc) group by sub;`, [], (t, results) => true)
+
+    tx.executeSql(`CREATE VIEW IF NOT EXISTS popular_first_name as select * from (
+      select sub, claim_value as firstName from "profile_data"  where claim_type='firstName' group by sub, claim_type, claim_value
+      order by count( claim_value) asc ) group by sub;`, [], (t, results) => true)
+
+    tx.executeSql(`CREATE VIEW IF NOT EXISTS popular_last_name as select * from (
+      select sub, claim_value as lastName from "profile_data"  where claim_type='lastName' group by sub, claim_type, claim_value
+      order by count( claim_value) asc ) group by sub;`, [], (t, results) => true)
+
+    tx.executeSql(`CREATE VIEW IF NOT EXISTS popular_profile_image as select * from (
+      select sub, claim_value as profileImage from "profile_data"  where claim_type='profileImage' group by sub, claim_type, claim_value
+      order by count( claim_value) asc ) group by sub;`, [], (t, results) => true)
+
+    tx.executeSql(`CREATE VIEW IF NOT EXISTS popular_url as select * from (
+      select sub, claim_value as url from "profile_data"  where claim_type='url' group by sub, claim_type, claim_value
+      order by count( claim_value) asc ) group by sub;`, [], (t, results) => true)
+
+    tx.executeSql(`CREATE VIEW IF NOT EXISTS popular_description as select * from (
+      select sub, claim_value as description from "profile_data"  where claim_type='description' group by sub, claim_type, claim_value
+      order by count( claim_value) asc ) group by sub;`, [], (t, results) => true)
+
+    tx.executeSql(`CREATE VIEW IF NOT EXISTS profiles as
+      select
+        distinct_dids.sub,
+        popular_name.name,
+        popular_first_name.firstName,
+        popular_last_name.lastName,
+        popular_profile_image.profileImage,
+        popular_url.url,
+        popular_description.description
+      from distinct_dids
+        left outer join popular_name on distinct_dids.sub = popular_name.sub
+        left outer join popular_first_name on distinct_dids.sub = popular_first_name.sub
+        left outer join popular_last_name on popular_last_name.sub = distinct_dids.sub
+        left outer join popular_profile_image on distinct_dids.sub = popular_profile_image.sub
+        left outer join popular_url on distinct_dids.sub = popular_url.sub
+        left outer join popular_description on distinct_dids.sub = popular_description.sub;`, [], (t, results) => true)
+
+  })
+
+  return true
+}
+
+function * insertVc(action: { type: string, vc: JwtDetails[] }) {
+  db.transaction((tx) => {
+    for (const key in action.vc) {
+      if (action.vc.hasOwnProperty(key)) {
+        const vc = action.vc[key];
+        tx.executeSql('INSERT INTO signed_data (iss, sub, _value, raw) values (?, ?, ?, ?)', [
+          vc.payload.iss,
+          vc.payload.sub,
+          JSON.stringify(vc.payload),
+          vc.jwt,
+        ], (tx, results) => {
+          console.log({ tx, results })
+        })
+      }
+    }
+  });
+  yield put(updateContactList())
+
+  return true
+}
+
+function * runMigrations() {
+  // check which migrations have been run 
+  // run missing migrations (create tables, views, etc)
+
+  db.transaction((tx) => {
     // tx.executeSql(`INSERT INTO signed_data VALUES('did:ethr:0xbf8a6f514273453b84695cfd5e186f9573adec30','did:ethr:0xbf8a6f514273453b84695cfd5e186f9573adec30','{"sub":"did:ethr:0xbf8a6f514273453b84695cfd5e186f9573adec30","claim":{"name":"Aurore Schuppe"},"iss":"did:ethr:0xbf8a6f514273453b84695cfd5e186f9573adec30"}','eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NkstUiJ9.eyJpYXQiOjE1NDM0MTQ2NzAsInN1YiI6ImRpZDpldGhyOjB4YmY4YTZmNTE0MjczNDUzYjg0Njk1Y2ZkNWUxODZmOTU3M2FkZWMzMCIsImNsYWltIjp7Im5hbWUiOiJBdXJvcmUgU2NodXBwZSJ9LCJpc3MiOiJkaWQ6ZXRocjoweGJmOGE2ZjUxNDI3MzQ1M2I4NDY5NWNmZDVlMTg2Zjk1NzNhZGVjMzAifQ.Y6Aec2NbAo7i1FihAfgbRfZV3iIFS2ktfV4yQwIVESwrs2eDvrfOK7Ss0VT27F78U3fWpC3cDXKU48Fos6rJ9QE');`, [], (tx, results) => {});
     // tx.executeSql(`INSERT INTO signed_data VALUES('did:ethr:0xbf8a6f514273453b84695cfd5e186f9573adec30','did:ethr:0xbf8a6f514273453b84695cfd5e186f9573adec30','{"sub":"did:ethr:0xbf8a6f514273453b84695cfd5e186f9573adec30","claim":{"firstName":"Ardith"},"iss":"did:ethr:0xbf8a6f514273453b84695cfd5e186f9573adec30"}','eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NkstUiJ9.eyJpYXQiOjE1NDM0MTQ2NzAsInN1YiI6ImRpZDpldGhyOjB4YmY4YTZmNTE0MjczNDUzYjg0Njk1Y2ZkNWUxODZmOTU3M2FkZWMzMCIsImNsYWltIjp7ImZpcnN0TmFtZSI6IkFyZGl0aCJ9LCJpc3MiOiJkaWQ6ZXRocjoweGJmOGE2ZjUxNDI3MzQ1M2I4NDY5NWNmZDVlMTg2Zjk1NzNhZGVjMzAifQ.SuM_W9_YOX6KAChgOFkCyRaaIIC6nqlGmJ3atfr9YqCI586sbDNc7aaChfzZTjTKMpOC3pgtlYVTJbo8uzSAhAE');`, [], (tx, results) => {});
     // tx.executeSql(`INSERT INTO signed_data VALUES('did:ethr:0xbf8a6f514273453b84695cfd5e186f9573adec30','did:ethr:0xbf8a6f514273453b84695cfd5e186f9573adec30','{"sub":"did:ethr:0xbf8a6f514273453b84695cfd5e186f9573adec30","claim":{"lastName":"Jacobi"},"iss":"did:ethr:0xbf8a6f514273453b84695cfd5e186f9573adec30"}','eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NkstUiJ9.eyJpYXQiOjE1NDM0MTQ2NzAsInN1YiI6ImRpZDpldGhyOjB4YmY4YTZmNTE0MjczNDUzYjg0Njk1Y2ZkNWUxODZmOTU3M2FkZWMzMCIsImNsYWltIjp7Imxhc3ROYW1lIjoiSmFjb2JpIn0sImlzcyI6ImRpZDpldGhyOjB4YmY4YTZmNTE0MjczNDUzYjg0Njk1Y2ZkNWUxODZmOTU3M2FkZWMzMCJ9.htA1ww4ffrjyKNMfvAcAtlmeIP4crCp0YaS5baLp1qVeo0t3dBaWlhxqyKl96BuNiZseH7KCAMpf-KvWAHf2YAA');`, [], (tx, results) => {});
@@ -92,76 +164,60 @@ export function * initializeSQLDatabase() {
     // tx.executeSql(`INSERT INTO signed_data VALUES('did:ethr:0xddf61239e0f1c30026bd5ff2253edc69d50d97bc','did:ethr:0xddf61239e0f1c30026bd5ff2253edc69d50d97bc','{"sub":"did:ethr:0xddf61239e0f1c30026bd5ff2253edc69d50d97bc","claim":{"lastName":"Strosin"},"iss":"did:ethr:0xddf61239e0f1c30026bd5ff2253edc69d50d97bc"}','eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NkstUiJ9.eyJpYXQiOjE1NDM0MTQ2NzAsInN1YiI6ImRpZDpldGhyOjB4ZGRmNjEyMzllMGYxYzMwMDI2YmQ1ZmYyMjUzZWRjNjlkNTBkOTdiYyIsImNsYWltIjp7Imxhc3ROYW1lIjoiU3Ryb3NpbiJ9LCJpc3MiOiJkaWQ6ZXRocjoweGRkZjYxMjM5ZTBmMWMzMDAyNmJkNWZmMjI1M2VkYzY5ZDUwZDk3YmMifQ.SuPMmgpzOLkzt4Qd0bmK0kum1rsTpmOt_-qWYnB9hMxUGJW9ptZXMyK0_zpHajBOwrMbopI9kqmGGhGf8N13xgE');`, [], (tx, results) => {});
     // tx.executeSql(`INSERT INTO signed_data VALUES('did:ethr:0xddf61239e0f1c30026bd5ff2253edc69d50d97bc','did:ethr:0xddf61239e0f1c30026bd5ff2253edc69d50d97bc','{"sub":"did:ethr:0xddf61239e0f1c30026bd5ff2253edc69d50d97bc","claim":{"email":"Theodora12@gmail.com"},"iss":"did:ethr:0xddf61239e0f1c30026bd5ff2253edc69d50d97bc"}','eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NkstUiJ9.eyJpYXQiOjE1NDM0MTQ2NzAsInN1YiI6ImRpZDpldGhyOjB4ZGRmNjEyMzllMGYxYzMwMDI2YmQ1ZmYyMjUzZWRjNjlkNTBkOTdiYyIsImNsYWltIjp7ImVtYWlsIjoiVGhlb2RvcmExMkBnbWFpbC5jb20ifSwiaXNzIjoiZGlkOmV0aHI6MHhkZGY2MTIzOWUwZjFjMzAwMjZiZDVmZjIyNTNlZGM2OWQ1MGQ5N2JjIn0.PMBDVbjzpXv4b6PMG8doO1cqUjDIwlf_pUBS6FIE061-Qc-jYEUpZ9fqUhzEbVpTiQM_ourO4suDKbOZ-uDzcAA');`, [], (tx, results) => {});
     // tx.executeSql(`INSERT INTO signed_data VALUES('did:ethr:0xddf61239e0f1c30026bd5ff2253edc69d50d97bc','did:ethr:0xddf61239e0f1c30026bd5ff2253edc69d50d97bc','{"sub":"did:ethr:0xddf61239e0f1c30026bd5ff2253edc69d50d97bc","claim":{"profileImage":"https://s3.amazonaws.com/uifaces/faces/twitter/aiiaiiaii/128.jpg"},"iss":"did:ethr:0xddf61239e0f1c30026bd5ff2253edc69d50d97bc"}','eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NkstUiJ9.eyJpYXQiOjE1NDM0MTQ2NzAsInN1YiI6ImRpZDpldGhyOjB4ZGRmNjEyMzllMGYxYzMwMDI2YmQ1ZmYyMjUzZWRjNjlkNTBkOTdiYyIsImNsYWltIjp7InByb2ZpbGVJbWFnZSI6Imh0dHBzOi8vczMuYW1hem9uYXdzLmNvbS91aWZhY2VzL2ZhY2VzL3R3aXR0ZXIvYWlpYWlpYWlpLzEyOC5qcGcifSwiaXNzIjoiZGlkOmV0aHI6MHhkZGY2MTIzOWUwZjFjMzAwMjZiZDVmZjIyNTNlZGM2OWQ1MGQ5N2JjIn0.OeniBk-yXmutO4sRIlkdOhUSSgy6RE5Q-Ftyof25gpmimgH63AH9JHA3asCVPgyG4Xw8Spj4DuxIN1vlxKHYMgE');`, [], (tx, results) => {});
-    
-    tx.executeSql("select * from profiles", [], (tx, results) => {
-      for (let x = 0; x < results.rows.length; x++) {
-        console.log('res: ', results.rows.item(x))
-      }
-    });
-  });
-
+  })
   return true
 }
 
-function * insertVc(action: any) {
-  db.transaction((tx) => {
-    for (const key in action.vc) {
-      if (action.vc.hasOwnProperty(key)) {
-        const vc = action.vc[key];
-        tx.executeSql('INSERT INTO signed_data (iss, sub, _value, raw) values (?, ?, ?, ?)', [
-          vc.payload.iss,
-          vc.payload.sub,
-          JSON.stringify(vc.payload),
-          vc.jwt
-        ], (tx, results) => {
-          console.log({tx, results})
-        });
-      }
-    }
-  });
-  
-  // updateContactDetails
-
-  return true
+export function getContactList(): Promise<Contact[]> {
+  return new Promise((resolve, reject) => {
+    db.transaction((tx) => {
+      tx.executeSql('select * from profiles', [], (transaction, results) => {
+        const contactList: Contact[] = []
+        for (let x = 0; x < results.rows.length; x++) {
+          const row = results.rows.item(x) as ProfilesTableRow
+          contactList.push({
+            did: row.sub,
+            name: row.name,
+            firstName: row.firstName,
+            lastName: row.lastName,
+            profileImage: normalizeUrl(row.profileImage),
+            url: row.url,
+            description: row.description,
+          })
+        }
+        resolve(contactList)
+      }, reject)
+    })
+  })
 }
 
-function * runMigrations() {
-  // check which migrations have been run 
-  // run missing migrations (create tables, views, etc)
-  return true
+export function getClaimsForDid(did: string): Promise<VerifiableClaim[]> {
+  return new Promise((resolve, reject) => {
+    db.transaction((tx) => {
+      tx.executeSql('select pd.*, sd.raw as jwt, sd._value as _value from profile_data pd inner join signed_data sd on pd.parent_id = sd.rowid where pd.sub = ?',
+      [ did ], (transaction, results) => {
+        const claims: VerifiableClaim[] = []
+        for (let x = 0; x < results.rows.length; x++) {
+          const row = results.rows.item(x) as ProfileDataTableRow
+          claims.push({
+            rowId: row.parent_id,
+            iss: row.iss,
+            sub: row.sub,
+            jwt: row.jwt,
+            claim: JSON.parse(row._value).claim,
+            claimType: row.claim_type,
+            claimValue: row.claim_value,
+          })
+        }
+        resolve(claims)
+      }, reject)
+    })
+  })
 }
 
-function * updateContactList() {
-  // contacts = select * from profiles
-  // put(setContactList(contacts))
-  return true
-}
-
-function * updateContactDetails(action: { type: string, did: string }) {
-  // claims = select * from profile_data where did = ?
-  // put(setContactDetails({did, claims}))
-  return true
-}
-
-function * signVc(action: { type: string, unsignedClaim: JwtPayload }) {
-  // sign JWT
-  // insertVc(newVc)
-  return true
-}
-
-function * shareVc(action: { type: string, vc: JwtDetails[] }) {
-  // fileContents = ...
-  // showShareSheet(fileContents)
-  return true
-}
-
-function * databaseSaga () {
+function * databaseSaga() {
   yield all([
     takeEvery(ADD_VC, insertVc),
-    takeEvery(UPDATE_CONTACT_LIST, updateContactList),
-    takeEvery(UPDATE_CONTACT_DETAILS, updateContactDetails),
-    takeEvery(SIGN_VC, signVc),
-    takeEvery(SHARE_VC, shareVc),
   ])
   return true
 }

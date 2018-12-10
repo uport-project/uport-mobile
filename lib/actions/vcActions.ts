@@ -15,54 +15,64 @@
 // You should have received a copy of the GNU General Public License
 // along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
 //
-import { 
+import {
   ADD_VC,
   SET_CONTACT_LIST,
   UPDATE_CONTACT_LIST,
   SET_CONTACT_DETAILS,
+  UPDATE_CONTACT_DETAILS,
   SIGN_VC,
-  SHARE_VC
+  SHARE_VC,
  } from '../constants/VcActionTypes'
 
 const _backup = true
 
-export function addVc (vc) {
+export function addVc(vc: JwtDetails[]) {
   return {
     type: ADD_VC,
     vc,
-    _backup
+    _backup,
   }
 }
 
-export function setContactList (contacts) {
+export function setContactList(contactList: Contact[]) {
   return {
     type: SET_CONTACT_LIST,
-    contacts
+    contactList,
   }
 }
 
-export function updateContactList () {
+export function updateContactList() {
   return {
-    type: UPDATE_CONTACT_LIST
+    type: UPDATE_CONTACT_LIST,
   }
 }
 
-export function setContactDetails (did, claims) {
+export function updateContactDetails(did: string) {
+  return {
+    type: UPDATE_CONTACT_DETAILS,
+    did,
+  }
+}
+
+export function setContactDetails(did: string, claims: VerifiableClaim[]) {
   return {
     type: SET_CONTACT_DETAILS,
     did,
-    claims
+    claims,
   }
 }
-export function signVc (vc) {
+
+export function signVc(vc: JwtPayload) {
   return {
     type: SIGN_VC,
-    vc
+    vc,
   }
 }
-export function shareVc (vc) {
+
+export function shareVc(claims: VerifiableClaim[]) {
   return {
     type: SHARE_VC,
-    vc
+    claims,
   }
 }
