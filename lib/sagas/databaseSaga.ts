@@ -31,7 +31,21 @@ const db = openDatabase({ name: 'data.sqlite', location : 'default', "key": "pas
 export function * initializeSQLDatabase() {
 
   db.transaction((tx) => {
-    tx.executeSql(`CREATE TABLE IF NOT EXISTS signed_data (iss TEXT, sub TEXT, _value TEXT, raw TEXT);`, [], (t, results) => true)
+    tx.executeSql(`CREATE TABLE IF NOT EXISTS signed_data (
+      iss TEXT,
+      aud TEXT,
+      sub TEXT,
+      type TEXT,
+      _value TEXT,
+      iat NUMERIC,
+      raw TEXT,
+      sourceId TEXT,
+      sourceType TEXT,
+      previous TEXT,
+      context TEXT,
+      internal NUMERIC NOT NULL default 1
+
+    );`, [], (t, results) => true)
     tx.executeSql(`CREATE TABLE IF NOT EXISTS profile_data (parent_id INTEGER, iss TEXT, sub TEXT, claim_type TEXT, claim_value TEXT);`, [], (t, results) => true)
 
     tx.executeSql(`CREATE INDEX IF NOT EXISTS "sub" ON "signed_data" ("sub");`, [], (t, results) => true)
@@ -40,7 +54,7 @@ export function * initializeSQLDatabase() {
 
     tx.executeSql(`CREATE TRIGGER IF NOT EXISTS insert_profile_data AFTER INSERT ON "signed_data" BEGIN
       INSERT INTO profile_data select new.rowid, a.iss, a.sub, b.key as claim_type, b.value as claim_value from signed_data a, json_tree(_value) b
-      where b.path = '$.claim' and a.rowid = new.rowid; END;`, [], (t, results) => true)
+      where new.type = 'vc' and b.path = '$.claim' and a.rowid = new.rowid; END;`, [], (t, results) => true)
 
     tx.executeSql(`CREATE TRIGGER IF NOT EXISTS delete_profile_data BEFORE DELETE ON "signed_data" BEGIN
       DELETE FROM profile_data where parent_id = old.rowid; END;`, [], (t, results) => true)
@@ -98,11 +112,13 @@ function * insertVc(action: { type: string, vc: JwtDetails[] }) {
     for (const key in action.vc) {
       if (action.vc.hasOwnProperty(key)) {
         const vc = action.vc[key];
-        tx.executeSql('INSERT INTO signed_data (iss, sub, _value, raw) values (?, ?, ?, ?)', [
+        tx.executeSql('INSERT INTO signed_data (type, iss, sub, _value, raw, internal) values (?, ?, ?, ?, ?, ?)', [
+          'vc',
           vc.payload.iss,
           vc.payload.sub,
           JSON.stringify(vc.payload),
           vc.jwt,
+          0,
         ], (tx, results) => {
           console.log({ tx, results })
         })
@@ -194,7 +210,7 @@ export function getContactList(): Promise<Contact[]> {
 export function getClaimsForDid(did: string): Promise<VerifiableClaim[]> {
   return new Promise((resolve, reject) => {
     db.transaction((tx) => {
-      tx.executeSql('select pd.*, sd.raw as jwt, sd._value as _value from profile_data pd inner join signed_data sd on pd.parent_id = sd.rowid where pd.sub = ?',
+      tx.executeSql('select pd.*, sd.raw as jwt, sd._value as value from profile_data pd inner join signed_data sd on pd.parent_id = sd.rowid where pd.sub = ?',
       [ did ], (transaction, results) => {
         const claims: VerifiableClaim[] = []
         for (let x = 0; x < results.rows.length; x++) {

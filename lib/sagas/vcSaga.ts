@@ -91,7 +91,7 @@ function * updateContactList() {
     //     test: 'foobar',
     //   },
     // }))
-    yield put(ucd('did:ethr:0xbf8a6f514273453b84695cfd5e186f9573adec30'))
+    // yield put(ucd('did:ethr:0xbf8a6f514273453b84695cfd5e186f9573adec30'))
   } catch (e) {
     console.log(e)
   }
