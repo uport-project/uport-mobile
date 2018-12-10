@@ -53,8 +53,9 @@ export const screenVisibilityListener = new RNNScreenVisibilityListener({
 export async function startAppModernUI(this: any) {
   isIOS ? null : store.dispatch(registerDeviceForNotifications())
 
-  const accountsIcon = await FeatherIcons.getImageSource('shield', 26)
+  const accountsIcon = await FeatherIcons.getImageSource('check-circle', 26)
   const contactsIcon = await FeatherIcons.getImageSource('users', 26)
+  const contactIcon = await FeatherIcons.getImageSource('user', 26)
   const settingsIcon = await FeatherIcons.getImageSource('settings', 26)
   const notificationsIcon = await FeatherIcons.getImageSource('bell', 26)
   const AndroidOptions = {
@@ -91,9 +92,13 @@ export async function startAppModernUI(this: any) {
     },
     tabs: [
       {
-        screen: 'screen.Accounts', // this is a registered name for a screen
-        title: 'Accounts',
+        screen: 'screen.Accounts',
+        title: 'Credentials',
         icon: accountsIcon,
+      },
+      {
+        screen: 'screen.User',
+        icon: contactIcon,
       },
       {
         screen: 'screen.Contacts',
