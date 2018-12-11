@@ -1,5 +1,12 @@
 # Change Log
 
+## [v396](https://github.com/uport-project/uport-mobile/tree/v396) (2018-12-11)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v395...v396)
+
+**Merged pull requests:**
+
+- Personal sign [\#35](https://github.com/uport-project/uport-mobile/pull/35) ([simonas-notcat](https://github.com/simonas-notcat))
+
 ## [v395](https://github.com/uport-project/uport-mobile/tree/v395) (2018-12-10)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v394...v395)
 
