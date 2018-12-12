@@ -551,6 +551,7 @@
 "@types/react-native-sqlite-storage@^3.3.1":
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/@types/react-native-sqlite-storage/-/react-native-sqlite-storage-3.3.1.tgz#6d0cc439780c34d187de52e74a5f10527045f96b"
+  integrity sha512-IZMfZb1v1pkBzUsg8nV84QTtkfdU18A7L7iKCQ89sDYIoVpKDiiSvJitmzPTsNw8uuaU+eZW4nqptZFbmnjF3w==
 
 "@types/react-native@^0.57.7":
   version "0.57.7"
