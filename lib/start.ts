@@ -95,25 +95,40 @@ export async function startAppModernUI(this: any) {
         screen: 'screen.Accounts',
         title: 'Credentials',
         icon: accountsIcon,
+        iconInsets: { // add this to change icon position (optional, iOS only).
+          bottom: -8, // optional, default is 0.
+        },
       },
       {
         screen: 'screen.User',
         icon: contactIcon,
+        iconInsets: { // add this to change icon position (optional, iOS only).
+          bottom: -8, // optional, default is 0.
+        },
       },
       {
         screen: 'screen.Contacts',
         title: 'Contacts',
         icon: contactsIcon,
+        iconInsets: { // add this to change icon position (optional, iOS only).
+          bottom: -8, // optional, default is 0.
+        },
       },
       {
         screen: 'screen.Notifications',
         title: 'Notifications',
         icon: notificationsIcon,
+        iconInsets: { // add this to change icon position (optional, iOS only).
+          bottom: -8, // optional, default is 0.
+        },
       },
       {
         screen: 'screen.Settings',
         title: 'Settings',
         icon: settingsIcon,
+        iconInsets: { // add this to change icon position (optional, iOS only).
+          bottom: -8, // optional, default is 0.
+        },
       },
     ],
     animationType: 'none',

@@ -102,7 +102,7 @@ exports[`renders MenuItem with title and internal link 1`] = `
       />
       <Icon
         color="rgba(216,216,216,1)"
-        name="ios-arrow-forward-outline"
+        name="ios-arrow-forward"
         size={20}
         style={
           Object {
@@ -384,7 +384,7 @@ exports[`renders MenuItem with title, value and internal link 1`] = `
       </Text>
       <Icon
         color="rgba(216,216,216,1)"
-        name="ios-arrow-forward-outline"
+        name="ios-arrow-forward"
         size={20}
         style={
           Object {

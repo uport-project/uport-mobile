@@ -170,7 +170,7 @@ exports[`Home Component home screen rendering with activities 1`] = `
           </Text>
           <Icon
             color="rgba(216,216,216,1)"
-            name="ios-arrow-forward-outline"
+            name="ios-arrow-forward"
             size={20}
             style={Object {}}
           />
@@ -248,7 +248,7 @@ exports[`Home Component home screen rendering with activities 1`] = `
           </Text>
           <Icon
             color="rgba(216,216,216,1)"
-            name="ios-arrow-forward-outline"
+            name="ios-arrow-forward"
             size={20}
             style={Object {}}
           />
@@ -326,7 +326,7 @@ exports[`Home Component home screen rendering with activities 1`] = `
           </Text>
           <Icon
             color="rgba(216,216,216,1)"
-            name="ios-arrow-forward-outline"
+            name="ios-arrow-forward"
             size={20}
             style={Object {}}
           />
@@ -550,7 +550,7 @@ exports[`Home Component home screen rendering without activities 1`] = `
           </Text>
           <Icon
             color="rgba(216,216,216,1)"
-            name="ios-arrow-forward-outline"
+            name="ios-arrow-forward"
             size={20}
             style={Object {}}
           />
@@ -628,7 +628,7 @@ exports[`Home Component home screen rendering without activities 1`] = `
           </Text>
           <Icon
             color="rgba(216,216,216,1)"
-            name="ios-arrow-forward-outline"
+            name="ios-arrow-forward"
             size={20}
             style={Object {}}
           />
@@ -706,7 +706,7 @@ exports[`Home Component home screen rendering without activities 1`] = `
           </Text>
           <Icon
             color="rgba(216,216,216,1)"
-            name="ios-arrow-forward-outline"
+            name="ios-arrow-forward"
             size={20}
             style={Object {}}
           />

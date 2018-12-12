@@ -167,7 +167,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
             </Text>
             <Icon
               color="rgba(216,216,216,1)"
-              name="ios-arrow-forward-outline"
+              name="ios-arrow-forward"
               size={20}
               style={
                 Object {
@@ -245,7 +245,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
             </Text>
             <Icon
               color="rgba(216,216,216,1)"
-              name="ios-arrow-forward-outline"
+              name="ios-arrow-forward"
               size={20}
               style={
                 Object {
