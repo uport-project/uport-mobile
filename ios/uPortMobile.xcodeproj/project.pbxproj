@@ -60,6 +60,9 @@
 		70002150218CA4A5009C38A1 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7000214F218CA4A5009C38A1 /* libsqlite3.0.tbd */; };
 		70A1A99E21905CE70012423D /* libSQLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A1A99D21905CBD0012423D /* libSQLite.a */; };
 		70D18C85218C53CB0004E667 /* file-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 70D18C4D218C53CB0004E667 /* file-icon.png */; };
+		70D405A621C13B4500EA2CDF /* libRNShare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70D405A021C13B0400EA2CDF /* libRNShare.a */; };
+		70D405A821C13B5D00EA2CDF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70D405A721C13B5D00EA2CDF /* Social.framework */; };
+		70D405AA21C13B6800EA2CDF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70D405A921C13B6800EA2CDF /* MessageUI.framework */; };
 		70F06EA01FC5C160000BD332 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70F06E6E1FC5C15F000BD332 /* GoogleService-Info.plist */; };
 		7F465938BBBE499DA8ECEFF4 /* libTouchID.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B137393457A4411B6A82656 /* libTouchID.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
@@ -362,6 +365,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = E23D7B471ACEFE2A00C59171;
 			remoteInfo = SQLite;
+		};
+		70D4059F21C13B0400EA2CDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70D4056821C13B0400EA2CDF /* RNShare.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNShare;
 		};
 		78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -680,6 +690,9 @@
 		7000214F218CA4A5009C38A1 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		70A1A99821905CBD0012423D /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../node_modules/react-native-sqlcipher-storage/src/ios/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		70D18C4D218C53CB0004E667 /* file-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "file-icon.png"; sourceTree = "<group>"; };
+		70D4056821C13B0400EA2CDF /* RNShare.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNShare.xcodeproj; path = "../node_modules/react-native-share/ios/RNShare.xcodeproj"; sourceTree = "<group>"; };
+		70D405A721C13B5D00EA2CDF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		70D405A921C13B6800EA2CDF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		70F06E6E1FC5C15F000BD332 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "uPortMobile/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		78E4063D3A3E492FA32B40D9 /* NunitoSans-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NunitoSans-SemiBold.ttf"; path = "../fonts/NunitoSans-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -727,6 +740,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70D405AA21C13B6800EA2CDF /* MessageUI.framework in Frameworks */,
+				70D405A821C13B5D00EA2CDF /* Social.framework in Frameworks */,
+				70D405A621C13B4500EA2CDF /* libRNShare.a in Frameworks */,
 				70A1A99E21905CE70012423D /* libSQLite.a in Frameworks */,
 				70002150218CA4A5009C38A1 /* libsqlite3.0.tbd in Frameworks */,
 				6411C89C207C2310005033A9 /* libRNCamera.a in Frameworks */,
@@ -1065,6 +1081,8 @@
 		240B33BF22EF467CB324BAB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				70D405A921C13B6800EA2CDF /* MessageUI.framework */,
+				70D405A721C13B5D00EA2CDF /* Social.framework */,
 				7000214F218CA4A5009C38A1 /* libsqlite3.0.tbd */,
 				038F15C71F95630500DF45E1 /* CoreBitcoin.framework */,
 				2287C0EB70D14ECEA474A926 /* libz.tbd */,
@@ -1283,6 +1301,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		70D4056921C13B0400EA2CDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70D405A021C13B0400EA2CDF /* libRNShare.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		78C398B11ACF4ADC00677621 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -1295,6 +1321,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				70D4056821C13B0400EA2CDF /* RNShare.xcodeproj */,
 				70A1A99821905CBD0012423D /* SQLite.xcodeproj */,
 				6411C896207C22ED005033A9 /* RNCamera.xcodeproj */,
 				641915B2200ECEB70042DA49 /* ReactNativePermissions.xcodeproj */,
@@ -1608,6 +1635,10 @@
 					ProjectRef = 9D3BBAA8C3514D689B8A4ECA /* RNRandomBytes.xcodeproj */;
 				},
 				{
+					ProductGroup = 70D4056921C13B0400EA2CDF /* Products */;
+					ProjectRef = 70D4056821C13B0400EA2CDF /* RNShare.xcodeproj */;
+				},
+				{
 					ProductGroup = 708720D81F948CFF00652388 /* Products */;
 					ProjectRef = F973AADA9982437081A5BF65 /* RNSVG.xcodeproj */;
 				},
@@ -1904,6 +1935,13 @@
 			fileType = archive.ar;
 			path = libSQLite.a;
 			remoteRef = 70A1A99C21905CBD0012423D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		70D405A021C13B0400EA2CDF /* libRNShare.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNShare.a;
+			remoteRef = 70D4059F21C13B0400EA2CDF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		78C398B91ACF4ADC00677621 /* libRCTLinking.a */ = {

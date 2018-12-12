@@ -15,6 +15,8 @@
 // You should have received a copy of the GNU General Public License
 // along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
 //
+import Share from 'react-native-share'
+import RNFetchBlob from 'react-native-fetch-blob'
 import { all, call, select, put, takeEvery } from 'redux-saga/effects'
 import { createToken, verifyToken } from './jwt'
 import { filter, isArray } from 'lodash'
@@ -118,6 +120,28 @@ function * signVc(action: { type: string, vc: JwtPayload }) {
 function * shareVc(action: { type: string, vc: JwtDetails[] }) {
   // fileContents = ...
   // showShareSheet(fileContents)
+
+  // const path = `${RNFetchBlob.fs.dirs.DocumentDir}/signed_data.uPort`
+  // RNFetchBlob.fs.writeFile(path, 'foo', 'utf8')
+  // .then(() => {
+  //   Share.share({
+  //     url: path,
+  //     title: `Share signed claims`,
+  //   }, {
+  //     // Android only:
+  //     dialogTitle: `Share signed claims`,
+  //   })
+
+  // })
+  // .catch(e => console.log(e))
+
+  const shareOptions = {
+    title: 'Share via',
+    message: 'some message',
+    url: 'some share url',
+  }
+  Share.open(shareOptions)
+
   return true
 }
 

@@ -43,8 +43,10 @@ import io.invertase.firebase.RNFirebasePackage;
 import io.invertase.firebase.analytics.RNFirebaseAnalyticsPackage;
 import io.invertase.firebase.config.RNFirebaseRemoteConfigPackage;
 import org.pgsqlite.SQLitePluginPackage;
+import cl.json.RNSharePackage;
+import cl.json.ShareApplication;
 
-public class MainApplication extends NavigationApplication {
+public class MainApplication extends NavigationApplication implements ShareApplication {
 
     @Override
     public void onCreate() {
@@ -64,6 +66,10 @@ public class MainApplication extends NavigationApplication {
         return getPackages();
     }
 
+    @Override
+    public String getFileProviderAuthority() {
+           return "com.uportMobile.provider";
+    }
 
     public boolean getUseDeveloperSupport() {
         return BuildConfig.DEBUG;
@@ -87,7 +93,8 @@ public class MainApplication extends NavigationApplication {
                 new IntentLauncherPackage(),
                 new NativeSignerPackage(),
                 new RNFirebaseAnalyticsPackage(),
-                new SQLitePluginPackage()
+                new SQLitePluginPackage(),
+                new RNSharePackage()
         );
     }
 

@@ -49,3 +49,5 @@ project(':react-native-navigation').projectDir = new File(rootProject.projectDir
 
 include ':react-native-sqlcipher-storage'
 project(':react-native-sqlcipher-storage').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-sqlcipher-storage/src/android')
+include ':react-native-share'
+project(':react-native-share').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-share/android')

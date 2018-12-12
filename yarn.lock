@@ -531,12 +531,22 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.5.6.tgz#9c03d3fed70a8d517c191b7734da2879b50ca26c"
   integrity sha512-ZBFR7TROLVzCkswA3Fmqq+IIJt62/T7aY/Dmz+QkU7CaW2QFqAitCE8Ups7IzmGhcN1YWMBT4Qcoc07jU9hOJQ==
 
+"@types/react-native-fetch-blob@^0.10.4":
+  version "0.10.4"
+  resolved "https://registry.yarnpkg.com/@types/react-native-fetch-blob/-/react-native-fetch-blob-0.10.4.tgz#48ce9c863416995339af06876edfb8c9caf14031"
+  integrity sha512-QVKPj5VmSP8t5dWhzQ3Sf+o2ZyGnm6CwzPQurJePZVed0+KtknZQQ+O5loFBCV/zuT/8zCczP/VSDc73Wk44MA==
+
 "@types/react-native-navigation@1.x":
   version "1.1.12"
   resolved "https://registry.yarnpkg.com/@types/react-native-navigation/-/react-native-navigation-1.1.12.tgz#1f43bdf88d39bce2a3c0fdded0befda5083df6ff"
   integrity sha512-7m7D6yGDVIUUK2p8hxR7vI+2dnm7p6Hg4Gl9bzB2oQxCd7k9CZH37d+N7ouQXgGzWgo4nW/sxtkFDuAxL1Jg9w==
   dependencies:
     "@types/react" "*"
+
+"@types/react-native-share@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@types/react-native-share/-/react-native-share-1.1.0.tgz#213448573a725381edc052eca1a1bb92c137fb93"
+  integrity sha512-MOPKRvrQdznZTOE2x4ZDqYBQAaISRD6EWSiEYdW7Jvy4SOhf0lr+WgVvaKPgEDaNEpQmP0ER5Ebm7JLexzzS8A==
 
 "@types/react-native-sqlite-storage@^3.3.1":
   version "3.3.1"
@@ -9139,6 +9149,11 @@ react-native-randombytes@^3.0.0:
   dependencies:
     buffer "^4.9.1"
     sjcl "^1.0.3"
+
+react-native-share@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/react-native-share/-/react-native-share-1.1.3.tgz#513ea61075e2bb945d33cfda120e12592916299e"
+  integrity sha512-vKAJqgkEt7HjsF0HUwgom+E0FbmFNVZNncHwby1+O8/mXlKugh+Ym6rvv+A2ASHmD5TXKohJMYT2+jYofzPORA==
 
 "react-native-sqlcipher-storage@https://github.com/axsy-dev/react-native-sqlcipher-storage":
   version "0.0.2"
