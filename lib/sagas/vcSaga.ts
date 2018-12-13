@@ -121,26 +121,25 @@ function * shareVc(action: { type: string, vc: JwtDetails[] }) {
   // fileContents = ...
   // showShareSheet(fileContents)
 
-  // const path = `${RNFetchBlob.fs.dirs.DocumentDir}/signed_data.uPort`
-  // RNFetchBlob.fs.writeFile(path, 'foo', 'utf8')
-  // .then(() => {
-  //   Share.share({
-  //     url: path,
-  //     title: `Share signed claims`,
-  //   }, {
-  //     // Android only:
-  //     dialogTitle: `Share signed claims`,
-  //   })
+  const path = `${RNFetchBlob.fs.dirs.DownloadDir}/signed_data.uPort`
+  RNFetchBlob.fs.writeFile(path, 'foo', 'utf8')
+  .then((a) => {
+    const filePath = `file://${path}`
+    console.log({filePath})
+    const shareOptions = {
+      type: 'text/plain',
+      url: filePath,
+    }
+    Share.open(shareOptions)
 
-  // })
-  // .catch(e => console.log(e))
+  })
+  .catch(e => console.log(e))
 
-  const shareOptions = {
-    title: 'Share via',
-    message: 'some message',
-    url: 'some share url',
-  }
-  Share.open(shareOptions)
+  // const shareOptions = {
+  //   title: 'Share via',
+  //   url: `data:application/uPort;base64,${Buffer.from("Hello World").toString('base64')}`,
+  // }
+  // Share.open(shareOptions)
 
   return true
 }
