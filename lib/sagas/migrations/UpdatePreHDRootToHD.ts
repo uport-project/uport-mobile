@@ -103,7 +103,7 @@ function * migrate () : any {
       return false  
     }
     const preMigration = yield select(networkSettings)
-    yield put(updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: 0, securityLevel: DEFAULT_LEVEL, fuelToken, preMigration}))
+    yield put(updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: 0, securityLevel: DEFAULT_LEVEL, fuelToken, preMigration, nonce: 0}))
     yield put(saveMessage(step, 'Updated Internal Identity Record'))
     return true  
   } catch (error) {
