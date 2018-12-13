@@ -87,7 +87,7 @@ describe('UpdatePreHDRootToHD', () => {
             [call(encryptionPublicKey, {idIndex: 0, actIndex: 0}), publicEncKey],
             [call(fetchFuelToken, address, hdRoot), fuelToken]
           ])
-          .put(updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: 0, securityLevel: DEFAULT_LEVEL, fuelToken, preMigration}))
+          .put(updateIdentity(address, {deviceAddress: kp.address, publicKey: kp.publicKey, publicEncKey, hdindex: 0, securityLevel: DEFAULT_LEVEL, fuelToken, preMigration, nonce: 0 }))
           .put(saveMessage(step, 'Updated Internal Identity Record'))
           .returns(true)
           .run()

@@ -178,6 +178,108 @@ exports[`Advanced - Device doesnt break when empty 1`] = `
               "justifyContent": "space-between",
               "padding": 19,
             },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "rgba(170,170,170,1)",
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 16,
+                "lineHeight": 22,
+              },
+            ]
+          }
+        >
+          Device Nonce
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "rgba(216,216,216,1)",
+              "borderTopWidth": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "padding": 19,
+            },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "rgba(170,170,170,1)",
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 16,
+                "lineHeight": 22,
+              },
+            ]
+          }
+        >
+          Signer Type
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "rgba(216,216,216,1)",
+              "borderTopWidth": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "padding": 19,
+            },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "rgba(170,170,170,1)",
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 16,
+                "lineHeight": 22,
+              },
+            ]
+          }
+        >
+          TX Relay Address
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "rgba(216,216,216,1)",
+              "borderTopWidth": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "padding": 19,
+            },
             Object {
               "borderBottomColor": "rgba(216,216,216,1)",
               "borderBottomWidth": 1,
@@ -200,7 +302,7 @@ exports[`Advanced - Device doesnt break when empty 1`] = `
             ]
           }
         >
-          Device Nonce
+          Controller Address
         </Text>
       </View>
     </View>
@@ -213,6 +315,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Device
+    controllerAddress="0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f"
     deviceAddress="0x8dd7ef5c99be7a454b4a9869683a3a394fde9777"
     dispatch={[Function]}
     explorerUrl="https://rinkeby.etherscan.io"
@@ -244,10 +347,22 @@ ShallowWrapper {
           working={false}
         />
         <MenuItem
-          last={true}
           title="Device Nonce"
           value={0}
           working={false}
+        />
+        <MenuItem
+          title="Signer Type"
+          value={0}
+        />
+        <MenuItem
+          title="TX Relay Address"
+          value={0}
+        />
+        <MenuItem
+          last={true}
+          title="Controller Address"
+          value="0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f"
         />
       </Menu>,
       "navigator": FakeNavigator {},
@@ -270,10 +385,22 @@ ShallowWrapper {
             working={false}
           />,
           <MenuItem
-            last={true}
             title="Device Nonce"
             value={0}
             working={false}
+          />,
+          <MenuItem
+            title="Signer Type"
+            value={0}
+          />,
+          <MenuItem
+            title="TX Relay Address"
+            value={0}
+          />,
+          <MenuItem
+            last={true}
+            title="Controller Address"
+            value="0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f"
           />,
         ],
       },
@@ -310,10 +437,46 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "last": true,
             "title": "Device Nonce",
             "value": 0,
             "working": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "title": "Signer Type",
+            "value": 0,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "title": "TX Relay Address",
+            "value": 0,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "last": true,
+            "title": "Controller Address",
+            "value": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
           },
           "ref": null,
           "rendered": null,
@@ -342,10 +505,22 @@ ShallowWrapper {
             working={false}
           />
           <MenuItem
-            last={true}
             title="Device Nonce"
             value={0}
             working={false}
+          />
+          <MenuItem
+            title="Signer Type"
+            value={0}
+          />
+          <MenuItem
+            title="TX Relay Address"
+            value={0}
+          />
+          <MenuItem
+            last={true}
+            title="Controller Address"
+            value="0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f"
           />
         </Menu>,
         "navigator": FakeNavigator {},
@@ -368,10 +543,22 @@ ShallowWrapper {
               working={false}
             />,
             <MenuItem
-              last={true}
               title="Device Nonce"
               value={0}
               working={false}
+            />,
+            <MenuItem
+              title="Signer Type"
+              value={0}
+            />,
+            <MenuItem
+              title="TX Relay Address"
+              value={0}
+            />,
+            <MenuItem
+              last={true}
+              title="Controller Address"
+              value="0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f"
             />,
           ],
         },
@@ -408,10 +595,46 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "last": true,
               "title": "Device Nonce",
               "value": 0,
               "working": false,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "title": "Signer Type",
+              "value": 0,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "title": "TX Relay Address",
+              "value": 0,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "last": true,
+              "title": "Controller Address",
+              "value": "0xff708db3af14fbd9b125ac88d3f7c1c03e6bc36f",
             },
             "ref": null,
             "rendered": null,
@@ -623,6 +846,108 @@ exports[`Advanced - Device renders fuel of 0 and nonce of 0 1`] = `
               "justifyContent": "space-between",
               "padding": 19,
             },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "rgba(170,170,170,1)",
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 16,
+                "lineHeight": 22,
+              },
+            ]
+          }
+        >
+          Device Nonce
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "rgba(216,216,216,1)",
+              "borderTopWidth": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "padding": 19,
+            },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "rgba(170,170,170,1)",
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 16,
+                "lineHeight": 22,
+              },
+            ]
+          }
+        >
+          Signer Type
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "rgba(216,216,216,1)",
+              "borderTopWidth": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "padding": 19,
+            },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "rgba(170,170,170,1)",
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 16,
+                "lineHeight": 22,
+              },
+            ]
+          }
+        >
+          TX Relay Address
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "rgba(216,216,216,1)",
+              "borderTopWidth": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "padding": 19,
+            },
             Object {
               "borderBottomColor": "rgba(216,216,216,1)",
               "borderBottomWidth": 1,
@@ -645,7 +970,7 @@ exports[`Advanced - Device renders fuel of 0 and nonce of 0 1`] = `
             ]
           }
         >
-          Device Nonce
+          Controller Address
         </Text>
       </View>
     </View>
@@ -833,10 +1158,7 @@ exports[`Advanced - Device renders fuel of 11210000000000100111 1`] = `
               "justifyContent": "space-between",
               "padding": 19,
             },
-            Object {
-              "borderBottomColor": "rgba(216,216,216,1)",
-              "borderBottomWidth": 1,
-            },
+            Object {},
           ]
         }
       >
@@ -874,6 +1196,111 @@ exports[`Advanced - Device renders fuel of 11210000000000100111 1`] = `
           }
         >
           3
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "rgba(216,216,216,1)",
+              "borderTopWidth": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "padding": 19,
+            },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "rgba(170,170,170,1)",
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 16,
+                "lineHeight": 22,
+              },
+            ]
+          }
+        >
+          Signer Type
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "rgba(216,216,216,1)",
+              "borderTopWidth": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "padding": 19,
+            },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "rgba(170,170,170,1)",
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 16,
+                "lineHeight": 22,
+              },
+            ]
+          }
+        >
+          TX Relay Address
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "rgba(216,216,216,1)",
+              "borderTopWidth": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "padding": 19,
+            },
+            Object {
+              "borderBottomColor": "rgba(216,216,216,1)",
+              "borderBottomWidth": 1,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "rgba(170,170,170,1)",
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 16,
+                "lineHeight": 22,
+              },
+            ]
+          }
+        >
+          Controller Address
         </Text>
       </View>
     </View>
@@ -1061,6 +1488,108 @@ exports[`Advanced - Device renders working status 1`] = `
               "justifyContent": "space-between",
               "padding": 19,
             },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "rgba(170,170,170,1)",
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 16,
+                "lineHeight": 22,
+              },
+            ]
+          }
+        >
+          Device Nonce
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "rgba(216,216,216,1)",
+              "borderTopWidth": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "padding": 19,
+            },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "rgba(170,170,170,1)",
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 16,
+                "lineHeight": 22,
+              },
+            ]
+          }
+        >
+          Signer Type
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "rgba(216,216,216,1)",
+              "borderTopWidth": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "padding": 19,
+            },
+            Object {},
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "rgba(170,170,170,1)",
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 16,
+                "lineHeight": 22,
+              },
+            ]
+          }
+        >
+          TX Relay Address
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "rgba(216,216,216,1)",
+              "borderTopWidth": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "padding": 19,
+            },
             Object {
               "borderBottomColor": "rgba(216,216,216,1)",
               "borderBottomWidth": 1,
@@ -1083,7 +1612,7 @@ exports[`Advanced - Device renders working status 1`] = `
             ]
           }
         >
-          Device Nonce
+          Controller Address
         </Text>
       </View>
     </View>
