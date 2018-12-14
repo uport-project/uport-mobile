@@ -1,5 +1,13 @@
 # Change Log
 
+## [v400](https://github.com/uport-project/uport-mobile/tree/v400) (2018-12-14)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v397...v400)
+
+**Merged pull requests:**
+
+- Fix/small migration fixes [\#45](https://github.com/uport-project/uport-mobile/pull/45) ([aldigjo](https://github.com/aldigjo))
+- \[WIP\] Feature/162611270/signer addr param [\#44](https://github.com/uport-project/uport-mobile/pull/44) ([mi-xu](https://github.com/mi-xu))
+
 ## [v397](https://github.com/uport-project/uport-mobile/tree/v397) (2018-12-11)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v395...v397)
 
