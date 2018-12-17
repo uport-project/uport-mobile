@@ -1,5 +1,12 @@
 # Change Log
 
+## [v403](https://github.com/uport-project/uport-mobile/tree/v403) (2018-12-17)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v402...v403)
+
+**Merged pull requests:**
+
+- Fixing eip712 and personal sign [\#48](https://github.com/uport-project/uport-mobile/pull/48) ([simonas-notcat](https://github.com/simonas-notcat))
+
 ## [v402](https://github.com/uport-project/uport-mobile/tree/v402) (2018-12-17)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v400...v402)
 
