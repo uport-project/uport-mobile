@@ -822,7 +822,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                           "width": 60,
                         },
                         Object {
-                          "backgroundColor": "#FFFFFF",
+                          "backgroundColor": "rgba(216,216,216,1)",
                         },
                         Object {
                           "padding": 15,
@@ -843,7 +843,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                           },
                           undefined,
                           Object {
-                            "fontSize": 15,
+                            "fontSize": 20,
                           },
                         ]
                       }
@@ -883,7 +883,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                             "width": 60,
                           },
                           Object {
-                            "backgroundColor": "#FFFFFF",
+                            "backgroundColor": "rgba(216,216,216,1)",
                           },
                           Object {
                             "padding": 15,
@@ -904,7 +904,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                             },
                             undefined,
                             Object {
-                              "fontSize": 15,
+                              "fontSize": 20,
                             },
                           ]
                         }
@@ -1155,7 +1155,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                         "width": 72,
                       },
                       Object {
-                        "backgroundColor": "#FFFFFF",
+                        "backgroundColor": "rgba(216,216,216,1)",
                       },
                       Object {
                         "padding": 18,
@@ -1176,7 +1176,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                         },
                         undefined,
                         Object {
-                          "fontSize": 18,
+                          "fontSize": 24,
                         },
                       ]
                     }
@@ -1600,7 +1600,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                         "width": 72,
                       },
                       Object {
-                        "backgroundColor": "#FFFFFF",
+                        "backgroundColor": "rgba(216,216,216,1)",
                       },
                       Object {
                         "padding": 18,
@@ -1621,7 +1621,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                         },
                         undefined,
                         Object {
-                          "fontSize": 18,
+                          "fontSize": 24,
                         },
                       ]
                     }

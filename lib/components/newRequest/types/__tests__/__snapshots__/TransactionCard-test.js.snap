@@ -1065,7 +1065,7 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
                   "width": 60,
                 },
                 Object {
-                  "backgroundColor": "#FFFFFF",
+                  "backgroundColor": "rgba(216,216,216,1)",
                 },
                 Object {
                   "padding": 15,
@@ -1088,7 +1088,7 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
                     "fontSize": 36,
                   },
                   Object {
-                    "fontSize": 15,
+                    "fontSize": 20,
                   },
                 ]
               }
@@ -1456,7 +1456,7 @@ exports[`TransactionCard renders correctly with destination being invalid destin
                   "width": 60,
                 },
                 Object {
-                  "backgroundColor": "#FFFFFF",
+                  "backgroundColor": "rgba(216,216,216,1)",
                 },
                 Object {
                   "padding": 15,
@@ -1479,7 +1479,7 @@ exports[`TransactionCard renders correctly with destination being invalid destin
                     "fontSize": 36,
                   },
                   Object {
-                    "fontSize": 15,
+                    "fontSize": 20,
                   },
                 ]
               }
@@ -1888,7 +1888,7 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
                   "width": 60,
                 },
                 Object {
-                  "backgroundColor": "#FFFFFF",
+                  "backgroundColor": "rgba(216,216,216,1)",
                 },
                 Object {
                   "padding": 15,
@@ -1911,7 +1911,7 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
                     "fontSize": 36,
                   },
                   Object {
-                    "fontSize": 15,
+                    "fontSize": 20,
                   },
                 ]
               }

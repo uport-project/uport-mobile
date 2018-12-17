@@ -915,7 +915,7 @@ exports[`ConnectionCard renders correctly with a authorizedAt Request 1`] = `
               "width": 184,
             },
             Object {
-              "backgroundColor": "#FFFFFF",
+              "backgroundColor": "rgba(216,216,216,1)",
             },
             Object {
               "padding": 46,
@@ -936,7 +936,7 @@ exports[`ConnectionCard renders correctly with a authorizedAt Request 1`] = `
               },
               undefined,
               Object {
-                "fontSize": 46,
+                "fontSize": 61.333333333333336,
               },
             ]
           }
@@ -1111,7 +1111,7 @@ exports[`ConnectionCard renders correctly with a cancelled Request 1`] = `
               "width": 184,
             },
             Object {
-              "backgroundColor": "#FFFFFF",
+              "backgroundColor": "rgba(216,216,216,1)",
             },
             Object {
               "padding": 46,
@@ -1132,7 +1132,7 @@ exports[`ConnectionCard renders correctly with a cancelled Request 1`] = `
               },
               undefined,
               Object {
-                "fontSize": 46,
+                "fontSize": 61.333333333333336,
               },
             ]
           }
@@ -1307,7 +1307,7 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
               "width": 184,
             },
             Object {
-              "backgroundColor": "#FFFFFF",
+              "backgroundColor": "rgba(216,216,216,1)",
             },
             Object {
               "padding": 46,
@@ -1328,7 +1328,7 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
               },
               undefined,
               Object {
-                "fontSize": 46,
+                "fontSize": 61.333333333333336,
               },
             ]
           }
@@ -1599,7 +1599,7 @@ exports[`ConnectionCard renders correctly with a contact that is me 1`] = `
               "width": 184,
             },
             Object {
-              "backgroundColor": "#FFFFFF",
+              "backgroundColor": "rgba(216,216,216,1)",
             },
             Object {
               "padding": 46,
@@ -1620,7 +1620,7 @@ exports[`ConnectionCard renders correctly with a contact that is me 1`] = `
               },
               undefined,
               Object {
-                "fontSize": 46,
+                "fontSize": 61.333333333333336,
               },
             ]
           }
@@ -1795,7 +1795,7 @@ exports[`ConnectionCard renders correctly with a existing Request 1`] = `
               "width": 184,
             },
             Object {
-              "backgroundColor": "#FFFFFF",
+              "backgroundColor": "rgba(216,216,216,1)",
             },
             Object {
               "padding": 46,
@@ -1816,7 +1816,7 @@ exports[`ConnectionCard renders correctly with a existing Request 1`] = `
               },
               undefined,
               Object {
-                "fontSize": 46,
+                "fontSize": 61.333333333333336,
               },
             ]
           }

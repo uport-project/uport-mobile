@@ -318,7 +318,7 @@ exports[`renders initials if only name is passed in 1`] = `
           "width": 60,
         },
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "rgba(216,216,216,1)",
         },
         Object {
           "padding": 15,
@@ -339,7 +339,7 @@ exports[`renders initials if only name is passed in 1`] = `
           },
           undefined,
           Object {
-            "fontSize": 15,
+            "fontSize": 20,
           },
         ]
       }
@@ -366,7 +366,7 @@ exports[`renders initials if only name passed in and custom size 1`] = `
           "width": 100,
         },
         Object {
-          "backgroundColor": "#FFFFFF",
+          "backgroundColor": "rgba(216,216,216,1)",
         },
         Object {
           "padding": 25,
@@ -387,7 +387,7 @@ exports[`renders initials if only name passed in and custom size 1`] = `
           },
           undefined,
           Object {
-            "fontSize": 25,
+            "fontSize": 33.333333333333336,
           },
         ]
       }
