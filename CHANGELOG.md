@@ -1,5 +1,12 @@
 # Change Log
 
+## [v401](https://github.com/uport-project/uport-mobile/tree/v401) (2018-12-17)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v400...v401)
+
+**Merged pull requests:**
+
+- Add unsigned tx to system messages [\#46](https://github.com/uport-project/uport-mobile/pull/46) ([aldigjo](https://github.com/aldigjo))
+
 ## [v400](https://github.com/uport-project/uport-mobile/tree/v400) (2018-12-14)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v397...v400)
 
