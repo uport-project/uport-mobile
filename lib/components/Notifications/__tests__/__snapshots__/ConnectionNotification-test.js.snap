@@ -84,7 +84,7 @@ exports[`Connection Notification renders an connection notification correctly 1`
               "width": 72,
             },
             Object {
-              "backgroundColor": "#FFFFFF",
+              "backgroundColor": "rgba(216,216,216,1)",
             },
             Object {
               "padding": 18,
@@ -105,7 +105,7 @@ exports[`Connection Notification renders an connection notification correctly 1`
               },
               undefined,
               Object {
-                "fontSize": 18,
+                "fontSize": 24,
               },
             ]
           }
@@ -355,7 +355,7 @@ exports[`Connection Notification renders an connection notification that has bee
               "width": 72,
             },
             Object {
-              "backgroundColor": "#FFFFFF",
+              "backgroundColor": "rgba(216,216,216,1)",
             },
             Object {
               "padding": 18,
@@ -376,7 +376,7 @@ exports[`Connection Notification renders an connection notification that has bee
               },
               undefined,
               Object {
-                "fontSize": 18,
+                "fontSize": 24,
               },
             ]
           }
@@ -513,7 +513,7 @@ exports[`Connection Notification renders an connection notification that has bee
               "width": 72,
             },
             Object {
-              "backgroundColor": "#FFFFFF",
+              "backgroundColor": "rgba(216,216,216,1)",
             },
             Object {
               "padding": 18,
@@ -534,7 +534,7 @@ exports[`Connection Notification renders an connection notification that has bee
               },
               undefined,
               Object {
-                "fontSize": 18,
+                "fontSize": 24,
               },
             ]
           }

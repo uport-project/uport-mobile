@@ -571,7 +571,7 @@ exports[`NetworkCard renders authorized request correctly 1`] = `
               "width": 60,
             },
             Object {
-              "backgroundColor": "#FFFFFF",
+              "backgroundColor": "rgba(216,216,216,1)",
             },
             Object {
               "padding": 15,
@@ -592,7 +592,7 @@ exports[`NetworkCard renders authorized request correctly 1`] = `
               },
               undefined,
               Object {
-                "fontSize": 15,
+                "fontSize": 20,
               },
             ]
           }
@@ -632,7 +632,7 @@ exports[`NetworkCard renders authorized request correctly 1`] = `
                 "width": 60,
               },
               Object {
-                "backgroundColor": "#FFFFFF",
+                "backgroundColor": "rgba(216,216,216,1)",
               },
               Object {
                 "padding": 15,
@@ -653,7 +653,7 @@ exports[`NetworkCard renders authorized request correctly 1`] = `
                 },
                 undefined,
                 Object {
-                  "fontSize": 15,
+                  "fontSize": 20,
                 },
               ]
             }
@@ -867,7 +867,7 @@ exports[`NetworkCard renders new request correctly 1`] = `
               "width": 60,
             },
             Object {
-              "backgroundColor": "#FFFFFF",
+              "backgroundColor": "rgba(216,216,216,1)",
             },
             Object {
               "padding": 15,
@@ -888,7 +888,7 @@ exports[`NetworkCard renders new request correctly 1`] = `
               },
               undefined,
               Object {
-                "fontSize": 15,
+                "fontSize": 20,
               },
             ]
           }
@@ -928,7 +928,7 @@ exports[`NetworkCard renders new request correctly 1`] = `
                 "width": 60,
               },
               Object {
-                "backgroundColor": "#FFFFFF",
+                "backgroundColor": "rgba(216,216,216,1)",
               },
               Object {
                 "padding": 15,
@@ -949,7 +949,7 @@ exports[`NetworkCard renders new request correctly 1`] = `
                 },
                 undefined,
                 Object {
-                  "fontSize": 15,
+                  "fontSize": 20,
                 },
               ]
             }
@@ -1275,7 +1275,7 @@ exports[`NetworkCard renders request with errors 1`] = `
               "width": 60,
             },
             Object {
-              "backgroundColor": "#FFFFFF",
+              "backgroundColor": "rgba(216,216,216,1)",
             },
             Object {
               "padding": 15,
@@ -1296,7 +1296,7 @@ exports[`NetworkCard renders request with errors 1`] = `
               },
               undefined,
               Object {
-                "fontSize": 15,
+                "fontSize": 20,
               },
             ]
           }
@@ -1336,7 +1336,7 @@ exports[`NetworkCard renders request with errors 1`] = `
                 "width": 60,
               },
               Object {
-                "backgroundColor": "#FFFFFF",
+                "backgroundColor": "rgba(216,216,216,1)",
               },
               Object {
                 "padding": 15,
@@ -1357,7 +1357,7 @@ exports[`NetworkCard renders request with errors 1`] = `
                 },
                 undefined,
                 Object {
-                  "fontSize": 15,
+                  "fontSize": 20,
                 },
               ]
             }
