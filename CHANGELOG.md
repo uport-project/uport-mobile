@@ -1,5 +1,12 @@
 # Change Log
 
+## [v404](https://github.com/uport-project/uport-mobile/tree/v404) (2018-12-18)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v403...v404)
+
+**Merged pull requests:**
+
+- Add background to modal screen [\#49](https://github.com/uport-project/uport-mobile/pull/49) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v403](https://github.com/uport-project/uport-mobile/tree/v403) (2018-12-17)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v402...v403)
 
