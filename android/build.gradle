@@ -41,7 +41,7 @@ buildscript {
         okhttp_version = "3.10.0"
         crashlytics_version = "2.9.4"
 
-        react_native_version = "0.55.3"
+        react_native_version = "0.55.4"
 
         spongy_castle_version = "1.58.0.0"
         uport_signer_version = "0.2.1"
