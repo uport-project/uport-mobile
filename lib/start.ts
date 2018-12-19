@@ -23,8 +23,6 @@ import store from './store/store'
 import { registerScreens } from './screens'
 import { Platform, NativeModules, Dimensions } from 'react-native'
 import FeatherIcons from 'react-native-vector-icons/Feather'
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
-
 import { handleURL } from './actions/requestActions'
 import { registerDeviceForNotifications } from 'uPortMobile/lib/actions/snsRegistrationActions'
 import { track, screen } from 'uPortMobile/lib/actions/metricActions'
@@ -40,7 +38,7 @@ export function start() {
 // When DB is ready it calls one of these.
 export function startMain() {
   startAppModernUI()
-  // startLegacyApp()
+  //startLegacyApp()
 }
 
 export const screenVisibilityListener = new RNNScreenVisibilityListener({
@@ -92,7 +90,7 @@ export async function startAppModernUI(this: any) {
     },
     tabs: [
       {
-        screen: 'screen.Accounts',
+        screen: 'screen.Credentials',
         title: 'Credentials',
         icon: accountsIcon,
         iconInsets: { // add this to change icon position (optional, iOS only).
@@ -161,7 +159,6 @@ export async function startLegacyApp(this: any) {
       // override the navigator style for the screen, see "Styling the navigator" below (optional)
       // navigatorButtons: {} // override the nav buttons for the screen, see "Adding buttons to the navigator" below (optional)
       navigatorStyle: {
-        navBarTextFontFamily: 'Montserrat',
         navBarHidden: true,
       }, // override the navigator style for the screen, see "Styling the navigator" below (optional)
     },
@@ -189,7 +186,6 @@ export async function startOnboarding() {
       title: 'Uport', // title of the screen as appears in the nav bar (optional)
       navigatorStyle: {
         navBarHidden: true,
-        navBarTextFontFamily: 'Montserrat',
       }, // override the navigator style for the screen, see "Styling the navigator" below (optional)
     },
     animationType: 'fade', // optional, add transition animation to root change: 'none', 'slide-down', 'fade'
