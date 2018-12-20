@@ -25,6 +25,7 @@
     ],
     "setupFiles": [
       "./jest-setup/react-native.js",
+      "./jest-setup/analytics.js",
       "./jest-setup/authorize.js",
       "./jest-setup/ethjs.js",
       "./jest-setup/react-native-fetch-blob.js",

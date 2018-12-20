@@ -21,6 +21,11 @@ exports[`renders correctly empty 1`] = `
   renderItem={[Function]}
   scrollEventThrottle={50}
   stickyHeaderIndices={Array []}
+  style={
+    Object {
+      "backgroundColor": "#EAEAEA",
+    }
+  }
   updateCellsBatchingPeriod={50}
   viewabilityConfigCallbackPairs={Array []}
   windowSize={21}
@@ -57,6 +62,11 @@ exports[`renders correctly with data 1`] = `
   renderItem={[Function]}
   scrollEventThrottle={50}
   stickyHeaderIndices={Array []}
+  style={
+    Object {
+      "backgroundColor": "#EAEAEA",
+    }
+  }
   updateCellsBatchingPeriod={50}
   viewabilityConfigCallbackPairs={Array []}
   windowSize={21}
@@ -68,55 +78,59 @@ exports[`renders correctly with data 1`] = `
     >
       <View
         style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#FFFFFF",
-              "borderColor": "rgba(216,216,216,1)",
-              "borderTopWidth": 1,
-              "flexDirection": "row",
-              "justifyContent": "space-between",
-              "padding": 19,
-            },
-            Object {},
-          ]
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "borderBottomColor": "#EAEAEA",
+            "borderBottomWidth": 0.5,
+            "borderLeftColor": "#E69C95",
+            "borderLeftWidth": 0,
+          }
         }
       >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+        <View
           style={
-            Array [
-              Object {
-                "color": "rgba(170,170,170,1)",
-                "fontFamily": "NunitoSans-Regular",
-                "fontSize": 16,
-                "lineHeight": 22,
-              },
-            ]
+            Object {
+              "paddingLeft": 15,
+              "paddingTop": 15,
+            }
           }
         >
-          sensui
-        </Text>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Array [
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
               Object {
-                "color": "rgba(74,74,74,1)",
-                "fontFamily": "NunitoSans-Light",
-                "fontSize": 14,
-                "lineHeight": 22,
-              },
-              Object {},
-            ]
+                "color": undefined,
+                "fontSize": 12,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            SENSUI
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "padding": 15,
+            }
           }
         >
-          hello
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": undefined,
+                "lineHeight": 20,
+              }
+            }
+          >
+            hello
+          </Text>
+        </View>
       </View>
     </View>
   </View>
