@@ -131,6 +131,8 @@ function * shareVc(action: { type: string, vc: JwtDetails[], shareType: 'file' |
 
   if (action.shareType === 'file') {
     yield call(shareFile, jwt)
+  } else if (action.shareType === 'url') {
+    yield call(shareUrl, jwt)
   }
 
   return true
@@ -163,6 +165,25 @@ function * shareFile(jwt: string) {
   }
 
   return true
+}
+
+function * shareUrl(jwt: string) {
+  const response = yield call(fetch, 'https://api.uport.space/chasqui/topic/', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(jwt),
+  })
+
+  response.json().then((body: any) => {
+    console.log({body})
+    if (body.status === 'success' && body.message === 'created' ) {
+      const url = 'https://id.uport.me' + response.headers.get('location')
+      Share.open({ url })
+    }
+  })
 }
 
 function * vcSaga() {
