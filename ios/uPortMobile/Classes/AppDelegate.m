@@ -31,11 +31,15 @@
 
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   self.window.backgroundColor =  [UIColor colorWithRed:0.99 green:0.99 blue:0.99 alpha:1];
-  [[RCCManager sharedInstance] initBridgeWithBundleURL:jsCodeLocation launchOptions:launchOptions];
+  
+  
+  [[RCCManager sharedInstance] initBridgeWithBundleURL:jsCodeLocation];
 
   [Fabric with:@[[Crashlytics class]]];
   RCTSetLogThreshold(RCTLogLevelInfo);
   RCTSetLogFunction(CrashlyticsReactLogFunction);
+
+  
   return YES;
 }
 

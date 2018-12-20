@@ -51,6 +51,7 @@
 		7F465938BBBE499DA8ECEFF4 /* libTouchID.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B137393457A4411B6A82656 /* libTouchID.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		8970994C317A4AF5B1B9AE84 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2287C0EB70D14ECEA474A926 /* libz.tbd */; };
+		9645633021CBC6B100FC1C48 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9645632E21CBC6B100FC1C48 /* Launch.storyboard */; };
 		967DADAF218B502A009D4BF0 /* libLottie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 967DAD73218B4FFB009D4BF0 /* libLottie.a */; };
 		967DADB0218B5032009D4BF0 /* libLottieReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 967DADAE218B4FFB009D4BF0 /* libLottieReactNative.a */; };
 		967DADB6218B509E009D4BF0 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 967DAD6D218B4FFB009D4BF0 /* Lottie.framework */; };
@@ -711,6 +712,7 @@
 		70F06E6E1FC5C15F000BD332 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "uPortMobile/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		9645632F21CBC6B100FC1C48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = uPortMobile/Base.lproj/Launch.storyboard; sourceTree = "<group>"; };
 		967DAD63218B4FFB009D4BF0 /* Lottie.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Lottie.xcodeproj; path = "../node_modules/lottie-ios/Lottie.xcodeproj"; sourceTree = "<group>"; };
 		967DADA9218B4FFB009D4BF0 /* LottieReactNative.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LottieReactNative.xcodeproj; path = "../node_modules/lottie-react-native/src/ios/LottieReactNative.xcodeproj"; sourceTree = "<group>"; };
 		9688718E2D954B93AD154055 /* libRNSVG.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSVG.a; sourceTree = "<group>"; };
@@ -1024,6 +1026,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				9645632E21CBC6B100FC1C48 /* Launch.storyboard */,
 			);
 			name = SupportingFiles;
 			sourceTree = "<group>";
@@ -2132,6 +2135,7 @@
 				96EF03332189C52600D0B280 /* Montserrat-MediumItalic.otf in Resources */,
 				96EF033A2189C52600D0B280 /* Montserrat-Light.otf in Resources */,
 				96EF03192189C50C00D0B280 /* Zocial.ttf in Resources */,
+				9645633021CBC6B100FC1C48 /* Launch.storyboard in Resources */,
 				96EF03122189C50C00D0B280 /* Feather.ttf in Resources */,
 				96EF03132189C50C00D0B280 /* EvilIcons.ttf in Resources */,
 				96EF03182189C50C00D0B280 /* SimpleLineIcons.ttf in Resources */,
@@ -2322,6 +2326,14 @@
 			);
 			name = LaunchScreen.xib;
 			path = uPortMobile;
+			sourceTree = "<group>";
+		};
+		9645632E21CBC6B100FC1C48 /* Launch.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9645632F21CBC6B100FC1C48 /* Base */,
+			);
+			name = Launch.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -2543,7 +2555,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.uport;
 				PRODUCT_NAME = uPort;
 				PROVISIONING_PROFILE = "6d9998b0-aea7-40d9-8599-d9ed4f4b8035";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore me.uport";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc me.uport";
 				SWIFT_OBJC_BRIDGING_HEADER = "uPortMobile-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
