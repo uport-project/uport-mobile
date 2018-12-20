@@ -16,6 +16,7 @@
 // along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
 //
 import Share from 'react-native-share'
+import { PermissionsAndroid, Platform } from 'react-native'
 import RNFetchBlob from 'react-native-fetch-blob'
 import { all, call, select, put, takeEvery } from 'redux-saga/effects'
 import { createToken, verifyToken } from './jwt'
@@ -117,29 +118,49 @@ function * signVc(action: { type: string, vc: JwtPayload }) {
   return true
 }
 
-function * shareVc(action: { type: string, vc: JwtDetails[] }) {
-  // fileContents = ...
-  // showShareSheet(fileContents)
+function * shareVc(action: { type: string, vc: JwtDetails[], shareType: 'file' | 'url' }) {
 
-  const path = `${RNFetchBlob.fs.dirs.DownloadDir}/signed_data.uPort`
-  RNFetchBlob.fs.writeFile(path, 'foo', 'utf8')
-  .then((a) => {
-    const filePath = `file://${path}`
-    console.log({filePath})
-    const shareOptions = {
-      type: 'text/plain',
-      url: filePath,
-    }
-    Share.open(shareOptions)
+  const request = {
+    version: 2,
+    type: 'vc',
+    vc: action.vc.map(item => item.jwt),
+  }
 
-  })
-  .catch(e => console.log(e))
+  const issuer = yield select(currentAddress)
+  const jwt = yield call(createToken, issuer, request, { expiresIn: false, issuer })
 
-  // const shareOptions = {
-  //   title: 'Share via',
-  //   url: `data:application/uPort;base64,${Buffer.from("Hello World").toString('base64')}`,
-  // }
-  // Share.open(shareOptions)
+  if (action.shareType === 'file') {
+    yield call(shareFile, jwt)
+  }
+
+  return true
+}
+
+function * shareFile(jwt: string) {
+
+  let granted = PermissionsAndroid.RESULTS.GRANTED
+
+  if (Platform.OS === 'android') {
+    granted = yield call(PermissionsAndroid.request, PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE)
+  }
+
+  if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+    const fileContents = JSON.stringify({
+      message: {
+        content: jwt,
+      },
+    })
+
+    const path = `${RNFetchBlob.fs.dirs.DownloadDir}/signed_data.uPort`
+    RNFetchBlob.fs.writeFile(path, fileContents, 'utf8')
+    .then(() => {
+      return Share.open({
+        type: 'text/plain',
+        url: `file://${path}`,
+      })
+    })
+    .catch(e => console.log(e))
+  }
 
   return true
 }
