@@ -12,7 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tabBarController id="B59-bP-kcu">
-            <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7zk-QA-cLn">
+            <tabBar key="tabBar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="7zk-QA-cLn">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -20,7 +20,7 @@
             </tabBar>
             <viewControllers>
                 <navigationController id="7qz-B6-dQO">
-                    <tabBarItem key="tabBarItem" title="Item" id="Z0F-Zx-LH1"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="" id="Z0F-Zx-LH1"/>
                     <navigationBar key="navigationBar" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="ON2-9v-l6o">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -34,12 +34,12 @@
                                 <viewControllerLayoutGuide type="top" id="erE-MS-BUb"/>
                                 <viewControllerLayoutGuide type="bottom" id="brM-lZ-geI"/>
                             </layoutGuides>
-                            <view key="view" contentMode="scaleToFill" id="bzH-RH-fEP">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
+                            <view key="view" userInteractionEnabled="NO" contentMode="redraw" id="bzH-RH-fEP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <tabBarItem key="tabBarItem" title="Item" id="S8B-Ao-Wog"/>
+                            <tabBarItem key="tabBarItem" enabled="NO" title="" id="S8B-Ao-Wog"/>
                             <navigationItem key="navigationItem" id="lDk-9r-bI2"/>
                         </viewController>
                     </viewControllers>
