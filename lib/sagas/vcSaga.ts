@@ -151,7 +151,7 @@ function * shareFile(jwt: string) {
       },
     })
 
-    const path = `${RNFetchBlob.fs.dirs.DownloadDir}/signed_data.uPort`
+    const path = `${RNFetchBlob.fs.dirs.CacheDir}/signed_data.uPort`
     RNFetchBlob.fs.writeFile(path, fileContents, 'utf8')
     .then(() => {
       return Share.open({
