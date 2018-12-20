@@ -90,14 +90,7 @@ NSString * const UPTHDSignerErrorCodeLevelSigningFailed = @"-13";
     callback( phrase, nil );
 }
 
-+ (void)deleteSeed:(NSString *)phrase callback:(UPTEthSignerDeleteSeedResult)callback {
-    NSArray<NSString *> *words = [UPTHDSigner wordsFromPhrase:phrase];
-    BTCMnemonic *mnemonic = [[BTCMnemonic alloc] initWithWords:words password:@"" wordListType:BTCMnemonicWordListTypeEnglish];
-    BTCKeychain *masterKeychain = [[BTCKeychain alloc] initWithSeed:mnemonic.seed];
-
-    BTCKeychain *rootKeychain = [masterKeychain derivedKeychainWithPath:UPORT_ROOT_DERIVATION_PATH];
-    NSString *rootEthereumAddress = [UPTHDSigner ethereumAddressWithPublicKey:rootKeychain.key.uncompressedPublicKey];
-
++ (void)deleteSeed:(NSString *)rootEthereumAddress callback:(UPTEthSignerDeleteSeedResult)callback {
     UPTHDSignerProtectionLevel protectionLevel = [UPTHDSigner protectionLevelWithEthAddress:rootEthereumAddress];
     if ( protectionLevel != UPTHDSignerProtectionLevelNotRecognized ) {
         VALValet *privateKeystore = [UPTHDSigner privateKeystoreWithProtectionLevel:protectionLevel];

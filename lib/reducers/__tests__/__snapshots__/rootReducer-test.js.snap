@@ -107,6 +107,10 @@ Object {
     "p": null,
     "q": 8196,
   },
+  "migrations": Object {
+    "steps": Object {},
+    "targets": Array [],
+  },
   "myInfo": Object {
     "changed": Object {},
   },
@@ -261,6 +265,10 @@ Object {
     "p": null,
     "q": 8196,
   },
+  "migrations": Object {
+    "steps": Object {},
+    "targets": Array [],
+  },
   "myInfo": Object {
     "changed": Object {},
   },
@@ -414,6 +422,10 @@ Object {
     "k": null,
     "p": null,
     "q": 8196,
+  },
+  "migrations": Object {
+    "steps": Object {},
+    "targets": Array [],
   },
   "myInfo": Object {
     "changed": Object {},
@@ -570,6 +582,10 @@ Object {
     "p": null,
     "q": 8196,
   },
+  "migrations": Object {
+    "steps": Object {},
+    "targets": Array [],
+  },
   "myInfo": Object {
     "changed": Object {},
   },
@@ -724,6 +740,10 @@ Object {
     "k": null,
     "p": null,
     "q": 8196,
+  },
+  "migrations": Object {
+    "steps": Object {},
+    "targets": Array [],
   },
   "myInfo": Object {
     "changed": Object {},
