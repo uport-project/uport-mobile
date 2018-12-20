@@ -143,7 +143,7 @@ export async function startAppModernUI(this: any) {
     tabsStyle: IOSOptions.tabsStyle,
     drawer: isIOS ? IOSOptions.drawer : AndroidOptions.drawer,
     appStyle: isIOS ? {} : AndroidOptions.appStyle,
-    animationType: 'none',
+    animationType: 'fade',
   })
 
   screenVisibilityListener.register()
