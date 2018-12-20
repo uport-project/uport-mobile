@@ -426,13 +426,6 @@
 			remoteGlobalIDString = 62CA59B71E3C173B002D7188;
 			remoteInfo = Lottie_iOS;
 		};
-		96F3C99421C12981006806BE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CD973928068447CEA3F98B20 /* RNVectorIcons.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A39873CE1EA65EE60051E01A;
-			remoteInfo = "RNVectorIcons-tvOS";
-		};
 		D142E55A1F25D77900A43483 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D142E5331F25D77900A43483 /* ReactNativeNavigation.xcodeproj */;
@@ -1249,7 +1242,6 @@
 			isa = PBXGroup;
 			children = (
 				644F4B431DDC9DB2000BAC54 /* libRNVectorIcons.a */,
-				96F3C99521C12981006806BE /* libRNVectorIcons-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1991,13 +1983,6 @@
 			remoteRef = 967DADAD218B4FFB009D4BF0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		96F3C99521C12981006806BE /* libRNVectorIcons-tvOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libRNVectorIcons-tvOS.a";
-			remoteRef = 96F3C99421C12981006806BE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		D142E55B1F25D77900A43483 /* libReactNativeNavigation.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -2555,7 +2540,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.uport;
 				PRODUCT_NAME = uPort;
 				PROVISIONING_PROFILE = "6d9998b0-aea7-40d9-8599-d9ed4f4b8035";
-				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc me.uport";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore me.uport";
 				SWIFT_OBJC_BRIDGING_HEADER = "uPortMobile-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
