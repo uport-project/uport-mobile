@@ -14,7 +14,7 @@
         <scene sceneID="F8M-5X-TAW">
             <objects>
                 <navigationController id="7jj-Hb-6MQ" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="4SO-QS-mBl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="4SO-QS-mBl">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.35432872180000002" green="0.31638032199999999" blue="0.76474493740000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -40,6 +40,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items/>
+                                <color key="barTintColor" red="0.99608772993087769" green="0.9960663914680481" blue="0.99607056379318237" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
