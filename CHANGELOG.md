@@ -1,5 +1,58 @@
 # Change Log
 
+## [v404](https://github.com/uport-project/uport-mobile/tree/v404) (2018-12-18)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v403...v404)
+
+**Merged pull requests:**
+
+- Add background to modal screen [\#49](https://github.com/uport-project/uport-mobile/pull/49) ([jasonhealy](https://github.com/jasonhealy))
+
+## [v403](https://github.com/uport-project/uport-mobile/tree/v403) (2018-12-17)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v402...v403)
+
+**Merged pull requests:**
+
+- Fixing eip712 and personal sign [\#48](https://github.com/uport-project/uport-mobile/pull/48) ([simonas-notcat](https://github.com/simonas-notcat))
+
+## [v402](https://github.com/uport-project/uport-mobile/tree/v402) (2018-12-17)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v400...v402)
+
+**Merged pull requests:**
+
+- Add unsigned tx to system messages [\#46](https://github.com/uport-project/uport-mobile/pull/46) ([aldigjo](https://github.com/aldigjo))
+
+## [v400](https://github.com/uport-project/uport-mobile/tree/v400) (2018-12-14)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v397...v400)
+
+**Merged pull requests:**
+
+- Fix/small migration fixes [\#45](https://github.com/uport-project/uport-mobile/pull/45) ([aldigjo](https://github.com/aldigjo))
+- \[WIP\] Feature/162611270/signer addr param [\#44](https://github.com/uport-project/uport-mobile/pull/44) ([mi-xu](https://github.com/mi-xu))
+
+## [v397](https://github.com/uport-project/uport-mobile/tree/v397) (2018-12-11)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v395...v397)
+
+**Merged pull requests:**
+
+- Personal sign [\#35](https://github.com/uport-project/uport-mobile/pull/35) ([simonas-notcat](https://github.com/simonas-notcat))
+
+## [v395](https://github.com/uport-project/uport-mobile/tree/v395) (2018-12-10)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v394...v395)
+
+**Merged pull requests:**
+
+- fix build for react-native subprojects [\#43](https://github.com/uport-project/uport-mobile/pull/43) ([mirceanis](https://github.com/mirceanis))
+- Showing client avatar image [\#42](https://github.com/uport-project/uport-mobile/pull/42) ([simonas-notcat](https://github.com/simonas-notcat))
+- Feature/\#162383488/personal sign function [\#39](https://github.com/uport-project/uport-mobile/pull/39) ([mi-xu](https://github.com/mi-xu))
+
+## [v394](https://github.com/uport-project/uport-mobile/tree/v394) (2018-12-05)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v393...v394)
+
+**Merged pull requests:**
+
+- Attempt to be liberal with v and throw better errors [\#40](https://github.com/uport-project/uport-mobile/pull/40) ([pelle](https://github.com/pelle))
+- Properly encode v value as 0 or 1 just like android [\#37](https://github.com/uport-project/uport-mobile/pull/37) ([pelle](https://github.com/pelle))
+
 ## [v393](https://github.com/uport-project/uport-mobile/tree/v393) (2018-11-30)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v392...v393)
 
