@@ -1,5 +1,13 @@
 # Change Log
 
+## [v405](https://github.com/uport-project/uport-mobile/tree/v405) (2018-12-20)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v404...v405)
+
+**Merged pull requests:**
+
+- Chore/circle ci xcode update [\#50](https://github.com/uport-project/uport-mobile/pull/50) ([simonas-notcat](https://github.com/simonas-notcat))
+- Pre HD Wallet Migration [\#27](https://github.com/uport-project/uport-mobile/pull/27) ([pelle](https://github.com/pelle))
+
 ## [v404](https://github.com/uport-project/uport-mobile/tree/v404) (2018-12-18)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v403...v404)
 
