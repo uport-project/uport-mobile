@@ -1,12 +1,18 @@
 import { makeExecutableSchema } from 'graphql-tools'
-import { db } from 'uPortMobile/lib/sagas/databaseSaga'
+import { db, getContactList, getClaimsForDid } from 'uPortMobile/lib/sagas/databaseSaga'
 import store from 'uPortMobile/lib/store/store'
 import { currentDID, rootIdentities, identityAccounts } from 'uPortMobile/lib/selectors/identities'
 
 const typeDefs = `
   type Identity {
     did: String!
-    data: [SignedData]
+    name: String
+    firstName: String
+    lastName: String
+    profileImage: String,
+    url: String,
+    description: String,
+    claims: [VerifiableClaim]
     contacts: [Identity]
     accounts: [Account]
   }
@@ -20,7 +26,7 @@ const typeDefs = `
     balance: Int
   }
 
-  type SignedData {
+  type VerifiableClaim {
     hash: String!
     iss: Identity
     sub: Identity
@@ -32,7 +38,7 @@ const typeDefs = `
     me: Identity
     identities: [Identity]
     identity(did: String!): Identity
-    dataByHash(hash: String!): SignedData
+    claimByHash(hash: String!): VerifiableClaim
   }
 `
 
@@ -40,7 +46,6 @@ const resolvers = {
   Query: {
     me: () : Identity => {
       const did = currentDID(store.getState())
-      console.log(`me()`, did)
       return { did }
     },
     identities: () : [Identity] => {
@@ -50,7 +55,9 @@ const resolvers = {
   },
 
   Identity: {
-    accounts: (identity: Identity) : [Account] => identityAccounts(store.getState(), identity)
+    accounts: (identity: Identity) : Account[] => identityAccounts(store.getState(), identity),
+    contacts: (identity: Identity) : Promise<Contact[]> => getContactList(),
+    claims: (identity: Identity) : Promise<VerifiableClaim[]> => getClaimsForDid(identity.did)
   },
 
   Account: {
