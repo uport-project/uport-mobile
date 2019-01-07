@@ -1,5 +1,12 @@
 # Change Log
 
+## [v406](https://github.com/uport-project/uport-mobile/tree/v406) (2019-01-07)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v405...v406)
+
+**Merged pull requests:**
+
+- Bugfix for PreHD migration crash on Android [\#54](https://github.com/uport-project/uport-mobile/pull/54) ([simonas-notcat](https://github.com/simonas-notcat))
+
 ## [v405](https://github.com/uport-project/uport-mobile/tree/v405) (2018-12-20)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v404...v405)
 
