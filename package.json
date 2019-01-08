@@ -134,7 +134,7 @@
     "rlp": "^2.0.0",
     "string": "^3.3.1",
     "tslib": "^1.9.3",
-    "uport-credentials": "^1.0.0-alpha-3",
+    "uport-credentials": "^1.1.0-alpha-6",
     "uport-did-resolver": "^0.0.2",
     "uport-identity": "2.0.0-beta",
     "uport-lite": "^1.0.2",
