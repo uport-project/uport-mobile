@@ -1,5 +1,12 @@
 # Change Log
 
+## [v407](https://github.com/uport-project/uport-mobile/tree/v407) (2019-01-08)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v406...v407)
+
+**Merged pull requests:**
+
+- Feature/\#162774603/adhoc private chains [\#52](https://github.com/uport-project/uport-mobile/pull/52) ([pelle](https://github.com/pelle))
+
 ## [v406](https://github.com/uport-project/uport-mobile/tree/v406) (2019-01-07)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v405...v406)
 
