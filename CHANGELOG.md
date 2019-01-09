@@ -1,5 +1,16 @@
 # Change Log
 
+## [v409](https://github.com/uport-project/uport-mobile/tree/v409) (2019-01-09)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v408...v409)
+
+**Merged pull requests:**
+
+- add `listSeedAddresses` method to the native HD signer module [\#57](https://github.com/uport-project/uport-mobile/pull/57) ([simonas-notcat](https://github.com/simonas-notcat))
+- Fix for android crash on migration screen [\#56](https://github.com/uport-project/uport-mobile/pull/56) ([simonas-notcat](https://github.com/simonas-notcat))
+
+## [v408](https://github.com/uport-project/uport-mobile/tree/v408) (2019-01-08)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v407...v408)
+
 ## [v407](https://github.com/uport-project/uport-mobile/tree/v407) (2019-01-08)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v406...v407)
 
