@@ -86,9 +86,8 @@ const Status: React.SFC<StatusProps> = ({status, working}) => {
 const StepView: React.SFC<StepProps> = ({step, working, status, message, error}) => {
   const title = S(step).humanize().s
   return <View style={{marginBottom: 16}}>
-    <Text bold style={{fontSize: 18}}>{title} 
+    <Text bold style={{fontSize: 18}}>{title}</Text>
       <Status working={working} status={status} />
-    </Text>
     <Text small secondary style={error ? {color: 'red'} : {}}>{error || message || (status ? MigrationStatus[status] : '...')}</Text>
   </View>
 }
