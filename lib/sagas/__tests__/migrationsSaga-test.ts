@@ -52,9 +52,42 @@ import { NavigationActions } from 'uPortMobile/lib/utilities/NavigationActions'
 import { migrationStepStatus, migrationTargets, pendingMigrations, migrationCompleted } from 'uPortMobile/lib/selectors/migrations'
 import { isFullyHD } from 'uPortMobile/lib/selectors/chains'
 import { hdRootAddress } from 'uPortMobile/lib/selectors/hdWallet'
+import { migrateableIdentities } from 'uPortMobile/lib/selectors/identities'
 
 describe('checkup', () => {
   const root = '0xroot'
+
+  describe('modern did', () => {
+    it('does not Add Migration Target', () => {
+      return expectSaga(migrationsSaga)
+          .provide([
+            [select(isFullyHD), true],
+            [select(hdRootAddress), root],
+            [call(listSeedAddresses), [root]],
+            [select(pendingMigrations), []],
+            [select(migrateableIdentities), []]
+          ])
+          .not.put(addMigrationTarget(MigrationTarget.Legacy))
+          .dispatch(loadedDB())
+          .silentRun()
+    })
+  })
+
+  describe('legacy identity', () => {
+    it('should add Migration Target', () => {
+      return expectSaga(migrationsSaga)
+          .provide([
+            [select(isFullyHD), true],
+            [select(hdRootAddress), root],
+            [call(listSeedAddresses), [root]],
+            [select(pendingMigrations), []],
+            [select(migrateableIdentities), [{address: '0x'}]]
+          ])
+          .put(addMigrationTarget(MigrationTarget.Legacy))
+          .dispatch(loadedDB())
+          .silentRun()
+    })
+  })
 
   describe('hd wallet', () => {
     it('does not Add Migration Target', () => {
@@ -63,7 +96,8 @@ describe('checkup', () => {
             [select(isFullyHD), true],
             [select(hdRootAddress), root],
             [call(listSeedAddresses), [root]],
-            [select(pendingMigrations), []]
+            [select(pendingMigrations), []],
+            [select(migrateableIdentities), []]
           ])
           .not.put(addMigrationTarget(MigrationTarget.PreHD))
           .dispatch(loadedDB())
@@ -80,7 +114,8 @@ describe('checkup', () => {
               [select(hdRootAddress), undefined],
               [call(listSeedAddresses), []],
               [call(delay, 2000), undefined],
-              [select(pendingMigrations), [MigrationTarget.PreHD]]
+              [select(pendingMigrations), [MigrationTarget.PreHD]],
+              [select(migrateableIdentities), [{address: '0x'}]]
             ])
             .put(addMigrationTarget(MigrationTarget.PreHD))
             .call(NavigationActions.push, {
@@ -100,7 +135,8 @@ describe('checkup', () => {
               [select(hdRootAddress), root],
               [call(listSeedAddresses), [root]],
               [call(delay, 2000), undefined],
-              [select(pendingMigrations), [MigrationTarget.PreHD]]
+              [select(pendingMigrations), [MigrationTarget.PreHD]],
+              [select(migrateableIdentities), [{address: '0x'}]]
             ])
             .put(addMigrationTarget(MigrationTarget.PreHD))
             .call(NavigationActions.push, {
@@ -120,7 +156,8 @@ describe('checkup', () => {
               [select(hdRootAddress), root],
               [call(listSeedAddresses), []],
               [call(delay, 2000), undefined],
-              [select(pendingMigrations), [MigrationTarget.PreHD]]
+              [select(pendingMigrations), [MigrationTarget.PreHD]],
+              [select(migrateableIdentities), [{address: '0x'}]]
             ])
             .put(addMigrationTarget(MigrationTarget.PreHD))
             .call(NavigationActions.push, {

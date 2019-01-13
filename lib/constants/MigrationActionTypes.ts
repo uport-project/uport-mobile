@@ -22,14 +22,16 @@ export const COMPLETED_MIGRATION_STEP = 'COMPLETED_MIGRATION_STEP'
 export const FAILED_MIGRATION_STEP = 'FAILED_MIGRATION_STEP'
 
 export enum MigrationTarget {
-  PreHD = "PreHD"
+  PreHD = "PreHD",
+  Legacy = "Legacy"
 }
 
 export enum MigrationStep {
   IdentityManagerChangeOwner = 'IdentityManagerChangeOwner',
   UpdatePreHDRootToHD = 'UpdatePreHDRootToHD',
   UportRegistryDDORefresh = 'UportRegistryDDORefresh',
-  CleanUpAfterMissingSeed = 'CleanUpAfterMissingSeed'
+  CleanUpAfterMissingSeed = 'CleanUpAfterMissingSeed',
+  MigrateLegacy = 'MigrateLegacy'
 }
 
 export enum MigrationStatus {
@@ -44,7 +46,8 @@ export interface Recipes {
 }
 
 export const targetRecipes : Recipes = {
-  PreHD: [MigrationStep.CleanUpAfterMissingSeed, MigrationStep.IdentityManagerChangeOwner, MigrationStep.UpdatePreHDRootToHD, MigrationStep.UportRegistryDDORefresh]
+  PreHD: [MigrationStep.CleanUpAfterMissingSeed, MigrationStep.IdentityManagerChangeOwner, MigrationStep.UpdatePreHDRootToHD, MigrationStep.UportRegistryDDORefresh],
+  Legacy: [MigrationStep.MigrateLegacy]
 }
 
 export interface TargetAction {

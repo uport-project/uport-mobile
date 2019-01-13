@@ -48,11 +48,13 @@ import { migrationStepStatus, migrationTargets, pendingMigrations, migrationComp
 import { currentAddress } from 'uPortMobile/lib/selectors/identities'
 import { isFullyHD, networkSettings } from 'uPortMobile/lib/selectors/chains'
 import { hdRootAddress, seedAddresses } from 'uPortMobile/lib/selectors/hdWallet'
+import { migrateableIdentities } from 'uPortMobile/lib/selectors/identities'
 
 import IdentityManagerChangeOwner from './migrations/IdentityManagerChangeOwner'
 import UpdatePreHDRootToHD from './migrations/UpdatePreHDRootToHD'
 import UportRegistryDDORefresh from './migrations/UportRegistryDDORefresh'
 import CleanUpAfterMissingSeed from './migrations/CleanUpAfterMissingSeed'
+import MigrateLegacy from './migrations/MigrateLegacy'
 
 import { NavigationActions } from 'uPortMobile/lib/utilities/NavigationActions'
 import { resetKey, listSeedAddresses } from 'uPortMobile/lib/sagas/keychain'
@@ -61,6 +63,10 @@ export function * checkup () : any {
   const fullHD = yield select(isFullyHD)
   const hd = yield select(hdRootAddress)
   const addresses = yield call(listSeedAddresses)
+  const migrateable = yield select(migrateableIdentities)
+  if (migrateable.length > 0) {
+    yield put(addMigrationTarget(MigrationTarget.Legacy))
+  }
   if (!fullHD || !addresses.includes(hd)) {
     yield put(addMigrationTarget(MigrationTarget.PreHD))
   }
@@ -80,7 +86,8 @@ const implementations = {
   IdentityManagerChangeOwner,
   UpdatePreHDRootToHD,
   UportRegistryDDORefresh,
-  CleanUpAfterMissingSeed
+  CleanUpAfterMissingSeed,
+  MigrateLegacy
 }
 
 export function * runMigrations ({target} : TargetAction) : any {
