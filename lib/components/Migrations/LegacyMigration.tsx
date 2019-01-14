@@ -29,24 +29,21 @@ import { colors } from 'uPortMobile/lib/styles/globalStyles'
 
 const S = require('string')
 
-
 interface RootProps {
   navigator: Navigator
 }
 
 const Migrate: React.SFC<RootProps> = ({navigator}) => {
   return <MigrationScreen
-    target={MigrationTarget.PreHD}
-    title='Migrate Identity Ownership Keys'
+    target={MigrationTarget.Legacy}
+    title='Replace Legacy Identity'
     navigator={navigator}
     >
     <View>
-      <Text title>Migrate old Pre HD Identity</Text>
+      <Text title>Replace Legacy Identity</Text>
       <Text p>You have an old Identity that can not be safely backed up.</Text>
-      <Step step={MigrationStep.CleanUpAfterMissingSeed} />
-      <Step step={MigrationStep.IdentityManagerChangeOwner} />
-      <Step step={MigrationStep.UpdatePreHDRootToHD} />
-      <Step step={MigrationStep.UportRegistryDDORefresh} />    </View>
+      <Step step={MigrationStep.MigrateLegacy} />
+    </View>
   </MigrationScreen>
 }
 export default Migrate
