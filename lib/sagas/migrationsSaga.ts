@@ -63,12 +63,12 @@ export function * checkup () : any {
   const fullHD = yield select(isFullyHD)
   const hd = yield select(hdRootAddress)
   const addresses = yield call(listSeedAddresses)
+  if (!fullHD || !addresses.includes(hd)) {
+    yield put(addMigrationTarget(MigrationTarget.PreHD))
+  }
   const migrateable = yield select(migrateableIdentities)
   if (migrateable.length > 0) {
     yield put(addMigrationTarget(MigrationTarget.Legacy))
-  }
-  if (!fullHD || !addresses.includes(hd)) {
-    yield put(addMigrationTarget(MigrationTarget.PreHD))
   }
   const pending = yield select(pendingMigrations)
   if (pending.length > 0 ) {
