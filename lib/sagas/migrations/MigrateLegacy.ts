@@ -48,10 +48,11 @@ function * migrate () : any {
   if (yield select(legacyRoot)) {
     const oldRoot = root
     const identity = yield call(createIdentityKeyPair)
-    const own = yield select(ownClaimsMap)
-    yield put(updateIdentity(root, {parent: identity.address}))
+    const own = (yield select(ownClaimsMap)) || {}
+    console.log('own', own)
+    yield put(updateIdentity(oldRoot, {parent: identity.address}))
     root = identity.address
-    yield put(updateIdentity(root, {own}))
+    yield put(updateIdentity(identity.address, {own}))
 
     const attestation = yield call(createToken, oldRoot, {sub: root, claim: {owns: oldRoot}})
     yield put(storeAttestation(attestation))
