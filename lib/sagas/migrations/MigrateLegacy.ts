@@ -32,7 +32,7 @@ import {
   ownClaimsMap
 } from 'uPortMobile/lib/selectors/identities'
 import {
-  updateIdentity
+  updateIdentity, storeAttestation
 } from 'uPortMobile/lib/actions/uportActions'
 
 const step = MigrationStep.MigrateLegacy
@@ -53,7 +53,8 @@ function * migrate () : any {
     root = identity.address
     yield put(updateIdentity(root, {own}))
 
-    const token = yield call(createToken, oldRoot, {sub: root, claim: {owns: oldRoot}})
+    const attestation = yield call(createToken, oldRoot, {sub: root, claim: {owns: oldRoot}})
+    yield put(storeAttestation(attestation))
   }
 
   for (let account of accounts) {

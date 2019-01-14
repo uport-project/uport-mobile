@@ -41,7 +41,7 @@ import {
 } from 'uPortMobile/lib/selectors/identities'
 
 import {
-  updateIdentity
+  updateIdentity, storeAttestation
 } from 'uPortMobile/lib/actions/uportActions'
 import { createIdentityKeyPair } from '../../keychain';
 import { createToken } from 'uPortMobile/lib/sagas/jwt'
@@ -86,6 +86,7 @@ describe('MigrateLegacy', () => {
               .put(updateIdentity(legacyDID, {parent: newDID}))
               .put(updateIdentity(newDID, {own}))              
               .call(createToken, legacyDID, {sub: newDID, claim:{owns: legacyDID}})
+              .put(storeAttestation(JWT))
               .put(saveMessage(step, 'Legacy Cleanup Performed'))
               .returns(true)
               .run()
@@ -126,6 +127,7 @@ describe('MigrateLegacy', () => {
               .put(updateIdentity(legacyDID, {parent: newDID}))
               .put(updateIdentity(newDID, {own}))
               .call(createToken, legacyDID, {sub: newDID, claim:{owns: legacyDID}})
+              .put(storeAttestation(JWT))
               .put(updateIdentity('account1', {parent: newDID}))
               .put(updateIdentity('account2', {parent: newDID}))
               .put(updateIdentity('account3', {parent: newDID}))
