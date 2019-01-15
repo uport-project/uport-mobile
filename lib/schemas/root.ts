@@ -1,7 +1,8 @@
-import { makeExecutableSchema } from 'graphql-tools'
+import { makeExecutableSchema, mergeSchemas } from 'graphql-tools'
 import { db, getContactList, getClaimsForDid } from 'uPortMobile/lib/sagas/databaseSaga'
 import store from 'uPortMobile/lib/store/store'
 import { currentDID, rootIdentities, identityAccounts } from 'uPortMobile/lib/selectors/identities'
+import etherscanShema from './etherscan'
 
 const typeDefs = `
   type Identity {
@@ -65,7 +66,14 @@ const resolvers = {
   }
 }
 
-export default makeExecutableSchema({
+const uportSchema = makeExecutableSchema({
   typeDefs,
   resolvers,
 })
+
+export default mergeSchemas({
+  schemas: [
+    uportSchema,
+    etherscanShema,
+  ],
+});
