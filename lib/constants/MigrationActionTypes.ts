@@ -46,7 +46,7 @@ export interface Recipes {
 }
 
 export const targetRecipes : Recipes = {
-  PreHD: [MigrationStep.CleanUpAfterMissingSeed, MigrationStep.IdentityManagerChangeOwner, MigrationStep.UpdatePreHDRootToHD, MigrationStep.UportRegistryDDORefresh],
+  PreHD: [MigrationStep.CleanUpAfterMissingSeed, MigrationStep.IdentityManagerChangeOwner, MigrationStep.UpdatePreHDRootToHD, MigrationStep.UportRegistryDDORefresh, MigrationStep.MigrateLegacy],
   Legacy: [MigrationStep.MigrateLegacy]
 }
 

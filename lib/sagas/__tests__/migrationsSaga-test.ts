@@ -53,6 +53,7 @@ import { migrationStepStatus, migrationTargets, pendingMigrations, migrationComp
 import { isFullyHD } from 'uPortMobile/lib/selectors/chains'
 import { hdRootAddress } from 'uPortMobile/lib/selectors/hdWallet'
 import { migrateableIdentities } from 'uPortMobile/lib/selectors/identities'
+import { hasAttestations } from 'uPortMobile/lib/selectors/attestations';
 
 describe('checkup', () => {
   const root = '0xroot'
@@ -61,9 +62,6 @@ describe('checkup', () => {
     it('does not Add Migration Target', () => {
       return expectSaga(migrationsSaga)
           .provide([
-            [select(isFullyHD), true],
-            [select(hdRootAddress), root],
-            [call(listSeedAddresses), [root]],
             [select(pendingMigrations), []],
             [select(migrateableIdentities), []]
           ])
@@ -77,98 +75,124 @@ describe('checkup', () => {
     it('should add Migration Target', () => {
       return expectSaga(migrationsSaga)
           .provide([
-            [select(isFullyHD), true],
-            [select(hdRootAddress), root],
-            [call(listSeedAddresses), [root]],
             [select(pendingMigrations), []],
-            [select(migrateableIdentities), [{address: '0x'}]]
+            [select(migrateableIdentities), [{address: '0x'}]],
+            [select(hasAttestations), false]
           ])
           .put(addMigrationTarget(MigrationTarget.Legacy))
           .dispatch(loadedDB())
           .silentRun()
     })
+
+    describe('Should we migrate PreHD', () => {
+      describe('without attestions', () => {
+        it('does not Add PreHD Migration Target', () => {
+          return expectSaga(migrationsSaga)
+              .provide([
+                [select(pendingMigrations), []],
+                [select(migrateableIdentities), [{address: '0x'}]],
+                [select(hasAttestations), false]
+              ])
+              .put(addMigrationTarget(MigrationTarget.Legacy))
+              .not.put(addMigrationTarget(MigrationTarget.PreHD))
+              .dispatch(loadedDB())
+              .silentRun()
+        })
+      })
+
+      describe('with attestations', () => {
+        describe('hd wallet', () => {
+          it('does not Add Migration Target', () => {
+            return expectSaga(migrationsSaga)
+                .provide([
+                  [select(isFullyHD), true],
+                  [select(hdRootAddress), root],
+                  [call(listSeedAddresses), [root]],
+                  [select(pendingMigrations), []],
+                  [select(migrateableIdentities), [{address: '0x'}]],
+                  [select(hasAttestations), true]
+                ])
+                .put(addMigrationTarget(MigrationTarget.Legacy))
+                .not.put(addMigrationTarget(MigrationTarget.PreHD))
+                .dispatch(loadedDB())
+                .silentRun()
+          })
+        })
+      
+        describe('pre hd', () => {
+          describe('no seed', () => {
+            it('adds a Migration Target', () => {
+              return expectSaga(migrationsSaga)
+                  .provide([
+                    [select(hasAttestations), true],
+                    [select(isFullyHD), false],
+                    [select(hdRootAddress), undefined],
+                    [call(listSeedAddresses), []],
+                    [call(delay, 2000), undefined],
+                    [select(pendingMigrations), [MigrationTarget.PreHD]],
+                    [select(migrateableIdentities), [{address: '0x'}]]
+                  ])
+                  .put(addMigrationTarget(MigrationTarget.Legacy))
+                  .put(addMigrationTarget(MigrationTarget.PreHD))
+                  .call(NavigationActions.push, {
+                    screen: `migrations.PreHD`,
+                    animationType: 'slide-up'
+                  })
+                  .dispatch(loadedDB())
+                  .silentRun()
+            })  
+          })
+      
+          describe('with working seed', () => {
+            it('adds a Migration Target', () => {
+              return expectSaga(migrationsSaga)
+                  .provide([
+                    [select(hasAttestations), true],
+                    [select(isFullyHD), false],
+                    [select(hdRootAddress), root],
+                    [call(listSeedAddresses), [root]],
+                    [call(delay, 2000), undefined],
+                    [select(pendingMigrations), [MigrationTarget.PreHD]],
+                    [select(migrateableIdentities), [{address: '0x'}]]
+                  ])
+                  .put(addMigrationTarget(MigrationTarget.Legacy))
+                  .put(addMigrationTarget(MigrationTarget.PreHD))
+                  .call(NavigationActions.push, {
+                    screen: `migrations.PreHD`,
+                    animationType: 'slide-up'
+                  })
+                  .dispatch(loadedDB())
+                  .silentRun()
+            })  
+          })
+      
+          describe('with missing seed', () => {
+            it('adds a Migration Target', () => {
+              return expectSaga(migrationsSaga)
+                  .provide([
+                    [select(hasAttestations), true],
+                    [select(isFullyHD), false],
+                    [select(hdRootAddress), root],
+                    [call(listSeedAddresses), []],
+                    [call(delay, 2000), undefined],
+                    [select(pendingMigrations), [MigrationTarget.PreHD]],
+                    [select(migrateableIdentities), [{address: '0x'}]]
+                  ])
+                  .put(addMigrationTarget(MigrationTarget.Legacy))
+                  .put(addMigrationTarget(MigrationTarget.PreHD))
+                  .call(NavigationActions.push, {
+                    screen: `migrations.PreHD`,
+                    animationType: 'slide-up'
+                  })
+                  .dispatch(loadedDB())
+                  .silentRun()
+            })  
+          })
+        })      
+      })
+    })    
   })
 
-  describe('hd wallet', () => {
-    it('does not Add Migration Target', () => {
-      return expectSaga(migrationsSaga)
-          .provide([
-            [select(isFullyHD), true],
-            [select(hdRootAddress), root],
-            [call(listSeedAddresses), [root]],
-            [select(pendingMigrations), []],
-            [select(migrateableIdentities), []]
-          ])
-          .not.put(addMigrationTarget(MigrationTarget.PreHD))
-          .dispatch(loadedDB())
-          .silentRun()
-    })
-  })
-
-  describe('pre hd', () => {
-    describe('no seed', () => {
-      it('adds a Migration Target', () => {
-        return expectSaga(migrationsSaga)
-            .provide([
-              [select(isFullyHD), false],
-              [select(hdRootAddress), undefined],
-              [call(listSeedAddresses), []],
-              [call(delay, 2000), undefined],
-              [select(pendingMigrations), [MigrationTarget.PreHD]],
-              [select(migrateableIdentities), [{address: '0x'}]]
-            ])
-            .put(addMigrationTarget(MigrationTarget.PreHD))
-            .call(NavigationActions.push, {
-              screen: `migrations.PreHD`,
-              animationType: 'slide-up'
-            })
-            .dispatch(loadedDB())
-            .silentRun()
-      })  
-    })
-
-    describe('with working seed', () => {
-      it('adds a Migration Target', () => {
-        return expectSaga(migrationsSaga)
-            .provide([
-              [select(isFullyHD), false],
-              [select(hdRootAddress), root],
-              [call(listSeedAddresses), [root]],
-              [call(delay, 2000), undefined],
-              [select(pendingMigrations), [MigrationTarget.PreHD]],
-              [select(migrateableIdentities), [{address: '0x'}]]
-            ])
-            .put(addMigrationTarget(MigrationTarget.PreHD))
-            .call(NavigationActions.push, {
-              screen: `migrations.PreHD`,
-              animationType: 'slide-up'
-            })
-            .dispatch(loadedDB())
-            .silentRun()
-      })  
-    })
-
-    describe('with missing seed', () => {
-      it('adds a Migration Target', () => {
-        return expectSaga(migrationsSaga)
-            .provide([
-              [select(isFullyHD), false],
-              [select(hdRootAddress), root],
-              [call(listSeedAddresses), []],
-              [call(delay, 2000), undefined],
-              [select(pendingMigrations), [MigrationTarget.PreHD]],
-              [select(migrateableIdentities), [{address: '0x'}]]
-            ])
-            .put(addMigrationTarget(MigrationTarget.PreHD))
-            .call(NavigationActions.push, {
-              screen: `migrations.PreHD`,
-              animationType: 'slide-up'
-            })
-            .dispatch(loadedDB())
-            .silentRun()
-      })  
-    })
-  })
 })
 
 describe('runMigrations', () => {
@@ -193,6 +217,7 @@ describe('runMigrations', () => {
           [select(migrationStepStatus, MigrationStep.IdentityManagerChangeOwner), MigrationStatus.Completed],
           [select(migrationStepStatus, MigrationStep.UpdatePreHDRootToHD), MigrationStatus.Completed],
           [select(migrationStepStatus, MigrationStep.UportRegistryDDORefresh), MigrationStatus.Completed],
+          [select(migrationStepStatus, MigrationStep.MigrateLegacy), MigrationStatus.Completed],
           [select(migrationCompleted, MigrationTarget.PreHD), true],
           [matchers.call.fn(performStep), undefined]
         ])
@@ -201,6 +226,7 @@ describe('runMigrations', () => {
         .call(performStep, MigrationStep.IdentityManagerChangeOwner)
         .call(performStep, MigrationStep.UpdatePreHDRootToHD)
         .call(performStep, MigrationStep.UportRegistryDDORefresh)
+        .call(performStep, MigrationStep.MigrateLegacy)
         .put(completeProcess(MigrationTarget.PreHD))
         .dispatch(runMigrations(MigrationTarget.PreHD))
         .silentRun()

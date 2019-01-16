@@ -57,26 +57,30 @@ import MigrateLegacy from './migrations/MigrateLegacy'
 
 import { NavigationActions } from 'uPortMobile/lib/utilities/NavigationActions'
 import { resetKey, listSeedAddresses } from 'uPortMobile/lib/sagas/keychain'
+import { hasAttestations } from '../selectors/attestations';
 
-function * checkForPreHD () : any {
+export function * checkForPreHD () : any {
+  if (!(yield select(hasAttestations))) return
   const fullHD = yield select(isFullyHD)
   const hd = yield select(hdRootAddress)
   const addresses = yield call(listSeedAddresses)
-  if (!fullHD || !addresses.includes(hd)) {
+  if ((!fullHD || !addresses.includes(hd)))  {
     yield put(addMigrationTarget(MigrationTarget.PreHD))
   }
 }
 
-function * checkForLegacy () : any {
+export function * checkForLegacy () : any {
   const migrateable = yield select(migrateableIdentities)
   if (migrateable.length > 0) {
     yield put(addMigrationTarget(MigrationTarget.Legacy))
+    return true
   }
 }
 
 export function * checkup () : any {
-  yield call(checkForLegacy)
-  yield call(checkForPreHD)
+  if (yield call(checkForLegacy)) {
+    yield call(checkForPreHD)
+  }
 
   const pending = yield select(pendingMigrations)
   console.log('pending migrations', pending)
