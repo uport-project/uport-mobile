@@ -45,10 +45,9 @@ import {
 } from 'uPortMobile/lib/actions/processStatusActions'
 
 import { migrationStepStatus, migrationTargets, pendingMigrations, migrationCompleted } from 'uPortMobile/lib/selectors/migrations'
-import { currentAddress } from 'uPortMobile/lib/selectors/identities'
 import { isFullyHD, networkSettings } from 'uPortMobile/lib/selectors/chains'
 import { hdRootAddress, seedAddresses } from 'uPortMobile/lib/selectors/hdWallet'
-import { migrateableIdentities } from 'uPortMobile/lib/selectors/identities'
+import { migrateableIdentities, currentAddress } from 'uPortMobile/lib/selectors/identities'
 
 import IdentityManagerChangeOwner from './migrations/IdentityManagerChangeOwner'
 import UpdatePreHDRootToHD from './migrations/UpdatePreHDRootToHD'
@@ -59,18 +58,28 @@ import MigrateLegacy from './migrations/MigrateLegacy'
 import { NavigationActions } from 'uPortMobile/lib/utilities/NavigationActions'
 import { resetKey, listSeedAddresses } from 'uPortMobile/lib/sagas/keychain'
 
-export function * checkup () : any {
+function * checkForPreHD () : any {
   const fullHD = yield select(isFullyHD)
   const hd = yield select(hdRootAddress)
   const addresses = yield call(listSeedAddresses)
   if (!fullHD || !addresses.includes(hd)) {
     yield put(addMigrationTarget(MigrationTarget.PreHD))
   }
+}
+
+function * checkForLegacy () : any {
   const migrateable = yield select(migrateableIdentities)
   if (migrateable.length > 0) {
     yield put(addMigrationTarget(MigrationTarget.Legacy))
   }
+}
+
+export function * checkup () : any {
+  yield call(checkForLegacy)
+  yield call(checkForPreHD)
+
   const pending = yield select(pendingMigrations)
+  console.log('pending migrations', pending)
   if (pending.length > 0 ) {
     const target = pending[0]
     yield call(delay, 2000)

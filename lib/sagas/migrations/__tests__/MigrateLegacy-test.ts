@@ -45,6 +45,8 @@ import {
 } from 'uPortMobile/lib/actions/uportActions'
 import { createIdentityKeyPair } from '../../keychain';
 import { createToken } from 'uPortMobile/lib/sagas/jwt'
+import { handleURL } from 'uPortMobile/lib/actions/requestActions';
+import { hasAttestations } from 'uPortMobile/lib/selectors/attestations';
 
 const step = MigrationStep.MigrateLegacy
 
@@ -79,19 +81,42 @@ describe('MigrateLegacy', () => {
                 [select(legacyRoot), true],
                 [call(createIdentityKeyPair), newId],
                 [select(ownClaimsMap), own],
-                [call(createToken, legacyDID, {sub: newDID, claim:{owns: legacyDID}}), JWT],
-                [select(subAccounts), []]
+                [select(hasAttestations), false],
+                [select(subAccounts, legacyDID), []]
               ])
               .call(createIdentityKeyPair)
               .put(updateIdentity(legacyDID, {parent: newDID}))
               .put(updateIdentity(newDID, {own}))              
-              .call(createToken, legacyDID, {sub: newDID, claim:{owns: legacyDID}})
-              .put(storeAttestation(JWT))
               .put(saveMessage(step, 'Legacy Cleanup Performed'))
               .returns(true)
               .run()
           })
         })          
+
+        describe('with attestations', () => {
+          it('should add ownership token', () => {
+            return expectSaga(migrate)
+              .provide([
+                [select(migrateableIdentities), [legacy]],
+                [select(currentAddress), legacyDID],
+                [select(legacyRoot), true],
+                [call(createIdentityKeyPair), newId],
+                [select(ownClaimsMap), own],
+                [select(hasAttestations), true],
+                [call(createToken, legacyDID, {sub: newDID, claim:{owns: legacyDID}}), JWT],
+                [select(subAccounts, legacyDID), []]
+              ])
+              .call(createIdentityKeyPair)
+              .put(updateIdentity(legacyDID, {parent: newDID}))
+              .put(updateIdentity(newDID, {own}))              
+              .call(createToken, legacyDID, {sub: newDID, claim:{owns: legacyDID}})
+              .put(handleURL(`me.uport:req/JWT`, {popup: false}))
+              .put(saveMessage(step, 'Legacy Cleanup Performed'))
+              .returns(true)
+              .run()
+          })
+        })          
+
         describe('with sub accounts', () => {
           it('should clean it up', () => {
             const hdaccount1 = {
@@ -119,15 +144,13 @@ describe('MigrateLegacy', () => {
                   [select(currentAddress), legacyDID],
                   [call(createIdentityKeyPair), newId],
                   [select(ownClaimsMap), own],
-                  [call(createToken, legacyDID, {sub: newDID, claim:{owns: legacyDID}}), JWT],
+                  [select(hasAttestations), false],
                   [select(legacyRoot), true],
-                  [select(subAccounts), accounts]
+                  [select(subAccounts, legacyDID), accounts]
               ])
               .call(createIdentityKeyPair)
               .put(updateIdentity(legacyDID, {parent: newDID}))
               .put(updateIdentity(newDID, {own}))
-              .call(createToken, legacyDID, {sub: newDID, claim:{owns: legacyDID}})
-              .put(storeAttestation(JWT))
               .put(updateIdentity('account1', {parent: newDID}))
               .put(updateIdentity('account2', {parent: newDID}))
               .put(updateIdentity('account3', {parent: newDID}))
@@ -146,7 +169,7 @@ describe('MigrateLegacy', () => {
                 [select(migrateableIdentities), [legacy]],
                 [select(currentAddress), legacyDID],
                 [select(legacyRoot), false],
-                [select(subAccounts), []]
+                [select(subAccounts, legacyDID), []]
               ])
               .not.call(createIdentityKeyPair)
               .not.put(updateIdentity(legacyDID, {parent: newDID}))
@@ -183,7 +206,7 @@ describe('MigrateLegacy', () => {
                   [select(currentAddress), legacyDID],
                   [call(createIdentityKeyPair), newId],
                   [select(legacyRoot), false],
-                  [select(subAccounts), accounts]
+                  [select(subAccounts, legacyDID), accounts]
               ])
               .not.call(createIdentityKeyPair)
               .not.put(updateIdentity(legacyDID, {parent: newDID}))
@@ -195,7 +218,6 @@ describe('MigrateLegacy', () => {
               .run()
           })
         })
-   
       })
     })
   })

@@ -31,9 +31,11 @@ import {
   legacyRoot,
   ownClaimsMap
 } from 'uPortMobile/lib/selectors/identities'
+import { hasAttestations } from 'uPortMobile/lib/selectors/attestations'
 import {
   updateIdentity, storeAttestation
 } from 'uPortMobile/lib/actions/uportActions'
+import { handleURL } from 'uPortMobile/lib/actions/requestActions';
 
 const step = MigrationStep.MigrateLegacy
 
@@ -44,18 +46,20 @@ function * migrate () : any {
     return true
   }
   let root = yield select(currentAddress)
-  const accounts = yield select(subAccounts)
+  const accounts = yield select(subAccounts, root)
   if (yield select(legacyRoot)) {
-    const oldRoot = root
+    const oldRoot = root    
+    const own = (yield select(ownClaimsMap)) || {}    
+    const attested = yield select(hasAttestations)
     const identity = yield call(createIdentityKeyPair)
-    const own = (yield select(ownClaimsMap)) || {}
-    console.log('own', own)
     yield put(updateIdentity(oldRoot, {parent: identity.address}))
     root = identity.address
     yield put(updateIdentity(identity.address, {own}))
 
-    const attestation = yield call(createToken, oldRoot, {sub: root, claim: {owns: oldRoot}})
-    yield put(storeAttestation(attestation))
+    if (attested) {
+      const attestation = yield call(createToken, oldRoot, {sub: root, claim: {owns: oldRoot}})
+      yield put(handleURL(`me.uport:req/${attestation}`, {popup: false}))  
+    }
   }
 
   for (let account of accounts) {
