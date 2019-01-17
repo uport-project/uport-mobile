@@ -120,7 +120,7 @@ describe('checkup', () => {
         })
       
         describe('pre hd', () => {
-          describe('no seed', () => {
+          describe('able to sign', () => {
             it('adds a Migration Target', () => {
               return expectSaga(migrationsSaga)
                   .provide([
@@ -132,7 +132,7 @@ describe('checkup', () => {
                     [select(pendingMigrations), [MigrationTarget.PreHD]],
                     [select(migrateableIdentities), [{address: '0x'}]]
                   ])
-                  .put(addMigrationTarget(MigrationTarget.Legacy))
+                  .not.put(addMigrationTarget(MigrationTarget.Legacy))
                   .put(addMigrationTarget(MigrationTarget.PreHD))
                   .call(NavigationActions.push, {
                     screen: `migrations.PreHD`,
@@ -143,12 +143,12 @@ describe('checkup', () => {
             })  
           })
       
-          describe('with working seed', () => {
-            it('adds a Migration Target', () => {
+          describe('full HD', () => {
+            it('does not add a Migration Target', () => {
               return expectSaga(migrationsSaga)
                   .provide([
                     [select(hasAttestations), true],
-                    [select(isFullyHD), false],
+                    [select(isFullyHD), true],
                     [select(currentAddress), root],
                     [call(canSignFor, root), true],
                     [call(delay, 2000), undefined],
@@ -156,7 +156,7 @@ describe('checkup', () => {
                     [select(migrateableIdentities), [{address: '0x'}]]
                   ])
                   .put(addMigrationTarget(MigrationTarget.Legacy))
-                  .put(addMigrationTarget(MigrationTarget.PreHD))
+                  .not.put(addMigrationTarget(MigrationTarget.PreHD))
                   .call(NavigationActions.push, {
                     screen: `migrations.PreHD`,
                     animationType: 'slide-up'
@@ -164,32 +164,32 @@ describe('checkup', () => {
                   .dispatch(loadedDB())
                   .silentRun()
             })  
-          })
-      
-          describe('with missing seed', () => {
-            it('adds a Migration Target', () => {
-              return expectSaga(migrationsSaga)
-                  .provide([
-                    [select(hasAttestations), true],
-                    [select(isFullyHD), false],
-                    [select(currentAddress), root],
-                    [call(canSignFor, root), true],
-                    [call(listSeedAddresses), []],
-                    [call(delay, 2000), undefined],
-                    [select(pendingMigrations), [MigrationTarget.PreHD]],
-                    [select(migrateableIdentities), [{address: '0x'}]]
-                  ])
-                  .put(addMigrationTarget(MigrationTarget.Legacy))
-                  .put(addMigrationTarget(MigrationTarget.PreHD))
-                  .call(NavigationActions.push, {
-                    screen: `migrations.PreHD`,
-                    animationType: 'slide-up'
-                  })
-                  .dispatch(loadedDB())
-                  .silentRun()
-            })  
-          })
-        })      
+          })      
+        })  
+        describe('unable to sign', () => {
+          it('adds a Migration Target', () => {
+            return expectSaga(migrationsSaga)
+                .provide([
+                  [select(hasAttestations), true],
+                  [select(isFullyHD), false],
+                  [select(currentAddress), root],
+                  [call(canSignFor, root), false],
+                  [call(listSeedAddresses), []],
+                  [call(delay, 2000), undefined],
+                  [select(pendingMigrations), [MigrationTarget.PreHD]],
+                  [select(migrateableIdentities), [{address: '0x'}]]
+                ])
+                .put(addMigrationTarget(MigrationTarget.Legacy))
+                .not.put(addMigrationTarget(MigrationTarget.PreHD))
+                .call(NavigationActions.push, {
+                  screen: `migrations.PreHD`,
+                  animationType: 'slide-up'
+                })
+                .dispatch(loadedDB())
+                .silentRun()
+          })  
+        })
+  
       })
     })    
   })

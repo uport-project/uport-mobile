@@ -64,24 +64,21 @@ export function * checkForPreHD () : any {
   const fullHD = yield select(isFullyHD)
   const address = yield select(currentAddress)
   const canSign = yield call(canSignFor, address)
-  if (canSign) {
-    if (!fullHD) yield put(addMigrationTarget(MigrationTarget.PreHD))
-  } else {
-    // mark accounts as disabled
-  }
+  return canSign && !fullHD
 }
 
 export function * checkForLegacy () : any {
   const migrateable = yield select(migrateableIdentities)
-  if (migrateable.length > 0) {
-    yield put(addMigrationTarget(MigrationTarget.Legacy))
-    return true
-  }
+  return (migrateable.length > 0)
 }
 
 export function * checkup () : any {
   if (yield call(checkForLegacy)) {
-    yield call(checkForPreHD)
+    if (yield call(checkForPreHD)) {
+      yield put(addMigrationTarget(MigrationTarget.PreHD))
+    } else {
+      yield put(addMigrationTarget(MigrationTarget.Legacy))
+    }
   }
 
   const pending = yield select(pendingMigrations)
