@@ -3629,23 +3629,6 @@ detective@^5.0.2:
     defined "^1.0.0"
     minimist "^1.1.1"
 
-did-jwt@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/did-jwt/-/did-jwt-0.0.9.tgz#52751b9f24f23cb8c75572eae9c2a68731d21c0c"
-  integrity sha512-cJTUzMqLIPWelbkLQ2vcZjEZ942fXLfSee+XdDvqIZVxR7lBBMXrBNL1uiboJQZzCi5x2y4m89mlrIZQn50WXw==
-  dependencies:
-    babel-runtime "^6.26.0"
-    base64url "^2.0.0"
-    buffer "^5.1.0"
-    did-resolver "^0.0.4"
-    elliptic "^6.4.0"
-    js-sha256 "^0.9.0"
-    js-sha3 "^0.7.0"
-    jsdoc-to-markdown "^4.0.1"
-    mnid "^0.1.1"
-    uport-did-resolver "^0.0.2"
-    uport-lite "^1.0.2"
-
 did-jwt@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/did-jwt/-/did-jwt-0.1.0.tgz#e4a2217f2e1230b45b43daa415d9d5da3a751a27"
@@ -3663,7 +3646,7 @@ did-jwt@^0.1.0:
     uport-did-resolver "0.0.4-alpha2"
     uport-lite "^1.0.2"
 
-did-resolver@0.0.6:
+did-resolver@0.0.6, did-resolver@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/did-resolver/-/did-resolver-0.0.6.tgz#2d4638b8914871c19945fb3243f6f298c1cca9db"
   integrity sha512-PqxzaoomTbJG3IzEouUGgppu3xrsbGKHS75zS3vS/Hfm56XxLpwIe7yFLokgXUbMWmLa0dczFHOibmebO4wRLA==
@@ -4568,21 +4551,6 @@ ethr-did-registry@^0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/ethr-did-registry/-/ethr-did-registry-0.0.3.tgz#f363d2c73cb9572b57bd7a5c9c90c88485feceb5"
   integrity sha512-4BPvMGkxAK9vTduCq6D5b8ZqjteD2cvDIPPriXP6nnmPhWKFSxypo+AFvyQ0omJGa0cGTR+dkdI/8jiF7U/qaw==
-
-ethr-did-resolver@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/ethr-did-resolver/-/ethr-did-resolver-0.1.1.tgz#30ed9b86eec7e44f8bb538c7f89aabe9130e82ae"
-  integrity sha512-scrAddNZR7O+3f2Q+JjJqQTff+eHUAsmR8bFaVWxsAdz2vjtvycV7fpFOJtkn7ouOWvPCLusR6R0dBiCRvYw/g==
-  dependencies:
-    babel-plugin-module-resolver "^3.1.1"
-    babel-runtime "^6.26.0"
-    buffer "^5.1.0"
-    did-resolver "^0.0.4"
-    ethjs-abi "^0.2.1"
-    ethjs-contract "^0.1.9"
-    ethjs-provider-http "^0.1.6"
-    ethjs-query "^0.3.5"
-    ethr-did-registry "^0.0.3"
 
 ethr-did-resolver@^0.2.0:
   version "0.2.0"
@@ -5702,14 +5670,6 @@ https-browserify@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
   integrity sha1-7AbBDgo0wPL68Zn3/X/Hj//QPHM=
-
-https-did-resolver@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/https-did-resolver/-/https-did-resolver-0.0.3.tgz#00fd634042cebf468fe45ecec2a45c1b85a9263a"
-  integrity sha512-Cne1BMKMKGR0F6hMJqanybLCQ8J4RZ1rvIpWazzt8BYxKYEsAc/qpGyIV+8hsGvA8x3qof15GrLatrf59fsV4w==
-  dependencies:
-    did-resolver "^0.0.4"
-    xmlhttprequest "^1.8.0"
 
 https-did-resolver@^0.1.0:
   version "0.1.0"
@@ -11452,19 +11412,19 @@ untildify@^3.0.2:
   resolved "https://registry.yarnpkg.com/untildify/-/untildify-3.0.2.tgz#7f1f302055b3fea0f3e81dc78eb36766cb65e3f1"
   integrity sha1-fx8wIFWz/qDz6B3HjrNnZstl4/E=
 
-uport-credentials@^1.1.0-alpha-2:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/uport-credentials/-/uport-credentials-1.1.0.tgz#110e3e5c44f639755eaad82d6a7d8f576cca1e6c"
-  integrity sha512-8NqEa5A68eOjSIDXqYfWpgrxFcUj+MAa7+LUMgu+qGEUDuSEfChaiFpDurdx0ik3KQCLMhspiLnkZQiKUoe6JA==
+uport-credentials@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/uport-credentials/-/uport-credentials-1.1.2.tgz#140c56c15cd568a5f6c12a337dfa4b30d3e96891"
+  integrity sha512-XF4eS/PWkQX3UiRm7G8jHdQpuTt0IePcb6au+m1I57icndW9whoLpRt+9ImtXZXjRjknlENz+Pzfc/JJMJidIQ==
   dependencies:
-    did-jwt "^0.0.9"
-    did-resolver "^0.0.4"
+    did-jwt "^0.1.0"
+    did-resolver "^0.0.6"
     ethjs-util "^0.1.3"
-    ethr-did-resolver "^0.1.1"
-    https-did-resolver "^0.0.3"
+    ethr-did-resolver "^0.2.0"
+    https-did-resolver "^0.1.0"
     jsontokens "^0.7.8"
     mnid "^0.1.1"
-    uport-did-resolver "^0.0.2"
+    uport-did-resolver "^0.0.4"
     uport-lite "^1.0.2"
 
 uport-did-resolver@0.0.4-alpha2:
@@ -11474,15 +11434,6 @@ uport-did-resolver@0.0.4-alpha2:
   dependencies:
     did-resolver "0.0.6-alpha5"
     uport-lite "^1.0.3"
-
-uport-did-resolver@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/uport-did-resolver/-/uport-did-resolver-0.0.2.tgz#b1e9deec8bf5d08d101d078ea876aa09ac727cce"
-  integrity sha512-QiW0340J6/JMQqbtArRqfZBNRQv9sRIaMcHfJigzcQy2G9EFUhhJAHtIe0nrQt4XQ4VGkZ0iwk1CE/P7+jr4FA==
-  dependencies:
-    babel-runtime "^6.26.0"
-    did-resolver "^0.0.4"
-    uport-lite "^1.0.2"
 
 uport-did-resolver@^0.0.4:
   version "0.0.4"
