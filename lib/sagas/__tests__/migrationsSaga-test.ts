@@ -22,7 +22,7 @@ import { select, call } from 'redux-saga/effects'
 import { delay } from 'redux-saga'
 import migrationsSaga, { performStep, runImplementationStep } from '../migrationsSaga'
 import IdentityManagerChangeOwner from '../migrations/IdentityManagerChangeOwner'
-import { listSeedAddresses } from 'uPortMobile/lib/sagas/keychain'
+import { listSeedAddresses, canSignFor } from 'uPortMobile/lib/sagas/keychain'
 import { 
   RUN_MIGRATIONS,
   MigrationStep, 
@@ -52,7 +52,7 @@ import { NavigationActions } from 'uPortMobile/lib/utilities/NavigationActions'
 import { migrationStepStatus, migrationTargets, pendingMigrations, migrationCompleted } from 'uPortMobile/lib/selectors/migrations'
 import { isFullyHD } from 'uPortMobile/lib/selectors/chains'
 import { hdRootAddress } from 'uPortMobile/lib/selectors/hdWallet'
-import { migrateableIdentities } from 'uPortMobile/lib/selectors/identities'
+import { migrateableIdentities, currentAddress } from 'uPortMobile/lib/selectors/identities'
 import { hasAttestations } from 'uPortMobile/lib/selectors/attestations';
 
 describe('checkup', () => {
@@ -106,8 +106,8 @@ describe('checkup', () => {
             return expectSaga(migrationsSaga)
                 .provide([
                   [select(isFullyHD), true],
-                  [select(hdRootAddress), root],
-                  [call(listSeedAddresses), [root]],
+                  [select(currentAddress), root],
+                  [call(canSignFor, root), true],
                   [select(pendingMigrations), []],
                   [select(migrateableIdentities), [{address: '0x'}]],
                   [select(hasAttestations), true]
@@ -126,8 +126,8 @@ describe('checkup', () => {
                   .provide([
                     [select(hasAttestations), true],
                     [select(isFullyHD), false],
-                    [select(hdRootAddress), undefined],
-                    [call(listSeedAddresses), []],
+                    [select(currentAddress), root],
+                    [call(canSignFor, root), true],
                     [call(delay, 2000), undefined],
                     [select(pendingMigrations), [MigrationTarget.PreHD]],
                     [select(migrateableIdentities), [{address: '0x'}]]
@@ -149,8 +149,8 @@ describe('checkup', () => {
                   .provide([
                     [select(hasAttestations), true],
                     [select(isFullyHD), false],
-                    [select(hdRootAddress), root],
-                    [call(listSeedAddresses), [root]],
+                    [select(currentAddress), root],
+                    [call(canSignFor, root), true],
                     [call(delay, 2000), undefined],
                     [select(pendingMigrations), [MigrationTarget.PreHD]],
                     [select(migrateableIdentities), [{address: '0x'}]]
@@ -172,7 +172,8 @@ describe('checkup', () => {
                   .provide([
                     [select(hasAttestations), true],
                     [select(isFullyHD), false],
-                    [select(hdRootAddress), root],
+                    [select(currentAddress), root],
+                    [call(canSignFor, root), true],
                     [call(listSeedAddresses), []],
                     [call(delay, 2000), undefined],
                     [select(pendingMigrations), [MigrationTarget.PreHD]],
