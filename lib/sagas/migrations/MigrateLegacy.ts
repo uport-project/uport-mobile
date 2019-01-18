@@ -16,8 +16,9 @@
 // along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
 //
 import { all, takeEvery, call, select, put } from 'redux-saga/effects'
-import { createIdentityKeyPair } from 'uPortMobile/lib/sagas/keychain'
+import { createIdentityKeyPair, canSignFor } from 'uPortMobile/lib/sagas/keychain'
 import { createToken } from 'uPortMobile/lib/sagas/jwt'
+
 import { 
   MigrationStep
 } from 'uPortMobile/lib/constants/MigrationActionTypes'
@@ -55,17 +56,34 @@ function * migrate () : any {
     yield put(updateIdentity(oldRoot, {parent: identity.address}))
     root = identity.address
     yield put(updateIdentity(identity.address, {own}))
+    const signable = yield call(canSignFor, oldRoot)
+    if (signable) {
+      if (attested) {
+        const attestation = yield call(createToken, oldRoot, {sub: root, claim: {owns: oldRoot}})
+        yield put(handleURL(`me.uport:req/${attestation}`, {popup: false}))  
+      }  
+    } else  {
+      yield put(updateIdentity(oldRoot, {
+        parent: root,
+        disabled: true,
+        error: `Legacy Identity has been Disabled. Keys are no longer available.`
+      }))
 
-    if (attested) {
-      const attestation = yield call(createToken, oldRoot, {sub: root, claim: {owns: oldRoot}})
-      yield put(handleURL(`me.uport:req/${attestation}`, {popup: false}))  
     }
   }
 
   for (let account of accounts) {
-    yield put(updateIdentity(account.address, {
-      parent: root,
-    }))
+    const available = yield select(canSignFor, account.address)
+    if (available) {
+      yield put(updateIdentity(account.address, {
+        parent: root,
+      }))  
+    } else {
+      yield put(updateIdentity(account.address, {
+        disabled: true,
+        error: `Legacy Identity has been Disabled. Keys are no longer available.`
+      }))
+    }
   }
   yield put(saveMessage(step, 'Legacy Cleanup Performed'))
 

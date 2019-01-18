@@ -43,7 +43,7 @@ import {
 import {
   updateIdentity, storeAttestation
 } from 'uPortMobile/lib/actions/uportActions'
-import { createIdentityKeyPair } from '../../keychain';
+import { createIdentityKeyPair, canSignFor } from '../../keychain';
 import { createToken } from 'uPortMobile/lib/sagas/jwt'
 import { handleURL } from 'uPortMobile/lib/actions/requestActions';
 import { hasAttestations } from 'uPortMobile/lib/selectors/attestations';
@@ -81,6 +81,7 @@ describe('MigrateLegacy', () => {
                 [select(legacyRoot), true],
                 [call(createIdentityKeyPair), newId],
                 [select(ownClaimsMap), own],
+                [call(canSignFor, legacyDID), true],
                 [select(hasAttestations), false],
                 [select(subAccounts, legacyDID), []]
               ])
@@ -94,26 +95,59 @@ describe('MigrateLegacy', () => {
         })          
 
         describe('with attestations', () => {
-          it('should add ownership token', () => {
-            return expectSaga(migrate)
-              .provide([
-                [select(migrateableIdentities), [legacy]],
-                [select(currentAddress), legacyDID],
-                [select(legacyRoot), true],
-                [call(createIdentityKeyPair), newId],
-                [select(ownClaimsMap), own],
-                [select(hasAttestations), true],
-                [call(createToken, legacyDID, {sub: newDID, claim:{owns: legacyDID}}), JWT],
-                [select(subAccounts, legacyDID), []]
-              ])
-              .call(createIdentityKeyPair)
-              .put(updateIdentity(legacyDID, {parent: newDID}))
-              .put(updateIdentity(newDID, {own}))              
-              .call(createToken, legacyDID, {sub: newDID, claim:{owns: legacyDID}})
-              .put(handleURL(`me.uport:req/JWT`, {popup: false}))
-              .put(saveMessage(step, 'Legacy Cleanup Performed'))
-              .returns(true)
-              .run()
+          describe('signing keys still working', () => {
+            it('should add ownership token', () => {
+              return expectSaga(migrate)
+                .provide([
+                  [select(migrateableIdentities), [legacy]],
+                  [select(currentAddress), legacyDID],
+                  [select(legacyRoot), true],
+                  [call(createIdentityKeyPair), newId],
+                  [select(ownClaimsMap), own],
+                  [select(hasAttestations), true],
+                  [call(canSignFor, legacyDID), true],
+                  [call(createToken, legacyDID, {sub: newDID, claim: {owns: legacyDID}}), JWT],
+                  [select(subAccounts, legacyDID), []]
+                ])
+                .call(createIdentityKeyPair)
+                .put(updateIdentity(legacyDID, {parent: newDID}))
+                .put(updateIdentity(newDID, {own}))              
+                .call(createToken, legacyDID, {sub: newDID, claim:{owns: legacyDID}})
+                .put(handleURL(`me.uport:req/JWT`, {popup: false}))
+                .put(saveMessage(step, 'Legacy Cleanup Performed'))
+                .returns(true)
+                .run()
+            })  
+          })
+
+          describe('signing no longer working', () => {
+            it('should not add ownership token', () => {
+              return expectSaga(migrate)
+                .provide([
+                  [select(migrateableIdentities), [legacy]],
+                  [select(currentAddress), legacyDID],
+                  [select(legacyRoot), true],
+                  [call(createIdentityKeyPair), newId],
+                  [select(ownClaimsMap), own],
+                  [select(hasAttestations), true],
+                  [call(canSignFor, legacyDID), false],
+                  [call(createToken, legacyDID, {sub: newDID, claim:{owns: legacyDID}}), JWT],
+                  [select(subAccounts, legacyDID), []]
+                ])
+                .call(createIdentityKeyPair)
+                .put(updateIdentity(legacyDID, {parent: newDID}))
+                .put(updateIdentity(newDID, {own}))              
+                .not.call(createToken, legacyDID, {sub: newDID, claim:{owns: legacyDID}})
+                .not.put(handleURL(`me.uport:req/JWT`, {popup: false}))
+                .put(updateIdentity(legacyDID, {
+                  parent: newDID,
+                  disabled: true,
+                  error: `Legacy Identity has been Disabled. Keys are no longer available.`
+                }))
+                .put(saveMessage(step, 'Legacy Cleanup Performed'))
+                .returns(true)
+                .run()
+            })  
           })
         })          
 
@@ -145,6 +179,7 @@ describe('MigrateLegacy', () => {
                   [call(createIdentityKeyPair), newId],
                   [select(ownClaimsMap), own],
                   [select(hasAttestations), false],
+                  [call(canSignFor, legacyDID), false],
                   [select(legacyRoot), true],
                   [select(subAccounts, legacyDID), accounts]
               ])

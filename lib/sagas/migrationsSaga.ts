@@ -15,49 +15,23 @@
 // You should have received a copy of the GNU General Public License
 // along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
 //
-import { all, takeEvery, call, select, put } from 'redux-saga/effects'
 import { delay } from 'redux-saga'
-import { 
-  RUN_MIGRATIONS,
-  MigrationStep, 
-  MigrationTarget,
-  MigrationStatus,
-  TargetAction, 
-  StepAction,
-  Recipes,
-  targetRecipes
-} from 'uPortMobile/lib/constants/MigrationActionTypes'
-import {
-  LOADED_DB
-} from 'uPortMobile/lib/constants/GlobalActionTypes'
-import { 
-  addMigrationTarget,
-  startedMigrationStep,
-  completedMigrationStep,
-  failedMigrationStep
-} from 'uPortMobile/lib/actions/migrationActions'
-import {
-  startWorking,
-  stopWorking,
-  saveMessage,
-  completeProcess,
-  failProcess
-} from 'uPortMobile/lib/actions/processStatusActions'
-
-import { migrationStepStatus, migrationTargets, pendingMigrations, migrationCompleted } from 'uPortMobile/lib/selectors/migrations'
-import { isFullyHD, networkSettings } from 'uPortMobile/lib/selectors/chains'
-import { hdRootAddress, seedAddresses } from 'uPortMobile/lib/selectors/hdWallet'
-import { migrateableIdentities, currentAddress } from 'uPortMobile/lib/selectors/identities'
-
+import { all, call, put, select, takeEvery } from 'redux-saga/effects'
+import { addMigrationTarget, completedMigrationStep, failedMigrationStep, startedMigrationStep } from 'uPortMobile/lib/actions/migrationActions'
+import { completeProcess, failProcess, startWorking, stopWorking } from 'uPortMobile/lib/actions/processStatusActions'
+import { LOADED_DB } from 'uPortMobile/lib/constants/GlobalActionTypes'
+import { MigrationStatus, MigrationStep, MigrationTarget, RUN_MIGRATIONS, TargetAction, targetRecipes } from 'uPortMobile/lib/constants/MigrationActionTypes'
+import { canSignFor } from 'uPortMobile/lib/sagas/keychain'
+import { isFullyHD } from 'uPortMobile/lib/selectors/chains'
+import { currentAddress, migrateableIdentities } from 'uPortMobile/lib/selectors/identities'
+import { migrationStepStatus, migrationTargets, pendingMigrations } from 'uPortMobile/lib/selectors/migrations'
+import { NavigationActions } from 'uPortMobile/lib/utilities/NavigationActions'
+import { hasAttestations } from '../selectors/attestations'
+import CleanUpAfterMissingSeed from './migrations/CleanUpAfterMissingSeed'
 import IdentityManagerChangeOwner from './migrations/IdentityManagerChangeOwner'
+import MigrateLegacy from './migrations/MigrateLegacy'
 import UpdatePreHDRootToHD from './migrations/UpdatePreHDRootToHD'
 import UportRegistryDDORefresh from './migrations/UportRegistryDDORefresh'
-import CleanUpAfterMissingSeed from './migrations/CleanUpAfterMissingSeed'
-import MigrateLegacy from './migrations/MigrateLegacy'
-
-import { NavigationActions } from 'uPortMobile/lib/utilities/NavigationActions'
-import { resetKey, listSeedAddresses, canSignFor } from 'uPortMobile/lib/sagas/keychain'
-import { hasAttestations } from '../selectors/attestations';
 
 export function * checkForPreHD () : any {
   if (!(yield select(hasAttestations))) return
