@@ -1,21 +1,40 @@
-import * as React from 'react';
-import { View, ViewStyle, StyleSheet } from 'react-native';
-import { Theme } from '@kancha';
+/***
+ *  Copyright (C) 2018 ConsenSys AG
+ *
+ *  This file is part of uPort Mobile App
+ *  uPort Mobile App is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+
+ *  uPort Mobile App is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  ERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ * 
+ *  You should have received a copy of the GNU General Public License
+ *  along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
+ * 
+ ***/
+
+import * as React from 'react'
+import { View, ViewStyle, StyleSheet } from 'react-native'
+import { Theme } from '@kancha'
 
 interface ContainerProps {
   /** Test ID used for e2e tests */
-  testID?: string;
+  testID?: string
 
   /** Width */
-  w?: string | number | undefined;
+  w?: string | number | undefined
 
   /** Height */
-  h?: string | number | undefined;
+  h?: string | number | undefined
 
   /** Flex */
-  flex?: number | undefined;
+  flex?: number | undefined
 
-  background?: ( 'primary' | 'secondary' | undefined);
+  background?: 'primary' | 'secondary' | undefined
 
   /** Flex direction */
   flexDirection?:
@@ -23,7 +42,7 @@ interface ContainerProps {
     | 'column'
     | 'row-reverse'
     | 'column-reverse'
-    | undefined;
+    | undefined
 
   /** Align items */
   alignItems?:
@@ -32,7 +51,7 @@ interface ContainerProps {
     | 'center'
     | 'stretch'
     | 'baseline'
-    | undefined;
+    | undefined
 
   /** Justify Content */
   justifyContent?:
@@ -42,48 +61,46 @@ interface ContainerProps {
     | 'space-between'
     | 'space-around'
     | 'space-evenly'
-    | undefined;
+    | undefined
 
   /** Set the bottom divider */
-  dividerBottom?: boolean;
+  dividerBottom?: boolean
 
-   /** et the top divider */
-  dividerTop?: boolean;
-
-  /** Set the bottom margin */
-  marginBottom?: number | boolean | undefined;
-
-  /** Set the top margin */
-  marginTop?: number | boolean | undefined;
+  /** et the top divider */
+  dividerTop?: boolean
 
   /** Set the bottom margin */
-  marginLeft?: number | boolean | undefined;
+  marginBottom?: number | boolean | undefined
 
   /** Set the top margin */
-  marginRight?: number | boolean | undefined;
+  marginTop?: number | boolean | undefined
+
+  /** Set the bottom margin */
+  marginLeft?: number | boolean | undefined
+
+  /** Set the top margin */
+  marginRight?: number | boolean | undefined
 
   /** Set the bottom padding */
-  paddingBottom?: number | boolean | undefined;
+  paddingBottom?: number | boolean | undefined
 
   /** Set the top padding */
-  paddingTop?: number | boolean | undefined;
+  paddingTop?: number | boolean | undefined
 
   /** Set the left padding */
-  paddingLeft?: number | boolean | undefined;
+  paddingLeft?: number | boolean | undefined
 
   /** Set the right padding */
-  paddingRight?: number | boolean | undefined;
+  paddingRight?: number | boolean | undefined
 
   /** Enable border for debugging layouts */
-  debugBorder?: boolean;
+  debugBorder?: boolean
 
   /** Change debug border color */
-  debugBorderColor?: string | undefined;
-
+  debugBorderColor?: string | undefined
 }
 
-const Container: React.FunctionComponent<ContainerProps> = (props) => {
-
+const Container: React.FunctionComponent<ContainerProps> = props => {
   const DividerBottomStyles: ViewStyle = {
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderBottomColor: Theme.colors.primary.divider,
@@ -101,29 +118,58 @@ const Container: React.FunctionComponent<ContainerProps> = (props) => {
     flexDirection: props.flexDirection,
     alignItems: props.alignItems,
     justifyContent: props.justifyContent,
-    backgroundColor: props.background && Theme.colors[props.background].background,
+    backgroundColor:
+      props.background && Theme.colors[props.background].background,
 
     /** Margins */
-    marginBottom: typeof props.marginBottom === 'boolean' ? Theme.spacing.default : props.marginBottom,
-    marginTop: typeof props.marginTop === 'boolean' ? Theme.spacing.default : props.marginTop,
-    marginLeft: typeof props.marginLeft === 'boolean' ? Theme.spacing.default : props.marginLeft,
-    marginRight: typeof props.marginRight === 'boolean' ? Theme.spacing.default : props.marginRight,
+    marginBottom:
+      typeof props.marginBottom === 'boolean'
+        ? Theme.spacing.default
+        : props.marginBottom,
+    marginTop:
+      typeof props.marginTop === 'boolean'
+        ? Theme.spacing.default
+        : props.marginTop,
+    marginLeft:
+      typeof props.marginLeft === 'boolean'
+        ? Theme.spacing.default
+        : props.marginLeft,
+    marginRight:
+      typeof props.marginRight === 'boolean'
+        ? Theme.spacing.default
+        : props.marginRight,
 
     /** Paddings */
-    paddingBottom: typeof props.paddingBottom === 'boolean' ? Theme.spacing.default : props.paddingBottom,
-    paddingTop: typeof props.paddingTop === 'boolean' ? Theme.spacing.default : props.paddingTop,
-    paddingLeft: typeof props.paddingLeft === 'boolean' ? Theme.spacing.default : props.paddingLeft,
-    paddingRight: typeof props.paddingRight === 'boolean' ? Theme.spacing.default : props.paddingRight,
-  };
+    paddingBottom:
+      typeof props.paddingBottom === 'boolean'
+        ? Theme.spacing.default
+        : props.paddingBottom,
+    paddingTop:
+      typeof props.paddingTop === 'boolean'
+        ? Theme.spacing.default
+        : props.paddingTop,
+    paddingLeft:
+      typeof props.paddingLeft === 'boolean'
+        ? Theme.spacing.default
+        : props.paddingLeft,
+    paddingRight:
+      typeof props.paddingRight === 'boolean'
+        ? Theme.spacing.default
+        : props.paddingRight,
+  }
 
   /** Conditionally spread styles down to the View */
   const styles: ViewStyle = {
-   ...BaseStyles,
-   ...(props.dividerBottom ? DividerBottomStyles : {}),
-   ...(props.dividerTop ? DividerTopStyles : {}),
+    ...BaseStyles,
+    ...(props.dividerBottom ? DividerBottomStyles : {}),
+    ...(props.dividerTop ? DividerTopStyles : {}),
   }
 
-  return <View testID={props.testID} style={styles}>{props.children}</View>;
-};
+  return (
+    <View testID={props.testID} style={styles}>
+      {props.children}
+    </View>
+  )
+}
 
-export default Container;
+export default Container

@@ -25,6 +25,8 @@ const Theme: IndexSignature = {
     },
   },
   colors: {
+    warning: 'red',
+    confirm: 'green',
     primary: {
       brand: '#5C50CA',
       text: '#333333',

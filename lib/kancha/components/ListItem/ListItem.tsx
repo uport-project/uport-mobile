@@ -1,47 +1,71 @@
-import * as React from 'react';
-import { Image, TouchableHighlight, ViewStyle, Linking } from 'react-native';
+/***
+ *  Copyright (C) 2018 ConsenSys AG
+ *
+ *  This file is part of uPort Mobile App
+ *  uPort Mobile App is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+
+ *  uPort Mobile App is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  ERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ * 
+ *  You should have received a copy of the GNU General Public License
+ *  along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
+ * 
+ ***/
+
+import * as React from 'react'
+import { Image, TouchableHighlight, ViewStyle, Linking } from 'react-native'
 import { Container, Text, Icon, TextTypes, Theme } from '@kancha'
 
 interface ListItemProps {
   /**
    * Provide the uri to the avatar
    */
-  avatar?: string;
+  avatar?: string
 
   /**
    * Provide an avatar component to render
    */
-  avatarComponent?: React.ReactNode;
+  avatarComponent?: React.ReactNode
 
   /**
    * Provide the onPress function
    */
-  onPress?: () => void;
+  onPress?: () => void
 
   /**
    * Provide an external link to navigate to
    */
-  externalLink?: string;
+  externalLink?: string
 
   /**
    * Prevent the default forward arrow from showing when onPress is defined
    */
-  hideForwardArrow?: boolean;
+  hideForwardArrow?: boolean
 
   /**
    * Text to be displayed on the right as a smaller note
    */
-  infoNoteRight?: string;
+  infoNoteRight?: string
+
+  /**
+   * Show the infoNoteRight text in the theme warn color
+   */
+  warn?: boolean
 
   /**
    * Text to be displayed on the right as regular text
    */
-  contentRight?: string;
+  contentRight?: string
 
   /**
    * This is the last item in a list
    */
-  last?: boolean;
+  last?: boolean
 }
 
 /** Move to kancha utils */
@@ -49,30 +73,42 @@ const shortenString = (item: string) => {
   return `${item.slice(0, 18)}...`
 }
 
-const ListItem: React.FunctionComponent<ListItemProps> = (props) => {
-
+const ListItem: React.FunctionComponent<ListItemProps> = props => {
   const styles: ViewStyle = {
     backgroundColor: Theme.colors.primary.background,
   }
 
   const onPressAction = props.onPress
-                          ? props.onPress
-                          : props.externalLink
-                          ? () => props.externalLink && Linking.openURL(props.externalLink)
-                          : undefined;
+    ? props.onPress
+    : props.externalLink
+    ? () => props.externalLink && Linking.openURL(props.externalLink)
+    : undefined
 
-  const actionIcon = props.onPress
-                          && !props.hideForwardArrow
-                          ? 'forward' : props.externalLink ? 'link'
-                          : undefined;
+  const actionIcon =
+    props.onPress && !props.hideForwardArrow
+      ? 'forward'
+      : props.externalLink
+      ? 'link'
+      : undefined
 
   return (
-    <TouchableHighlight style={styles} onPress={onPressAction} underlayColor={Theme.colors.primary.underlay}>
+    <TouchableHighlight
+      style={styles}
+      onPress={onPressAction}
+      underlayColor={Theme.colors.primary.underlay}
+    >
       <Container flex={1} flexDirection={'row'}>
-        {
-          props.avatarComponent
-            && <Container alignItems={'center'} justifyContent={'center'} paddingLeft paddingTop={8} paddingBottom={8} >{props.avatarComponent}</Container>
-        }
+        {props.avatarComponent && (
+          <Container
+            alignItems={'center'}
+            justifyContent={'center'}
+            paddingLeft
+            paddingTop={8}
+            paddingBottom={8}
+          >
+            {props.avatarComponent}
+          </Container>
+        )}
         <Container
           flex={1}
           flexDirection={'row'}
@@ -84,16 +120,26 @@ const ListItem: React.FunctionComponent<ListItemProps> = (props) => {
           paddingRight
         >
           <Container flex={1}>
-            <Text type={TextTypes.ListItem}>{ props.children }</Text>
+            <Text type={TextTypes.ListItem}>{props.children}</Text>
           </Container>
           <Container flexDirection={'row'} alignItems={'center'}>
             <Container marginRight marginLeft>
-              { props.infoNoteRight && !props.contentRight && <Text type={TextTypes.ListItemNote}>{ props.infoNoteRight }</Text> }
-              { props.contentRight && !props.infoNoteRight && <Text type={TextTypes.ListItemRight}>{ shortenString(props.contentRight) }</Text> }
+              {props.infoNoteRight && !props.contentRight && (
+                <Text type={TextTypes.ListItemNote}>{props.infoNoteRight}</Text>
+              )}
+              {props.contentRight && !props.infoNoteRight && (
+                <Text type={TextTypes.ListItemRight}>
+                  {shortenString(props.contentRight)}
+                </Text>
+              )}
             </Container>
-            {
-              actionIcon && <Icon name={actionIcon} size={24} color={Theme.colors.primary.accessories}/>
-            }
+            {actionIcon && (
+              <Icon
+                name={actionIcon}
+                size={24}
+                color={Theme.colors.primary.accessories}
+              />
+            )}
           </Container>
         </Container>
       </Container>
@@ -101,4 +147,4 @@ const ListItem: React.FunctionComponent<ListItemProps> = (props) => {
   )
 }
 
-export default ListItem;
+export default ListItem

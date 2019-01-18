@@ -175,6 +175,7 @@
     "jsontokens": "^0.7.7",
     "mockdate": "^2.0.2",
     "nock": "^9.0.18",
+    "prettier": "^1.15.3",
     "react-native-typescript-transformer": "^1.2.10",
     "react-test-renderer": "^16.3.1",
     "reactotron-react-native": "^2.1.0",
@@ -187,6 +188,7 @@
     "timekeeper": "^1.0.0",
     "ts-jest": "^23.10.4",
     "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.17.0",
     "tslint-eslint-rules": "^5.4.0",
     "tslint-react": "^3.6.0",
     "typescript": "^3.1.4"
