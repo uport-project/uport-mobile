@@ -90,6 +90,14 @@ export async function startAppModernUI(this: any) {
     },
     tabs: [
       {
+        screen: 'screen.DesignSystem',
+        title: 'Settings',
+        icon: settingsIcon,
+        iconInsets: { // add this to change icon position (optional, iOS only).
+          bottom: -8, // optional, default is 0.
+        },
+      },
+      {
         screen: 'screen.Credentials',
         title: 'Credentials',
         icon: accountsIcon,
@@ -112,14 +120,14 @@ export async function startAppModernUI(this: any) {
           bottom: -8, // optional, default is 0.
         },
       },
-      {
-        screen: 'screen.Notifications',
-        title: 'Notifications',
-        icon: notificationsIcon,
-        iconInsets: { // add this to change icon position (optional, iOS only).
-          bottom: -8, // optional, default is 0.
-        },
-      },
+      // {
+      //   screen: 'screen.Notifications',
+      //   title: 'Notifications',
+      //   icon: notificationsIcon,
+      //   iconInsets: { // add this to change icon position (optional, iOS only).
+      //     bottom: -8, // optional, default is 0.
+      //   },
+      // },
       {
         screen: 'screen.Settings',
         title: 'Settings',
