@@ -28,7 +28,7 @@ import { registerDeviceForNotifications } from 'uPortMobile/lib/actions/snsRegis
 import { track, screen } from 'uPortMobile/lib/actions/metricActions'
 import { colors } from 'uPortMobile/lib/styles/globalStyles'
 
-const isIOS = Platform.OS === 'ios' ? true : false;
+const isIOS = Platform.OS === 'ios' ? true : false
 
 export function start() {
   registerScreens(store, Provider)
@@ -89,26 +89,28 @@ export async function startAppModernUI(this: any) {
       tabBarSelectedButtonColor: colors.white216,
     },
     tabs: [
-      {
-        screen: 'screen.DesignSystem',
-        title: 'Settings',
-        icon: settingsIcon,
-        iconInsets: { // add this to change icon position (optional, iOS only).
-          bottom: -8, // optional, default is 0.
-        },
-      },
+      // {
+      //   screen: 'screen.DesignSystem',
+      //   title: 'Settings',
+      //   icon: settingsIcon,
+      //   iconInsets: { // add this to change icon position (optional, iOS only).
+      //     bottom: -8, // optional, default is 0.
+      //   },
+      // },
       {
         screen: 'screen.Credentials',
         title: 'Credentials',
         icon: accountsIcon,
-        iconInsets: { // add this to change icon position (optional, iOS only).
+        iconInsets: {
+          // add this to change icon position (optional, iOS only).
           bottom: -8, // optional, default is 0.
         },
       },
       {
         screen: 'screen.User',
         icon: contactIcon,
-        iconInsets: { // add this to change icon position (optional, iOS only).
+        iconInsets: {
+          // add this to change icon position (optional, iOS only).
           bottom: -8, // optional, default is 0.
         },
       },
@@ -116,23 +118,26 @@ export async function startAppModernUI(this: any) {
         screen: 'screen.Contacts',
         title: 'Contacts',
         icon: contactsIcon,
-        iconInsets: { // add this to change icon position (optional, iOS only).
+        iconInsets: {
+          // add this to change icon position (optional, iOS only).
           bottom: -8, // optional, default is 0.
         },
       },
-      // {
-      //   screen: 'screen.Notifications',
-      //   title: 'Notifications',
-      //   icon: notificationsIcon,
-      //   iconInsets: { // add this to change icon position (optional, iOS only).
-      //     bottom: -8, // optional, default is 0.
-      //   },
-      // },
+      {
+        screen: 'screen.Notifications',
+        title: 'Notifications',
+        icon: notificationsIcon,
+        iconInsets: {
+          // add this to change icon position (optional, iOS only).
+          bottom: -8, // optional, default is 0.
+        },
+      },
       {
         screen: 'screen.Settings',
         title: 'Settings',
         icon: settingsIcon,
-        iconInsets: { // add this to change icon position (optional, iOS only).
+        iconInsets: {
+          // add this to change icon position (optional, iOS only).
           bottom: -8, // optional, default is 0.
         },
       },

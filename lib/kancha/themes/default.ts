@@ -1,21 +1,25 @@
 interface IndexSignature {
-  [index: string]: any;
+  [index: string]: any
 }
 
-interface TextThemeMapTypes extends IndexSignature {}
+interface TextDefaultThemeMapTypes extends IndexSignature {}
 
 /**
- * Base theme file
+ * Base DefaultTheme file
  */
-const Theme: IndexSignature = {
+const DefaultTheme: IndexSignature = {
   text: {
+    lineHeights: {
+      body: 22,
+    },
     sizes: {
-      h1: 28,
+      h1: 32,
       h2: 24,
       h3: 20,
       h4: 18,
       h5: 16,
       h6: 14,
+      subTitle: 14,
       listItem: 18,
       listItemRight: 18,
       listItemNote: 15,
@@ -25,7 +29,7 @@ const Theme: IndexSignature = {
     },
   },
   colors: {
-    warning: 'red',
+    warning: '#e74c3c',
     confirm: 'green',
     primary: {
       brand: '#5C50CA',
@@ -38,7 +42,15 @@ const Theme: IndexSignature = {
     secondary: {
       brand: 'green',
       text: '#AAAAAA',
-      background: '#F6F7F8',
+      background: '#efeef3',
+      divider: '#CCCCCC',
+      accessories: '#BBBBBB',
+      underlay: '#CCCCCC',
+    },
+    tertiary: {
+      brand: 'green',
+      text: '#AAAAAA',
+      background: '#CCCCCC',
       divider: '#CCCCCC',
       accessories: '#BBBBBB',
       underlay: '#CCCCCC',
@@ -56,8 +68,22 @@ const Theme: IndexSignature = {
   },
 }
 
+const NavigationTheme = {
+  largeTitle: false,
+  navBarBackgroundColor: DefaultTheme.colors.primary.brand,
+  navBarButtonColor: DefaultTheme.colors.primary.background,
+  navBarTextColor: DefaultTheme.colors.primary.background,
+}
+
 /**
- * Temportary implementaion. Refactor later to make more succint.
+ * Append nav theming
+ */
+const Theme = DefaultTheme
+Theme.navigation = NavigationTheme
+
+/**
+ * Temporary implementaion.
+ * Refactor later to make more succint.
  */
 const TextTypes = {
   H1: 'h1',
@@ -68,70 +94,75 @@ const TextTypes = {
   ListItem: 'listItem',
   ListItemRight: 'listItemRight',
   ListItemNote: 'listItemNote',
+  SubTitle: 'subTitle',
   Body: 'body',
   Summary: 'summary',
   SectionHeader: 'sectionHeader',
 }
 
 /**
- * Temportary implementaion. Refactor later to make more succint. Just here to initially define each font style.
+ * Temportary implementaion. Refactor later to make more succint.
+ * Just here to initially define each font style.
+ * Padding size todo
  */
-const TextThemeMap: TextThemeMapTypes = {
+const TextThemeMap: TextDefaultThemeMapTypes = {
   h1: {
-    fontSize: Theme.text.sizes.h1,
-    color: Theme.colors.primary.text,
-    paddingBottom: Theme.text.sizes.h1 * 0.20,
+    fontSize: DefaultTheme.text.sizes.h1,
+    color: DefaultTheme.colors.primary.text,
+    // paddingBottom: DefaultTheme.text.sizes.h1 * 0.2,
   },
   h2: {
-    fontSize: Theme.text.sizes.h2,
-    color: Theme.colors.primary.text,
-    paddingBottom: Theme.text.sizes.h2 * 0.20,
+    fontSize: DefaultTheme.text.sizes.h2,
+    color: DefaultTheme.colors.primary.text,
+    // paddingBottom: DefaultTheme.text.sizes.h2 * 0.2,
   },
   h3: {
-    fontSize: Theme.text.sizes.h3,
-    color: Theme.colors.primary.text,
-    paddingBottom: Theme.text.sizes.h3 * 0.20,
+    fontSize: DefaultTheme.text.sizes.h3,
+    color: DefaultTheme.colors.primary.text,
+    // paddingBottom: DefaultTheme.text.sizes.h3 * 0.2,
   },
   h4: {
-    fontSize: Theme.text.sizes.h4,
-    color: Theme.colors.primary.text,
-    paddingBottom: Theme.text.sizes.h4 * 0.20,
+    fontSize: DefaultTheme.text.sizes.h4,
+    color: DefaultTheme.colors.primary.text,
+    // paddingBottom: DefaultTheme.text.sizes.h4 * 0.2,
   },
   h5: {
-    fontSize: Theme.text.sizes.h5,
-    color: Theme.colors.primary.text,
-    paddingBottom: Theme.text.sizes.h5 * 0.20,
+    fontSize: DefaultTheme.text.sizes.h5,
+    color: DefaultTheme.colors.primary.text,
+    // paddingBottom: DefaultTheme.text.sizes.h5 * 0.2,
+  },
+  subTitle: {
+    fontSize: DefaultTheme.text.sizes.subTitle,
+    color: DefaultTheme.colors.secondary.text,
   },
   listItem: {
-    fontSize: Theme.text.sizes.listItem,
-    color: Theme.colors.primary.text,
-    paddingBottom: Theme.text.sizes.listItem * 0.20,
+    fontSize: DefaultTheme.text.sizes.listItem,
+    color: DefaultTheme.colors.primary.text,
+    // paddingBottom: DefaultTheme.text.sizes.listItem * 0.2,
   },
   listItemNote: {
-    fontSize: Theme.text.sizes.listItemNote,
-    color: Theme.colors.secondary.text,
+    fontSize: DefaultTheme.text.sizes.listItemNote,
+    color: DefaultTheme.colors.secondary.text,
   },
   listItemRight: {
-    fontSize: Theme.text.sizes.listItemRight,
-    color: Theme.colors.secondary.text,
+    fontSize: DefaultTheme.text.sizes.listItemRight,
+    color: DefaultTheme.colors.secondary.text,
   },
   summary: {
-    fontSize: Theme.text.sizes.summary,
-    color: Theme.colors.secondary.text,
-    paddingBottom: Theme.text.sizes.summary * 0.20,
+    fontSize: DefaultTheme.text.sizes.summary,
+    color: DefaultTheme.colors.secondary.text,
+    // paddingBottom: DefaultTheme.text.sizes.summary * 0.2,
   },
   body: {
-    fontSize: Theme.text.sizes.body,
-    color: Theme.colors.primary.text,
-    paddingBottom: Theme.text.sizes.body * 0.20,
+    fontSize: DefaultTheme.text.sizes.body,
+    color: DefaultTheme.colors.primary.text,
+    lineHeight: DefaultTheme.text.lineHeights.body,
   },
   sectionHeader: {
-    fontSize: Theme.text.sizes.sectionHeader,
-    color: Theme.colors.secondary.text,
-    paddingBottom: Theme.text.sizes.sectionHeader * 0.20,
+    fontSize: DefaultTheme.text.sizes.sectionHeader,
+    color: DefaultTheme.colors.secondary.text,
+    // paddingBottom: DefaultTheme.text.sizes.sectionHeader * 0.2,
   },
 }
 
-export {
-  TextThemeMap, Theme, TextTypes,
-}
+export { TextThemeMap, Theme, TextTypes }

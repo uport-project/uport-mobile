@@ -19,7 +19,7 @@
 
 import * as React from 'react'
 import { Text, TextStyle } from 'react-native'
-import { TextThemeMap, TextTypes } from '@kancha'
+import { TextThemeMap, TextTypes, Theme } from '@kancha'
 
 /**
  * Kancha Text Props
@@ -29,6 +29,11 @@ interface KanchaTextProps {
    * The type of text to display. This will be styled accordinly to the theme
    */
   type: string
+
+  /**
+   * Overide the color with a warning color
+   */
+  warn?: boolean
 
   /**
    * Make the text bold
@@ -41,6 +46,11 @@ interface KanchaTextProps {
   padding?: number
 
   /**
+   * A bottom padding for the text. Useful for headings
+   */
+  paddingBottom?: number | boolean | undefined;
+
+  /**
    * The margin around the text
    */
   margin?: number
@@ -49,7 +59,11 @@ interface KanchaTextProps {
 const KanchaText: React.FC<KanchaTextProps> = props => {
   const styles: TextStyle = {
     ...TextThemeMap[props.type],
-    fontWeight: props.bold && 'bold',
+    ...(props.bold ? { fontWeight: 'bold' } : {}),
+    ...(props.warn ? { color: Theme.colors.warning } : {}),
+    ...(props.paddingBottom ? { paddingBottom: props.paddingBottom } : {}),
+    ...(props.paddingBottom && typeof props.paddingBottom === 'boolean' ? { paddingBottom: Theme.spacing.default } : {}),
+    
   }
 
   return <Text style={styles}>{props.children}</Text>

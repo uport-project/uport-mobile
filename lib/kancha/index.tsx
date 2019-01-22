@@ -1,19 +1,25 @@
 /**
  * Components
  */
-import Container from './components/Container/Container';
-import Icon from './components/Icon/Icon';
-import Screen from './components/Screen/Screen';
-import KanchaText from './components/Text/Text';
-import ListItem from './components/ListItem/ListItem';
-import Section from './components/Section/Section';
+import Container from './components/Container/Container'
+import Icon from './components/Icon/Icon'
+import Screen from './components/Screen/Screen'
+import KanchaText from './components/Text/Text'
+import ListItem from './components/ListItem/ListItem'
+import Section from './components/Section/Section'
+
+/**
+ * Utilities
+ */
+import Device from './utilities/device'
+import Strings from './utilities/strings'
 
 /**
  * Theme & Constants
  */
 import { Theme, TextThemeMap, TextTypes } from './themes/default'
 
-const Text = KanchaText;
+const Text = KanchaText
 
 export {
   /** Copmonents */
@@ -22,12 +28,13 @@ export {
   ListItem,
   Screen,
   Section,
-  KanchaText as Text,
+  Text,
   TextTypes,
-
-   /** Utilities */
-   /** Constants */
-   /** Theme */
-   Theme,
-   TextThemeMap,
+  /** Utilities */
+  Device,
+  Strings,
+  /** Constants */
+  /** Theme */
+  Theme,
+  TextThemeMap,
 }

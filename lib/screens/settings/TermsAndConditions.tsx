@@ -1,124 +1,27 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+/***
+ *  Copyright (C) 2018 ConsenSys AG
+ *
+ *  This file is part of uPort Mobile App
+ *  uPort Mobile App is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
 
-exports[`renders Settings screen with 1`] = `
-<View
-  style={
-    Array [
-      Object {
-        "flex": 1,
-      },
-      Object {
-        "paddingTop": 50,
-      },
-    ]
-  }
->
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-    style={
-      Array [
-        Object {
-          "color": "#3c3a49",
-        },
-        undefined,
-        undefined,
-        Object {
-          "color": "rgba(130, 130, 130, 1)",
-          "fontFamily": undefined,
-          "fontSize": 12,
-          "lineHeight": 19,
-          "marginBottom": 25,
-          "marginTop": -40,
-          "textAlign": "center",
-        },
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
-      ]
-    }
-  >
-    Last modified May 24, 2018
-  </Text>
-  <RCTScrollView
-    contentContainerStyle={
-      Object {
-        "padding": 15,
-      }
-    }
-    contentInset={
-      Object {
-        "bottom": 0,
-      }
-    }
-    getTextInputRefs={[Function]}
-    onContentSizeChange={[Function]}
-    onLayout={[Function]}
-    onScroll={[Function]}
-    scrollEventThrottle={200}
-    scrollToBottomOnKBShow={false}
-    scrollToInputAdditionalOffset={75}
-    startScrolledToBottom={false}
-    style={
-      Object {
-        "backgroundColor": "white",
-        "flex": 1,
-      }
-    }
-  >
-    <View>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            Object {
-              "color": "#3c3a49",
-            },
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            Object {
-              "color": "#3c3a49",
-              "fontFamily": undefined,
-              "fontSize": 16,
-              "lineHeight": 27,
-              "marginBottom": 15,
-            },
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-          ]
-        }
-      >
-        Terms of Use Version 1.2
+ *  uPort Mobile App is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  ERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ * 
+ *  You should have received a copy of the GNU General Public License
+ *  along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
+ * 
+ ***/
+
+import React from 'react'
+import { Container, Theme, Text, Screen, TextTypes } from '@kancha'
+
+export const termsAndConditions1 = `
+Terms of Use Version 1.2
 
 IMPORTANT NOTICE: THIS AGREEMENT IS SUBJECT TO BINDING ARBITRATION AND A WAIVER OF CLASS ACTION RIGHTS AS DETAILED IN SECTION 14. PLEASE READ THE AGREEMENT CAREFULLY.
 
@@ -145,46 +48,9 @@ Your private key, corresponding to your public Ethereum identity address is stor
 
 DID
 
-By using the uPort app, you acknowledge, accept and consent to the creation of a decentralized identity (DID) for you.  DID is essentially a public address, a string that serves asan “on-chain identifier.”  Because uPort is an identity platform on the Ethereum blockchain,  DIDs are linked to the Ethereum blockchain as transactions.  As a user of uPort, you acknowledge that because transactions on the Ethereum blockchain are immutable, the record of your DID’s on-chain transactions are also immutable and cannot be deleted from the Ethereum blockchain.  Your DID, as it is designed in the uPort mobile application, is not tied to your natural name or personal information, and uPort does not collect data that would enable the two to be linked or associated together. 
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            Object {
-              "color": "#3c3a49",
-            },
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            Object {
-              "color": "#3c3a49",
-              "fontFamily": undefined,
-              "fontSize": 16,
-              "lineHeight": 27,
-              "marginBottom": 15,
-            },
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-          ]
-        }
-      >
-        
+By using the uPort app, you acknowledge, accept and consent to the creation of a decentralized identity (DID) for you.  DID is essentially a public address, a string that serves asan “on-chain identifier.”  Because uPort is an identity platform on the Ethereum blockchain,  DIDs are linked to the Ethereum blockchain as transactions.  As a user of uPort, you acknowledge that because transactions on the Ethereum blockchain are immutable, the record of your DID’s on-chain transactions are also immutable and cannot be deleted from the Ethereum blockchain.  Your DID, as it is designed in the uPort mobile application, is not tied to your natural name or personal information, and uPort does not collect data that would enable the two to be linked or associated together. `
+
+export const termsAndConditions12 = `
 5. Representations, Warranties, and Risks
 
 5.1. Warranty Disclaimer
@@ -216,46 +82,9 @@ The Services may, from time to time, allow for various attestations to be made a
 In some instances, third-party attestations may be made through the uPort Signing Service (“USS”). The USS allows a third-party to make an attestation about a particular user without that third-party directly making the attestation. Instead, the USS receives information about an attestation, and makes the attestation on behalf of a third party. uPort makes no representations as to the veracity or accuracy of attestations made through the USS and uPort hereby explicitly disclaims any and all liability pertaining to use of the USS for any purpose. 
 
 uPort allows you to affirmatively opt-in and choose to send and store an encrypted copy of all your claims, attestations and corresponding associations of that information (“ID Data”) to your account that is stored in a service that is maintained by uPort and runs on servers and infrastructure owned and operated by third-party vendors. This means you will have the ability to recover ID Data but only after restoring the keys to your ID Data from your seed.  uPort does not back-up your private keys, only ID data. By opting in, you not only have the ability to back-up your ID data, but you can also delete all data on uPort’s open-sourced managed, third-party servers from within the mobile application.   You acknowledge that uPort is not responsible for the security or integrity of the third-party managed servers.
+`
 
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            Object {
-              "color": "#3c3a49",
-            },
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            Object {
-              "color": "#3c3a49",
-              "fontFamily": undefined,
-              "fontSize": 16,
-              "lineHeight": 27,
-              "marginBottom": 15,
-            },
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-          ]
-        }
-      >
-        7. Indemnity
+export const termsAndConditions2 = `7. Indemnity
 You agree to release and to indemnify, defend and hold harmless uPort and its parents, subsidiaries, affiliates and agencies, as well as the officers, directors, employees, shareholders and representatives of any of the foregoing entities, from and against any and all losses, liabilities, expenses, damages, costs (including attorneys’ fees and court costs) claims or actions of any kind whatsoever arising or resulting from your use of the Service, your violation of these Terms of Use, and any of your acts or omissions that implicate publicity rights, defamation or invasion of privacy. uPort reserves the right, at its own expense, to assume exclusive defense and control of any matter otherwise subject to indemnification by you and, in such case, you agree to cooperate with uPort in the defense of such matter.
  
 8. Limitation on Liability
@@ -272,46 +101,9 @@ The Service provides, or third parties may provide, links to other World Wide We
 11. Termination and Suspension
 uPort may, in its sole discretion, terminate or suspend all or part of the Service and your uPort access immediately, without prior notice or liability, if you breach any of the terms or conditions of the Terms. Upon termination of your access, your right to use the Service will immediately cease.
 
-The following provisions of the Terms survive any termination of these Terms: INDEMNITY; WARRANTY DISCLAIMERS; LIMITATION ON LIABILITY; OUR PROPRIETARY RIGHTS; LINKS; TERMINATION; NO THIRD PARTY BENEFICIARIES; BINDING ARBITRATION AND CLASS ACTION WAIVER; GENERAL INFORMATION.
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            Object {
-              "color": "#3c3a49",
-            },
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            Object {
-              "color": "#3c3a49",
-              "fontFamily": undefined,
-              "fontSize": 16,
-              "lineHeight": 27,
-              "marginBottom": 15,
-            },
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-          ]
-        }
-      >
-        12. No Third Party Beneficiaries
+The following provisions of the Terms survive any termination of these Terms: INDEMNITY; WARRANTY DISCLAIMERS; LIMITATION ON LIABILITY; OUR PROPRIETARY RIGHTS; LINKS; TERMINATION; NO THIRD PARTY BENEFICIARIES; BINDING ARBITRATION AND CLASS ACTION WAIVER; GENERAL INFORMATION.`
+
+export const termsAndConditions3 = `12. No Third Party Beneficiaries
 You agree that, except as otherwise expressly provided in these Terms, (a) there shall be no third party beneficiaries to the Terms and (b) nothing in these Terms shall be construed as creating or implying any relationship of agency, franchise, partnership, or joint venture between you and uPort.
 
 13. Notice and Procedure for Making Claims of Copyright Infringement
@@ -365,10 +157,33 @@ The section titles in the Terms are for convenience only and have no legal or co
 
 15.5. Communications
 Users with questions, complaints or claims with respect to the Service may contact us at legal@uPort.me.
+`
 
+const TermsAndConditions = (props: void) => {
+  return (
+    <Screen>
+      <Container flex={1}>
+        <Container padding>
+          <Text type={TextTypes.SubTitle}>Last modified May 24, 2018</Text>
+        </Container>
+        <Container paddingHorizontal>
+          <Text type={TextTypes.Body}>{termsAndConditions1}</Text>
+          <Text type={TextTypes.Body}>{termsAndConditions12}</Text>
+          <Text type={TextTypes.Body}>{termsAndConditions2}</Text>
+          <Text type={TextTypes.Body}>{termsAndConditions3}</Text>
+        </Container>
+      </Container>
+    </Screen>
+  )
+}
 
-      </Text>
-    </View>
-  </RCTScrollView>
-</View>
-`;
+TermsAndConditions.defaultProps = {
+  defaultPadding: true,
+}
+
+TermsAndConditions.navigatorStyle = {
+  largeTitle: false,
+  ...Theme.navigation,
+}
+
+export default TermsAndConditions

@@ -60,6 +60,7 @@
       "**/__tests__/*.+(ts|tsx|js|jsx)"
     ],
     "moduleNameMapper": {
+      "@kancha": "<rootDir>/lib/kancha/index",
       "uPortMobile(.*)$": "<rootDir>$1"
     },
     "globals": {

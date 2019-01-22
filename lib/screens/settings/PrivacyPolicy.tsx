@@ -15,27 +15,12 @@
 // You should have received a copy of the GNU General Public License
 // along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
 //
-import React from 'react'
-import {
-  ScrollView,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native'
+/* globals it, expect */
 
-import {textStyles, colors, font} from 'uPortMobile/lib/styles/globalStyles'
-const styles = StyleSheet.create({
-  termsAndConditions: {
-    fontFamily: font,
-    fontSize: 16,
-    lineHeight: 22,
-    color: colors.grey74,
-    margin: 22
-  }
-})
+import * as React from 'react'
+import { Container, Theme, Text, Screen, TextTypes } from '@kancha'
 
-const text1 = 
-`
+const text1 = `
 This privacy policy (“Policy”) describes how ConsenSys AG’s uPort(“uPort” “Company”, “we”, “our”, “us”) collects, uses, shares, and stores personal information of users of this website, https://www.uport.me/ (the “Site”) and the Services (as defined below).. This Policy applies to the Site, applications, products and services (collectively, “Services”) on or in which it is posted, linked, or referenced. 
 
 By using the Services, you accept the terms of this Policy and our Terms of Use, and consent to our collection, use, disclosure, and retention of your information as described in this Policy.  If you have not done so already, please also review our terms of use. The terms of use contain provisions that limit our liability to you and require you to resolve any dispute with us on an individual basis and not as part of any class or representative action. IF YOU DO NOT AGREE WITH ANY PART OF THIS PRIVACY POLICY OR OUR TERMS OF USE, THEN PLEASE DO NOT USE ANY OF THE SERVICES.
@@ -58,8 +43,7 @@ Marketing information, such as your preferences for receiving marketing communic
 
 Information We Get From Others. We may get information about you from other third party sources and we may add this to information we get from your use of the Services. 
 `
-const text2 = 
-`
+const text2 = `
 Information Automatically Collected. We may automatically record certain information about how you use our Site (we refer to this information as “Log Data“). Log Data may include information such as a user’s Internet Protocol (IP) address, hash of IPFS address, device and browser type, the pages or features of our Site to which a user browsed and the time spent on those pages or features, the frequency with which the Site is used by a user, search terms, the links on our Site that a user clicked on or used, referral url, and other statistics. We use this information to administer the Service and we analyze (and may engage third parties to analyze) this information to improve and enhance the Service by expanding its features and functionality and tailoring it to our users’ needs and preferences.
 
 We may use cookies or similar technologies to analyze trends, administer the website, track users’ movements around the website, and to gather demographic information about our user base as a whole. Users can control the use of cookies at the individual browser level. For more information, please see the section entitled “Cookies Policy” below.
@@ -91,8 +75,7 @@ We may use or share your personal information with your consent, such as when yo
 For compliance, fraud prevention, and safety
 We may use your personal information to protect, investigate, and deter against fraudulent, unauthorized, or illegal activity.
 `
-const text3 = 
-`
+const text3 = `
 
 SHARING OF PERSONAL INFORMATION
 
@@ -130,8 +113,7 @@ Google Analytics
 You may exercise choices regarding the use of cookies from Google Analytics by going to https://tools.google.com/dlpage/gaoptout and downloading the Google Analytics Opt-out Browser Add-on.
 
 `
-const text4 = 
-`
+const text4 = `
 
 CONTACT INFORMATION. We welcome your comments or questions about this Policy, and you may contact us at: support@uport.me.
 
@@ -187,8 +169,7 @@ Legal Basis
 
   Where our use of your personal information is based upon your consent, you have the right to withdraw it anytime in the manner indicated in the Service or by contacting us at support@uport.me.
 `
-const text5 = 
-`
+const text5 = `
   
 Use for New Purposes
 
@@ -229,8 +210,7 @@ To serve you with interest-based or targeted advertising.
 To observe your behaviors and browsing activities over time across multiple websites or other platforms.
 To better understand the interests of our customers and our website visitors.
 `
-const text6 = 
-`
+const text6 = `
 
 Some Cookies are necessary for certain uses of the Site, and without such Cookies, we would not be able to provide many services that you need to properly use the Site. These Cookies, for example, allow us to operate our Site so you may access it as you have requested and let us recognize that you have created an account and have logged into that account to access Site content. They also include Cookies that enable us to remember your previous actions within the same browsing session and secure our Sites.  
 We also use functional Cookies and Cookies from third parties for analysis and marketing purposes.  Functional Cookies enable certain parts of the site to work properly and your user preferences to remain known.  Analysis Cookies, among other things, collect information on how visitors use our Site, the content and products that users view most frequently, and the effectiveness of our third party advertising. Advertising Cookies assist in delivering ads to relevant audiences and having our ads appear at the top of search results. Cookies are either “session” Cookies which are deleted when you end your browser session, or “persistent,” which remain until their deletion by you (discussed below) or the party who served the cookie.  Full details on all of the Cookies used on the Site are available at our Cookie Disclosure table below. 
@@ -293,35 +273,34 @@ Analytics hub
 3rd - Segment
 Persistent
 1 year
-  
 `
 
+const PrivacyPolicy = (props: void) => {
+  return (
+    <Screen>
+      <Container flex={1}>
+        <Container paddingLeft paddingRight paddingTop paddingBottom>
+          <Text type={TextTypes.SubTitle}>Last modified May 24, 2018</Text>
+        </Container>
+        <Container paddingLeft paddingRight>
+          <Text type={TextTypes.Body}>{text1}</Text>
+          <Text type={TextTypes.Body}>{text2}</Text>
+          <Text type={TextTypes.Body}>{text3}</Text>
+          <Text type={TextTypes.Body}>{text4}</Text>
+          <Text type={TextTypes.Body}>{text5}</Text>
+          <Text type={TextTypes.Body}>{text6}</Text>
+        </Container>
+      </Container>
+    </Screen>
+  )
+}
 
-const PrivacyPolicy = (props) => (
-  <View style={{flex: 1}}>
-    <Text style={[textStyles.small, {padding: 16}]}>
-      Last modified May 24, 2018
-    </Text>
-    <ScrollView style={{flex: 1}}>
-      <Text style={styles.termsAndConditions}>
-        {text1}
-      </Text>
-      <Text style={styles.termsAndConditions}>
-        {text2}
-      </Text>
-      <Text style={styles.termsAndConditions}>
-        {text3}
-      </Text>
-      <Text style={styles.termsAndConditions}>
-        {text4}
-      </Text>
-      <Text style={styles.termsAndConditions}>
-        {text5}
-      </Text>
-      <Text style={styles.termsAndConditions}>
-        {text6}
-      </Text>
-    </ScrollView>
-  </View>
-)
+PrivacyPolicy.defaultProps = {
+  defaultPadding: true,
+}
+
+PrivacyPolicy.navigatorStyle = {
+  ...Theme.navigation,
+}
+
 export default PrivacyPolicy
