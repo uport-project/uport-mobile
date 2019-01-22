@@ -1,5 +1,23 @@
 # Change Log
 
+## [v411](https://github.com/uport-project/uport-mobile/tree/v411) (2019-01-22)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v410...v411)
+
+**Merged pull requests:**
+
+- Updated Infura urls [\#66](https://github.com/uport-project/uport-mobile/pull/66) ([simonas-notcat](https://github.com/simonas-notcat))
+- Showing app branding in attestations [\#65](https://github.com/uport-project/uport-mobile/pull/65) ([simonas-notcat](https://github.com/simonas-notcat))
+
+## [v410](https://github.com/uport-project/uport-mobile/tree/v410) (2019-01-22)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v409...v410)
+
+**Merged pull requests:**
+
+- execute callback if callbackUrl is included in claim when adding attestation [\#64](https://github.com/uport-project/uport-mobile/pull/64) ([mi-xu](https://github.com/mi-xu))
+- adding accessibility label for the left hand menu bar - used in autom… [\#63](https://github.com/uport-project/uport-mobile/pull/63) ([flaneuring](https://github.com/flaneuring))
+- Feature/pt162975683/typescript did resolvers [\#62](https://github.com/uport-project/uport-mobile/pull/62) ([mi-xu](https://github.com/mi-xu))
+- fix build for new vault [\#58](https://github.com/uport-project/uport-mobile/pull/58) ([mirceanis](https://github.com/mirceanis))
+
 ## [v409](https://github.com/uport-project/uport-mobile/tree/v409) (2019-01-09)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v408...v409)
 
