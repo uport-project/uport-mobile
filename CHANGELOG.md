@@ -1,5 +1,13 @@
 # Change Log
 
+## [v411](https://github.com/uport-project/uport-mobile/tree/v411) (2019-01-22)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v410...v411)
+
+**Merged pull requests:**
+
+- Updated Infura urls [\#66](https://github.com/uport-project/uport-mobile/pull/66) ([simonas-notcat](https://github.com/simonas-notcat))
+- Showing app branding in attestations [\#65](https://github.com/uport-project/uport-mobile/pull/65) ([simonas-notcat](https://github.com/simonas-notcat))
+
 ## [v410](https://github.com/uport-project/uport-mobile/tree/v410) (2019-01-22)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v409...v410)
 
