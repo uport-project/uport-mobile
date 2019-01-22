@@ -18,23 +18,53 @@
  ***/
 
 import * as React from 'react'
-import { SafeAreaView, ScrollView } from 'react-native'
-import { Container, Theme } from '@kancha'
+import { SafeAreaView, ScrollView, ViewStyle } from 'react-native'
+import { Container, Theme, Device, Text, TextTypes } from '@kancha'
 
 interface ScreenProps {
-  safeAreaView?: boolean
-  type?: 'primary' | 'secondary' | undefined
+  safeAreaView?: boolean;
+  type?: 'primary' | 'secondary' | 'tertiary' | undefined;
+  expandingHeaderContent?: React.ReactNode;
+  expandingHeaderType?: 'primary' | 'secondary' | 'tertiary' | undefined;
 }
 
+const SPACER_SIZE = 1000;
+
 const Screen: React.FunctionComponent<ScreenProps> = props => {
+
+  const scrollViewStyle: ViewStyle = {
+    backgroundColor: props.type && Theme.colors[props.type].background,
+  }
+  const scrollViewContentStyle = {
+    ...(props.expandingHeaderType ? { backgroundColor: Theme.colors[props.expandingHeaderType].background } : {}),
+  }
+  const scrollViewContentInset = {
+    ...(props.expandingHeaderContent ? { top: -SPACER_SIZE } : {} ),
+  }
+  const scrollViewContentOffset = {
+    ...(props.expandingHeaderContent ? { y: SPACER_SIZE, x: 0 } : { y: 0, x: 0 }),
+  }
+
   return props.safeAreaView ? (
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView
-        style={{
-          backgroundColor: props.type && Theme.colors[props.type].background,
-        }}
-      >
-        <Container flex={1} background={props.type} paddingBottom>
+        contentInset={scrollViewContentInset}
+        contentOffset={scrollViewContentOffset}
+        style={scrollViewStyle} 
+        contentContainerStyle={scrollViewContentStyle}>
+        {
+          props.expandingHeaderContent &&
+            <React.Fragment>
+            { Device.isIOS && <Container h={1000} /> }
+              <Container
+                background={props.expandingHeaderType}>
+                  {
+                    props.expandingHeaderContent
+                  }
+              </Container>
+            </React.Fragment>
+        }
+        <Container flex={1} paddingBottom background={props.type}>
           {props.children}
         </Container>
       </ScrollView>

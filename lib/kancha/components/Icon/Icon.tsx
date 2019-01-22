@@ -50,12 +50,7 @@ const Icons: { [index: string]: any } = {
   link: Platform.OS === 'ios' ? 'ios-link' : 'md-link',
 }
 
-const Icon: React.FunctionComponent<IconProps> = ({
-  font,
-  name,
-  size,
-  color,
-}: IconProps) => {
+const Icon: React.FunctionComponent<IconProps> = ({ font, name, size, color }: IconProps) => {
   const IconFont = font ? IconSets[font] : Ionicons
   return <IconFont name={Icons[name]} size={size} color={color} />
 }

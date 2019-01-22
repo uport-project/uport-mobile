@@ -1,16 +1,13 @@
-import * as React from 'react';
-import { Container, Text, TextTypes, ListItem, Screen, Section } from '@kancha';
+import * as React from 'react'
+import { Container, Text, TextTypes, ListItem, Screen, Section } from '@kancha'
 
 interface FakeAvatarProps {}
 
-const FakeAvatar: React.FC<FakeAvatarProps> = (props) => {
-  return (
-    <Container w={40} h={40} background={'secondary'} />
-  )
+const FakeAvatar: React.FC<FakeAvatarProps> = props => {
+  return <Container w={40} h={40} background={'secondary'} />
 }
 
 class DesignSystem extends React.Component {
-
   render() {
     return (
       <Screen>
@@ -18,28 +15,36 @@ class DesignSystem extends React.Component {
           <Section>
             <ListItem
               avatarComponent={<FakeAvatar />}
-              onPress={() => { 1 === 1 }}
-              infoNoteRight={'22 ETH'}
+              onPress={() => {
+                1 === 1
+              }}
+              accessoryRight={'22 ETH'}
             >
               Advanced
             </ListItem>
             <ListItem
               avatarComponent={<FakeAvatar />}
-              onPress={() => { 1 === 1 }}
-              infoNoteRight={'Content'}
+              onPress={() => {
+                1 === 1
+              }}
+              accessoryRight={'Content'}
             >
               Privacy
             </ListItem>
             <ListItem
               avatarComponent={<FakeAvatar />}
-              onPress={() => { 1 === 1 }}
+              onPress={() => {
+                1 === 1
+              }}
             >
               General
             </ListItem>
             <ListItem
               last
               avatarComponent={<FakeAvatar />}
-              onPress={() => { 1 === 1 }}
+              onPress={() => {
+                1 === 1
+              }}
             >
               Back Up
             </ListItem>
@@ -67,7 +72,6 @@ class DesignSystem extends React.Component {
       </Screen>
     )
   }
-
 }
 
-export default DesignSystem;
+export default DesignSystem

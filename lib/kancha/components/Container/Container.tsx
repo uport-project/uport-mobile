@@ -34,34 +34,16 @@ interface ContainerProps {
   /** Flex */
   flex?: number | undefined
 
-  background?: 'primary' | 'secondary' | undefined
+  background?: 'primary' | 'secondary' | 'tertiary' | undefined
 
   /** Flex direction */
-  flexDirection?:
-    | 'row'
-    | 'column'
-    | 'row-reverse'
-    | 'column-reverse'
-    | undefined
+  flexDirection?: 'row' | 'column' | 'row-reverse' | 'column-reverse' | undefined
 
   /** Align items */
-  alignItems?:
-    | 'flex-start'
-    | 'flex-end'
-    | 'center'
-    | 'stretch'
-    | 'baseline'
-    | undefined
+  alignItems?: 'flex-start' | 'flex-end' | 'center' | 'stretch' | 'baseline' | undefined
 
   /** Justify Content */
-  justifyContent?:
-    | 'flex-start'
-    | 'flex-end'
-    | 'center'
-    | 'space-between'
-    | 'space-around'
-    | 'space-evenly'
-    | undefined
+  justifyContent?: 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'space-evenly' | undefined
 
   /** Set the bottom divider */
   dividerBottom?: boolean
@@ -80,6 +62,12 @@ interface ContainerProps {
 
   /** Set the top margin */
   marginRight?: number | boolean | undefined
+
+  /** Set the default padding */
+  padding?: number | boolean | undefined
+
+  /** Set the default paddingHorizontal */
+  paddingHorizontal?: number | boolean | undefined
 
   /** Set the bottom padding */
   paddingBottom?: number | boolean | undefined
@@ -118,44 +106,22 @@ const Container: React.FunctionComponent<ContainerProps> = props => {
     flexDirection: props.flexDirection,
     alignItems: props.alignItems,
     justifyContent: props.justifyContent,
-    backgroundColor:
-      props.background && Theme.colors[props.background].background,
+    backgroundColor: props.background && Theme.colors[props.background].background,
 
     /** Margins */
-    marginBottom:
-      typeof props.marginBottom === 'boolean'
-        ? Theme.spacing.default
-        : props.marginBottom,
-    marginTop:
-      typeof props.marginTop === 'boolean'
-        ? Theme.spacing.default
-        : props.marginTop,
-    marginLeft:
-      typeof props.marginLeft === 'boolean'
-        ? Theme.spacing.default
-        : props.marginLeft,
-    marginRight:
-      typeof props.marginRight === 'boolean'
-        ? Theme.spacing.default
-        : props.marginRight,
+    marginBottom: typeof props.marginBottom === 'boolean' ? Theme.spacing.default : props.marginBottom,
+    marginTop: typeof props.marginTop === 'boolean' ? Theme.spacing.default : props.marginTop,
+    marginLeft: typeof props.marginLeft === 'boolean' ? Theme.spacing.default : props.marginLeft,
+    marginRight: typeof props.marginRight === 'boolean' ? Theme.spacing.default : props.marginRight,
 
     /** Paddings */
-    paddingBottom:
-      typeof props.paddingBottom === 'boolean'
-        ? Theme.spacing.default
-        : props.paddingBottom,
-    paddingTop:
-      typeof props.paddingTop === 'boolean'
-        ? Theme.spacing.default
-        : props.paddingTop,
-    paddingLeft:
-      typeof props.paddingLeft === 'boolean'
-        ? Theme.spacing.default
-        : props.paddingLeft,
-    paddingRight:
-      typeof props.paddingRight === 'boolean'
-        ? Theme.spacing.default
-        : props.paddingRight,
+    padding: typeof props.padding === 'boolean' ? Theme.spacing.default : props.padding,
+    paddingHorizontal: typeof props.paddingHorizontal === 'boolean' ? Theme.spacing.default : props.paddingHorizontal,
+
+    paddingBottom: typeof props.paddingBottom === 'boolean' ? Theme.spacing.default : props.paddingBottom,
+    paddingTop: typeof props.paddingTop === 'boolean' ? Theme.spacing.default : props.paddingTop,
+    paddingLeft: typeof props.paddingLeft === 'boolean' ? Theme.spacing.default : props.paddingLeft,
+    paddingRight: typeof props.paddingRight === 'boolean' ? Theme.spacing.default : props.paddingRight,
   }
 
   /** Conditionally spread styles down to the View */

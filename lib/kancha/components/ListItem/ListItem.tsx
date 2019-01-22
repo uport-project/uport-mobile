@@ -48,17 +48,17 @@ interface ListItemProps {
   hideForwardArrow?: boolean
 
   /**
-   * Text to be displayed on the right as a smaller note
+   * Text to be displayed on the right as a smaller accessory
    */
-  infoNoteRight?: string
+  accessoryRight?: string | number | undefined
 
   /**
-   * Show the infoNoteRight text in the theme warn color
+   * Show the accessoryRight text in the theme warn color
    */
   warn?: boolean
 
   /**
-   * Text to be displayed on the right as regular text
+   * Text to be displayed on the right as regular text. Not sure if needed yet.
    */
   contentRight?: string
 
@@ -70,7 +70,7 @@ interface ListItemProps {
 
 /** Move to kancha utils */
 const shortenString = (item: string) => {
-  return `${item.slice(0, 18)}...`
+  return `${item.slice(0, 12)}...`
 }
 
 const ListItem: React.FunctionComponent<ListItemProps> = props => {
@@ -84,29 +84,14 @@ const ListItem: React.FunctionComponent<ListItemProps> = props => {
     ? () => props.externalLink && Linking.openURL(props.externalLink)
     : undefined
 
-  const actionIcon =
-    props.onPress && !props.hideForwardArrow
-      ? 'forward'
-      : props.externalLink
-      ? 'link'
-      : undefined
+  const actionIcon = props.onPress && !props.hideForwardArrow ? 'forward' : props.externalLink ? 'link' : undefined
 
   return (
-    <TouchableHighlight
-      style={styles}
-      onPress={onPressAction}
-      underlayColor={Theme.colors.primary.underlay}
-    >
+    <TouchableHighlight style={styles} onPress={onPressAction} underlayColor={Theme.colors.primary.underlay}>
       <Container flex={1} flexDirection={'row'}>
         {props.avatarComponent && (
-          <Container
-            alignItems={'center'}
-            justifyContent={'center'}
-            paddingLeft
-            paddingTop={8}
-            paddingBottom={8}
-          >
-            {props.avatarComponent}
+          <Container alignItems={'center'} justifyContent={'center'} paddingLeft paddingTop={8} paddingBottom={8}>
+            { props.avatarComponent }
           </Container>
         )}
         <Container
@@ -122,24 +107,20 @@ const ListItem: React.FunctionComponent<ListItemProps> = props => {
           <Container flex={1}>
             <Text type={TextTypes.ListItem}>{props.children}</Text>
           </Container>
-          <Container flexDirection={'row'} alignItems={'center'}>
-            <Container marginRight marginLeft>
-              {props.infoNoteRight && !props.contentRight && (
-                <Text type={TextTypes.ListItemNote}>{props.infoNoteRight}</Text>
-              )}
-              {props.contentRight && !props.infoNoteRight && (
-                <Text type={TextTypes.ListItemRight}>
-                  {shortenString(props.contentRight)}
-                </Text>
-              )}
-            </Container>
-            {actionIcon && (
-              <Icon
-                name={actionIcon}
-                size={24}
-                color={Theme.colors.primary.accessories}
-              />
-            )}
+          <Container 
+            flexDirection={'row'} 
+            alignItems={'center'}>
+              <Container marginRight marginLeft paddingTop={5} paddingBottom={5}>
+                {props.accessoryRight && !props.contentRight && (
+                  <Text type={TextTypes.ListItemNote} warn={props.warn}>
+                    {props.accessoryRight}
+                  </Text>
+                )}
+                {props.contentRight && !props.accessoryRight && (
+                  <Text type={TextTypes.ListItemRight}>{shortenString(props.contentRight)}</Text>
+                )}
+              </Container>
+            { actionIcon && <Icon name={actionIcon} size={24} color={Theme.colors.primary.accessories} />}
           </Container>
         </Container>
       </Container>
