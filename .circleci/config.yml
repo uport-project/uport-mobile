@@ -16,7 +16,7 @@ jobs:
             - node-{{ arch }}-v2
 
       - run: yarn install
-      - run: npm install -g codecov
+      - run: sudo npm install -g codecov
 
       - save_cache:
           key: yarn-{{ arch }}-v2-{{ checksum "yarn.lock" }}
