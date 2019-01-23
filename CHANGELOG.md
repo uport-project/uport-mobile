@@ -1,5 +1,12 @@
 # Change Log
 
+## [v412](https://github.com/uport-project/uport-mobile/tree/v412) (2019-01-23)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v411...v412)
+
+**Merged pull requests:**
+
+- Add better metrics for identity types and networks [\#67](https://github.com/uport-project/uport-mobile/pull/67) ([simonas-notcat](https://github.com/simonas-notcat))
+
 ## [v411](https://github.com/uport-project/uport-mobile/tree/v411) (2019-01-22)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v410...v411)
 
