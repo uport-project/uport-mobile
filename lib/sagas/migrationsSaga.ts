@@ -32,6 +32,7 @@ import IdentityManagerChangeOwner from './migrations/IdentityManagerChangeOwner'
 import MigrateLegacy from './migrations/MigrateLegacy'
 import UpdatePreHDRootToHD from './migrations/UpdatePreHDRootToHD'
 import UportRegistryDDORefresh from './migrations/UportRegistryDDORefresh'
+import InvalidateIdentityWithMissingKeys from './migrations/InvalidateIdentityWithMissingKeys'
 
 export function * checkIfAbleToSign () : any {
   const address = yield select(currentAddress)
@@ -68,14 +69,6 @@ export function * checkup () : any {
   }
 }
 
-const implementations = {
-  IdentityManagerChangeOwner,
-  UpdatePreHDRootToHD,
-  UportRegistryDDORefresh,
-  CleanUpAfterMissingSeed,
-  MigrateLegacy
-}
-
 export function * runMigrations ({target} : TargetAction) : any {
   const targets = yield select(migrationTargets)
   if (targets.includes(target)) {
@@ -91,9 +84,19 @@ export function * runMigrations ({target} : TargetAction) : any {
 }
 
 export function * runImplementationStep (step: MigrationStep) : any {
-  const migration = implementations[step]
-  if (migration) {
-    return yield call(migration)
+  switch (step) {
+    case MigrationStep.IdentityManagerChangeOwner:
+      return yield call(IdentityManagerChangeOwner)
+    case MigrationStep.UpdatePreHDRootToHD:
+      return yield call(UpdatePreHDRootToHD)
+    case MigrationStep.UportRegistryDDORefresh:
+      return yield call(UportRegistryDDORefresh)
+    case MigrationStep.CleanUpAfterMissingSeed:
+      return yield call(CleanUpAfterMissingSeed)
+    case MigrationStep.MigrateLegacy:
+      return yield call(MigrateLegacy)
+    case MigrationStep.InvalidateIdentityWithMissingKeys:
+      return yield call(InvalidateIdentityWithMissingKeys)
   }
 }
 

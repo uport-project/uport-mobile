@@ -44,7 +44,7 @@ export const migrationTargets = createSelector(
 
 export const migrationStepStatus = createSelector(
   [migrations, currentStep],
-  (state, step) => state.steps[MigrationStep[step]] || MigrationStatus.NotStarted
+  (state, step: MigrationStep) => state.steps[step] || MigrationStatus.NotStarted
 )
 
 const targetCompleted = (state: MigrationState, target: MigrationTarget) => (targetRecipes[target] || []).every(step => state.steps[step] === MigrationStatus.Completed)

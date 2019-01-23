@@ -71,6 +71,10 @@ describe('InvalidateIdentityWithMissingKeys', () => {
       const newDID = 'did:ethr:0x'
       const newId = {address: newDID}
       describe('without sub accounts', () => {
+
+        // TODO If seed is working but root isn't create new IdentityKeyPair based on seed
+
+
         it('should clean up', () => {
           return expectSaga(migrate)
             .provide([

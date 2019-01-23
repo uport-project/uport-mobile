@@ -57,7 +57,7 @@ function reduceTarget(state: MigrationState, action: TargetAction) : MigrationSt
 
 function reduceSetMigrationStep(state: MigrationState, step: MigrationStep, status: MigrationStatus) : MigrationState {
   const steps = {...state.steps}
-  steps[MigrationStep[step]] = status
+  steps[step] = status
   return {...state, steps}
 }
 
