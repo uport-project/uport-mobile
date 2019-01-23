@@ -16,6 +16,7 @@ jobs:
             - node-{{ arch }}-v2
 
       - run: yarn install
+      - run: npm install -g codecov
 
       - save_cache:
           key: yarn-{{ arch }}-v2-{{ checksum "yarn.lock" }}
@@ -29,7 +30,7 @@ jobs:
           name: jest tests
           command: |
             mkdir -p test-results/jest
-            yarn run test --ci --coverage --maxWorkers=3
+            yarn run test --ci --coverage --maxWorkers=3 | codecov
           environment:
             JEST_JUNIT_OUTPUT: test-results/jest/junit.xml
 
