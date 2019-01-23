@@ -33,12 +33,9 @@ import MigrateLegacy from './migrations/MigrateLegacy'
 import UpdatePreHDRootToHD from './migrations/UpdatePreHDRootToHD'
 import UportRegistryDDORefresh from './migrations/UportRegistryDDORefresh'
 
-export function * checkForPreHD () : any {
-  if (!(yield select(hasAttestations))) return
-  const fullHD = yield select(isFullyHD)
+export function * checkIfAbleToSign () : any {
   const address = yield select(currentAddress)
-  const canSign = yield call(canSignFor, address)
-  return canSign && !fullHD
+  return yield call(canSignFor, address)
 }
 
 export function * checkForLegacy () : any {
@@ -47,16 +44,20 @@ export function * checkForLegacy () : any {
 }
 
 export function * checkup () : any {
-  if (yield call(checkForLegacy)) {
-    if (yield call(checkForPreHD)) {
-      yield put(addMigrationTarget(MigrationTarget.PreHD))
-    } else {
-      yield put(addMigrationTarget(MigrationTarget.Legacy))
-    }
+  if (yield call(checkIfAbleToSign)) {
+    if (yield call(checkForLegacy)) {
+      if (!(yield select(isFullyHD))) {
+        yield put(addMigrationTarget(MigrationTarget.PreHD))
+      } if (!(yield select(hasAttestations))) {
+        yield put(addMigrationTarget(MigrationTarget.Legacy))
+      }
+    }  
+  } else {
+    yield put(addMigrationTarget(MigrationTarget.MissingKeys))
   }
 
   const pending = yield select(pendingMigrations)
-  console.log('pending migrations', pending)
+  // console.log('pending migrations', pending)
   if (pending.length > 0 ) {
     const target = pending[0]
     yield call(delay, 2000)

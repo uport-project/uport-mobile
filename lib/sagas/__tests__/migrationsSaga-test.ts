@@ -58,10 +58,12 @@ import { hasAttestations } from 'uPortMobile/lib/selectors/attestations';
 describe('checkup', () => {
   const root = '0xroot'
 
-  describe('modern did', () => {
+  describe('ethr did', () => {
     it('does not Add Migration Target', () => {
       return expectSaga(migrationsSaga)
           .provide([
+            [select(currentAddress), root],
+            [call(canSignFor, root), true],
             [select(pendingMigrations), []],
             [select(migrateableIdentities), []]
           ])
@@ -69,131 +71,160 @@ describe('checkup', () => {
           .dispatch(loadedDB())
           .silentRun()
     })
+
+    describe('unable to sign', () => {
+      it('adds Migration Target', () => {
+        return expectSaga(migrationsSaga)
+            .provide([
+              [select(currentAddress), root],
+              [call(canSignFor, root), false],
+              [select(pendingMigrations), []],
+              [select(migrateableIdentities), []]
+            ])
+            .put(addMigrationTarget(MigrationTarget.MissingKeys))
+            .dispatch(loadedDB())
+            .silentRun()
+      })
+  
+    })
   })
 
-  describe('legacy identity', () => {
-    it('should add Migration Target', () => {
-      return expectSaga(migrationsSaga)
+  describe('Legacy Identity', () => {
+    describe('has Full HD Wallet', () => {
+      describe('has attestations', () => {
+        it('should not do anything', () => {
+          return expectSaga(migrationsSaga)
           .provide([
+            [select(currentAddress), root],
+            [call(canSignFor, root), true],
+            [select(isFullyHD), true],
+            [select(hasAttestations), true],
+            [select(pendingMigrations), []],
+            [select(migrateableIdentities), [{address: '0x'}]]
+          ])
+          .not.put(addMigrationTarget(MigrationTarget.Legacy))
+          .not.put(addMigrationTarget(MigrationTarget.PreHD))
+          .dispatch(loadedDB())
+          .silentRun()
+        })
+      })
+
+      describe('without attestations', () => {
+        it('should migrate to Ethr DID', () => {
+          return expectSaga(migrationsSaga)
+          .provide([
+            [select(currentAddress), root],
+            [call(canSignFor, root), true],
+            [select(isFullyHD), true],
+            [select(hasAttestations), false],
+            [select(pendingMigrations), []],
+            [select(migrateableIdentities), [{address: '0x'}]]
+          ])
+          .put(addMigrationTarget(MigrationTarget.Legacy))
+          .not.put(addMigrationTarget(MigrationTarget.PreHD))
+          .dispatch(loadedDB())
+          .silentRun()
+        })
+      })
+    })
+
+    describe('Pre HD wallet', () => {
+      describe('able to sign', () => {
+        describe('has attestations', () => {
+          it('adds PreHD Migration Target', () => {
+            return expectSaga(migrationsSaga)
+                .provide([
+                  [select(currentAddress), root],
+                  [select(isFullyHD), false],
+                  [call(canSignFor, root), true],
+                  [select(hasAttestations), true],      
+                  [select(pendingMigrations), []],
+                  [select(migrateableIdentities), [{address: '0x'}]],
+                  [select(hasAttestations), false]
+                ])
+                .put(addMigrationTarget(MigrationTarget.PreHD))
+                .dispatch(loadedDB())
+                .silentRun()
+          })
+        })
+
+        describe('without attestations', () => {
+          it('adds PreHD Migration Target', () => {
+            return expectSaga(migrationsSaga)
+                .provide([
+                  [select(currentAddress), root],
+                  [call(canSignFor, root), true],
+                  [select(isFullyHD), false],
+                  [select(hasAttestations), false],      
+                  [select(pendingMigrations), []],
+                  [select(migrateableIdentities), [{address: '0x'}]],
+                  [select(hasAttestations), false]
+                ])
+                .put(addMigrationTarget(MigrationTarget.Legacy))
+                .dispatch(loadedDB())
+                .silentRun()
+          })          
+        })
+      })
+
+      describe('unable to sign', () => {
+        describe('has attestations', () => {
+          return expectSaga(migrationsSaga)
+          .provide([
+            [select(currentAddress), root],
+            [call(canSignFor, root), false],
+            [select(hasAttestations), true],
             [select(pendingMigrations), []],
             [select(migrateableIdentities), [{address: '0x'}]],
             [select(hasAttestations), false]
           ])
-          .put(addMigrationTarget(MigrationTarget.Legacy))
+          .put(addMigrationTarget(MigrationTarget.MissingKeys))
           .dispatch(loadedDB())
           .silentRun()
-    })
 
-    describe('Should we migrate PreHD', () => {
-      describe('without attestions', () => {
-        it('does not Add PreHD Migration Target', () => {
+        })
+
+        describe('without attestations', () => {
           return expectSaga(migrationsSaga)
-              .provide([
-                [select(pendingMigrations), []],
-                [select(migrateableIdentities), [{address: '0x'}]],
-                [select(hasAttestations), false]
-              ])
-              .put(addMigrationTarget(MigrationTarget.Legacy))
-              .not.put(addMigrationTarget(MigrationTarget.PreHD))
-              .dispatch(loadedDB())
-              .silentRun()
+          .provide([
+            [select(currentAddress), root],
+            [call(canSignFor, root), false],
+            [select(isFullyHD), false],
+            [select(hasAttestations), false],
+            [select(pendingMigrations), []],
+            [select(migrateableIdentities), [{address: '0x'}]],
+            [select(hasAttestations), false]
+          ])
+          .put(addMigrationTarget(MigrationTarget.MissingKeys))
+          .dispatch(loadedDB())
+          .silentRun()    
         })
       })
 
-      describe('with attestations', () => {
-        describe('hd wallet', () => {
-          it('does not Add Migration Target', () => {
-            return expectSaga(migrationsSaga)
-                .provide([
-                  [select(isFullyHD), true],
-                  [select(currentAddress), root],
-                  [call(canSignFor, root), true],
-                  [select(pendingMigrations), []],
-                  [select(migrateableIdentities), [{address: '0x'}]],
-                  [select(hasAttestations), true]
-                ])
-                .put(addMigrationTarget(MigrationTarget.Legacy))
-                .not.put(addMigrationTarget(MigrationTarget.PreHD))
-                .dispatch(loadedDB())
-                .silentRun()
-          })
-        })
-      
-        describe('pre hd', () => {
-          describe('able to sign', () => {
-            it('adds a Migration Target', () => {
-              return expectSaga(migrationsSaga)
-                  .provide([
-                    [select(hasAttestations), true],
-                    [select(isFullyHD), false],
-                    [select(currentAddress), root],
-                    [call(canSignFor, root), true],
-                    [call(delay, 2000), undefined],
-                    [select(pendingMigrations), [MigrationTarget.PreHD]],
-                    [select(migrateableIdentities), [{address: '0x'}]]
-                  ])
-                  .not.put(addMigrationTarget(MigrationTarget.Legacy))
-                  .put(addMigrationTarget(MigrationTarget.PreHD))
-                  .call(NavigationActions.push, {
-                    screen: `migrations.PreHD`,
-                    animationType: 'slide-up'
-                  })
-                  .dispatch(loadedDB())
-                  .silentRun()
-            })  
-          })
-      
-          describe('full HD', () => {
-            it('does not add a Migration Target', () => {
-              return expectSaga(migrationsSaga)
-                  .provide([
-                    [select(hasAttestations), true],
-                    [select(isFullyHD), true],
-                    [select(currentAddress), root],
-                    [call(canSignFor, root), true],
-                    [call(delay, 2000), undefined],
-                    [select(pendingMigrations), [MigrationTarget.PreHD]],
-                    [select(migrateableIdentities), [{address: '0x'}]]
-                  ])
-                  .put(addMigrationTarget(MigrationTarget.Legacy))
-                  .not.put(addMigrationTarget(MigrationTarget.PreHD))
-                  .call(NavigationActions.push, {
-                    screen: `migrations.PreHD`,
-                    animationType: 'slide-up'
-                  })
-                  .dispatch(loadedDB())
-                  .silentRun()
-            })  
-          })      
-        })  
-        describe('unable to sign', () => {
-          it('adds a Migration Target', () => {
-            return expectSaga(migrationsSaga)
-                .provide([
-                  [select(hasAttestations), true],
-                  [select(isFullyHD), false],
-                  [select(currentAddress), root],
-                  [call(canSignFor, root), false],
-                  [call(listSeedAddresses), []],
-                  [call(delay, 2000), undefined],
-                  [select(pendingMigrations), [MigrationTarget.PreHD]],
-                  [select(migrateableIdentities), [{address: '0x'}]]
-                ])
-                .put(addMigrationTarget(MigrationTarget.Legacy))
-                .not.put(addMigrationTarget(MigrationTarget.PreHD))
-                .call(NavigationActions.push, {
-                  screen: `migrations.PreHD`,
-                  animationType: 'slide-up'
-                })
-                .dispatch(loadedDB())
-                .silentRun()
-          })  
-        })
-  
-      })
     })    
   })
 
+  describe('Trigger Migration Screen', () => {      
+    describe('pending migrations contains at least one migration', () => {
+      it('Shows migration modal', () => {
+        return expectSaga(migrationsSaga)
+            .provide([
+              [select(currentAddress), root],
+              [call(canSignFor, root), false],
+              [call(delay, 2000), undefined],
+              [select(pendingMigrations), [MigrationTarget.MissingKeys]],
+              [select(migrateableIdentities), [{address: '0x'}]]
+            ])
+            .put(addMigrationTarget(MigrationTarget.MissingKeys))
+            .call(NavigationActions.push, {
+              screen: `migrations.MissingKeys`,
+              animationType: 'slide-up'
+            })
+            .dispatch(loadedDB())
+            .silentRun()
+      })  
+    })
+  })
 })
 
 describe('runMigrations', () => {
@@ -218,7 +249,6 @@ describe('runMigrations', () => {
           [select(migrationStepStatus, MigrationStep.IdentityManagerChangeOwner), MigrationStatus.Completed],
           [select(migrationStepStatus, MigrationStep.UpdatePreHDRootToHD), MigrationStatus.Completed],
           [select(migrationStepStatus, MigrationStep.UportRegistryDDORefresh), MigrationStatus.Completed],
-          [select(migrationStepStatus, MigrationStep.MigrateLegacy), MigrationStatus.Completed],
           [select(migrationCompleted, MigrationTarget.PreHD), true],
           [matchers.call.fn(performStep), undefined]
         ])
@@ -227,7 +257,6 @@ describe('runMigrations', () => {
         .call(performStep, MigrationStep.IdentityManagerChangeOwner)
         .call(performStep, MigrationStep.UpdatePreHDRootToHD)
         .call(performStep, MigrationStep.UportRegistryDDORefresh)
-        .call(performStep, MigrationStep.MigrateLegacy)
         .put(completeProcess(MigrationTarget.PreHD))
         .dispatch(runMigrations(MigrationTarget.PreHD))
         .silentRun()
