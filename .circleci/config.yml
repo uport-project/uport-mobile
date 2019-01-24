@@ -16,7 +16,6 @@ jobs:
             - node-{{ arch }}-v2
 
       - run: yarn install
-      - run: sudo npm install -g codecov
 
       - save_cache:
           key: yarn-{{ arch }}-v2-{{ checksum "yarn.lock" }}
@@ -33,9 +32,7 @@ jobs:
             yarn run test --ci --coverage --maxWorkers=3
           environment:
             JEST_JUNIT_OUTPUT: test-results/jest/junit.xml
-      - run:
-          name: code-coverage
-          command: codecov && bash <(curl -s https://codecov.io/bash)
+
       - run:
           name: package react native android bundle independently
           command: yarn package-android --max-workers=3
