@@ -8,6 +8,7 @@
       "noEmit": true,
       "strict": true,
       "allowJs": true,
+      "resolveJsonModule": true,
       "allowSyntheticDefaultImports": true,
       "moduleResolution": "node",
       "baseUrl": ".",
