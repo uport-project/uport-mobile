@@ -45,6 +45,10 @@ export function * checkForLegacy () : any {
   return (migrateable.length > 0)
 }
 
+export function * alert(title: string, message: string) {
+  yield call(delay, 500)
+  yield call([Alert, Alert.alert], title, message)
+}
 export function * checkup () : any {
   if (yield call(checkIfAbleToSign)) {
     if (yield call(checkForLegacy)) {
@@ -63,7 +67,6 @@ export function * checkup () : any {
     }
     yield put(addMigrationTarget(MigrationTarget.Legacy))
   }
-
   const pending = yield select(pendingMigrations)
   // console.log('pending migrations', pending)
   if (pending.length > 0 ) {
@@ -78,10 +81,9 @@ export function * checkup () : any {
         break
       case MigrationTarget.Legacy:
         if (yield call(runMigrations, { type: RUN_MIGRATIONS, target})) {
-          yield call(Alert.alert,
+          yield call(alert,
             'Your Identity has been upgraded', 
-            'You had an old test net identity. Thank you for being an early uPort user. We have now upgraded your identity to live on the Ethereum Mainnet.',
-            [{text: 'OK'}]
+            'You had an old test net identity. Thank you for being an early uPort user. We have now upgraded your identity to live on the Ethereum Mainnet.'
             )
         }
   
@@ -90,21 +92,20 @@ export function * checkup () : any {
 }
 
 export function * runMigrations ({target} : TargetAction) : any {
-  const targets = yield select(migrationTargets)
-  if (targets.includes(target)) {
-    yield put(startWorking(target))
-    const steps = targetRecipes[target]||[]
-    let status
-    for (let step of steps) {
-      yield call(performStep, step)
-      status = yield select(migrationStepStatus, step)
-      if (status !== MigrationStatus.Completed) break
-    }
-    if (status === MigrationStatus.Completed) {
-      yield put(completeProcess(target))
-    } else {
-      yield put(failProcess(target))
-    }
+  yield put(startWorking(target))
+  const steps = targetRecipes[target]||[]
+  let status
+  for (let step of steps) {
+    yield call(performStep, step)
+    status = yield select(migrationStepStatus, step)
+    if (status !== MigrationStatus.Completed) break
+  }
+  if (status === MigrationStatus.Completed) {
+    yield put(completeProcess(target))
+    return true
+  } else {
+    yield put(failProcess(target))
+    return false
   }
 }
 

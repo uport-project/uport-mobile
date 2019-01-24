@@ -20,7 +20,7 @@ import * as matchers from 'redux-saga-test-plan/matchers'
 import { throwError } from 'redux-saga-test-plan/providers'
 import { select, call } from 'redux-saga/effects'
 import { delay } from 'redux-saga'
-import migrationsSaga, { performStep, runImplementationStep, checkIfAbleToSign, checkForLegacy, runMigrations } from '../migrationsSaga'
+import migrationsSaga, { performStep, runImplementationStep, checkIfAbleToSign, checkForLegacy, runMigrations, alert } from '../migrationsSaga'
 import IdentityManagerChangeOwner from '../migrations/IdentityManagerChangeOwner'
 import { listSeedAddresses, canSignFor, hasWorkingSeed } from 'uPortMobile/lib/sagas/keychain'
 import { 
@@ -278,10 +278,9 @@ describe('checkup', () => {
               ])
               .put(addMigrationTarget(MigrationTarget.Legacy))
               .call(runMigrations, runMigrationAction(MigrationTarget.Legacy))
-              .call(Alert.alert, 
+              .call(alert, 
                 'Your Identity has been upgraded', 
-                'You had an old test net identity. Thank you for being an early uPort user. We have now upgraded your identity to live on the Ethereum Mainnet.',
-                [{text: 'OK'}]
+                'You had an old test net identity. Thank you for being an early uPort user. We have now upgraded your identity to live on the Ethereum Mainnet.'
               )
               .dispatch(loadedDB())
               .silentRun()
@@ -292,21 +291,9 @@ describe('checkup', () => {
 })
 
 describe('runMigrations', () => {
-  describe('no targets', () => {
-    it('should not run any steps', () => {
-      return expectSaga(migrationsSaga)
-        .provide([
-          [select(migrationTargets), []]
-        ])
-        .not.call(performStep)
-        .dispatch(runMigrationAction(MigrationTarget.PreHD))
-        .silentRun()
-    })
-  })
-
   describe('with targets', () => {
     it('should run all steps', () => {
-      return expectSaga(migrationsSaga)
+      return expectSaga(runMigrations, runMigrationAction(MigrationTarget.PreHD))
         .provide([
           [select(migrationTargets), [MigrationTarget.PreHD]],
           [select(migrationStepStatus, MigrationStep.CleanUpAfterMissingSeed), MigrationStatus.Completed],
@@ -322,13 +309,13 @@ describe('runMigrations', () => {
         .call(performStep, MigrationStep.UpdatePreHDRootToHD)
         .call(performStep, MigrationStep.UportRegistryDDORefresh)
         .put(completeProcess(MigrationTarget.PreHD))
-        .dispatch(runMigrationAction(MigrationTarget.PreHD))
+        .returns(true)
         .silentRun()
     })
   })
 
   it('should stop running unless a step was completed', () => {
-    return expectSaga(migrationsSaga)
+    return expectSaga(runMigrations, runMigrationAction(MigrationTarget.PreHD))
       .provide([
         [select(migrationTargets), [MigrationTarget.PreHD]],
         [select(migrationStepStatus, MigrationStep.CleanUpAfterMissingSeed), MigrationStatus.Completed],
@@ -343,10 +330,10 @@ describe('runMigrations', () => {
       .call(performStep, MigrationStep.UpdatePreHDRootToHD)
       .not.call(performStep, MigrationStep.UportRegistryDDORefresh)
       .put(failProcess(MigrationTarget.PreHD))
+      .returns(false)
       .dispatch(runMigrationAction(MigrationTarget.PreHD))
       .silentRun()
   })
-
 })
 
 describe('performStep', () => {
