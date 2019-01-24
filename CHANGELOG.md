@@ -1,5 +1,71 @@
 # Change Log
 
+## [v413](https://github.com/uport-project/uport-mobile/tree/v413) (2019-01-24)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v412...v413)
+
+**Merged pull requests:**
+
+- Bug fix for 'white screen' issue [\#69](https://github.com/uport-project/uport-mobile/pull/69) ([simonas-notcat](https://github.com/simonas-notcat))
+- Fixing ts-jest config [\#68](https://github.com/uport-project/uport-mobile/pull/68) ([simonas-notcat](https://github.com/simonas-notcat))
+
+## [v412](https://github.com/uport-project/uport-mobile/tree/v412) (2019-01-23)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v411...v412)
+
+**Merged pull requests:**
+
+- Add better metrics for identity types and networks [\#67](https://github.com/uport-project/uport-mobile/pull/67) ([simonas-notcat](https://github.com/simonas-notcat))
+
+## [v411](https://github.com/uport-project/uport-mobile/tree/v411) (2019-01-22)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v410...v411)
+
+**Merged pull requests:**
+
+- Updated Infura urls [\#66](https://github.com/uport-project/uport-mobile/pull/66) ([simonas-notcat](https://github.com/simonas-notcat))
+- Showing app branding in attestations [\#65](https://github.com/uport-project/uport-mobile/pull/65) ([simonas-notcat](https://github.com/simonas-notcat))
+
+## [v410](https://github.com/uport-project/uport-mobile/tree/v410) (2019-01-22)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v409...v410)
+
+**Merged pull requests:**
+
+- execute callback if callbackUrl is included in claim when adding attestation [\#64](https://github.com/uport-project/uport-mobile/pull/64) ([mi-xu](https://github.com/mi-xu))
+- adding accessibility label for the left hand menu bar - used in autom… [\#63](https://github.com/uport-project/uport-mobile/pull/63) ([flaneuring](https://github.com/flaneuring))
+- Feature/pt162975683/typescript did resolvers [\#62](https://github.com/uport-project/uport-mobile/pull/62) ([mi-xu](https://github.com/mi-xu))
+- fix build for new vault [\#58](https://github.com/uport-project/uport-mobile/pull/58) ([mirceanis](https://github.com/mirceanis))
+
+## [v409](https://github.com/uport-project/uport-mobile/tree/v409) (2019-01-09)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v408...v409)
+
+**Merged pull requests:**
+
+- add `listSeedAddresses` method to the native HD signer module [\#57](https://github.com/uport-project/uport-mobile/pull/57) ([simonas-notcat](https://github.com/simonas-notcat))
+- Fix for android crash on migration screen [\#56](https://github.com/uport-project/uport-mobile/pull/56) ([simonas-notcat](https://github.com/simonas-notcat))
+
+## [v408](https://github.com/uport-project/uport-mobile/tree/v408) (2019-01-08)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v407...v408)
+
+## [v407](https://github.com/uport-project/uport-mobile/tree/v407) (2019-01-08)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v406...v407)
+
+**Merged pull requests:**
+
+- Feature/\#162774603/adhoc private chains [\#52](https://github.com/uport-project/uport-mobile/pull/52) ([pelle](https://github.com/pelle))
+
+## [v406](https://github.com/uport-project/uport-mobile/tree/v406) (2019-01-07)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v405...v406)
+
+**Merged pull requests:**
+
+- Bugfix for PreHD migration crash on Android [\#54](https://github.com/uport-project/uport-mobile/pull/54) ([simonas-notcat](https://github.com/simonas-notcat))
+
+## [v405](https://github.com/uport-project/uport-mobile/tree/v405) (2018-12-20)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v404...v405)
+
+**Merged pull requests:**
+
+- Chore/circle ci xcode update [\#50](https://github.com/uport-project/uport-mobile/pull/50) ([simonas-notcat](https://github.com/simonas-notcat))
+- Pre HD Wallet Migration [\#27](https://github.com/uport-project/uport-mobile/pull/27) ([pelle](https://github.com/pelle))
+
 ## [v404](https://github.com/uport-project/uport-mobile/tree/v404) (2018-12-18)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v403...v404)
 

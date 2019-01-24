@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`addMigrationTarget adds a target 1`] = `
+Object {
+  "steps": Object {},
+  "targets": Array [
+    "PreHD",
+  ],
+}
+`;
+
+exports[`completedMigrationStep completes a step 1`] = `
+Object {
+  "steps": Object {
+    "IdentityManagerChangeOwner": 2,
+  },
+  "targets": Array [],
+}
+`;
+
+exports[`completedMigrationStep should complete an additional step 1`] = `
+Object {
+  "steps": Object {
+    "IdentityManagerChangeOwner": 1,
+    "UpdatePreHDRootToHD": 2,
+  },
+  "targets": Array [
+    "PreHD",
+  ],
+}
+`;
+
+exports[`failedMigrationStep fails a step 1`] = `
+Object {
+  "steps": Object {
+    "IdentityManagerChangeOwner": 3,
+  },
+  "targets": Array [],
+}
+`;
+
+exports[`failedMigrationStep should fail an additional step 1`] = `
+Object {
+  "steps": Object {
+    "IdentityManagerChangeOwner": 1,
+    "UpdatePreHDRootToHD": 3,
+  },
+  "targets": Array [
+    "PreHD",
+  ],
+}
+`;
+
+exports[`startedMigrationStep should start an additional step 1`] = `
+Object {
+  "steps": Object {
+    "IdentityManagerChangeOwner": 1,
+    "UpdatePreHDRootToHD": 1,
+  },
+  "targets": Array [
+    "PreHD",
+  ],
+}
+`;
+
+exports[`startedMigrationStep starts a step 1`] = `
+Object {
+  "steps": Object {
+    "IdentityManagerChangeOwner": 1,
+  },
+  "targets": Array [],
+}
+`;

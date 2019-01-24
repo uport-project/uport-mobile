@@ -19,10 +19,7 @@
 package com.uport.sdk.react.signer
 
 import android.text.TextUtils
-import com.facebook.react.bridge.Promise
-import com.facebook.react.bridge.ReactApplicationContext
-import com.facebook.react.bridge.ReactMethod
-import com.facebook.react.bridge.WritableNativeMap
+import com.facebook.react.bridge.*
 import com.uport.sdk.signer.UportHDSigner
 import com.uport.sdk.signer.UportSigner
 import com.uport.sdk.signer.UportSigner.Companion.ERR_BLANK_KEY
@@ -85,6 +82,17 @@ class NativeHDSignerModule(reactContext: ReactApplicationContext?)
                 reactApplicationContext,
                 label
         )
+    }
+
+    @ReactMethod
+    fun listSeedAddresses(promise: Promise?) {
+
+        promise!!
+
+        val roots = UportHDSigner().allHDRoots(reactApplicationContext)
+        val ret = WritableNativeArray()
+        roots.forEach { ret.pushString(it) }
+        promise.resolve(ret)
     }
 
     /**
@@ -349,7 +357,7 @@ class NativeHDSignerModule(reactContext: ReactApplicationContext?)
      * Verifies if the provided mnemonic phrase is usable for generating keys from a seed phrase
      */
     @ReactMethod
-    fun validateMnemonic(phrase : String?, promise: Promise?) {
+    fun validateMnemonic(phrase: String?, promise: Promise?) {
         promise!!
 
         promise.resolve(UportHDSigner().validateMnemonic(phrase ?: ""))
