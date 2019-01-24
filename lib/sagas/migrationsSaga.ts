@@ -22,8 +22,8 @@ import { completeProcess, failProcess, startWorking, stopWorking } from 'uPortMo
 import { LOADED_DB } from 'uPortMobile/lib/constants/GlobalActionTypes'
 import { MigrationStatus, MigrationStep, MigrationTarget, RUN_MIGRATIONS, TargetAction, targetRecipes } from 'uPortMobile/lib/constants/MigrationActionTypes'
 import { canSignFor, hasWorkingSeed } from 'uPortMobile/lib/sagas/keychain'
-import { isFullyHD } from 'uPortMobile/lib/selectors/chains'
-import { currentAddress, migrateableIdentities, hasMainnetAccounts } from 'uPortMobile/lib/selectors/identities'
+import { isFullyHD, isHD } from 'uPortMobile/lib/selectors/chains'
+import { currentAddress, migrateableIdentities, hasMainnetAccounts, currentIdentityJS } from 'uPortMobile/lib/selectors/identities'
 import { migrationStepStatus, migrationTargets, pendingMigrations } from 'uPortMobile/lib/selectors/migrations'
 import { NavigationActions } from 'uPortMobile/lib/utilities/NavigationActions'
 import { hasAttestations } from '../selectors/attestations'
@@ -37,6 +37,7 @@ import { Alert } from 'react-native';
 
 export function * checkIfAbleToSign () : any {
   const address = yield select(currentAddress)
+  if (!address) return false
   return yield call(canSignFor, address)
 }
 
@@ -50,22 +51,26 @@ export function * alert(title: string, message: string) {
   yield call([Alert, Alert.alert], title, message)
 }
 export function * checkup () : any {
+  // console.log('id', (yield select(currentIdentityJS)))
   if (yield call(checkIfAbleToSign)) {
     if (yield call(checkForLegacy)) {
       // We define highValue as having mainnet accounts and attestations
       const highValue = (yield select(hasAttestations)) || (yield select(hasMainnetAccounts))
-      const isHD = yield select(isFullyHD)
       if (highValue) {
-        if (!isHD) yield put(addMigrationTarget(MigrationTarget.PreHD))
+        const fullHD = yield select(isFullyHD)
+        if (!fullHD) yield put(addMigrationTarget(MigrationTarget.PreHD))
       } else {
         yield put(addMigrationTarget(MigrationTarget.Legacy))
       }
     }  
   } else {
-    if ((yield select(hdRootAddress)) &&! (yield call(hasWorkingSeed))) {
+    const address = yield select(currentAddress)
+    const hd = yield select(isHD, address)
+    if (hd) {
       yield put(addMigrationTarget(MigrationTarget.RecoverSeed))
+    } else {
+      yield put(addMigrationTarget(MigrationTarget.Legacy))
     }
-    yield put(addMigrationTarget(MigrationTarget.Legacy))
   }
   const pending = yield select(pendingMigrations)
   // console.log('pending migrations', pending)
@@ -86,7 +91,13 @@ export function * checkup () : any {
             'You had an old test net identity. Thank you for being an early uPort user. We have now upgraded your identity to live on the Ethereum Mainnet.'
             )
         }
-  
+        break
+      case MigrationTarget.RecoverSeed:
+        yield call(alert,
+          'You need to reenter your HD seed', 
+          'PLACEHOLDER. LINK TO RECOVERY SCREEN INSTEAD'
+          )
+        break
     }
   }
 }

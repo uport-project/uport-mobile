@@ -50,7 +50,7 @@ import {
 import { NavigationActions } from 'uPortMobile/lib/utilities/NavigationActions'
 
 import { migrationStepStatus, migrationTargets, pendingMigrations, migrationCompleted } from 'uPortMobile/lib/selectors/migrations'
-import { isFullyHD } from 'uPortMobile/lib/selectors/chains'
+import { isFullyHD, isHD } from 'uPortMobile/lib/selectors/chains'
 import { hdRootAddress } from 'uPortMobile/lib/selectors/hdWallet'
 import { migrateableIdentities, currentAddress, hasMainnetAccounts } from 'uPortMobile/lib/selectors/identities'
 import { hasAttestations } from 'uPortMobile/lib/selectors/attestations';
@@ -82,6 +82,7 @@ describe('checkup', () => {
                 [select(hdRootAddress), root],
                 [call(hasWorkingSeed), false],
                 [call(canSignFor, root), false],
+                [select(isHD, root), true],
                 [select(pendingMigrations), []],
                 [select(migrateableIdentities), []]
               ])
@@ -205,6 +206,7 @@ describe('checkup', () => {
             [select(pendingMigrations), []],
             [select(hdRootAddress), undefined],
             [call(hasWorkingSeed), false],
+            [select(isHD, root), false],
             [select(migrateableIdentities), [{address: '0x'}]],
             [select(hasAttestations), false]
           ])
@@ -225,6 +227,7 @@ describe('checkup', () => {
             [select(pendingMigrations), []],
             [select(hdRootAddress), undefined],
             [call(hasWorkingSeed), false],
+            [select(isHD, root), false],
             [select(migrateableIdentities), [{address: '0x'}]],
             [select(hasAttestations), false]
           ])
