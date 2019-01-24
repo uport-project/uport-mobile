@@ -81,7 +81,7 @@ describe('checkup', () => {
               [select(pendingMigrations), []],
               [select(migrateableIdentities), []]
             ])
-            .put(addMigrationTarget(MigrationTarget.MissingKeys))
+            .put(addMigrationTarget(MigrationTarget.Legacy))
             .dispatch(loadedDB())
             .silentRun()
       })
@@ -203,7 +203,7 @@ describe('checkup', () => {
             [select(migrateableIdentities), [{address: '0x'}]],
             [select(hasAttestations), false]
           ])
-          .put(addMigrationTarget(MigrationTarget.MissingKeys))
+          .put(addMigrationTarget(MigrationTarget.Legacy))
           .dispatch(loadedDB())
           .silentRun()
 
@@ -221,7 +221,7 @@ describe('checkup', () => {
             [select(migrateableIdentities), [{address: '0x'}]],
             [select(hasAttestations), false]
           ])
-          .put(addMigrationTarget(MigrationTarget.MissingKeys))
+          .put(addMigrationTarget(MigrationTarget.Legacy))
           .dispatch(loadedDB())
           .silentRun()    
         })
@@ -238,12 +238,12 @@ describe('checkup', () => {
               [select(currentAddress), root],
               [call(canSignFor, root), false],
               [call(delay, 2000), undefined],
-              [select(pendingMigrations), [MigrationTarget.MissingKeys]],
+              [select(pendingMigrations), [MigrationTarget.Legacy]],
               [select(migrateableIdentities), [{address: '0x'}]]
             ])
-            .put(addMigrationTarget(MigrationTarget.MissingKeys))
+            .put(addMigrationTarget(MigrationTarget.Legacy))
             .call(NavigationActions.push, {
-              screen: `migrations.MissingKeys`,
+              screen: `migrations.Legacy`,
               animationType: 'slide-up'
             })
             .dispatch(loadedDB())

@@ -35,226 +35,556 @@ import {
 import {
   subAccounts,
   currentAddress,
-  migrateableIdentities,
-  legacyRoot,
   ownClaimsMap
 } from 'uPortMobile/lib/selectors/identities'
 
 import {
-  updateIdentity, storeAttestation
+  updateIdentity, storeAttestation, storeIdentity
 } from 'uPortMobile/lib/actions/uportActions'
-import { createIdentityKeyPair, canSignFor } from '../../keychain';
-import { createToken } from 'uPortMobile/lib/sagas/jwt'
-import { handleURL } from 'uPortMobile/lib/actions/requestActions';
-import { hasAttestations } from 'uPortMobile/lib/selectors/attestations';
+import { createIdentityKeyPair, canSignFor, hasWorkingSeed, addressFor, encryptionPublicKey, DEFAULT_LEVEL } from '../../keychain';
+import { networkSettings } from 'uPortMobile/lib/selectors/chains';
+import { hdRootAddress } from 'uPortMobile/lib/selectors/hdWallet';
+import { resetHDWallet } from 'uPortMobile/lib/actions/HDWalletActions';
 
 const step = MigrationStep.MigrateLegacy
 
 describe('MigrateLegacy', () => {
+  const hdroot = '0x01234root'
   const own = {name: 'Roberto Herrera', description: 'Swell and Sovereign Guy'}
-  describe('migrate()', () => {
-    describe('Nothing Migratable', () => {
-      it('should not do anything', () => {
-        return expectSaga(migrate)
-          .provide([
-            [select(migrateableIdentities), []]
-          ])
-          .put(saveMessage(step, 'Legacy Cleanup Not Needed'))
-          .returns(true)
-          .run()
-      })
-    })
+  const oldId = {
+    controllerAddress: '0xd35c4800b1f121185f32e43f886e96a6d32a6021',
+    deviceAddress: '0xf8560d31daa5d9e033d082945395ffc65abbc3df',
+    network: 'rinkeby',
+    recoveryAddress: '0xf974a3dee42a1f8638948513793d6ce77da5d1da',
+    address: '2oxo6Sb56dcQgHunK1WLNjo9xcTV4gGbP9k',
+    recoveryType: 'seed',
+    nonce: 2,
+    fuelToken: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NksifQ.eyJpc3MiOiJuaXNhYmEudXBvcnQubWUiLCJpYXQiOjE1MDI0NTQ3NTcsImV4cCI6MTUwMjQ1NTA1Nywic3ViIjoiMHhmODU2MGQzMWRhYTVkOWUwMzNkMDgyOTQ1Mzk1ZmZjNjVhYmJjM2RmIiwiYXVkIjpbIm5pc2FiYS51cG9ydC5tZSIsInVubnUudXBvcnQubWUiLCJzZW5zdWkudXBvcnQubWUiXSwicGhvbmVOdW1iZXIiOiIrMTMxMDQwNDE1ODYifQ.udCvdFvRe-PuiknpEllkdgLre_GSn5UjVHwolYZzVl3KvT2sTrylcsy5LQyUdyyWjUsBjlAkfm9GzZgYPITmnw',
+    hexaddress: '0xda7d527872a94acf363b9b43caae1bdd6ff577c5',
+  }
+  const legacyDID = oldId.address
+  const newDID = `did:ethr:${hdroot}`
+  const publicKey = 'signingpublickey'
+  const encPublicKey = 'encryptionPublicKey'
+  const hdaccount1 = {
+    parent: legacyDID,
+    address: 'account1',
+    hdindex: 1
+  }
+  const hdaccount2 = {
+    parent: legacyDID,
+    address: 'account2',
+    hdindex: 2
+  }
+  const nonhdaccount = {
+    parent: legacyDID,
+    address: 'account3'
+  }
+  const accounts = [
+    hdaccount1,
+    hdaccount2,
+    nonhdaccount
+  ]
 
-    describe('Migrateable', () => {
-      const legacyDID = '0xroot'
-      const newDID = 'did:ethr:0x'
-      const legacy = {address: legacyDID}
-      const newId = {address: newDID}
-      const JWT = 'JWT'
-      describe('legacy root', () => {
-        describe('without sub accounts', () => {
-          it('should clean it up', () => {
+  describe('migrate()', () => {
+    describe('can no longer sign for root', () => {
+      describe('working seed', () => {
+        describe('non HD root ID', () => {
+          it('should replace root Identity using hdroot as device key', () => {
             return expectSaga(migrate)
               .provide([
-                [select(migrateableIdentities), [legacy]],
+                [call(canSignFor, legacyDID), false],
+                [call(hasWorkingSeed), true],
                 [select(currentAddress), legacyDID],
-                [select(legacyRoot), true],
-                [call(createIdentityKeyPair), newId],
+                [select(networkSettings), oldId],
+                [call(addressFor, 0, 0), {address: hdroot, publicKey}],
+                [call(encryptionPublicKey, {idIndex: 0, actIndex: 0}),encPublicKey],
                 [select(ownClaimsMap), own],
-                [call(canSignFor, legacyDID), true],
-                [select(hasAttestations), false],
                 [select(subAccounts, legacyDID), []]
               ])
-              .call(createIdentityKeyPair)
-              .put(updateIdentity(legacyDID, {parent: newDID}))
-              .put(updateIdentity(newDID, {own}))              
-              .put(saveMessage(step, 'Legacy Cleanup Performed'))
+              .put(storeIdentity({
+                address: `did:ethr:${hdroot}`, 
+                network: 'mainnet', 
+                deviceAddress: hdroot, 
+                hexaddress: hdroot, 
+                recoveryType: 'seed',
+                signerType: 'KeyPair',
+                hdindex: 0, 
+                encPublicKey, 
+                publicKey, 
+                own, 
+                securityLevel: DEFAULT_LEVEL}))
+              .put(updateIdentity(legacyDID, {
+                disabled: true,
+                error: `Legacy Test Net Identity has been Disabled`
+              }))
+              .put(saveMessage(step, 'New mainnet identity is created'))
               .returns(true)
               .run()
           })
-        })          
 
-        describe('with attestations', () => {
-          describe('signing keys still working', () => {
-            it('should add ownership token', () => {
+          describe('with sub accounts', () => {
+            describe('able to sign for accounts', () => {
+              it('should clean it up', () => {
+                return expectSaga(migrate)
+                  .provide([
+                    [call(canSignFor, legacyDID), false],
+                    [call(hasWorkingSeed), true],
+                    [select(currentAddress), legacyDID],
+                    [select(networkSettings), oldId],
+                    [call(addressFor, 0, 0), {address: hdroot, publicKey}],
+                    [call(encryptionPublicKey, {idIndex: 0, actIndex: 0}),encPublicKey],
+                    [select(ownClaimsMap), own],
+                    [select(subAccounts, legacyDID), accounts],
+                    [call(canSignFor, 'account1'), true],
+                    [call(canSignFor, 'account2'), true],
+                    [call(canSignFor, 'account3'), true],
+                  ])
+                  .put(storeIdentity({
+                    address: newDID, 
+                    network: 'mainnet', 
+                    deviceAddress: hdroot, 
+                    hexaddress: hdroot, 
+                    recoveryType: 'seed',
+                    signerType: 'KeyPair',
+                    hdindex: 0, 
+                    encPublicKey, 
+                    publicKey, 
+                    own, 
+                    securityLevel: DEFAULT_LEVEL}))
+                  .put(updateIdentity(legacyDID, {
+                    disabled: true,
+                    error: `Legacy Test Net Identity has been Disabled`
+                  }))
+                  .put(updateIdentity('account1', {parent: newDID}))
+                  .put(updateIdentity('account2', {parent: newDID}))
+                  .put(updateIdentity('account3', {parent: newDID}))
+                  .put(saveMessage(step, 'New mainnet identity is created'))
+                  .returns(true)
+                  .run()
+              })  
+            })
+    
+            describe('unable to sign for accounts', () => {
+              it('should clean it up', () => {
+                return expectSaga(migrate)
+                  .provide([
+                    [call(canSignFor, legacyDID), false],
+                    [call(hasWorkingSeed), true],
+                    [select(currentAddress), legacyDID],
+                    [select(networkSettings), oldId],
+                    [call(addressFor, 0, 0), {address: hdroot, publicKey}],
+                    [call(encryptionPublicKey, {idIndex: 0, actIndex: 0}),encPublicKey],
+                    [select(ownClaimsMap), own],
+                    [select(subAccounts, legacyDID), accounts],
+                    [call(canSignFor, 'account1'), false],
+                    [call(canSignFor, 'account2'), false],
+                    [call(canSignFor, 'account3'), true],
+                  ])
+                  .put(storeIdentity({
+                    address: `did:ethr:${hdroot}`, 
+                    network: 'mainnet', 
+                    deviceAddress: hdroot, 
+                    hexaddress: hdroot, 
+                    recoveryType: 'seed',
+                    signerType: 'KeyPair',
+                    hdindex: 0, 
+                    encPublicKey, 
+                    publicKey, 
+                    own, 
+                    securityLevel: DEFAULT_LEVEL}))
+                  .put(updateIdentity(legacyDID, {
+                    disabled: true,
+                    error: `Legacy Test Net Identity has been Disabled`
+                  }))
+                  .put(updateIdentity('account1', {
+                    disabled: true,
+                    error: `Legacy Identity has been Disabled. Keys are no longer available.`
+                  }))
+                  .put(updateIdentity('account2', {
+                    disabled: true,
+                    error: `Legacy Identity has been Disabled. Keys are no longer available.`
+                  }))
+                  .put(updateIdentity('account3', {parent: newDID}))
+                  .put(saveMessage(step, 'New mainnet identity is created'))
+                  .returns(true)
+                  .run()
+              })  
+            })
+    
+          })
+    
+        })
+      })
+      describe('non existing seed', () => {
+        describe('HD root ID', () => {
+          it('should replace root Identity using hdroot as device key', () => {
+            return expectSaga(migrate)
+              .provide([
+                [select(currentAddress), legacyDID],
+                [call(canSignFor, legacyDID), false],
+                [call(hasWorkingSeed), false],
+                [select(hdRootAddress), hdroot],
+                [select(networkSettings), oldId],
+                [call(createIdentityKeyPair), {address: newDID}],
+                [select(ownClaimsMap), own],
+                [select(subAccounts, legacyDID), []]
+              ])
+              .put(resetHDWallet())
+              .call(createIdentityKeyPair)
+              .put(updateIdentity(newDID, {own}))
+              .put(updateIdentity(legacyDID, {
+                disabled: true,
+                error: `Legacy Test Net Identity has been Disabled`
+              }))
+              .put(saveMessage(step, 'New mainnet identity is created'))
+              .returns(true)
+              .run()
+          })
+        })
+        describe('NON HD root ID', () => {
+          it('should replace root Identity using hdroot as device key', () => {
+            return expectSaga(migrate)
+              .provide([
+                [select(currentAddress), legacyDID],
+                [call(canSignFor, legacyDID), false],
+                [call(hasWorkingSeed), false],
+                [select(hdRootAddress), undefined],
+                [select(networkSettings), oldId],
+                [call(createIdentityKeyPair), {address: newDID}],
+                [select(ownClaimsMap), own],
+                [select(subAccounts, legacyDID), []]
+              ])
+              .call(createIdentityKeyPair)
+              .put(updateIdentity(newDID, {own}))
+              .put(updateIdentity(legacyDID, {
+                disabled: true,
+                error: `Legacy Test Net Identity has been Disabled`
+              }))
+              .put(saveMessage(step, 'New mainnet identity is created'))
+              .returns(true)
+              .run()
+          })
+          
+          describe('with sub accounts', () => {
+            describe('able to sign for accounts', () => {
+              it('should clean it up', () => {
+                return expectSaga(migrate)
+                  .provide([
+                    [select(currentAddress), legacyDID],
+                    [call(canSignFor, legacyDID), false],
+                    [call(hasWorkingSeed), false],
+                    [select(hdRootAddress), undefined],
+                    [call(createIdentityKeyPair), {address: newDID}],
+                    [select(ownClaimsMap), own],
+                    [select(subAccounts, legacyDID), accounts],
+                    [call(canSignFor, 'account1'), true],
+                    [call(canSignFor, 'account2'), true],
+                    [call(canSignFor, 'account3'), true],
+                  ])
+                  .call(createIdentityKeyPair)
+                  .put(updateIdentity(newDID, {own}))
+                  .put(updateIdentity(legacyDID, {
+                    disabled: true,
+                    error: `Legacy Test Net Identity has been Disabled`
+                  }))
+                  .put(updateIdentity('account1', {parent: newDID}))
+                  .put(updateIdentity('account2', {parent: newDID}))
+                  .put(updateIdentity('account3', {parent: newDID}))
+                  .put(saveMessage(step, 'New mainnet identity is created'))
+                  .returns(true)
+                  .run()
+              })  
+            })
+    
+            describe('unable to sign for accounts', () => {
+              it('should clean it up', () => {
+                return expectSaga(migrate)
+                  .provide([
+                    [select(currentAddress), legacyDID],
+                    [call(canSignFor, legacyDID), false],
+                    [call(hasWorkingSeed), false],
+                    [select(hdRootAddress), undefined],
+                    [select(networkSettings), oldId],
+                    [call(createIdentityKeyPair), {address: newDID}],
+                    [select(ownClaimsMap), own],
+                    [select(subAccounts, legacyDID), accounts],
+                    [call(canSignFor, 'account1'), false],
+                    [call(canSignFor, 'account2'), false],
+                    [call(canSignFor, 'account3'), true],
+                  ])
+                  .call(createIdentityKeyPair)
+                  .put(updateIdentity(newDID, {own}))
+                  .put(updateIdentity(legacyDID, {
+                    disabled: true,
+                    error: `Legacy Test Net Identity has been Disabled`
+                  }))
+                  .put(updateIdentity('account1', {
+                    disabled: true,
+                    error: `Legacy Identity has been Disabled. Keys are no longer available.`
+                  }))
+                  .put(updateIdentity('account2', {
+                    disabled: true,
+                    error: `Legacy Identity has been Disabled. Keys are no longer available.`
+                  }))
+                  .put(updateIdentity('account3', {parent: newDID}))
+                  .put(saveMessage(step, 'New mainnet identity is created'))
+                  .returns(true)
+                  .run()
+              })  
+            })
+          })
+        })
+      })
+    })
+  })
+
+  describe('can still sign for root', () => {
+    describe('working seed', () => {
+      describe('non HD root ID', () => {
+        it('should replace root Identity using hdroot as device key', () => {
+          return expectSaga(migrate)
+            .provide([
+              [call(canSignFor, legacyDID), true],
+              [call(hasWorkingSeed), true],
+              [select(currentAddress), legacyDID],
+              [select(networkSettings), oldId],
+              [call(addressFor, 0, 0), {address: hdroot, publicKey}],
+              [call(encryptionPublicKey, {idIndex: 0, actIndex: 0}),encPublicKey],
+              [select(ownClaimsMap), own],
+              [select(subAccounts, legacyDID), []]
+            ])
+            .put(storeIdentity({
+              address: newDID, 
+              network: 'mainnet', 
+              deviceAddress: hdroot, 
+              hexaddress: hdroot, 
+              recoveryType: 'seed',
+              signerType: 'KeyPair',
+              hdindex: 0, 
+              encPublicKey, 
+              publicKey, 
+              own, 
+              securityLevel: DEFAULT_LEVEL}))
+            .put(updateIdentity(legacyDID, {
+              parent: newDID
+            }))
+            .put(saveMessage(step, 'New mainnet identity is created'))
+            .returns(true)
+            .run()
+        })
+
+        describe('with sub accounts', () => {
+          describe('able to sign for accounts', () => {
+            it('should clean it up', () => {
               return expectSaga(migrate)
                 .provide([
-                  [select(migrateableIdentities), [legacy]],
-                  [select(currentAddress), legacyDID],
-                  [select(legacyRoot), true],
-                  [call(createIdentityKeyPair), newId],
-                  [select(ownClaimsMap), own],
-                  [select(hasAttestations), true],
                   [call(canSignFor, legacyDID), true],
-                  [call(createToken, legacyDID, {sub: newDID, claim: {owns: legacyDID}}), JWT],
-                  [select(subAccounts, legacyDID), []]
+                  [call(hasWorkingSeed), true],
+                  [select(currentAddress), legacyDID],
+                  [select(networkSettings), oldId],
+                  [call(addressFor, 0, 0), {address: hdroot, publicKey}],
+                  [call(encryptionPublicKey, {idIndex: 0, actIndex: 0}),encPublicKey],
+                  [select(ownClaimsMap), own],
+                  [select(subAccounts, legacyDID), accounts],
+                  [call(canSignFor, 'account1'), true],
+                  [call(canSignFor, 'account2'), true],
+                  [call(canSignFor, 'account3'), true],
                 ])
-                .call(createIdentityKeyPair)
-                .put(updateIdentity(legacyDID, {parent: newDID}))
-                .put(updateIdentity(newDID, {own}))              
-                .call(createToken, legacyDID, {sub: newDID, claim:{owns: legacyDID}})
-                .put(handleURL(`me.uport:req/JWT`, {popup: false}))
-                .put(saveMessage(step, 'Legacy Cleanup Performed'))
+                .put(storeIdentity({
+                  address: `did:ethr:${hdroot}`, 
+                  network: 'mainnet', 
+                  deviceAddress: hdroot, 
+                  hexaddress: hdroot, 
+                  recoveryType: 'seed',
+                  signerType: 'KeyPair',
+                  hdindex: 0, 
+                  encPublicKey, 
+                  publicKey, 
+                  own, 
+                  securityLevel: DEFAULT_LEVEL}))
+                .put(updateIdentity(legacyDID, {
+                  parent: newDID
+                }))
+                .put(updateIdentity('account1', {parent: newDID}))
+                .put(updateIdentity('account2', {parent: newDID}))
+                .put(updateIdentity('account3', {parent: newDID}))
+                .put(saveMessage(step, 'New mainnet identity is created'))
                 .returns(true)
                 .run()
             })  
           })
-
-          describe('signing no longer working', () => {
-            it('should not add ownership token', () => {
+  
+          describe('unable to sign for accounts', () => {
+            it('should clean it up', () => {
               return expectSaga(migrate)
                 .provide([
-                  [select(migrateableIdentities), [legacy]],
+                  [call(canSignFor, legacyDID), true],
+                  [call(hasWorkingSeed), true],
                   [select(currentAddress), legacyDID],
-                  [select(legacyRoot), true],
-                  [call(createIdentityKeyPair), newId],
+                  [select(networkSettings), oldId],
+                  [call(addressFor, 0, 0), {address: hdroot, publicKey}],
+                  [call(encryptionPublicKey, {idIndex: 0, actIndex: 0}),encPublicKey],
                   [select(ownClaimsMap), own],
-                  [select(hasAttestations), true],
-                  [call(canSignFor, legacyDID), false],
-                  [call(createToken, legacyDID, {sub: newDID, claim:{owns: legacyDID}}), JWT],
-                  [select(subAccounts, legacyDID), []]
+                  [select(subAccounts, legacyDID), accounts],
+                  [call(canSignFor, 'account1'), false],
+                  [call(canSignFor, 'account2'), false],
+                  [call(canSignFor, 'account3'), true],
                 ])
-                .call(createIdentityKeyPair)
-                .put(updateIdentity(legacyDID, {parent: newDID}))
-                .put(updateIdentity(newDID, {own}))              
-                .not.call(createToken, legacyDID, {sub: newDID, claim:{owns: legacyDID}})
-                .not.put(handleURL(`me.uport:req/JWT`, {popup: false}))
+                .put(storeIdentity({
+                  address: `did:ethr:${hdroot}`, 
+                  network: 'mainnet', 
+                  deviceAddress: hdroot, 
+                  hexaddress: hdroot, 
+                  recoveryType: 'seed',
+                  signerType: 'KeyPair',
+                  hdindex: 0, 
+                  encPublicKey, 
+                  publicKey, 
+                  own, 
+                  securityLevel: DEFAULT_LEVEL}))
                 .put(updateIdentity(legacyDID, {
-                  parent: newDID,
+                  parent: newDID
+                }))
+                .put(updateIdentity('account1', {
                   disabled: true,
                   error: `Legacy Identity has been Disabled. Keys are no longer available.`
                 }))
-                .put(saveMessage(step, 'Legacy Cleanup Performed'))
+                .put(updateIdentity('account2', {
+                  disabled: true,
+                  error: `Legacy Identity has been Disabled. Keys are no longer available.`
+                }))
+                .put(updateIdentity('account3', {parent: newDID}))
+                .put(saveMessage(step, 'New mainnet identity is created'))
                 .returns(true)
                 .run()
             })  
           })
-        })          
-
-        describe('with sub accounts', () => {
-          it('should clean it up', () => {
-            const hdaccount1 = {
-              parent: legacyDID,
-              address: 'account1',
-              hdindex: 1
-            }
-            const hdaccount2 = {
-              parent: legacyDID,
-              address: 'account2',
-              hdindex: 2
-            }
-            const nonhdaccount = {
-              parent: legacyDID,
-              address: 'account3'
-            }
-            const accounts = [
-              hdaccount1,
-              hdaccount2,
-              nonhdaccount
-            ]
-            return expectSaga(migrate)
-              .provide([
-                  [select(migrateableIdentities), [legacy]],
-                  [select(currentAddress), legacyDID],
-                  [call(createIdentityKeyPair), newId],
-                  [select(ownClaimsMap), own],
-                  [select(hasAttestations), false],
-                  [call(canSignFor, legacyDID), false],
-                  [select(legacyRoot), true],
-                  [select(subAccounts, legacyDID), accounts]
-              ])
-              .call(createIdentityKeyPair)
-              .put(updateIdentity(legacyDID, {parent: newDID}))
-              .put(updateIdentity(newDID, {own}))
-              .put(updateIdentity('account1', {parent: newDID}))
-              .put(updateIdentity('account2', {parent: newDID}))
-              .put(updateIdentity('account3', {parent: newDID}))
-              .put(saveMessage(step, 'Legacy Cleanup Performed'))
-              .returns(true)
-              .run()
-          })
-        })       
+  
+        })
+  
       })
-      
-      describe('non legacy root', () => {
-        describe('without sub accounts', () => {
-          it('should not do anything', () => {
-            return expectSaga(migrate)
-              .provide([
-                [select(migrateableIdentities), [legacy]],
-                [select(currentAddress), legacyDID],
-                [select(legacyRoot), false],
-                [select(subAccounts, legacyDID), []]
-              ])
-              .not.call(createIdentityKeyPair)
-              .not.put(updateIdentity(legacyDID, {parent: newDID}))
-              .put(saveMessage(step, 'Legacy Cleanup Performed'))
-              .returns(true)
-              .run()
-          })
-        })   
-
+    })
+    describe('non existing seed', () => {
+      describe('HD root ID', () => {
+        it('should replace root Identity using hdroot as device key', () => {
+          return expectSaga(migrate)
+            .provide([
+              [select(currentAddress), legacyDID],
+              [call(canSignFor, legacyDID), true],
+              [call(hasWorkingSeed), false],
+              [select(hdRootAddress), hdroot],
+              [select(networkSettings), oldId],
+              [call(createIdentityKeyPair), {address: newDID}],
+              [select(ownClaimsMap), own],
+              [select(subAccounts, legacyDID), []]
+            ])
+            .put(resetHDWallet())
+            .call(createIdentityKeyPair)
+            .put(updateIdentity(newDID, {own}))
+            .put(updateIdentity(legacyDID, {
+              parent: newDID
+            }))
+            .put(saveMessage(step, 'New mainnet identity is created'))
+            .returns(true)
+            .run()
+        })
+      })
+      describe('NON HD root ID', () => {
+        it('should replace root Identity using hdroot as device key', () => {
+          return expectSaga(migrate)
+            .provide([
+              [select(currentAddress), legacyDID],
+              [call(canSignFor, legacyDID), true],
+              [call(hasWorkingSeed), false],
+              [select(hdRootAddress), undefined],
+              [select(networkSettings), oldId],
+              [call(createIdentityKeyPair), {address: newDID}],
+              [select(ownClaimsMap), own],
+              [select(subAccounts, legacyDID), []]
+            ])
+            .call(createIdentityKeyPair)
+            .put(updateIdentity(newDID, {own}))
+            .put(updateIdentity(legacyDID, {
+              parent: newDID
+            }))
+            .put(saveMessage(step, 'New mainnet identity is created'))
+            .returns(true)
+            .run()
+        })
+        
         describe('with sub accounts', () => {
-          it('should clean it up', () => {
-            const hdaccount1 = {
-              parent: legacyDID,
-              address: 'account1',
-              hdindex: 1
-            }
-            const hdaccount2 = {
-              parent: legacyDID,
-              address: 'account2',
-              hdindex: 2
-            }
-            const nonhdaccount = {
-              parent: legacyDID,
-              address: 'account3'
-            }
-            const accounts = [
-              hdaccount1,
-              hdaccount2,
-              nonhdaccount
-            ]
-            return expectSaga(migrate)
-              .provide([
-                  [select(migrateableIdentities), [legacy]],
+          describe('able to sign for accounts', () => {
+            it('should clean it up', () => {
+              return expectSaga(migrate)
+                .provide([
                   [select(currentAddress), legacyDID],
-                  [call(createIdentityKeyPair), newId],
-                  [select(legacyRoot), false],
-                  [select(subAccounts, legacyDID), accounts]
-              ])
-              .not.call(createIdentityKeyPair)
-              .not.put(updateIdentity(legacyDID, {parent: newDID}))
-              .put(updateIdentity('account1', {parent: legacyDID}))
-              .put(updateIdentity('account2', {parent: legacyDID}))
-              .put(updateIdentity('account3', {parent: legacyDID}))
-              .put(saveMessage(step, 'Legacy Cleanup Performed'))
-              .returns(true)
-              .run()
+                  [call(canSignFor, legacyDID), true],
+                  [call(hasWorkingSeed), false],
+                  [select(hdRootAddress), undefined],
+                  [select(networkSettings), oldId],
+                  [call(createIdentityKeyPair), {address: newDID}],
+                  [select(ownClaimsMap), own],
+                  [select(subAccounts, legacyDID), accounts],
+                  [call(canSignFor, 'account1'), true],
+                  [call(canSignFor, 'account2'), true],
+                  [call(canSignFor, 'account3'), true],
+                ])
+                .call(createIdentityKeyPair)
+                .put(updateIdentity(newDID, {own}))
+                .put(updateIdentity(legacyDID, {
+                  parent: newDID
+                }))
+                .put(updateIdentity('account1', {parent: newDID}))
+                .put(updateIdentity('account2', {parent: newDID}))
+                .put(updateIdentity('account3', {parent: newDID}))
+                .put(saveMessage(step, 'New mainnet identity is created'))
+                .returns(true)
+                .run()
+            })  
+          })
+  
+          describe('unable to sign for accounts', () => {
+            it('should clean it up', () => {
+              return expectSaga(migrate)
+                .provide([
+                  [select(currentAddress), legacyDID],
+                  [call(canSignFor, legacyDID), true],
+                  [call(hasWorkingSeed), false],
+                  [select(hdRootAddress), undefined],
+                  [select(networkSettings), oldId],
+                  [call(createIdentityKeyPair), {address: newDID}],
+                  [select(ownClaimsMap), own],
+                  [select(subAccounts, legacyDID), accounts],
+                  [call(canSignFor, 'account1'), false],
+                  [call(canSignFor, 'account2'), false],
+                  [call(canSignFor, 'account3'), true]
+                ])
+                .call(createIdentityKeyPair)
+                .put(updateIdentity(newDID, {own}))
+                .put(updateIdentity(legacyDID, {
+                  parent: newDID
+                }))
+                .put(updateIdentity('account1', {
+                  disabled: true,
+                  error: `Legacy Identity has been Disabled. Keys are no longer available.`
+                }))
+                .put(updateIdentity('account2', {
+                  disabled: true,
+                  error: `Legacy Identity has been Disabled. Keys are no longer available.`
+                }))
+                .put(updateIdentity('account3', {
+                  parent: newDID
+                }))
+                .put(saveMessage(step, 'New mainnet identity is created'))
+                .returns(true)
+                .run()
+            })  
           })
         })
       })
     })
   })
 })
+
 

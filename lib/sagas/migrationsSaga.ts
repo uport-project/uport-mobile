@@ -32,7 +32,6 @@ import IdentityManagerChangeOwner from './migrations/IdentityManagerChangeOwner'
 import MigrateLegacy from './migrations/MigrateLegacy'
 import UpdatePreHDRootToHD from './migrations/UpdatePreHDRootToHD'
 import UportRegistryDDORefresh from './migrations/UportRegistryDDORefresh'
-import InvalidateIdentityWithMissingKeys from './migrations/InvalidateIdentityWithMissingKeys'
 
 export function * checkIfAbleToSign () : any {
   const address = yield select(currentAddress)
@@ -57,7 +56,7 @@ export function * checkup () : any {
       }
     }  
   } else {
-    yield put(addMigrationTarget(MigrationTarget.MissingKeys))
+    yield put(addMigrationTarget(MigrationTarget.Legacy))
   }
 
   const pending = yield select(pendingMigrations)
@@ -98,8 +97,6 @@ export function * runImplementationStep (step: MigrationStep) : any {
       return yield call(CleanUpAfterMissingSeed)
     case MigrationStep.MigrateLegacy:
       return yield call(MigrateLegacy)
-    case MigrationStep.InvalidateIdentityWithMissingKeys:
-      return yield call(InvalidateIdentityWithMissingKeys)
   }
 }
 

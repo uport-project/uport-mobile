@@ -16,7 +16,7 @@
 // along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
 //
 import { all, takeEvery, call, select, put } from 'redux-saga/effects'
-import { createIdentityKeyPair, canSignFor } from 'uPortMobile/lib/sagas/keychain'
+import { createIdentityKeyPair, canSignFor, hasWorkingSeed, addressFor, encryptionPublicKey, DEFAULT_LEVEL } from 'uPortMobile/lib/sagas/keychain'
 import { createToken } from 'uPortMobile/lib/sagas/jwt'
 
 import { 
@@ -34,49 +34,60 @@ import {
 } from 'uPortMobile/lib/selectors/identities'
 import { hasAttestations } from 'uPortMobile/lib/selectors/attestations'
 import {
-  updateIdentity, storeAttestation
+  updateIdentity, storeAttestation, storeIdentity
 } from 'uPortMobile/lib/actions/uportActions'
 import { handleURL } from 'uPortMobile/lib/actions/requestActions';
+import { hdRootAddress } from 'uPortMobile/lib/selectors/hdWallet';
+import { networkSettings } from 'uPortMobile/lib/selectors/chains';
+import { resetHDWallet } from 'uPortMobile/lib/actions/HDWalletActions';
 
 const step = MigrationStep.MigrateLegacy
 
 function * migrate () : any {
-  const identities = yield select(migrateableIdentities)
-  if (identities.length === 0) {
-    yield put(saveMessage(step, 'Legacy Cleanup Not Needed'))
-    return true
-  }
-  let root = yield select(currentAddress)
-  const accounts = yield select(subAccounts, root)
-  if (yield select(legacyRoot)) {
-    const oldRoot = root    
-    const own = (yield select(ownClaimsMap)) || {}    
-    const attested = yield select(hasAttestations)
-    const identity = yield call(createIdentityKeyPair)
-    yield put(updateIdentity(oldRoot, {parent: identity.address}))
-    root = identity.address
-    yield put(updateIdentity(identity.address, {own}))
-    const signable = yield call(canSignFor, oldRoot)
-    if (signable) {
-      if (attested) {
-        const attestation = yield call(createToken, oldRoot, {sub: root, claim: {owns: oldRoot}})
-        yield put(handleURL(`me.uport:req/${attestation}`, {popup: false}))  
-      }  
-    } else  {
-      yield put(updateIdentity(oldRoot, {
-        parent: root,
-        disabled: true,
-        error: `Legacy Identity has been Disabled. Keys are no longer available.`
-      }))
-
+  const oldRoot = yield select(currentAddress)
+  const accounts = yield select(subAccounts, oldRoot)
+  const own = (yield select(ownClaimsMap)) || {}    
+  let newRoot
+  if (yield call(hasWorkingSeed)) {    
+    const account = yield call(addressFor, 0, 0)
+    const encPublicKey = yield call(encryptionPublicKey, {idIndex: 0, actIndex: 0})
+    newRoot = `did:ethr:${account.address}`
+    yield put(storeIdentity({
+      address: newRoot,
+      deviceAddress: account.address,
+      hexaddress: account.address,
+      signerType: 'KeyPair',
+      recoveryType: 'seed',
+      hdindex: 0,
+      network: 'mainnet',
+      securityLevel: DEFAULT_LEVEL,
+      publicKey: account.publicKey,
+      encPublicKey,
+      own
+    }))
+  } else {
+    const hdroot = yield select(hdRootAddress)
+    if (hdroot) {
+      yield put(resetHDWallet())
     }
+    const newId = yield call(createIdentityKeyPair)
+    newRoot = newId.address
+    yield put(updateIdentity(newRoot, {own}))
+  }
+  if (yield call(canSignFor, oldRoot)) {
+    yield put(updateIdentity(oldRoot, {parent: newRoot}))
+  } else {
+    yield put(updateIdentity(oldRoot, {
+      disabled: true,
+      error: `Legacy Test Net Identity has been Disabled`
+    }))  
   }
 
   for (let account of accounts) {
-    const available = yield select(canSignFor, account.address)
+    const available = yield call(canSignFor, account.address)
     if (available) {
       yield put(updateIdentity(account.address, {
-        parent: root,
+        parent: newRoot,
       }))  
     } else {
       yield put(updateIdentity(account.address, {
@@ -85,7 +96,7 @@ function * migrate () : any {
       }))
     }
   }
-  yield put(saveMessage(step, 'Legacy Cleanup Performed'))
+  yield put(saveMessage(step, 'New mainnet identity is created'))
 
   return true
 }
