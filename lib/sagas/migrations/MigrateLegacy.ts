@@ -25,6 +25,7 @@ import {
 import {
   saveMessage
 } from 'uPortMobile/lib/actions/processStatusActions'
+import { resetHub } from 'uPortMobile/lib/actions/hubActions'
 import {
   subAccounts,
   currentAddress,
@@ -96,6 +97,7 @@ function * migrate () : any {
       }))
     }
   }
+  yield put(resetHub())
   yield put(saveMessage(step, 'New mainnet identity is created'))
 
   return true

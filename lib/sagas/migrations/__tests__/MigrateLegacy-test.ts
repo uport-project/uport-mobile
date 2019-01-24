@@ -31,6 +31,7 @@ import {
   failProcess
 } from 'uPortMobile/lib/actions/processStatusActions'
 
+import { resetHub } from 'uPortMobile/lib/actions/hubActions'
 
 import {
   subAccounts,
@@ -118,6 +119,7 @@ describe('MigrateLegacy', () => {
                 disabled: true,
                 error: `Legacy Test Net Identity has been Disabled`
               }))
+              .put(resetHub())
               .put(saveMessage(step, 'New mainnet identity is created'))
               .returns(true)
               .run()
@@ -159,6 +161,7 @@ describe('MigrateLegacy', () => {
                   .put(updateIdentity('account1', {parent: newDID}))
                   .put(updateIdentity('account2', {parent: newDID}))
                   .put(updateIdentity('account3', {parent: newDID}))
+                  .put(resetHub())
                   .put(saveMessage(step, 'New mainnet identity is created'))
                   .returns(true)
                   .run()
@@ -206,6 +209,7 @@ describe('MigrateLegacy', () => {
                     error: `Legacy Identity has been Disabled. Keys are no longer available.`
                   }))
                   .put(updateIdentity('account3', {parent: newDID}))
+                  .put(resetHub())
                   .put(saveMessage(step, 'New mainnet identity is created'))
                   .returns(true)
                   .run()
@@ -238,6 +242,7 @@ describe('MigrateLegacy', () => {
                 error: `Legacy Test Net Identity has been Disabled`
               }))
               .put(saveMessage(step, 'New mainnet identity is created'))
+              .put(resetHub())
               .returns(true)
               .run()
           })
@@ -261,6 +266,7 @@ describe('MigrateLegacy', () => {
                 disabled: true,
                 error: `Legacy Test Net Identity has been Disabled`
               }))
+              .put(resetHub())
               .put(saveMessage(step, 'New mainnet identity is created'))
               .returns(true)
               .run()
@@ -328,6 +334,7 @@ describe('MigrateLegacy', () => {
                     error: `Legacy Identity has been Disabled. Keys are no longer available.`
                   }))
                   .put(updateIdentity('account3', {parent: newDID}))
+                  .put(resetHub())
                   .put(saveMessage(step, 'New mainnet identity is created'))
                   .returns(true)
                   .run()
@@ -369,6 +376,7 @@ describe('MigrateLegacy', () => {
             .put(updateIdentity(legacyDID, {
               parent: newDID
             }))
+            .put(resetHub())
             .put(saveMessage(step, 'New mainnet identity is created'))
             .returns(true)
             .run()
@@ -409,6 +417,7 @@ describe('MigrateLegacy', () => {
                 .put(updateIdentity('account1', {parent: newDID}))
                 .put(updateIdentity('account2', {parent: newDID}))
                 .put(updateIdentity('account3', {parent: newDID}))
+                .put(resetHub())
                 .put(saveMessage(step, 'New mainnet identity is created'))
                 .returns(true)
                 .run()
@@ -455,6 +464,7 @@ describe('MigrateLegacy', () => {
                   error: `Legacy Identity has been Disabled. Keys are no longer available.`
                 }))
                 .put(updateIdentity('account3', {parent: newDID}))
+                .put(resetHub())
                 .put(saveMessage(step, 'New mainnet identity is created'))
                 .returns(true)
                 .run()
@@ -485,6 +495,7 @@ describe('MigrateLegacy', () => {
             .put(updateIdentity(legacyDID, {
               parent: newDID
             }))
+            .put(resetHub())
             .put(saveMessage(step, 'New mainnet identity is created'))
             .returns(true)
             .run()
@@ -508,6 +519,7 @@ describe('MigrateLegacy', () => {
             .put(updateIdentity(legacyDID, {
               parent: newDID
             }))
+            .put(resetHub())
             .put(saveMessage(step, 'New mainnet identity is created'))
             .returns(true)
             .run()
@@ -576,6 +588,7 @@ describe('MigrateLegacy', () => {
                 .put(updateIdentity('account3', {
                   parent: newDID
                 }))
+                .put(resetHub())
                 .put(saveMessage(step, 'New mainnet identity is created'))
                 .returns(true)
                 .run()
