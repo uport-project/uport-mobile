@@ -67,11 +67,20 @@ export function * checkup () : any {
   // console.log('pending migrations', pending)
   if (pending.length > 0 ) {
     const target = pending[0]
-    yield call(delay, 2000)
-    yield call(NavigationActions.push, {
-      screen: `migrations.${target}`,
-      animationType: 'slide-up'
-    })  
+    switch (target) {
+      case MigrationTarget.PreHD:
+        yield call(delay, 2000)
+        yield call(NavigationActions.push, {
+          screen: `migrations.${target}`,
+          animationType: 'slide-up'
+        })  
+        break
+      case MigrationTarget.Legacy:
+        if (yield call(runMigrations, {target})) {
+
+        }
+  
+    }
   }
 }
 
@@ -80,12 +89,17 @@ export function * runMigrations ({target} : TargetAction) : any {
   if (targets.includes(target)) {
     yield put(startWorking(target))
     const steps = targetRecipes[target]||[]
+    let status
     for (let step of steps) {
       yield call(performStep, step)
-      const status = yield select(migrationStepStatus, step)
+      status = yield select(migrationStepStatus, step)
       if (status !== MigrationStatus.Completed) break
-    }  
-    yield put(completeProcess(target))
+    }
+    if (status === MigrationStatus.Completed) {
+      yield put(completeProcess(target))
+    } else {
+      yield put(failProcess(target))
+    }
   }
 }
 

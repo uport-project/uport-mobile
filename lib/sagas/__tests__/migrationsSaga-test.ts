@@ -233,7 +233,6 @@ describe('checkup', () => {
           .silentRun()    
         })
       })
-
     })    
   })
 
@@ -247,10 +246,10 @@ describe('checkup', () => {
               [call(delay, 2000), undefined],
               [select(hdRootAddress), undefined],
               [call(hasWorkingSeed), false],  
-              [select(pendingMigrations), [MigrationTarget.Legacy]],
+              [select(pendingMigrations), [MigrationTarget.PreHD]],
               [select(migrateableIdentities), [{address: '0x'}]]
             ])
-            .put(addMigrationTarget(MigrationTarget.Legacy))
+            .put(addMigrationTarget(MigrationTarget.PreHD))
             .call(NavigationActions.push, {
               screen: `migrations.Legacy`,
               animationType: 'slide-up'
@@ -313,7 +312,7 @@ describe('runMigrations', () => {
       .call(performStep, MigrationStep.IdentityManagerChangeOwner)
       .call(performStep, MigrationStep.UpdatePreHDRootToHD)
       .not.call(performStep, MigrationStep.UportRegistryDDORefresh)
-      .put(completeProcess(MigrationTarget.PreHD))
+      .put(failProcess(MigrationTarget.PreHD))
       .dispatch(runMigrations(MigrationTarget.PreHD))
       .silentRun()
   })
