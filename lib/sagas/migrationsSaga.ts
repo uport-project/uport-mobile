@@ -23,7 +23,7 @@ import { LOADED_DB } from 'uPortMobile/lib/constants/GlobalActionTypes'
 import { MigrationStatus, MigrationStep, MigrationTarget, RUN_MIGRATIONS, TargetAction, targetRecipes } from 'uPortMobile/lib/constants/MigrationActionTypes'
 import { canSignFor } from 'uPortMobile/lib/sagas/keychain'
 import { isFullyHD } from 'uPortMobile/lib/selectors/chains'
-import { currentAddress, migrateableIdentities } from 'uPortMobile/lib/selectors/identities'
+import { currentAddress, migrateableIdentities, hasMainnetAccounts } from 'uPortMobile/lib/selectors/identities'
 import { migrationStepStatus, migrationTargets, pendingMigrations } from 'uPortMobile/lib/selectors/migrations'
 import { NavigationActions } from 'uPortMobile/lib/utilities/NavigationActions'
 import { hasAttestations } from '../selectors/attestations'
@@ -47,9 +47,12 @@ export function * checkForLegacy () : any {
 export function * checkup () : any {
   if (yield call(checkIfAbleToSign)) {
     if (yield call(checkForLegacy)) {
-      if (!(yield select(isFullyHD))) {
-        yield put(addMigrationTarget(MigrationTarget.PreHD))
-      } if (!(yield select(hasAttestations))) {
+      // We define highValue as having mainnet accounts and attestations
+      const highValue = (yield select(hasAttestations)) || (yield select(hasMainnetAccounts))
+      const isHD = yield select(isFullyHD)
+      if (highValue) {
+        if (!isHD) yield put(addMigrationTarget(MigrationTarget.PreHD))
+      } else {
         yield put(addMigrationTarget(MigrationTarget.Legacy))
       }
     }  

@@ -52,7 +52,7 @@ import { NavigationActions } from 'uPortMobile/lib/utilities/NavigationActions'
 import { migrationStepStatus, migrationTargets, pendingMigrations, migrationCompleted } from 'uPortMobile/lib/selectors/migrations'
 import { isFullyHD } from 'uPortMobile/lib/selectors/chains'
 import { hdRootAddress } from 'uPortMobile/lib/selectors/hdWallet'
-import { migrateableIdentities, currentAddress } from 'uPortMobile/lib/selectors/identities'
+import { migrateableIdentities, currentAddress, hasMainnetAccounts } from 'uPortMobile/lib/selectors/identities'
 import { hasAttestations } from 'uPortMobile/lib/selectors/attestations';
 
 describe('checkup', () => {
@@ -98,6 +98,7 @@ describe('checkup', () => {
             [select(currentAddress), root],
             [call(canSignFor, root), true],
             [select(isFullyHD), true],
+            [select(hasMainnetAccounts), false],
             [select(hasAttestations), true],
             [select(pendingMigrations), []],
             [select(migrateableIdentities), [{address: '0x'}]]
@@ -109,13 +110,34 @@ describe('checkup', () => {
         })
       })
 
-      describe('without attestations', () => {
+      describe('has mainnet accounts', () => {
+        it('should not do anything', () => {
+          return expectSaga(migrationsSaga)
+          .provide([
+            // TODO add selector for mainnet
+            [select(currentAddress), root],
+            [call(canSignFor, root), true],
+            [select(isFullyHD), true],
+            [select(hasMainnetAccounts), true],
+            [select(hasAttestations), false],
+            [select(pendingMigrations), []],
+            [select(migrateableIdentities), [{address: '0x'}]]
+          ])
+          .not.put(addMigrationTarget(MigrationTarget.Legacy))
+          .not.put(addMigrationTarget(MigrationTarget.PreHD))
+          .dispatch(loadedDB())
+          .silentRun()
+        })
+      })
+
+      describe('without attestations or mainnet accounts', () => {
         it('should migrate to Ethr DID', () => {
           return expectSaga(migrationsSaga)
           .provide([
             [select(currentAddress), root],
             [call(canSignFor, root), true],
             [select(isFullyHD), true],
+            [select(hasMainnetAccounts), false],
             [select(hasAttestations), false],
             [select(pendingMigrations), []],
             [select(migrateableIdentities), [{address: '0x'}]]
@@ -137,6 +159,7 @@ describe('checkup', () => {
                   [select(currentAddress), root],
                   [select(isFullyHD), false],
                   [call(canSignFor, root), true],
+                  [select(hasMainnetAccounts), false],
                   [select(hasAttestations), true],      
                   [select(pendingMigrations), []],
                   [select(migrateableIdentities), [{address: '0x'}]],
@@ -155,6 +178,7 @@ describe('checkup', () => {
                   [select(currentAddress), root],
                   [call(canSignFor, root), true],
                   [select(isFullyHD), false],
+                  [select(hasMainnetAccounts), false],
                   [select(hasAttestations), false],      
                   [select(pendingMigrations), []],
                   [select(migrateableIdentities), [{address: '0x'}]],
@@ -173,6 +197,7 @@ describe('checkup', () => {
           .provide([
             [select(currentAddress), root],
             [call(canSignFor, root), false],
+            [select(hasMainnetAccounts), false],
             [select(hasAttestations), true],
             [select(pendingMigrations), []],
             [select(migrateableIdentities), [{address: '0x'}]],
@@ -190,6 +215,7 @@ describe('checkup', () => {
             [select(currentAddress), root],
             [call(canSignFor, root), false],
             [select(isFullyHD), false],
+            [select(hasMainnetAccounts), false],
             [select(hasAttestations), false],
             [select(pendingMigrations), []],
             [select(migrateableIdentities), [{address: '0x'}]],
