@@ -22,7 +22,7 @@ import { select, call } from 'redux-saga/effects'
 import { delay } from 'redux-saga'
 import migrationsSaga, { performStep, runImplementationStep } from '../migrationsSaga'
 import IdentityManagerChangeOwner from '../migrations/IdentityManagerChangeOwner'
-import { listSeedAddresses, canSignFor } from 'uPortMobile/lib/sagas/keychain'
+import { listSeedAddresses, canSignFor, hasWorkingSeed } from 'uPortMobile/lib/sagas/keychain'
 import { 
   RUN_MIGRATIONS,
   MigrationStep, 
@@ -73,19 +73,22 @@ describe('checkup', () => {
     })
 
     describe('unable to sign', () => {
-      it('adds Migration Target', () => {
-        return expectSaga(migrationsSaga)
-            .provide([
-              [select(currentAddress), root],
-              [call(canSignFor, root), false],
-              [select(pendingMigrations), []],
-              [select(migrateableIdentities), []]
-            ])
-            .put(addMigrationTarget(MigrationTarget.Legacy))
-            .dispatch(loadedDB())
-            .silentRun()
+      describe('missing seed', () => {
+        it('adds Migration Target', () => {
+          return expectSaga(migrationsSaga)
+              .provide([
+                [select(currentAddress), root],
+                [select(hdRootAddress), root],
+                [call(hasWorkingSeed), false],
+                [call(canSignFor, root), false],
+                [select(pendingMigrations), []],
+                [select(migrateableIdentities), []]
+              ])
+              .put(addMigrationTarget(MigrationTarget.RecoverSeed))
+              .dispatch(loadedDB())
+              .silentRun()
+        })
       })
-  
     })
   })
 
@@ -200,6 +203,8 @@ describe('checkup', () => {
             [select(hasMainnetAccounts), false],
             [select(hasAttestations), true],
             [select(pendingMigrations), []],
+            [select(hdRootAddress), undefined],
+            [call(hasWorkingSeed), false],
             [select(migrateableIdentities), [{address: '0x'}]],
             [select(hasAttestations), false]
           ])
@@ -218,6 +223,8 @@ describe('checkup', () => {
             [select(hasMainnetAccounts), false],
             [select(hasAttestations), false],
             [select(pendingMigrations), []],
+            [select(hdRootAddress), undefined],
+            [call(hasWorkingSeed), false],
             [select(migrateableIdentities), [{address: '0x'}]],
             [select(hasAttestations), false]
           ])
@@ -238,6 +245,8 @@ describe('checkup', () => {
               [select(currentAddress), root],
               [call(canSignFor, root), false],
               [call(delay, 2000), undefined],
+              [select(hdRootAddress), undefined],
+              [call(hasWorkingSeed), false],  
               [select(pendingMigrations), [MigrationTarget.Legacy]],
               [select(migrateableIdentities), [{address: '0x'}]]
             ])

@@ -21,7 +21,7 @@ import { addMigrationTarget, completedMigrationStep, failedMigrationStep, starte
 import { completeProcess, failProcess, startWorking, stopWorking } from 'uPortMobile/lib/actions/processStatusActions'
 import { LOADED_DB } from 'uPortMobile/lib/constants/GlobalActionTypes'
 import { MigrationStatus, MigrationStep, MigrationTarget, RUN_MIGRATIONS, TargetAction, targetRecipes } from 'uPortMobile/lib/constants/MigrationActionTypes'
-import { canSignFor } from 'uPortMobile/lib/sagas/keychain'
+import { canSignFor, hasWorkingSeed } from 'uPortMobile/lib/sagas/keychain'
 import { isFullyHD } from 'uPortMobile/lib/selectors/chains'
 import { currentAddress, migrateableIdentities, hasMainnetAccounts } from 'uPortMobile/lib/selectors/identities'
 import { migrationStepStatus, migrationTargets, pendingMigrations } from 'uPortMobile/lib/selectors/migrations'
@@ -32,6 +32,7 @@ import IdentityManagerChangeOwner from './migrations/IdentityManagerChangeOwner'
 import MigrateLegacy from './migrations/MigrateLegacy'
 import UpdatePreHDRootToHD from './migrations/UpdatePreHDRootToHD'
 import UportRegistryDDORefresh from './migrations/UportRegistryDDORefresh'
+import { hdRootAddress } from '../selectors/hdWallet';
 
 export function * checkIfAbleToSign () : any {
   const address = yield select(currentAddress)
@@ -56,6 +57,9 @@ export function * checkup () : any {
       }
     }  
   } else {
+    if ((yield select(hdRootAddress)) &&! (yield call(hasWorkingSeed))) {
+      yield put(addMigrationTarget(MigrationTarget.RecoverSeed))
+    }
     yield put(addMigrationTarget(MigrationTarget.Legacy))
   }
 

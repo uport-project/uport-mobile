@@ -33,7 +33,8 @@ export enum MigrationStep {
   UpdatePreHDRootToHD = 'UpdatePreHDRootToHD',
   UportRegistryDDORefresh = 'UportRegistryDDORefresh',
   CleanUpAfterMissingSeed = 'CleanUpAfterMissingSeed',
-  MigrateLegacy = 'MigrateLegacy'
+  MigrateLegacy = 'MigrateLegacy',
+  EnterSeed = 'EnterSeed'
 }
 
 export enum MigrationStatus {
@@ -49,7 +50,8 @@ export interface Recipes {
 
 export const targetRecipes : Recipes = {
   PreHD: [MigrationStep.CleanUpAfterMissingSeed, MigrationStep.IdentityManagerChangeOwner, MigrationStep.UpdatePreHDRootToHD, MigrationStep.UportRegistryDDORefresh],
-  Legacy: [MigrationStep.MigrateLegacy]
+  Legacy: [MigrationStep.MigrateLegacy],
+  RecoverSeed: [MigrationStep.EnterSeed]
 }
 
 export interface TargetAction {
