@@ -22,7 +22,7 @@ import { Container, Text, TextTypes, Theme } from '@kancha'
 
 interface SectionProps {
   title?: string;
-  sectionTitleType: string;
+  sectionTitleType?: string;
 }
 
 const Section: React.FunctionComponent<SectionProps> = props => {

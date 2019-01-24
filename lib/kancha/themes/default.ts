@@ -4,10 +4,34 @@ interface IndexSignature {
 
 interface TextDefaultThemeMapTypes extends IndexSignature {}
 
+
+interface KanchaTheme extends IndexSignature {
+  text: {
+    lineHeights: {
+      body: number;
+    };
+    sizes: {
+      h1: number;
+      h2: number;
+      h3: number;
+      h4: number;
+      h5: number;
+      h6: number;
+      subTitle: number;
+      listItem: number;
+      listItemRight: number;
+      listItemNote: number;
+      sectionHeader: number;
+      summary: number;
+      body: number;
+    }
+  }
+}
+
 /**
  * Base DefaultTheme file
  */
-const DefaultTheme: IndexSignature = {
+const DefaultTheme: KanchaTheme = {
   text: {
     lineHeights: {
       body: 22,
@@ -68,7 +92,10 @@ const DefaultTheme: IndexSignature = {
   },
 }
 
-const NavigationTheme = {
+/** 
+ * For RNN
+ */
+const NavigationThemeDefault = {
   largeTitle: false,
   navBarBackgroundColor: DefaultTheme.colors.primary.brand,
   navBarButtonColor: DefaultTheme.colors.primary.background,
@@ -79,7 +106,7 @@ const NavigationTheme = {
  * Append nav theming
  */
 const Theme = DefaultTheme
-Theme.navigation = NavigationTheme
+Theme.navigation = NavigationThemeDefault
 
 /**
  * Temporary implementaion.
@@ -109,27 +136,22 @@ const TextThemeMap: TextDefaultThemeMapTypes = {
   h1: {
     fontSize: DefaultTheme.text.sizes.h1,
     color: DefaultTheme.colors.primary.text,
-    // paddingBottom: DefaultTheme.text.sizes.h1 * 0.2,
   },
   h2: {
     fontSize: DefaultTheme.text.sizes.h2,
     color: DefaultTheme.colors.primary.text,
-    // paddingBottom: DefaultTheme.text.sizes.h2 * 0.2,
   },
   h3: {
     fontSize: DefaultTheme.text.sizes.h3,
     color: DefaultTheme.colors.primary.text,
-    // paddingBottom: DefaultTheme.text.sizes.h3 * 0.2,
   },
   h4: {
     fontSize: DefaultTheme.text.sizes.h4,
     color: DefaultTheme.colors.primary.text,
-    // paddingBottom: DefaultTheme.text.sizes.h4 * 0.2,
   },
   h5: {
     fontSize: DefaultTheme.text.sizes.h5,
     color: DefaultTheme.colors.primary.text,
-    // paddingBottom: DefaultTheme.text.sizes.h5 * 0.2,
   },
   subTitle: {
     fontSize: DefaultTheme.text.sizes.subTitle,
@@ -138,7 +160,6 @@ const TextThemeMap: TextDefaultThemeMapTypes = {
   listItem: {
     fontSize: DefaultTheme.text.sizes.listItem,
     color: DefaultTheme.colors.primary.text,
-    // paddingBottom: DefaultTheme.text.sizes.listItem * 0.2,
   },
   listItemNote: {
     fontSize: DefaultTheme.text.sizes.listItemNote,
@@ -151,7 +172,6 @@ const TextThemeMap: TextDefaultThemeMapTypes = {
   summary: {
     fontSize: DefaultTheme.text.sizes.summary,
     color: DefaultTheme.colors.secondary.text,
-    // paddingBottom: DefaultTheme.text.sizes.summary * 0.2,
   },
   body: {
     fontSize: DefaultTheme.text.sizes.body,
@@ -161,7 +181,6 @@ const TextThemeMap: TextDefaultThemeMapTypes = {
   sectionHeader: {
     fontSize: DefaultTheme.text.sizes.sectionHeader,
     color: DefaultTheme.colors.secondary.text,
-    // paddingBottom: DefaultTheme.text.sizes.sectionHeader * 0.2,
   },
 }
 

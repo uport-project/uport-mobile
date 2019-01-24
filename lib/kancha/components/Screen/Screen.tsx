@@ -19,13 +19,25 @@
 
 import * as React from 'react'
 import { SafeAreaView, ScrollView, ViewStyle } from 'react-native'
-import { Container, Theme, Device, Text, TextTypes } from '@kancha'
+import { Container, Theme, Device } from '@kancha'
 
 interface ScreenProps {
+  /**
+   * Enable SafeAreaView for the screen
+   */
   safeAreaView?: boolean;
+  /**
+   * Type of screen. This sets the background -- May change
+   */
   type?: 'primary' | 'secondary' | 'tertiary' | undefined;
-  expandingHeaderContent?: React.ReactNode;
+   /**
+    * Type of screen. This sets the background -- May change
+    */
   expandingHeaderType?: 'primary' | 'secondary' | 'tertiary' | undefined;
+   /**
+    * The content to show in the expanding header zone
+    */
+  expandingHeaderContent?: React.ReactNode;
 }
 
 const SPACER_SIZE = 1000;
@@ -79,4 +91,7 @@ Screen.defaultProps = {
   type: 'secondary',
 }
 
+
 export default Screen
+
+

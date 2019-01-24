@@ -10,7 +10,7 @@
     "build-eth-abi": "browserify node_modules/ethereumjs-abi/index.js --s ethAbi | derequire > lib/browserified/ethereumjs-abi.js",
     "lint": "./node_modules/.bin/standard",
     "lint-fix": "./node_modules/.bin/standard --fix",
-    "test": "jest",
+    "test": "jest --no-cache",
     "package-android": "mkdir -p android/app/build/jsbundle/assets/ && mkdir -p android/app/build/jsbundle/res && node node_modules/react-native/local-cli/cli.js bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/build/jsbundle/assets/index.android.bundle --assets-dest android/app/build/jsbundle/res"
   },
   "jest": {
@@ -33,7 +33,8 @@
       "./jest-setup/enzyme.js",
       "./jest-setup/store.js",
       "./jest-setup/react-native-svg.js",
-      "./jest-setup/react-native-firebase.js"
+      "./jest-setup/react-native-firebase.js",
+      "./jest-setup/react-native-device-info.js"
     ],
     "testPathIgnorePatterns": [
       "/node_modules/",
@@ -57,13 +58,16 @@
     "testMatch": [
       "**/__tests__/*.+(ts|tsx|js|jsx)"
     ],
+    "modulePaths": [
+      "<rootDir>"
+    ],
     "moduleNameMapper": {
       "@kancha": "<rootDir>/lib/kancha/index",
       "uPortMobile(.*)$": "<rootDir>$1"
     },
     "globals": {
       "ts-jest": {
-        "tsConfig": "tsconfig.json"
+        "tsConfig": "tsconfig.jest.json"
       }
     },
     "testEnvironment": "node",
@@ -93,6 +97,7 @@
     "ethr-did-resolver": "^0.0.8",
     "events": "^1.1.0",
     "flag": "^2.0.4",
+    "global": "^4.3.2",
     "google-libphonenumber": "^3.0.6",
     "https-did-resolver": "^0.0.3",
     "js-sha256": "^0.9.0",
@@ -146,18 +151,19 @@
     "world-countries": "^1.8.1"
   },
   "devDependencies": {
-    "@babel/runtime": "^7.1.2",
-    "@types/jest": "^23.3.8",
+    "@types/jest": "^23.3.13",
     "@types/lodash": "^4.14.118",
     "@types/mockdate": "^2.0.0",
-    "@types/react": "^16.4.18",
-    "@types/react-native": "^0.57.7",
+    "@types/react": "^16.7.20",
+    "@types/react-native": "^0.57.32",
     "@types/react-native-navigation": "1.x",
     "@types/react-native-tab-view": "^1.0.2",
     "@types/react-native-vector-icons": "^4.6.4",
     "@types/react-redux": "^6.0.9",
+    "@types/react-test-renderer": "^16.0.3",
     "babel-core": "^6.26.3",
     "babel-jest": "^23.6.0",
+    "babel-plugin-module-resolver": "^3.1.3",
     "babel-plugin-transform-imports": "^1.5.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
@@ -178,7 +184,7 @@
     "nock": "^9.0.18",
     "prettier": "^1.15.3",
     "react-native-typescript-transformer": "^1.2.10",
-    "react-test-renderer": "^16.3.1",
+    "react-test-renderer": "^16.0.3",
     "reactotron-react-native": "^2.1.0",
     "reactotron-redux": "^2.1.0",
     "reactotron-redux-saga": "^2.1.0",
@@ -187,12 +193,12 @@
     "sinon": "^4.0.1",
     "standard": "^10.0.3",
     "timekeeper": "^1.0.0",
-    "ts-jest": "^23.10.4",
+    "ts-jest": "^23.10.5",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.17.0",
     "tslint-eslint-rules": "^5.4.0",
     "tslint-react": "^3.6.0",
-    "typescript": "^3.1.4"
+    "typescript": "^3.2.4"
   },
   "browser": {
     "stream": false,
