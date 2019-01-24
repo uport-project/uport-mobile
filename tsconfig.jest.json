@@ -2,7 +2,7 @@
   "extends": "./tsconfig",
   "compilerOptions": {
     "jsx": "react",
-    "module": "commonjs",
+    "module": "es2015",
     "esModuleInterop": true
   }
 }

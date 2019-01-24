@@ -21,18 +21,17 @@ Object {
 
 exports[`createPututuAuthToken creates correct payload 1`] = `
 Object {
-  "data": "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NksifQ.eyJpYXQiOjE0ODUzMjExMzMsImV4cCI6MTQ4NTQwNzUzMywidHlwZSI6InVzZXItYXV0aCIsImlzcyI6ImRpZDp1cG9ydDozNHdqc3h3dmR1YW5vN05GQzh1ak5KbkZqYmFjZ1llV0E4bSJ9",
+  "data": "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NksifQ.eyJpYXQiOjE0ODUzMjExMzMsInR5cGUiOiJ1c2VyLWF1dGgiLCJpc3MiOiJkaWQ6dXBvcnQ6MzR3anN4d3ZkdWFubzdORkM4dWpOSm5GamJhY2dZZVdBOG0ifQ",
   "header": Object {
     "alg": "ES256K",
     "typ": "JWT",
   },
   "payload": Object {
-    "exp": 1485407533,
     "iat": 1485321133,
     "iss": "did:uport:34wjsxwvduano7NFC8ujNJnFjbacgYeWA8m",
     "type": "user-auth",
   },
-  "signature": "85-ZtEJ-kF2vWRNadEh03GXHPWMgbl28Y4RkhnPnBLtxm1fxd6rii4xsIDoxywjOBJgLVBKRTlb53Qbw3UDRUQ",
+  "signature": "Waqowz_RhlMjmb9DX3hCiuD0bzBK55Lic51b9uZ28ZKd2cRk60DtFaBMT52CRv7gv6WKaD6urOSPAR6R1ZovRg",
 }
 `;
 

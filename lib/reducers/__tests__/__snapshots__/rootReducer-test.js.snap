@@ -153,6 +153,8 @@ Object {
     "q": 8196,
   },
   "vc": Object {
+    "contactDetails": Object {},
+    "contactList": Array [],
     "jwt": Array [],
   },
 }
@@ -311,6 +313,8 @@ Object {
     "q": 8196,
   },
   "vc": Object {
+    "contactDetails": Object {},
+    "contactList": Array [],
     "jwt": Array [],
   },
 }
@@ -470,6 +474,8 @@ Object {
     "q": 8196,
   },
   "vc": Object {
+    "contactDetails": Object {},
+    "contactList": Array [],
     "jwt": Array [],
   },
 }
@@ -629,6 +635,8 @@ Object {
     "q": 8196,
   },
   "vc": Object {
+    "contactDetails": Object {},
+    "contactList": Array [],
     "jwt": Array [],
   },
 }
@@ -788,6 +796,8 @@ Object {
     "q": 8196,
   },
   "vc": Object {
+    "contactDetails": Object {},
+    "contactList": Array [],
     "jwt": Array [],
   },
 }

@@ -33,7 +33,9 @@
       "./jest-setup/enzyme.js",
       "./jest-setup/store.js",
       "./jest-setup/react-native-svg.js",
-      "./jest-setup/react-native-firebase.js"
+      "./jest-setup/react-native-firebase.js",
+      "./jest-setup/react-native-share.js",
+      "./jest-setup/react-native-sqlcipher-storage.js"
     ],
     "testPathIgnorePatterns": [
       "/node_modules/",
