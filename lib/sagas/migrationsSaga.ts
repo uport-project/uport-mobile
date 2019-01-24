@@ -33,6 +33,7 @@ import MigrateLegacy from './migrations/MigrateLegacy'
 import UpdatePreHDRootToHD from './migrations/UpdatePreHDRootToHD'
 import UportRegistryDDORefresh from './migrations/UportRegistryDDORefresh'
 import { hdRootAddress } from '../selectors/hdWallet';
+import { Alert } from 'react-native';
 
 export function * checkIfAbleToSign () : any {
   const address = yield select(currentAddress)
@@ -76,8 +77,12 @@ export function * checkup () : any {
         })  
         break
       case MigrationTarget.Legacy:
-        if (yield call(runMigrations, {target})) {
-
+        if (yield call(runMigrations, { type: RUN_MIGRATIONS, target})) {
+          yield call(Alert.alert,
+            'Your Identity has been upgraded', 
+            'You had an old test net identity. Thank you for being an early uPort user. We have now upgraded your identity to live on the Ethereum Mainnet.',
+            [{text: 'OK'}]
+            )
         }
   
     }

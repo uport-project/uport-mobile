@@ -20,7 +20,7 @@ import * as matchers from 'redux-saga-test-plan/matchers'
 import { throwError } from 'redux-saga-test-plan/providers'
 import { select, call } from 'redux-saga/effects'
 import { delay } from 'redux-saga'
-import migrationsSaga, { performStep, runImplementationStep } from '../migrationsSaga'
+import migrationsSaga, { performStep, runImplementationStep, checkIfAbleToSign, checkForLegacy, runMigrations } from '../migrationsSaga'
 import IdentityManagerChangeOwner from '../migrations/IdentityManagerChangeOwner'
 import { listSeedAddresses, canSignFor, hasWorkingSeed } from 'uPortMobile/lib/sagas/keychain'
 import { 
@@ -34,7 +34,7 @@ import {
 
 import { loadedDB } from 'uPortMobile/lib/actions/globalActions'
 import { 
-  runMigrations,
+  runMigrations as runMigrationAction,
   addMigrationTarget,
   startedMigrationStep,
   completedMigrationStep,
@@ -54,6 +54,7 @@ import { isFullyHD } from 'uPortMobile/lib/selectors/chains'
 import { hdRootAddress } from 'uPortMobile/lib/selectors/hdWallet'
 import { migrateableIdentities, currentAddress, hasMainnetAccounts } from 'uPortMobile/lib/selectors/identities'
 import { hasAttestations } from 'uPortMobile/lib/selectors/attestations';
+import { Alert } from 'react-native';
 
 describe('checkup', () => {
   const root = '0xroot'
@@ -165,8 +166,7 @@ describe('checkup', () => {
                   [select(hasMainnetAccounts), false],
                   [select(hasAttestations), true],      
                   [select(pendingMigrations), []],
-                  [select(migrateableIdentities), [{address: '0x'}]],
-                  [select(hasAttestations), false]
+                  [select(migrateableIdentities), [{address: '0x'}]]
                 ])
                 .put(addMigrationTarget(MigrationTarget.PreHD))
                 .dispatch(loadedDB())
@@ -236,28 +236,58 @@ describe('checkup', () => {
     })    
   })
 
-  describe('Trigger Migration Screen', () => {      
-    describe('pending migrations contains at least one migration', () => {
-      it('Shows migration modal', () => {
-        return expectSaga(migrationsSaga)
-            .provide([
-              [select(currentAddress), root],
-              [call(canSignFor, root), false],
-              [call(delay, 2000), undefined],
-              [select(hdRootAddress), undefined],
-              [call(hasWorkingSeed), false],  
-              [select(pendingMigrations), [MigrationTarget.PreHD]],
-              [select(migrateableIdentities), [{address: '0x'}]]
-            ])
-            .put(addMigrationTarget(MigrationTarget.PreHD))
-            .call(NavigationActions.push, {
-              screen: `migrations.Legacy`,
-              animationType: 'slide-up'
-            })
-            .dispatch(loadedDB())
-            .silentRun()
-      })  
-    })
+  describe('preHD', () => {
+    describe('Trigger Migration Screen', () => {      
+      describe('pending migrations contains at least one migration', () => {
+        it('Shows migration modal', () => {
+          return expectSaga(migrationsSaga)
+              .provide([
+                [call(checkIfAbleToSign), true],
+                [call(checkForLegacy), true],
+                [select(isFullyHD), false],
+                [select(hasMainnetAccounts), false],
+                [select(hasAttestations), true],      
+                [call(delay, 2000), undefined],
+                [select(pendingMigrations), [MigrationTarget.PreHD]]
+              ])
+              .put(addMigrationTarget(MigrationTarget.PreHD))
+              .call(NavigationActions.push, {
+                screen: `migrations.PreHD`,
+                animationType: 'slide-up'
+              })
+              .dispatch(loadedDB())
+              .silentRun()
+        })  
+      })
+    })  
+  })
+
+  describe('Legacy', () => {
+    describe('Trigger Migration Screen', () => {      
+      describe('pending migrations contains at least one migration', () => {
+        it('runs migration and shows alert', () => {
+          return expectSaga(migrationsSaga)
+              .provide([
+                [call(checkIfAbleToSign), true],
+                [call(checkForLegacy), true],
+                [select(isFullyHD), false],
+                [select(hasMainnetAccounts), false],
+                [select(hasAttestations), false],      
+                [select(pendingMigrations), [MigrationTarget.Legacy]],
+                [call(runMigrations, runMigrationAction(MigrationTarget.Legacy)), true]
+              ])
+              .put(addMigrationTarget(MigrationTarget.Legacy))
+              .call(runMigrations, runMigrationAction(MigrationTarget.Legacy))
+              .call(Alert.alert, 
+                'Your Identity has been upgraded', 
+                'You had an old test net identity. Thank you for being an early uPort user. We have now upgraded your identity to live on the Ethereum Mainnet.',
+                [{text: 'OK'}]
+              )
+              .dispatch(loadedDB())
+              .silentRun()
+        })  
+      })
+    })  
   })
 })
 
@@ -269,7 +299,7 @@ describe('runMigrations', () => {
           [select(migrationTargets), []]
         ])
         .not.call(performStep)
-        .dispatch(runMigrations(MigrationTarget.PreHD))
+        .dispatch(runMigrationAction(MigrationTarget.PreHD))
         .silentRun()
     })
   })
@@ -292,7 +322,7 @@ describe('runMigrations', () => {
         .call(performStep, MigrationStep.UpdatePreHDRootToHD)
         .call(performStep, MigrationStep.UportRegistryDDORefresh)
         .put(completeProcess(MigrationTarget.PreHD))
-        .dispatch(runMigrations(MigrationTarget.PreHD))
+        .dispatch(runMigrationAction(MigrationTarget.PreHD))
         .silentRun()
     })
   })
@@ -313,7 +343,7 @@ describe('runMigrations', () => {
       .call(performStep, MigrationStep.UpdatePreHDRootToHD)
       .not.call(performStep, MigrationStep.UportRegistryDDORefresh)
       .put(failProcess(MigrationTarget.PreHD))
-      .dispatch(runMigrations(MigrationTarget.PreHD))
+      .dispatch(runMigrationAction(MigrationTarget.PreHD))
       .silentRun()
   })
 
