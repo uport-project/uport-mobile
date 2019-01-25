@@ -250,7 +250,7 @@ describe('checkup', () => {
                 [select(isFullyHD), false],
                 [select(hasMainnetAccounts), false],
                 [select(hasAttestations), true],      
-                [call(delay, 2000), undefined],
+                [call(delay, 1000), undefined],
                 [select(pendingMigrations), [MigrationTarget.PreHD]]
               ])
               .put(addMigrationTarget(MigrationTarget.PreHD))

@@ -78,7 +78,7 @@ export function * checkup () : any {
     const target = pending[0]
     switch (target) {
       case MigrationTarget.PreHD:
-        yield call(delay, 2000)
+        yield call(delay, 1000)
         yield call(NavigationActions.push, {
           screen: `migrations.${target}`,
           animationType: 'slide-up'
@@ -93,10 +93,14 @@ export function * checkup () : any {
         }
         break
       case MigrationTarget.RecoverSeed:
-        yield call(alert,
-          'You need to reenter your HD seed', 
-          'PLACEHOLDER. LINK TO RECOVERY SCREEN INSTEAD'
-          )
+        yield call(delay, 500)
+        yield call(NavigationActions.push, {
+          screen: 'recovery.seedInstructions',
+          animationType: 'slide-up',
+          passProps: {
+            migrate: true
+          }
+        })
         break
     }
   }
