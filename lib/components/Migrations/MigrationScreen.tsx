@@ -123,7 +123,12 @@ const Migrate: React.SFC<MigrateProps> = (props) => {
     actionText={props.title}
     onlyOnline
     onProcess={() => props.migrate(props.target)}
-    onContinue={() => props.navigator.push({screen: 'migrations.complete'})}
+    onContinue={() => props.navigator.push({
+      screen: 'migrations.complete',
+      navigatorStyle: {
+        navBarHidden: true
+      }
+    })}
     skipTitle='Cancel'
     skippable={!props.working && !props.completed}
     onSkip={() => props.navigator.popToRoot({animated: true})}
