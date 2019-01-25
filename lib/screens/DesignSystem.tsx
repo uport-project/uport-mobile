@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Container, Text, TextTypes, ListItem, Screen, Section } from '@kancha'
+import { Container, Text, ListItem, Screen, Section } from '@kancha'
 
 interface FakeAvatarProps {}
 
@@ -59,14 +59,14 @@ class DesignSystem extends React.Component {
             <ListItem last>Static list item</ListItem>
           </Section>
           <Section title={'TYPEOGRAPHY'}>
-            <Text type={TextTypes.H1}>Heading 1</Text>
-            <Text type={TextTypes.H2}>Heading 2</Text>
-            <Text type={TextTypes.H3}>Heading 3</Text>
-            <Text type={TextTypes.H4}>Heading 4</Text>
-            <Text type={TextTypes.H5}>Heading 5</Text>
-            <Text type={TextTypes.Body}>Body Text</Text>
-            <Text type={TextTypes.Summary}>Summary Text</Text>
-            <Text type={TextTypes.SectionHeader}>Section Header</Text>
+            <Text type={Text.Types.H1}>Heading 1</Text>
+            <Text type={Text.Types.H2}>Heading 2</Text>
+            <Text type={Text.Types.H3}>Heading 3</Text>
+            <Text type={Text.Types.H4}>Heading 4</Text>
+            <Text type={Text.Types.H5}>Heading 5</Text>
+            <Text type={Text.Types.Body}>Body Text</Text>
+            <Text type={Text.Types.Summary}>Summary Text</Text>
+            <Text type={Text.Types.SectionHeader}>Section Header</Text>
           </Section>
         </Container>
       </Screen>

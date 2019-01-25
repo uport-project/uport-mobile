@@ -4,6 +4,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
 <RCTSafeAreaView
   style={
     Object {
+      "backgroundColor": "#EFEEF3",
       "flex": 1,
     }
   }
@@ -19,7 +20,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
     }
     style={
       Object {
-        "backgroundColor": "#efeef3",
+        "backgroundColor": "#EFEEF3",
       }
     }
   >
@@ -28,7 +29,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
         style={
           Object {
             "alignItems": undefined,
-            "backgroundColor": "#efeef3",
+            "backgroundColor": "#EFEEF3",
             "flex": 1,
             "flexDirection": undefined,
             "height": undefined,
@@ -99,7 +100,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
               ellipsizeMode="tail"
               style={
                 Object {
-                  "color": "#AAAAAA",
+                  "color": "#BBBBBB",
                   "fontSize": 14,
                   "paddingBottom": 15,
                 }
@@ -285,7 +286,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                         ellipsizeMode="tail"
                         style={
                           Object {
-                            "color": "#AAAAAA",
+                            "color": "#BBBBBB",
                             "fontSize": 15,
                           }
                         }
@@ -814,7 +815,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
               ellipsizeMode="tail"
               style={
                 Object {
-                  "color": "#AAAAAA",
+                  "color": "#BBBBBB",
                   "fontSize": 14,
                   "paddingBottom": 15,
                 }
@@ -1365,7 +1366,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
               ellipsizeMode="tail"
               style={
                 Object {
-                  "color": "#AAAAAA",
+                  "color": "#BBBBBB",
                   "fontSize": 14,
                   "paddingBottom": 15,
                 }
@@ -1704,7 +1705,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                         ellipsizeMode="tail"
                         style={
                           Object {
-                            "color": "#AAAAAA",
+                            "color": "#BBBBBB",
                             "fontSize": 15,
                           }
                         }
@@ -1815,7 +1816,7 @@ ShallowWrapper {
           </ListItem>
         </Section>,
       ],
-      "safeAreaView": true,
+      "config": "safeScroll",
       "type": "secondary",
     },
     "ref": null,
@@ -2090,7 +2091,7 @@ ShallowWrapper {
             </ListItem>
           </Section>,
         ],
-        "safeAreaView": true,
+        "config": "safeScroll",
         "type": "secondary",
       },
       "ref": null,
@@ -2336,6 +2337,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
 <RCTSafeAreaView
   style={
     Object {
+      "backgroundColor": "#EFEEF3",
       "flex": 1,
     }
   }
@@ -2351,7 +2353,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
     }
     style={
       Object {
-        "backgroundColor": "#efeef3",
+        "backgroundColor": "#EFEEF3",
       }
     }
   >
@@ -2360,7 +2362,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
         style={
           Object {
             "alignItems": undefined,
-            "backgroundColor": "#efeef3",
+            "backgroundColor": "#EFEEF3",
             "flex": 1,
             "flexDirection": undefined,
             "height": undefined,
@@ -2431,7 +2433,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
               ellipsizeMode="tail"
               style={
                 Object {
-                  "color": "#AAAAAA",
+                  "color": "#BBBBBB",
                   "fontSize": 14,
                   "paddingBottom": 15,
                 }
@@ -2617,7 +2619,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                         ellipsizeMode="tail"
                         style={
                           Object {
-                            "color": "#AAAAAA",
+                            "color": "#BBBBBB",
                             "fontSize": 15,
                           }
                         }
@@ -3146,7 +3148,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
               ellipsizeMode="tail"
               style={
                 Object {
-                  "color": "#AAAAAA",
+                  "color": "#BBBBBB",
                   "fontSize": 14,
                   "paddingBottom": 15,
                 }
@@ -3697,7 +3699,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
               ellipsizeMode="tail"
               style={
                 Object {
-                  "color": "#AAAAAA",
+                  "color": "#BBBBBB",
                   "fontSize": 14,
                   "paddingBottom": 15,
                 }
@@ -4036,7 +4038,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                         ellipsizeMode="tail"
                         style={
                           Object {
-                            "color": "#AAAAAA",
+                            "color": "#BBBBBB",
                             "fontSize": 15,
                           }
                         }

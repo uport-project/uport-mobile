@@ -18,7 +18,7 @@
 /* globals it, expect */
 
 import * as React from 'react'
-import { Container, Theme, Text, Screen, TextTypes } from '@kancha'
+import { Container, Theme, Text, Screen } from '@kancha'
 
 const text1 = `
 This privacy policy (“Policy”) describes how ConsenSys AG’s uPort(“uPort” “Company”, “we”, “our”, “us”) collects, uses, shares, and stores personal information of users of this website, https://www.uport.me/ (the “Site”) and the Services (as defined below).. This Policy applies to the Site, applications, products and services (collectively, “Services”) on or in which it is posted, linked, or referenced. 
@@ -280,15 +280,15 @@ const PrivacyPolicy = (props: void) => {
     <Screen>
       <Container flex={1}>
         <Container paddingLeft paddingRight paddingTop paddingBottom>
-          <Text type={TextTypes.SubTitle}>Last modified May 24, 2018</Text>
+          <Text type={Text.Types.SubTitle}>Last modified May 24, 2018</Text>
         </Container>
         <Container paddingLeft paddingRight>
-          <Text type={TextTypes.Body}>{text1}</Text>
-          <Text type={TextTypes.Body}>{text2}</Text>
-          <Text type={TextTypes.Body}>{text3}</Text>
-          <Text type={TextTypes.Body}>{text4}</Text>
-          <Text type={TextTypes.Body}>{text5}</Text>
-          <Text type={TextTypes.Body}>{text6}</Text>
+          <Text type={Text.Types.Body}>{text1}</Text>
+          <Text type={Text.Types.Body}>{text2}</Text>
+          <Text type={Text.Types.Body}>{text3}</Text>
+          <Text type={Text.Types.Body}>{text4}</Text>
+          <Text type={Text.Types.Body}>{text5}</Text>
+          <Text type={Text.Types.Body}>{text6}</Text>
         </Container>
       </Container>
     </Screen>
