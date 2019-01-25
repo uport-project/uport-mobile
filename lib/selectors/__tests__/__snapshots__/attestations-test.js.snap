@@ -247,8 +247,12 @@ Object {
 
 exports[`returns full ledger 1`] = `
 V {
-  "C": null,
-  "cb": [Function],
+  "C": Hd {
+    "j": 65937614,
+    "k": null,
+    "q": 8192,
+  },
+  "cb": null,
   "j": 32374988,
   "k": null,
   "p": null,
