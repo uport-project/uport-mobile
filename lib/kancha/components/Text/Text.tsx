@@ -19,7 +19,26 @@
 
 import * as React from 'react'
 import { Text, TextStyle } from 'react-native'
-import { TextThemeMap, TextTypes, Theme } from '@kancha'
+import { TextThemeMap, Theme } from '@kancha'
+
+/**
+ *  Implemenation details: Will move static types to theor own file or namespace later
+ */
+
+const TextTypes: Kancha.TextTypesStatic = {
+  H1: 'h1',
+  H2: 'h2',
+  H3: 'h3',
+  H4: 'h4',
+  H5: 'h5',
+  ListItem: 'listItem',
+  ListItemRight: 'listItemRight',
+  ListItemNote: 'listItemNote',
+  SubTitle: 'subTitle',
+  Body: 'body',
+  Summary: 'summary',
+  SectionHeader: 'sectionHeader',
+}
 
 /**
  * Kancha Text Props
@@ -36,6 +55,16 @@ interface KanchaTextProps {
   warn?: boolean
 
   /**
+   * Color prop is used to configure button text colors
+   */
+  buttonTextColor?: Kancha.BrandPropOptions
+
+  /**
+   * Overide the color with a warning color
+   */
+  block?: Kancha.BlockPropsOptions
+
+  /**
    * Make the text bold
    */
   bold?: boolean
@@ -48,7 +77,7 @@ interface KanchaTextProps {
   /**
    * A bottom padding for the text. Useful for headings
    */
-  paddingBottom?: number | boolean | undefined;
+  paddingBottom?: number | boolean | undefined
 
   /**
    * The margin around the text
@@ -56,17 +85,27 @@ interface KanchaTextProps {
   margin?: number
 }
 
-const KanchaText: React.FC<KanchaTextProps> = props => {
+const KanchaText: React.FC<KanchaTextProps> & { Types: Kancha.TextTypesStatic } = props => {
   const styles: TextStyle = {
     ...TextThemeMap[props.type],
     ...(props.bold ? { fontWeight: 'bold' } : {}),
-    ...(props.warn ? { color: Theme.colors.warning } : {}),
+    ...(props.warn ? { color: Theme.colors.warning.text } : {}),
+    ...(props.buttonTextColor
+      ? {
+          color: props.block
+            ? Theme.colors[props.buttonTextColor].buttonText[props.block]
+            : Theme.colors[props.buttonTextColor].buttonText.filled,
+        }
+      : {}),
     ...(props.paddingBottom ? { paddingBottom: props.paddingBottom } : {}),
-    ...(props.paddingBottom && typeof props.paddingBottom === 'boolean' ? { paddingBottom: Theme.spacing.default } : {}),
-    
+    ...(props.paddingBottom && typeof props.paddingBottom === 'boolean'
+      ? { paddingBottom: Theme.spacing.default }
+      : {}),
   }
 
   return <Text style={styles}>{props.children}</Text>
 }
+
+KanchaText.Types = TextTypes
 
 export default KanchaText

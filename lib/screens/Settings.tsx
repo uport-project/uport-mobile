@@ -25,7 +25,6 @@ import MaterialIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import { connections } from 'uPortMobile/lib/selectors/identities'
 import { hdRootAddress, seedConfirmedSelector } from 'uPortMobile/lib/selectors/hdWallet'
 
-
 interface SettingsProps {
   navigator: Navigator
   connections: any[]
@@ -70,7 +69,7 @@ export class Settings extends React.Component<SettingsProps> {
             collapsedId: 'scan',
             collapsedIcon: icon,
             collapsedIconColor: Theme.colors.primary.background,
-            backgroundColor: Theme.colors.brand,
+            backgroundColor: Theme.colors.primary.brand,
           },
         })
       })

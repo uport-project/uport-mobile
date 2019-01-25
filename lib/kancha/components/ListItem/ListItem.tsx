@@ -19,7 +19,7 @@
 
 import * as React from 'react'
 import { Image, TouchableHighlight, ViewStyle, Linking } from 'react-native'
-import { Container, Text, Icon, TextTypes, Theme } from '@kancha'
+import { Container, Text, Icon, Theme } from '@kancha'
 
 interface ListItemProps {
   /**
@@ -91,7 +91,7 @@ const ListItem: React.FunctionComponent<ListItemProps> = props => {
       <Container flex={1} flexDirection={'row'}>
         {props.avatarComponent && (
           <Container alignItems={'center'} justifyContent={'center'} paddingLeft paddingTop={8} paddingBottom={8}>
-            { props.avatarComponent }
+            {props.avatarComponent}
           </Container>
         )}
         <Container
@@ -105,22 +105,20 @@ const ListItem: React.FunctionComponent<ListItemProps> = props => {
           paddingRight
         >
           <Container flex={1}>
-            <Text type={TextTypes.ListItem}>{props.children}</Text>
+            <Text type={Text.Types.ListItem}>{props.children}</Text>
           </Container>
-          <Container 
-            flexDirection={'row'} 
-            alignItems={'center'}>
-              <Container marginRight marginLeft paddingTop={5} paddingBottom={5}>
-                {props.accessoryRight && !props.contentRight && (
-                  <Text type={TextTypes.ListItemNote} warn={props.warn}>
-                    {props.accessoryRight}
-                  </Text>
-                )}
-                {props.contentRight && !props.accessoryRight && (
-                  <Text type={TextTypes.ListItemRight}>{shortenString(props.contentRight)}</Text>
-                )}
-              </Container>
-            { actionIcon && <Icon name={actionIcon} size={24} color={Theme.colors.primary.accessories} />}
+          <Container flexDirection={'row'} alignItems={'center'}>
+            <Container marginRight marginLeft paddingTop={5} paddingBottom={5}>
+              {props.accessoryRight && !props.contentRight && (
+                <Text type={Text.Types.ListItemNote} warn={props.warn}>
+                  {props.accessoryRight}
+                </Text>
+              )}
+              {props.contentRight && !props.accessoryRight && (
+                <Text type={Text.Types.ListItemRight}>{shortenString(props.contentRight)}</Text>
+              )}
+            </Container>
+            {actionIcon && <Icon name={actionIcon} size={24} color={Theme.colors.primary.accessories} />}
           </Container>
         </Container>
       </Container>

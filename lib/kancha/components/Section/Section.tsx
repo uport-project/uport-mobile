@@ -18,18 +18,24 @@
  ***/
 
 import * as React from 'react'
-import { Container, Text, TextTypes, Theme } from '@kancha'
+import { Container, Text, Theme } from '@kancha'
 
 interface SectionProps {
-  title?: string;
-  sectionTitleType?: string;
+  title?: string
+  sectionTitleType?: string
 }
 
 const Section: React.FunctionComponent<SectionProps> = props => {
   return (
     <Container marginTop={Theme.spacing.section}>
       <Container paddingLeft>
-        <Text paddingBottom bold={!!props.sectionTitleType} type={props.sectionTitleType ? props.sectionTitleType : TextTypes.SectionHeader}>{props.title}</Text>
+        <Text
+          paddingBottom
+          bold={!!props.sectionTitleType}
+          type={props.sectionTitleType ? props.sectionTitleType : Text.Types.SectionHeader}
+        >
+          {props.title}
+        </Text>
       </Container>
       <Container dividerTop dividerBottom background={'primary'}>
         {props.children}
