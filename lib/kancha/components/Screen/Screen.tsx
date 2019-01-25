@@ -19,31 +19,57 @@
 
 import * as React from 'react'
 import { SafeAreaView, ScrollView, ViewStyle } from 'react-native'
-import { Container, Theme, Device } from '@kancha'
+import { Container, Theme, Device, BrandOptions } from '@kancha'
+
+/** Temporary spacer size */
+const SPACER_SIZE = 1000
+
+/***
+ * 1 - SafeAreaView with scrolling
+ * 2 - SafeAreaView without scrolling
+ * 3 - No SafeAreaView with scrolling
+ * 4 - No SafeAreaView without scrolling
+ * */
+const ScreenConfigs: Kancha.ScreenConfigsStatic = {
+  SafeScroll: 'safeScroll',
+  SafeNoScroll: 'safeNoScroll',
+  Scroll: 'scroll',
+  NoScroll: 'noScroll',
+}
+
+const ScreenBrandOptions: Kancha.BrandTypeStatic = {
+  Primary: 'primary',
+  Secondary: 'secondary',
+  Tertiary: 'tertiary',
+  Accent: 'accent',
+  Warning: 'warning',
+  Confirm: 'confirm',
+  Custom: 'custom',
+}
 
 interface ScreenProps {
   /**
-   * Enable SafeAreaView for the screen
+   * Configure the screen: Eg. Screen.Config.SafeScroll
    */
-  safeAreaView?: boolean;
+  config?: 'safeScroll' | 'safeNoScroll' | 'scroll' | 'noScroll' | undefined
   /**
-   * Type of screen. This sets the background -- May change
+   * Type of screen. This sets the background color-- May change
    */
-  type?: 'primary' | 'secondary' | 'tertiary' | undefined;
-   /**
-    * Type of screen. This sets the background -- May change
-    */
-  expandingHeaderType?: 'primary' | 'secondary' | 'tertiary' | undefined;
-   /**
-    * The content to show in the expanding header zone
-    */
-  expandingHeaderContent?: React.ReactNode;
+  type?: Kancha.BrandPropOptions
+  /**
+   * Type of header. This sets the header background color -- May change
+   */
+  expandingHeaderType?: Kancha.BrandPropOptions
+  /**
+   * The content to show in the expanding header zone. A config with a scrollView must be enabled.
+   */
+  expandingHeaderContent?: React.ReactNode
 }
 
-const SPACER_SIZE = 1000;
-
-const Screen: React.FunctionComponent<ScreenProps> = props => {
-
+const Screen: React.FunctionComponent<ScreenProps> & {
+  Config: Kancha.ScreenConfigsStatic
+  Types: Kancha.BrandTypeStatic
+} = props => {
   const scrollViewStyle: ViewStyle = {
     backgroundColor: props.type && Theme.colors[props.type].background,
   }
@@ -51,47 +77,64 @@ const Screen: React.FunctionComponent<ScreenProps> = props => {
     ...(props.expandingHeaderType ? { backgroundColor: Theme.colors[props.expandingHeaderType].background } : {}),
   }
   const scrollViewContentInset = {
-    ...(props.expandingHeaderContent ? { top: -SPACER_SIZE } : {} ),
+    ...(props.expandingHeaderContent ? { top: -SPACER_SIZE } : {}),
   }
   const scrollViewContentOffset = {
     ...(props.expandingHeaderContent ? { y: SPACER_SIZE, x: 0 } : { y: 0, x: 0 }),
   }
 
-  return props.safeAreaView ? (
-    <SafeAreaView style={{ flex: 1 }}>
-      <ScrollView
-        contentInset={scrollViewContentInset}
-        contentOffset={scrollViewContentOffset}
-        style={scrollViewStyle} 
-        contentContainerStyle={scrollViewContentStyle}>
-        {
-          props.expandingHeaderContent &&
-            <React.Fragment>
-            { Device.isIOS && <Container h={1000} /> }
-              <Container
-                background={props.expandingHeaderType}>
-                  {
-                    props.expandingHeaderContent
-                  }
-              </Container>
-            </React.Fragment>
-        }
-        <Container flex={1} paddingBottom background={props.type}>
-          {props.children}
-        </Container>
-      </ScrollView>
-    </SafeAreaView>
-  ) : (
-    <Container flex={1}>{props.children}</Container>
+  /**
+   * Main content to be rendered
+   */
+  const mainContent = (
+    <Container flex={1} paddingBottom background={props.type}>
+      {props.children}
+    </Container>
   )
+  /**
+   * Main content to be rendered within a ScrollView
+   */
+  const scrollViewContent = (
+    <ScrollView
+      contentInset={scrollViewContentInset}
+      contentOffset={scrollViewContentOffset}
+      style={scrollViewStyle}
+      contentContainerStyle={scrollViewContentStyle}
+    >
+      {props.expandingHeaderContent && (
+        <React.Fragment>
+          {Device.isIOS && <Container h={1000} />}
+          <Container background={props.expandingHeaderType}>{props.expandingHeaderContent}</Container>
+        </React.Fragment>
+      )}
+      {mainContent}
+    </ScrollView>
+  )
+  /**
+   * Main content to be rendered within a SafeAreaView
+   */
+  const safeAreaView = (
+    <SafeAreaView style={{ flex: 1, backgroundColor: props.type && Theme.colors[props.type].background }}>
+      {props.config === ScreenConfigs.SafeNoScroll ? mainContent : scrollViewContent}
+    </SafeAreaView>
+  )
+
+  return props.config === ScreenConfigs.NoScroll
+    ? mainContent
+    : props.config === ScreenConfigs.Scroll
+    ? scrollViewContent
+    : safeAreaView
 }
 
 Screen.defaultProps = {
-  safeAreaView: true,
-  type: 'secondary',
+  config: ScreenConfigs.SafeScroll,
+  type: ScreenBrandOptions.Secondary,
 }
 
+/**
+ * Appending statics
+ */
+Screen.Config = ScreenConfigs
+Screen.Types = ScreenBrandOptions
 
 export default Screen
-
-

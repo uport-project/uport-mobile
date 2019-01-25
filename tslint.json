@@ -39,7 +39,7 @@
     "prefer-object-spread": false,
     "quotemark": [true, "single", "jsx-double", "avoid-escape"],
     "semicolon": [false, "always"],
-    "trailing-comma": [true, { "multiline": "always", "singleline": "never" }],
+    "trailing-comma": [true],
     "variable-name": [
       true,
       "ban-keywords",
