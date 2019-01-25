@@ -4,6 +4,7 @@ exports[`renders Settings screen with 1`] = `
 <RCTSafeAreaView
   style={
     Object {
+      "backgroundColor": "#EFEEF3",
       "flex": 1,
     }
   }
@@ -19,7 +20,7 @@ exports[`renders Settings screen with 1`] = `
     }
     style={
       Object {
-        "backgroundColor": "#efeef3",
+        "backgroundColor": "#EFEEF3",
       }
     }
   >
@@ -28,7 +29,7 @@ exports[`renders Settings screen with 1`] = `
         style={
           Object {
             "alignItems": undefined,
-            "backgroundColor": "#efeef3",
+            "backgroundColor": "#EFEEF3",
             "flex": 1,
             "flexDirection": undefined,
             "height": undefined,
@@ -99,7 +100,7 @@ exports[`renders Settings screen with 1`] = `
               ellipsizeMode="tail"
               style={
                 Object {
-                  "color": "#AAAAAA",
+                  "color": "#BBBBBB",
                   "fontSize": 14,
                 }
               }

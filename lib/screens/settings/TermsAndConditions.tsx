@@ -18,7 +18,7 @@
  ***/
 
 import React from 'react'
-import { Container, Theme, Text, Screen, TextTypes } from '@kancha'
+import { Container, Theme, Text, Screen } from '@kancha'
 
 export const termsAndConditions1 = `
 Terms of Use Version 1.2
@@ -164,13 +164,13 @@ const TermsAndConditions = (props: void) => {
     <Screen>
       <Container flex={1}>
         <Container padding>
-          <Text type={TextTypes.SubTitle}>Last modified May 24, 2018</Text>
+          <Text type={Text.Types.SubTitle}>Last modified May 24, 2018</Text>
         </Container>
         <Container paddingHorizontal>
-          <Text type={TextTypes.Body}>{termsAndConditions1}</Text>
-          <Text type={TextTypes.Body}>{termsAndConditions12}</Text>
-          <Text type={TextTypes.Body}>{termsAndConditions2}</Text>
-          <Text type={TextTypes.Body}>{termsAndConditions3}</Text>
+          <Text type={Text.Types.Body}>{termsAndConditions1}</Text>
+          <Text type={Text.Types.Body}>{termsAndConditions12}</Text>
+          <Text type={Text.Types.Body}>{termsAndConditions2}</Text>
+          <Text type={Text.Types.Body}>{termsAndConditions3}</Text>
         </Container>
       </Container>
     </Screen>
