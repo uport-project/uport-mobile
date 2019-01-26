@@ -58,3 +58,8 @@ export const pendingMigrations = createSelector(
   [migrations],
   state => state.targets.filter(target => !targetCompleted(state, target))
 )
+
+export const pendingMigration = createSelector(
+  [pendingMigrations, currentTarget],
+  (migrations, target) => migrations.find(t => t === target)
+)
