@@ -52,6 +52,8 @@ export function * alert(title: string, message: string) {
 }
 
 export function * checkup () : any {
+  const address = yield select(currentAddress)
+  if (!address) return
   // console.log('id', (yield select(currentIdentityJS)))
   if (yield call(checkIfAbleToSign)) {
     if (yield call(checkForLegacy)) {
@@ -65,7 +67,6 @@ export function * checkup () : any {
       }
     }  
   } else {
-    const address = yield select(currentAddress)
     const hd = yield select(isHD, address)
     if (hd) {
       yield put(addMigrationTarget(MigrationTarget.RecoverSeed))
