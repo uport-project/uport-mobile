@@ -1,3 +1,5 @@
+import MigrationScreen from '../components/Migrations/MigrationScreen';
+
 //
 // This file is part of uPort Mobile App.
 //
@@ -52,6 +54,15 @@ export const targetRecipes : Recipes = {
   PreHD: [MigrationStep.CleanUpAfterMissingSeed, MigrationStep.IdentityManagerChangeOwner, MigrationStep.UpdatePreHDRootToHD, MigrationStep.UportRegistryDDORefresh],
   Legacy: [MigrationStep.MigrateLegacy],
   RecoverSeed: [MigrationStep.EnterSeed]
+}
+
+export interface MigrationScreens {
+  [index: string]: string
+}
+
+export const migrationScreens: MigrationScreens = {
+  PreHD: 'migrations.PreHD',
+  RecoverSeed: 'recovery.seedInstructions'
 }
 
 export interface TargetAction {

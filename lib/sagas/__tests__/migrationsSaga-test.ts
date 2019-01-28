@@ -59,6 +59,19 @@ import { Alert } from 'react-native';
 describe('checkup', () => {
   const root = '0xroot'
 
+  describe('no identity', () => {
+    it('does not add migration target', () => {
+      return expectSaga(migrationsSaga)
+          .provide([
+            [select(currentAddress), undefined]
+          ])
+          .not.put(addMigrationTarget(MigrationTarget.Legacy))
+          .dispatch(loadedDB())
+          .silentRun()
+
+    })
+  })
+
   describe('ethr did', () => {
     it('does not Add Migration Target', () => {
       return expectSaga(migrationsSaga)
@@ -245,12 +258,13 @@ describe('checkup', () => {
         it('Shows migration modal', () => {
           return expectSaga(migrationsSaga)
               .provide([
+                [select(currentAddress), root],
                 [call(checkIfAbleToSign), true],
                 [call(checkForLegacy), true],
                 [select(isFullyHD), false],
                 [select(hasMainnetAccounts), false],
                 [select(hasAttestations), true],      
-                [call(delay, 2000), undefined],
+                [call(delay, 1000), undefined],
                 [select(pendingMigrations), [MigrationTarget.PreHD]]
               ])
               .put(addMigrationTarget(MigrationTarget.PreHD))
@@ -271,6 +285,7 @@ describe('checkup', () => {
         it('runs migration and shows alert', () => {
           return expectSaga(migrationsSaga)
               .provide([
+                [select(currentAddress), root],
                 [call(checkIfAbleToSign), true],
                 [call(checkForLegacy), true],
                 [select(isFullyHD), false],

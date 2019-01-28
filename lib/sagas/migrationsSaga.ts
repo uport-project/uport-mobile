@@ -20,7 +20,7 @@ import { all, call, put, select, takeEvery } from 'redux-saga/effects'
 import { addMigrationTarget, completedMigrationStep, failedMigrationStep, startedMigrationStep } from 'uPortMobile/lib/actions/migrationActions'
 import { completeProcess, failProcess, startWorking, stopWorking } from 'uPortMobile/lib/actions/processStatusActions'
 import { LOADED_DB } from 'uPortMobile/lib/constants/GlobalActionTypes'
-import { MigrationStatus, MigrationStep, MigrationTarget, RUN_MIGRATIONS, TargetAction, targetRecipes } from 'uPortMobile/lib/constants/MigrationActionTypes'
+import { MigrationStatus, MigrationStep, MigrationTarget, RUN_MIGRATIONS, TargetAction, targetRecipes, migrationScreens } from 'uPortMobile/lib/constants/MigrationActionTypes'
 import { canSignFor, hasWorkingSeed } from 'uPortMobile/lib/sagas/keychain'
 import { isFullyHD, isHD } from 'uPortMobile/lib/selectors/chains'
 import { currentAddress, migrateableIdentities, hasMainnetAccounts, currentIdentityJS } from 'uPortMobile/lib/selectors/identities'
@@ -50,7 +50,10 @@ export function * alert(title: string, message: string) {
   yield call(delay, 500)
   yield call([Alert, Alert.alert], title, message)
 }
+
 export function * checkup () : any {
+  const address = yield select(currentAddress)
+  if (!address) return
   // console.log('id', (yield select(currentIdentityJS)))
   if (yield call(checkIfAbleToSign)) {
     if (yield call(checkForLegacy)) {
@@ -64,7 +67,6 @@ export function * checkup () : any {
       }
     }  
   } else {
-    const address = yield select(currentAddress)
     const hd = yield select(isHD, address)
     if (hd) {
       yield put(addMigrationTarget(MigrationTarget.RecoverSeed))
@@ -76,28 +78,20 @@ export function * checkup () : any {
   // console.log('pending migrations', pending)
   if (pending.length > 0 ) {
     const target = pending[0]
-    switch (target) {
-      case MigrationTarget.PreHD:
-        yield call(delay, 2000)
-        yield call(NavigationActions.push, {
-          screen: `migrations.${target}`,
-          animationType: 'slide-up'
-        })  
-        break
-      case MigrationTarget.Legacy:
-        if (yield call(runMigrations, { type: RUN_MIGRATIONS, target})) {
-          yield call(alert,
-            'Your Identity has been upgraded', 
-            'You had an old test net identity. Thank you for being an early uPort user. We have now upgraded your identity to live on the Ethereum Mainnet.'
-            )
-        }
-        break
-      case MigrationTarget.RecoverSeed:
+    if (migrationScreens[target]) {
+      yield call(delay, 1000)
+      yield call(NavigationActions.push, {
+        screen: migrationScreens[target],
+        animationType: 'slide-up'
+      })
+    } else {
+      if (yield call(runMigrations, { type: RUN_MIGRATIONS, target})) {
+        // TODO this alert is only for the Legacy migration. If you add more like this in the future add logic to change this text
         yield call(alert,
-          'You need to reenter your HD seed', 
-          'PLACEHOLDER. LINK TO RECOVERY SCREEN INSTEAD'
+          'Your Identity has been upgraded', 
+          'You had an old test net identity. Thank you for being an early uPort user. We have now upgraded your identity to live on the Ethereum Mainnet.'
           )
-        break
+      }
     }
   }
 }
