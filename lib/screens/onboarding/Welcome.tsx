@@ -6,9 +6,9 @@ interface WelcomeProps {}
 class Welcome extends React.Component<WelcomeProps> {
   render() {
     return (
-      <Screen>
+      <Screen type={Screen.Types.Custom}>
         <Container flex={1}>
-          <Button
+          {/* <Button
             buttonText={'Primary Filled'}
             onPress={() => 'Hello Button'}
             type={Button.Types.Primary}
@@ -31,7 +31,7 @@ class Welcome extends React.Component<WelcomeProps> {
             onPress={() => 'Hello Button'}
             type={Button.Types.Confirm}
             block={Button.Block.Filled}
-          />
+          /> */}
         </Container>
       </Screen>
     )

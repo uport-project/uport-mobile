@@ -27,7 +27,15 @@ declare namespace Kancha {
     Custom?: 'custom'
   }
 
-  export type BrandPropOptions = 'primary' | 'secondary' | 'tertiary' | 'accent' | 'warning' | 'confirm' | undefined
+  export type BrandPropOptions =
+    | 'primary'
+    | 'secondary'
+    | 'tertiary'
+    | 'accent'
+    | 'warning'
+    | 'confirm'
+    | 'custom'
+    | undefined
   export type BlockPropsOptions = 'outlined' | 'filled' | 'clear' | undefined
 
   export interface ScreenConfigsStatic {
