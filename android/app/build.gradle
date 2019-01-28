@@ -275,7 +275,7 @@ dependencies {
     implementation project(':react-native-intent-launcher')
 
     implementation project(':react-native-signer-wrapper')
-
+    implementation project(':react-native-inappbrowser-reborn')
     implementation "com.facebook.react:react-native:$react_native_version"
 
     implementation(
