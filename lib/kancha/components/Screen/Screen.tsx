@@ -18,7 +18,7 @@
  ***/
 
 import * as React from 'react'
-import { SafeAreaView, ScrollView, ViewStyle } from 'react-native'
+import { SafeAreaView, ScrollView, ViewStyle, ImageBackground } from 'react-native'
 import { Container, Theme, Device, BrandOptions } from '@kancha'
 
 /** Temporary spacer size */
@@ -64,6 +64,11 @@ interface ScreenProps {
    * The content to show in the expanding header zone. A config with a scrollView must be enabled.
    */
   expandingHeaderContent?: React.ReactNode
+
+  /**
+   * Provide a background image type
+   */
+  backgroundImage?: string
 }
 
 const Screen: React.FunctionComponent<ScreenProps> & {
@@ -82,12 +87,18 @@ const Screen: React.FunctionComponent<ScreenProps> & {
   const scrollViewContentOffset = {
     ...(props.expandingHeaderContent ? { y: SPACER_SIZE, x: 0 } : { y: 0, x: 0 }),
   }
+  const safeAreaViewStyle = {
+    flex: 1,
+    ...(props.type && !props.backgroundImage
+      ? { backgroundColor: props.type && Theme.colors[props.type].background }
+      : {}),
+  }
 
   /**
    * Main content to be rendered
    */
   const mainContent = (
-    <Container flex={1} paddingBottom background={props.type}>
+    <Container paddingBottom background={props.type} flex={1}>
       {props.children}
     </Container>
   )
@@ -114,12 +125,27 @@ const Screen: React.FunctionComponent<ScreenProps> & {
    * Main content to be rendered within a SafeAreaView
    */
   const safeAreaView = (
-    <SafeAreaView style={{ flex: 1, backgroundColor: props.type && Theme.colors[props.type].background }}>
+    <SafeAreaView style={safeAreaViewStyle}>
       {props.config === ScreenConfigs.SafeNoScroll ? mainContent : scrollViewContent}
     </SafeAreaView>
   )
 
-  return props.config === ScreenConfigs.NoScroll
+  /**
+   * Main content to be rendered
+   */
+  const backgroundImageContent = (
+    <ImageBackground
+      style={{ height: '100%' }}
+      source={require('uPortMobile/assets/images/background-purple-gradient.png')}
+      resizeMode={'cover'}
+    >
+      {safeAreaView}
+    </ImageBackground>
+  )
+
+  return props.backgroundImage
+    ? backgroundImageContent
+    : props.config === ScreenConfigs.NoScroll
     ? mainContent
     : props.config === ScreenConfigs.Scroll
     ? scrollViewContent

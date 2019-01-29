@@ -60,6 +60,11 @@ interface KanchaTextProps {
   buttonTextColor?: Kancha.BrandPropOptions
 
   /**
+   * Overide the brand color
+   */
+  textColor?: string
+
+  /**
    * Overide the color with a warning color
    */
   block?: Kancha.BlockPropsOptions
@@ -83,13 +88,20 @@ interface KanchaTextProps {
    * The margin around the text
    */
   margin?: number
+
+  /**
+   * The margin around the text
+   */
+  textAlign?: string
 }
 
 const KanchaText: React.FC<KanchaTextProps> & { Types: Kancha.TextTypesStatic } = props => {
   const styles: TextStyle = {
     ...TextThemeMap[props.type],
+    ...(props.textColor ? { color: props.textColor } : {}),
     ...(props.bold ? { fontWeight: 'bold' } : {}),
     ...(props.warn ? { color: Theme.colors.warning.text } : {}),
+    ...(props.textAlign ? { textAlign: props.textAlign } : {}),
     ...(props.buttonTextColor
       ? {
           color: props.block
