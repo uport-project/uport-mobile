@@ -25,7 +25,8 @@ import {
   MigrationStep, 
   MigrationTarget, 
   MigrationStatus } from '../constants/MigrationActionTypes'
-// Need to Define the initialState.
+import { RESET_DEVICE } from '../constants/GlobalActionTypes'
+  // Need to Define the initialState.
 
 interface MigrationStepState {
   [index: string]: MigrationStatus
@@ -71,6 +72,8 @@ function migrationsReducer (state = initialState, action: Action) : MigrationSta
     return reduceSetMigrationStep(state, (<StepAction>action).step, MigrationStatus.Completed)
     case FAILED_MIGRATION_STEP:
     return reduceSetMigrationStep(state, (<StepAction>action).step, MigrationStatus.Error)
+    case RESET_DEVICE:
+    return { ...initialState }
     default:
     return state
   }
