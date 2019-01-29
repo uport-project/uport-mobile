@@ -10,6 +10,7 @@
     "build-eth-abi": "browserify node_modules/ethereumjs-abi/index.js --s ethAbi | derequire > lib/browserified/ethereumjs-abi.js",
     "lint": "./node_modules/.bin/standard",
     "lint-fix": "./node_modules/.bin/standard --fix",
+    "publish-release-notes": "GREN_GITHUB_TOKEN=$(vault read -field=value secret/mobile/release_token) gren release",
     "test": "jest",
     "package-android": "mkdir -p android/app/build/jsbundle/assets/ && mkdir -p android/app/build/jsbundle/res && node node_modules/react-native/local-cli/cli.js bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/build/jsbundle/assets/index.android.bundle --assets-dest android/app/build/jsbundle/res"
   },
@@ -165,6 +166,7 @@
     "derequire": "^2.0.6",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.0",
+    "github-release-notes": "^0.17.0",
     "jest": "^23.6.0",
     "jest-react-native": "^18.0.0",
     "jsdom": "^11.7.0",

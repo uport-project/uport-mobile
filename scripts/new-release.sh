@@ -28,6 +28,8 @@ SCRIPTS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ROOT_DIR="$SCRIPTS_DIR/.."
 ANDROID_DIR="$ROOT_DIR/android"
 IOS_DIR="$ROOT_DIR/ios"
+GREN_GITHUB_TOKEN="$(vault read -field=value secret/mobile/release_token)"
+CHANGELOG_GITHUB_TOKEN="$(echo ${GREN_GITHUB_TOKEN})"
 
 echo "check clean repo"
 cd ${ANDROID_DIR} ; ./gradlew -q checkCleanRepo ; cd -
@@ -47,5 +49,6 @@ bash ${SCRIPTS_DIR}/bump_version.sh ${new_version}
 echo "git flow release finish v$new_version"
 git flow release finish -m "release-v$new_version" v${new_version}
 
+gren release
 echo "The release has been finished locally only"
 echo "To push it, run \`git push origin master develop --tags\`"
