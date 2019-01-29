@@ -50,4 +50,52 @@ declare namespace Kancha {
     Filled: 'filled'
     Clear: 'clear'
   }
+
+  export interface ThemeStatic {
+    text: {
+      lineHeights: {
+        body: number
+      }
+      sizes: {
+        h1: number
+        h2: number
+        h3: number
+        h4: number
+        h5: number
+        h6: number
+        subTitle: number
+        listItem: number
+        listItemRight: number
+        listItemNote: number
+        sectionHeader: number
+        summary: number
+        body: number
+      }
+    }
+    colors: {
+      [index: string]: {
+        brand: string
+        text: string
+        background: string
+        divider: string
+        accessories: string
+        underlay: string
+        button: string
+        buttonText: {
+          filled: string
+          outlined: string
+          clear: string
+        }
+      }
+    }
+    spacing: {
+      default: number
+      section: number
+    }
+    roundedCorners: {
+      buttons: number
+      cards: number
+    }
+    navigation: any
+  }
 }

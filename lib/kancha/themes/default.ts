@@ -16,6 +16,7 @@ const COLORS = {
   CRIMSON_RED: '#D63A59',
   WASHED_GREEN: '#3DCF8A',
   SUNNY_ORANGE: '#E89835',
+  TRANSPARENT: 'transparent',
 }
 
 /**
@@ -43,7 +44,7 @@ const ThemeColor = (key: string) => {
 /**
  * Base DefaultTheme file
  */
-const DefaultTheme = {
+const DefaultTheme: Kancha.ThemeStatic = {
   text: {
     lineHeights: {
       body: 22,
@@ -108,6 +109,7 @@ const DefaultTheme = {
       },
     },
     accent: {
+      brand: COLORS.SUNNY_ORANGE,
       text: COLORS.SUNNY_ORANGE,
       background: COLORS.SUNNY_ORANGE,
       divider: COLORS.SUNNY_ORANGE,
@@ -121,6 +123,7 @@ const DefaultTheme = {
       },
     },
     warning: {
+      brand: COLORS.CRIMSON_RED,
       text: COLORS.CRIMSON_RED,
       background: COLORS.CRIMSON_RED,
       divider: COLORS.CRIMSON_RED,
@@ -134,6 +137,7 @@ const DefaultTheme = {
       },
     },
     confirm: {
+      brand: COLORS.WASHED_GREEN,
       text: COLORS.WASHED_GREEN,
       background: COLORS.WASHED_GREEN,
       divider: COLORS.WASHED_GREEN,
@@ -146,13 +150,27 @@ const DefaultTheme = {
         clear: COLORS.WASHED_GREEN,
       },
     },
+    custom: {
+      brand: COLORS.TRANSPARENT,
+      text: COLORS.WHITE,
+      background: COLORS.TRANSPARENT,
+      divider: COLORS.TRANSPARENT,
+      accessories: COLORS.TRANSPARENT,
+      underlay: COLORS.TRANSPARENT,
+      button: COLORS.WHITE,
+      buttonText: {
+        filled: COLORS.ROYAL_PURPLE,
+        outlined: COLORS.WHITE,
+        clear: COLORS.WHITE,
+      },
+    },
   },
   spacing: {
     default: 15,
     section: 20,
   },
   roundedCorners: {
-    buttons: 5,
+    buttons: 8,
     cards: 5,
   },
   navigation: {},

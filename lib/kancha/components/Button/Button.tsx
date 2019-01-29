@@ -39,6 +39,11 @@ interface ButtonProps {
   buttonText?: string
 
   /**
+   * The text to be displayed
+   */
+  bold?: boolean
+
+  /**
    * Remove width limitations
    */
   fullWidth?: boolean
@@ -56,7 +61,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> & {
   Types: Kancha.BrandTypeStatic
   Block: Kancha.BlocksStatic
-} = ({ type, block, fullWidth, onPress, buttonText, centered, children }) => {
+} = ({ type, block, fullWidth, onPress, buttonText, centered, bold, children }) => {
   const style: ViewStyle = {
     ...(block && block === 'filled'
       ? { backgroundColor: type ? Theme.colors[type].button : Theme.colors.primary.button }
@@ -70,14 +75,13 @@ const Button: React.FC<ButtonProps> & {
       : {}),
     padding: Theme.spacing.default,
     alignItems: 'center',
-    ...(fullWidth ? {} : { maxWidth: 300 }),
+    ...(fullWidth ? {} : { maxWidth: 300, minWidth: 250 }),
     borderRadius: Theme.roundedCorners.buttons,
-    flex: 1,
     ...(centered ? { alignSelf: 'center' } : {}),
   }
   return Device.isIOS ? (
     <TouchableHighlight style={style}>
-      <Text type={Text.Types.Body} buttonTextColor={type} block={block}>
+      <Text type={Text.Types.Body} buttonTextColor={type} block={block} bold={bold}>
         {buttonText}
       </Text>
     </TouchableHighlight>
