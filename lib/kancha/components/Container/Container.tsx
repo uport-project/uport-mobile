@@ -36,10 +36,20 @@ interface ContainerProps {
   /** Height */
   h?: string | number | undefined
 
+  /** Bottom */
+  b?: string | number | undefined
+
+  /** Border radius */
+  br?: number | undefined
+
   /** Flex */
   flex?: number | undefined
 
+  /** Pre-defined backgrounds accordign to the theme. use these where possible. */
   background?: Kancha.BrandPropOptions
+
+  /** Temporary option to create custom color. Avoid is possible and deprecate if you can by modifying the theme */
+  backgroundColor?: string
 
   /** Flex direction */
   flexDirection?: 'row' | 'column' | 'row-reverse' | 'column-reverse' | undefined
@@ -112,7 +122,10 @@ const Container: React.FunctionComponent<ContainerProps> = props => {
     alignItems: props.alignItems,
     justifyContent: props.justifyContent,
     backgroundColor: props.background && Theme.colors[props.background].background,
+    borderRadius: props.br,
+    ...(props.backgroundColor ? { backgroundColor: props.backgroundColor } : {}),
     ...(props.debugBorder ? { borderWidth: 1, borderColor: 'red' } : {}),
+    ...(props.b !== undefined ? { position: 'absolute', bottom: props.b, width: '100%' } : {}),
 
     /** Margins */
     marginBottom: typeof props.marginBottom === 'boolean' ? Theme.spacing.default : props.marginBottom,

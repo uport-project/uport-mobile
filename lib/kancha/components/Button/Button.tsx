@@ -3,6 +3,7 @@ import { TouchableNativeFeedback, TouchableHighlight, ButtonProperties, ViewStyl
 import { Device, Text } from '@kancha'
 import { Theme } from '../../themes/default'
 import { Centered } from 'uPortMobile/lib/components/shared/Button'
+import { propertyRequest } from 'uPortMobile/lib/sagas/requests/propertyRequest'
 
 /**
  *  Implemenation details: Will move static types to theor own file or namespace later
@@ -56,12 +57,17 @@ interface ButtonProps {
    * Center the button horizontally on screen
    */
   centered?: boolean
+
+  /**
+   * Disbable the button
+   */
+  disabled?: boolean
 }
 
 const Button: React.FC<ButtonProps> & {
   Types: Kancha.BrandTypeStatic
   Block: Kancha.BlocksStatic
-} = ({ type, block, fullWidth, onPress, buttonText, centered, bold, children }) => {
+} = ({ type, block, fullWidth, onPress, disabled, buttonText, centered, bold, children }) => {
   const style: ViewStyle = {
     ...(block && block === 'filled'
       ? { backgroundColor: type ? Theme.colors[type].button : Theme.colors.primary.button }
@@ -75,18 +81,26 @@ const Button: React.FC<ButtonProps> & {
       : {}),
     padding: Theme.spacing.default,
     alignItems: 'center',
-    ...(fullWidth ? {} : { maxWidth: 300, minWidth: 250 }),
+    ...(fullWidth ? {} : { maxWidth: 300 }),
     borderRadius: Theme.roundedCorners.buttons,
     ...(centered ? { alignSelf: 'center' } : {}),
+    ...(disabled ? { opacity: 0.5 } : {}),
   }
   return Device.isIOS ? (
-    <TouchableHighlight style={style}>
+    <TouchableHighlight
+      disabled={disabled}
+      onPress={onPress}
+      style={style}
+      underlayColor={block === ButtonBlocks.Clear ? 'transparent' : type && Theme.colors[type].underlay}
+    >
       <Text type={Text.Types.Body} buttonTextColor={type} block={block} bold={bold}>
         {buttonText}
       </Text>
     </TouchableHighlight>
   ) : (
-    <TouchableNativeFeedback style={style}>{children}</TouchableNativeFeedback>
+    <TouchableNativeFeedback onPress={onPress} style={style} disabled={disabled}>
+      {children}
+    </TouchableNativeFeedback>
   )
 }
 

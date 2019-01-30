@@ -1,6 +1,7 @@
 /**
- * Namespace decalaration for Global Kancha Typs
+ * Namespace decalaration for Global Kancha Types
  */
+
 declare namespace Kancha {
   export interface TextTypesStatic {
     H1: 'h1'
@@ -43,6 +44,7 @@ declare namespace Kancha {
     SafeNoScroll: 'safeNoScroll'
     Scroll: 'scroll'
     NoScroll: 'noScroll'
+    NoSafeNoScroll: 'noSafeNoScroll'
   }
 
   export interface BlocksStatic {

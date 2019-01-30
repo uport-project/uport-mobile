@@ -18,8 +18,9 @@
  ***/
 
 import * as React from 'react'
-import { SafeAreaView, ScrollView, ViewStyle, ImageBackground } from 'react-native'
-import { Container, Theme, Device, BrandOptions } from '@kancha'
+import { SafeAreaView, ScrollView, ViewStyle, ImageBackground, ImageSourcePropType } from 'react-native'
+import { Container, Theme, Device } from '@kancha'
+import { strict } from 'assert'
 
 /** Temporary spacer size */
 const SPACER_SIZE = 1000
@@ -35,6 +36,7 @@ const ScreenConfigs: Kancha.ScreenConfigsStatic = {
   SafeNoScroll: 'safeNoScroll',
   Scroll: 'scroll',
   NoScroll: 'noScroll',
+  NoSafeNoScroll: 'noSafeNoScroll',
 }
 
 const ScreenBrandOptions: Kancha.BrandTypeStatic = {
@@ -51,7 +53,7 @@ interface ScreenProps {
   /**
    * Configure the screen: Eg. Screen.Config.SafeScroll
    */
-  config?: 'safeScroll' | 'safeNoScroll' | 'scroll' | 'noScroll' | undefined
+  config?: 'safeScroll' | 'safeNoScroll' | 'scroll' | 'noScroll' | 'noSafeNoScroll' | undefined
   /**
    * Type of screen. This sets the background color-- May change
    */
@@ -68,7 +70,7 @@ interface ScreenProps {
   /**
    * Provide a background image type
    */
-  backgroundImage?: string
+  backgroundImage?: ImageSourcePropType | undefined
 }
 
 const Screen: React.FunctionComponent<ScreenProps> & {
@@ -135,8 +137,8 @@ const Screen: React.FunctionComponent<ScreenProps> & {
    */
   const backgroundImageContent = (
     <ImageBackground
-      style={{ height: '100%' }}
-      source={require('uPortMobile/assets/images/background-purple-gradient.png')}
+      style={{ flex: 1 }}
+      source={props.backgroundImage ? props.backgroundImage : {}}
       resizeMode={'cover'}
     >
       {safeAreaView}
