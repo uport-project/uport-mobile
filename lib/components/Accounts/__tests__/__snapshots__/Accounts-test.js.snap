@@ -926,99 +926,13 @@ exports[`Accounts Index renders accounts correctly 1`] = `
     }
   }
 >
-  <RCTScrollView
-    data={
-      W {
-        "W": Array [
-          pa {
-            "e": Array [
-              "address",
-              "2ojpABYpUQNz6yr9JJABfbbC5LPnxyhrd9J",
-              "network",
-              "rinkeby",
-            ],
-            "g": 2,
-            "j": 16647951,
-            "k": null,
-            "p": null,
-            "q": 8196,
-          },
-        ],
-        "g": 1,
-        "j": 167668511,
-        "k": null,
-        "p": null,
-        "q": 8196,
-        "root": ef {
-          "e": Array [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-          ],
-          "u": null,
-        },
-        "shift": 5,
-      }
-    }
-    disableVirtualization={false}
-    getItem={[Function]}
-    getItemCount={[Function]}
-    horizontal={false}
-    initialNumToRender={10}
-    keyExtractor={[Function]}
-    maxToRenderPerBatch={10}
-    numColumns={1}
-    onContentSizeChange={[Function]}
-    onEndReachedThreshold={2}
-    onLayout={[Function]}
-    onMomentumScrollEnd={[Function]}
-    onScroll={[Function]}
-    onScrollBeginDrag={[Function]}
-    onScrollEndDrag={[Function]}
-    renderItem={[Function]}
-    scrollEventThrottle={50}
-    stickyHeaderIndices={Array []}
-    style={
-      Object {
-        "backgroundColor": "#ffffff",
-        "flex": 1,
-      }
-    }
-    updateCellsBatchingPeriod={50}
-    viewabilityConfigCallbackPairs={Array []}
-    windowSize={21}
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
   >
-    <View />
-  </RCTScrollView>
+    Loading
+  </Text>
 </View>
 `;
 
@@ -1031,111 +945,12 @@ exports[`Accounts Index renders multiple accounts correctly 1`] = `
     }
   }
 >
-  <RCTScrollView
-    data={
-      W {
-        "W": Array [
-          pa {
-            "e": Array [
-              "address",
-              "2ojpABYpUQNz6yr9JJABfbbC5LPnxyhrd9J",
-              "network",
-              "rinkeby",
-            ],
-            "g": 2,
-            "j": 16647951,
-            "k": null,
-            "p": null,
-            "q": 8196,
-          },
-          pa {
-            "e": Array [
-              "address",
-              "2ojpABYpPQDz6yr9JJABfbbC5LPnxyhrd9J",
-              "network",
-              "kovan",
-            ],
-            "g": 2,
-            "j": 16647951,
-            "k": null,
-            "p": null,
-            "q": 8196,
-          },
-        ],
-        "g": 2,
-        "j": 167668511,
-        "k": null,
-        "p": null,
-        "q": 8196,
-        "root": ef {
-          "e": Array [
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-          ],
-          "u": null,
-        },
-        "shift": 5,
-      }
-    }
-    disableVirtualization={false}
-    getItem={[Function]}
-    getItemCount={[Function]}
-    horizontal={false}
-    initialNumToRender={10}
-    keyExtractor={[Function]}
-    maxToRenderPerBatch={10}
-    numColumns={1}
-    onContentSizeChange={[Function]}
-    onEndReachedThreshold={2}
-    onLayout={[Function]}
-    onMomentumScrollEnd={[Function]}
-    onScroll={[Function]}
-    onScrollBeginDrag={[Function]}
-    onScrollEndDrag={[Function]}
-    renderItem={[Function]}
-    scrollEventThrottle={50}
-    stickyHeaderIndices={Array []}
-    style={
-      Object {
-        "backgroundColor": "#ffffff",
-        "flex": 1,
-      }
-    }
-    updateCellsBatchingPeriod={50}
-    viewabilityConfigCallbackPairs={Array []}
-    windowSize={21}
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
   >
-    <View />
-  </RCTScrollView>
+    Loading
+  </Text>
 </View>
 `;
