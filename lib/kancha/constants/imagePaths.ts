@@ -12,5 +12,6 @@ export const Images = {
     eye: require('uPortMobile/assets/images/onboarding-eye.png'),
     shield: require('uPortMobile/assets/images/onboarding-shield.png'),
     apps: require('uPortMobile/assets/images/onboarding-apps.png'),
+    tick: require('uPortMobile/assets/images/success-circle-tick.png'),
   },
 }
