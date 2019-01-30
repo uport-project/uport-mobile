@@ -10,6 +10,7 @@ export { default as ListItem } from './components/ListItem/ListItem'
 export { default as Section } from './components/Section/Section'
 export { default as Slide } from './components/Slide/Slide'
 export { default as NavBar } from './components/NavBar/NavBar'
+export { default as Input } from './components/Input/Input'
 
 /**
  * Utilities
