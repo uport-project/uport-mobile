@@ -196,12 +196,11 @@ export async function startOnboarding() {
 
   Navigation.startSingleScreenApp({
     screen: {
-      screen: startupScreen, // unique ID registered with Navigation.registerScreen
-      title: 'Uport', // title of the screen as appears in the nav bar (optional)
+      screen: startupScreen,
       navigatorStyle: {
         navBarHidden: true,
-      }, // override the navigator style for the screen, see "Styling the navigator" below (optional)
+      },
     },
-    animationType: 'fade', // optional, add transition animation to root change: 'none', 'slide-down', 'fade'
+    animationType: 'fade',
   })
 }

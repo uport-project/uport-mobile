@@ -20,23 +20,32 @@ const COLORS = {
 }
 
 /**
- * Not implemented yet. A funtion so we can provide a theme color dictionary and generate the object
+ * Not implemented yet. A funtion so we can provide a theme color dictionary and generate the object below
  */
-const ThemeColor = (key: string) => {
+const ThemeColor = (
+  brand: string,
+  text: string,
+  background: string,
+  divider: string,
+  accessories: string,
+  underlay: string,
+  button: string,
+  buttonTextFilled: string,
+  buttonTextOutlined: string,
+  buttonTextClear: string,
+) => {
   return {
-    [key]: {
-      brand: 'green',
-      text: '#AAAAAA',
-      background: '#efeef3',
-      divider: '#CCCCCC',
-      accessories: '#BBBBBB',
-      underlay: '#CCCCCC',
-      button: 'green',
-      buttonText: {
-        filled: '#FFFFFF',
-        outlined: 'green',
-        clear: 'green',
-      },
+    brand,
+    text,
+    background,
+    divider,
+    accessories,
+    underlay,
+    button,
+    buttonText: {
+      filled: buttonTextFilled,
+      outlined: buttonTextOutlined,
+      clear: buttonTextClear,
     },
   }
 }
@@ -66,20 +75,35 @@ const DefaultTheme: Kancha.ThemeStatic = {
     },
   },
   colors: {
-    primary: {
-      brand: COLORS.ROYAL_PURPLE,
-      text: COLORS.CHARCOAL,
-      background: COLORS.WHITE,
-      divider: COLORS.MEDIUM_GREY,
-      accessories: COLORS.LIGHT_GREY,
-      underlay: COLORS.MEDIUM_GREY,
-      button: COLORS.ROYAL_PURPLE,
-      buttonText: {
-        filled: COLORS.WHITE,
-        outlined: COLORS.ROYAL_PURPLE,
-        clear: COLORS.ROYAL_PURPLE,
-      },
-    },
+    /**
+     * Not sure of this is harder to read than just showing the keys?
+     */
+    primary: ThemeColor(
+      COLORS.ROYAL_PURPLE,
+      COLORS.CHARCOAL,
+      COLORS.WHITE,
+      COLORS.MEDIUM_GREY,
+      COLORS.LIGHT_GREY,
+      COLORS.MEDIUM_GREY,
+      COLORS.ROYAL_PURPLE,
+      COLORS.WHITE,
+      COLORS.ROYAL_PURPLE,
+      COLORS.ROYAL_PURPLE,
+    ),
+    // primary: {
+    //   brand: COLORS.ROYAL_PURPLE,
+    //   text: COLORS.CHARCOAL,
+    //   background: COLORS.WHITE,
+    //   divider: COLORS.MEDIUM_GREY,
+    //   accessories: COLORS.LIGHT_GREY,
+    //   underlay: COLORS.MEDIUM_GREY,
+    //   button: COLORS.ROYAL_PURPLE,
+    //   buttonText: {
+    //     filled: COLORS.WHITE,
+    //     outlined: COLORS.ROYAL_PURPLE,
+    //     clear: COLORS.ROYAL_PURPLE,
+    //   },
+    // },
     secondary: {
       brand: COLORS.LIGHT_GREY,
       text: COLORS.LIGHT_GREY,
@@ -212,9 +236,9 @@ const TextTypes = {
 }
 
 /**
- * Temportary implementaion. Refactor later to make more succint.
+ * Temporary implementaion. Refactor later to make more succint.
  * Just here to initially define each font style.
- * Padding size todo
+ * Padding size todo and more ....
  */
 const TextThemeMap: TextDefaultThemeMapTypes = {
   h1: {

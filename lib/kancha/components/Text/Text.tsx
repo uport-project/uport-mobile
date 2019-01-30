@@ -47,7 +47,7 @@ interface KanchaTextProps {
   /**
    * The type of text to display. This will be styled accordinly to the theme
    */
-  type: string
+  type?: string
 
   /**
    * Overide the color with a warning color
@@ -97,7 +97,7 @@ interface KanchaTextProps {
 
 const KanchaText: React.FC<KanchaTextProps> & { Types: Kancha.TextTypesStatic } = props => {
   const styles: TextStyle = {
-    ...TextThemeMap[props.type],
+    ...(props.type ? { ...TextThemeMap[props.type] } : {}),
     ...(props.textColor ? { color: props.textColor } : {}),
     ...(props.bold ? { fontWeight: 'bold' } : {}),
     ...(props.warn ? { color: Theme.colors.warning.text } : {}),
@@ -117,7 +117,9 @@ const KanchaText: React.FC<KanchaTextProps> & { Types: Kancha.TextTypesStatic } 
 
   return <Text style={styles}>{props.children}</Text>
 }
-
+KanchaText.defaultProps = {
+  type: TextTypes.Body,
+}
 KanchaText.Types = TextTypes
 
 export default KanchaText
