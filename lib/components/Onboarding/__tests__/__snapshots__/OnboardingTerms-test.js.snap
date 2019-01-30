@@ -87,6 +87,7 @@ exports[`OnboardingTerms renders Onboarding Terms screen 1`] = `
             Object {
               "alignItems": undefined,
               "backgroundColor": "#EFEEF3",
+              "borderRadius": undefined,
               "flex": 1,
               "flexDirection": undefined,
               "height": undefined,
@@ -110,6 +111,7 @@ exports[`OnboardingTerms renders Onboarding Terms screen 1`] = `
               Object {
                 "alignItems": undefined,
                 "backgroundColor": undefined,
+                "borderRadius": undefined,
                 "flex": 1,
                 "flexDirection": undefined,
                 "height": undefined,
@@ -133,6 +135,7 @@ exports[`OnboardingTerms renders Onboarding Terms screen 1`] = `
                 Object {
                   "alignItems": undefined,
                   "backgroundColor": undefined,
+                  "borderRadius": undefined,
                   "flex": undefined,
                   "flexDirection": undefined,
                   "height": undefined,
@@ -170,6 +173,7 @@ exports[`OnboardingTerms renders Onboarding Terms screen 1`] = `
                 Object {
                   "alignItems": undefined,
                   "backgroundColor": undefined,
+                  "borderRadius": undefined,
                   "flex": undefined,
                   "flexDirection": undefined,
                   "height": undefined,

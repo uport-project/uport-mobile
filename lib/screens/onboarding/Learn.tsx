@@ -54,9 +54,7 @@ class Learn extends React.Component<LearnProps> {
         </Swiper>
         <NavBar
           leftButtonAction={() => this.props.navigator.pop()}
-          rightButtonAction={() => {
-            ''
-          }}
+          rightButtonAction={() => this.props.navigator.push({ screen: 'onboarding2.IdentityCreated' })}
           rightButttonText={this.state.index === 2 ? 'Next' : 'Skip'}
         />
       </Screen>
