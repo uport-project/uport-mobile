@@ -3,6 +3,7 @@ export const Images = {
     logoWhite: require('uPortMobile/assets/images/uport-white.png'),
   },
   backgrounds: {
+    purpleGradientURI: 'uPortMobile/assets/images/background-purple-gradient.png',
     purpleGradient: require('uPortMobile/assets/images/background-purple-gradient.png'),
     purpleGradientWithPattern: require('uPortMobile/assets/images/background-purple-gradient-pattern.png'),
     purpleGradientHalve: require('uPortMobile/assets/images/background-purple-gradient-halve.png'),
