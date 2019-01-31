@@ -14,6 +14,8 @@ declare namespace Kancha {
     ListItemNote: 'listItemNote'
     SubTitle: 'subTitle'
     Body: 'body'
+    Button: 'button'
+    NavButton: 'navButton'
     Summary: 'summary'
     SectionHeader: 'sectionHeader'
   }
@@ -72,6 +74,8 @@ declare namespace Kancha {
         sectionHeader: number
         summary: number
         body: number
+        button: number
+        navButton: number
       }
     }
     colors: {
@@ -97,6 +101,7 @@ declare namespace Kancha {
     roundedCorners: {
       buttons: number
       cards: number
+      textInputs: number
     }
     navigation: any
   }

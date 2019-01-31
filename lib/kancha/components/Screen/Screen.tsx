@@ -18,9 +18,16 @@
  ***/
 
 import * as React from 'react'
-import { SafeAreaView, ScrollView, ViewStyle, ImageBackground, ImageSourcePropType } from 'react-native'
+import {
+  SafeAreaView,
+  ScrollView,
+  ViewStyle,
+  ImageBackground,
+  ImageSourcePropType,
+  StatusBar,
+  KeyboardAvoidingView,
+} from 'react-native'
 import { Container, Theme, Device } from '@kancha'
-import { strict } from 'assert'
 
 /** Temporary spacer size */
 const SPACER_SIZE = 1000
@@ -71,6 +78,11 @@ interface ScreenProps {
    * Provide a background image type
    */
   backgroundImage?: ImageSourcePropType | undefined
+
+  /**
+   * Hide the statusbar
+   */
+  statusBarHidden?: boolean
 }
 
 const Screen: React.FunctionComponent<ScreenProps> & {
@@ -101,6 +113,7 @@ const Screen: React.FunctionComponent<ScreenProps> & {
    */
   const mainContent = (
     <Container paddingBottom background={props.type} flex={1}>
+      <StatusBar hidden={props.statusBarHidden} />
       {props.children}
     </Container>
   )
@@ -128,7 +141,9 @@ const Screen: React.FunctionComponent<ScreenProps> & {
    */
   const safeAreaView = (
     <SafeAreaView style={safeAreaViewStyle}>
-      {props.config === ScreenConfigs.SafeNoScroll ? mainContent : scrollViewContent}
+      <KeyboardAvoidingView style={{ flex: 1 }} behavior={'padding'}>
+        {props.config === ScreenConfigs.SafeNoScroll ? mainContent : scrollViewContent}
+      </KeyboardAvoidingView>
     </SafeAreaView>
   )
 
@@ -157,6 +172,7 @@ const Screen: React.FunctionComponent<ScreenProps> & {
 Screen.defaultProps = {
   config: ScreenConfigs.SafeScroll,
   type: ScreenBrandOptions.Secondary,
+  statusBarHidden: false,
 }
 
 /**

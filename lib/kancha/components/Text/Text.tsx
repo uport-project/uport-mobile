@@ -36,6 +36,8 @@ const TextTypes: Kancha.TextTypesStatic = {
   ListItemNote: 'listItemNote',
   SubTitle: 'subTitle',
   Body: 'body',
+  Button: 'button',
+  NavButton: 'navButton',
   Summary: 'summary',
   SectionHeader: 'sectionHeader',
 }

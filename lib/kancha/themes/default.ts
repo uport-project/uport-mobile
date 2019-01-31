@@ -72,6 +72,8 @@ const DefaultTheme: Kancha.ThemeStatic = {
       sectionHeader: 14,
       summary: 18,
       body: 16,
+      button: 18,
+      navButton: 20,
     },
   },
   colors: {
@@ -196,6 +198,7 @@ const DefaultTheme: Kancha.ThemeStatic = {
   roundedCorners: {
     buttons: 8,
     cards: 5,
+    textInputs: 8,
   },
   navigation: {},
 }
@@ -238,8 +241,9 @@ const TextTypes = {
 /**
  * Temporary implementaion. Refactor later to make more succint.
  * Just here to initially define each font style.
- * Padding size todo and more ....
+ * Padding size todo and more .... This will be merged with the Text component once matured
  */
+
 const TextThemeMap: TextDefaultThemeMapTypes = {
   h1: {
     fontSize: DefaultTheme.text.sizes.h1,
@@ -285,6 +289,12 @@ const TextThemeMap: TextDefaultThemeMapTypes = {
     fontSize: DefaultTheme.text.sizes.body,
     color: DefaultTheme.colors.primary.text,
     lineHeight: DefaultTheme.text.lineHeights.body,
+  },
+  button: {
+    fontSize: DefaultTheme.text.sizes.button,
+  },
+  navButton: {
+    fontSize: DefaultTheme.text.sizes.navButton,
   },
   sectionHeader: {
     fontSize: DefaultTheme.text.sizes.sectionHeader,

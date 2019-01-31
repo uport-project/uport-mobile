@@ -24,7 +24,7 @@ import { Theme } from '@kancha'
 /**
  * Container is the most basic building block of Kancha. It is an abstraction of View with a basic implementaion
  * of flexbox and box modelling via props. The intention is for Container to be a declarative easy to use primitive to construct
- * complex views without worrying about the mess of styles. A custom style prop may need to be added.
+ * complex views without worrying about the mess of styles. A custom style prop may need to be added to override styles for ege cases and or temporary implementaions.
  */
 interface ContainerProps {
   /** Test ID used for e2e tests */

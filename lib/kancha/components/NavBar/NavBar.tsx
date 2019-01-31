@@ -17,8 +17,17 @@ interface NavBarProps {
 
 const NavBar: React.FC<NavBarProps> = props => {
   return (
-    <Container h={60} b={0} flexDirection={'row'} justifyContent={'space-between'} paddingLeft paddingRight>
+    <Container
+      h={65}
+      b={0}
+      flexDirection={'row'}
+      justifyContent={'space-between'}
+      alignItems={'center'}
+      paddingLeft={20}
+      paddingRight={20}
+    >
       <Button
+        navButton
         type={props.leftButtonType}
         block={props.leftButtonBlock}
         buttonText={props.leftButttonText}
@@ -26,6 +35,7 @@ const NavBar: React.FC<NavBarProps> = props => {
         disabled={props.leftButtonDisabled}
       />
       <Button
+        navButton
         type={props.rightButtonType}
         block={props.rightButtonBlock}
         buttonText={props.rightButttonText}

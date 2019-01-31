@@ -16,7 +16,13 @@ const Learn: React.FC<LearnProps> & { navigatorStyle: NavigatorStyle } = props =
       config={Screen.Config.SafeNoScroll}
       backgroundImage={Images.backgrounds.purpleGradientHalve}
     >
-      <Swiper loop={false} bounces activeDotColor={Theme.colors.primary.brand} paginationStyle={{ marginBottom: 30 }}>
+      <Swiper
+        loop={false}
+        autoplay
+        bounces
+        activeDotColor={Theme.colors.primary.brand}
+        paginationStyle={{ marginBottom: 30 }}
+      >
         {onboardingSlides.map((slide: OnboardingSwiperSlide) => {
           return <Slide key={slide.key} title={slide.title} content={slide.content} image={slide.image} />
         })}
@@ -24,7 +30,7 @@ const Learn: React.FC<LearnProps> & { navigatorStyle: NavigatorStyle } = props =
       <NavBar
         leftButtonAction={() => props.navigator.pop()}
         rightButtonAction={() => props.navigator.push({ screen: 'onboarding2.AddName' })}
-        rightButttonText={'Skip'}
+        rightButttonText={'Next'}
       />
     </Screen>
   )
