@@ -83,6 +83,11 @@ interface ScreenProps {
    * Hide the statusbar
    */
   statusBarHidden?: boolean
+
+  /**
+   * A footer component that works with KAV
+   */
+  footerNavComponent?: React.ReactNode
 }
 
 const Screen: React.FunctionComponent<ScreenProps> & {
@@ -93,6 +98,7 @@ const Screen: React.FunctionComponent<ScreenProps> & {
     backgroundColor: props.type && Theme.colors[props.type].background,
   }
   const scrollViewContentStyle = {
+    // flex: 1,
     ...(props.expandingHeaderType ? { backgroundColor: Theme.colors[props.expandingHeaderType].background } : {}),
   }
   const scrollViewContentInset = {
@@ -143,6 +149,7 @@ const Screen: React.FunctionComponent<ScreenProps> & {
     <SafeAreaView style={safeAreaViewStyle}>
       <KeyboardAvoidingView style={{ flex: 1 }} behavior={'padding'}>
         {props.config === ScreenConfigs.SafeNoScroll ? mainContent : scrollViewContent}
+        <Container>{props.footerNavComponent && props.footerNavComponent}</Container>
       </KeyboardAvoidingView>
     </SafeAreaView>
   )

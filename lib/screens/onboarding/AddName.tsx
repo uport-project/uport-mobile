@@ -14,7 +14,18 @@ class AddName extends React.Component<AddNameProps> {
 
   render() {
     return (
-      <Screen type={Screen.Types.Primary} config={Screen.Config.SafeNoScroll}>
+      <Screen
+        type={Screen.Types.Primary}
+        config={Screen.Config.SafeNoScroll}
+        statusBarHidden
+        footerNavComponent={
+          <NavBar
+            leftButtonAction={() => this.props.navigator.pop()}
+            rightButtonAction={() => this.props.navigator.push({ screen: 'onboarding2.AddName' })}
+            rightButttonText={'Next'}
+          />
+        }
+      >
         <Container flex={1} justifyContent={'center'} alignItems={'center'}>
           <Container flexDirection={'row'} w={280}>
             <Input value={'Hello Text'} textType={Text.Types.H4} autoFocus />
@@ -23,13 +34,11 @@ class AddName extends React.Component<AddNameProps> {
             <Text type={Text.Types.H2} bold>
               Name or Nickname
             </Text>
+            <Container paddingTop={5}>
+              <Text type={Text.Types.SubTitle}>Required</Text>
+            </Container>
           </Container>
         </Container>
-        <NavBar
-          leftButtonAction={() => this.props.navigator.pop()}
-          rightButtonAction={() => this.props.navigator.push({ screen: 'onboarding2.AddName' })}
-          rightButttonText={'Next'}
-        />
       </Screen>
     )
   }
