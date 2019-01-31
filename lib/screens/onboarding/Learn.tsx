@@ -15,6 +15,14 @@ const Learn: React.FC<LearnProps> & { navigatorStyle: NavigatorStyle } = props =
       type={Screen.Types.Custom}
       config={Screen.Config.SafeNoScroll}
       backgroundImage={Images.backgrounds.purpleGradientHalve}
+      statusBarHidden
+      footerNavComponent={
+        <NavBar
+          leftButtonAction={() => props.navigator.pop()}
+          rightButtonAction={() => props.navigator.push({ screen: 'onboarding2.Terms' })}
+          rightButttonText={'Next'}
+        />
+      }
     >
       <Swiper
         loop={false}
@@ -27,11 +35,6 @@ const Learn: React.FC<LearnProps> & { navigatorStyle: NavigatorStyle } = props =
           return <Slide key={slide.key} title={slide.title} content={slide.content} image={slide.image} />
         })}
       </Swiper>
-      <NavBar
-        leftButtonAction={() => props.navigator.pop()}
-        rightButtonAction={() => props.navigator.push({ screen: 'onboarding2.AddName' })}
-        rightButttonText={'Next'}
-      />
     </Screen>
   )
 }

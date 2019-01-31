@@ -14,6 +14,7 @@ class Welcome extends React.Component<WelcomeProps> {
         backgroundImage={Images.backgrounds.purpleGradientWithPattern}
         type={Screen.Types.Custom}
         config={Screen.Config.SafeNoScroll}
+        statusBarHidden
       >
         <Container flex={1}>
           <Container flex={1} justifyContent={'space-around'} alignItems={'center'} paddingTop={50}>
