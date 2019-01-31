@@ -71,6 +71,7 @@ public class MainApplication extends NavigationApplication {
     protected List<ReactPackage> getPackages() {
         return Arrays.<ReactPackage>asList(
                 new MainReactPackage(),
+            new RNFSPackage(),
                 new RNFirebasePackage(),
                 new RNFirebaseRemoteConfigPackage(),
                 new SvgPackage(),
