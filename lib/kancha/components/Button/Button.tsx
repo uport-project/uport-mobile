@@ -1,9 +1,12 @@
 import * as React from 'react'
-import { TouchableNativeFeedback, TouchableHighlight, ButtonProperties, ViewStyle } from 'react-native'
-import { Device, Text } from '@kancha'
-import { Theme } from '../../themes/default'
-import { Centered } from 'uPortMobile/lib/components/shared/Button'
-import { propertyRequest } from 'uPortMobile/lib/sagas/requests/propertyRequest'
+import {
+  TouchableNativeFeedback,
+  TouchableHighlight,
+  TouchableOpacity,
+  ViewStyle,
+  DeviceEventEmitterStatic,
+} from 'react-native'
+import { Device, Text, Theme } from '@kancha'
 
 /**
  *  Implemenation details: Will move static types to theor own file or namespace later
@@ -62,12 +65,17 @@ interface ButtonProps {
    * Disbable the button
    */
   disabled?: boolean
+
+  /**
+   * The button is a navigation button
+   */
+  navButton?: boolean
 }
 
 const Button: React.FC<ButtonProps> & {
   Types: Kancha.BrandTypeStatic
   Block: Kancha.BlocksStatic
-} = ({ type, block, fullWidth, onPress, disabled, buttonText, centered, bold, children }) => {
+} = ({ type, block, fullWidth, onPress, disabled, buttonText, centered, bold, navButton, children }) => {
   const style: ViewStyle = {
     ...(block && block === 'filled'
       ? { backgroundColor: type ? Theme.colors[type].button : Theme.colors.primary.button }
@@ -86,20 +94,29 @@ const Button: React.FC<ButtonProps> & {
     ...(centered ? { alignSelf: 'center' } : {}),
     ...(disabled ? { opacity: 0.5 } : {}),
   }
-  return Device.isIOS ? (
+
+  return navButton ? (
+    <TouchableOpacity onPress={onPress} disabled={disabled}>
+      <Text type={Text.Types.NavButton} buttonTextColor={type} block={block}>
+        {buttonText}
+      </Text>
+    </TouchableOpacity>
+  ) : Device.isIOS ? (
     <TouchableHighlight
       disabled={disabled}
       onPress={onPress}
       style={style}
       underlayColor={block === ButtonBlocks.Clear ? 'transparent' : type && Theme.colors[type].underlay}
     >
-      <Text type={Text.Types.Body} buttonTextColor={type} block={block} bold={bold}>
+      <Text type={Text.Types.Button} buttonTextColor={type} block={block} bold={bold}>
         {buttonText}
       </Text>
     </TouchableHighlight>
   ) : (
     <TouchableNativeFeedback onPress={onPress} style={style} disabled={disabled}>
-      {children}
+      <Text type={Text.Types.Button} buttonTextColor={type} block={block} bold={bold}>
+        {buttonText}
+      </Text>
     </TouchableNativeFeedback>
   )
 }
