@@ -107,6 +107,10 @@ Object {
     "p": null,
     "q": 8196,
   },
+  "migrations": Object {
+    "steps": Object {},
+    "targets": Array [],
+  },
   "myInfo": Object {
     "changed": Object {},
   },
@@ -149,6 +153,8 @@ Object {
     "q": 8196,
   },
   "vc": Object {
+    "contactDetails": Object {},
+    "contactList": Array [],
     "jwt": Array [],
   },
 }
@@ -261,6 +267,10 @@ Object {
     "p": null,
     "q": 8196,
   },
+  "migrations": Object {
+    "steps": Object {},
+    "targets": Array [],
+  },
   "myInfo": Object {
     "changed": Object {},
   },
@@ -303,6 +313,8 @@ Object {
     "q": 8196,
   },
   "vc": Object {
+    "contactDetails": Object {},
+    "contactList": Array [],
     "jwt": Array [],
   },
 }
@@ -415,6 +427,10 @@ Object {
     "p": null,
     "q": 8196,
   },
+  "migrations": Object {
+    "steps": Object {},
+    "targets": Array [],
+  },
   "myInfo": Object {
     "changed": Object {},
   },
@@ -458,6 +474,8 @@ Object {
     "q": 8196,
   },
   "vc": Object {
+    "contactDetails": Object {},
+    "contactList": Array [],
     "jwt": Array [],
   },
 }
@@ -570,6 +588,10 @@ Object {
     "p": null,
     "q": 8196,
   },
+  "migrations": Object {
+    "steps": Object {},
+    "targets": Array [],
+  },
   "myInfo": Object {
     "changed": Object {},
   },
@@ -613,6 +635,8 @@ Object {
     "q": 8196,
   },
   "vc": Object {
+    "contactDetails": Object {},
+    "contactList": Array [],
     "jwt": Array [],
   },
 }
@@ -725,6 +749,10 @@ Object {
     "p": null,
     "q": 8196,
   },
+  "migrations": Object {
+    "steps": Object {},
+    "targets": Array [],
+  },
   "myInfo": Object {
     "changed": Object {},
   },
@@ -768,6 +796,8 @@ Object {
     "q": 8196,
   },
   "vc": Object {
+    "contactDetails": Object {},
+    "contactList": Array [],
     "jwt": Array [],
   },
 }

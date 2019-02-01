@@ -1,4 +1,17 @@
-interface Contact {
+interface Identity {
+  did: string
+}
+
+interface Account {
+  address: string,
+  owner: string,
+  deviceAddress?: string,
+  network?: string,
+  signerType?: string,
+  balance?: number
+}
+
+interface Contact extends Identity {
   did: string,
   name?: string,
   firstName?: string,

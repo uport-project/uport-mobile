@@ -1,0 +1,175 @@
+type Identity {
+  did: ID!
+  name: String
+  firstName: String
+  lastName: String
+  profileImage: String
+  url: String
+  description: String
+  selfSignedClaims: [VerifiableClaim]
+  receivedClaims: [VerifiableClaim]
+  connections: [Identity]
+  interactionsWithViewer: [Interaction]
+  interactionsWithViewerCount: Int
+  blockChainAccounts: [BlockChainAccount]
+}
+
+type VerifiableClaim {
+  hash: ID! # hash(jwt)
+  issuer: Identity!
+  subject: Identity!
+  issuedAt: Int!
+  expiresAt: Int
+  type: String!  # Normalized short version
+  value: String! # Normalized short version
+  claim: String! # JSON string
+  jwt: String!
+  interactions: [Interaction]
+}
+
+# TODO Spec this out
+enum InteractionType {
+  shareReq
+  shareResp
+  verReq
+  verResp
+  addVcReq
+  addVcResp
+  ethtxReq
+  ethtxResp
+  eip712Req
+  eip721Resp
+}
+
+type Interaction {
+  hash: ID! # hash(jwt)
+  type: InteractionType
+  issuer: Identity!
+  audience: Identity
+  subject: Identity
+  data: String! # TODO
+  jwt: String!
+}
+
+enum BlockchainType {
+  Ethereum
+  Bitcoin
+}
+
+type Token {
+  code: String!
+  address: String!
+  decimals: Int!
+  balance: Int!
+}
+
+# TODO
+type BlockChainTransaction {
+  hash: !ID
+}
+
+type BlockChainAccount {
+  type: BlockchainType
+  address: String!
+  network: String
+  defaultToken: Token!
+  tokens: [Token]
+  transactions: [BlockChainTransaction]
+  transactionsCount: Int!
+}
+
+type Query {
+  viewer: Identity
+  identity(did: String!): Identity
+  claim(hash: String!): VerifiableClaim
+}
+
+
+# Queries for different screens
+
+# Me
+query Me() {
+  viewer {
+    profileImage
+    name
+    selfSignedClaims {
+      type
+      value
+    }
+    blockChainAccounts {
+      address
+      network
+      token {
+        code
+        balance 
+        decimals
+      }
+    }
+  }
+}
+
+# Contacts
+query Contacts() {
+  viewer {
+    connections {
+      did
+      name
+      profileImage
+      interactionsWithParentCount
+    }
+  }
+}
+
+# Contact
+query Contact($did: String!) {
+  identity(did: $did) {
+    profileImage
+    name
+    selfSignedClaims {
+      type
+      value
+    }
+    receivedClaims {
+      type
+      value
+    }
+  }
+}
+
+# Credentials
+query Credentials($selfSigned: Boolean!, $received: Boolean!) {
+  viewer {
+    selfSignedClaims @include(if: $selfSigned) {
+      hash
+      type
+      value
+    }
+    receivedClaims @include(if: $received) {
+      hash
+      issuer {
+        profileImage
+        name
+      }
+      type
+      value
+    }
+  }
+}
+
+# Credential
+query Credential($hash: String!) {
+  claim(hash: $hash) {
+    issuer {
+      address
+    }
+    subject {
+      address
+    }
+    issuedAt
+    expiresAt
+  }
+}
+
+# Request Cards
+
+# Disclosure request

@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates a ADD_MIGRATION_TARGET action 1`] = `
+Object {
+  "_backup": true,
+  "target": "PreHD",
+  "type": "ADD_MIGRATION_TARGET",
+}
+`;
+
+exports[`creates a COMPLETED_MIGRATION_STEP action 1`] = `
+Object {
+  "_backup": true,
+  "step": "IdentityManagerChangeOwner",
+  "type": "COMPLETED_MIGRATION_STEP",
+}
+`;
+
+exports[`creates a FAILED_MIGRATION_STEP action 1`] = `
+Object {
+  "_backup": true,
+  "step": "IdentityManagerChangeOwner",
+  "type": "FAILED_MIGRATION_STEP",
+}
+`;
+
+exports[`creates a RUN_MIGRATIONS action 1`] = `
+Object {
+  "target": "PreHD",
+  "type": "RUN_MIGRATIONS",
+}
+`;
+
+exports[`creates a STARTED_MIGRATION_STEP action 1`] = `
+Object {
+  "_backup": true,
+  "step": "IdentityManagerChangeOwner",
+  "type": "STARTED_MIGRATION_STEP",
+}
+`;

@@ -26,7 +26,7 @@ import { normalizeUrl } from '../utilities/ipfs'
 DEBUG(true)
 const noop = () => true
 
-const db = openDatabase({ name: 'data.sqlite', location : 'default', "key": "password" }, noop, noop)
+export const db = openDatabase({ name: 'data.sqlite', location : 'default', "key": "password" }, noop, noop)
 
 export function * initializeSQLDatabase() {
 

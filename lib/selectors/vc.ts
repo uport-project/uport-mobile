@@ -23,11 +23,11 @@ interface RootState {
   vc: ReducerState,
 }
 
-export const contactList = (state: RootState) => state.vc.contactList
+export const contactList = (state: RootState) => state.vc && state.vc.contactList || []
 
 export const contact = (state: RootState, did: string): Contact => {
   return find(
-    state.vc.contactList,
+    contactList(state),
     (contact: Contact) => contact.did === did
   ) || {
     did: did,
