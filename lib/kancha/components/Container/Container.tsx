@@ -39,6 +39,9 @@ interface ContainerProps {
   /** Bottom */
   b?: string | number | undefined
 
+  /** Bottom */
+  r?: string | number | undefined
+
   /** Border radius */
   br?: number | undefined
 
@@ -99,6 +102,12 @@ interface ContainerProps {
   /** Enable border for debugging layouts */
   debugBorder?: boolean
 
+  /** Enable border for debugging layouts */
+  borderColor?: string
+
+  /** Enable border for debugging layouts */
+  borderWidth?: number
+
   /** Change debug border color */
   debugBorderColor?: string | undefined
 }
@@ -123,9 +132,12 @@ const Container: React.FunctionComponent<ContainerProps> = props => {
     justifyContent: props.justifyContent,
     backgroundColor: props.background && Theme.colors[props.background].background,
     borderRadius: props.br,
+    ...(props.borderColor ? { borderColor: props.borderColor } : {}),
+    ...(props.borderWidth ? { borderWidth: props.borderWidth } : {}),
     ...(props.backgroundColor ? { backgroundColor: props.backgroundColor } : {}),
     ...(props.debugBorder ? { borderWidth: 1, borderColor: 'red' } : {}),
     ...(props.b !== undefined ? { position: 'absolute', bottom: props.b, width: '100%' } : {}),
+    ...(props.r !== undefined ? { position: 'absolute', bottom: props.r, width: '100%' } : {}),
 
     /** Margins */
     marginBottom: typeof props.marginBottom === 'boolean' ? Theme.spacing.default : props.marginBottom,

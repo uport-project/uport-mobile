@@ -96,12 +96,13 @@ const Screen: React.FunctionComponent<ScreenProps> & {
 } = props => {
   const scrollViewStyle: ViewStyle = {
     backgroundColor: props.type && Theme.colors[props.type].background,
+    // ...(props.footerNavComponent ? { paddingBottom: 100 } : {}),
   }
   const scrollViewContentStyle = {
-    // flex: 1,
     ...(props.expandingHeaderType ? { backgroundColor: Theme.colors[props.expandingHeaderType].background } : {}),
   }
   const scrollViewContentInset = {
+    ...(props.footerNavComponent ? { bottom: 65 } : {}),
     ...(props.expandingHeaderContent ? { top: -SPACER_SIZE } : {}),
   }
   const scrollViewContentOffset = {

@@ -1,6 +1,13 @@
 import * as React from 'react'
-import { Image } from 'react-native'
-import { Container, Text, OnboardingSwiperSlide } from '@kancha'
+import { Image, ImageSourcePropType } from 'react-native'
+import { Container, Text } from '@kancha'
+
+export interface OnboardingSwiperSlide {
+  key: string
+  title: string
+  content: string
+  image: ImageSourcePropType
+}
 
 interface SlideProps extends OnboardingSwiperSlide {}
 

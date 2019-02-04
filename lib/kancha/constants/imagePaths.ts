@@ -1,4 +1,7 @@
 export const Images = {
+  icons: {
+    loading: require('uPortMobile/assets/images/loading-circle.png'),
+  },
   branding: {
     logoWhite: require('uPortMobile/assets/images/uport-white.png'),
   },

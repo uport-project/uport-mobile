@@ -1,0 +1,266 @@
+{
+  "name": "Terms & Conditions",
+  "version": "Version 1.2",
+  "notice": "IMPORTANT NOTICE: THIS AGREEMENT IS SUBJECT TO BINDING ARBITRATION AND A WAIVER OF CLASS ACTION RIGHTS AS DETAILED IN SECTION 14. PLEASE READ THE AGREEMENT CAREFULLY.",
+  "summary": "uPort, a product of ConsenSys AG (\u201CuPort\u201D, \u201Cwe\u201D, \u201Cour\u201D, or \u201Cus\u201D) provides a platform for self-sovereign digital identity management through our website located at https:\/\/uport.me\/ (the \"Site\") and a mobile application. The mobile application includes text, images, audio, code and other materials or third party applications accessible through the uPort application (collectively, with the Site, the \u201CContent\u201D). The Site, the mobile app, and any other features, tools, materials, or other services offered from time to time by uPort are referred to here as the \u201CService.\u201D",
+  "sections": [
+    {
+      "title": "Acceptance of terms",
+      "section": "1",
+      "clauses": [
+        {
+          "number": "1.1",
+          "title": "",
+          "content": "Please read these Terms of Use (the \u201CTerms\u201D) carefully before using the Service. By using or otherwise accessing the Services, or clicking to accept these Terms, you (a) accept and agree to these Terms (b) consent to the collection, use, disclosure and other handling of information as described in our Privacy Policy and (c) agree to any additional terms, rules and conditions of participation issued by uPort from time to time. IF YOU DO NOT AGREE TO THE TERMS, AS AMENDED FROM TIME TO TIME AS SET FORTH BELOW, YOU MUST STOP USING THE SERVICE IMMEDIATELY. \r\n"
+        }
+      ]
+    },
+    {
+      "title": "Modification of Terms",
+      "section": "2",
+      "clauses": [
+        {
+          "number": "2.1",
+          "title": "",
+          "content": "Please read these Terms of Use (the \u201CTerms\u201D) carefully before using the Service. By using or otherwise accessing the Services, or clicking to accept these Terms, you (a) accept and agree to these Terms (b) consent to the collection, use, disclosure and other handling of information as described in our Privacy Policy and (c) agree to any additional terms, rules and conditions of participation issued by uPort from time to time. IF YOU DO NOT AGREE TO THE TERMS, AS AMENDED FROM TIME TO TIME AS SET FORTH BELOW, YOU MUST STOP USING THE SERVICE IMMEDIATELY. \r\n"
+        }
+      ]
+    },
+    {
+      "title": "Eligibility",
+      "section": "3",
+      "clauses": [
+        {
+          "number": "3.1",
+          "title": "",
+          "content": "You hereby represent and warrant that you are fully able and competent to enter into the terms, conditions, obligations, affirmations, representations and warranties set forth in these Terms and to abide by and comply with these Terms.  By accessing the Content or Services, you represent and warrant that you are of the legal age of majority in your jurisdiction or of the age required to access such Services and Content. You further represent that you are otherwise legally permitted to use the service in your jurisdiction including owning cryptographic tokens of value, and interacting with the Services or Content in any way. You further represent you are responsible for ensuring compliance with the laws of your jurisdiction and acknowledge that uPort is not liable for your compliance with such laws. \r\n\r\n"
+        }
+      ]
+    },
+    {
+      "title": "Account Password, Security, and Decentralized Identity (DID)",
+      "section": "4",
+      "clauses": [
+        {
+          "number": "4.1",
+          "title": "Password/Seed",
+          "content": "When setting up an account within uPort, you will be responsible for keeping your own account secrets private. These secrets may include your designated recovery network, a twelve-word seed phrase, or other security features.  You acknowledge your understanding that any person with knowledge of your seed phrase may generate your private keys.  You further acknowledge that uPort does not own your private keys or the seed phrase. uPort has no ability to recover your private keys or your seed phrase should they become lost."
+        },
+        {
+          "number": "4.2",
+          "title": "Security",
+          "content": "Your private key, corresponding to your public Ethereum identity address is stored in the keychain controlled by the \u201Csecure enclave\u201D of your device.  By using the uPort app, you shall institute proper and sufficient password or biometric protection within your device.  You shall regularly update the operating system of your device with any software or security updates.  Notwithstanding the foregoing, you acknowledge that the uPort app, which exists outside of the \u201Csecure enclave,\u201D when initiated by the User, uses the private key information stored in the keychain for relevant signing activities.  Your private key remains within the uPort app and uPort does not send the private key to servers.  You agree to (a) keep your secret information confidential and to not share it with anyone else; (b) not share your seed phrase with anyone and to store it in a secure manner; and (c) immediately notify uPort of any unauthorized use of your account or breach of security. uPort cannot and will not be liable for any loss or damage arising from your failure to comply with this section."
+        },
+        {
+          "number": "4.3",
+          "title": "DID",
+          "content": "By using the uPort app, you acknowledge, accept and consent to the creation of a decentralized identity (DID) for you.  DID is essentially a public address, a string that serves asan \u201Con-chain identifier.\u201D  Because uPort is an identity platform on the Ethereum blockchain,  DIDs are linked to the Ethereum blockchain as transactions.  As a user of uPort, you acknowledge that because transactions on the Ethereum blockchain are immutable, the record of your DID\u2019s on-chain transactions are also immutable and cannot be deleted from the Ethereum blockchain.  Your DID, as it is designed in the uPort mobile application, is not tied to your natural name or personal information, and uPort does not collect data that would enable the two to be linked or associated together. `\r\n"
+        }
+      ]
+    },
+    {
+      "title": "Representations, Warranties, and Risks",
+      "section": "5",
+      "clauses": [
+        {
+          "number": "5.1",
+          "title": "Warranty Disclaimer",
+          "content": ""
+        },
+        {
+          "number": "5.2",
+          "title": "Sophistication and Risk of Cryptographic Systems",
+          "content": ""
+        },
+        {
+          "number": "5.3",
+          "title": "Risk of Weaknesses or Exploits in the Field of Cryptography",
+          "content": ""
+        },
+        {
+          "number": "5.4",
+          "title": "Platform Security",
+          "content": ""
+        },
+        {
+          "number": "5.5",
+          "title": "Risk of Regulatory Actions in One or More Jurisdictions",
+          "content": ""
+        },
+        {
+          "number": "5.6",
+          "title": "Risk of Errors, Bugs, and Downtime",
+          "content": ""
+        },
+        {
+          "number": "5.7",
+          "title": "Total Loss of Data",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Attestations on uPort and the uPort Signing Service",
+      "section": "6",
+      "clauses": [
+        {
+          "number": "6.1",
+          "title": "Warranty Disclaimer",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Indemnity",
+      "section": "7",
+      "clauses": [
+        {
+          "number": "7.1",
+          "title": "",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Limitation on Liability",
+      "section": "8",
+      "clauses": [
+        {
+          "number": "8.1",
+          "title": "",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Licenses and Access",
+      "section": "9",
+      "clauses": [
+        {
+          "number": "9.1",
+          "title": "",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Links or Third Party Applications",
+      "section": "10",
+      "clauses": [
+        {
+          "number": "10.1",
+          "title": "",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Termination and Suspension",
+      "section": "11",
+      "clauses": [
+        {
+          "number": "11.1",
+          "title": "",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "No Third Party Beneficiaries",
+      "section": "12",
+      "clauses": [
+        {
+          "number": "12.1",
+          "title": "",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Notice and Procedure for Making Claims of Copyright Infringement",
+      "section": "13",
+      "clauses": [
+        {
+          "number": "13.1",
+          "title": "",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Binding Arbitration and Class Action Waiver",
+      "section": "14",
+      "note": "PLEASE READ THIS SECTION CAREFULLY – IT MAY SIGNIFICANTLY AFFECT YOUR LEGAL RIGHTS, INCLUDING YOUR RIGHT TO FILE A LAWSUIT IN COURT.",
+      "clauses": [
+        {
+          "number": "14.1",
+          "title": "Initial Dispute Resolution",
+          "content": ""
+        },
+        {
+          "number": "14.2",
+          "title": "Binding Arbitration",
+          "content": ""
+        },
+        {
+          "number": "14.3",
+          "title": "Location",
+          "content": ""
+        },
+        {
+          "number": "14.4",
+          "title": "Class Action Waiver",
+          "content": ""
+        },
+        {
+          "number": "14.5",
+          "title": "Exception - Litigation of Intellectual Property and Small Claims Court Claims",
+          "content": ""
+        },
+        {
+          "number": "14.6",
+          "title": "30-Day Right to Opt Out",
+          "content": ""
+        },
+        {
+          "number": "14.7",
+          "title": "Changes to this Section",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "General Information",
+      "section": "15",
+      "clauses": [
+        {
+          "number": "15.1",
+          "title": "Entire Agreement",
+          "content": ""
+        },
+        {
+          "number": "15.2",
+          "title": "Waiver and Severability of Terms",
+          "content": ""
+        },
+        {
+          "number": "15.3",
+          "title": "Statute of Limitations",
+          "content": ""
+        },
+        {
+          "number": "15.4",
+          "title": "Section Titles",
+          "content": ""
+        },
+        {
+          "number": "15.5",
+          "title": "Communications",
+          "content": ""
+        }
+      ]
+    }
+  ]
+}
+
+

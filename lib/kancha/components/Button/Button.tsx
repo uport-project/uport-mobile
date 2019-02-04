@@ -92,12 +92,12 @@ const Button: React.FC<ButtonProps> & {
     ...(fullWidth ? {} : { maxWidth: 300 }),
     borderRadius: Theme.roundedCorners.buttons,
     ...(centered ? { alignSelf: 'center' } : {}),
-    ...(disabled ? { opacity: 0.5 } : {}),
+    ...(disabled ? { opacity: 0.8 } : {}),
   }
 
   return navButton ? (
-    <TouchableOpacity onPress={onPress} disabled={disabled}>
-      <Text type={Text.Types.NavButton} buttonTextColor={type} block={block}>
+    <TouchableOpacity style={style} onPress={onPress} disabled={disabled}>
+      <Text type={Text.Types.NavButton} buttonTextColor={disabled ? 'secondary' : type} block={block}>
         {buttonText}
       </Text>
     </TouchableOpacity>
@@ -108,13 +108,13 @@ const Button: React.FC<ButtonProps> & {
       style={style}
       underlayColor={block === ButtonBlocks.Clear ? 'transparent' : type && Theme.colors[type].underlay}
     >
-      <Text type={Text.Types.Button} buttonTextColor={type} block={block} bold={bold}>
+      <Text type={Text.Types.Button} buttonTextColor={disabled ? 'secondary' : type} block={block} bold={bold}>
         {buttonText}
       </Text>
     </TouchableHighlight>
   ) : (
     <TouchableNativeFeedback onPress={onPress} style={style} disabled={disabled}>
-      <Text type={Text.Types.Button} buttonTextColor={type} block={block} bold={bold}>
+      <Text type={Text.Types.Button} buttonTextColor={disabled ? 'secondary' : type} block={block} bold={bold}>
         {buttonText}
       </Text>
     </TouchableNativeFeedback>

@@ -2,6 +2,8 @@ import * as React from 'react'
 import { Container, Button } from '@kancha'
 
 interface NavBarProps {
+  dividerTop?: boolean
+
   leftButtonType?: Kancha.BrandPropOptions
   leftButtonBlock?: Kancha.BlockPropsOptions
   leftButttonText?: string
@@ -18,6 +20,8 @@ interface NavBarProps {
 const NavBar: React.FC<NavBarProps> = props => {
   return (
     <Container
+      dividerTop={props.dividerTop}
+      backgroundColor={'rgba(255,255,255,0.9)'}
       h={65}
       b={0}
       flexDirection={'row'}

@@ -1,7 +1,8 @@
 import * as React from 'react'
-import { Screen, Images, Theme, OnboardingContent, OnboardingSwiperSlide, Slide, NavBar } from '@kancha'
+import { Screen, Images, Theme, Slide, NavBar, OnboardingSwiperSlide } from '@kancha'
 import { Navigator, NavigatorStyle } from 'react-native-navigation'
 import Swiper from 'react-native-swiper'
+import { OnboardingContent } from 'uPortMobile/lib/content/onboardingSlideContent'
 
 const onboardingSlides: OnboardingSwiperSlide[] = OnboardingContent(Images)
 

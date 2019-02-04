@@ -2,13 +2,13 @@ import * as React from 'react'
 import { Navigator, NavigatorStyle } from 'react-native-navigation'
 import { Screen, Container, Text, NavBar } from '@kancha'
 
-import termsConditions from 'uPortMobile/lib/content/termsContent.json'
+import termsConditions from 'uPortMobile/lib/content/privacyContent.json'
 
-interface TermsProps {
+interface PrivacyProps {
   navigator: Navigator
 }
 
-const Terms: React.FC<TermsProps> & { navigatorStyle: NavigatorStyle } = props => {
+const Privacy: React.FC<PrivacyProps> & { navigatorStyle: NavigatorStyle } = props => {
   return (
     <Screen
       statusBarHidden
@@ -17,14 +17,14 @@ const Terms: React.FC<TermsProps> & { navigatorStyle: NavigatorStyle } = props =
       footerNavComponent={
         <NavBar
           leftButtonAction={() => props.navigator.pop()}
-          rightButtonAction={() => props.navigator.push({ screen: 'onboarding2.Privacy' })}
+          rightButtonAction={() => props.navigator.push({ screen: 'onboarding2.AddName' })}
           rightButttonText={'I agree'}
         />
       }
     >
       <Container padding>
         <Text type={Text.Types.H2} bold>
-          {termsConditions.name}
+          Privacy Policy
         </Text>
         <Text type={Text.Types.SubTitle}>{termsConditions.version}</Text>
         <Container paddingTop paddingBottom>
@@ -59,8 +59,8 @@ const Terms: React.FC<TermsProps> & { navigatorStyle: NavigatorStyle } = props =
   )
 }
 
-Terms.navigatorStyle = {
+Privacy.navigatorStyle = {
   navBarHidden: true,
 }
 
-export default Terms
+export default Privacy

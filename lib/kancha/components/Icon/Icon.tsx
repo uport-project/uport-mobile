@@ -18,7 +18,8 @@
  ***/
 
 import * as React from 'react'
-import { Platform } from 'react-native'
+import { Animated, Easing, Image, ImageSourcePropType } from 'react-native'
+import { Device } from '@kancha'
 
 import Feather from 'react-native-vector-icons/Feather'
 import Ionicons from 'react-native-vector-icons/Ionicons'
@@ -40,19 +41,50 @@ interface IconProps {
 
   /** The color of the icon */
   color?: string
+
+  /** Spinn the icon */
+  animated?: boolean
+
+  /** Use image for animating */
+  image?: ImageSourcePropType
 }
 
 /**
  * A definitive list of Icons to be listed here
  */
+
 const Icons: { [index: string]: any } = {
-  forward: Platform.OS === 'ios' ? 'ios-arrow-forward' : 'md-arrow-forward',
-  link: Platform.OS === 'ios' ? 'ios-link' : 'md-link',
+  forward: Device.isIOS ? 'ios-arrow-forward' : 'md-arrow-forward',
+  link: Device.isIOS ? 'ios-link' : 'md-link',
+  sync: Device.isIOS ? 'ios-sync' : 'md-sync',
+  success: Device.isIOS ? 'ios-checkmark-circle-outline' : 'md-checkmark-circle-outline',
 }
 
-const Icon: React.FunctionComponent<IconProps> = ({ font, name, size, color }: IconProps) => {
+const Icon: React.FunctionComponent<IconProps> = ({ font, name, size, color, animated, image }: IconProps) => {
   const IconFont = font ? IconSets[font] : Ionicons
-  return <IconFont name={Icons[name]} size={size} color={color} />
+  const spinValue = new Animated.Value(0)
+
+  Animated.loop(
+    Animated.timing(spinValue, {
+      toValue: 1,
+      duration: 3000,
+      easing: Easing.linear,
+    }),
+  ).start()
+
+  const spin = spinValue.interpolate({
+    inputRange: [0, 1],
+    outputRange: ['0deg', '360deg'],
+  })
+
+  const StaticIcon = <IconFont name={Icons[name]} size={size} color={color} />
+  const AnimatedIcon = (
+    <Animated.View style={{ transform: [{ rotate: spin }] }}>
+      {image && <Image source={image} style={{ width: size, height: size }} />}
+    </Animated.View>
+  )
+
+  return animated ? AnimatedIcon : StaticIcon
 }
 
 Icon.defaultProps = {
