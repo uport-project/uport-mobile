@@ -8,6 +8,9 @@ interface TermsProps {
   navigator: Navigator
 }
 
+/**
+ * Terms screen. The terms component could be extracted so it can be used in the setting also
+ */
 const Terms: React.FC<TermsProps> & { navigatorStyle: NavigatorStyle } = props => {
   return (
     <Screen
@@ -37,16 +40,21 @@ const Terms: React.FC<TermsProps> & { navigatorStyle: NavigatorStyle } = props =
           return (
             <Container key={section.section}>
               <Container>
-                <Text bold type={Text.Types.H3}>
+                <Text bold type={Text.Types.H3} paddingBottom>
                   {section.title}
                 </Text>
               </Container>
               {section.clauses.map(clause => {
                 return (
                   <Container paddingBottom key={clause.number}>
-                    <Text bold>
-                      {section.clauses.length > 1 && clause.number} {clause.title && clause.title}
-                    </Text>
+                    {/* {section.clauses.length > 1 && clause.number && clause.title && <Text bold>{clause.title}</Text>} */}
+
+                    {section.clauses.length > 1 && clause.title && (
+                      <Text bold>
+                        {clause.number} {clause.title}
+                      </Text>
+                    )}
+
                     <Text>{clause.content}</Text>
                   </Container>
                 )

@@ -21,7 +21,7 @@ const NavBar: React.FC<NavBarProps> = props => {
   return (
     <Container
       dividerTop={props.dividerTop}
-      backgroundColor={'rgba(255,255,255,0.9)'}
+      background={'primary'}
       h={65}
       b={0}
       flexDirection={'row'}

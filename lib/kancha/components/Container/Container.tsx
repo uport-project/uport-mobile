@@ -110,6 +110,9 @@ interface ContainerProps {
 
   /** Change debug border color */
   debugBorderColor?: string | undefined
+
+  /** Add addionaly custom styles for a container. Use sparingly!! */
+  viewStyle?: ViewStyle
 }
 
 const Container: React.FunctionComponent<ContainerProps> = props => {
@@ -124,6 +127,7 @@ const Container: React.FunctionComponent<ContainerProps> = props => {
   }
 
   const BaseStyles: ViewStyle = {
+    /** Basic view styles */
     width: props.w,
     height: props.h,
     flex: props.flex,
@@ -132,6 +136,13 @@ const Container: React.FunctionComponent<ContainerProps> = props => {
     justifyContent: props.justifyContent,
     backgroundColor: props.background && Theme.colors[props.background].background,
     borderRadius: props.br,
+  }
+
+  /** Conditionally spread props down to the View as styles */
+  const styles: ViewStyle = {
+    ...BaseStyles,
+    ...(props.dividerBottom ? DividerBottomStyles : {}),
+    ...(props.dividerTop ? DividerTopStyles : {}),
     ...(props.borderColor ? { borderColor: props.borderColor } : {}),
     ...(props.borderWidth ? { borderWidth: props.borderWidth } : {}),
     ...(props.backgroundColor ? { backgroundColor: props.backgroundColor } : {}),
@@ -153,13 +164,9 @@ const Container: React.FunctionComponent<ContainerProps> = props => {
     paddingTop: typeof props.paddingTop === 'boolean' ? Theme.spacing.default : props.paddingTop,
     paddingLeft: typeof props.paddingLeft === 'boolean' ? Theme.spacing.default : props.paddingLeft,
     paddingRight: typeof props.paddingRight === 'boolean' ? Theme.spacing.default : props.paddingRight,
-  }
 
-  /** Conditionally spread styles down to the View */
-  const styles: ViewStyle = {
-    ...BaseStyles,
-    ...(props.dividerBottom ? DividerBottomStyles : {}),
-    ...(props.dividerTop ? DividerTopStyles : {}),
+    /** Viewstyle props will overide all options */
+    ...(props.viewStyle ? { ...props.viewStyle } : {}),
   }
 
   return (
