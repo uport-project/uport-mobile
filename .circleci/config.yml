@@ -130,36 +130,50 @@ jobs:
           name: Fetch CocoaPods Specs
           command: |
             curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
+
+      - run:
+          name: Install server
+            brew install node
+            npm install -g appium
+            npm install wd
+            brew install carthage
+
+
       - attach_workspace:
           at: ~/uport-mobile
       - restore_cache:
           keys:
             - bundle-{{ arch }}-v4-ios-{{ checksum "Gemfile.lock" }}
             - bundle-{{ arch }}-v4-ios
-      - run: bundle install
-      - save_cache:
-          key: bundle-{{ arch }}-v4-ios-{{ checksum "Gemfile.lock" }}
-          paths:
-            - vendor/bundle
-            - .bundle
-            - ~/.bundle
-      - run:
-          name: xcrun
-          command: |
-            cd ~/uport-mobile/ios && xcrun instruments -w "iPhone 8 (11.3) [" || true
-            pod install --verbose
-            npm install
-            yarn
-      - run:
-          name: Fastlane
-          command:
-            cd ~/uport-mobile/ios && bundle exec fastlane buildTheApp
-      - persist_to_workspace:
-          root: ~/uport-mobile
-          paths:
-            - ios/gym
-      - store_artifacts:
-          path: ~/uport-mobile/ios/gym
+
+       - run:      
+            command: |
+              cd testsuites
+              run "python test.py"
+     # - run: bundle install
+      #- save_cache:
+       #   key: bundle-{{ arch }}-v4-ios-{{ checksum "Gemfile.lock" }}
+       #   paths:
+        #    - vendor/bundle
+         #   - .bundle
+         #   - ~/.bundle
+      #- run:
+       #   name: xcrun
+        #  command: |
+         #   cd ~/uport-mobile/ios && xcrun instruments -w "iPhone 8 (11.3) [" || true
+          #  pod install --verbose
+           # npm install
+           # yarn
+      #- run:
+       #   name: Fastlane
+        #  command:
+         #   cd ~/uport-mobile/ios && bundle exec fastlane buildTheApp
+      #- persist_to_workspace:
+       #   root: ~/uport-mobile
+        #  paths:
+         #   - ios/gym
+     # - store_artifacts:
+      #    path: ~/uport-mobile/ios/gym
 
   vault:
     docker:
