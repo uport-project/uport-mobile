@@ -22,7 +22,7 @@ import requestQueue from './utilities/requestQueue'
 import { Provider } from 'react-redux'
 import store from './store/store'
 import { registerScreens } from './screens'
-import { Platform, NativeModules, Dimensions } from 'react-native'
+import { Platform, NativeModules, UIManager } from 'react-native'
 import FeatherIcons from 'react-native-vector-icons/Feather'
 import { handleURL } from './actions/requestActions'
 import { registerDeviceForNotifications } from 'uPortMobile/lib/actions/snsRegistrationActions'
@@ -33,6 +33,7 @@ const isIOS = Platform.OS === 'ios' ? true : false
 
 export function start() {
   registerScreens(store, Provider)
+  UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true)
 }
 
 // Actual initialization is done by startupSaga during initialization of `store`.

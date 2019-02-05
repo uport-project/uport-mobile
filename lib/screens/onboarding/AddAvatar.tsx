@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Image } from 'react-native'
-import { Screen, Container, Input, NavBar, Text, Theme, Icon, Images, Button } from '@kancha'
+import { Image, LayoutAnimation } from 'react-native'
+import { Screen, Container, NavBar, Text, Theme, Icon, Images, Button } from '@kancha'
 import { Navigator } from 'react-native-navigation'
 import photoSelectionHandler from 'uPortMobile/lib/utilities/photoSelection'
 
@@ -21,6 +21,9 @@ interface AvatarProps {
   text: string
 }
 
+/**
+ * This will be extracted to a new Avatar component
+ */
 const Avatar: React.FC<AvatarProps> = ({ image, text }) => {
   return image ? (
     <Image source={{ uri: image }} style={{ width: 150, height: 150, borderRadius: 75 }} resizeMode={'cover'} />
@@ -84,6 +87,8 @@ class AddAvatar extends React.Component<AddAvatarProps, AddAvatarState> {
   }
 
   addImage(response: any) {
+    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut)
+
     this.setState({
       image: response.avatar.uri,
     })
@@ -99,6 +104,8 @@ class AddAvatar extends React.Component<AddAvatarProps, AddAvatarState> {
   }
 
   createIdentity() {
+    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut)
+
     this.setState({ ...this.state, addAvatar: false, creatingidentity: true })
 
     setTimeout(() => {
@@ -107,6 +114,8 @@ class AddAvatar extends React.Component<AddAvatarProps, AddAvatarState> {
   }
 
   identityCreated() {
+    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut)
+
     this.setState({ ...this.state, creatingidentity: false, identityCreationSuccess: true })
   }
 
@@ -144,7 +153,7 @@ class AddAvatar extends React.Component<AddAvatarProps, AddAvatarState> {
           </Container>
         </Container>
         <Container justifyContent={'center'} alignItems={'center'}>
-          <Icon name={'success'} size={150} color={Theme.colors.confirm.background} />
+          <Icon name={'success'} size={150} color={Theme.colors.confirm.accessories} />
         </Container>
         <Container padding>
           <Text type={Text.Types.SubTitle} textAlign={'center'}>
