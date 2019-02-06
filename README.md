@@ -26,6 +26,12 @@ $ yarn global add react-native-cli (to install CLI)
 $ yarn
 ```
 
+If you are going to create release notes
+
+```bash=
+$ yarn global add gren
+```
+
 ### Linking native libraries
 Linking must be done manually. Do not run `react-native link` as this will mess up the exising links.
 
