@@ -130,16 +130,17 @@ jobs:
           name: Fetch CocoaPods Specs
           command: |
             curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
-
-      - run:
+      - attach_workspace:
+          at: ~/uport-mobile
+          
+       - run:
           name: Install server
+          command: |
             brew install node
             npm install -g appium
             npm install wd
             brew install carthage
 
-      - attach_workspace:
-          at: ~/uport-mobile
       - restore_cache:
           keys:
             - bundle-{{ arch }}-v4-ios-{{ checksum "Gemfile.lock" }}
