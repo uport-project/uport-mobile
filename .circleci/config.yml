@@ -133,7 +133,7 @@ jobs:
       - attach_workspace:
           at: ~/uport-mobile
       - run:
-          name: Install server
+          name: Install appium server
           command: |
             brew install node
             npm install -g appium
