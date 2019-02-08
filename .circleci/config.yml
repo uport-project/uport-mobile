@@ -144,8 +144,7 @@ jobs:
 
       - run:      
             command: |
-              cd testsuites
-              run "python test.py" 
+              python testsuites/test.py
       - run: bundle install
       - save_cache:
           key: bundle-{{ arch }}-v4-ios-{{ checksum "Gemfile.lock" }}
