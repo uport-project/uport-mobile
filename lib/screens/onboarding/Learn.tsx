@@ -1,8 +1,9 @@
 import * as React from 'react'
-import { Screen, Images, Theme, Slide, NavBar, OnboardingSwiperSlide } from '@kancha'
+import { Screen, Images, Theme, Slide, NavBar, OnboardingSwiperSlide, Button, Container } from '@kancha'
 import { Navigator, NavigatorStyle } from 'react-native-navigation'
 import Swiper from 'react-native-swiper'
 import { OnboardingContent } from 'uPortMobile/lib/content/onboardingSlideContent'
+import { backIconGetter } from 'uPortMobile/lib/utilities/navButtonGetters'
 
 const onboardingSlides: OnboardingSwiperSlide[] = OnboardingContent(Images)
 
@@ -18,11 +19,17 @@ const Learn: React.FC<LearnProps> & { navigatorStyle: NavigatorStyle } = props =
       backgroundImage={Images.backgrounds.purpleGradientHalve}
       statusBarHidden
       footerNavComponent={
-        <NavBar
-          leftButtonAction={() => props.navigator.pop()}
-          rightButtonAction={() => props.navigator.push({ screen: 'onboarding2.Terms' })}
-          rightButttonText={'Next'}
-        />
+        <Container alignItems={'center'}>
+          <Container w={320}>
+            <Button
+              fullWidth
+              buttonText={'Continue'}
+              type={Button.Types.Primary}
+              block={Button.Block.Filled}
+              onPress={() => props.navigator.push({ screen: 'onboarding2.CreateIdentity' })}
+            />
+          </Container>
+        </Container>
       }
     >
       <Swiper
@@ -41,7 +48,11 @@ const Learn: React.FC<LearnProps> & { navigatorStyle: NavigatorStyle } = props =
 }
 
 Learn.navigatorStyle = {
-  navBarHidden: true,
+  drawUnderNavBar: true,
+  navBarTranslucent: true,
+  navBarTransparent: true,
+  navBarBackgroundColor: 'transparent',
+  navBarButtonColor: 'white',
 }
 
 export default Learn

@@ -186,7 +186,7 @@ export async function startLegacyApp(this: any) {
 
 // Add GUI startup tasks here for onboarding new user
 export async function startOnboarding() {
-  let startupScreen = 'onboarding2.Terms'
+  let startupScreen = 'onboarding2.Welcome'
 
   if (NativeModules.NativeSignerModule && NativeModules.NativeSignerModule.hasSecureKeyguard) {
     const hasSecureKeyguard = await NativeModules.NativeSignerModule.hasSecureKeyguard()

@@ -23,23 +23,25 @@ class Welcome extends React.Component<WelcomeProps> {
               Get started by creating a new identity.
             </Text>
           </Container>
-          <Container flex={1} paddingTop>
-            <Button
-              bold
-              centered
-              buttonText={'Create New Identity'}
-              onPress={() => this.props.navigator.push({ screen: 'onboarding2.Learn' })}
-              type={Button.Types.Custom}
-              block={Button.Block.Filled}
-            />
-            <Button
-              bold
-              centered
-              buttonText={'Recover Identity'}
-              onPress={() => 'Recover Identity'}
-              type={Button.Types.Custom}
-              block={Button.Block.Clear}
-            />
+          <Container flex={1} paddingTop alignItems={'center'}>
+            <Container w={320}>
+              <Button
+                bold
+                fullWidth
+                buttonText={'Get Started'}
+                onPress={() => this.props.navigator.push({ screen: 'onboarding2.Learn' })}
+                type={Button.Types.Custom}
+                block={Button.Block.Filled}
+              />
+              <Button
+                bold
+                fullWidth
+                buttonText={'Recover Identity'}
+                onPress={() => this.props.navigator.push({ screen: 'recovery.seedInstructions' })}
+                type={Button.Types.Custom}
+                block={Button.Block.Clear}
+              />
+            </Container>
           </Container>
         </Container>
       </Screen>
