@@ -17,34 +17,37 @@
 //
 import { all, takeEvery, call, select, put } from 'redux-saga/effects'
 import { delay } from 'redux-saga'
-import { 
+import {
   RUN_MIGRATIONS,
-  MigrationStep, 
+  MigrationStep,
   MigrationTarget,
   MigrationStatus,
-  TargetAction, 
+  TargetAction,
   StepAction,
   Recipes,
-  targetRecipes
+  targetRecipes,
 } from 'uPortMobile/lib/constants/MigrationActionTypes'
+import { LOADED_DB } from 'uPortMobile/lib/constants/GlobalActionTypes'
 import {
-  LOADED_DB
-} from 'uPortMobile/lib/constants/GlobalActionTypes'
-import { 
   addMigrationTarget,
   startedMigrationStep,
   completedMigrationStep,
-  failedMigrationStep
+  failedMigrationStep,
 } from 'uPortMobile/lib/actions/migrationActions'
 import {
   startWorking,
   stopWorking,
   saveMessage,
   completeProcess,
-  failProcess
+  failProcess,
 } from 'uPortMobile/lib/actions/processStatusActions'
 
-import { migrationStepStatus, migrationTargets, pendingMigrations, migrationCompleted } from 'uPortMobile/lib/selectors/migrations'
+import {
+  migrationStepStatus,
+  migrationTargets,
+  pendingMigrations,
+  migrationCompleted,
+} from 'uPortMobile/lib/selectors/migrations'
 import { currentAddress } from 'uPortMobile/lib/selectors/identities'
 import { isFullyHD, networkSettings } from 'uPortMobile/lib/selectors/chains'
 import { hdRootAddress, seedAddresses } from 'uPortMobile/lib/selectors/hdWallet'
@@ -57,7 +60,7 @@ import CleanUpAfterMissingSeed from './migrations/CleanUpAfterMissingSeed'
 import { NavigationActions } from 'uPortMobile/lib/utilities/NavigationActions'
 import { resetKey, listSeedAddresses } from 'uPortMobile/lib/sagas/keychain'
 
-export function * checkup () : any {
+export function* checkup(): any {
   const fullHD = yield select(isFullyHD)
   const hd = yield select(hdRootAddress)
   const addresses = yield call(listSeedAddresses)
@@ -65,46 +68,45 @@ export function * checkup () : any {
     yield put(addMigrationTarget(MigrationTarget.PreHD))
   }
   const pending = yield select(pendingMigrations)
-  if (pending.length > 0 ) {
+  if (pending.length > 0) {
     const target = pending[0]
     yield call(delay, 2000)
     yield call(NavigationActions.push, {
       screen: `migrations.${target}`,
-      animationType: 'slide-up'
-    })  
+      animationType: 'slide-up',
+    })
   }
 }
-
 
 const implementations = {
   IdentityManagerChangeOwner,
   UpdatePreHDRootToHD,
   UportRegistryDDORefresh,
-  CleanUpAfterMissingSeed
+  CleanUpAfterMissingSeed,
 }
 
-export function * runMigrations ({target} : TargetAction) : any {
+export function* runMigrations({ target }: TargetAction): any {
   const targets = yield select(migrationTargets)
   if (targets.includes(target)) {
     yield put(startWorking(target))
-    const steps = targetRecipes[target]||[]
+    const steps = targetRecipes[target] || []
     for (let step of steps) {
       yield call(performStep, step)
       const status = yield select(migrationStepStatus, step)
       if (status !== MigrationStatus.Completed) break
-    }  
+    }
     yield put(completeProcess(target))
   }
 }
 
-export function * runImplementationStep (step: MigrationStep) : any {
+export function* runImplementationStep(step: MigrationStep): any {
   const migration = implementations[step]
   if (migration) {
     return yield call(migration)
   }
 }
 
-export function * performStep (step: MigrationStep) : any {
+export function* performStep(step: MigrationStep): any {
   const status = yield select(migrationStepStatus, step)
   if (status === MigrationStatus.Completed) return
   yield put(startedMigrationStep(step))
@@ -114,9 +116,9 @@ export function * performStep (step: MigrationStep) : any {
     // console.log(step, `success: ${success}`)
     if (success) {
       yield put(stopWorking(step))
-      yield put(completedMigrationStep(step))  
+      yield put(completedMigrationStep(step))
     } else {
-      yield put(failedMigrationStep(step))  
+      yield put(failedMigrationStep(step))
     }
   } catch (error) {
     // console.log(step, error)
@@ -125,11 +127,8 @@ export function * performStep (step: MigrationStep) : any {
   }
 }
 
-function * migrationsSaga () {
-  yield all([
-    takeEvery(LOADED_DB, checkup),
-    takeEvery(RUN_MIGRATIONS, runMigrations)
-  ])
+function* migrationsSaga() {
+  yield all([takeEvery(LOADED_DB, checkup), takeEvery(RUN_MIGRATIONS, runMigrations)])
 }
 
 export default migrationsSaga

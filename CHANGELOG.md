@@ -1,5 +1,14 @@
 # Change Log
 
+## [v414](https://github.com/uport-project/uport-mobile/tree/v414) (2019-02-01)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v413...v414)
+
+**Merged pull requests:**
+
+- Comment out migration saga [\#73](https://github.com/uport-project/uport-mobile/pull/73) ([jasonhealy](https://github.com/jasonhealy))
+- Request Seed if it's missing [\#70](https://github.com/uport-project/uport-mobile/pull/70) ([pelle](https://github.com/pelle))
+- Initial GraphQL setup [\#53](https://github.com/uport-project/uport-mobile/pull/53) ([pelle](https://github.com/pelle))
+
 ## [v413](https://github.com/uport-project/uport-mobile/tree/v413) (2019-01-24)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v412...v413)
 
