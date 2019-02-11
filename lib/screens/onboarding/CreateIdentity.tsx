@@ -1,20 +1,28 @@
 import * as React from 'react'
 import { Image, LayoutAnimation, Modal } from 'react-native'
 import { connect } from 'react-redux'
-import { Screen, Container, Input, NavBar, Text, Button, Theme, Icon, Images } from '@kancha'
+import { Screen, Container, Input, Text, Button, Theme, Icon, Images } from '@kancha'
 import { Navigator } from 'react-native-navigation'
 
 import photoSelectionHandler from 'uPortMobile/lib/utilities/photoSelection'
 import { currentAddress } from '../../selectors/identities'
-import { createIdentity } from 'uPortMobile/lib/actions/uportActions'
 import { activationEvent } from 'uPortMobile/lib/actions/userActivationActions'
 import { track } from 'uPortMobile/lib/actions/metricActions'
 import { startMain } from 'uPortMobile/lib/start'
+import { createIdentity, addClaims, addImage } from 'uPortMobile/lib/actions/uportActions'
+
+interface ImageObj {
+  fileSize: number
+  uri: string
+}
 
 interface CreateIdentityProps {
   navigator: Navigator
   createIdentity: () => void
   finishOnboarding: () => void
+  addImage: (address: string, claimType: string, image: ImageObj) => void
+  storeOwnClaim: (address: string, claims: any) => void
+  address: string
 }
 
 interface CreateIdentityState {
@@ -23,7 +31,7 @@ interface CreateIdentityState {
   userAddingInfo: boolean
   userCreatingidentity: boolean
   identityCreationSuccess: boolean
-  image: string | undefined
+  image: ImageObj | undefined
 }
 
 /**
@@ -137,7 +145,7 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
           </Container>
         </Container>
         <Container justifyContent={'center'} alignItems={'center'} paddingBottom>
-          <Avatar image={this.state.image} text={this.state.name} />
+          <Avatar image={this.state.image && this.state.image.uri} text={this.state.name} />
           <Button
             buttonText={'Upload photo'}
             block={Button.Block.Clear}
@@ -205,15 +213,6 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
             You have successfully created a uPort identity
           </Text>
         </Container>
-        {/* <Container paddingTop w={320}>
-          <Button
-            fullWidth
-            buttonText={'Continue'}
-            type={Button.Types.Primary}
-            block={Button.Block.Outlined}
-            onPress={() => }
-          />
-        </Container> */}
       </Container>
     )
   }
@@ -225,7 +224,7 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
     LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut)
 
     this.setState({
-      image: response.avatar.uri,
+      image: response.avatar,
     })
   }
 
@@ -239,18 +238,34 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
   }
 
   createIdentity() {
-    this.props.createIdentity()
     this.setState({ ...this.state, userAddingInfo: false, userCreatingidentity: true })
 
+    /**
+     * Create identity
+     */
+    this.props.createIdentity()
+
     setTimeout(() => {
-      this.identityCreated()
+      this.showIdentityCreationStatus(this.props.address)
+
       setTimeout(() => {
+        /**
+         * Update the user profile with onboarding user data
+         */
+        if (this.props.address) {
+          this.state.image && this.props.addImage(this.props.address, 'avatar', this.state.image)
+          this.state.name && this.props.storeOwnClaim(this.props.address, { name: this.state.name })
+        }
+
+        /**
+         * Onboarding complete
+         */
         this.props.finishOnboarding()
       }, 1600)
     }, 2000)
   }
 
-  identityCreated() {
+  showIdentityCreationStatus(address: string) {
     this.setState({ ...this.state, userCreatingidentity: false, identityCreationSuccess: true })
   }
 }
@@ -268,6 +283,12 @@ export const mapDispatchToProps = (dispatch: any) => {
       startMain()
       dispatch(activationEvent('ONBOARDED'))
       dispatch(track('Onboarding Complete Finished'))
+    },
+    addImage: (address: string, claimType: string, image: any) => {
+      dispatch(addImage(address, claimType, image))
+    },
+    storeOwnClaim: (address: string, claims: any) => {
+      dispatch(addClaims(address, claims))
     },
   }
 }
