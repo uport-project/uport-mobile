@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Image, LayoutAnimation, Modal } from 'react-native'
+import { ActivityIndicator } from 'react-native'
 import { connect } from 'react-redux'
 import { Screen, Container, Input, Text, Button, Theme, Icon, Images, Checkbox } from '@kancha'
 import { Navigator } from 'react-native-navigation'
@@ -96,8 +97,11 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
         footerNavComponent={
           <Container paddingLeft paddingRight>
             <Button
+              icon={
+                this.state.userCreatingidentity && <ActivityIndicator color={'white'} style={{ marginRight: 10 }} />
+              }
               fullWidth
-              disabled={!this.isValid()}
+              disabled={!this.isValid() || this.state.userCreatingidentity || this.state.identityCreationSuccess}
               buttonText={'Create Identity'}
               type={Button.Types.Primary}
               block={Button.Block.Filled}
@@ -116,18 +120,10 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
    */
   renderUserAddingInfo() {
     return (
-      <Container>
+      <Container disabled={this.state.userCreatingidentity || this.state.identityCreationSuccess}>
         <Container flex={1} justifyContent={'center'} alignItems={'center'}>
-          <Modal
-            animationType={'slide'}
-            transparent={false}
-            visible={this.state.userCreatingidentity || this.state.identityCreationSuccess}
-          >
-            {this.state.userCreatingidentity
-              ? this.renderIdentityCreationLoading()
-              : this.state.identityCreationSuccess
-              ? this.renderIdentityCreationSuccess()
-              : null}
+          <Modal animationType={'slide'} transparent={true} visible={this.state.identityCreationSuccess}>
+            {this.renderIdentityCreationSuccess()}
           </Modal>
           <Container alignItems={'center'} paddingBottom paddingTop>
             <Text type={Text.Types.H2} bold>
@@ -191,47 +187,56 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
     )
   }
 
-  renderIdentityCreationLoading() {
-    return (
-      <Container flex={1} justifyContent={'center'} alignItems={'center'}>
-        <Container alignItems={'center'} paddingBottom paddingTop>
-          <Text type={Text.Types.H2} bold>
-            Creating identity
-          </Text>
-          <Container paddingTop={5}>
-            <Text type={Text.Types.SubTitle}>Generating private keys...</Text>
-          </Container>
-        </Container>
-        <Container justifyContent={'center'} alignItems={'center'}>
-          <Icon name={'loading'} animated size={150} image={Images.icons.loading} />
-        </Container>
-        <Container padding>
-          <Text type={Text.Types.SubTitle} textAlign={'center'}>
-            Your keys are being generated. One moment...
-          </Text>
-        </Container>
-      </Container>
-    )
-  }
+  // renderIdentityCreationLoading() {
+  //   return (
+  //     <Container flex={1} justifyContent={'center'} alignItems={'center'}>
+  //       <Container alignItems={'center'} paddingBottom paddingTop>
+  //         <Text type={Text.Types.H2} bold>
+  //           Creating identity
+  //         </Text>
+  //         <Container paddingTop={5}>
+  //           <Text type={Text.Types.SubTitle}>Generating private keys...</Text>
+  //         </Container>
+  //       </Container>
+  //       <Container justifyContent={'center'} alignItems={'center'}>
+  //         <Icon name={'loading'} animated size={150} image={Images.icons.loading} />
+  //       </Container>
+  //       <Container padding>
+  //         <Text type={Text.Types.SubTitle} textAlign={'center'}>
+  //           Your keys are being generated. One moment...
+  //         </Text>
+  //       </Container>
+  //     </Container>
+  //   )
+  // }
 
+  /**
+   * Todo - Create Modal component used below...
+   */
   renderIdentityCreationSuccess() {
     return (
       <Container flex={1} justifyContent={'center'} alignItems={'center'}>
-        <Container alignItems={'center'} paddingBottom paddingTop>
-          <Text type={Text.Types.H2} bold>
-            Identity Created!
-          </Text>
-          <Container paddingTop={5}>
-            <Text type={Text.Types.SubTitle}>Succesfully created identity</Text>
+        <Container
+          padding
+          background={'primary'}
+          viewStyle={{ shadowRadius: 30, shadowColor: 'black', shadowOpacity: 0.2, borderRadius: 5 }}
+        >
+          <Container alignItems={'center'} paddingBottom paddingTop>
+            <Text type={Text.Types.H2} bold>
+              You are all set
+            </Text>
+            <Container paddingTop={5}>
+              <Text type={Text.Types.SubTitle}>Succesfully created identity</Text>
+            </Container>
           </Container>
-        </Container>
-        <Container justifyContent={'center'} alignItems={'center'}>
-          <Icon name={'success'} size={150} color={Theme.colors.confirm.accessories} />
-        </Container>
-        <Container padding>
-          <Text type={Text.Types.SubTitle} textAlign={'center'}>
-            You have successfully created a uPort identity
-          </Text>
+          <Container justifyContent={'center'} alignItems={'center'}>
+            <Icon name={'success'} size={150} color={Theme.colors.confirm.accessories} />
+          </Container>
+          <Container padding>
+            <Text type={Text.Types.SubTitle} textAlign={'center'}>
+              You have successfully created a uPort identity
+            </Text>
+          </Container>
         </Container>
       </Container>
     )
@@ -281,8 +286,8 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
          * Onboarding complete
          */
         this.props.finishOnboarding()
-      }, 1600)
-    }, 2000)
+      }, 2000)
+    }, 2300)
   }
 
   showIdentityCreationStatus(address: string) {

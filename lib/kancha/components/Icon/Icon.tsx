@@ -60,6 +60,7 @@ const Icons: { [index: string]: any } = {
   success: Device.isIOS ? 'ios-checkmark-circle-outline' : 'md-checkmark-circle-outline',
   checkbox_empty: Device.isIOS ? 'ios-radio-button-off' : 'md-radio-button-off',
   checkbox_checked: Device.isIOS ? 'ios-checkmark-circle' : 'md-checkmark-circle',
+  tickmark: Device.isIOS ? 'ios-checkmark-circle-outline' : 'md-checkmark-circle-outline',
 }
 
 const Icon: React.FunctionComponent<IconProps> = ({ font, name, size, color, animated, image }: IconProps) => {

@@ -113,6 +113,8 @@ interface ContainerProps {
 
   /** Add addionaly custom styles for a container. Use sparingly!! */
   viewStyle?: ViewStyle
+
+  disabled?: boolean
 }
 
 const Container: React.FunctionComponent<ContainerProps> = props => {
@@ -149,6 +151,7 @@ const Container: React.FunctionComponent<ContainerProps> = props => {
     ...(props.debugBorder ? { borderWidth: 1, borderColor: 'red' } : {}),
     ...(props.b !== undefined ? { position: 'absolute', bottom: props.b, width: '100%' } : {}),
     ...(props.r !== undefined ? { position: 'absolute', bottom: props.r, width: '100%' } : {}),
+    ...(props.disabled ? { opacity: 0.5 } : {}),
 
     /** Margins */
     marginBottom: typeof props.marginBottom === 'boolean' ? Theme.spacing.default : props.marginBottom,
@@ -170,7 +173,7 @@ const Container: React.FunctionComponent<ContainerProps> = props => {
   }
 
   return (
-    <View testID={props.testID} style={styles}>
+    <View testID={props.testID} style={styles} pointerEvents={props.disabled ? 'none' : 'auto'}>
       {props.children}
     </View>
   )
