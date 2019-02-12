@@ -102,7 +102,7 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
               }
               fullWidth
               disabled={!this.isValid() || this.state.userCreatingidentity || this.state.identityCreationSuccess}
-              buttonText={'Create Identity'}
+              buttonText={this.state.userCreatingidentity ? 'Generating keys....' : 'Create Identity'}
               type={Button.Types.Primary}
               block={Button.Block.Filled}
               onPress={() => this.createIdentity()}
@@ -148,7 +148,7 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
               textType={Text.Types.H4}
               value={this.state.name}
               onChangeText={this.onChangeText}
-              valid={this.state.valid}
+              valid={!!this.state.name}
             />
           </Container>
           <Container padding>
@@ -223,18 +223,24 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
         >
           <Container alignItems={'center'} paddingBottom paddingTop>
             <Text type={Text.Types.H2} bold>
-              You are all set
+              You are all set!
             </Text>
             <Container paddingTop={5}>
-              <Text type={Text.Types.SubTitle}>Succesfully created identity</Text>
+              <Text type={Text.Types.SubTitle}>Identity created</Text>
             </Container>
           </Container>
           <Container justifyContent={'center'} alignItems={'center'}>
-            <Icon name={'success'} size={150} color={Theme.colors.confirm.accessories} />
+            <Icon name={'rocket'} size={150} color={Theme.colors.confirm.accessories} />
           </Container>
+          <Container flexDirection={'row'} justifyContent={'center'}>
+            <ActivityIndicator style={{ marginRight: 10 }} />
+            <Text type={Text.Types.ListItem}>Preparing dashboard...</Text>
+          </Container>
+
           <Container padding>
             <Text type={Text.Types.SubTitle} textAlign={'center'}>
-              You have successfully created a uPort identity
+              You have successfully created a uPort DID identity. Your private keys have been saved securely to your
+              device
             </Text>
           </Container>
         </Container>
@@ -287,7 +293,7 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
          */
         this.props.finishOnboarding()
       }, 2000)
-    }, 2300)
+    }, 2600)
   }
 
   showIdentityCreationStatus(address: string) {
