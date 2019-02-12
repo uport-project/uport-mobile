@@ -55,27 +55,12 @@ export const TermsComponent: React.FC<TermComponentProps> = ({ termsContent }) =
 /**
  * Terms screen. The terms component could be extracted so it can be used in the setting also
  */
-const Terms: React.FC<TermsProps> & { navigatorStyle: NavigatorStyle } = props => {
+const Terms: React.FC<TermsProps> = props => {
   return (
-    <Screen
-      statusBarHidden
-      type={Screen.Types.Primary}
-      config={Screen.Config.SafeScroll}
-      footerNavComponent={
-        <NavBar
-          leftButtonAction={() => props.navigator.pop()}
-          rightButtonAction={() => props.navigator.push({ screen: 'onboarding2.Privacy' })}
-          rightButttonText={'I agree'}
-        />
-      }
-    >
+    <Screen statusBarHidden type={Screen.Types.Primary} config={Screen.Config.Scroll}>
       <TermsComponent termsContent={termsConditions} />
     </Screen>
   )
-}
-
-Terms.navigatorStyle = {
-  navBarHidden: true,
 }
 
 export default Terms

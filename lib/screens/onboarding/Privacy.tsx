@@ -8,20 +8,9 @@ interface PrivacyProps {
   navigator: Navigator
 }
 
-const Privacy: React.FC<PrivacyProps> & { navigatorStyle: NavigatorStyle } = props => {
+const Privacy: React.FC<PrivacyProps> = props => {
   return (
-    <Screen
-      statusBarHidden
-      type={Screen.Types.Primary}
-      config={Screen.Config.SafeScroll}
-      footerNavComponent={
-        <NavBar
-          leftButtonAction={() => props.navigator.pop()}
-          rightButtonAction={() => props.navigator.push({ screen: 'onboarding2.AddName' })}
-          rightButttonText={'I agree'}
-        />
-      }
-    >
+    <Screen statusBarHidden type={Screen.Types.Primary} config={Screen.Config.Scroll}>
       <Container padding>
         <Text type={Text.Types.H2} bold>
           Privacy Policy
@@ -57,10 +46,6 @@ const Privacy: React.FC<PrivacyProps> & { navigatorStyle: NavigatorStyle } = pro
       </Container>
     </Screen>
   )
-}
-
-Privacy.navigatorStyle = {
-  navBarHidden: true,
 }
 
 export default Privacy
