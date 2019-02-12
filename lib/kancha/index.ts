@@ -14,6 +14,7 @@ export { Theme, TextThemeMap } from './themes/default'
  * Components
  */
 export { default as Button } from './components/Button/Button'
+export { default as Checkbox } from './components/Checkbox/Checkbox'
 export { default as Container } from './components/Container/Container'
 export { default as Icon } from './components/Icon/Icon'
 export { default as Screen } from './components/Screen/Screen'

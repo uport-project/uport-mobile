@@ -28,6 +28,7 @@ import {
   KeyboardAvoidingView,
 } from 'react-native'
 import { Container, Theme, Device } from '@kancha'
+import { Images } from '../../constants/imagePaths'
 
 /** Temporary spacer size */
 const SPACER_SIZE = 1000
@@ -138,6 +139,7 @@ const Screen: React.FunctionComponent<ScreenProps> & {
         <React.Fragment>
           {Device.isIOS && <Container h={1000} />}
           <Container background={props.expandingHeaderType}>{props.expandingHeaderContent}</Container>
+          {/* <ImageBackground source={Images.backgrounds.purpleGradient}>{props.expandingHeaderContent}</ImageBackground> */}
         </React.Fragment>
       )}
       {mainContent}

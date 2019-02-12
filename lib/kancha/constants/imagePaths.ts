@@ -2,6 +2,9 @@ export const Images = {
   icons: {
     loading: require('uPortMobile/assets/images/loading-circle.png'),
   },
+  profile: {
+    avatar: require('uPortMobile/assets/images/default_profile_image.png'),
+  },
   branding: {
     logoWhite: require('uPortMobile/assets/images/uport-white.png'),
   },

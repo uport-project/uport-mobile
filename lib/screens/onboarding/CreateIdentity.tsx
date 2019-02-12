@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Image, LayoutAnimation, Modal } from 'react-native'
 import { connect } from 'react-redux'
-import { Screen, Container, Input, Text, Button, Theme, Icon, Images } from '@kancha'
+import { Screen, Container, Input, Text, Button, Theme, Icon, Images, Checkbox } from '@kancha'
 import { Navigator } from 'react-native-navigation'
 
 import photoSelectionHandler from 'uPortMobile/lib/utilities/photoSelection'
@@ -28,6 +28,8 @@ interface CreateIdentityProps {
 interface CreateIdentityState {
   valid: boolean
   name: string
+  termsAccepted: boolean
+  privacyAccepted: boolean
   userAddingInfo: boolean
   userCreatingidentity: boolean
   identityCreationSuccess: boolean
@@ -43,30 +45,13 @@ interface AvatarProps {
 }
 
 const Avatar: React.FC<AvatarProps> = ({ image, text }) => {
-  return image ? (
-    <Image source={{ uri: image }} style={{ width: 150, height: 150, borderRadius: 75 }} resizeMode={'cover'} />
-  ) : (
-    <Container
-      backgroundColor={Theme.colors.primary.brand}
-      br={75}
-      h={150}
-      w={150}
-      alignItems={'center'}
-      justifyContent={'center'}
-    >
-      <Text type={Text.Types.H1} bold textColor={Theme.colors.custom.text}>
-        {text.slice(0, 1).toUpperCase() + text.slice(1, 2).toLowerCase()}
-      </Text>
-    </Container>
-  )
+  const avatar = image ? { uri: image } : Images.profile.avatar
+  return <Image source={avatar} style={{ width: 150, height: 150, borderRadius: 75 }} resizeMode={'cover'} />
 }
 
 class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentityState> {
   static navigatorStyle = {
-    drawUnderNavBar: true,
-    navBarTranslucent: true,
-    navBarTransparent: true,
-    navBarBackgroundColor: 'transparent',
+    navBarBackgroundColor: Theme.colors.primary.background,
     navBarButtonColor: Theme.colors.primary.brand,
   }
 
@@ -76,6 +61,8 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
     this.state = {
       valid: false,
       name: '',
+      termsAccepted: false,
+      privacyAccepted: false,
       image: undefined,
       userAddingInfo: true,
       userCreatingidentity: false,
@@ -88,9 +75,13 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
   onChangeText = (text: string) => {
     this.setState({
       ...this.state,
-      valid: !!text,
       name: text,
     })
+  }
+
+  isValid() {
+    const { name, termsAccepted, privacyAccepted } = this.state
+    return name && termsAccepted && privacyAccepted
   }
 
   /**
@@ -106,6 +97,7 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
           <Container paddingLeft paddingRight>
             <Button
               fullWidth
+              disabled={!this.isValid()}
               buttonText={'Create Identity'}
               type={Button.Types.Primary}
               block={Button.Block.Filled}
@@ -124,48 +116,76 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
    */
   renderUserAddingInfo() {
     return (
-      <Container flex={1} justifyContent={'center'} alignItems={'center'}>
-        <Modal
-          animationType={'slide'}
-          transparent={false}
-          visible={this.state.userCreatingidentity || this.state.identityCreationSuccess}
-        >
-          {this.state.userCreatingidentity
-            ? this.renderIdentityCreationLoading()
-            : this.state.identityCreationSuccess
-            ? this.renderIdentityCreationSuccess()
-            : null}
-        </Modal>
-        <Container alignItems={'center'} paddingBottom paddingTop>
-          <Text type={Text.Types.H2} bold>
-            Personalise uport
-          </Text>
-          <Container paddingTop={5} paddingBottom>
-            <Text type={Text.Types.SubTitle}>Add your name and optional photo</Text>
+      <Container>
+        <Container flex={1} justifyContent={'center'} alignItems={'center'}>
+          <Modal
+            animationType={'slide'}
+            transparent={false}
+            visible={this.state.userCreatingidentity || this.state.identityCreationSuccess}
+          >
+            {this.state.userCreatingidentity
+              ? this.renderIdentityCreationLoading()
+              : this.state.identityCreationSuccess
+              ? this.renderIdentityCreationSuccess()
+              : null}
+          </Modal>
+          <Container alignItems={'center'} paddingBottom paddingTop>
+            <Text type={Text.Types.H2} bold>
+              Personalise uport
+            </Text>
+            <Container paddingTop={5} paddingBottom>
+              <Text type={Text.Types.SubTitle}>Add your name and optional photo</Text>
+            </Container>
+          </Container>
+          <Container justifyContent={'center'} alignItems={'center'} paddingBottom>
+            <Avatar image={this.state.image && this.state.image.uri} text={this.state.name} />
+            <Button
+              buttonText={'Upload photo'}
+              block={Button.Block.Clear}
+              type={Button.Types.Primary}
+              onPress={this.chooseProfileImage}
+            />
+          </Container>
+          <Container flexDirection={'row'} w={280}>
+            <Input
+              placeholder={'Enter name or username'}
+              textType={Text.Types.H4}
+              value={this.state.name}
+              onChangeText={this.onChangeText}
+              valid={this.state.valid}
+            />
+          </Container>
+          <Container padding>
+            <Text type={Text.Types.SubTitle} textAlign={'center'}>
+              You can always change this information later
+            </Text>
           </Container>
         </Container>
-        <Container justifyContent={'center'} alignItems={'center'} paddingBottom>
-          <Avatar image={this.state.image && this.state.image.uri} text={this.state.name} />
-          <Button
-            buttonText={'Upload photo'}
-            block={Button.Block.Clear}
-            type={Button.Types.Primary}
-            onPress={this.chooseProfileImage}
-          />
-        </Container>
-        <Container flexDirection={'row'} w={280}>
-          <Input
-            placeholder={'Enter name or username'}
-            textType={Text.Types.H4}
-            value={this.state.name}
-            onChangeText={this.onChangeText}
-            valid={this.state.valid}
-          />
-        </Container>
-        <Container padding>
-          <Text type={Text.Types.SubTitle} textAlign={'center'}>
-            You can always change this information later
-          </Text>
+        <Container>
+          <Container flexDirection={'row'} alignItems={'center'} justifyContent={'flex-start'}>
+            <Checkbox
+              selected={this.state.termsAccepted}
+              toggleSelect={checked => this.setState({ termsAccepted: checked })}
+            />
+            <Button
+              noPadding
+              block={Button.Block.Clear}
+              buttonText={'I accept the terms and conditions'}
+              onPress={() => this.props.navigator.push({ screen: 'onboarding2.Terms' })}
+            />
+          </Container>
+          <Container flexDirection={'row'} alignItems={'center'} justifyContent={'flex-start'}>
+            <Checkbox
+              selected={this.state.privacyAccepted}
+              toggleSelect={checked => this.setState({ privacyAccepted: checked })}
+            />
+            <Button
+              noPadding
+              block={Button.Block.Clear}
+              buttonText={'I accept the privacy policy'}
+              onPress={() => this.props.navigator.push({ screen: 'onboarding2.Privacy' })}
+            />
+          </Container>
         </Container>
       </Container>
     )

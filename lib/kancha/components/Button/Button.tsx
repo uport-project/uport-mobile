@@ -6,7 +6,7 @@ import {
   ViewStyle,
   DeviceEventEmitterStatic,
 } from 'react-native'
-import { Device, Text, Theme } from '@kancha'
+import { Device, Text, Theme, Container } from '@kancha'
 
 /**
  *  Implemenation details: Will move static types to theor own file or namespace later
@@ -70,12 +70,29 @@ interface ButtonProps {
    * The button is a navigation button
    */
   navButton?: boolean
+
+  icon?: React.ReactNode
+
+  noPadding?: boolean
 }
 
 const Button: React.FC<ButtonProps> & {
   Types: Kancha.BrandTypeStatic
   Block: Kancha.BlocksStatic
-} = ({ type, block, fullWidth, onPress, disabled, buttonText, centered, bold, navButton, children }) => {
+} = ({
+  type,
+  block,
+  fullWidth,
+  onPress,
+  disabled,
+  buttonText,
+  centered,
+  bold,
+  navButton,
+  icon,
+  noPadding,
+  children,
+}) => {
   const style: ViewStyle = {
     ...(block && block === 'filled'
       ? { backgroundColor: type ? Theme.colors[type].button : Theme.colors.primary.button }
@@ -87,7 +104,7 @@ const Button: React.FC<ButtonProps> & {
           borderColor: type ? Theme.colors[type].button : Theme.colors.primary.button,
         }
       : {}),
-    padding: Theme.spacing.default,
+    ...(noPadding ? {} : { padding: Theme.spacing.default }),
     alignItems: 'center',
     ...(fullWidth ? {} : { maxWidth: 300 }),
     borderRadius: Theme.roundedCorners.buttons,
@@ -108,12 +125,16 @@ const Button: React.FC<ButtonProps> & {
       style={style}
       underlayColor={block === ButtonBlocks.Clear ? 'transparent' : type && Theme.colors[type].underlay}
     >
-      <Text type={Text.Types.Button} buttonTextColor={disabled ? 'secondary' : type} block={block} bold={bold}>
-        {buttonText}
-      </Text>
+      <Container flexDirection={'row'}>
+        {icon && icon}
+        <Text type={Text.Types.Button} buttonTextColor={disabled ? 'secondary' : type} block={block} bold={bold}>
+          {buttonText}
+        </Text>
+      </Container>
     </TouchableHighlight>
   ) : (
     <TouchableNativeFeedback onPress={onPress} style={style} disabled={disabled}>
+      {icon && icon}
       <Text type={Text.Types.Button} buttonTextColor={disabled ? 'secondary' : type} block={block} bold={bold}>
         {buttonText}
       </Text>

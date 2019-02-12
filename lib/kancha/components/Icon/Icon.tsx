@@ -58,6 +58,8 @@ const Icons: { [index: string]: any } = {
   link: Device.isIOS ? 'ios-link' : 'md-link',
   sync: Device.isIOS ? 'ios-sync' : 'md-sync',
   success: Device.isIOS ? 'ios-checkmark-circle-outline' : 'md-checkmark-circle-outline',
+  checkbox_empty: Device.isIOS ? 'ios-radio-button-off' : 'md-radio-button-off',
+  checkbox_checked: Device.isIOS ? 'ios-checkmark-circle' : 'md-checkmark-circle',
 }
 
 const Icon: React.FunctionComponent<IconProps> = ({ font, name, size, color, animated, image }: IconProps) => {
