@@ -49,7 +49,7 @@ exports[`Request Component renders a request without a type 1`] = `
         ellipsizeMode="tail"
         style={
           Object {
-            "color": "rgba(92,80,202,1)",
+            "color": "#6A54D1",
             "flex": 1,
             "fontFamily": undefined,
             "fontSize": 20,
@@ -146,7 +146,7 @@ exports[`Request Component returns a AttestationCard when the request type is at
         ellipsizeMode="tail"
         style={
           Object {
-            "color": "rgba(92,80,202,1)",
+            "color": "#6A54D1",
             "flex": 1,
             "fontFamily": undefined,
             "fontSize": 20,
@@ -243,7 +243,7 @@ exports[`Request Component returns a AttestationCard when the request type is at
         ellipsizeMode="tail"
         style={
           Object {
-            "color": "rgba(92,80,202,1)",
+            "color": "#6A54D1",
             "flex": 1,
             "fontFamily": undefined,
             "fontSize": 20,
@@ -340,7 +340,7 @@ exports[`Request Component returns a ConnectionCard when the request type is con
         ellipsizeMode="tail"
         style={
           Object {
-            "color": "rgba(92,80,202,1)",
+            "color": "#6A54D1",
             "flex": 1,
             "fontFamily": undefined,
             "fontSize": 20,
@@ -437,7 +437,7 @@ exports[`Request Component returns a ConnectionCard when the request type is con
         ellipsizeMode="tail"
         style={
           Object {
-            "color": "rgba(92,80,202,1)",
+            "color": "#6A54D1",
             "flex": 1,
             "fontFamily": undefined,
             "fontSize": 20,

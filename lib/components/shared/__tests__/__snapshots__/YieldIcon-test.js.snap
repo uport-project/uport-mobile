@@ -8,7 +8,7 @@ exports[`renders Yield Icon 1`] = `
     width={90}
   >
     <G
-      fill="rgba(92,80,202,1)"
+      fill="#6A54D1"
       fillRule="nonzero"
     >
       <Path

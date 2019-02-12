@@ -30,7 +30,7 @@ exports[`Notifications renders the amount of unread notifications 1`] = `
       Object {
         "alignItems": "center",
         "alignSelf": "center",
-        "backgroundColor": "rgba(92,80,202,1)",
+        "backgroundColor": "#6A54D1",
         "borderRadius": 12,
         "flex": 0,
         "flexDirection": "row",
@@ -99,7 +99,7 @@ exports[`Notifications renders the singular amount of unread notifications 1`] =
       Object {
         "alignItems": "center",
         "alignSelf": "center",
-        "backgroundColor": "rgba(92,80,202,1)",
+        "backgroundColor": "#6A54D1",
         "borderRadius": 12,
         "flex": 0,
         "flexDirection": "row",

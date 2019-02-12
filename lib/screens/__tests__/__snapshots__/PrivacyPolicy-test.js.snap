@@ -9,51 +9,42 @@ exports[`renders Settings screen with 1`] = `
     }
   }
 >
-  <RCTScrollView
-    contentContainerStyle={Object {}}
-    contentInset={Object {}}
-    contentOffset={
-      Object {
-        "x": 0,
-        "y": 0,
-      }
-    }
+  <View
+    enabled={false}
+    keyboardVerticalOffset={0}
+    onLayout={[Function]}
     style={
-      Object {
-        "backgroundColor": "#EFEEF3",
-      }
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "paddingBottom": 0,
+        },
+      ]
     }
   >
-    <View>
-      <View
-        style={
-          Object {
-            "alignItems": undefined,
-            "backgroundColor": "#EFEEF3",
-            "borderRadius": undefined,
-            "flex": 1,
-            "flexDirection": undefined,
-            "height": undefined,
-            "justifyContent": undefined,
-            "marginBottom": undefined,
-            "marginLeft": undefined,
-            "marginRight": undefined,
-            "marginTop": undefined,
-            "padding": undefined,
-            "paddingBottom": 15,
-            "paddingHorizontal": undefined,
-            "paddingLeft": undefined,
-            "paddingRight": undefined,
-            "paddingTop": undefined,
-            "width": undefined,
-          }
+    <RCTScrollView
+      contentContainerStyle={Object {}}
+      contentInset={Object {}}
+      contentOffset={
+        Object {
+          "x": 0,
+          "y": 0,
         }
-      >
+      }
+      style={
+        Object {
+          "backgroundColor": "#EFEEF3",
+        }
+      }
+    >
+      <View>
         <View
           style={
             Object {
               "alignItems": undefined,
-              "backgroundColor": undefined,
+              "backgroundColor": "#EFEEF3",
               "borderRadius": undefined,
               "flex": 1,
               "flexDirection": undefined,
@@ -64,7 +55,7 @@ exports[`renders Settings screen with 1`] = `
               "marginRight": undefined,
               "marginTop": undefined,
               "padding": undefined,
-              "paddingBottom": undefined,
+              "paddingBottom": 15,
               "paddingHorizontal": undefined,
               "paddingLeft": undefined,
               "paddingRight": undefined,
@@ -79,45 +70,7 @@ exports[`renders Settings screen with 1`] = `
                 "alignItems": undefined,
                 "backgroundColor": undefined,
                 "borderRadius": undefined,
-                "flex": undefined,
-                "flexDirection": undefined,
-                "height": undefined,
-                "justifyContent": undefined,
-                "marginBottom": undefined,
-                "marginLeft": undefined,
-                "marginRight": undefined,
-                "marginTop": undefined,
-                "padding": undefined,
-                "paddingBottom": 15,
-                "paddingHorizontal": undefined,
-                "paddingLeft": 15,
-                "paddingRight": 15,
-                "paddingTop": 15,
-                "width": undefined,
-              }
-            }
-          >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "#BBBBBB",
-                  "fontSize": 14,
-                }
-              }
-            >
-              Last modified May 24, 2018
-            </Text>
-          </View>
-          <View
-            style={
-              Object {
-                "alignItems": undefined,
-                "backgroundColor": undefined,
-                "borderRadius": undefined,
-                "flex": undefined,
+                "flex": 1,
                 "flexDirection": undefined,
                 "height": undefined,
                 "justifyContent": undefined,
@@ -128,26 +81,88 @@ exports[`renders Settings screen with 1`] = `
                 "padding": undefined,
                 "paddingBottom": undefined,
                 "paddingHorizontal": undefined,
-                "paddingLeft": 15,
-                "paddingRight": 15,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
                 "paddingTop": undefined,
                 "width": undefined,
               }
             }
           >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+            <View
               style={
                 Object {
-                  "color": "#333333",
-                  "fontSize": 16,
-                  "lineHeight": 22,
+                  "alignItems": undefined,
+                  "backgroundColor": undefined,
+                  "borderRadius": undefined,
+                  "flex": undefined,
+                  "flexDirection": undefined,
+                  "height": undefined,
+                  "justifyContent": undefined,
+                  "marginBottom": undefined,
+                  "marginLeft": undefined,
+                  "marginRight": undefined,
+                  "marginTop": undefined,
+                  "padding": undefined,
+                  "paddingBottom": 15,
+                  "paddingHorizontal": undefined,
+                  "paddingLeft": 15,
+                  "paddingRight": 15,
+                  "paddingTop": 15,
+                  "width": undefined,
                 }
               }
             >
-              
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#BBBBBB",
+                    "fontSize": 14,
+                  }
+                }
+              >
+                Last modified May 24, 2018
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignItems": undefined,
+                  "backgroundColor": undefined,
+                  "borderRadius": undefined,
+                  "flex": undefined,
+                  "flexDirection": undefined,
+                  "height": undefined,
+                  "justifyContent": undefined,
+                  "marginBottom": undefined,
+                  "marginLeft": undefined,
+                  "marginRight": undefined,
+                  "marginTop": undefined,
+                  "padding": undefined,
+                  "paddingBottom": undefined,
+                  "paddingHorizontal": undefined,
+                  "paddingLeft": 15,
+                  "paddingRight": 15,
+                  "paddingTop": undefined,
+                  "width": undefined,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#333333",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
+                }
+              >
+                
 This privacy policy (“Policy”) describes how ConsenSys AG’s uPort(“uPort” “Company”, “we”, “our”, “us”) collects, uses, shares, and stores personal information of users of this website, https://www.uport.me/ (the “Site”) and the Services (as defined below).. This Policy applies to the Site, applications, products and services (collectively, “Services”) on or in which it is posted, linked, or referenced. 
 
 By using the Services, you accept the terms of this Policy and our Terms of Use, and consent to our collection, use, disclosure, and retention of your information as described in this Policy.  If you have not done so already, please also review our terms of use. The terms of use contain provisions that limit our liability to you and require you to resolve any dispute with us on an individual basis and not as part of any class or representative action. IF YOU DO NOT AGREE WITH ANY PART OF THIS PRIVACY POLICY OR OUR TERMS OF USE, THEN PLEASE DO NOT USE ANY OF THE SERVICES.
@@ -170,20 +185,20 @@ Marketing information, such as your preferences for receiving marketing communic
 
 Information We Get From Others. We may get information about you from other third party sources and we may add this to information we get from your use of the Services. 
 
-            </Text>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "#333333",
-                  "fontSize": 16,
-                  "lineHeight": 22,
+              </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#333333",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
                 }
-              }
-            >
-              
+              >
+                
 Information Automatically Collected. We may automatically record certain information about how you use our Site (we refer to this information as “Log Data“). Log Data may include information such as a user’s Internet Protocol (IP) address, hash of IPFS address, device and browser type, the pages or features of our Site to which a user browsed and the time spent on those pages or features, the frequency with which the Site is used by a user, search terms, the links on our Site that a user clicked on or used, referral url, and other statistics. We use this information to administer the Service and we analyze (and may engage third parties to analyze) this information to improve and enhance the Service by expanding its features and functionality and tailoring it to our users’ needs and preferences.
 
 We may use cookies or similar technologies to analyze trends, administer the website, track users’ movements around the website, and to gather demographic information about our user base as a whole. Users can control the use of cookies at the individual browser level. For more information, please see the section entitled “Cookies Policy” below.
@@ -215,20 +230,20 @@ We may use or share your personal information with your consent, such as when yo
 For compliance, fraud prevention, and safety
 We may use your personal information to protect, investigate, and deter against fraudulent, unauthorized, or illegal activity.
 
-            </Text>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "#333333",
-                  "fontSize": 16,
-                  "lineHeight": 22,
+              </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#333333",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
                 }
-              }
-            >
-              
+              >
+                
 
 SHARING OF PERSONAL INFORMATION
 
@@ -266,20 +281,20 @@ Google Analytics
 You may exercise choices regarding the use of cookies from Google Analytics by going to https://tools.google.com/dlpage/gaoptout and downloading the Google Analytics Opt-out Browser Add-on.
 
 
-            </Text>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "#333333",
-                  "fontSize": 16,
-                  "lineHeight": 22,
+              </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#333333",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
                 }
-              }
-            >
-              
+              >
+                
 
 CONTACT INFORMATION. We welcome your comments or questions about this Policy, and you may contact us at: support@uport.me.
 
@@ -335,20 +350,20 @@ Legal Basis
 
   Where our use of your personal information is based upon your consent, you have the right to withdraw it anytime in the manner indicated in the Service or by contacting us at support@uport.me.
 
-            </Text>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "#333333",
-                  "fontSize": 16,
-                  "lineHeight": 22,
+              </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#333333",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
                 }
-              }
-            >
-              
+              >
+                
   
 Use for New Purposes
 
@@ -389,20 +404,20 @@ To serve you with interest-based or targeted advertising.
 To observe your behaviors and browsing activities over time across multiple websites or other platforms.
 To better understand the interests of our customers and our website visitors.
 
-            </Text>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "#333333",
-                  "fontSize": 16,
-                  "lineHeight": 22,
+              </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#333333",
+                    "fontSize": 16,
+                    "lineHeight": 22,
+                  }
                 }
-              }
-            >
-              
+              >
+                
 
 Some Cookies are necessary for certain uses of the Site, and without such Cookies, we would not be able to provide many services that you need to properly use the Site. These Cookies, for example, allow us to operate our Site so you may access it as you have requested and let us recognize that you have created an account and have logged into that account to access Site content. They also include Cookies that enable us to remember your previous actions within the same browsing session and secure our Sites.  
 We also use functional Cookies and Cookies from third parties for analysis and marketing purposes.  Functional Cookies enable certain parts of the site to work properly and your user preferences to remain known.  Analysis Cookies, among other things, collect information on how visitors use our Site, the content and products that users view most frequently, and the effectiveness of our third party advertising. Advertising Cookies assist in delivering ads to relevant audiences and having our ads appear at the top of search results. Cookies are either “session” Cookies which are deleted when you end your browser session, or “persistent,” which remain until their deletion by you (discussed below) or the party who served the cookie.  Full details on all of the Cookies used on the Site are available at our Cookie Disclosure table below. 
@@ -466,11 +481,36 @@ Analytics hub
 Persistent
 1 year
 
-            </Text>
+              </Text>
+            </View>
           </View>
         </View>
       </View>
-    </View>
-  </RCTScrollView>
+    </RCTScrollView>
+    <View
+      style={
+        Object {
+          "alignItems": undefined,
+          "backgroundColor": undefined,
+          "borderRadius": undefined,
+          "flex": undefined,
+          "flexDirection": undefined,
+          "height": undefined,
+          "justifyContent": undefined,
+          "marginBottom": undefined,
+          "marginLeft": undefined,
+          "marginRight": undefined,
+          "marginTop": undefined,
+          "padding": undefined,
+          "paddingBottom": undefined,
+          "paddingHorizontal": undefined,
+          "paddingLeft": undefined,
+          "paddingRight": undefined,
+          "paddingTop": undefined,
+          "width": undefined,
+        }
+      }
+    />
+  </View>
 </RCTSafeAreaView>
 `;

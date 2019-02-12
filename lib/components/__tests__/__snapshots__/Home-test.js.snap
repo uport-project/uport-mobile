@@ -353,7 +353,7 @@ exports[`Home Component home screen rendering with activities 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "rgba(92,80,202,1)",
+          "backgroundColor": "#6A54D1",
           "borderRadius": 28,
           "bottom": 24,
           "elevation": 10,
@@ -733,7 +733,7 @@ exports[`Home Component home screen rendering without activities 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "rgba(92,80,202,1)",
+          "backgroundColor": "#6A54D1",
           "borderRadius": 28,
           "bottom": 24,
           "elevation": 10,

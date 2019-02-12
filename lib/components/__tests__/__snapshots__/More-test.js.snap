@@ -1612,7 +1612,7 @@ ShallowWrapper {
         "event": [Function],
         "styles": Object {
           "navBarBackgroundColor": "rgba(246,247,248,1)",
-          "navBarButtonColor": "rgba(92,80,202,1)",
+          "navBarButtonColor": "#6A54D1",
           "navBarFontFamily": undefined,
           "navBarFontSize": 18,
           "navBarNoBorder": true,
@@ -1644,7 +1644,7 @@ ShallowWrapper {
               "event": [Function],
               "styles": Object {
                 "navBarBackgroundColor": "rgba(246,247,248,1)",
-                "navBarButtonColor": "rgba(92,80,202,1)",
+                "navBarButtonColor": "#6A54D1",
                 "navBarFontFamily": undefined,
                 "navBarFontSize": 18,
                 "navBarNoBorder": true,
@@ -1661,7 +1661,7 @@ ShallowWrapper {
               "event": [Function],
               "styles": Object {
                 "navBarBackgroundColor": "rgba(246,247,248,1)",
-                "navBarButtonColor": "rgba(92,80,202,1)",
+                "navBarButtonColor": "#6A54D1",
                 "navBarFontFamily": undefined,
                 "navBarFontSize": 18,
                 "navBarNoBorder": true,
@@ -1682,7 +1682,7 @@ ShallowWrapper {
               "event": [Function],
               "styles": Object {
                 "navBarBackgroundColor": "rgba(246,247,248,1)",
-                "navBarButtonColor": "rgba(92,80,202,1)",
+                "navBarButtonColor": "#6A54D1",
                 "navBarFontFamily": undefined,
                 "navBarFontSize": 18,
                 "navBarNoBorder": true,
@@ -1706,7 +1706,7 @@ ShallowWrapper {
             "event": [Function],
             "styles": Object {
               "navBarBackgroundColor": "rgba(246,247,248,1)",
-              "navBarButtonColor": "rgba(92,80,202,1)",
+              "navBarButtonColor": "#6A54D1",
               "navBarFontFamily": undefined,
               "navBarFontSize": 18,
               "navBarNoBorder": true,
@@ -1729,7 +1729,7 @@ ShallowWrapper {
             "event": [Function],
             "styles": Object {
               "navBarBackgroundColor": "rgba(246,247,248,1)",
-              "navBarButtonColor": "rgba(92,80,202,1)",
+              "navBarButtonColor": "#6A54D1",
               "navBarFontFamily": undefined,
               "navBarFontSize": 18,
               "navBarNoBorder": true,
@@ -1755,7 +1755,7 @@ ShallowWrapper {
             "event": [Function],
             "styles": Object {
               "navBarBackgroundColor": "rgba(246,247,248,1)",
-              "navBarButtonColor": "rgba(92,80,202,1)",
+              "navBarButtonColor": "#6A54D1",
               "navBarFontFamily": undefined,
               "navBarFontSize": 18,
               "navBarNoBorder": true,
@@ -1785,7 +1785,7 @@ ShallowWrapper {
                 "event": [Function],
                 "styles": Object {
                   "navBarBackgroundColor": "rgba(246,247,248,1)",
-                  "navBarButtonColor": "rgba(92,80,202,1)",
+                  "navBarButtonColor": "#6A54D1",
                   "navBarFontFamily": undefined,
                   "navBarFontSize": 18,
                   "navBarNoBorder": true,
@@ -1802,7 +1802,7 @@ ShallowWrapper {
                 "event": [Function],
                 "styles": Object {
                   "navBarBackgroundColor": "rgba(246,247,248,1)",
-                  "navBarButtonColor": "rgba(92,80,202,1)",
+                  "navBarButtonColor": "#6A54D1",
                   "navBarFontFamily": undefined,
                   "navBarFontSize": 18,
                   "navBarNoBorder": true,
@@ -1823,7 +1823,7 @@ ShallowWrapper {
                 "event": [Function],
                 "styles": Object {
                   "navBarBackgroundColor": "rgba(246,247,248,1)",
-                  "navBarButtonColor": "rgba(92,80,202,1)",
+                  "navBarButtonColor": "#6A54D1",
                   "navBarFontFamily": undefined,
                   "navBarFontSize": 18,
                   "navBarNoBorder": true,
@@ -1847,7 +1847,7 @@ ShallowWrapper {
               "event": [Function],
               "styles": Object {
                 "navBarBackgroundColor": "rgba(246,247,248,1)",
-                "navBarButtonColor": "rgba(92,80,202,1)",
+                "navBarButtonColor": "#6A54D1",
                 "navBarFontFamily": undefined,
                 "navBarFontSize": 18,
                 "navBarNoBorder": true,
@@ -1870,7 +1870,7 @@ ShallowWrapper {
               "event": [Function],
               "styles": Object {
                 "navBarBackgroundColor": "rgba(246,247,248,1)",
-                "navBarButtonColor": "rgba(92,80,202,1)",
+                "navBarButtonColor": "#6A54D1",
                 "navBarFontFamily": undefined,
                 "navBarFontSize": 18,
                 "navBarNoBorder": true,
@@ -1896,7 +1896,7 @@ ShallowWrapper {
               "event": [Function],
               "styles": Object {
                 "navBarBackgroundColor": "rgba(246,247,248,1)",
-                "navBarButtonColor": "rgba(92,80,202,1)",
+                "navBarButtonColor": "#6A54D1",
                 "navBarFontFamily": undefined,
                 "navBarFontSize": 18,
                 "navBarNoBorder": true,

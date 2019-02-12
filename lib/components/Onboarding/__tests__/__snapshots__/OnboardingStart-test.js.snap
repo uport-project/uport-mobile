@@ -154,7 +154,7 @@ exports[`OnboardingStart renders Onboarding Start screen 1`] = `
                     "marginRight": 15,
                   },
                   Object {
-                    "borderColor": "rgba(92,80,202,1)",
+                    "borderColor": "#6A54D1",
                   },
                 ],
               ]
@@ -180,7 +180,7 @@ exports[`OnboardingStart renders Onboarding Start screen 1`] = `
                       "padding": 3,
                     },
                     Object {
-                      "color": "rgba(92,80,202,1)",
+                      "color": "#6A54D1",
                     },
                   ],
                   Object {},
@@ -239,7 +239,7 @@ exports[`OnboardingStart renders Onboarding Start screen 1`] = `
                     "textAlign": "center",
                   },
                   Object {
-                    "color": "rgba(92,80,202,1)",
+                    "color": "#6A54D1",
                     "fontFamily": undefined,
                     "fontSize": 18,
                     "lineHeight": 25,
