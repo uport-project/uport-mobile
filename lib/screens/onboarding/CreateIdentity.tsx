@@ -173,6 +173,7 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
               Accept terms and conditions
             </ListItem>
             <ListItem
+              last
               avatarComponent={
                 <Checkbox
                   selected={this.state.privacyAccepted}
@@ -184,31 +185,6 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
               Accept privacy policy
             </ListItem>
           </Section>
-          {/* <Container flexDirection={'row'} alignItems={'center'} justifyContent={'flex-start'}>
-            <Checkbox
-              selected={this.state.termsAccepted}
-              toggleSelect={checked => this.setState({ termsAccepted: checked })}
-            />
-            <Button
-              noPadding
-              block={Button.Block.Clear}
-              buttonText={'I accept the terms and conditions'}
-              onPress={() => this.props.navigator.push({ screen: 'onboarding2.Terms' })}
-            />
-          </Container>
-          <Container flexDirection={'row'} alignItems={'center'} justifyContent={'flex-start'}>
-            <Checkbox
-              selected={this.state.privacyAccepted}
-              toggleSelect={checked => this.setState({ privacyAccepted: checked })}
-            />
-            <Button
-              noPadding
-              block={Button.Block.Clear}
-              buttonText={'I accept the privacy policy'}
-              onPress={() => this.props.navigator.push({ screen: 'onboarding2.Privacy' })}
-            />
-          </Container>
-    */}
         </Container>
       </Container>
     )
