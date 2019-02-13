@@ -153,7 +153,11 @@ const Screen: React.FunctionComponent<ScreenProps> & {
       <KeyboardAvoidingView style={{ flex: 1 }} behavior={'padding'} enabled={false}>
         {props.config === ScreenConfigs.SafeNoScroll ? mainContent : scrollViewContent}
 
-        {props.footerNavComponent && <Container paddingBottom>{props.footerNavComponent}</Container>}
+        {props.footerNavComponent && (
+          <Container paddingBottom paddingTop>
+            {props.footerNavComponent}
+          </Container>
+        )}
       </KeyboardAvoidingView>
     </SafeAreaView>
   )
