@@ -7,6 +7,7 @@ import {
   DeviceEventEmitterStatic,
 } from 'react-native'
 import { Device, Text, Theme, Container } from '@kancha'
+import { propertyRequest } from 'uPortMobile/lib/sagas/requests/propertyRequest'
 
 /**
  *  Implemenation details: Will move static types to theor own file or namespace later
@@ -74,6 +75,8 @@ interface ButtonProps {
   icon?: React.ReactNode
 
   noPadding?: boolean
+
+  textDecorationLine?: 'none' | 'underline' | 'line-through' | 'underline line-through' | undefined
 }
 
 const Button: React.FC<ButtonProps> & {
@@ -91,6 +94,7 @@ const Button: React.FC<ButtonProps> & {
   navButton,
   icon,
   noPadding,
+  textDecorationLine,
   children,
 }) => {
   const style: ViewStyle = {
@@ -114,7 +118,12 @@ const Button: React.FC<ButtonProps> & {
 
   return navButton ? (
     <TouchableOpacity style={style} onPress={onPress} disabled={disabled}>
-      <Text type={Text.Types.NavButton} buttonTextColor={disabled ? 'secondary' : type} block={block}>
+      <Text
+        textDecorationLine={textDecorationLine}
+        type={Text.Types.NavButton}
+        buttonTextColor={disabled ? 'secondary' : type}
+        block={block}
+      >
         {buttonText}
       </Text>
     </TouchableOpacity>
@@ -127,7 +136,13 @@ const Button: React.FC<ButtonProps> & {
     >
       <Container flexDirection={'row'}>
         {icon && icon}
-        <Text type={Text.Types.Button} buttonTextColor={disabled ? 'secondary' : type} block={block} bold={bold}>
+        <Text
+          textDecorationLine={textDecorationLine}
+          type={Text.Types.Button}
+          buttonTextColor={disabled ? 'secondary' : type}
+          block={block}
+          bold={bold}
+        >
           {buttonText}
         </Text>
       </Container>
@@ -135,7 +150,13 @@ const Button: React.FC<ButtonProps> & {
   ) : (
     <TouchableNativeFeedback onPress={onPress} style={style} disabled={disabled}>
       {icon && icon}
-      <Text type={Text.Types.Button} buttonTextColor={disabled ? 'secondary' : type} block={block} bold={bold}>
+      <Text
+        textDecorationLine={textDecorationLine}
+        type={Text.Types.Button}
+        buttonTextColor={disabled ? 'secondary' : type}
+        block={block}
+        bold={bold}
+      >
         {buttonText}
       </Text>
     </TouchableNativeFeedback>

@@ -1,5 +1,6 @@
 import * as React from 'react'
-import { Button, Icon, Theme } from '@kancha'
+import { TouchableHighlight } from 'react-native'
+import { Icon, Theme } from '@kancha'
 
 interface CheckboxProps {
   selected?: boolean
@@ -8,17 +9,13 @@ interface CheckboxProps {
 
 const Checkbox: React.FC<CheckboxProps> = ({ selected, toggleSelect }) => {
   return (
-    <Button
-      icon={
-        <Icon
-          size={40}
-          color={selected ? Theme.colors.primary.brand : Theme.colors.primary.accessories}
-          name={selected ? 'checkbox_checked' : 'checkbox_empty'}
-        />
-      }
-      block={Button.Block.Clear}
-      onPress={toggleSelect ? () => toggleSelect(!selected) : () => ''}
-    />
+    <TouchableHighlight underlayColor={'transparent'} onPress={toggleSelect ? () => toggleSelect(!selected) : () => ''}>
+      <Icon
+        size={40}
+        color={selected ? Theme.colors.primary.brand : Theme.colors.primary.accessories}
+        name={selected ? 'checkbox_checked' : 'checkbox_empty'}
+      />
+    </TouchableHighlight>
   )
 }
 

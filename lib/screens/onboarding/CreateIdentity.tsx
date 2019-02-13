@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Image, LayoutAnimation, Modal } from 'react-native'
 import { ActivityIndicator } from 'react-native'
 import { connect } from 'react-redux'
-import { Screen, Container, Input, Text, Button, Theme, Icon, Images, Checkbox } from '@kancha'
+import { Screen, Container, Input, Text, Button, Theme, Icon, Images, Checkbox, Section, ListItem } from '@kancha'
 import { Navigator } from 'react-native-navigation'
 
 import photoSelectionHandler from 'uPortMobile/lib/utilities/photoSelection'
@@ -95,18 +95,20 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
         config={Screen.Config.SafeScroll}
         statusBarHidden
         footerNavComponent={
-          <Container paddingLeft paddingRight>
-            <Button
-              icon={
-                this.state.userCreatingidentity && <ActivityIndicator color={'white'} style={{ marginRight: 10 }} />
-              }
-              fullWidth
-              disabled={!this.isValid() || this.state.userCreatingidentity || this.state.identityCreationSuccess}
-              buttonText={this.state.userCreatingidentity ? 'Generating keys....' : 'Create Identity'}
-              type={Button.Types.Primary}
-              block={Button.Block.Filled}
-              onPress={() => this.createIdentity()}
-            />
+          <Container alignItems={'center'}>
+            <Container w={320}>
+              <Button
+                icon={
+                  this.state.userCreatingidentity && <ActivityIndicator color={'white'} style={{ marginRight: 10 }} />
+                }
+                fullWidth
+                disabled={!this.isValid() || this.state.userCreatingidentity || this.state.identityCreationSuccess}
+                buttonText={this.state.userCreatingidentity ? 'Generating keys....' : 'Create Identity'}
+                type={Button.Types.Primary}
+                block={Button.Block.Filled}
+                onPress={() => this.createIdentity()}
+              />
+            </Container>
           </Container>
         }
       >
@@ -158,7 +160,31 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
           </Container>
         </Container>
         <Container>
-          <Container flexDirection={'row'} alignItems={'center'} justifyContent={'flex-start'}>
+          <Section>
+            <ListItem
+              avatarComponent={
+                <Checkbox
+                  selected={this.state.termsAccepted}
+                  toggleSelect={checked => this.setState({ termsAccepted: checked })}
+                />
+              }
+              onPress={() => this.props.navigator.push({ screen: 'onboarding2.Terms' })}
+            >
+              Accept terms and conditions
+            </ListItem>
+            <ListItem
+              avatarComponent={
+                <Checkbox
+                  selected={this.state.privacyAccepted}
+                  toggleSelect={checked => this.setState({ privacyAccepted: checked })}
+                />
+              }
+              onPress={() => this.props.navigator.push({ screen: 'onboarding2.Privacy' })}
+            >
+              Accept privacy policy
+            </ListItem>
+          </Section>
+          {/* <Container flexDirection={'row'} alignItems={'center'} justifyContent={'flex-start'}>
             <Checkbox
               selected={this.state.termsAccepted}
               toggleSelect={checked => this.setState({ termsAccepted: checked })}
@@ -182,33 +208,11 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
               onPress={() => this.props.navigator.push({ screen: 'onboarding2.Privacy' })}
             />
           </Container>
+    */}
         </Container>
       </Container>
     )
   }
-
-  // renderIdentityCreationLoading() {
-  //   return (
-  //     <Container flex={1} justifyContent={'center'} alignItems={'center'}>
-  //       <Container alignItems={'center'} paddingBottom paddingTop>
-  //         <Text type={Text.Types.H2} bold>
-  //           Creating identity
-  //         </Text>
-  //         <Container paddingTop={5}>
-  //           <Text type={Text.Types.SubTitle}>Generating private keys...</Text>
-  //         </Container>
-  //       </Container>
-  //       <Container justifyContent={'center'} alignItems={'center'}>
-  //         <Icon name={'loading'} animated size={150} image={Images.icons.loading} />
-  //       </Container>
-  //       <Container padding>
-  //         <Text type={Text.Types.SubTitle} textAlign={'center'}>
-  //           Your keys are being generated. One moment...
-  //         </Text>
-  //       </Container>
-  //     </Container>
-  //   )
-  // }
 
   /**
    * Todo - Create Modal component used below...

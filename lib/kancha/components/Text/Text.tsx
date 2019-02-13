@@ -95,6 +95,11 @@ interface KanchaTextProps {
    * The margin around the text
    */
   textAlign?: string
+
+  /**
+   * Decoration for button text
+   */
+  textDecorationLine?: 'none' | 'underline' | 'line-through' | 'underline line-through' | undefined
 }
 
 const KanchaText: React.FC<KanchaTextProps> & { Types: Kancha.TextTypesStatic } = props => {
@@ -117,7 +122,11 @@ const KanchaText: React.FC<KanchaTextProps> & { Types: Kancha.TextTypesStatic } 
       : {}),
   }
 
-  return <Text style={styles}>{props.children}</Text>
+  return (
+    <Text textDecorationLine={props.textDecorationLine} style={styles}>
+      {props.children}
+    </Text>
+  )
 }
 KanchaText.defaultProps = {
   type: TextTypes.Body,

@@ -52,7 +52,7 @@ class Input extends React.Component<InputProps, InputState> {
         alignItems={'center'}
         flex={1}
         br={Theme.roundedCorners.textInputs}
-        borderColor={borderColor}
+        borderColor={focusedColor}
         borderWidth={2}
         paddingRight={5}
       >

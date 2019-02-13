@@ -3,7 +3,6 @@ import { Screen, Images, Theme, Slide, NavBar, OnboardingSwiperSlide, Button, Co
 import { Navigator, NavigatorStyle } from 'react-native-navigation'
 import Swiper from 'react-native-swiper'
 import { OnboardingContent } from 'uPortMobile/lib/content/onboardingSlideContent'
-import { backIconGetter } from 'uPortMobile/lib/utilities/navButtonGetters'
 
 const onboardingSlides: OnboardingSwiperSlide[] = OnboardingContent(Images)
 
@@ -33,11 +32,12 @@ const Learn: React.FC<LearnProps> & { navigatorStyle: NavigatorStyle } = props =
       }
     >
       <Swiper
+        style={{ paddingTop: 30 }}
         loop={false}
         autoplay
         bounces
         activeDotColor={Theme.colors.primary.brand}
-        paginationStyle={{ marginBottom: 30 }}
+        paginationStyle={{ marginBottom: -30 }}
       >
         {onboardingSlides.map((slide: OnboardingSwiperSlide) => {
           return <Slide key={slide.key} title={slide.title} content={slide.content} image={slide.image} />

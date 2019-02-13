@@ -103,7 +103,7 @@ const Screen: React.FunctionComponent<ScreenProps> & {
     ...(props.expandingHeaderType ? { backgroundColor: Theme.colors[props.expandingHeaderType].background } : {}),
   }
   const scrollViewContentInset = {
-    ...(props.footerNavComponent ? { bottom: 65 } : {}),
+    ...(props.footerNavComponent ? { bottom: 0 } : {}),
     ...(props.expandingHeaderContent ? { top: -SPACER_SIZE } : {}),
   }
   const scrollViewContentOffset = {
@@ -152,7 +152,9 @@ const Screen: React.FunctionComponent<ScreenProps> & {
     <SafeAreaView style={safeAreaViewStyle}>
       <KeyboardAvoidingView style={{ flex: 1 }} behavior={'padding'} enabled={false}>
         {props.config === ScreenConfigs.SafeNoScroll ? mainContent : scrollViewContent}
-        <Container>{props.footerNavComponent && props.footerNavComponent}</Container>
+        <Container paddingBottom paddingTop>
+          {props.footerNavComponent && props.footerNavComponent}
+        </Container>
       </KeyboardAvoidingView>
     </SafeAreaView>
   )
