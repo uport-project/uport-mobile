@@ -245,7 +245,7 @@ configurations.all {
     resolutionStrategy {
         force(
                 //added these to force a single version of google play services
-
+                "org.webkit:android-jsc:r236355",
                 //react-native-fcm
                 "com.google.firebase:firebase-core:$play_services_version",
                 "com.google.firebase:firebase-messaging:$play_services_version",
