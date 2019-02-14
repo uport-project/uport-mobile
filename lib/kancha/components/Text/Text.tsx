@@ -122,11 +122,7 @@ const KanchaText: React.FC<KanchaTextProps> & { Types: Kancha.TextTypesStatic } 
       : {}),
   }
 
-  return (
-    <Text textDecorationLine={props.textDecorationLine} style={styles}>
-      {props.children}
-    </Text>
-  )
+  return <Text style={styles}>{props.children}</Text>
 }
 KanchaText.defaultProps = {
   type: TextTypes.Body,

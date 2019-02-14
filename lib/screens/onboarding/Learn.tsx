@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Screen, Images, Theme, Slide, NavBar, OnboardingSwiperSlide, Button, Container } from '@kancha'
+import { Device, Screen, Images, Theme, Slide, NavBar, OnboardingSwiperSlide, Button, Container } from '@kancha'
 import { Navigator, NavigatorStyle } from 'react-native-navigation'
 import Swiper from 'react-native-swiper'
 import { OnboardingContent } from 'uPortMobile/lib/content/onboardingSlideContent'
@@ -32,15 +32,15 @@ const Learn: React.FC<LearnProps> & { navigatorStyle: NavigatorStyle } = props =
       }
     >
       <Swiper
-        style={{ paddingTop: 30 }}
+        style={{ marginTop: Device.isIOS ? 30 : 100 }}
         loop={false}
         autoplay
         bounces
         activeDotColor={Theme.colors.primary.brand}
-        paginationStyle={{ marginBottom: -30 }}
+        paginationStyle={{ marginBottom: Device.isIOS ? -30 : -20 }}
       >
         {onboardingSlides.map((slide: OnboardingSwiperSlide) => {
-          return <Slide key={slide.key} title={slide.title} content={slide.content} image={slide.image} />
+          return <Slide key={slide.key} heading={slide.heading} content={slide.content} image={slide.image} />
         })}
       </Swiper>
     </Screen>
@@ -53,6 +53,7 @@ Learn.navigatorStyle = {
   navBarTransparent: true,
   navBarBackgroundColor: 'transparent',
   navBarButtonColor: 'white',
+  topBarElevationShadowEnabled: false,
 }
 
 export default Learn

@@ -57,6 +57,7 @@ class Input extends React.Component<InputProps, InputState> {
         paddingRight={5}
       >
         <TextInput
+          underlineColorAndroid={'rgba(0,0,0,0)'}
           placeholder={this.props.placeholder}
           autoFocus={this.props.autoFocus}
           autoCapitalize={'none'}

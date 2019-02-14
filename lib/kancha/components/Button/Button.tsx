@@ -1,13 +1,6 @@
 import * as React from 'react'
-import {
-  TouchableNativeFeedback,
-  TouchableHighlight,
-  TouchableOpacity,
-  ViewStyle,
-  DeviceEventEmitterStatic,
-} from 'react-native'
-import { Device, Text, Theme, Container } from '@kancha'
-import { propertyRequest } from 'uPortMobile/lib/sagas/requests/propertyRequest'
+import { TouchableHighlight, TouchableOpacity, ViewStyle } from 'react-native'
+import { Text, Theme, Container } from '@kancha'
 
 /**
  *  Implemenation details: Will move static types to theor own file or namespace later
@@ -127,7 +120,7 @@ const Button: React.FC<ButtonProps> & {
         {buttonText}
       </Text>
     </TouchableOpacity>
-  ) : Device.isIOS ? (
+  ) : (
     <TouchableHighlight
       disabled={disabled}
       onPress={onPress}
@@ -147,19 +140,6 @@ const Button: React.FC<ButtonProps> & {
         </Text>
       </Container>
     </TouchableHighlight>
-  ) : (
-    <TouchableNativeFeedback onPress={onPress} style={style} disabled={disabled}>
-      {icon && icon}
-      <Text
-        textDecorationLine={textDecorationLine}
-        type={Text.Types.Button}
-        buttonTextColor={disabled ? 'secondary' : type}
-        block={block}
-        bold={bold}
-      >
-        {buttonText}
-      </Text>
-    </TouchableNativeFeedback>
   )
 }
 

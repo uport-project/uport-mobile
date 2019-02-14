@@ -124,7 +124,12 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
     return (
       <Container disabled={this.state.userCreatingidentity || this.state.identityCreationSuccess}>
         <Container flex={1} justifyContent={'center'} alignItems={'center'}>
-          <Modal animationType={'slide'} transparent={true} visible={this.state.identityCreationSuccess}>
+          <Modal
+            onRequestClose={() => ''}
+            animationType={'slide'}
+            transparent={true}
+            visible={this.state.identityCreationSuccess}
+          >
             {this.renderIdentityCreationSuccess()}
           </Modal>
           <Container alignItems={'center'} paddingBottom paddingTop>
@@ -198,8 +203,10 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
       <Container flex={1} justifyContent={'center'} alignItems={'center'}>
         <Container
           padding
+          marginLeft
+          marginRight
           background={'primary'}
-          viewStyle={{ shadowRadius: 30, shadowColor: 'black', shadowOpacity: 0.2, borderRadius: 5 }}
+          viewStyle={{ shadowRadius: 30, elevation: 4, shadowColor: 'black', shadowOpacity: 0.2, borderRadius: 5 }}
         >
           <Container alignItems={'center'} paddingBottom paddingTop>
             <Text type={Text.Types.H2} bold>
