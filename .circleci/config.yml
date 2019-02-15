@@ -145,6 +145,7 @@ jobs:
 
       - run:      
             command: |
+              appium
               python testsuites/test.py
       - run: bundle install
       - save_cache:
