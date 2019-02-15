@@ -11,6 +11,7 @@ import os
 
 class identityTests(unittest.TestCase):
     def test_createIdentity(self):
+        os.system("appium &")
         desired_caps = {}
         desired_caps['platformName'] = 'iOS'
         desired_caps['platformVersion'] = '12.1'
