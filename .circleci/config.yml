@@ -138,6 +138,7 @@ jobs:
             npm install -g appium
             npm install wd
             pip install Appium-Python-Client
+            appium &
       - restore_cache:
           keys:
             - bundle-{{ arch }}-v4-ios-{{ checksum "Gemfile.lock" }}
