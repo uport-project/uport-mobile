@@ -146,7 +146,7 @@ jobs:
       - run:      
             command: |
               ./testsuites/terminal.scpt
-              sleep 2
+              sleep 5
               python testsuites/test.py
       - run: bundle install
       - save_cache:
