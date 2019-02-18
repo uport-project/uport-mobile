@@ -41,6 +41,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
     >
       <View>
         <View
+          pointerEvents="auto"
           style={
             Object {
               "alignItems": undefined,
@@ -65,6 +66,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
           }
         >
           <View
+            pointerEvents="auto"
             style={
               Object {
                 "alignItems": undefined,
@@ -89,6 +91,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
             }
           >
             <View
+              pointerEvents="auto"
               style={
                 Object {
                   "alignItems": undefined,
@@ -126,6 +129,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
               />
             </View>
             <View
+              pointerEvents="auto"
               style={
                 Object {
                   "alignItems": undefined,
@@ -169,6 +173,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                 }
               >
                 <View
+                  pointerEvents="auto"
                   style={
                     Object {
                       "alignItems": undefined,
@@ -193,6 +198,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                   }
                 >
                   <View
+                    pointerEvents="auto"
                     style={
                       Object {
                         "alignItems": "center",
@@ -219,6 +225,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                     }
                   >
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": undefined,
@@ -257,6 +264,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                       </Text>
                     </View>
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": "center",
@@ -281,6 +289,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                       }
                     >
                       <View
+                        pointerEvents="auto"
                         style={
                           Object {
                             "alignItems": undefined,
@@ -338,6 +347,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                 }
               >
                 <View
+                  pointerEvents="auto"
                   style={
                     Object {
                       "alignItems": undefined,
@@ -362,6 +372,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                   }
                 >
                   <View
+                    pointerEvents="auto"
                     style={
                       Object {
                         "alignItems": "center",
@@ -388,6 +399,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                     }
                   >
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": undefined,
@@ -426,6 +438,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                       </Text>
                     </View>
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": "center",
@@ -450,6 +463,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                       }
                     >
                       <View
+                        pointerEvents="auto"
                         style={
                           Object {
                             "alignItems": undefined,
@@ -498,6 +512,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                 }
               >
                 <View
+                  pointerEvents="auto"
                   style={
                     Object {
                       "alignItems": undefined,
@@ -522,6 +537,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                   }
                 >
                   <View
+                    pointerEvents="auto"
                     style={
                       Object {
                         "alignItems": "center",
@@ -548,6 +564,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                     }
                   >
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": undefined,
@@ -586,6 +603,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                       </Text>
                     </View>
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": "center",
@@ -610,6 +628,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                       }
                     >
                       <View
+                        pointerEvents="auto"
                         style={
                           Object {
                             "alignItems": undefined,
@@ -658,6 +677,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                 }
               >
                 <View
+                  pointerEvents="auto"
                   style={
                     Object {
                       "alignItems": undefined,
@@ -682,6 +702,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                   }
                 >
                   <View
+                    pointerEvents="auto"
                     style={
                       Object {
                         "alignItems": "center",
@@ -706,6 +727,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                     }
                   >
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": undefined,
@@ -744,6 +766,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                       </Text>
                     </View>
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": "center",
@@ -768,6 +791,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                       }
                     >
                       <View
+                        pointerEvents="auto"
                         style={
                           Object {
                             "alignItems": undefined,
@@ -803,6 +827,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
             </View>
           </View>
           <View
+            pointerEvents="auto"
             style={
               Object {
                 "alignItems": undefined,
@@ -827,6 +852,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
             }
           >
             <View
+              pointerEvents="auto"
               style={
                 Object {
                   "alignItems": undefined,
@@ -864,6 +890,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
               />
             </View>
             <View
+              pointerEvents="auto"
               style={
                 Object {
                   "alignItems": undefined,
@@ -907,6 +934,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                 }
               >
                 <View
+                  pointerEvents="auto"
                   style={
                     Object {
                       "alignItems": undefined,
@@ -931,6 +959,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                   }
                 >
                   <View
+                    pointerEvents="auto"
                     style={
                       Object {
                         "alignItems": "center",
@@ -957,6 +986,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                     }
                   >
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": undefined,
@@ -995,6 +1025,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                       </Text>
                     </View>
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": "center",
@@ -1019,6 +1050,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                       }
                     >
                       <View
+                        pointerEvents="auto"
                         style={
                           Object {
                             "alignItems": undefined,
@@ -1067,6 +1099,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                 }
               >
                 <View
+                  pointerEvents="auto"
                   style={
                     Object {
                       "alignItems": undefined,
@@ -1091,6 +1124,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                   }
                 >
                   <View
+                    pointerEvents="auto"
                     style={
                       Object {
                         "alignItems": "center",
@@ -1117,6 +1151,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                     }
                   >
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": undefined,
@@ -1155,6 +1190,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                       </Text>
                     </View>
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": "center",
@@ -1179,6 +1215,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                       }
                     >
                       <View
+                        pointerEvents="auto"
                         style={
                           Object {
                             "alignItems": undefined,
@@ -1227,6 +1264,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                 }
               >
                 <View
+                  pointerEvents="auto"
                   style={
                     Object {
                       "alignItems": undefined,
@@ -1251,6 +1289,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                   }
                 >
                   <View
+                    pointerEvents="auto"
                     style={
                       Object {
                         "alignItems": "center",
@@ -1275,6 +1314,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                     }
                   >
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": undefined,
@@ -1313,6 +1353,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                       </Text>
                     </View>
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": "center",
@@ -1337,6 +1378,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                       }
                     >
                       <View
+                        pointerEvents="auto"
                         style={
                           Object {
                             "alignItems": undefined,
@@ -1372,6 +1414,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
             </View>
           </View>
           <View
+            pointerEvents="auto"
             style={
               Object {
                 "alignItems": undefined,
@@ -1396,6 +1439,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
             }
           >
             <View
+              pointerEvents="auto"
               style={
                 Object {
                   "alignItems": undefined,
@@ -1433,6 +1477,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
               />
             </View>
             <View
+              pointerEvents="auto"
               style={
                 Object {
                   "alignItems": undefined,
@@ -1476,6 +1521,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                 }
               >
                 <View
+                  pointerEvents="auto"
                   style={
                     Object {
                       "alignItems": undefined,
@@ -1500,6 +1546,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                   }
                 >
                   <View
+                    pointerEvents="auto"
                     style={
                       Object {
                         "alignItems": "center",
@@ -1526,6 +1573,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                     }
                   >
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": undefined,
@@ -1564,6 +1612,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                       </Text>
                     </View>
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": "center",
@@ -1588,6 +1637,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                       }
                     >
                       <View
+                        pointerEvents="auto"
                         style={
                           Object {
                             "alignItems": undefined,
@@ -1636,6 +1686,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                 }
               >
                 <View
+                  pointerEvents="auto"
                   style={
                     Object {
                       "alignItems": undefined,
@@ -1660,6 +1711,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                   }
                 >
                   <View
+                    pointerEvents="auto"
                     style={
                       Object {
                         "alignItems": "center",
@@ -1684,6 +1736,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                     }
                   >
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": undefined,
@@ -1722,6 +1775,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                       </Text>
                     </View>
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": "center",
@@ -1746,6 +1800,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                       }
                     >
                       <View
+                        pointerEvents="auto"
                         style={
                           Object {
                             "alignItems": undefined,
@@ -1797,30 +1852,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
         </View>
       </View>
     </RCTScrollView>
-    <View
-      style={
-        Object {
-          "alignItems": undefined,
-          "backgroundColor": undefined,
-          "borderRadius": undefined,
-          "flex": undefined,
-          "flexDirection": undefined,
-          "height": undefined,
-          "justifyContent": undefined,
-          "marginBottom": undefined,
-          "marginLeft": undefined,
-          "marginRight": undefined,
-          "marginTop": undefined,
-          "padding": undefined,
-          "paddingBottom": undefined,
-          "paddingHorizontal": undefined,
-          "paddingLeft": undefined,
-          "paddingRight": undefined,
-          "paddingTop": undefined,
-          "width": undefined,
-        }
-      }
-    />
   </View>
 </RCTSafeAreaView>
 `;
@@ -2471,6 +2502,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
     >
       <View>
         <View
+          pointerEvents="auto"
           style={
             Object {
               "alignItems": undefined,
@@ -2495,6 +2527,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
           }
         >
           <View
+            pointerEvents="auto"
             style={
               Object {
                 "alignItems": undefined,
@@ -2519,6 +2552,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
             }
           >
             <View
+              pointerEvents="auto"
               style={
                 Object {
                   "alignItems": undefined,
@@ -2556,6 +2590,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
               />
             </View>
             <View
+              pointerEvents="auto"
               style={
                 Object {
                   "alignItems": undefined,
@@ -2599,6 +2634,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                 }
               >
                 <View
+                  pointerEvents="auto"
                   style={
                     Object {
                       "alignItems": undefined,
@@ -2623,6 +2659,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                   }
                 >
                   <View
+                    pointerEvents="auto"
                     style={
                       Object {
                         "alignItems": "center",
@@ -2649,6 +2686,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                     }
                   >
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": undefined,
@@ -2687,6 +2725,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                       </Text>
                     </View>
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": "center",
@@ -2711,6 +2750,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                       }
                     >
                       <View
+                        pointerEvents="auto"
                         style={
                           Object {
                             "alignItems": undefined,
@@ -2768,6 +2808,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                 }
               >
                 <View
+                  pointerEvents="auto"
                   style={
                     Object {
                       "alignItems": undefined,
@@ -2792,6 +2833,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                   }
                 >
                   <View
+                    pointerEvents="auto"
                     style={
                       Object {
                         "alignItems": "center",
@@ -2818,6 +2860,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                     }
                   >
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": undefined,
@@ -2856,6 +2899,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                       </Text>
                     </View>
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": "center",
@@ -2880,6 +2924,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                       }
                     >
                       <View
+                        pointerEvents="auto"
                         style={
                           Object {
                             "alignItems": undefined,
@@ -2928,6 +2973,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                 }
               >
                 <View
+                  pointerEvents="auto"
                   style={
                     Object {
                       "alignItems": undefined,
@@ -2952,6 +2998,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                   }
                 >
                   <View
+                    pointerEvents="auto"
                     style={
                       Object {
                         "alignItems": "center",
@@ -2978,6 +3025,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                     }
                   >
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": undefined,
@@ -3016,6 +3064,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                       </Text>
                     </View>
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": "center",
@@ -3040,6 +3089,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                       }
                     >
                       <View
+                        pointerEvents="auto"
                         style={
                           Object {
                             "alignItems": undefined,
@@ -3088,6 +3138,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                 }
               >
                 <View
+                  pointerEvents="auto"
                   style={
                     Object {
                       "alignItems": undefined,
@@ -3112,6 +3163,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                   }
                 >
                   <View
+                    pointerEvents="auto"
                     style={
                       Object {
                         "alignItems": "center",
@@ -3136,6 +3188,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                     }
                   >
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": undefined,
@@ -3174,6 +3227,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                       </Text>
                     </View>
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": "center",
@@ -3198,6 +3252,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                       }
                     >
                       <View
+                        pointerEvents="auto"
                         style={
                           Object {
                             "alignItems": undefined,
@@ -3233,6 +3288,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
             </View>
           </View>
           <View
+            pointerEvents="auto"
             style={
               Object {
                 "alignItems": undefined,
@@ -3257,6 +3313,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
             }
           >
             <View
+              pointerEvents="auto"
               style={
                 Object {
                   "alignItems": undefined,
@@ -3294,6 +3351,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
               />
             </View>
             <View
+              pointerEvents="auto"
               style={
                 Object {
                   "alignItems": undefined,
@@ -3337,6 +3395,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                 }
               >
                 <View
+                  pointerEvents="auto"
                   style={
                     Object {
                       "alignItems": undefined,
@@ -3361,6 +3420,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                   }
                 >
                   <View
+                    pointerEvents="auto"
                     style={
                       Object {
                         "alignItems": "center",
@@ -3387,6 +3447,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                     }
                   >
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": undefined,
@@ -3425,6 +3486,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                       </Text>
                     </View>
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": "center",
@@ -3449,6 +3511,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                       }
                     >
                       <View
+                        pointerEvents="auto"
                         style={
                           Object {
                             "alignItems": undefined,
@@ -3497,6 +3560,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                 }
               >
                 <View
+                  pointerEvents="auto"
                   style={
                     Object {
                       "alignItems": undefined,
@@ -3521,6 +3585,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                   }
                 >
                   <View
+                    pointerEvents="auto"
                     style={
                       Object {
                         "alignItems": "center",
@@ -3547,6 +3612,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                     }
                   >
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": undefined,
@@ -3585,6 +3651,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                       </Text>
                     </View>
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": "center",
@@ -3609,6 +3676,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                       }
                     >
                       <View
+                        pointerEvents="auto"
                         style={
                           Object {
                             "alignItems": undefined,
@@ -3657,6 +3725,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                 }
               >
                 <View
+                  pointerEvents="auto"
                   style={
                     Object {
                       "alignItems": undefined,
@@ -3681,6 +3750,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                   }
                 >
                   <View
+                    pointerEvents="auto"
                     style={
                       Object {
                         "alignItems": "center",
@@ -3705,6 +3775,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                     }
                   >
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": undefined,
@@ -3743,6 +3814,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                       </Text>
                     </View>
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": "center",
@@ -3767,6 +3839,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                       }
                     >
                       <View
+                        pointerEvents="auto"
                         style={
                           Object {
                             "alignItems": undefined,
@@ -3802,6 +3875,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
             </View>
           </View>
           <View
+            pointerEvents="auto"
             style={
               Object {
                 "alignItems": undefined,
@@ -3826,6 +3900,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
             }
           >
             <View
+              pointerEvents="auto"
               style={
                 Object {
                   "alignItems": undefined,
@@ -3863,6 +3938,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
               />
             </View>
             <View
+              pointerEvents="auto"
               style={
                 Object {
                   "alignItems": undefined,
@@ -3906,6 +3982,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                 }
               >
                 <View
+                  pointerEvents="auto"
                   style={
                     Object {
                       "alignItems": undefined,
@@ -3930,6 +4007,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                   }
                 >
                   <View
+                    pointerEvents="auto"
                     style={
                       Object {
                         "alignItems": "center",
@@ -3956,6 +4034,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                     }
                   >
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": undefined,
@@ -3994,6 +4073,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                       </Text>
                     </View>
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": "center",
@@ -4018,6 +4098,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                       }
                     >
                       <View
+                        pointerEvents="auto"
                         style={
                           Object {
                             "alignItems": undefined,
@@ -4066,6 +4147,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                 }
               >
                 <View
+                  pointerEvents="auto"
                   style={
                     Object {
                       "alignItems": undefined,
@@ -4090,6 +4172,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                   }
                 >
                   <View
+                    pointerEvents="auto"
                     style={
                       Object {
                         "alignItems": "center",
@@ -4114,6 +4197,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                     }
                   >
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": undefined,
@@ -4152,6 +4236,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                       </Text>
                     </View>
                     <View
+                      pointerEvents="auto"
                       style={
                         Object {
                           "alignItems": "center",
@@ -4176,6 +4261,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
                       }
                     >
                       <View
+                        pointerEvents="auto"
                         style={
                           Object {
                             "alignItems": undefined,
@@ -4227,30 +4313,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
         </View>
       </View>
     </RCTScrollView>
-    <View
-      style={
-        Object {
-          "alignItems": undefined,
-          "backgroundColor": undefined,
-          "borderRadius": undefined,
-          "flex": undefined,
-          "flexDirection": undefined,
-          "height": undefined,
-          "justifyContent": undefined,
-          "marginBottom": undefined,
-          "marginLeft": undefined,
-          "marginRight": undefined,
-          "marginTop": undefined,
-          "padding": undefined,
-          "paddingBottom": undefined,
-          "paddingHorizontal": undefined,
-          "paddingLeft": undefined,
-          "paddingRight": undefined,
-          "paddingTop": undefined,
-          "width": undefined,
-        }
-      }
-    />
   </View>
 </RCTSafeAreaView>
 `;

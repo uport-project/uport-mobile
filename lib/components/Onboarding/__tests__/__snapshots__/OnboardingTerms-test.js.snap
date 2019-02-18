@@ -98,6 +98,7 @@ exports[`OnboardingTerms renders Onboarding Terms screen 1`] = `
       >
         <View>
           <View
+            pointerEvents="auto"
             style={
               Object {
                 "alignItems": undefined,
@@ -122,6 +123,7 @@ exports[`OnboardingTerms renders Onboarding Terms screen 1`] = `
             }
           >
             <View
+              pointerEvents="auto"
               style={
                 Object {
                   "alignItems": undefined,
@@ -146,6 +148,7 @@ exports[`OnboardingTerms renders Onboarding Terms screen 1`] = `
               }
             >
               <View
+                pointerEvents="auto"
                 style={
                   Object {
                     "alignItems": undefined,
@@ -184,6 +187,7 @@ exports[`OnboardingTerms renders Onboarding Terms screen 1`] = `
                 </Text>
               </View>
               <View
+                pointerEvents="auto"
                 style={
                   Object {
                     "alignItems": undefined,
@@ -399,30 +403,6 @@ Users with questions, complaints or claims with respect to the Service may conta
           </View>
         </View>
       </RCTScrollView>
-      <View
-        style={
-          Object {
-            "alignItems": undefined,
-            "backgroundColor": undefined,
-            "borderRadius": undefined,
-            "flex": undefined,
-            "flexDirection": undefined,
-            "height": undefined,
-            "justifyContent": undefined,
-            "marginBottom": undefined,
-            "marginLeft": undefined,
-            "marginRight": undefined,
-            "marginTop": undefined,
-            "padding": undefined,
-            "paddingBottom": undefined,
-            "paddingHorizontal": undefined,
-            "paddingLeft": undefined,
-            "paddingRight": undefined,
-            "paddingTop": undefined,
-            "width": undefined,
-          }
-        }
-      />
     </View>
   </RCTSafeAreaView>
   <View
