@@ -143,11 +143,6 @@ jobs:
             - bundle-{{ arch }}-v4-ios-{{ checksum "Gemfile.lock" }}
             - bundle-{{ arch }}-v4-ios
 
-      - run:      
-            command: |
-              ./testsuites/terminal.scpt
-              sleep 5
-              python testsuites/test.py
       - run: bundle install
       - save_cache:
           key: bundle-{{ arch }}-v4-ios-{{ checksum "Gemfile.lock" }}
@@ -166,6 +161,11 @@ jobs:
           name: Fastlane
           command:
             cd ~/uport-mobile/ios && bundle exec fastlane buildTheApp
+      - run:      
+          command: |
+            ./testsuites/terminal.scpt
+            sleep 5
+            python testsuites/test.py                  
       - persist_to_workspace:
           root: ~/uport-mobile
           paths:
