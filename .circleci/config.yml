@@ -146,7 +146,7 @@ jobs:
       - run:
           name: xcrun
           command: |
-            cd ~/uport-mobile/ios && xcrun instruments -w "iPhone 8 (11.3) [" || true
+            cd ~/uport-mobile/ios && xcrun instruments -w "iPhone 8 (11.2) [" || true
             pod install --verbose
             npm install
             yarn
