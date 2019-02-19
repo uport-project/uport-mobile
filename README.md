@@ -48,22 +48,29 @@ $ react-native run-ios
 ### Android setup
 
 This step depends on the [JavaScript environment setup](#javascript-environment-setup).
+
 It's also a good idea to run `yarn` every time you switch branches to sync the `node_modules` folder.
 
-- Easiest way is to install Android Studio. This will manage the SDK for you and makes life easier for non Android devs
+- Easiest way is to install Android Studio. This will manage the android SDK for you and makes life easier for non Android devs
 - Select the custom install option and select options for performance and AVD creation
 - Ensure to install both the minimum SDK 21 and the latest that the current version of React Native supports from the new project settings
 - Since the app uses push messaging to receive signing requests from dApps it needs to be integrated into a Firebase project.
     A `google-services.json` file must be placed in the `android/app/` folder.
-    You can get such a file by creating a firebase project [here](https://console.firebase.google.com)
+    You can get it by creating a project in the [firebase console](https://console.firebase.google.com)
 
 #### Run from Android Studio
-- load the `android` subfolder as a project in Android Studio
+
+- Load the `android` subfolder as a project in Android Studio
+
     **Do not upgrade any dependencies (gradle) if prompted by Android Studio**
+    
 - React native uses a packaging server to enable hot-reloading during debugging.
-    You'll need to run `yarn start` in a terminal window to start one.
+    
+    You'll need to run `yarn start` in a terminal window in the project root folder to start the packager.
     This needs to be done only once for a debugging session and you can use the same server between app restarts.
+    
 - With a packaging server running, you can now run the `app` runConfiguration by pressing the green play button in the tool window.
+
 - It will take a while to start the app for the first time because the packager needs to do it's job, during which you only see a splash-screen.   
 
 #### Run from command line
