@@ -3,19 +3,24 @@
 
 from appium import webdriver
 from appium.webdriver.common.touch_action import TouchAction
-from support.common_methods import select_element
+from support.common_methods import select_element, find_uportapp
+from os.path import expanduser
 
 import unittest
 import os
+import glob
 
 
 class identityTests(unittest.TestCase):
+
     def test_createIdentity(self):
+        this_dir =  os.path.abspath(os.path.dirname(__file__))
+        uportapp = find_uportapp()
         desired_caps = {}
         desired_caps['platformName'] = 'iOS'
         desired_caps['platformVersion'] = '12.1'
         desired_caps['deviceName'] = 'iPhone XR' # Run on simulator
-        desired_caps['app'] = os.path.abspath('/Users/snaa/Library/Developer/Xcode/DerivedData/uPortMobile-bxwemwbfpydxciaqxvdvtvjcvhkh/Build/Products/Debug-iphonesimulator/uPort.app') # Path to .app
+        desired_caps['app'] = os.path.join(os.path.abspath(this_dir + "/../../"),"Library", "Developer", "Xcode", "DerivedData", uportapp, "Build", "Products", "Debug-iphonesimulator", "uPort.app" )
         #desired_caps['fullReset'] = 'true'
         desired_caps['automationName'] = "XCUITest"
         self.wd = webdriver.Remote('http://0.0.0.0:4723/wd/hub', desired_caps)
@@ -100,7 +105,6 @@ class identityTests(unittest.TestCase):
 
         #self.wd.execute_script("mobile: key_event", 1)
         
-
 
 
 if __name__ == '__main__':
