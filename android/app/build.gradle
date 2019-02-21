@@ -256,7 +256,6 @@ configurations.all {
 }
 
 dependencies {
-    compile project(':react-native-fs')
     implementation(project(':react-native-firebase')) {
         transitive = false
     }

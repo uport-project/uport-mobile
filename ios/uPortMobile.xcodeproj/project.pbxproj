@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -67,7 +66,6 @@
 		A5AC875DFC734D23A46CBC6A /* NunitoSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1AA91B39D2B641E885395D0E /* NunitoSans-ExtraBoldItalic.ttf */; };
 		A5E6E91C4DDD470496F9A6A5 /* libRNRandomBytes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 544D74BA2AF94BF89CBE0725 /* libRNRandomBytes.a */; };
 		BB2AA137FC69402481534198 /* libRNImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16999B55454D4C328D7FACD3 /* libRNImagePicker.a */; };
-		BE087A3E22037B5D00341289 /* libRNFS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE087A3422037AEA00341289 /* libRNFS.a */; };
 		BFED6FE87DBC4919A58988CD /* libPasscodeAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB278FF1A5046B9972A3597 /* libPasscodeAuth.a */; };
 		C9AA0D89D8B94DBE8563DBB8 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 558725BDF2C6420A8E7A39AE /* EvilIcons.ttf */; };
 		CD2E0582425E4EEE8DE4DE21 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D0882EB75DA4CF2A10FEC3D /* FontAwesome.ttf */; };
@@ -368,20 +366,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
 			remoteInfo = RCTText;
-		};
-		BE087A3322037AEA00341289 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BE0879FE22037AEA00341289 /* RNFS.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F12AFB9B1ADAF8F800E0535D;
-			remoteInfo = RNFS;
-		};
-		BE087A3522037AEA00341289 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BE0879FE22037AEA00341289 /* RNFS.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6456441F1EB8DA9100672408;
-			remoteInfo = "RNFS-tvOS";
 		};
 		D142E55A1F25D77900A43483 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -701,7 +685,6 @@
 		AA88A1399B7B4B6D936652C2 /* NunitoSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NunitoSans-Light.ttf"; path = "../fonts/NunitoSans-Light.ttf"; sourceTree = "<group>"; };
 		AC8CE00CDBB3F3D8A93D2848 /* Pods-uPortMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uPortMobileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-uPortMobileTests/Pods-uPortMobileTests.release.xcconfig"; sourceTree = "<group>"; };
 		AD898EC7D861492DB6C6D6F8 /* NunitoSans-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NunitoSans-Black.ttf"; path = "../fonts/NunitoSans-Black.ttf"; sourceTree = "<group>"; };
-		BE0879FE22037AEA00341289 /* RNFS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNFS.xcodeproj; path = "../node_modules/react-native-fs/RNFS.xcodeproj"; sourceTree = "<group>"; };
 		BE4808EA30EA4B79B99DD6D0 /* libRNFirebase.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNFirebase.a; sourceTree = "<group>"; };
 		C5F3C6B0FF004DD6BCEE6C75 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
 		CD973928068447CEA3F98B20 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
@@ -732,7 +715,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE087A3E22037B5D00341289 /* libRNFS.a in Frameworks */,
 				6411C89C207C2310005033A9 /* libRNCamera.a in Frameworks */,
 				038F15CA1F9563DC00DF45E1 /* CoreBitcoin.framework in Frameworks */,
 				D142E5671F25D96500A43483 /* libReactNativeNavigation.a in Frameworks */,
@@ -1290,7 +1272,6 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				BE0879FE22037AEA00341289 /* RNFS.xcodeproj */,
 				6411C896207C22ED005033A9 /* RNCamera.xcodeproj */,
 				641915B2200ECEB70042DA49 /* ReactNativePermissions.xcodeproj */,
 				038F14DE1F954FC900DF45E1 /* OpenSSL-Universal */,
@@ -1354,15 +1335,6 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* uPort.app */,
 				00E356EE1AD99517003FC87E /* uPortMobileTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		BE0879FF22037AEA00341289 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BE087A3422037AEA00341289 /* libRNFS.a */,
-				BE087A3622037AEA00341289 /* libRNFS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1598,10 +1570,6 @@
 				{
 					ProductGroup = 703C673E1FC59E66004EC745 /* Products */;
 					ProjectRef = 1AA0C2A79F7B45DDB160DD3E /* RNFirebase.xcodeproj */;
-				},
-				{
-					ProductGroup = BE0879FF22037AEA00341289 /* Products */;
-					ProjectRef = BE0879FE22037AEA00341289 /* RNFS.xcodeproj */;
 				},
 				{
 					ProductGroup = 6061F8571D11730E0091F391 /* Products */;
@@ -1915,20 +1883,6 @@
 			fileType = archive.ar;
 			path = libRCTText.a;
 			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		BE087A3422037AEA00341289 /* libRNFS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNFS.a;
-			remoteRef = BE087A3322037AEA00341289 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		BE087A3622037AEA00341289 /* libRNFS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNFS.a;
-			remoteRef = BE087A3522037AEA00341289 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		D142E55B1F25D77900A43483 /* libReactNativeNavigation.a */ = {
