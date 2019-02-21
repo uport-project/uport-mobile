@@ -387,10 +387,7 @@ exports[`hd wallet renders Advanced screen 1`] = `
                 "justifyContent": "space-between",
                 "padding": 19,
               },
-              Object {
-                "borderBottomColor": "rgba(216,216,216,1)",
-                "borderBottomWidth": 1,
-              },
+              Object {},
             ]
           }
         >
@@ -444,6 +441,43 @@ exports[`hd wallet renders Advanced screen 1`] = `
             />
           </View>
         </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "rgba(216,216,216,1)",
+              "borderTopWidth": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "padding": 19,
+            },
+            Object {
+              "borderBottomColor": "rgba(216,216,216,1)",
+              "borderBottomWidth": 1,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "rgba(170,170,170,1)",
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 16,
+                "lineHeight": 22,
+              },
+            ]
+          }
+        >
+          Create Support Summary
+        </Text>
       </View>
     </View>
   </RCTScrollView>
@@ -837,10 +871,7 @@ exports[`legacy wallet renders Advanced screen without identity hub 1`] = `
                 "justifyContent": "space-between",
                 "padding": 19,
               },
-              Object {
-                "borderBottomColor": "rgba(216,216,216,1)",
-                "borderBottomWidth": 1,
-              },
+              Object {},
             ]
           }
         >
@@ -894,6 +925,43 @@ exports[`legacy wallet renders Advanced screen without identity hub 1`] = `
             />
           </View>
         </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "rgba(216,216,216,1)",
+              "borderTopWidth": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "padding": 19,
+            },
+            Object {
+              "borderBottomColor": "rgba(216,216,216,1)",
+              "borderBottomWidth": 1,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "rgba(170,170,170,1)",
+                "fontFamily": "NunitoSans-Regular",
+                "fontSize": 16,
+                "lineHeight": 22,
+              },
+            ]
+          }
+        >
+          Create Support Summary
+        </Text>
       </View>
     </View>
   </RCTScrollView>

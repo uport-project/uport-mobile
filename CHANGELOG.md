@@ -1,5 +1,14 @@
 # Change Log
 
+## [v415](https://github.com/uport-project/uport-mobile/tree/v415) (2019-02-21)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v414...v415)
+
+**Merged pull requests:**
+
+- fix android build instructions [\#78](https://github.com/uport-project/uport-mobile/pull/78) ([mirceanis](https://github.com/mirceanis))
+- Ability to create and share support summary file [\#76](https://github.com/uport-project/uport-mobile/pull/76) ([mi-xu](https://github.com/mi-xu))
+- upgrade uport-credentials [\#75](https://github.com/uport-project/uport-mobile/pull/75) ([mi-xu](https://github.com/mi-xu))
+
 ## [v414](https://github.com/uport-project/uport-mobile/tree/v414) (2019-02-01)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v413...v414)
 
