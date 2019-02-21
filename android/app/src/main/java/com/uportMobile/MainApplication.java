@@ -43,7 +43,10 @@ import io.invertase.firebase.RNFirebasePackage;
 import io.invertase.firebase.analytics.RNFirebaseAnalyticsPackage;
 import io.invertase.firebase.config.RNFirebaseRemoteConfigPackage;
 
-public class MainApplication extends NavigationApplication {
+import cl.json.RNSharePackage;
+import cl.json.ShareApplication;
+
+public class MainApplication extends NavigationApplication implements ShareApplication{
 
     @Override
     public void onCreate() {
@@ -67,10 +70,16 @@ public class MainApplication extends NavigationApplication {
     public boolean getUseDeveloperSupport() {
         return BuildConfig.DEBUG;
     }
+    
+    @Override
+    public String getFileProviderAuthority() {
+           return "com.uportMobile.provider";
+    }    
 
     protected List<ReactPackage> getPackages() {
         return Arrays.<ReactPackage>asList(
                 new MainReactPackage(),
+                new RNSharePackage(),
                 new RNFirebasePackage(),
                 new RNFirebaseRemoteConfigPackage(),
                 new SvgPackage(),
