@@ -476,7 +476,7 @@ exports[`hd wallet renders Advanced screen 1`] = `
             ]
           }
         >
-          Dump State
+          Create Support Summary
         </Text>
       </View>
     </View>
@@ -960,7 +960,7 @@ exports[`legacy wallet renders Advanced screen without identity hub 1`] = `
             ]
           }
         >
-          Dump State
+          Create Support Summary
         </Text>
       </View>
     </View>
