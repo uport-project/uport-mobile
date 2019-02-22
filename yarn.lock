@@ -12459,7 +12459,7 @@ uport-did-resolver@0.0.4-alpha2:
     did-resolver "0.0.6-alpha5"
     uport-lite "^1.0.3"
 
-"uport-graph@file:./../uport-graph":
+"uport-graph@file:../uport-graph":
   version "0.0.1"
   dependencies:
     "@types/node" "^11.9.4"
