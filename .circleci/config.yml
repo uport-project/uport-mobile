@@ -161,6 +161,10 @@ jobs:
           name: Fastlane
           command:
             cd ~/uport-mobile/ios && bundle exec fastlane buildTheApp
+      - run:
+          name: Build debug version of app
+          command:
+            cd ~/uport-mobile/ios react-native run-ios
       - run:      
           command: |
             ./testsuites/terminal.scpt
