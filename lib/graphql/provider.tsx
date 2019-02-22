@@ -3,9 +3,16 @@ import { ApolloClient } from 'apollo-client'
 import { ApolloProvider } from 'react-apollo'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import { SchemaLink } from 'apollo-link-schema'
+
 import { Provider } from 'react-redux'
-import { Api, schema } from 'uport-graph'
+import { Api, typeDefs, resolvers } from 'uport-graph'
 import { driver } from './db-rn-sqlite3'
+import { makeExecutableSchema } from 'graphql-tools'
+
+export const schema = makeExecutableSchema({
+  typeDefs,
+  resolvers,
+})
 
 const api = new Api(driver)
 

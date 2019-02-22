@@ -60,6 +60,8 @@
 		70304EFB221EB2C90092DB60 /* libRNShare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70304EF6221EB29F0092DB60 /* libRNShare.a */; };
 		70304EFD221EB2DD0092DB60 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70304EFC221EB2DD0092DB60 /* Social.framework */; };
 		70304EFF221EB2E60092DB60 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70304EFE221EB2E50092DB60 /* MessageUI.framework */; };
+		7030509822203C220092DB60 /* libSQLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7030509622203BFE0092DB60 /* libSQLite.a */; };
+		7030509A22203C340092DB60 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7030509922203C340092DB60 /* libsqlite3.0.tbd */; };
 		70D18C85218C53CB0004E667 /* file-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 70D18C4D218C53CB0004E667 /* file-icon.png */; };
 		70F06EA01FC5C160000BD332 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70F06E6E1FC5C15F000BD332 /* GoogleService-Info.plist */; };
 		7F465938BBBE499DA8ECEFF4 /* libTouchID.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B137393457A4411B6A82656 /* libTouchID.a */; };
@@ -342,6 +344,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RNShare;
+		};
+		7030509522203BFE0092DB60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7030505A22203BFE0092DB60 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E23D7B471ACEFE2A00C59171;
+			remoteInfo = SQLite;
 		};
 		703C67411FC59E66004EC745 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -681,6 +690,8 @@
 		70304EBE221EB29F0092DB60 /* RNShare.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNShare.xcodeproj; path = "../node_modules/react-native-share/ios/RNShare.xcodeproj"; sourceTree = "<group>"; };
 		70304EFC221EB2DD0092DB60 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		70304EFE221EB2E50092DB60 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		7030505A22203BFE0092DB60 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../node_modules/react-native-sqlite-storage/src/ios/SQLite.xcodeproj"; sourceTree = "<group>"; };
+		7030509922203C340092DB60 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		70D18C4D218C53CB0004E667 /* file-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "file-icon.png"; sourceTree = "<group>"; };
 		70F06E6E1FC5C15F000BD332 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "uPortMobile/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
@@ -729,6 +740,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7030509A22203C340092DB60 /* libsqlite3.0.tbd in Frameworks */,
+				7030509822203C220092DB60 /* libSQLite.a in Frameworks */,
 				70304EFF221EB2E60092DB60 /* MessageUI.framework in Frameworks */,
 				70304EFD221EB2DD0092DB60 /* Social.framework in Frameworks */,
 				70304EFB221EB2C90092DB60 /* libRNShare.a in Frameworks */,
@@ -1068,6 +1081,7 @@
 		240B33BF22EF467CB324BAB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7030509922203C340092DB60 /* libsqlite3.0.tbd */,
 				70304EFE221EB2E50092DB60 /* MessageUI.framework */,
 				70304EFC221EB2DD0092DB60 /* Social.framework */,
 				038F15C71F95630500DF45E1 /* CoreBitcoin.framework */,
@@ -1270,6 +1284,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		7030505B22203BFE0092DB60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7030509622203BFE0092DB60 /* libSQLite.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		703C673E1FC59E66004EC745 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -1299,6 +1321,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				7030505A22203BFE0092DB60 /* SQLite.xcodeproj */,
 				70304EBE221EB29F0092DB60 /* RNShare.xcodeproj */,
 				6411C896207C22ED005033A9 /* RNCamera.xcodeproj */,
 				641915B2200ECEB70042DA49 /* ReactNativePermissions.xcodeproj */,
@@ -1624,6 +1647,10 @@
 					ProjectRef = CD973928068447CEA3F98B20 /* RNVectorIcons.xcodeproj */;
 				},
 				{
+					ProductGroup = 7030505B22203BFE0092DB60 /* Products */;
+					ProjectRef = 7030505A22203BFE0092DB60 /* SQLite.xcodeproj */;
+				},
+				{
 					ProductGroup = 644844161CEF6C7C004FD57D /* Products */;
 					ProjectRef = E2CE7701FC7E4BEFAEC88B61 /* TouchID.xcodeproj */;
 				},
@@ -1887,6 +1914,13 @@
 			fileType = archive.ar;
 			path = libRNShare.a;
 			remoteRef = 70304EF5221EB29F0092DB60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7030509622203BFE0092DB60 /* libSQLite.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSQLite.a;
+			remoteRef = 7030509522203BFE0092DB60 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		703C67421FC59E66004EC745 /* libRNFirebase.a */ = {
