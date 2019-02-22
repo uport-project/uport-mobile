@@ -18,7 +18,7 @@
 
 import { Navigation, ScreenVisibilityListener as RNNScreenVisibilityListener } from 'react-native-navigation'
 import requestQueue from './utilities/requestQueue'
-import { Provider } from 'react-redux'
+import Provider from './graphql/provider'
 import store from './store/store'
 import { registerScreens } from './screens'
 import { Platform, NativeModules } from 'react-native'

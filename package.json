@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "local-uport-graph": "yarn add file:./../uport-graph",
     "build-solidity-coder": "browserify node_modules/web3/lib/solidity/coder.js --s Coder | derequire > lib/browserified/coder.js",
     "build-bip39": "browserify node_modules/bip39/index.js --s BIP39 | derequire > lib/browserified/bip39.js",
     "build-mnid": "browserify node_modules/mnid/lib/index.js --s MNID | derequire > lib/browserified/mnid.js",
@@ -71,6 +72,9 @@
   },
   "dependencies": {
     "analytics-react-native": "^1.1.0",
+    "apollo-cache-inmemory": "^1.4.3",
+    "apollo-client": "^2.4.13",
+    "apollo-link-schema": "^1.1.6",
     "babel-plugin-transform-runtime": "^6.23.0",
     "base-x": "^3.0.0",
     "base64url": "^3.0.0",
@@ -106,6 +110,7 @@
     "prop-types": "^15.6.0",
     "qs": "^6.1.0",
     "react": "16.3.1",
+    "react-apollo": "^2.4.1",
     "react-dom": "^16.2.0",
     "react-native": "^0.55.3",
     "react-native-animatable": "^1.2.4",
@@ -137,6 +142,7 @@
     "tslib": "^1.9.3",
     "uport-credentials": "^1.1.3",
     "uport-did-resolver": "^0.0.4",
+    "uport-graph": "file:./../uport-graph",
     "uport-identity": "2.0.0-beta",
     "uport-lite": "^1.0.2",
     "url-parse": "^1.1.7",
