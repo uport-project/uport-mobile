@@ -89,6 +89,11 @@ interface ScreenProps {
    * A footer component that works with KAV
    */
   footerNavComponent?: React.ReactNode
+
+  /**
+   * Use a keyboard avoiding view for text inputs
+   */
+  keyboardAvoiding?: boolean
 }
 
 const Screen: React.FunctionComponent<ScreenProps> & {
