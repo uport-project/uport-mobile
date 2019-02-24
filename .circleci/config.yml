@@ -169,13 +169,13 @@ jobs:
           command: |
             ./testsuites/terminal.scpt
             sleep 5
-            python testsuites/test.py                  
-      - persist_to_workspace:
-          root: ~/uport-mobile
-          paths:
-            - ios/gym
-      - store_artifacts:
-          path: ~/uport-mobile/ios/gym
+            cd ~/uport-mobile/testsuites python test.py                  
+      #- persist_to_workspace:
+      #    root: ~/uport-mobile
+      #    paths:
+      #      - ios/gym
+      #- store_artifacts:
+      #    path: ~/uport-mobile/ios/gym
 
   vault:
     docker:
