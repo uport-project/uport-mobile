@@ -23,7 +23,7 @@ class identityTests(unittest.TestCase):
         desired_caps['deviceName'] = 'iPhone XR' # Run on simulator
         cwd = os.getcwd()
         print cwd + " **current directory"
-        desired_caps['app'] = os.path.join(os.path.abspath(this_dir + "/../../"), "/", "Library", "Developer", "Xcode", "DerivedData", uportapp, "Build", "Intermediates.noindex", "ArchiveIntermediates", "uPortMobile", "BuildProductsPath", "Release-iphoneos", "uPort.app" )
+        desired_caps['app'] = os.path.abspath('/Users/distiller/uport-mobile/ios/build/Build/Products/Debug-iphonesimulator/uPort.app') # Path to target .app
         #desired_caps['fullReset'] = 'true'
         desired_caps['automationName'] = "XCUITest"
         self.wd = webdriver.Remote('http://0.0.0.0:4723/wd/hub', desired_caps)
