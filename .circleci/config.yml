@@ -164,6 +164,7 @@ jobs:
       - run:
           name: Build debug version of app
           command:
+            cd ~/uport-mobile
             yarn global add react-native-cli
             yarn
             react-native run-ios
