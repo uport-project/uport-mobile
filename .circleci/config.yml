@@ -164,7 +164,7 @@ jobs:
       - run:
           name: Build debug version of app
           command:
-            cd ~/uport-mobile/ios react-native run-ios
+            react-native run-ios
       - run:      
           command: |
             ./testsuites/terminal.scpt
