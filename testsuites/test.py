@@ -26,7 +26,7 @@ class identityTests(unittest.TestCase):
         self.wd = webdriver.Remote('http://0.0.0.0:4723/wd/hub', desired_caps)
         
         self.wd.implicitly_wait(10)
-        self.assertTrue(select_element(self.wd, "Create Identity").is_displayed()) #select create identity
+        self.assertTrue(select_element(self.wd, "Create Ident").is_displayed()) #select create identity
         select_element(self.wd, "Create Identity").click()
 
         self.assertTrue(select_element(self.wd, "Accept").is_displayed()) #  terms
