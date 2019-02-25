@@ -163,8 +163,7 @@ jobs:
             cd ~/uport-mobile/ios && bundle exec fastlane buildTheApp
       - run:
           name: Build debug version of app
-          command:
-            cd ~/uport-mobile
+          command: |
             yarn global add react-native-cli
             yarn
             react-native run-ios
