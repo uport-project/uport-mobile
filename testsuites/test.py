@@ -15,18 +15,21 @@ class identityTests(unittest.TestCase):
 
     def test_createIdentity(self):
         this_dir =  os.path.abspath(os.path.dirname(__file__))
+        print this_dir + " **file directory"
         uportapp = find_uportapp()
         desired_caps = {}
         desired_caps['platformName'] = 'iOS'
         desired_caps['platformVersion'] = '12.1'
         desired_caps['deviceName'] = 'iPhone XR' # Run on simulator
-        desired_caps['app'] = os.path.join(os.path.abspath(this_dir + "/../../"),"Library", "Developer", "Xcode", "DerivedData", uportapp, "Build", "Intermediates.noindex", "ArchiveIntermediates", "uPortMobile", "BuildProductsPath", "Release-iphoneos", "uPort.app" )
+        cwd = os.getcwd()
+        print cwd + " **current directory"
+        desired_caps['app'] = os.path.join(os.path.abspath(this_dir + "/../../"),"/Library", "Developer", "Xcode", "DerivedData", uportapp, "Build", "Intermediates.noindex", "ArchiveIntermediates", "uPortMobile", "BuildProductsPath", "Release-iphoneos", "uPort.app" )
         #desired_caps['fullReset'] = 'true'
         desired_caps['automationName'] = "XCUITest"
         self.wd = webdriver.Remote('http://0.0.0.0:4723/wd/hub', desired_caps)
         
         self.wd.implicitly_wait(10)
-        self.assertTrue(select_element(self.wd, "Create Ident").is_displayed()) #select create identity
+        self.assertTrue(select_element(self.wd, "Create Identity").is_displayed()) #select create identity
         select_element(self.wd, "Create Identity").click()
 
         self.assertTrue(select_element(self.wd, "Accept").is_displayed()) #  terms
