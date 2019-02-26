@@ -46,21 +46,14 @@ class Device extends React.Component<DeviceProps> {
   }
 
   render() {
+    const nonce = `${this.props.nonce || 0}`
+
     return (
       <Screen>
         <Section>
-          <ListItem
-            accessoryRight={Strings.abbreviate(this.props.deviceAddress, 12)}
-            externalLink={`${this.props.explorerUrl}/address/${
-              this.props.deviceAddress
-              }`}
-          >
-            Device Address
-          </ListItem>
-          <ListItem accessoryRight={wei2eth(this.props.fuel || 0) + ' ETH'}>
-            Device Gas
-          </ListItem>
-          <ListItem accessoryRight={this.props.nonce || 0} last>
+          <ListItem accessoryRight={Strings.abbreviate(this.props.deviceAddress, 12)}>Device Address</ListItem>
+          <ListItem accessoryRight={`${wei2eth(this.props.fuel || 0)} ETH`}>Device Gas</ListItem>
+          <ListItem accessoryRight={nonce} last>
             Device Nonce
           </ListItem>
         </Section>
