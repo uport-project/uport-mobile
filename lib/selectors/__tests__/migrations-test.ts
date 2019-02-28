@@ -47,6 +47,7 @@ completed.migrations.steps[MigrationStep[MigrationStep.CleanUpAfterMissingSeed]]
 completed.migrations.steps[MigrationStep[MigrationStep.IdentityManagerChangeOwner]] = MigrationStatus.Completed
 completed.migrations.steps[MigrationStep[MigrationStep.UpdatePreHDRootToHD]] = MigrationStatus.Completed
 completed.migrations.steps[MigrationStep[MigrationStep.UportRegistryDDORefresh]] = MigrationStatus.Completed
+completed.migrations.steps[MigrationStep[MigrationStep.MigrateLegacy]] = MigrationStatus.Completed
 
 describe('migrationTargets', () => {
   describe('empty', () => {

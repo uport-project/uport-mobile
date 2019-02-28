@@ -1,5 +1,13 @@
 # Change Log
 
+## [v416](https://github.com/uport-project/uport-mobile/tree/v416) (2019-02-28)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v415...v416)
+
+**Merged pull requests:**
+
+- \[Bugfix\] startup crash on android 9 [\#79](https://github.com/uport-project/uport-mobile/pull/79) ([mirceanis](https://github.com/mirceanis))
+- Migrate all old Identities to ETHR DID [\#59](https://github.com/uport-project/uport-mobile/pull/59) ([pelle](https://github.com/pelle))
+
 ## [v415](https://github.com/uport-project/uport-mobile/tree/v415) (2019-02-21)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v414...v415)
 
