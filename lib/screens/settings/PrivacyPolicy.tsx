@@ -277,7 +277,7 @@ Persistent
 
 const PrivacyPolicy = (props: void) => {
   return (
-    <Screen>
+    <Screen type={Screen.Types.Primary}>
       <Container flex={1}>
         <Container paddingLeft paddingRight paddingTop paddingBottom>
           <Text type={Text.Types.SubTitle}>Last modified May 24, 2018</Text>

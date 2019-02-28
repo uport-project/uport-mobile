@@ -77,7 +77,7 @@ export class Settings extends React.Component<SettingsProps> {
   }
 
   goToScreen(screenID: string) {
-    this.props.navigator.push({ screen: screenID })
+    this.props.navigator.push({ screen: screenID, navigatorStyle: { largeTitle: false } })
   }
 
   render() {
@@ -117,7 +117,7 @@ export class Settings extends React.Component<SettingsProps> {
         </Section>
         <Section>
           <ListItem onPress={() => this.goToScreen('settings.privacy')}>Privacy Policy</ListItem>
-          <ListItem last accessoryRight={'v1.2 (5/24/2018)'} onPress={() => this.goToScreen('settings.terms')}>
+          <ListItem last accessoryRight={'v1.2 (5/24/2018)'} onPress={() => this.goToScreen('onboarding2.Terms')}>
             Terms &amp; Conditions
           </ListItem>
         </Section>

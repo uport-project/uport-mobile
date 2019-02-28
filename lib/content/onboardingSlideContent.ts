@@ -19,8 +19,7 @@ export const OnboardingContent = ({ onboarding }: any): OnboardingSwiperSlide[] 
     {
       key: 'slide-3',
       heading: 'Sign up and sign in',
-      content:
-        'Login to traditional applications including a new wave of decentralized apps for gaming, finance, social media and much more!',
+      content: 'Enjoy quick, seamless, and often free access to new services.',
       image: onboarding.apps,
     },
   ]
