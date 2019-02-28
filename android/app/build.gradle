@@ -250,12 +250,14 @@ configurations.all {
                 "com.google.firebase:firebase-core:$play_services_version",
                 "com.google.firebase:firebase-messaging:$play_services_version",
                 "com.google.android.gms:play-services-gcm:$play_services_version",
-
+                "com.android.support:support-v4:$support_lib_version",
+                "com.android.support:appcompat-v7:$support_lib_version",
         )
     }
 }
 
 dependencies {
+    implementation project(':react-native-share')
     implementation(project(':react-native-firebase')) {
         transitive = false
     }

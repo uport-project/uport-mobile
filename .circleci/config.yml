@@ -53,7 +53,7 @@ jobs:
   android:
     working_directory: ~/uport-mobile/android
     docker:
-      - image: circleci/android:api-27-node8-alpha
+      - image: circleci/android:api-28-node8-alpha
         environment:
           YARN_VERSION: 1.2.1
           ANDROID_HOME:  /opt/android/sdk
@@ -146,7 +146,7 @@ jobs:
       - run:
           name: xcrun
           command: |
-            cd ~/uport-mobile/ios && xcrun instruments -w "iPhone 8 (11.3) [" || true
+            cd ~/uport-mobile/ios && xcrun instruments -w "iPhone 8 (11.2) [" || true
             pod install --verbose
             npm install
             yarn
@@ -170,7 +170,7 @@ jobs:
   deploy-android:
     working_directory: ~/uport-mobile/android
     docker:
-      - image: circleci/android:api-27-node8-alpha
+      - image: circleci/android:api-28-node8-alpha
     steps:
       - checkout:
           path: ~/uport-mobile

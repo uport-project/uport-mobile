@@ -35,13 +35,13 @@ import UportRegistryDDORefresh from './migrations/UportRegistryDDORefresh'
 import { hdRootAddress } from '../selectors/hdWallet';
 import { Alert } from 'react-native';
 
-export function * checkIfAbleToSign () : any {
+export function * checkIfAbleToSign(): any {
   const address = yield select(currentAddress)
   if (!address) return false
   return yield call(canSignFor, address)
 }
 
-export function * checkForLegacy () : any {
+export function * checkForLegacy(): any {
   const migrateable = yield select(migrateableIdentities)
   return (migrateable.length > 0)
 }
@@ -51,7 +51,7 @@ export function * alert(title: string, message: string) {
   yield call([Alert, Alert.alert], title, message)
 }
 
-export function * checkup () : any {
+export function * checkup(): any {
   const address = yield select(currentAddress)
   if (!address) return
   // console.log('id', (yield select(currentIdentityJS)))
@@ -65,7 +65,7 @@ export function * checkup () : any {
       } else {
         yield put(addMigrationTarget(MigrationTarget.Legacy))
       }
-    }  
+    }
   } else {
     const hd = yield select(isHD, address)
     if (hd) {
@@ -82,25 +82,25 @@ export function * checkup () : any {
       yield call(delay, 1000)
       yield call(NavigationActions.push, {
         screen: migrationScreens[target],
-        animationType: 'slide-up'
+        animationType: 'slide-up',
       })
     } else {
-      if (yield call(runMigrations, { type: RUN_MIGRATIONS, target})) {
+      if (yield call(runMigrations, { type: RUN_MIGRATIONS, target })) {
         // TODO this alert is only for the Legacy migration. If you add more like this in the future add logic to change this text
         yield call(alert,
-          'Your Identity has been upgraded', 
-          'You had an old test net identity. Thank you for being an early uPort user. We have now upgraded your identity to live on the Ethereum Mainnet.'
+          'Your Identity has been upgraded',
+          'You had an old test net identity. Thank you for being an early uPort user. We have now upgraded your identity to live on the Ethereum Mainnet.',
           )
       }
     }
   }
 }
 
-export function * runMigrations ({target} : TargetAction) : any {
+export function * runMigrations({ target }: TargetAction): any {
   yield put(startWorking(target))
-  const steps = targetRecipes[target]||[]
+  const steps = targetRecipes[target] || []
   let status
-  for (let step of steps) {
+  for (const step of steps) {
     yield call(performStep, step)
     status = yield select(migrationStepStatus, step)
     if (status !== MigrationStatus.Completed) break
@@ -114,7 +114,7 @@ export function * runMigrations ({target} : TargetAction) : any {
   }
 }
 
-export function * runImplementationStep (step: MigrationStep) : any {
+export function * runImplementationStep(step: MigrationStep): any {
   switch (step) {
     case MigrationStep.IdentityManagerChangeOwner:
       return yield call(IdentityManagerChangeOwner)
@@ -129,7 +129,7 @@ export function * runImplementationStep (step: MigrationStep) : any {
   }
 }
 
-export function * performStep (step: MigrationStep) : any {
+export function * performStep(step: MigrationStep): any {
   const status = yield select(migrationStepStatus, step)
   if (status === MigrationStatus.Completed) return
   yield put(startedMigrationStep(step))
@@ -139,9 +139,9 @@ export function * performStep (step: MigrationStep) : any {
     // console.log(step, `success: ${success}`)
     if (success) {
       yield put(stopWorking(step))
-      yield put(completedMigrationStep(step))  
+      yield put(completedMigrationStep(step))
     } else {
-      yield put(failedMigrationStep(step))  
+      yield put(failedMigrationStep(step))
     }
   } catch (error) {
     // console.log(step, error)
@@ -150,10 +150,10 @@ export function * performStep (step: MigrationStep) : any {
   }
 }
 
-function * migrationsSaga () {
+function * migrationsSaga() {
   yield all([
     takeEvery(LOADED_DB, checkup),
-    takeEvery(RUN_MIGRATIONS, runMigrations)
+    takeEvery(RUN_MIGRATIONS, runMigrations),
   ])
 }
 

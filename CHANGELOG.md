@@ -1,5 +1,23 @@
 # Change Log
 
+## [v415](https://github.com/uport-project/uport-mobile/tree/v415) (2019-02-21)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v414...v415)
+
+**Merged pull requests:**
+
+- fix android build instructions [\#78](https://github.com/uport-project/uport-mobile/pull/78) ([mirceanis](https://github.com/mirceanis))
+- Ability to create and share support summary file [\#76](https://github.com/uport-project/uport-mobile/pull/76) ([mi-xu](https://github.com/mi-xu))
+- upgrade uport-credentials [\#75](https://github.com/uport-project/uport-mobile/pull/75) ([mi-xu](https://github.com/mi-xu))
+
+## [v414](https://github.com/uport-project/uport-mobile/tree/v414) (2019-02-01)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v413...v414)
+
+**Merged pull requests:**
+
+- Comment out migration saga [\#73](https://github.com/uport-project/uport-mobile/pull/73) ([jasonhealy](https://github.com/jasonhealy))
+- Request Seed if it's missing [\#70](https://github.com/uport-project/uport-mobile/pull/70) ([pelle](https://github.com/pelle))
+- Initial GraphQL setup [\#53](https://github.com/uport-project/uport-mobile/pull/53) ([pelle](https://github.com/pelle))
+
 ## [v413](https://github.com/uport-project/uport-mobile/tree/v413) (2019-01-24)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v412...v413)
 

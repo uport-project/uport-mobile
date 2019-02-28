@@ -57,6 +57,9 @@
 		647D557D6BF24E09AAD7D010 /* NunitoSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD898EC7D861492DB6C6D6F8 /* NunitoSans-Black.ttf */; };
 		64E31FBD1DF234CF0062465A /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D17E3DCF1DEDEF6B00C460F9 /* libRCTAnimation.a */; };
 		69E63DA9211AB50D0037D567 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96745A031AA4489B8C047926 /* Feather.ttf */; };
+		70304EFB221EB2C90092DB60 /* libRNShare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70304EF6221EB29F0092DB60 /* libRNShare.a */; };
+		70304EFD221EB2DD0092DB60 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70304EFC221EB2DD0092DB60 /* Social.framework */; };
+		70304EFF221EB2E60092DB60 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70304EFE221EB2E50092DB60 /* MessageUI.framework */; };
 		70D18C85218C53CB0004E667 /* file-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 70D18C4D218C53CB0004E667 /* file-icon.png */; };
 		70F06EA01FC5C160000BD332 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70F06E6E1FC5C15F000BD332 /* GoogleService-Info.plist */; };
 		7F465938BBBE499DA8ECEFF4 /* libTouchID.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B137393457A4411B6A82656 /* libTouchID.a */; };
@@ -332,6 +335,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = E72EC1401F7ABB5A0001BC90;
 			remoteInfo = "RNDeviceInfo-tvOS";
+		};
+		70304EF5221EB29F0092DB60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70304EBE221EB29F0092DB60 /* RNShare.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNShare;
 		};
 		703C67411FC59E66004EC745 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -668,6 +678,9 @@
 		6500649E7CFC4628B23EB5FC /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		6E28852C4D604C8AB767F497 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		6F0D5A3203A64CCBB09EE7F6 /* PasscodeAuth.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = PasscodeAuth.xcodeproj; path = "../node_modules/react-native-passcode-auth/PasscodeAuth.xcodeproj"; sourceTree = "<group>"; };
+		70304EBE221EB29F0092DB60 /* RNShare.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNShare.xcodeproj; path = "../node_modules/react-native-share/ios/RNShare.xcodeproj"; sourceTree = "<group>"; };
+		70304EFC221EB2DD0092DB60 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		70304EFE221EB2E50092DB60 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		70D18C4D218C53CB0004E667 /* file-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "file-icon.png"; sourceTree = "<group>"; };
 		70F06E6E1FC5C15F000BD332 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "uPortMobile/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
@@ -716,6 +729,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70304EFF221EB2E60092DB60 /* MessageUI.framework in Frameworks */,
+				70304EFD221EB2DD0092DB60 /* Social.framework in Frameworks */,
+				70304EFB221EB2C90092DB60 /* libRNShare.a in Frameworks */,
 				6411C89C207C2310005033A9 /* libRNCamera.a in Frameworks */,
 				038F15CA1F9563DC00DF45E1 /* CoreBitcoin.framework in Frameworks */,
 				D142E5671F25D96500A43483 /* libReactNativeNavigation.a in Frameworks */,
@@ -1052,6 +1068,8 @@
 		240B33BF22EF467CB324BAB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				70304EFE221EB2E50092DB60 /* MessageUI.framework */,
+				70304EFC221EB2DD0092DB60 /* Social.framework */,
 				038F15C71F95630500DF45E1 /* CoreBitcoin.framework */,
 				2287C0EB70D14ECEA474A926 /* libz.tbd */,
 				11738FDE267F889900DBAB73 /* Pods_uPortMobile.framework */,
@@ -1244,6 +1262,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		70304EBF221EB29F0092DB60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70304EF6221EB29F0092DB60 /* libRNShare.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		703C673E1FC59E66004EC745 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -1273,6 +1299,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				70304EBE221EB29F0092DB60 /* RNShare.xcodeproj */,
 				6411C896207C22ED005033A9 /* RNCamera.xcodeproj */,
 				641915B2200ECEB70042DA49 /* ReactNativePermissions.xcodeproj */,
 				038F14DE1F954FC900DF45E1 /* OpenSSL-Universal */,
@@ -1585,6 +1612,10 @@
 					ProjectRef = 9D3BBAA8C3514D689B8A4ECA /* RNRandomBytes.xcodeproj */;
 				},
 				{
+					ProductGroup = 70304EBF221EB29F0092DB60 /* Products */;
+					ProjectRef = 70304EBE221EB29F0092DB60 /* RNShare.xcodeproj */;
+				},
+				{
 					ProductGroup = 708720D81F948CFF00652388 /* Products */;
 					ProjectRef = F973AADA9982437081A5BF65 /* RNSVG.xcodeproj */;
 				},
@@ -1849,6 +1880,13 @@
 			fileType = archive.ar;
 			path = "libRNDeviceInfo-tvOS.a";
 			remoteRef = 64E1EE6F1FCBBBD1003963D3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		70304EF6221EB29F0092DB60 /* libRNShare.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNShare.a;
+			remoteRef = 70304EF5221EB29F0092DB60 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		703C67421FC59E66004EC745 /* libRNFirebase.a */ = {
@@ -2230,12 +2268,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"$(PROJECT_DIR)/OpenSSL-Universal/lib-ios",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -2273,12 +2306,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"$(PROJECT_DIR)/OpenSSL-Universal/lib-ios",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -2302,7 +2330,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				COPY_HEADERS_RUN_UNIFDEF = NO;
-				CURRENT_PROJECT_VERSION = 413;
+				CURRENT_PROJECT_VERSION = 415;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 82SAVLYZ3K;
 				ENABLE_BITCODE = NO;
@@ -2371,7 +2399,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				COPY_HEADERS_RUN_UNIFDEF = NO;
-				CURRENT_PROJECT_VERSION = 413;
+				CURRENT_PROJECT_VERSION = 415;
 				DEVELOPMENT_TEAM = 82SAVLYZ3K;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
