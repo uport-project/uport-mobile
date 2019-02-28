@@ -53,6 +53,7 @@
 		8970994C317A4AF5B1B9AE84 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2287C0EB70D14ECEA474A926 /* libz.tbd */; };
 		9645633021CBC6B100FC1C48 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9645632E21CBC6B100FC1C48 /* Launch.storyboard */; };
 		96A54A9721949D250094C07A /* file-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 70D18C4D218C53CB0004E667 /* file-icon.png */; };
+		96B2A1802228ACCC005F3514 /* libRNShare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70304EF6221EB29F0092DB60 /* libRNShare.a */; };
 		96EF03122189C50C00D0B280 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96EF03072189C50B00D0B280 /* Feather.ttf */; };
 		96EF03132189C50C00D0B280 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96EF03082189C50B00D0B280 /* EvilIcons.ttf */; };
 		96EF03142189C50C00D0B280 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96EF03092189C50B00D0B280 /* Entypo.ttf */; };
@@ -736,9 +737,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70304EFF221EB2E60092DB60 /* MessageUI.framework in Frameworks */,
-				70304EFD221EB2DD0092DB60 /* Social.framework in Frameworks */,
-				70304EFB221EB2C90092DB60 /* libRNShare.a in Frameworks */,
+				96B2A1802228ACCC005F3514 /* libRNShare.a in Frameworks */,
 				6411C89C207C2310005033A9 /* libRNCamera.a in Frameworks */,
 				038F15CA1F9563DC00DF45E1 /* CoreBitcoin.framework in Frameworks */,
 				D142E5671F25D96500A43483 /* libReactNativeNavigation.a in Frameworks */,
