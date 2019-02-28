@@ -44,7 +44,7 @@ export const migrationTargets = createSelector(
 
 export const migrationStepStatus = createSelector(
   [migrations, currentStep],
-  (state, step) => state.steps[MigrationStep[step]] || MigrationStatus.NotStarted
+  (state, step: MigrationStep) => state.steps[step] || MigrationStatus.NotStarted
 )
 
 const targetCompleted = (state: MigrationState, target: MigrationTarget) => (targetRecipes[target] || []).every(step => state.steps[step] === MigrationStatus.Completed)
@@ -57,4 +57,9 @@ export const migrationCompleted = createSelector(
 export const pendingMigrations = createSelector(
   [migrations],
   state => state.targets.filter(target => !targetCompleted(state, target))
+)
+
+export const pendingMigration = createSelector(
+  [pendingMigrations, currentTarget],
+  (migrations, target) => migrations.find(t => t === target)
 )
