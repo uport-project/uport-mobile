@@ -181,7 +181,7 @@ exports[`renders MenuItem with title and link 1`] = `
       />
       <Icon
         color="rgba(216,216,216,1)"
-        name="ios-link-outline"
+        name="ios-link"
         size={20}
         style={
           Object {
@@ -465,7 +465,7 @@ exports[`renders MenuItem with title, value and link 1`] = `
       </Text>
       <Icon
         color="rgba(216,216,216,1)"
-        name="ios-link-outline"
+        name="ios-link"
         size={20}
         style={
           Object {

@@ -270,7 +270,7 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
           }
         >
           <Icon
-            name="ios-refresh-outline"
+            name="ios-refresh"
             size={24}
           />
         </View>
@@ -712,7 +712,7 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
           }
         >
           <Icon
-            name="ios-refresh-outline"
+            name="ios-refresh"
             size={24}
           />
         </View>
@@ -1148,7 +1148,7 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
           }
         >
           <Icon
-            name="ios-refresh-outline"
+            name="ios-refresh"
             size={24}
           />
         </View>
@@ -1539,7 +1539,7 @@ exports[`TransactionCard renders correctly with destination being invalid destin
           }
         >
           <Icon
-            name="ios-refresh-outline"
+            name="ios-refresh"
             size={24}
           />
         </View>
@@ -1971,7 +1971,7 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
           }
         >
           <Icon
-            name="ios-refresh-outline"
+            name="ios-refresh"
             size={24}
           />
         </View>
@@ -2362,7 +2362,7 @@ exports[`TransactionCard renders correctly with only request 1`] = `
           }
         >
           <Icon
-            name="ios-refresh-outline"
+            name="ios-refresh"
             size={24}
           />
         </View>
@@ -2753,7 +2753,7 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
           }
         >
           <Icon
-            name="ios-refresh-outline"
+            name="ios-refresh"
             size={24}
           />
         </View>
@@ -3191,7 +3191,7 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
           }
         >
           <Icon
-            name="ios-refresh-outline"
+            name="ios-refresh"
             size={24}
           />
         </View>
@@ -3582,7 +3582,7 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
           }
         >
           <Icon
-            name="ios-refresh-outline"
+            name="ios-refresh"
             size={24}
           />
         </View>
@@ -3973,7 +3973,7 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
           }
         >
           <Icon
-            name="ios-refresh-outline"
+            name="ios-refresh"
             size={24}
           />
         </View>

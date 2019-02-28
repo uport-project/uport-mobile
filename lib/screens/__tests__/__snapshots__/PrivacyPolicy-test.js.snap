@@ -4,7 +4,7 @@ exports[`renders Settings screen with 1`] = `
 <RCTSafeAreaView
   style={
     Object {
-      "backgroundColor": "#EFEEF3",
+      "backgroundColor": "#FFFFFF",
       "flex": 1,
     }
   }
@@ -35,7 +35,7 @@ exports[`renders Settings screen with 1`] = `
       }
       style={
         Object {
-          "backgroundColor": "#EFEEF3",
+          "backgroundColor": "#FFFFFF",
         }
       }
     >
@@ -45,7 +45,7 @@ exports[`renders Settings screen with 1`] = `
           style={
             Object {
               "alignItems": undefined,
-              "backgroundColor": "#EFEEF3",
+              "backgroundColor": "#FFFFFF",
               "borderRadius": undefined,
               "flex": 1,
               "flexDirection": undefined,
