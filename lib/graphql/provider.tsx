@@ -23,7 +23,7 @@ import { SchemaLink } from 'apollo-link-schema'
 import { createHttpLink } from 'apollo-link-http'
 import { Provider } from 'react-redux'
 import { Api, typeDefs, resolvers } from 'uport-graph-api'
-import { driver } from './db-rn-sqlite3'
+import { RnSqlite } from './db-rn-sqlite3'
 import { makeExecutableSchema } from 'graphql-tools'
 
 export const schema = makeExecutableSchema({
@@ -31,13 +31,15 @@ export const schema = makeExecutableSchema({
   resolvers,
 })
 
-const api = new Api(driver)
-
 let link
 
 // local
 // TODO make sure we handle this in UI by showing activity indicator
-api.initialize()
+const driver = new RnSqlite()
+const api = new Api(driver)
+driver.initialize().then(() => {
+  api.initialize()
+}).catch(e => console.log(e))
 link = new SchemaLink({
   schema,
   context: { api },

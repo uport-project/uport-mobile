@@ -1,23 +1,24 @@
 import { openDatabase } from 'react-native-sqlite-storage'
-import { DbDriver } from 'uport-graph'
+import { DbDriver } from 'uport-graph-api'
 
-const db = openDatabase(
-  { name: 'test', location: 'default' },
-  () => true,
-  () => true,
-)
-
-db.transaction((tx) => {
-  tx.executeSql('CREATE TABLE IF NOT EXISTS nodes (did TEXT)', [], (tx, results) => {
-      console.log("Query completed")
-    })
-})
-
-class RnSqlite implements DbDriver {
+export class RnSqlite implements DbDriver {
   private db: any
 
-  constructor(db: any) {
-    this.db = db
+  initialize(): Promise<any> {
+    const setDb = (db: any) => {
+      this.db = db
+    }
+
+    return new Promise((resolve, reject) => {
+      const db = openDatabase(
+        { name: 'test', location: 'default' },
+        () => {
+          setDb(db)
+          resolve()
+        },
+        reject,
+      )
+    })
   }
 
   all (sql: string, params: any, callback: (err: any, values: [any]) => void) {
@@ -29,5 +30,3 @@ class RnSqlite implements DbDriver {
   }
 
 }
-
-export const driver = new RnSqlite(db)
