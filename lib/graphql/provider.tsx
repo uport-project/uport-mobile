@@ -22,7 +22,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory'
 import { SchemaLink } from 'apollo-link-schema'
 import { createHttpLink } from 'apollo-link-http'
 import { Provider } from 'react-redux'
-import { Api, typeDefs, resolvers } from 'uport-graph'
+import { Api, typeDefs, resolvers } from 'uport-graph-api'
 import { driver } from './db-rn-sqlite3'
 import { makeExecutableSchema } from 'graphql-tools'
 
