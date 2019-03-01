@@ -16,6 +16,7 @@
 // along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
 //
 import React from 'react'
+import * as RX from 'reactxp'
 import { ApolloClient } from 'apollo-client'
 import { ApolloProvider } from 'react-apollo'
 import { InMemoryCache } from 'apollo-cache-inmemory'
@@ -32,14 +33,12 @@ export const schema = makeExecutableSchema({
 })
 
 let link
+let needsMigrations = false
 
 // local
-// TODO make sure we handle this in UI by showing activity indicator
 const driver = new RnSqlite()
 const api = new Api(driver)
-driver.initialize().then(() => {
-  api.initialize()
-}).catch(e => console.log(e))
+needsMigrations = true
 link = new SchemaLink({
   schema,
   context: { api },
@@ -47,7 +46,7 @@ link = new SchemaLink({
 
 // external
 // link = createHttpLink({
-//   uri: 'https://bce992e3.ngrok.io/graphql',
+//   uri: 'https://d3b5df20.ngrok.io/graphql',
 // })
 
 const graphqlClient = new ApolloClient({
@@ -55,10 +54,57 @@ const graphqlClient = new ApolloClient({
   link,
 })
 
-export default (props: any) => (
-  <ApolloProvider client={graphqlClient} >
-    <Provider store={props.store}>
-      {props.children}
-    </Provider>
-  </ApolloProvider>
-)
+interface Props extends RX.CommonProps {
+  store: any
+}
+interface State {
+  isRunningMigrations: boolean
+}
+
+class CustomProvider extends React.Component<Props, State> {
+
+  constructor(props: Props) {
+    super(props)
+    this.state = {
+      isRunningMigrations: needsMigrations,
+    }
+  }
+
+  componentDidMount() {
+    if (needsMigrations) {
+      driver.initialize()
+      .then(() => api.initialize())
+      .then(() => {
+        this.setState({ isRunningMigrations: false })
+      })
+      .catch(e => console.log(e))
+    }
+  }
+
+  render() {
+    if (this.state.isRunningMigrations) {
+      return (<RX.View style={Styles.container}>
+        <RX.Text>Updating data...</RX.Text>
+      </RX.View>)
+    }
+    else {
+      return (
+        <ApolloProvider client={graphqlClient} >
+          <Provider store={this.props.store}>
+            {this.props.children}
+          </Provider>
+      </ApolloProvider>
+      )
+    }
+  }
+}
+
+const Styles = {
+  container: RX.Styles.createViewStyle({
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  }),
+}
+
+export default CustomProvider
