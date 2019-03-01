@@ -36,6 +36,8 @@ const api = new Api(driver)
 let link
 
 // local
+// TODO make sure we handle this in UI by showing activity indicator
+api.initialize()
 link = new SchemaLink({
   schema,
   context: { api },

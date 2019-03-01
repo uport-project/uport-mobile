@@ -10427,6 +10427,9 @@ uport-did-resolver@0.0.4, uport-did-resolver@^0.0.4:
 "uport-graph-api@file:../uport-graph/graph-api":
   version "0.0.1"
 
+"uport-graph-api@file:./../uport-graph/graph-api":
+  version "0.0.1"
+
 uport-identity@2.0.0-beta:
   version "2.0.0-beta"
   resolved "https://registry.yarnpkg.com/uport-identity/-/uport-identity-2.0.0-beta.tgz#b52caff3aff1603d226854f072ac63eb2e318540"
