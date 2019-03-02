@@ -22,6 +22,7 @@ import { Provider } from 'react-redux'
 import store from './store/store'
 import { registerScreens } from './screens'
 import { Platform, NativeModules } from 'react-native'
+import { RNUportSigner } from 'react-native-uport-signer'
 
 import { handleURL } from './actions/requestActions'
 import { registerDeviceForNotifications } from 'uPortMobile/lib/actions/snsRegistrationActions'
@@ -66,8 +67,8 @@ export async function startMain(this: any) {
 export async function startOnboarding() {
   let startupScreen = 'onboarding.start'
 
-  if (NativeModules.NativeSignerModule && NativeModules.NativeSignerModule.hasSecureKeyguard) {
-    const hasSecureKeyguard = await NativeModules.NativeSignerModule.hasSecureKeyguard()
+  if (RNUportSigner && RNUportSigner.hasSecureKeyguard) {
+    const hasSecureKeyguard = await RNUportSigner.hasSecureKeyguard()
     if (!hasSecureKeyguard) {
       startupScreen = 'onboarding.securityBlock'
     }
