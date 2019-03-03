@@ -21,12 +21,27 @@ export class RnSqlite implements DbDriver {
     })
   }
 
-  all (sql: string, params: any, callback: (err: any, values: [any]) => void) {
+  run (sql: string, params: any): Promise<any> {
+    return new Promise((resolve, reject) => {
       this.db.transaction((tx: any) => {
         tx.executeSql(sql, params || [], (t, result) => {
-          callback(null, result.rows.raw())
+          //todo reject
+          resolve()
         })
       })
+    })
   }
+
+  rows (sql: string, params: any): Promise<any> {
+    return new Promise((resolve, reject) => {
+      this.db.transaction((tx: any) => {
+        tx.executeSql(sql, params || [], (t, result) => {
+          //todo reject
+          resolve(result.rows.raw())
+        })
+      })
+    })
+  }
+
 
 }
