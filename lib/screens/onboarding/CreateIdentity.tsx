@@ -134,7 +134,7 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
           </Modal>
           <Container alignItems={'center'} paddingBottom paddingTop>
             <Text type={Text.Types.H2} bold>
-              Personalise uport
+              Personalize uPort
             </Text>
             <Container paddingTop={5} paddingBottom>
               <Text type={Text.Types.SubTitle}>Add your name and optional photo</Text>
