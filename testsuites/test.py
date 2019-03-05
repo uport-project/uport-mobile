@@ -27,7 +27,7 @@ class identityTests(unittest.TestCase):
         #desired_caps['fullReset'] = 'true'
         desired_caps['automationName'] = "XCUITest"
         self.wd = webdriver.Remote('http://0.0.0.0:4723/wd/hub', desired_caps)
-        
+
         self.wd.implicitly_wait(10)
         self.assertTrue(select_element(self.wd, "Create Identity").is_displayed()) #select create identity
         select_element(self.wd, "Create Identity").click()
@@ -107,6 +107,11 @@ class identityTests(unittest.TestCase):
         #self.wd.find_element_by_id("WebView").send_keys(1)
 
         #self.wd.execute_script("mobile: key_event", 1)
+
+        directory = '%s/' % os.getcwd()
+        file_name = 'screenshot.png'
+
+        self.wd.save_screenshot(directory + file_name)
         
 
 
