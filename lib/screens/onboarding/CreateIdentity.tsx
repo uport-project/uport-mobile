@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Image, LayoutAnimation, Modal } from 'react-native'
+import { Image, Modal, KeyboardAvoidingView } from 'react-native'
 import { ActivityIndicator } from 'react-native'
 import { connect } from 'react-redux'
 import { Screen, Container, Input, Text, Button, Theme, Icon, Images, Checkbox, Section, ListItem } from '@kancha'
@@ -96,7 +96,7 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
         statusBarHidden
         footerNavComponent={
           <Container alignItems={'center'}>
-            <Container w={320}>
+            <Container w={300}>
               <Button
                 icon={
                   this.state.userCreatingidentity && <ActivityIndicator color={'white'} style={{ marginRight: 10 }} />
@@ -132,6 +132,7 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
           >
             {this.renderIdentityCreationSuccess()}
           </Modal>
+
           <Container alignItems={'center'} paddingBottom paddingTop>
             <Text type={Text.Types.H2} bold>
               Personalize uPort
@@ -185,7 +186,7 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
                   toggleSelect={checked => this.setState({ privacyAccepted: checked })}
                 />
               }
-              onPress={() => this.props.navigator.push({ screen: 'settings.privacy' })}
+              onPress={() => this.props.navigator.push({ screen: 'settings.privacy', navigatorStyle })}
             >
               Accept privacy policy
             </ListItem>
@@ -239,8 +240,6 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
    * Class methods
    */
   addImage(response: any) {
-    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut)
-
     this.setState({
       image: response.avatar,
     })

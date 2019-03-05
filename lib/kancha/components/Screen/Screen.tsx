@@ -28,7 +28,6 @@ import {
   KeyboardAvoidingView,
 } from 'react-native'
 import { Container, Theme, Device } from '@kancha'
-import { Images } from '../../constants/imagePaths'
 
 /** Temporary spacer size */
 const SPACER_SIZE = 1000
@@ -127,7 +126,9 @@ const Screen: React.FunctionComponent<ScreenProps> & {
   const mainContent = (
     <Container paddingBottom background={props.type} flex={1}>
       <StatusBar hidden={props.statusBarHidden} />
-      {props.children}
+      <KeyboardAvoidingView style={{ flex: 1 }} behavior={'padding'} enabled={false}>
+        {props.children}
+      </KeyboardAvoidingView>
     </Container>
   )
   /**
@@ -155,7 +156,7 @@ const Screen: React.FunctionComponent<ScreenProps> & {
    */
   const safeAreaView = (
     <SafeAreaView style={safeAreaViewStyle}>
-      <KeyboardAvoidingView style={{ flex: 1 }} behavior={'padding'} enabled={false}>
+      <Container flex={1}>
         {props.config === ScreenConfigs.SafeNoScroll ? mainContent : scrollViewContent}
 
         {props.footerNavComponent && (
@@ -163,7 +164,7 @@ const Screen: React.FunctionComponent<ScreenProps> & {
             {props.footerNavComponent}
           </Container>
         )}
-      </KeyboardAvoidingView>
+      </Container>
     </SafeAreaView>
   )
 

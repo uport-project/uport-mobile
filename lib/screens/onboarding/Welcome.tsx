@@ -24,7 +24,7 @@ class Welcome extends React.Component<WelcomeProps> {
             </Text>
           </Container>
           <Container flex={1} paddingTop alignItems={'center'}>
-            <Container w={320}>
+            <Container w={300}>
               <Button
                 bold
                 fullWidth

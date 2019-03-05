@@ -162,6 +162,7 @@
     "@types/react": "^16.7.20",
     "@types/react-native": "^0.57.32",
     "@types/react-native-navigation": "1.x",
+    "@types/react-native-permissions": "^1.1.1",
     "@types/react-native-tab-view": "^1.0.2",
     "@types/react-native-vector-icons": "^4.6.4",
     "@types/react-redux": "^7.0.0",

@@ -19,7 +19,7 @@ const Learn: React.FC<LearnProps> & { navigatorStyle: NavigatorStyle } = props =
       statusBarHidden
       footerNavComponent={
         <Container alignItems={'center'}>
-          <Container w={320}>
+          <Container w={300}>
             <Button
               fullWidth
               buttonText={'Continue'}

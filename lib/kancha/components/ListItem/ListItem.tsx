@@ -104,7 +104,7 @@ const ListItem: React.FunctionComponent<ListItemProps> = props => {
           paddingBottom={10}
           paddingRight
         >
-          <Container flex={1}>
+          <Container flexDirection={'row'} flex={1} viewStyle={{ overflow: 'hidden' }}>
             <Text type={Text.Types.ListItem}>{props.children}</Text>
           </Container>
           <Container flexDirection={'row'} alignItems={'center'}>
