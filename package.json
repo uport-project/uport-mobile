@@ -126,6 +126,7 @@
     "react-native-fs": "^2.13.3",
     "react-native-image-picker": "uport-project/react-native-image-picker#develop",
     "react-native-intent-launcher": "^0.1.1",
+    "react-native-keyboard-aware-scrollview": "^2.0.0",
     "react-native-navigation": "https://github.com/jasonhealy/react-native-navigation",
     "react-native-passcode-android": "uport-project/react-native-passcode-android#feature/support-api21",
     "react-native-passcode-auth": "blendlabs/react-native-passcode-auth#b79815e509ee082a5d83ccf0ea5e652e3567335c",

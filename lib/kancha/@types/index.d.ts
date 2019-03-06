@@ -2,6 +2,11 @@
  * Namespace decalaration for Global Kancha Types
  */
 
+declare module 'react-native-keyboard-aware-scrollview' {
+  var KeyboardAwareScrollView: any
+  export { KeyboardAwareScrollView }
+}
+
 declare namespace Kancha {
   export interface TextTypesStatic {
     H1: 'h1'

@@ -186,7 +186,15 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
                   toggleSelect={checked => this.setState({ privacyAccepted: checked })}
                 />
               }
-              onPress={() => this.props.navigator.push({ screen: 'settings.privacy', navigatorStyle })}
+              onPress={() =>
+                this.props.navigator.push({
+                  screen: 'settings.privacy',
+                  navigatorStyle: {
+                    navBarBackgroundColor: Theme.colors.primary.background,
+                    navBarButtonColor: Theme.colors.primary.brand,
+                  },
+                })
+              }
             >
               Accept privacy policy
             </ListItem>

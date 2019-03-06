@@ -8141,6 +8141,11 @@ react-native-intent-launcher@^0.1.1:
   resolved "https://registry.yarnpkg.com/react-native-intent-launcher/-/react-native-intent-launcher-0.1.1.tgz#ca703ca343f29772d9acfe2eb028d3dc873a32a6"
   integrity sha512-hLgbXZZ1taHj/LEGyu8ZI1aIfAMNMFxqQd6E/2l10wjjok0HneWH5UouERU6gYT5QQi+CiEydVFGqXtlHz9gtQ==
 
+react-native-keyboard-aware-scrollview@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-keyboard-aware-scrollview/-/react-native-keyboard-aware-scrollview-2.0.0.tgz#a7e2cc31b7230893db5dc05eb6fed3f358500a55"
+  integrity sha512-VAkwrmNl00bjTLXcvB3EMxuJ06kEBVRfpUq61X0Wl6Gdy1iSQpv04dVbZZ3KIflA9VhAlE0HFPltLLXIGjf2Ug==
+
 "react-native-navigation@https://github.com/jasonhealy/react-native-navigation":
   version "1.1.486"
   resolved "https://github.com/jasonhealy/react-native-navigation#4e35f595fff1d7f156388a7d646f31e4861f1e58"

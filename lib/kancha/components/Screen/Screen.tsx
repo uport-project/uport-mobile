@@ -18,15 +18,8 @@
  ***/
 
 import * as React from 'react'
-import {
-  SafeAreaView,
-  ScrollView,
-  ViewStyle,
-  ImageBackground,
-  ImageSourcePropType,
-  StatusBar,
-  KeyboardAvoidingView,
-} from 'react-native'
+import { SafeAreaView, ScrollView, ViewStyle, ImageBackground, ImageSourcePropType, StatusBar } from 'react-native'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scrollview'
 import { Container, Theme, Device } from '@kancha'
 
 /** Temporary spacer size */
@@ -126,16 +119,14 @@ const Screen: React.FunctionComponent<ScreenProps> & {
   const mainContent = (
     <Container paddingBottom background={props.type} flex={1}>
       <StatusBar hidden={props.statusBarHidden} />
-      <KeyboardAvoidingView style={{ flex: 1 }} behavior={'padding'} enabled={false}>
-        {props.children}
-      </KeyboardAvoidingView>
+      {props.children}
     </Container>
   )
   /**
    * Main content to be rendered within a ScrollView
    */
   const scrollViewContent = (
-    <ScrollView
+    <KeyboardAwareScrollView
       contentInset={scrollViewContentInset}
       contentOffset={scrollViewContentOffset}
       style={scrollViewStyle}
@@ -149,7 +140,7 @@ const Screen: React.FunctionComponent<ScreenProps> & {
         </React.Fragment>
       )}
       {mainContent}
-    </ScrollView>
+    </KeyboardAwareScrollView>
   )
   /**
    * Main content to be rendered within a SafeAreaView
@@ -194,6 +185,7 @@ Screen.defaultProps = {
   config: ScreenConfigs.SafeScroll,
   type: ScreenBrandOptions.Secondary,
   statusBarHidden: false,
+  keyboardAvoiding: false,
 }
 
 /**
