@@ -10,29 +10,51 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
   }
 >
   <View
-    enabled={false}
-    keyboardVerticalOffset={0}
-    onLayout={[Function]}
+    pointerEvents="auto"
     style={
-      Array [
-        Object {
-          "flex": 1,
-        },
-        Object {
-          "paddingBottom": 0,
-        },
-      ]
+      Object {
+        "alignItems": undefined,
+        "backgroundColor": undefined,
+        "borderRadius": undefined,
+        "flex": 1,
+        "flexDirection": undefined,
+        "height": undefined,
+        "justifyContent": undefined,
+        "marginBottom": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginTop": undefined,
+        "padding": undefined,
+        "paddingBottom": undefined,
+        "paddingHorizontal": undefined,
+        "paddingLeft": undefined,
+        "paddingRight": undefined,
+        "paddingTop": undefined,
+        "width": undefined,
+      }
     }
   >
     <RCTScrollView
       contentContainerStyle={Object {}}
-      contentInset={Object {}}
+      contentInset={
+        Object {
+          "bottom": 0,
+        }
+      }
       contentOffset={
         Object {
           "x": 0,
           "y": 0,
         }
       }
+      getTextInputRefs={[Function]}
+      onContentSizeChange={[Function]}
+      onLayout={[Function]}
+      onScroll={[Function]}
+      scrollEventThrottle={200}
+      scrollToBottomOnKBShow={false}
+      scrollToInputAdditionalOffset={75}
+      startScrolledToBottom={false}
       style={
         Object {
           "backgroundColor": "#EFEEF3",
@@ -232,13 +254,14 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           "backgroundColor": undefined,
                           "borderRadius": undefined,
                           "flex": 1,
-                          "flexDirection": undefined,
+                          "flexDirection": "row",
                           "height": undefined,
                           "justifyContent": undefined,
                           "marginBottom": undefined,
                           "marginLeft": undefined,
                           "marginRight": undefined,
                           "marginTop": undefined,
+                          "overflow": "hidden",
                           "padding": undefined,
                           "paddingBottom": undefined,
                           "paddingHorizontal": undefined,
@@ -406,13 +429,14 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           "backgroundColor": undefined,
                           "borderRadius": undefined,
                           "flex": 1,
-                          "flexDirection": undefined,
+                          "flexDirection": "row",
                           "height": undefined,
                           "justifyContent": undefined,
                           "marginBottom": undefined,
                           "marginLeft": undefined,
                           "marginRight": undefined,
                           "marginTop": undefined,
+                          "overflow": "hidden",
                           "padding": undefined,
                           "paddingBottom": undefined,
                           "paddingHorizontal": undefined,
@@ -571,13 +595,14 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           "backgroundColor": undefined,
                           "borderRadius": undefined,
                           "flex": 1,
-                          "flexDirection": undefined,
+                          "flexDirection": "row",
                           "height": undefined,
                           "justifyContent": undefined,
                           "marginBottom": undefined,
                           "marginLeft": undefined,
                           "marginRight": undefined,
                           "marginTop": undefined,
+                          "overflow": "hidden",
                           "padding": undefined,
                           "paddingBottom": undefined,
                           "paddingHorizontal": undefined,
@@ -734,13 +759,14 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           "backgroundColor": undefined,
                           "borderRadius": undefined,
                           "flex": 1,
-                          "flexDirection": undefined,
+                          "flexDirection": "row",
                           "height": undefined,
                           "justifyContent": undefined,
                           "marginBottom": undefined,
                           "marginLeft": undefined,
                           "marginRight": undefined,
                           "marginTop": undefined,
+                          "overflow": "hidden",
                           "padding": undefined,
                           "paddingBottom": undefined,
                           "paddingHorizontal": undefined,
@@ -993,13 +1019,14 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           "backgroundColor": undefined,
                           "borderRadius": undefined,
                           "flex": 1,
-                          "flexDirection": undefined,
+                          "flexDirection": "row",
                           "height": undefined,
                           "justifyContent": undefined,
                           "marginBottom": undefined,
                           "marginLeft": undefined,
                           "marginRight": undefined,
                           "marginTop": undefined,
+                          "overflow": "hidden",
                           "padding": undefined,
                           "paddingBottom": undefined,
                           "paddingHorizontal": undefined,
@@ -1158,13 +1185,14 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           "backgroundColor": undefined,
                           "borderRadius": undefined,
                           "flex": 1,
-                          "flexDirection": undefined,
+                          "flexDirection": "row",
                           "height": undefined,
                           "justifyContent": undefined,
                           "marginBottom": undefined,
                           "marginLeft": undefined,
                           "marginRight": undefined,
                           "marginTop": undefined,
+                          "overflow": "hidden",
                           "padding": undefined,
                           "paddingBottom": undefined,
                           "paddingHorizontal": undefined,
@@ -1321,13 +1349,14 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           "backgroundColor": undefined,
                           "borderRadius": undefined,
                           "flex": 1,
-                          "flexDirection": undefined,
+                          "flexDirection": "row",
                           "height": undefined,
                           "justifyContent": undefined,
                           "marginBottom": undefined,
                           "marginLeft": undefined,
                           "marginRight": undefined,
                           "marginTop": undefined,
+                          "overflow": "hidden",
                           "padding": undefined,
                           "paddingBottom": undefined,
                           "paddingHorizontal": undefined,
@@ -1580,13 +1609,14 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           "backgroundColor": undefined,
                           "borderRadius": undefined,
                           "flex": 1,
-                          "flexDirection": undefined,
+                          "flexDirection": "row",
                           "height": undefined,
                           "justifyContent": undefined,
                           "marginBottom": undefined,
                           "marginLeft": undefined,
                           "marginRight": undefined,
                           "marginTop": undefined,
+                          "overflow": "hidden",
                           "padding": undefined,
                           "paddingBottom": undefined,
                           "paddingHorizontal": undefined,
@@ -1743,13 +1773,14 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           "backgroundColor": undefined,
                           "borderRadius": undefined,
                           "flex": 1,
-                          "flexDirection": undefined,
+                          "flexDirection": "row",
                           "height": undefined,
                           "justifyContent": undefined,
                           "marginBottom": undefined,
                           "marginLeft": undefined,
                           "marginRight": undefined,
                           "marginTop": undefined,
+                          "overflow": "hidden",
                           "padding": undefined,
                           "paddingBottom": undefined,
                           "paddingHorizontal": undefined,
@@ -1944,6 +1975,7 @@ ShallowWrapper {
         </Section>,
       ],
       "config": "safeScroll",
+      "keyboardAvoiding": false,
       "statusBarHidden": false,
       "type": "secondary",
     },
@@ -2220,6 +2252,7 @@ ShallowWrapper {
           </Section>,
         ],
         "config": "safeScroll",
+        "keyboardAvoiding": false,
         "statusBarHidden": false,
         "type": "secondary",
       },
@@ -2496,29 +2529,51 @@ exports[`SettingsRoot renders without exploding 1`] = `
   }
 >
   <View
-    enabled={false}
-    keyboardVerticalOffset={0}
-    onLayout={[Function]}
+    pointerEvents="auto"
     style={
-      Array [
-        Object {
-          "flex": 1,
-        },
-        Object {
-          "paddingBottom": 0,
-        },
-      ]
+      Object {
+        "alignItems": undefined,
+        "backgroundColor": undefined,
+        "borderRadius": undefined,
+        "flex": 1,
+        "flexDirection": undefined,
+        "height": undefined,
+        "justifyContent": undefined,
+        "marginBottom": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginTop": undefined,
+        "padding": undefined,
+        "paddingBottom": undefined,
+        "paddingHorizontal": undefined,
+        "paddingLeft": undefined,
+        "paddingRight": undefined,
+        "paddingTop": undefined,
+        "width": undefined,
+      }
     }
   >
     <RCTScrollView
       contentContainerStyle={Object {}}
-      contentInset={Object {}}
+      contentInset={
+        Object {
+          "bottom": 0,
+        }
+      }
       contentOffset={
         Object {
           "x": 0,
           "y": 0,
         }
       }
+      getTextInputRefs={[Function]}
+      onContentSizeChange={[Function]}
+      onLayout={[Function]}
+      onScroll={[Function]}
+      scrollEventThrottle={200}
+      scrollToBottomOnKBShow={false}
+      scrollToInputAdditionalOffset={75}
+      startScrolledToBottom={false}
       style={
         Object {
           "backgroundColor": "#EFEEF3",
@@ -2718,13 +2773,14 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           "backgroundColor": undefined,
                           "borderRadius": undefined,
                           "flex": 1,
-                          "flexDirection": undefined,
+                          "flexDirection": "row",
                           "height": undefined,
                           "justifyContent": undefined,
                           "marginBottom": undefined,
                           "marginLeft": undefined,
                           "marginRight": undefined,
                           "marginTop": undefined,
+                          "overflow": "hidden",
                           "padding": undefined,
                           "paddingBottom": undefined,
                           "paddingHorizontal": undefined,
@@ -2892,13 +2948,14 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           "backgroundColor": undefined,
                           "borderRadius": undefined,
                           "flex": 1,
-                          "flexDirection": undefined,
+                          "flexDirection": "row",
                           "height": undefined,
                           "justifyContent": undefined,
                           "marginBottom": undefined,
                           "marginLeft": undefined,
                           "marginRight": undefined,
                           "marginTop": undefined,
+                          "overflow": "hidden",
                           "padding": undefined,
                           "paddingBottom": undefined,
                           "paddingHorizontal": undefined,
@@ -3057,13 +3114,14 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           "backgroundColor": undefined,
                           "borderRadius": undefined,
                           "flex": 1,
-                          "flexDirection": undefined,
+                          "flexDirection": "row",
                           "height": undefined,
                           "justifyContent": undefined,
                           "marginBottom": undefined,
                           "marginLeft": undefined,
                           "marginRight": undefined,
                           "marginTop": undefined,
+                          "overflow": "hidden",
                           "padding": undefined,
                           "paddingBottom": undefined,
                           "paddingHorizontal": undefined,
@@ -3220,13 +3278,14 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           "backgroundColor": undefined,
                           "borderRadius": undefined,
                           "flex": 1,
-                          "flexDirection": undefined,
+                          "flexDirection": "row",
                           "height": undefined,
                           "justifyContent": undefined,
                           "marginBottom": undefined,
                           "marginLeft": undefined,
                           "marginRight": undefined,
                           "marginTop": undefined,
+                          "overflow": "hidden",
                           "padding": undefined,
                           "paddingBottom": undefined,
                           "paddingHorizontal": undefined,
@@ -3479,13 +3538,14 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           "backgroundColor": undefined,
                           "borderRadius": undefined,
                           "flex": 1,
-                          "flexDirection": undefined,
+                          "flexDirection": "row",
                           "height": undefined,
                           "justifyContent": undefined,
                           "marginBottom": undefined,
                           "marginLeft": undefined,
                           "marginRight": undefined,
                           "marginTop": undefined,
+                          "overflow": "hidden",
                           "padding": undefined,
                           "paddingBottom": undefined,
                           "paddingHorizontal": undefined,
@@ -3644,13 +3704,14 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           "backgroundColor": undefined,
                           "borderRadius": undefined,
                           "flex": 1,
-                          "flexDirection": undefined,
+                          "flexDirection": "row",
                           "height": undefined,
                           "justifyContent": undefined,
                           "marginBottom": undefined,
                           "marginLeft": undefined,
                           "marginRight": undefined,
                           "marginTop": undefined,
+                          "overflow": "hidden",
                           "padding": undefined,
                           "paddingBottom": undefined,
                           "paddingHorizontal": undefined,
@@ -3807,13 +3868,14 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           "backgroundColor": undefined,
                           "borderRadius": undefined,
                           "flex": 1,
-                          "flexDirection": undefined,
+                          "flexDirection": "row",
                           "height": undefined,
                           "justifyContent": undefined,
                           "marginBottom": undefined,
                           "marginLeft": undefined,
                           "marginRight": undefined,
                           "marginTop": undefined,
+                          "overflow": "hidden",
                           "padding": undefined,
                           "paddingBottom": undefined,
                           "paddingHorizontal": undefined,
@@ -4066,13 +4128,14 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           "backgroundColor": undefined,
                           "borderRadius": undefined,
                           "flex": 1,
-                          "flexDirection": undefined,
+                          "flexDirection": "row",
                           "height": undefined,
                           "justifyContent": undefined,
                           "marginBottom": undefined,
                           "marginLeft": undefined,
                           "marginRight": undefined,
                           "marginTop": undefined,
+                          "overflow": "hidden",
                           "padding": undefined,
                           "paddingBottom": undefined,
                           "paddingHorizontal": undefined,
@@ -4229,13 +4292,14 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           "backgroundColor": undefined,
                           "borderRadius": undefined,
                           "flex": 1,
-                          "flexDirection": undefined,
+                          "flexDirection": "row",
                           "height": undefined,
                           "justifyContent": undefined,
                           "marginBottom": undefined,
                           "marginLeft": undefined,
                           "marginRight": undefined,
                           "marginTop": undefined,
+                          "overflow": "hidden",
                           "padding": undefined,
                           "paddingBottom": undefined,
                           "paddingHorizontal": undefined,
