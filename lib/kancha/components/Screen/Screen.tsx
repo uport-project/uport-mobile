@@ -117,7 +117,7 @@ const Screen: React.FunctionComponent<ScreenProps> & {
    * Main content to be rendered
    */
   const mainContent = (
-    <Container paddingBottom background={props.type} flex={1}>
+    <Container background={props.type} flex={1}>
       <StatusBar hidden={props.statusBarHidden} />
       {props.children}
     </Container>

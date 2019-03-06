@@ -77,7 +77,7 @@ export async function startAppModernUI(this: any) {
     },
     drawer: {
       right: {
-        screen: 'uport.scanner',
+        screen: 'screen.Scanner',
       },
       style: {
         rightDrawerWidth: 100,
