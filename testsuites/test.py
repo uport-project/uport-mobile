@@ -32,6 +32,11 @@ class identityTests(unittest.TestCase):
         self.assertTrue(select_element(self.wd, "Create Identity").is_displayed()) #select create identity
         select_element(self.wd, "Create Identity").click()
 
+        directory = '%s/' % os.getcwd()
+        file_name = 'screenshot.png'
+
+        self.wd.save_screenshot(directory + file_name)
+
         self.assertTrue(select_element(self.wd, "Accept").is_displayed()) #  terms
         select_element(self.wd, "Accept").click()
 
@@ -108,10 +113,7 @@ class identityTests(unittest.TestCase):
 
         #self.wd.execute_script("mobile: key_event", 1)
 
-        directory = '%s/' % os.getcwd()
-        file_name = 'screenshot.png'
-
-        self.wd.save_screenshot(directory + file_name)
+        
         
 
 
