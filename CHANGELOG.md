@@ -1,5 +1,15 @@
 # Change Log
 
+## [v418](https://github.com/uport-project/uport-mobile/tree/v418) (2019-03-07)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v417...v418)
+
+**Merged pull requests:**
+
+- Fix scrolling on seed recovery success screen [\#82](https://github.com/uport-project/uport-mobile/pull/82) ([jasonhealy](https://github.com/jasonhealy))
+
+## [v417](https://github.com/uport-project/uport-mobile/tree/v417) (2019-02-28)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v416...v417)
+
 ## [v416](https://github.com/uport-project/uport-mobile/tree/v416) (2019-02-28)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v415...v416)
 
