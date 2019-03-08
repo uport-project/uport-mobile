@@ -97,25 +97,8 @@ class identityTests(unittest.TestCase):
         #nextButton.click()
 
         self.wd.implicitly_wait(10)
+                
         
-        #tap textfield
-       # TouchAction(self.wd).tap(None, 163, 371, 1).perform()
-        
-
-        #self.wd.implicitly_wait(10)
-
-        #self.wd.sendeys
-        #shares = TouchAction(self.wd).tap(None, 163, 371, 1)
-        #actions = ActionChains(self.wd)
-        #shares.send_keys("1")
-
-        #self.wd.find_element_by_id("WebView").send_keys(1)
-
-        #self.wd.execute_script("mobile: key_event", 1)
-
-        
-        
-
 
 if __name__ == '__main__':
   unittest.main()
