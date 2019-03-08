@@ -26,6 +26,7 @@ import { Provider } from 'react-redux'
 import { Api, typeDefs, resolvers } from 'uport-graph-api'
 import { RnSqlite } from './db-rn-sqlite3'
 import { makeExecutableSchema } from 'graphql-tools'
+import mobileDidManager from './MobileDidManager'
 
 export const schema = makeExecutableSchema({
   typeDefs,
@@ -52,6 +53,30 @@ link = new SchemaLink({
 const graphqlClient = new ApolloClient({
   cache: new InMemoryCache(),
   link,
+  typeDefs: `
+    extend type Query {
+      currentDid: String!
+      myDids: [String!]!
+    }
+    extend type Mutation {
+      newDid: String
+    }
+  `,
+  resolvers: {
+    Query: {
+      currentDid: (_, _args, { }) => {
+        return mobileDidManager.getDids()[0]
+      },
+      myDids: (_, _args, { }) => {
+        return mobileDidManager.getDids()
+      },
+    },
+    Mutation: {
+      newDid: (_, _args, { }) => {
+        return mobileDidManager.newDid()
+      },
+    },
+  },  
 })
 
 interface Props extends RX.CommonProps {
