@@ -31,8 +31,9 @@ class identityTests(unittest.TestCase):
         self.wd.implicitly_wait(10)
         #screenshot
         directory = '%s/' % os.getcwd()
+        file_dir = os.path.abspath('/Users/distiller/uport-mobile/ios/build')
         file_name = 'screenshot.png'
-        self.wd.save_screenshot(directory + file_name)
+        self.wd.save_screenshot(file_dir + file_name)
 
         self.assertTrue(select_element(self.wd, "Create Identity").is_displayed()) #select create identity
         select_element(self.wd, "Create Identity").click()
