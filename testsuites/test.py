@@ -9,6 +9,7 @@ from os.path import expanduser
 import unittest
 import os
 import glob
+import shutil
 
 
 class identityTests(unittest.TestCase):
@@ -28,12 +29,12 @@ class identityTests(unittest.TestCase):
         desired_caps['automationName'] = "XCUITest"
         self.wd = webdriver.Remote('http://0.0.0.0:4723/wd/hub', desired_caps)
 
-        self.wd.implicitly_wait(10)
+        self.wd.implicitly_wait(120)
         #screenshot
         directory = '%s/' % os.getcwd()
-        file_dir = os.path.abspath('/Users/distiller/uport-mobile/ios/build')
         file_name = 'screenshot.png'
-        self.wd.save_screenshot(file_dir + file_name)
+        self.wd.save_screenshot(directory + file_name)
+        shutil.move("/Users/distiller/uport-mobile/screenshot.png", "/Users/distiller/uport-mobile/testsuites")
 
         self.assertTrue(select_element(self.wd, "Create Identity").is_displayed()) #select create identity
         select_element(self.wd, "Create Identity").click()
