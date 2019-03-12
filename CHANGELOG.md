@@ -1,5 +1,12 @@
 # Change Log
 
+## [v419](https://github.com/uport-project/uport-mobile/tree/v419) (2019-03-12)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v418...v419)
+
+**Merged pull requests:**
+
+- Prompt before creating new identity [\#83](https://github.com/uport-project/uport-mobile/pull/83) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v418](https://github.com/uport-project/uport-mobile/tree/v418) (2019-03-07)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v417...v418)
 
