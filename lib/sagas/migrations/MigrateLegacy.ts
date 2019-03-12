@@ -31,8 +31,28 @@ import { subAccounts, currentAddress, ownClaimsMap } from 'uPortMobile/lib/selec
 import { updateIdentity, storeIdentity } from 'uPortMobile/lib/actions/uportActions'
 import { hdRootAddress } from 'uPortMobile/lib/selectors/hdWallet'
 import { resetHDWallet } from 'uPortMobile/lib/actions/HDWalletActions'
+import { track } from 'uPortMobile/lib/actions/metricActions'
+
+import { Alert } from 'react-native'
 
 const step = MigrationStep.MigrateLegacy
+
+function* alertBeforeMigration(): any {
+  return Alert.alert(
+    'New identity',
+    // tslint:disable-next-line:max-line-length
+    'Your current identity is no longer supported. Create new identity to continue. By creating a new identity all of your uPort data including credentials will be lost and cannot be recovered.',
+    [
+      { text: 'Create New Identity', onPress: () => call(migrate) },
+      {
+        text: 'Cancel',
+        onPress: () => put(track('Legacy migration cancelled')),
+        style: 'cancel',
+      },
+    ],
+    { cancelable: true },
+  )
+}
 
 function* migrate(): any {
   const oldRoot = yield select(currentAddress)
@@ -101,4 +121,4 @@ function* migrate(): any {
   return true
 }
 
-export default migrate
+export default alertBeforeMigration
