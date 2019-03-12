@@ -17,7 +17,7 @@
 //
 import { expectSaga } from 'redux-saga-test-plan'
 import { select, call } from 'redux-saga/effects'
-import migrate from '../MigrateLegacy'
+import { migrate } from '../MigrateLegacy'
 import { MigrationStep } from 'uPortMobile/lib/constants/MigrationActionTypes'
 import { saveMessage } from 'uPortMobile/lib/actions/processStatusActions'
 import { resetHub } from 'uPortMobile/lib/actions/hubActions'
