@@ -54,7 +54,7 @@ function* alertBeforeMigration(): any {
   )
 }
 
-function* migrate(): any {
+export function* migrate(): any {
   const oldRoot = yield select(currentAddress)
   const accounts = yield select(subAccounts, oldRoot)
   const own = (yield select(ownClaimsMap)) || {}
