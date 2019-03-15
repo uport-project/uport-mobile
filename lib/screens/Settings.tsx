@@ -51,8 +51,9 @@ export class Settings extends React.Component<SettingsProps> {
       // this is the event type for button presses
       if (event.id === 'scan') {
         // this is the same id field from the static navigatorButtons definition
-        this.props.navigator.showModal({
+        this.props.navigator.push({
           screen: 'uport.scanner',
+          animated: false,
           navigatorStyle: {
             navBarHidden: true,
           },
