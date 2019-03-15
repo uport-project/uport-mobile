@@ -166,23 +166,23 @@ export async function startAppModernUI(this: any) {
 }
 
 // Add GUI startup tasks here for already onboarded user
-export async function startLegacyApp(this: any) {
-  Platform.OS === 'android' ? store.dispatch(registerDeviceForNotifications()) : null
-  Navigation.startSingleScreenApp({
-    screen: {
-      screen: 'uport.home', // unique ID registered with Navigation.registerScreen
-      // override the navigator style for the screen, see "Styling the navigator" below (optional)
-      // navigatorButtons: {} // override the nav buttons for the screen, see "Adding buttons to the navigator" below (optional)
-      navigatorStyle: {
-        navBarHidden: true,
-      }, // override the navigator style for the screen, see "Styling the navigator" below (optional)
-    },
-    // passProps: {}, // simple serializable object that will pass as props to all top screens (optional)
-    animationType: 'none', // optional, add transition animation to root change: 'none', 'slide-down', 'fade'
-  })
-  this.listener = screenVisibilityListener.register()
-  requestQueue((url: string) => store.dispatch(handleURL(url)))
-}
+// export async function startLegacyApp(this: any) {
+//   Platform.OS === 'android' ? store.dispatch(registerDeviceForNotifications()) : null
+//   Navigation.startSingleScreenApp({
+//     screen: {
+//       screen: 'uport.home', // unique ID registered with Navigation.registerScreen
+//       // override the navigator style for the screen, see "Styling the navigator" below (optional)
+//       // navigatorButtons: {} // override the nav buttons for the screen, see "Adding buttons to the navigator" below (optional)
+//       navigatorStyle: {
+//         navBarHidden: true,
+//       }, // override the navigator style for the screen, see "Styling the navigator" below (optional)
+//     },
+//     // passProps: {}, // simple serializable object that will pass as props to all top screens (optional)
+//     animationType: 'none', // optional, add transition animation to root change: 'none', 'slide-down', 'fade'
+//   })
+//   this.listener = screenVisibilityListener.register()
+//   requestQueue((url: string) => store.dispatch(handleURL(url)))
+// }
 
 // Add GUI startup tasks here for onboarding new user
 export async function startOnboarding() {
