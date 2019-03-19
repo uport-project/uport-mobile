@@ -17,13 +17,31 @@
 //
 import { delay } from 'redux-saga'
 import { all, call, put, select, takeEvery } from 'redux-saga/effects'
-import { addMigrationTarget, completedMigrationStep, failedMigrationStep, startedMigrationStep } from 'uPortMobile/lib/actions/migrationActions'
+import {
+  addMigrationTarget,
+  completedMigrationStep,
+  failedMigrationStep,
+  startedMigrationStep,
+} from 'uPortMobile/lib/actions/migrationActions'
 import { completeProcess, failProcess, startWorking, stopWorking } from 'uPortMobile/lib/actions/processStatusActions'
 import { LOADED_DB } from 'uPortMobile/lib/constants/GlobalActionTypes'
-import { MigrationStatus, MigrationStep, MigrationTarget, RUN_MIGRATIONS, TargetAction, targetRecipes, migrationScreens } from 'uPortMobile/lib/constants/MigrationActionTypes'
+import {
+  MigrationStatus,
+  MigrationStep,
+  MigrationTarget,
+  RUN_MIGRATIONS,
+  TargetAction,
+  targetRecipes,
+  migrationScreens,
+} from 'uPortMobile/lib/constants/MigrationActionTypes'
 import { canSignFor, hasWorkingSeed } from 'uPortMobile/lib/sagas/keychain'
 import { isFullyHD, isHD } from 'uPortMobile/lib/selectors/chains'
-import { currentAddress, migrateableIdentities, hasMainnetAccounts, currentIdentityJS } from 'uPortMobile/lib/selectors/identities'
+import {
+  currentAddress,
+  migrateableIdentities,
+  hasMainnetAccounts,
+  currentIdentityJS,
+} from 'uPortMobile/lib/selectors/identities'
 import { migrationStepStatus, migrationTargets, pendingMigrations } from 'uPortMobile/lib/selectors/migrations'
 import { NavigationActions } from 'uPortMobile/lib/utilities/NavigationActions'
 import { hasAttestations } from '../selectors/attestations'
@@ -32,26 +50,26 @@ import IdentityManagerChangeOwner from './migrations/IdentityManagerChangeOwner'
 import MigrateLegacy from './migrations/MigrateLegacy'
 import UpdatePreHDRootToHD from './migrations/UpdatePreHDRootToHD'
 import UportRegistryDDORefresh from './migrations/UportRegistryDDORefresh'
-import { hdRootAddress } from '../selectors/hdWallet';
-import { Alert } from 'react-native';
+import { hdRootAddress } from '../selectors/hdWallet'
+import { Alert } from 'react-native'
 
-export function * checkIfAbleToSign(): any {
+export function* checkIfAbleToSign(): any {
   const address = yield select(currentAddress)
   if (!address) return false
   return yield call(canSignFor, address)
 }
 
-export function * checkForLegacy(): any {
+export function* checkForLegacy(): any {
   const migrateable = yield select(migrateableIdentities)
-  return (migrateable.length > 0)
+  return migrateable.length > 0
 }
 
-export function * alert(title: string, message: string) {
+export function* alert(title: string, message: string) {
   yield call(delay, 500)
   yield call([Alert, Alert.alert], title, message)
 }
 
-export function * checkup(): any {
+export function* checkup(): any {
   const address = yield select(currentAddress)
   if (!address) return
   // console.log('id', (yield select(currentIdentityJS)))
@@ -76,7 +94,7 @@ export function * checkup(): any {
   }
   const pending = yield select(pendingMigrations)
   // console.log('pending migrations', pending)
-  if (pending.length > 0 ) {
+  if (pending.length > 0) {
     const target = pending[0]
     if (migrationScreens[target]) {
       yield call(delay, 1000)
@@ -87,16 +105,17 @@ export function * checkup(): any {
     } else {
       if (yield call(runMigrations, { type: RUN_MIGRATIONS, target })) {
         // TODO this alert is only for the Legacy migration. If you add more like this in the future add logic to change this text
-        yield call(alert,
+        yield call(
+          alert,
           'Your Identity has been upgraded',
           'You had an old test net identity. Thank you for being an early uPort user. We have now upgraded your identity to live on the Ethereum Mainnet.',
-          )
+        )
       }
     }
   }
 }
 
-export function * runMigrations({ target }: TargetAction): any {
+export function* runMigrations({ target }: TargetAction): any {
   yield put(startWorking(target))
   const steps = targetRecipes[target] || []
   let status
@@ -114,7 +133,7 @@ export function * runMigrations({ target }: TargetAction): any {
   }
 }
 
-export function * runImplementationStep(step: MigrationStep): any {
+export function* runImplementationStep(step: MigrationStep): any {
   switch (step) {
     case MigrationStep.IdentityManagerChangeOwner:
       return yield call(IdentityManagerChangeOwner)
@@ -129,7 +148,7 @@ export function * runImplementationStep(step: MigrationStep): any {
   }
 }
 
-export function * performStep(step: MigrationStep): any {
+export function* performStep(step: MigrationStep): any {
   const status = yield select(migrationStepStatus, step)
   if (status === MigrationStatus.Completed) return
   yield put(startedMigrationStep(step))
@@ -150,11 +169,8 @@ export function * performStep(step: MigrationStep): any {
   }
 }
 
-function * migrationsSaga() {
-  yield all([
-    takeEvery(LOADED_DB, checkup),
-    takeEvery(RUN_MIGRATIONS, runMigrations),
-  ])
+function* migrationsSaga() {
+  yield all([takeEvery(LOADED_DB, checkup), takeEvery(RUN_MIGRATIONS, runMigrations)])
 }
 
 export default migrationsSaga

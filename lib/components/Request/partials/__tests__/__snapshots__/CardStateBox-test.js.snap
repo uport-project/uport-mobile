@@ -51,7 +51,7 @@ exports[`CardStateBox renders error correctly 1`] = `
         style={
           Object {
             "color": undefined,
-            "fontFamily": "NunitoSans-Bold",
+            "fontFamily": undefined,
             "fontSize": 18,
             "letterSpacing": 1,
             "lineHeight": 24,
@@ -68,7 +68,7 @@ exports[`CardStateBox renders error correctly 1`] = `
         style={
           Object {
             "color": undefined,
-            "fontFamily": "NunitoSans-Bold",
+            "fontFamily": undefined,
             "fontSize": 12,
             "letterSpacing": 1,
             "lineHeight": 15,
@@ -148,7 +148,7 @@ exports[`CardStateBox renders pending correctly 1`] = `
       style={
         Object {
           "color": "#FFFFFF",
-          "fontFamily": "NunitoSans-Bold",
+          "fontFamily": undefined,
           "fontSize": 18,
           "letterSpacing": 1,
           "lineHeight": 24,
@@ -223,7 +223,7 @@ exports[`CardStateBox renders success correctly 1`] = `
       style={
         Object {
           "color": "#FFFFFF",
-          "fontFamily": "NunitoSans-Bold",
+          "fontFamily": undefined,
           "fontSize": 18,
           "letterSpacing": 1,
           "lineHeight": 24,

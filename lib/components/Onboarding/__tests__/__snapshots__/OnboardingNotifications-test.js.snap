@@ -6,7 +6,6 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
     Object {
       "backgroundColor": "white",
       "flex": 1,
-      "paddingTop": 10,
     }
   }
 >
@@ -34,7 +33,6 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
       Object {
         "backgroundColor": "white",
         "flex": 1,
-        "paddingTop": 10,
       }
     }
   >
@@ -51,7 +49,7 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
             undefined,
             Object {
               "color": "#3c3a49",
-              "fontFamily": "NunitoSans-Regular",
+              "fontFamily": undefined,
               "fontSize": 24,
               "lineHeight": 30,
               "marginBottom": 40,
@@ -94,7 +92,7 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
             undefined,
             Object {
               "color": "#3c3a49",
-              "fontFamily": "NunitoSans-Regular",
+              "fontFamily": undefined,
               "fontSize": 16,
               "lineHeight": 27,
               "marginBottom": 15,
@@ -141,7 +139,7 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
           }
         >
           <Icon
-            color="rgba(92,80,202,1)"
+            color="#6A54D1"
             name="ios-checkmark-circle-outline"
             size={32}
           />
@@ -174,7 +172,7 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
                 undefined,
                 Object {
                   "color": "rgba(74,74,74,1)",
-                  "fontFamily": "NunitoSans-Light",
+                  "fontFamily": undefined,
                   "fontSize": 16,
                   "lineHeight": 22,
                   "marginLeft": 16,
@@ -198,7 +196,7 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
           }
         >
           <Icon
-            color="rgba(92,80,202,1)"
+            color="#6A54D1"
             name="ios-checkmark-circle-outline"
             size={32}
           />
@@ -231,7 +229,7 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
                 undefined,
                 Object {
                   "color": "rgba(74,74,74,1)",
-                  "fontFamily": "NunitoSans-Light",
+                  "fontFamily": undefined,
                   "fontSize": 16,
                   "lineHeight": 22,
                   "marginLeft": 16,
@@ -255,7 +253,7 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
           }
         >
           <Icon
-            color="rgba(92,80,202,1)"
+            color="#6A54D1"
             name="ios-checkmark-circle-outline"
             size={32}
           />
@@ -288,7 +286,7 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
                 undefined,
                 Object {
                   "color": "rgba(74,74,74,1)",
-                  "fontFamily": "NunitoSans-Light",
+                  "fontFamily": undefined,
                   "fontSize": 16,
                   "lineHeight": 22,
                   "marginLeft": 16,
@@ -312,7 +310,7 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
           }
         >
           <Icon
-            color="rgba(92,80,202,1)"
+            color="#6A54D1"
             name="ios-checkmark-circle-outline"
             size={32}
           />
@@ -345,7 +343,7 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
                 undefined,
                 Object {
                   "color": "rgba(74,74,74,1)",
-                  "fontFamily": "NunitoSans-Light",
+                  "fontFamily": undefined,
                   "fontSize": 16,
                   "lineHeight": 22,
                   "marginLeft": 16,
@@ -420,7 +418,7 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
                     "marginRight": 15,
                   },
                   Object {
-                    "borderColor": "rgba(92,80,202,1)",
+                    "borderColor": "#6A54D1",
                   },
                 ],
               ]
@@ -433,20 +431,20 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
                   Array [
                     Object {
                       "color": "rgba(54,184,123,1)",
-                      "fontFamily": "NunitoSans-Bold",
+                      "fontFamily": undefined,
                       "fontSize": 18,
                       "lineHeight": 25,
                       "padding": 3,
                     },
                     Object {
-                      "color": "rgba(92,80,202,1)",
+                      "color": "#6A54D1",
                     },
                   ],
                   Object {},
@@ -500,13 +498,13 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
                   Object {
-                    "color": "rgba(92,80,202,1)",
-                    "fontFamily": "NunitoSans-Regular",
+                    "color": "#6A54D1",
+                    "fontFamily": undefined,
                     "fontSize": 18,
                     "lineHeight": 25,
                   },
@@ -526,7 +524,6 @@ exports[`OnboardingNotifications renders Onboarding Notifications screen 1`] = `
 
 exports[`OnboardingNotifications renders a connected component as expected 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ConectedComponent
     navigator={FakeNavigator {}}
@@ -535,8 +532,10 @@ ShallowWrapper {
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -600,6 +599,20 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
     "context": Object {
@@ -611,7 +624,9 @@ ShallowWrapper {
         "replaceReducer": [Function],
         "subscribe": [Function],
       },
+      "storeSubscription": undefined,
     },
   },
+  Symbol(enzyme.__childContext__): null,
 }
 `;

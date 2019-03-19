@@ -47,7 +47,7 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
             Array [
               Object {
                 "color": "rgba(138,155,161,1.0)",
-                "fontFamily": "NunitoSans-Regular",
+                "fontFamily": undefined,
                 "fontSize": 13,
               },
               Object {
@@ -106,7 +106,7 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
             ellipsizeMode="tail"
             style={
               Object {
-                "color": "rgba(92,80,202,1)",
+                "color": "#6A54D1",
                 "fontSize": 16,
               }
             }
@@ -122,7 +122,7 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Bold",
+            "fontFamily": "Montserrat",
             "fontSize": 20,
             "lineHeight": 26,
             "marginLeft": 23,
@@ -182,10 +182,9 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
                   "justifyContent": "center",
                 },
                 Object {
-                  "backgroundColor": "white",
-                  "borderRadius": 3,
-                  "height": 70,
-                  "width": 70,
+                  "borderRadius": 30,
+                  "height": 60,
+                  "width": 60,
                 },
               ]
             }
@@ -194,24 +193,24 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
               resizeMode="cover"
               source={
                 Object {
-                  "testUri": "../../../images/eth-symbol2.png",
+                  "testUri": "../../../assets/images/eth-symbol2.png",
                 }
               }
               style={
                 Array [
                   Object {
-                    "borderRadius": 3,
-                    "height": 70,
-                    "width": 70,
+                    "borderRadius": 30,
+                    "height": 60,
+                    "width": 60,
                   },
                   Object {
                     "position": "absolute",
                   },
                   Array [
                     Object {
-                      "borderRadius": 3,
-                      "height": 70,
-                      "width": 70,
+                      "borderRadius": 30,
+                      "height": 60,
+                      "width": 60,
                     },
                     undefined,
                   ],
@@ -271,7 +270,7 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
           }
         >
           <Icon
-            name="ios-refresh-outline"
+            name="ios-refresh"
             size={24}
           />
         </View>
@@ -318,7 +317,7 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
           }
         >
           <Icon
-            color="rgba(92,80,202,1)"
+            color="#6A54D1"
             name="ios-information-circle-outline"
             size={15}
           />
@@ -423,7 +422,7 @@ there
             style={
               Array [
                 Object {
-                  "fontFamily": "NunitoSans-Bold",
+                  "fontFamily": "Montserrat",
                   "fontSize": 18,
                   "textAlign": "center",
                 },
@@ -490,7 +489,7 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
             Array [
               Object {
                 "color": "rgba(138,155,161,1.0)",
-                "fontFamily": "NunitoSans-Regular",
+                "fontFamily": undefined,
                 "fontSize": 13,
               },
               Object {
@@ -549,7 +548,7 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
             ellipsizeMode="tail"
             style={
               Object {
-                "color": "rgba(92,80,202,1)",
+                "color": "#6A54D1",
                 "fontSize": 16,
               }
             }
@@ -565,7 +564,7 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Bold",
+            "fontFamily": "Montserrat",
             "fontSize": 20,
             "lineHeight": 26,
             "marginLeft": 23,
@@ -625,10 +624,9 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
                   "justifyContent": "center",
                 },
                 Object {
-                  "backgroundColor": "white",
-                  "borderRadius": 3,
-                  "height": 70,
-                  "width": 70,
+                  "borderRadius": 30,
+                  "height": 60,
+                  "width": 60,
                 },
               ]
             }
@@ -637,24 +635,24 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
               resizeMode="cover"
               source={
                 Object {
-                  "testUri": "../../../images/eth-symbol2.png",
+                  "testUri": "../../../assets/images/eth-symbol2.png",
                 }
               }
               style={
                 Array [
                   Object {
-                    "borderRadius": 3,
-                    "height": 70,
-                    "width": 70,
+                    "borderRadius": 30,
+                    "height": 60,
+                    "width": 60,
                   },
                   Object {
                     "position": "absolute",
                   },
                   Array [
                     Object {
-                      "borderRadius": 3,
-                      "height": 70,
-                      "width": 70,
+                      "borderRadius": 30,
+                      "height": 60,
+                      "width": 60,
                     },
                     undefined,
                   ],
@@ -714,7 +712,7 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
           }
         >
           <Icon
-            name="ios-refresh-outline"
+            name="ios-refresh"
             size={24}
           />
         </View>
@@ -761,7 +759,7 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
           }
         >
           <Icon
-            color="rgba(92,80,202,1)"
+            color="#6A54D1"
             name="ios-information-circle-outline"
             size={15}
           />
@@ -860,7 +858,7 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
             style={
               Array [
                 Object {
-                  "fontFamily": "NunitoSans-Bold",
+                  "fontFamily": "Montserrat",
                   "fontSize": 18,
                   "textAlign": "center",
                 },
@@ -927,7 +925,7 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
             Array [
               Object {
                 "color": "rgba(138,155,161,1.0)",
-                "fontFamily": "NunitoSans-Regular",
+                "fontFamily": undefined,
                 "fontSize": 13,
               },
               Object {
@@ -986,7 +984,7 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
             ellipsizeMode="tail"
             style={
               Object {
-                "color": "rgba(92,80,202,1)",
+                "color": "#6A54D1",
                 "fontSize": 16,
               }
             }
@@ -1002,7 +1000,7 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Bold",
+            "fontFamily": "Montserrat",
             "fontSize": 20,
             "lineHeight": 26,
             "marginLeft": 23,
@@ -1062,15 +1060,15 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
                   "justifyContent": "center",
                 },
                 Object {
-                  "borderRadius": 3,
-                  "height": 70,
-                  "width": 70,
+                  "borderRadius": 30,
+                  "height": 60,
+                  "width": 60,
                 },
                 Object {
-                  "backgroundColor": "rgba(91,84,199,1)",
+                  "backgroundColor": "rgba(216,216,216,1)",
                 },
                 Object {
-                  "padding": 17.5,
+                  "padding": 15,
                 },
               ]
             }
@@ -1082,16 +1080,15 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Regular",
-                    "fontSize": 17.5,
+                    "fontFamily": undefined,
+                    "fontSize": 15,
                     "textAlign": "center",
                   },
                   Object {
                     "fontSize": 36,
                   },
                   Object {
-                    "color": "white",
-                    "fontSize": 17.5,
+                    "fontSize": 20,
                   },
                 ]
               }
@@ -1151,7 +1148,7 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
           }
         >
           <Icon
-            name="ios-refresh-outline"
+            name="ios-refresh"
             size={24}
           />
         </View>
@@ -1198,7 +1195,7 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
           }
         >
           <Icon
-            color="rgba(92,80,202,1)"
+            color="#6A54D1"
             name="ios-information-circle-outline"
             size={15}
           />
@@ -1252,7 +1249,7 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
             style={
               Array [
                 Object {
-                  "fontFamily": "NunitoSans-Bold",
+                  "fontFamily": "Montserrat",
                   "fontSize": 18,
                   "textAlign": "center",
                 },
@@ -1319,7 +1316,7 @@ exports[`TransactionCard renders correctly with destination being invalid destin
             Array [
               Object {
                 "color": "rgba(138,155,161,1.0)",
-                "fontFamily": "NunitoSans-Regular",
+                "fontFamily": undefined,
                 "fontSize": 13,
               },
               Object {
@@ -1378,7 +1375,7 @@ exports[`TransactionCard renders correctly with destination being invalid destin
             ellipsizeMode="tail"
             style={
               Object {
-                "color": "rgba(92,80,202,1)",
+                "color": "#6A54D1",
                 "fontSize": 16,
               }
             }
@@ -1394,7 +1391,7 @@ exports[`TransactionCard renders correctly with destination being invalid destin
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Bold",
+            "fontFamily": "Montserrat",
             "fontSize": 20,
             "lineHeight": 26,
             "marginLeft": 23,
@@ -1454,15 +1451,15 @@ exports[`TransactionCard renders correctly with destination being invalid destin
                   "justifyContent": "center",
                 },
                 Object {
-                  "borderRadius": 3,
-                  "height": 70,
-                  "width": 70,
+                  "borderRadius": 30,
+                  "height": 60,
+                  "width": 60,
                 },
                 Object {
-                  "backgroundColor": "rgba(91,84,199,1)",
+                  "backgroundColor": "rgba(216,216,216,1)",
                 },
                 Object {
-                  "padding": 17.5,
+                  "padding": 15,
                 },
               ]
             }
@@ -1474,16 +1471,15 @@ exports[`TransactionCard renders correctly with destination being invalid destin
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Regular",
-                    "fontSize": 17.5,
+                    "fontFamily": undefined,
+                    "fontSize": 15,
                     "textAlign": "center",
                   },
                   Object {
                     "fontSize": 36,
                   },
                   Object {
-                    "color": "white",
-                    "fontSize": 17.5,
+                    "fontSize": 20,
                   },
                 ]
               }
@@ -1543,7 +1539,7 @@ exports[`TransactionCard renders correctly with destination being invalid destin
           }
         >
           <Icon
-            name="ios-refresh-outline"
+            name="ios-refresh"
             size={24}
           />
         </View>
@@ -1590,7 +1586,7 @@ exports[`TransactionCard renders correctly with destination being invalid destin
           }
         >
           <Icon
-            color="rgba(92,80,202,1)"
+            color="#6A54D1"
             name="ios-information-circle-outline"
             size={15}
           />
@@ -1649,7 +1645,7 @@ exports[`TransactionCard renders correctly with destination being invalid destin
               style={
                 Object {
                   "color": undefined,
-                  "fontFamily": "NunitoSans-Bold",
+                  "fontFamily": undefined,
                   "fontSize": 18,
                   "letterSpacing": 1,
                   "lineHeight": 24,
@@ -1666,7 +1662,7 @@ exports[`TransactionCard renders correctly with destination being invalid destin
               style={
                 Object {
                   "color": undefined,
-                  "fontFamily": "NunitoSans-Bold",
+                  "fontFamily": undefined,
                   "fontSize": 12,
                   "letterSpacing": 1,
                   "lineHeight": 15,
@@ -1752,7 +1748,7 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
             Array [
               Object {
                 "color": "rgba(138,155,161,1.0)",
-                "fontFamily": "NunitoSans-Regular",
+                "fontFamily": undefined,
                 "fontSize": 13,
               },
               Object {
@@ -1811,7 +1807,7 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
             ellipsizeMode="tail"
             style={
               Object {
-                "color": "rgba(92,80,202,1)",
+                "color": "#6A54D1",
                 "fontSize": 16,
               }
             }
@@ -1827,7 +1823,7 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Bold",
+            "fontFamily": "Montserrat",
             "fontSize": 20,
             "lineHeight": 26,
             "marginLeft": 23,
@@ -1887,15 +1883,15 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
                   "justifyContent": "center",
                 },
                 Object {
-                  "borderRadius": 3,
-                  "height": 70,
-                  "width": 70,
+                  "borderRadius": 30,
+                  "height": 60,
+                  "width": 60,
                 },
                 Object {
-                  "backgroundColor": "rgba(91,84,199,1)",
+                  "backgroundColor": "rgba(216,216,216,1)",
                 },
                 Object {
-                  "padding": 17.5,
+                  "padding": 15,
                 },
               ]
             }
@@ -1907,16 +1903,15 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Regular",
-                    "fontSize": 17.5,
+                    "fontFamily": undefined,
+                    "fontSize": 15,
                     "textAlign": "center",
                   },
                   Object {
                     "fontSize": 36,
                   },
                   Object {
-                    "color": "white",
-                    "fontSize": 17.5,
+                    "fontSize": 20,
                   },
                 ]
               }
@@ -1976,7 +1971,7 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
           }
         >
           <Icon
-            name="ios-refresh-outline"
+            name="ios-refresh"
             size={24}
           />
         </View>
@@ -2023,7 +2018,7 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
           }
         >
           <Icon
-            color="rgba(92,80,202,1)"
+            color="#6A54D1"
             name="ios-information-circle-outline"
             size={15}
           />
@@ -2077,7 +2072,7 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
             style={
               Array [
                 Object {
-                  "fontFamily": "NunitoSans-Bold",
+                  "fontFamily": "Montserrat",
                   "fontSize": 18,
                   "textAlign": "center",
                 },
@@ -2144,7 +2139,7 @@ exports[`TransactionCard renders correctly with only request 1`] = `
             Array [
               Object {
                 "color": "rgba(138,155,161,1.0)",
-                "fontFamily": "NunitoSans-Regular",
+                "fontFamily": undefined,
                 "fontSize": 13,
               },
               Object {
@@ -2203,7 +2198,7 @@ exports[`TransactionCard renders correctly with only request 1`] = `
             ellipsizeMode="tail"
             style={
               Object {
-                "color": "rgba(92,80,202,1)",
+                "color": "#6A54D1",
                 "fontSize": 16,
               }
             }
@@ -2219,7 +2214,7 @@ exports[`TransactionCard renders correctly with only request 1`] = `
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Bold",
+            "fontFamily": "Montserrat",
             "fontSize": 20,
             "lineHeight": 26,
             "marginLeft": 23,
@@ -2279,10 +2274,9 @@ exports[`TransactionCard renders correctly with only request 1`] = `
                   "justifyContent": "center",
                 },
                 Object {
-                  "backgroundColor": "white",
-                  "borderRadius": 3,
-                  "height": 70,
-                  "width": 70,
+                  "borderRadius": 30,
+                  "height": 60,
+                  "width": 60,
                 },
               ]
             }
@@ -2291,24 +2285,24 @@ exports[`TransactionCard renders correctly with only request 1`] = `
               resizeMode="cover"
               source={
                 Object {
-                  "testUri": "../../../images/eth-symbol2.png",
+                  "testUri": "../../../assets/images/eth-symbol2.png",
                 }
               }
               style={
                 Array [
                   Object {
-                    "borderRadius": 3,
-                    "height": 70,
-                    "width": 70,
+                    "borderRadius": 30,
+                    "height": 60,
+                    "width": 60,
                   },
                   Object {
                     "position": "absolute",
                   },
                   Array [
                     Object {
-                      "borderRadius": 3,
-                      "height": 70,
-                      "width": 70,
+                      "borderRadius": 30,
+                      "height": 60,
+                      "width": 60,
                     },
                     undefined,
                   ],
@@ -2368,7 +2362,7 @@ exports[`TransactionCard renders correctly with only request 1`] = `
           }
         >
           <Icon
-            name="ios-refresh-outline"
+            name="ios-refresh"
             size={24}
           />
         </View>
@@ -2415,7 +2409,7 @@ exports[`TransactionCard renders correctly with only request 1`] = `
           }
         >
           <Icon
-            color="rgba(92,80,202,1)"
+            color="#6A54D1"
             name="ios-information-circle-outline"
             size={15}
           />
@@ -2469,7 +2463,7 @@ exports[`TransactionCard renders correctly with only request 1`] = `
             style={
               Array [
                 Object {
-                  "fontFamily": "NunitoSans-Bold",
+                  "fontFamily": "Montserrat",
                   "fontSize": 18,
                   "textAlign": "center",
                 },
@@ -2536,7 +2530,7 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
             Array [
               Object {
                 "color": "rgba(138,155,161,1.0)",
-                "fontFamily": "NunitoSans-Regular",
+                "fontFamily": undefined,
                 "fontSize": 13,
               },
               Object {
@@ -2595,7 +2589,7 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
             ellipsizeMode="tail"
             style={
               Object {
-                "color": "rgba(92,80,202,1)",
+                "color": "#6A54D1",
                 "fontSize": 16,
               }
             }
@@ -2611,7 +2605,7 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Bold",
+            "fontFamily": "Montserrat",
             "fontSize": 20,
             "lineHeight": 26,
             "marginLeft": 23,
@@ -2671,10 +2665,9 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
                   "justifyContent": "center",
                 },
                 Object {
-                  "backgroundColor": "white",
-                  "borderRadius": 3,
-                  "height": 70,
-                  "width": 70,
+                  "borderRadius": 30,
+                  "height": 60,
+                  "width": 60,
                 },
               ]
             }
@@ -2683,24 +2676,24 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
               resizeMode="cover"
               source={
                 Object {
-                  "testUri": "../../../images/eth-symbol2.png",
+                  "testUri": "../../../assets/images/eth-symbol2.png",
                 }
               }
               style={
                 Array [
                   Object {
-                    "borderRadius": 3,
-                    "height": 70,
-                    "width": 70,
+                    "borderRadius": 30,
+                    "height": 60,
+                    "width": 60,
                   },
                   Object {
                     "position": "absolute",
                   },
                   Array [
                     Object {
-                      "borderRadius": 3,
-                      "height": 70,
-                      "width": 70,
+                      "borderRadius": 30,
+                      "height": 60,
+                      "width": 60,
                     },
                     undefined,
                   ],
@@ -2760,7 +2753,7 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
           }
         >
           <Icon
-            name="ios-refresh-outline"
+            name="ios-refresh"
             size={24}
           />
         </View>
@@ -2807,7 +2800,7 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
           }
         >
           <Icon
-            color="rgba(92,80,202,1)"
+            color="#6A54D1"
             name="ios-information-circle-outline"
             size={15}
           />
@@ -2908,7 +2901,7 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
             style={
               Array [
                 Object {
-                  "fontFamily": "NunitoSans-Bold",
+                  "fontFamily": "Montserrat",
                   "fontSize": 18,
                   "textAlign": "center",
                 },
@@ -2975,7 +2968,7 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
             Array [
               Object {
                 "color": "rgba(138,155,161,1.0)",
-                "fontFamily": "NunitoSans-Regular",
+                "fontFamily": undefined,
                 "fontSize": 13,
               },
               Object {
@@ -3034,7 +3027,7 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
             ellipsizeMode="tail"
             style={
               Object {
-                "color": "rgba(92,80,202,1)",
+                "color": "#6A54D1",
                 "fontSize": 16,
               }
             }
@@ -3050,7 +3043,7 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Bold",
+            "fontFamily": "Montserrat",
             "fontSize": 20,
             "lineHeight": 26,
             "marginLeft": 23,
@@ -3110,10 +3103,9 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
                   "justifyContent": "center",
                 },
                 Object {
-                  "backgroundColor": "white",
-                  "borderRadius": 3,
-                  "height": 70,
-                  "width": 70,
+                  "borderRadius": 30,
+                  "height": 60,
+                  "width": 60,
                 },
               ]
             }
@@ -3122,24 +3114,24 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
               resizeMode="cover"
               source={
                 Object {
-                  "testUri": "../../../images/eth-symbol2.png",
+                  "testUri": "../../../assets/images/eth-symbol2.png",
                 }
               }
               style={
                 Array [
                   Object {
-                    "borderRadius": 3,
-                    "height": 70,
-                    "width": 70,
+                    "borderRadius": 30,
+                    "height": 60,
+                    "width": 60,
                   },
                   Object {
                     "position": "absolute",
                   },
                   Array [
                     Object {
-                      "borderRadius": 3,
-                      "height": 70,
-                      "width": 70,
+                      "borderRadius": 30,
+                      "height": 60,
+                      "width": 60,
                     },
                     undefined,
                   ],
@@ -3199,7 +3191,7 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
           }
         >
           <Icon
-            name="ios-refresh-outline"
+            name="ios-refresh"
             size={24}
           />
         </View>
@@ -3246,7 +3238,7 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
           }
         >
           <Icon
-            color="rgba(92,80,202,1)"
+            color="#6A54D1"
             name="ios-information-circle-outline"
             size={15}
           />
@@ -3300,7 +3292,7 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
             style={
               Array [
                 Object {
-                  "fontFamily": "NunitoSans-Bold",
+                  "fontFamily": "Montserrat",
                   "fontSize": 18,
                   "textAlign": "center",
                 },
@@ -3367,7 +3359,7 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
             Array [
               Object {
                 "color": "rgba(138,155,161,1.0)",
-                "fontFamily": "NunitoSans-Regular",
+                "fontFamily": undefined,
                 "fontSize": 13,
               },
               Object {
@@ -3426,7 +3418,7 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
             ellipsizeMode="tail"
             style={
               Object {
-                "color": "rgba(92,80,202,1)",
+                "color": "#6A54D1",
                 "fontSize": 16,
               }
             }
@@ -3442,7 +3434,7 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Bold",
+            "fontFamily": "Montserrat",
             "fontSize": 20,
             "lineHeight": 26,
             "marginLeft": 23,
@@ -3502,10 +3494,9 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
                   "justifyContent": "center",
                 },
                 Object {
-                  "backgroundColor": "white",
-                  "borderRadius": 3,
-                  "height": 70,
-                  "width": 70,
+                  "borderRadius": 30,
+                  "height": 60,
+                  "width": 60,
                 },
               ]
             }
@@ -3514,24 +3505,24 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
               resizeMode="cover"
               source={
                 Object {
-                  "testUri": "../../../images/eth-symbol2.png",
+                  "testUri": "../../../assets/images/eth-symbol2.png",
                 }
               }
               style={
                 Array [
                   Object {
-                    "borderRadius": 3,
-                    "height": 70,
-                    "width": 70,
+                    "borderRadius": 30,
+                    "height": 60,
+                    "width": 60,
                   },
                   Object {
                     "position": "absolute",
                   },
                   Array [
                     Object {
-                      "borderRadius": 3,
-                      "height": 70,
-                      "width": 70,
+                      "borderRadius": 30,
+                      "height": 60,
+                      "width": 60,
                     },
                     undefined,
                   ],
@@ -3591,7 +3582,7 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
           }
         >
           <Icon
-            name="ios-refresh-outline"
+            name="ios-refresh"
             size={24}
           />
         </View>
@@ -3638,7 +3629,7 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
           }
         >
           <Icon
-            color="rgba(92,80,202,1)"
+            color="#6A54D1"
             name="ios-information-circle-outline"
             size={15}
           />
@@ -3692,7 +3683,7 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
             style={
               Array [
                 Object {
-                  "fontFamily": "NunitoSans-Bold",
+                  "fontFamily": "Montserrat",
                   "fontSize": 18,
                   "textAlign": "center",
                 },
@@ -3759,7 +3750,7 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
             Array [
               Object {
                 "color": "rgba(138,155,161,1.0)",
-                "fontFamily": "NunitoSans-Regular",
+                "fontFamily": undefined,
                 "fontSize": 13,
               },
               Object {
@@ -3818,7 +3809,7 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
             ellipsizeMode="tail"
             style={
               Object {
-                "color": "rgba(92,80,202,1)",
+                "color": "#6A54D1",
                 "fontSize": 16,
               }
             }
@@ -3834,7 +3825,7 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Bold",
+            "fontFamily": "Montserrat",
             "fontSize": 20,
             "lineHeight": 26,
             "marginLeft": 23,
@@ -3894,10 +3885,9 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
                   "justifyContent": "center",
                 },
                 Object {
-                  "backgroundColor": "white",
-                  "borderRadius": 3,
-                  "height": 70,
-                  "width": 70,
+                  "borderRadius": 30,
+                  "height": 60,
+                  "width": 60,
                 },
               ]
             }
@@ -3906,24 +3896,24 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
               resizeMode="cover"
               source={
                 Object {
-                  "testUri": "../../../images/eth-symbol2.png",
+                  "testUri": "../../../assets/images/eth-symbol2.png",
                 }
               }
               style={
                 Array [
                   Object {
-                    "borderRadius": 3,
-                    "height": 70,
-                    "width": 70,
+                    "borderRadius": 30,
+                    "height": 60,
+                    "width": 60,
                   },
                   Object {
                     "position": "absolute",
                   },
                   Array [
                     Object {
-                      "borderRadius": 3,
-                      "height": 70,
-                      "width": 70,
+                      "borderRadius": 30,
+                      "height": 60,
+                      "width": 60,
                     },
                     undefined,
                   ],
@@ -3983,7 +3973,7 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
           }
         >
           <Icon
-            name="ios-refresh-outline"
+            name="ios-refresh"
             size={24}
           />
         </View>
@@ -4030,7 +4020,7 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
           }
         >
           <Icon
-            color="rgba(92,80,202,1)"
+            color="#6A54D1"
             name="ios-information-circle-outline"
             size={15}
           />
@@ -4084,7 +4074,7 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
             style={
               Array [
                 Object {
-                  "fontFamily": "NunitoSans-Bold",
+                  "fontFamily": "Montserrat",
                   "fontSize": 18,
                   "textAlign": "center",
                 },

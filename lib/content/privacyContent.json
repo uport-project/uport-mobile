@@ -1,0 +1,164 @@
+{
+  "name": "Privacy Policy",
+  "version": "Version 1.2",
+  "notice": "",
+  "summary": "This privacy policy (\u201CPolicy\u201D) describes how ConsenSys AG\u2019s uPort(\u201CuPort\u201D \u201CCompany\u201D, \u201Cwe\u201D, \u201Cour\u201D, \u201Cus\u201D) collects, uses, shares, and stores personal information of users of this website, https:\/\/www.uport.me\/ (the \u201CSite\u201D) and the Services (as defined below).. This Policy applies to the Site, applications, products and services (collectively, \u201CServices\u201D) on or in which it is posted, linked, or referenced. By using the Services, you accept the terms of this Policy and our Terms of Use, and consent to our collection, use, disclosure, and retention of your information as described in this Policy.  If you have not done so already, please also review our terms of use. The terms of use contain provisions that limit our liability to you and require you to resolve any dispute with us on an individual basis and not as part of any class or representative action. IF YOU DO NOT AGREE WITH ANY PART OF THIS PRIVACY POLICY OR OUR TERMS OF USE, THEN PLEASE DO NOT USE ANY OF THE SERVICES. Please note that this Policy does not apply to information collected through third-party websites or services that you may access through the Services or that you submit to us through email, text message or other electronic message or offline. If you are visiting this site from the European Union (EU), see our Notice to EU Data Subjects for our legal bases for processing and transfer of your data.",
+  "sections": [
+    {
+      "title": "What we collect",
+      "section": "1",
+      "clauses": [
+        {
+          "number": "1.1",
+          "title": "",
+          "content": "We get information about you in a range of ways. Information You Give Us. Information we collect from you includes: Public address (decentralized identifier); Private key signature associated with your DID (as defined in the Terms of Use) for transactions you engage in with the Services Feedback and correspondence, such as information you provide in your responses to surveys, when you participate in market research activities, report a problem with Service, receive customer support or otherwise correspond with us; Transaction information, such as metadata with respect to on-chain transaction history,  details about purchases you make through the Service and billing details; Anonymized usage information, such as information about how you use the Service and interact with us; and Marketing information, such as your preferences for receiving marketing communications and details about how you engage with them. Information We Get From Others. We may get information about you from other third party sources and we may add this to information we get from your use of the Services."
+        }
+      ]
+    },
+    {
+      "title": "Information Automatically Collected",
+      "section": "2",
+      "clauses": [
+        {
+          "number": "2.1",
+          "title": "",
+          "content": "We may automatically record certain information about how you use our Site (we refer to this information as \u201CLog Data\u201C). Log Data may include information such as a user\u2019s Internet Protocol (IP) address, hash of IPFS address, device and browser type, the pages or features of our Site to which a user browsed and the time spent on those pages or features, the frequency with which the Site is used by a user, search terms, the links on our Site that a user clicked on or used, referral url, and other statistics. We use this information to administer the Service and we analyze (and may engage third parties to analyze) this information to improve and enhance the Service by expanding its features and functionality and tailoring it to our users\u2019 needs and preferences.\r\n\r\nWe may use cookies or similar technologies to analyze trends, administer the website, track users\u2019 movements around the website, and to gather demographic information about our user base as a whole. Users can control the use of cookies at the individual browser level. For more information, please see the section entitled \u201CCookies Policy\u201D below.\r\n\r\nWe also use data analytics services such as Google Analytics, Fabric, and Mixpanel to help us offer you an optimized user experience.  You can find more information about Google Analytics\u2019 use of your personal data here: https:\/\/www.google.com\/analytics\/terms\/us.html. You can find more information about Fabric\u2019s use of your personal data here: https:\/\/policies.google.com\/privacy?hl=en&gl=us. You can find more information about Mixpanel\u2019s use of your personal data here: https:\/\/mixpanel.com\/legal\/privacy-policy\/. \r\n\r\nInformation we will never collect. We will never ask you to share your private keys or wallet seed. Never trust anyone or any site that asks you to enter your private keys or wallet seed."
+        }
+      ]
+    },
+    {
+      "title": "Use of Personal Information",
+      "section": "3",
+      "clauses": [
+        {
+          "number": "3.1",
+          "title": "",
+          "content": "To provide our service: We will use your personal information in the following ways:\n\nTo enable you to access and use the Services\n\nTo provide and deliver products and services that you may request.\n\nTo send information, including confirmations, technical notices, updates, security alerts, and support and administrative messages.\n\nTo comply with law\nWe use your personal information as we believe necessary or appropriate to comply with applicable laws,  lawful requests and legal process, such as to respond to subpoenas or requests from government authorities.  \nTo communicate with you\n We use your personal information to communicate about promotions, upcoming events, and other news about products and services offered by us and our selected partners.\n\nTo optimize our platform\nIn order to optimize your user experience, we may use your personal information to operate, maintain, and improve our Services. We may also use your information to respond to your comments and questions regarding the Services, and to provide you and other users with general customer service. \n\nWith your consent\nWe may use or share your personal information with your consent, such as when you instruct us to take a specific action with respect to your personal information, or you opt into third party marketing communications.\n\nFor compliance, fraud prevention, and safety\nWe may use your personal information to protect, investigate, and deter against fraudulent, unauthorized, or illegal activity."
+        }
+      ]
+    },
+    {
+      "title": "SHARING OF PERSONAL INFORMATION",
+      "section": "3",
+      "clauses": [
+        {
+          "number": "3.1",
+          "title": "",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "INTERNATIONAL TRANSFER",
+      "section": "3",
+      "clauses": [
+        {
+          "number": "3.1",
+          "title": "",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "HOW INFORMATION IS SECURED",
+      "section": "3",
+      "clauses": [
+        {
+          "number": "3.1",
+          "title": "",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "INFORMATION CHOICES AND CHANGES",
+      "section": "3",
+      "clauses": [
+        {
+          "number": "3.1",
+          "title": "",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "CONTACT INFORMATION",
+      "section": "3",
+      "clauses": [
+        {
+          "number": "3.1",
+          "title": "",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "CHANGES TO THIS PRIVACY POLICY",
+      "section": "3",
+      "clauses": [
+        {
+          "number": "3.1",
+          "title": "",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "NOTICE TO CALIFORNIA RESIDENTS",
+      "section": "3",
+      "clauses": [
+        {
+          "number": "3.1",
+          "title": "",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "NOTICE TO EU DATA SUBJECTS",
+      "section": "3",
+      "clauses": [
+        {
+          "number": "3.1",
+          "title": "",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Use for New Purposes",
+      "section": "3",
+      "clauses": [
+        {
+          "number": "3.1",
+          "title": "",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "CHANGES TO THIS PRIVACY POLICY",
+      "section": "3",
+      "clauses": [
+        {
+          "number": "3.1",
+          "title": "",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "CHANGES TO THIS PRIVACY POLICY",
+      "section": "3",
+      "clauses": [
+        {
+          "number": "3.1",
+          "title": "",
+          "content": ""
+        }
+      ]
+    }
+  ]
+}
+
+

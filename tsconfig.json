@@ -8,14 +8,17 @@
       "noEmit": true,
       "strict": true,
       "allowJs": true,
+      "resolveJsonModule": true,
       "allowSyntheticDefaultImports": true,
       "moduleResolution": "node",
       "baseUrl": ".",
       "paths": {
-          "uPortMobile/*": ["./*"]
+          "uPortMobile/*": ["./*"],
+          "@kancha": ["./lib/kancha"],
       }
     },
     "types": ["jest"],
+    "include": ["./lib/**/*"],
     "exclude": [
       "node_modules",
     ],

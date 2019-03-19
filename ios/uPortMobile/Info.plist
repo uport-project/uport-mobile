@@ -34,7 +34,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.5.23</string>
+	<string>1.6.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -52,7 +52,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>419</string>
+	<string>420</string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
@@ -117,8 +117,6 @@
 	<string>This app does not require location usage.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>This app does not require location usage.</string>
-	<key>NSMainNibFile</key>
-	<string>LaunchScreen</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>This app does not require microphone access.</string>
 	<key>NSMotionUsageDescription</key>
@@ -130,24 +128,29 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Feather.ttf</string>
+		<string>AntDesign.ttf</string>
 		<string>EvilIcons.ttf</string>
 		<string>FontAwesome.ttf</string>
 		<string>Ionicons.ttf</string>
 		<string>MaterialCommunityIcons.ttf</string>
-		<string>NunitoSans-Black.ttf</string>
-		<string>NunitoSans-BlackItalic.ttf</string>
-		<string>NunitoSans-Bold.ttf</string>
-		<string>NunitoSans-BoldItalic.ttf</string>
-		<string>NunitoSans-ExtraBold.ttf</string>
-		<string>NunitoSans-ExtraBoldItalic.ttf</string>
-		<string>NunitoSans-ExtraLight.ttf</string>
-		<string>NunitoSans-ExtraLightItalic.ttf</string>
-		<string>NunitoSans-Italic.ttf</string>
-		<string>NunitoSans-Light.ttf</string>
-		<string>NunitoSans-LightItalic.ttf</string>
-		<string>NunitoSans-Regular.ttf</string>
-		<string>NunitoSans-SemiBold.ttf</string>
-		<string>NunitoSans-SemiBoldItalic.ttf</string>
+		<string>Montserrat-Black.otf</string>
+		<string>Montserrat-BlackItalic.otf</string>
+		<string>Montserrat-Bold.otf</string>
+		<string>Montserrat-BoldItalic.otf</string>
+		<string>Montserrat-ExtraBold.otf</string>
+		<string>Montserrat-ExtraBoldItalic.otf</string>
+		<string>Montserrat-ExtraLight.otf</string>
+		<string>Montserrat-ExtraLightItalic.otf</string>
+		<string>Montserrat-Italic.otf</string>
+		<string>Montserrat-Light.otf</string>
+		<string>Montserrat-LightItalic.otf</string>
+		<string>Montserrat-Medium.otf</string>
+		<string>Montserrat-MediumItalic.otf</string>
+		<string>Montserrat-Regular.otf</string>
+		<string>Montserrat-SemiBold.otf</string>
+		<string>Montserrat-SemiBoldItalic.otf</string>
+		<string>Montserrat-Thin.otf</string>
+		<string>Montserrat-ThinItalic.otf</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>
@@ -155,7 +158,9 @@
 		<string>remote-notification</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
+	<string>Launch</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Launch</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -163,13 +168,11 @@
 	<key>UIRequiresFullScreen</key>
 	<false/>
 	<key>UIStatusBarStyle</key>
-	<string>UIStatusBarStyleDefault</string>
+	<string>UIStatusBarStyleLightContent</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>UISupportsDocumentBrowser</key>
-	<false/>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -177,8 +180,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UISupportsDocumentBrowser</key>
+	<false/>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<true/>
+	<false/>
 	<key>UTExportedTypeDeclarations</key>
 	<array>
 		<dict>

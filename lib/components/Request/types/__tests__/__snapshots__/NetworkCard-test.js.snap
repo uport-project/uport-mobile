@@ -2,7 +2,6 @@
 
 exports[`NetworkCard renders a connected Network Card index as expected 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <NetworkCard
     authorizeRequest={[Function]}
@@ -29,8 +28,10 @@ ShallowWrapper {
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -60,7 +61,6 @@ ShallowWrapper {
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
-                "fontFamily": "NunitoSans-Regular",
                 "fontSize": 20,
                 "lineHeight": 27,
                 "textAlign": "center",
@@ -76,7 +76,6 @@ ShallowWrapper {
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
-                "fontFamily": "NunitoSans-Light",
                 "fontSize": 16,
                 "lineHeight": 22,
                 "textAlign": "center",
@@ -136,7 +135,6 @@ ShallowWrapper {
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
-                  "fontFamily": "NunitoSans-Regular",
                   "fontSize": 20,
                   "lineHeight": 27,
                   "textAlign": "center",
@@ -152,7 +150,6 @@ ShallowWrapper {
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
-                  "fontFamily": "NunitoSans-Light",
                   "fontSize": 16,
                   "lineHeight": 22,
                   "textAlign": "center",
@@ -180,7 +177,6 @@ ShallowWrapper {
               "ellipsizeMode": "tail",
               "style": Object {
                 "color": "rgba(74,74,74,1)",
-                "fontFamily": "NunitoSans-Regular",
                 "fontSize": 20,
                 "lineHeight": 27,
                 "textAlign": "center",
@@ -201,7 +197,6 @@ ShallowWrapper {
               "ellipsizeMode": "tail",
               "style": Object {
                 "color": "rgba(74,74,74,1)",
-                "fontFamily": "NunitoSans-Light",
                 "fontSize": 16,
                 "lineHeight": 22,
                 "textAlign": "center",
@@ -303,7 +298,6 @@ ShallowWrapper {
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
-                  "fontFamily": "NunitoSans-Regular",
                   "fontSize": 20,
                   "lineHeight": 27,
                   "textAlign": "center",
@@ -319,7 +313,6 @@ ShallowWrapper {
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
-                  "fontFamily": "NunitoSans-Light",
                   "fontSize": 16,
                   "lineHeight": 22,
                   "textAlign": "center",
@@ -379,7 +372,6 @@ ShallowWrapper {
                 style={
                   Object {
                     "color": "rgba(74,74,74,1)",
-                    "fontFamily": "NunitoSans-Regular",
                     "fontSize": 20,
                     "lineHeight": 27,
                     "textAlign": "center",
@@ -395,7 +387,6 @@ ShallowWrapper {
                 style={
                   Object {
                     "color": "rgba(74,74,74,1)",
-                    "fontFamily": "NunitoSans-Light",
                     "fontSize": 16,
                     "lineHeight": 22,
                     "textAlign": "center",
@@ -423,7 +414,6 @@ ShallowWrapper {
                 "ellipsizeMode": "tail",
                 "style": Object {
                   "color": "rgba(74,74,74,1)",
-                  "fontFamily": "NunitoSans-Regular",
                   "fontSize": 20,
                   "lineHeight": 27,
                   "textAlign": "center",
@@ -444,7 +434,6 @@ ShallowWrapper {
                 "ellipsizeMode": "tail",
                 "style": Object {
                   "color": "rgba(74,74,74,1)",
-                  "fontFamily": "NunitoSans-Light",
                   "fontSize": 16,
                   "lineHeight": 22,
                   "textAlign": "center",
@@ -524,6 +513,20 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
     "context": Object {
@@ -534,6 +537,25 @@ ShallowWrapper {
         "getState": [Function],
         "replaceReducer": [Function],
         "subscribe": [Function],
+      },
+      "storeSubscription": Subscription {
+        "listeners": Object {
+          "clear": [Function],
+          "get": [Function],
+          "notify": [Function],
+          "subscribe": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": [Function],
       },
     },
   },
@@ -568,15 +590,15 @@ exports[`NetworkCard renders authorized request correctly 1`] = `
               "justifyContent": "center",
             },
             Object {
-              "borderRadius": 3,
-              "height": 70,
-              "width": 70,
+              "borderRadius": 30,
+              "height": 60,
+              "width": 60,
             },
             Object {
-              "backgroundColor": "rgba(91,84,199,1)",
+              "backgroundColor": "rgba(216,216,216,1)",
             },
             Object {
-              "padding": 17.5,
+              "padding": 15,
             },
           ]
         }
@@ -588,14 +610,13 @@ exports[`NetworkCard renders authorized request correctly 1`] = `
           style={
             Array [
               Object {
-                "fontFamily": "NunitoSans-Regular",
-                "fontSize": 17.5,
+                "fontFamily": undefined,
+                "fontSize": 15,
                 "textAlign": "center",
               },
               undefined,
               Object {
-                "color": "white",
-                "fontSize": 17.5,
+                "fontSize": 20,
               },
             ]
           }
@@ -607,7 +628,7 @@ exports[`NetworkCard renders authorized request correctly 1`] = `
     <Image
       source={
         Object {
-          "testUri": "../../../images/ForwardArrow.png",
+          "testUri": "../../../assets/images/ForwardArrow.png",
         }
       }
       style={
@@ -630,15 +651,15 @@ exports[`NetworkCard renders authorized request correctly 1`] = `
                 "justifyContent": "center",
               },
               Object {
-                "borderRadius": 3,
-                "height": 70,
-                "width": 70,
+                "borderRadius": 30,
+                "height": 60,
+                "width": 60,
               },
               Object {
-                "backgroundColor": "rgba(91,84,199,1)",
+                "backgroundColor": "rgba(216,216,216,1)",
               },
               Object {
-                "padding": 17.5,
+                "padding": 15,
               },
             ]
           }
@@ -650,14 +671,13 @@ exports[`NetworkCard renders authorized request correctly 1`] = `
             style={
               Array [
                 Object {
-                  "fontFamily": "NunitoSans-Regular",
-                  "fontSize": 17.5,
+                  "fontFamily": undefined,
+                  "fontSize": 15,
                   "textAlign": "center",
                 },
                 undefined,
                 Object {
-                  "color": "white",
-                  "fontSize": 17.5,
+                  "fontSize": 20,
                 },
               ]
             }
@@ -683,7 +703,6 @@ exports[`NetworkCard renders authorized request correctly 1`] = `
       style={
         Object {
           "color": "rgba(74,74,74,1)",
-          "fontFamily": "NunitoSans-Regular",
           "fontSize": 20,
           "lineHeight": 27,
           "textAlign": "center",
@@ -699,7 +718,6 @@ exports[`NetworkCard renders authorized request correctly 1`] = `
       style={
         Object {
           "color": "rgba(74,74,74,1)",
-          "fontFamily": "NunitoSans-Light",
           "fontSize": 16,
           "lineHeight": 22,
           "textAlign": "center",
@@ -748,7 +766,7 @@ exports[`NetworkCard renders authorized request correctly 1`] = `
             Object {
               "color": "rgba(155,155,155,1)",
               "flex": 0,
-              "fontFamily": "NunitoSans-Light",
+              "fontFamily": undefined,
               "fontSize": 14,
               "lineHeight": 23,
               "marginLeft": 10,
@@ -769,7 +787,7 @@ exports[`NetworkCard renders authorized request correctly 1`] = `
             Object {
               "color": "rgba(130,130,130,1)",
               "flex": 1,
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": undefined,
               "fontSize": 14,
               "lineHeight": 23,
               "marginRight": 10,
@@ -802,7 +820,7 @@ exports[`NetworkCard renders authorized request correctly 1`] = `
             Object {
               "color": "rgba(155,155,155,1)",
               "flex": 0,
-              "fontFamily": "NunitoSans-Light",
+              "fontFamily": undefined,
               "fontSize": 14,
               "lineHeight": 23,
               "marginLeft": 10,
@@ -823,7 +841,7 @@ exports[`NetworkCard renders authorized request correctly 1`] = `
             Object {
               "color": "rgba(130,130,130,1)",
               "flex": 1,
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": undefined,
               "fontSize": 14,
               "lineHeight": 23,
               "marginRight": 10,
@@ -868,15 +886,15 @@ exports[`NetworkCard renders new request correctly 1`] = `
               "justifyContent": "center",
             },
             Object {
-              "borderRadius": 3,
-              "height": 70,
-              "width": 70,
+              "borderRadius": 30,
+              "height": 60,
+              "width": 60,
             },
             Object {
-              "backgroundColor": "rgba(91,84,199,1)",
+              "backgroundColor": "rgba(216,216,216,1)",
             },
             Object {
-              "padding": 17.5,
+              "padding": 15,
             },
           ]
         }
@@ -888,14 +906,13 @@ exports[`NetworkCard renders new request correctly 1`] = `
           style={
             Array [
               Object {
-                "fontFamily": "NunitoSans-Regular",
-                "fontSize": 17.5,
+                "fontFamily": undefined,
+                "fontSize": 15,
                 "textAlign": "center",
               },
               undefined,
               Object {
-                "color": "white",
-                "fontSize": 17.5,
+                "fontSize": 20,
               },
             ]
           }
@@ -907,7 +924,7 @@ exports[`NetworkCard renders new request correctly 1`] = `
     <Image
       source={
         Object {
-          "testUri": "../../../images/ForwardArrow.png",
+          "testUri": "../../../assets/images/ForwardArrow.png",
         }
       }
       style={
@@ -930,15 +947,15 @@ exports[`NetworkCard renders new request correctly 1`] = `
                 "justifyContent": "center",
               },
               Object {
-                "borderRadius": 3,
-                "height": 70,
-                "width": 70,
+                "borderRadius": 30,
+                "height": 60,
+                "width": 60,
               },
               Object {
-                "backgroundColor": "rgba(91,84,199,1)",
+                "backgroundColor": "rgba(216,216,216,1)",
               },
               Object {
-                "padding": 17.5,
+                "padding": 15,
               },
             ]
           }
@@ -950,14 +967,13 @@ exports[`NetworkCard renders new request correctly 1`] = `
             style={
               Array [
                 Object {
-                  "fontFamily": "NunitoSans-Regular",
-                  "fontSize": 17.5,
+                  "fontFamily": undefined,
+                  "fontSize": 15,
                   "textAlign": "center",
                 },
                 undefined,
                 Object {
-                  "color": "white",
-                  "fontSize": 17.5,
+                  "fontSize": 20,
                 },
               ]
             }
@@ -983,7 +999,6 @@ exports[`NetworkCard renders new request correctly 1`] = `
       style={
         Object {
           "color": "rgba(74,74,74,1)",
-          "fontFamily": "NunitoSans-Regular",
           "fontSize": 20,
           "lineHeight": 27,
           "textAlign": "center",
@@ -999,7 +1014,6 @@ exports[`NetworkCard renders new request correctly 1`] = `
       style={
         Object {
           "color": "rgba(74,74,74,1)",
-          "fontFamily": "NunitoSans-Light",
           "fontSize": 16,
           "lineHeight": 22,
           "textAlign": "center",
@@ -1048,7 +1062,7 @@ exports[`NetworkCard renders new request correctly 1`] = `
             Object {
               "color": "rgba(155,155,155,1)",
               "flex": 0,
-              "fontFamily": "NunitoSans-Light",
+              "fontFamily": undefined,
               "fontSize": 14,
               "lineHeight": 23,
               "marginLeft": 10,
@@ -1069,7 +1083,7 @@ exports[`NetworkCard renders new request correctly 1`] = `
             Object {
               "color": "rgba(130,130,130,1)",
               "flex": 1,
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": undefined,
               "fontSize": 14,
               "lineHeight": 23,
               "marginRight": 10,
@@ -1102,7 +1116,7 @@ exports[`NetworkCard renders new request correctly 1`] = `
             Object {
               "color": "rgba(155,155,155,1)",
               "flex": 0,
-              "fontFamily": "NunitoSans-Light",
+              "fontFamily": undefined,
               "fontSize": 14,
               "lineHeight": 23,
               "marginLeft": 10,
@@ -1123,7 +1137,7 @@ exports[`NetworkCard renders new request correctly 1`] = `
             Object {
               "color": "rgba(130,130,130,1)",
               "flex": 1,
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": undefined,
               "fontSize": 14,
               "lineHeight": 23,
               "marginRight": 10,
@@ -1184,7 +1198,7 @@ exports[`NetworkCard renders new request correctly 1`] = `
         style={
           Array [
             Object {
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 18,
               "textAlign": "center",
             },
@@ -1234,7 +1248,7 @@ exports[`NetworkCard renders new request correctly 1`] = `
         style={
           Array [
             Object {
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 18,
               "textAlign": "center",
             },
@@ -1280,15 +1294,15 @@ exports[`NetworkCard renders request with errors 1`] = `
               "justifyContent": "center",
             },
             Object {
-              "borderRadius": 3,
-              "height": 70,
-              "width": 70,
+              "borderRadius": 30,
+              "height": 60,
+              "width": 60,
             },
             Object {
-              "backgroundColor": "rgba(91,84,199,1)",
+              "backgroundColor": "rgba(216,216,216,1)",
             },
             Object {
-              "padding": 17.5,
+              "padding": 15,
             },
           ]
         }
@@ -1300,14 +1314,13 @@ exports[`NetworkCard renders request with errors 1`] = `
           style={
             Array [
               Object {
-                "fontFamily": "NunitoSans-Regular",
-                "fontSize": 17.5,
+                "fontFamily": undefined,
+                "fontSize": 15,
                 "textAlign": "center",
               },
               undefined,
               Object {
-                "color": "white",
-                "fontSize": 17.5,
+                "fontSize": 20,
               },
             ]
           }
@@ -1319,7 +1332,7 @@ exports[`NetworkCard renders request with errors 1`] = `
     <Image
       source={
         Object {
-          "testUri": "../../../images/ForwardArrow.png",
+          "testUri": "../../../assets/images/ForwardArrow.png",
         }
       }
       style={
@@ -1342,15 +1355,15 @@ exports[`NetworkCard renders request with errors 1`] = `
                 "justifyContent": "center",
               },
               Object {
-                "borderRadius": 3,
-                "height": 70,
-                "width": 70,
+                "borderRadius": 30,
+                "height": 60,
+                "width": 60,
               },
               Object {
-                "backgroundColor": "rgba(91,84,199,1)",
+                "backgroundColor": "rgba(216,216,216,1)",
               },
               Object {
-                "padding": 17.5,
+                "padding": 15,
               },
             ]
           }
@@ -1362,14 +1375,13 @@ exports[`NetworkCard renders request with errors 1`] = `
             style={
               Array [
                 Object {
-                  "fontFamily": "NunitoSans-Regular",
-                  "fontSize": 17.5,
+                  "fontFamily": undefined,
+                  "fontSize": 15,
                   "textAlign": "center",
                 },
                 undefined,
                 Object {
-                  "color": "white",
-                  "fontSize": 17.5,
+                  "fontSize": 20,
                 },
               ]
             }
@@ -1395,7 +1407,6 @@ exports[`NetworkCard renders request with errors 1`] = `
       style={
         Object {
           "color": "rgba(74,74,74,1)",
-          "fontFamily": "NunitoSans-Regular",
           "fontSize": 20,
           "lineHeight": 27,
           "textAlign": "center",
@@ -1411,7 +1422,6 @@ exports[`NetworkCard renders request with errors 1`] = `
       style={
         Object {
           "color": "rgba(74,74,74,1)",
-          "fontFamily": "NunitoSans-Light",
           "fontSize": 16,
           "lineHeight": 22,
           "textAlign": "center",
@@ -1460,7 +1470,7 @@ exports[`NetworkCard renders request with errors 1`] = `
             Object {
               "color": "rgba(155,155,155,1)",
               "flex": 0,
-              "fontFamily": "NunitoSans-Light",
+              "fontFamily": undefined,
               "fontSize": 14,
               "lineHeight": 23,
               "marginLeft": 10,
@@ -1481,7 +1491,7 @@ exports[`NetworkCard renders request with errors 1`] = `
             Object {
               "color": "rgba(130,130,130,1)",
               "flex": 1,
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": undefined,
               "fontSize": 14,
               "lineHeight": 23,
               "marginRight": 10,
@@ -1514,7 +1524,7 @@ exports[`NetworkCard renders request with errors 1`] = `
             Object {
               "color": "rgba(155,155,155,1)",
               "flex": 0,
-              "fontFamily": "NunitoSans-Light",
+              "fontFamily": undefined,
               "fontSize": 14,
               "lineHeight": 23,
               "marginLeft": 10,
@@ -1535,7 +1545,7 @@ exports[`NetworkCard renders request with errors 1`] = `
             Object {
               "color": "rgba(130,130,130,1)",
               "flex": 1,
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": undefined,
               "fontSize": 14,
               "lineHeight": 23,
               "marginRight": 10,
@@ -1556,7 +1566,6 @@ exports[`NetworkCard renders request with errors 1`] = `
       Array [
         Object {
           "color": "rgba(155,155,155,1)",
-          "fontFamily": "NunitoSans-Light",
           "fontSize": 14,
           "lineHeight": 19,
           "textAlign": "center",
@@ -1617,7 +1626,7 @@ exports[`NetworkCard renders request with errors 1`] = `
         style={
           Array [
             Object {
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 18,
               "textAlign": "center",
             },
@@ -1666,7 +1675,7 @@ exports[`NetworkCard renders request with errors 1`] = `
         style={
           Array [
             Object {
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 18,
               "textAlign": "center",
             },
