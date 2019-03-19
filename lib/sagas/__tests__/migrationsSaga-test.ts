@@ -53,7 +53,6 @@ import { migrationStepStatus, migrationTargets, pendingMigrations, migrationComp
 import { isFullyHD, isHD } from 'uPortMobile/lib/selectors/chains'
 import { hdRootAddress } from 'uPortMobile/lib/selectors/hdWallet'
 import { migrateableIdentities, currentAddress, hasMainnetAccounts } from 'uPortMobile/lib/selectors/identities'
-import { hasAttestations } from 'uPortMobile/lib/selectors/attestations';
 import { Alert } from 'react-native';
 
 describe('checkup', () => {
@@ -117,11 +116,10 @@ describe('checkup', () => {
             [call(canSignFor, root), true],
             [select(isFullyHD), true],
             [select(hasMainnetAccounts), false],
-            [select(hasAttestations), true],
             [select(pendingMigrations), []],
             [select(migrateableIdentities), [{address: '0x'}]]
           ])
-          .not.put(addMigrationTarget(MigrationTarget.Legacy))
+          .put(addMigrationTarget(MigrationTarget.Legacy))
           .not.put(addMigrationTarget(MigrationTarget.PreHD))
           .dispatch(loadedDB())
           .silentRun()
@@ -137,11 +135,10 @@ describe('checkup', () => {
             [call(canSignFor, root), true],
             [select(isFullyHD), true],
             [select(hasMainnetAccounts), true],
-            [select(hasAttestations), false],
             [select(pendingMigrations), []],
             [select(migrateableIdentities), [{address: '0x'}]]
           ])
-          .not.put(addMigrationTarget(MigrationTarget.Legacy))
+          .put(addMigrationTarget(MigrationTarget.Legacy))
           .not.put(addMigrationTarget(MigrationTarget.PreHD))
           .dispatch(loadedDB())
           .silentRun()
@@ -156,7 +153,6 @@ describe('checkup', () => {
             [call(canSignFor, root), true],
             [select(isFullyHD), true],
             [select(hasMainnetAccounts), false],
-            [select(hasAttestations), false],
             [select(pendingMigrations), []],
             [select(migrateableIdentities), [{address: '0x'}]]
           ])
@@ -178,11 +174,11 @@ describe('checkup', () => {
                   [select(isFullyHD), false],
                   [call(canSignFor, root), true],
                   [select(hasMainnetAccounts), false],
-                  [select(hasAttestations), true],      
                   [select(pendingMigrations), []],
                   [select(migrateableIdentities), [{address: '0x'}]]
                 ])
-                .put(addMigrationTarget(MigrationTarget.PreHD))
+                .put(addMigrationTarget(MigrationTarget.Legacy))
+                .not.put(addMigrationTarget(MigrationTarget.PreHD))
                 .dispatch(loadedDB())
                 .silentRun()
           })
@@ -196,10 +192,8 @@ describe('checkup', () => {
                   [call(canSignFor, root), true],
                   [select(isFullyHD), false],
                   [select(hasMainnetAccounts), false],
-                  [select(hasAttestations), false],      
                   [select(pendingMigrations), []],
-                  [select(migrateableIdentities), [{address: '0x'}]],
-                  [select(hasAttestations), false]
+                  [select(migrateableIdentities), [{address: '0x'}]]
                 ])
                 .put(addMigrationTarget(MigrationTarget.Legacy))
                 .dispatch(loadedDB())
@@ -215,13 +209,11 @@ describe('checkup', () => {
             [select(currentAddress), root],
             [call(canSignFor, root), false],
             [select(hasMainnetAccounts), false],
-            [select(hasAttestations), true],
             [select(pendingMigrations), []],
             [select(hdRootAddress), undefined],
             [call(hasWorkingSeed), false],
             [select(isHD, root), false],
-            [select(migrateableIdentities), [{address: '0x'}]],
-            [select(hasAttestations), false]
+            [select(migrateableIdentities), [{address: '0x'}]]
           ])
           .put(addMigrationTarget(MigrationTarget.Legacy))
           .dispatch(loadedDB())
@@ -236,13 +228,11 @@ describe('checkup', () => {
             [call(canSignFor, root), false],
             [select(isFullyHD), false],
             [select(hasMainnetAccounts), false],
-            [select(hasAttestations), false],
             [select(pendingMigrations), []],
             [select(hdRootAddress), undefined],
             [call(hasWorkingSeed), false],
             [select(isHD, root), false],
-            [select(migrateableIdentities), [{address: '0x'}]],
-            [select(hasAttestations), false]
+            [select(migrateableIdentities), [{address: '0x'}]]
           ])
           .put(addMigrationTarget(MigrationTarget.Legacy))
           .dispatch(loadedDB())
@@ -250,33 +240,6 @@ describe('checkup', () => {
         })
       })
     })    
-  })
-
-  describe('preHD', () => {
-    describe('Trigger Migration Screen', () => {      
-      describe('pending migrations contains at least one migration', () => {
-        it('Shows migration modal', () => {
-          return expectSaga(migrationsSaga)
-              .provide([
-                [select(currentAddress), root],
-                [call(checkIfAbleToSign), true],
-                [call(checkForLegacy), true],
-                [select(isFullyHD), false],
-                [select(hasMainnetAccounts), false],
-                [select(hasAttestations), true],      
-                [call(delay, 1000), undefined],
-                [select(pendingMigrations), [MigrationTarget.PreHD]]
-              ])
-              .put(addMigrationTarget(MigrationTarget.PreHD))
-              .call(NavigationActions.push, {
-                screen: `migrations.PreHD`,
-                animationType: 'slide-up'
-              })
-              .dispatch(loadedDB())
-              .silentRun()
-        })  
-      })
-    })  
   })
 
   describe('Legacy', () => {
@@ -290,7 +253,6 @@ describe('checkup', () => {
                 [call(checkForLegacy), true],
                 [select(isFullyHD), false],
                 [select(hasMainnetAccounts), false],
-                [select(hasAttestations), false],      
                 [select(pendingMigrations), [MigrationTarget.Legacy]],
                 [call(runMigrations, runMigrationAction(MigrationTarget.Legacy)), true]
               ])
