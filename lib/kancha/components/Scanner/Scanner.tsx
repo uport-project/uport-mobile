@@ -3,11 +3,7 @@ import { ViewStyle, SafeAreaView } from 'react-native'
 import { Container, ScannerControl, Text } from '@kancha'
 import { RNCamera } from 'react-native-camera'
 
-export interface ScannerProps {
-  /**
-   * Camera permissions
-   */
-  hasCameraPermission: boolean | null
+interface ScannerProps {
   /**
    * Scanner enabled
    */
@@ -27,13 +23,7 @@ export interface ScannerProps {
   closeScanner: () => void
 }
 
-const QRCodeScanner: React.FC<ScannerProps> = ({
-  hasCameraPermission,
-  isEnabled,
-  onBarcodeRead,
-  startScanner,
-  closeScanner,
-}) => {
+const QRCodeScanner: React.FC<ScannerProps> = ({ isEnabled, onBarcodeRead, startScanner, closeScanner }) => {
   const scannerViewStyles: ViewStyle = {
     flex: 1,
     justifyContent: 'flex-end',

@@ -135,7 +135,7 @@ exports[`OnboardingTerms renders Onboarding Terms screen 1`] = `
                 "marginRight": undefined,
                 "marginTop": undefined,
                 "padding": undefined,
-                "paddingBottom": 15,
+                "paddingBottom": undefined,
                 "paddingHorizontal": undefined,
                 "paddingLeft": undefined,
                 "paddingRight": undefined,

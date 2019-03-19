@@ -36,7 +36,8 @@
       "./jest-setup/store.js",
       "./jest-setup/react-native-svg.js",
       "./jest-setup/react-native-firebase.js",
-      "./jest-setup/react-native-device-info.js"
+      "./jest-setup/react-native-device-info.js",
+      "./jest-setup/react-native-camera.js"
     ],
     "testPathIgnorePatterns": [
       "/node_modules/",

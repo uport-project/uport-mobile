@@ -57,11 +57,11 @@ class ScannerScreen extends React.Component<ScannerScreenProps, ScannerScreenSta
     /**
      * Permisison state is not passed through redux anymore
      */
-    let status = await Permissions.check('camera')
-    if (status === 'undetermined') {
-      status = await Permissions.request('camera')
-    }
-    this.setCamerPermissions(status)
+    // let status = await Permissions.check('camera')
+    // if (status === 'undetermined') {
+    //   status = await Permissions.request('camera')
+    // }
+    // this.setCamerPermissions(status)
   }
 
   setCamerPermissions(status: string) {
@@ -133,7 +133,6 @@ class ScannerScreen extends React.Component<ScannerScreenProps, ScannerScreenSta
       <Screen statusBarHidden config={Screen.Config.NoScroll} type={Screen.Types.Primary}>
         <Container flex={1}>
           <Scanner
-            hasCameraPermission={this.state.hasCameraPermission}
             isEnabled={this.state.isEnabled}
             onBarcodeRead={this.onBarCodeRead}
             startScanner={this.startScanner}
