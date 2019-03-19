@@ -7,11 +7,11 @@ exports[`renders MenuItem with title 1`] = `
       Object {
         "alignItems": "center",
         "backgroundColor": "#FFFFFF",
+        "borderBottomWidth": 0.5,
         "borderColor": "rgba(216,216,216,1)",
-        "borderTopWidth": 1,
         "flexDirection": "row",
         "justifyContent": "space-between",
-        "padding": 19,
+        "padding": 15,
       },
       Object {},
     ]
@@ -24,9 +24,8 @@ exports[`renders MenuItem with title 1`] = `
     style={
       Array [
         Object {
-          "color": "rgba(170,170,170,1)",
-          "fontFamily": "NunitoSans-Regular",
-          "fontSize": 16,
+          "color": "rgba(74,74,74,1)",
+          "fontSize": 17,
           "lineHeight": 22,
         },
       ]
@@ -47,11 +46,7 @@ exports[`renders MenuItem with title and internal link 1`] = `
   onResponderTerminate={[Function]}
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
+  style={null}
 >
   <View
     style={
@@ -59,13 +54,13 @@ exports[`renders MenuItem with title and internal link 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "#FFFFFF",
+          "borderBottomWidth": 0.5,
           "borderColor": "rgba(216,216,216,1)",
-          "borderTopWidth": 1,
           "flexDirection": "row",
           "justifyContent": "space-between",
-          "padding": 19,
+          "padding": 15,
         },
-        Object {},
+        undefined,
       ]
     }
   >
@@ -75,9 +70,8 @@ exports[`renders MenuItem with title and internal link 1`] = `
       ellipsizeMode="tail"
       style={
         Object {
-          "color": "rgba(170,170,170,1)",
-          "fontFamily": "NunitoSans-Regular",
-          "fontSize": 16,
+          "color": "rgba(74,74,74,1)",
+          "fontSize": 17,
           "lineHeight": 22,
         }
       }
@@ -99,7 +93,6 @@ exports[`renders MenuItem with title and internal link 1`] = `
           Array [
             Object {
               "color": "rgba(74,74,74,1)",
-              "fontFamily": "NunitoSans-Light",
               "fontSize": 14,
               "lineHeight": 22,
             },
@@ -109,7 +102,7 @@ exports[`renders MenuItem with title and internal link 1`] = `
       />
       <Icon
         color="rgba(216,216,216,1)"
-        name="ios-arrow-forward-outline"
+        name="ios-arrow-forward"
         size={20}
         style={
           Object {
@@ -132,11 +125,7 @@ exports[`renders MenuItem with title and link 1`] = `
   onResponderTerminate={[Function]}
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
+  style={null}
 >
   <View
     style={
@@ -144,13 +133,13 @@ exports[`renders MenuItem with title and link 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "#FFFFFF",
+          "borderBottomWidth": 0.5,
           "borderColor": "rgba(216,216,216,1)",
-          "borderTopWidth": 1,
           "flexDirection": "row",
           "justifyContent": "space-between",
-          "padding": 19,
+          "padding": 15,
         },
-        Object {},
+        undefined,
       ]
     }
   >
@@ -160,9 +149,8 @@ exports[`renders MenuItem with title and link 1`] = `
       ellipsizeMode="tail"
       style={
         Object {
-          "color": "rgba(170,170,170,1)",
-          "fontFamily": "NunitoSans-Regular",
-          "fontSize": 16,
+          "color": "rgba(74,74,74,1)",
+          "fontSize": 17,
           "lineHeight": 22,
         }
       }
@@ -184,7 +172,6 @@ exports[`renders MenuItem with title and link 1`] = `
           Array [
             Object {
               "color": "rgba(74,74,74,1)",
-              "fontFamily": "NunitoSans-Light",
               "fontSize": 14,
               "lineHeight": 22,
             },
@@ -194,7 +181,7 @@ exports[`renders MenuItem with title and link 1`] = `
       />
       <Icon
         color="rgba(216,216,216,1)"
-        name="ios-link-outline"
+        name="ios-link"
         size={20}
         style={
           Object {
@@ -217,11 +204,7 @@ exports[`renders MenuItem with title and onPress 1`] = `
   onResponderTerminate={[Function]}
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
+  style={null}
 >
   <View
     style={
@@ -229,13 +212,13 @@ exports[`renders MenuItem with title and onPress 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "#FFFFFF",
+          "borderBottomWidth": 0.5,
           "borderColor": "rgba(216,216,216,1)",
-          "borderTopWidth": 1,
           "flexDirection": "row",
           "justifyContent": "space-between",
-          "padding": 19,
+          "padding": 15,
         },
-        Object {},
+        undefined,
       ]
     }
   >
@@ -245,9 +228,8 @@ exports[`renders MenuItem with title and onPress 1`] = `
       ellipsizeMode="tail"
       style={
         Object {
-          "color": "rgba(170,170,170,1)",
-          "fontFamily": "NunitoSans-Regular",
-          "fontSize": 16,
+          "color": "rgba(74,74,74,1)",
+          "fontSize": 17,
           "lineHeight": 22,
         }
       }
@@ -269,7 +251,6 @@ exports[`renders MenuItem with title and onPress 1`] = `
           Array [
             Object {
               "color": "rgba(74,74,74,1)",
-              "fontFamily": "NunitoSans-Light",
               "fontSize": 14,
               "lineHeight": 22,
             },
@@ -289,11 +270,11 @@ exports[`renders MenuItem with title and value 1`] = `
       Object {
         "alignItems": "center",
         "backgroundColor": "#FFFFFF",
+        "borderBottomWidth": 0.5,
         "borderColor": "rgba(216,216,216,1)",
-        "borderTopWidth": 1,
         "flexDirection": "row",
         "justifyContent": "space-between",
-        "padding": 19,
+        "padding": 15,
       },
       Object {},
     ]
@@ -306,9 +287,8 @@ exports[`renders MenuItem with title and value 1`] = `
     style={
       Array [
         Object {
-          "color": "rgba(170,170,170,1)",
-          "fontFamily": "NunitoSans-Regular",
-          "fontSize": 16,
+          "color": "rgba(74,74,74,1)",
+          "fontSize": 17,
           "lineHeight": 22,
         },
       ]
@@ -324,7 +304,6 @@ exports[`renders MenuItem with title and value 1`] = `
       Array [
         Object {
           "color": "rgba(74,74,74,1)",
-          "fontFamily": "NunitoSans-Light",
           "fontSize": 14,
           "lineHeight": 22,
         },
@@ -347,11 +326,7 @@ exports[`renders MenuItem with title, value and internal link 1`] = `
   onResponderTerminate={[Function]}
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
+  style={null}
 >
   <View
     style={
@@ -359,13 +334,13 @@ exports[`renders MenuItem with title, value and internal link 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "#FFFFFF",
+          "borderBottomWidth": 0.5,
           "borderColor": "rgba(216,216,216,1)",
-          "borderTopWidth": 1,
           "flexDirection": "row",
           "justifyContent": "space-between",
-          "padding": 19,
+          "padding": 15,
         },
-        Object {},
+        undefined,
       ]
     }
   >
@@ -375,9 +350,8 @@ exports[`renders MenuItem with title, value and internal link 1`] = `
       ellipsizeMode="tail"
       style={
         Object {
-          "color": "rgba(170,170,170,1)",
-          "fontFamily": "NunitoSans-Regular",
-          "fontSize": 16,
+          "color": "rgba(74,74,74,1)",
+          "fontSize": 17,
           "lineHeight": 22,
         }
       }
@@ -399,7 +373,6 @@ exports[`renders MenuItem with title, value and internal link 1`] = `
           Array [
             Object {
               "color": "rgba(74,74,74,1)",
-              "fontFamily": "NunitoSans-Light",
               "fontSize": 14,
               "lineHeight": 22,
             },
@@ -411,7 +384,7 @@ exports[`renders MenuItem with title, value and internal link 1`] = `
       </Text>
       <Icon
         color="rgba(216,216,216,1)"
-        name="ios-arrow-forward-outline"
+        name="ios-arrow-forward"
         size={20}
         style={
           Object {
@@ -434,11 +407,7 @@ exports[`renders MenuItem with title, value and link 1`] = `
   onResponderTerminate={[Function]}
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
+  style={null}
 >
   <View
     style={
@@ -446,13 +415,13 @@ exports[`renders MenuItem with title, value and link 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "#FFFFFF",
+          "borderBottomWidth": 0.5,
           "borderColor": "rgba(216,216,216,1)",
-          "borderTopWidth": 1,
           "flexDirection": "row",
           "justifyContent": "space-between",
-          "padding": 19,
+          "padding": 15,
         },
-        Object {},
+        undefined,
       ]
     }
   >
@@ -462,9 +431,8 @@ exports[`renders MenuItem with title, value and link 1`] = `
       ellipsizeMode="tail"
       style={
         Object {
-          "color": "rgba(170,170,170,1)",
-          "fontFamily": "NunitoSans-Regular",
-          "fontSize": 16,
+          "color": "rgba(74,74,74,1)",
+          "fontSize": 17,
           "lineHeight": 22,
         }
       }
@@ -486,7 +454,6 @@ exports[`renders MenuItem with title, value and link 1`] = `
           Array [
             Object {
               "color": "rgba(74,74,74,1)",
-              "fontFamily": "NunitoSans-Light",
               "fontSize": 14,
               "lineHeight": 22,
             },
@@ -498,7 +465,7 @@ exports[`renders MenuItem with title, value and link 1`] = `
       </Text>
       <Icon
         color="rgba(216,216,216,1)"
-        name="ios-link-outline"
+        name="ios-link"
         size={20}
         style={
           Object {
@@ -521,11 +488,7 @@ exports[`renders MenuItem with title, value and onPress 1`] = `
   onResponderTerminate={[Function]}
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  style={
-    Object {
-      "opacity": 1,
-    }
-  }
+  style={null}
 >
   <View
     style={
@@ -533,13 +496,13 @@ exports[`renders MenuItem with title, value and onPress 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "#FFFFFF",
+          "borderBottomWidth": 0.5,
           "borderColor": "rgba(216,216,216,1)",
-          "borderTopWidth": 1,
           "flexDirection": "row",
           "justifyContent": "space-between",
-          "padding": 19,
+          "padding": 15,
         },
-        Object {},
+        undefined,
       ]
     }
   >
@@ -549,9 +512,8 @@ exports[`renders MenuItem with title, value and onPress 1`] = `
       ellipsizeMode="tail"
       style={
         Object {
-          "color": "rgba(170,170,170,1)",
-          "fontFamily": "NunitoSans-Regular",
-          "fontSize": 16,
+          "color": "rgba(74,74,74,1)",
+          "fontSize": 17,
           "lineHeight": 22,
         }
       }
@@ -573,7 +535,6 @@ exports[`renders MenuItem with title, value and onPress 1`] = `
           Array [
             Object {
               "color": "rgba(74,74,74,1)",
-              "fontFamily": "NunitoSans-Light",
               "fontSize": 14,
               "lineHeight": 22,
             },

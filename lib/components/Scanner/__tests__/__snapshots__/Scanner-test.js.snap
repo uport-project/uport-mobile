@@ -1,160 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Scanner renders a DisabledScanner correctly 1`] = `
-<Component
-  style={
-    Object {
-      "flex": 1,
-      "width": 750,
-    }
-  }
->
-  <DisabledScanner />
-</Component>
-`;
-
-exports[`Scanner renders a DisabledScanner with a scanError correctly 1`] = `
-<Component
-  style={
-    Object {
-      "flex": 1,
-      "width": 750,
-    }
-  }
->
-  <DisabledScanner />
-</Component>
-`;
-
-exports[`Scanner renders a Scanner correctly 1`] = `
-<Component
-  captureAudio={false}
-  onBarCodeRead={[Function]}
-  style={
-    Object {
-      "alignItems": "center",
-      "flex": 1,
-      "justifyContent": "flex-end",
-    }
-  }
->
-  <TouchableOpacity
-    activeOpacity={0.2}
-    onPress={[Function]}
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "rgba(0,0,0,0.1)",
-        "borderRadius": 5,
-        "justifyContent": "center",
-        "marginBottom": 30,
-        "padding": 10,
-      }
-    }
-  >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Object {
-          "color": "#fff",
-          "fontSize": 22,
-        }
-      }
-    >
-      Cancel
-    </Text>
-  </TouchableOpacity>
-</Component>
-`;
-
-exports[`Scanner renders correctly when enabled 1`] = `
-<div
-  captureAudio={false}
-  onBarCodeRead={[Function]}
-  style={
-    Object {
-      "alignItems": "center",
-      "flex": 1,
-      "justifyContent": "flex-end",
-    }
-  }
->
-  <View
-    accessible={true}
-    isTVSelectable={true}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "rgba(0,0,0,0.1)",
-        "borderRadius": 5,
-        "justifyContent": "center",
-        "marginBottom": 30,
-        "opacity": 1,
-        "padding": 10,
-      }
-    }
-  >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Object {
-          "color": "#fff",
-          "fontSize": 22,
-        }
-      }
-    >
-      Cancel
-    </Text>
-  </View>
-</div>
-`;
-
-exports[`Scanner renders error message if not authorized 1`] = `
-<View
+exports[`Scanner renders as disabled by default 1`] = `
+<SafeAreaView
   style={
     Object {
       "backgroundColor": "black",
       "flex": 1,
-      "width": 750,
     }
   }
 >
-  <View
+  <Component
+    captureAudio={false}
+    onBarCodeRead={[Function]}
     style={
       Object {
-        "alignItems": "center",
-        "flex": 7,
+        "flex": 1,
         "justifyContent": "space-between",
       }
     }
   >
-    <View
+    <Component
       style={
         Object {
-          "flex": 1,
-        }
-      }
-    >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-      />
-    </View>
-    <View
-      style={
-        Object {
-          "flex": 2,
+          "backgroundColor": "black",
+          "height": 80,
+          "paddingTop": 30,
         }
       }
     >
@@ -164,61 +34,258 @@ exports[`Scanner renders error message if not authorized 1`] = `
         ellipsizeMode="tail"
         style={
           Object {
-            "color": "white",
-            "margin": 20,
+            "alignSelf": "center",
+            "color": "#FFFFFF",
+            "marginLeft": 15,
             "textAlign": "center",
           }
         }
       >
-        Camera Disabled
+        Point your camera at a QR code and tap the scan button
       </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
+    </Component>
+    <Component
+      style={
+        Array [
           Object {
-            "color": "white",
-            "margin": 20,
-            "textAlign": "center",
-          }
+            "alignItems": "center",
+            "borderWidth": 10,
+            "flex": 1,
+            "justifyContent": "center",
+          },
+          Object {
+            "borderColor": "rgba(255,255,255, 0.1)",
+          },
+        ]
+      }
+    />
+    <Component
+      style={
+        Object {
+          "backgroundColor": "black",
+          "flexDirection": "row",
+          "paddingBottom": 20,
+          "paddingTop": 50,
         }
-      >
-        To scan QR codes, go to your phone's settings to allow camera access
-      </Text>
-      <View
-        accessible={true}
-        isTVSelectable={true}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
+      }
+    >
+      <Component
         style={
           Object {
             "alignItems": "center",
+            "flex": 3,
             "justifyContent": "center",
-            "opacity": 1,
-            "padding": 10,
           }
         }
       >
+        <TouchableOpacity
+          activeOpacity={0.2}
+          onPress={[Function]}
+        >
+          <Icon
+            allowFontScaling={false}
+            color="#FFFFFF"
+            name="x"
+            size={40}
+          />
+        </TouchableOpacity>
+      </Component>
+      <Component
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 3,
+          }
+        }
+      >
+        <TouchableHighlight
+          activeOpacity={0.85}
+          delayPressOut={100}
+          disabled={false}
+          onPress={[Function]}
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "white",
+                "borderRadius": 50,
+                "borderWidth": 3,
+                "height": 100,
+                "justifyContent": "center",
+                "width": 100,
+              },
+              Object {
+                "borderColor": "red",
+              },
+            ]
+          }
+          underlayColor="black"
+        >
+          <Component />
+        </TouchableHighlight>
+      </Component>
+      <Component
+        style={
+          Object {
+            "flex": 3,
+          }
+        }
+      />
+    </Component>
+  </Component>
+</SafeAreaView>
+`;
+
+exports[`Scanner renders correctly when enabled 1`] = `
+<SafeAreaView
+  style={
+    Object {
+      "backgroundColor": "black",
+      "flex": 1,
+    }
+  }
+>
+  <Component
+    captureAudio={false}
+    onBarCodeRead={[Function]}
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <Component
+      style={
+        Object {
+          "backgroundColor": "black",
+          "height": 80,
+          "paddingTop": 30,
+        }
+      }
+    >
+      <Component
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <ActivityIndicator
+          animating={true}
+          color="#00ff00"
+          hidesWhenStopped={true}
+          size="small"
+        />
         <Text
           accessible={true}
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "#fff",
-              "fontSize": 18,
+              "alignSelf": "center",
+              "color": "#FFFFFF",
+              "marginLeft": 15,
+              "textAlign": "center",
             }
           }
         >
-          Back
+          Scanning for QR codes
         </Text>
-      </View>
-    </View>
-  </View>
-</View>
+      </Component>
+    </Component>
+    <Component
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "borderWidth": 10,
+            "flex": 1,
+            "justifyContent": "center",
+          },
+          Object {
+            "borderColor": "rgba(255,0,0, 0.1)",
+          },
+        ]
+      }
+    />
+    <Component
+      style={
+        Object {
+          "backgroundColor": "black",
+          "flexDirection": "row",
+          "paddingBottom": 20,
+          "paddingTop": 50,
+        }
+      }
+    >
+      <Component
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 3,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <TouchableOpacity
+          activeOpacity={0.2}
+          onPress={[Function]}
+        >
+          <Icon
+            allowFontScaling={false}
+            color="#FFFFFF"
+            name="x"
+            size={40}
+          />
+        </TouchableOpacity>
+      </Component>
+      <Component
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 3,
+          }
+        }
+      >
+        <TouchableHighlight
+          activeOpacity={0.85}
+          delayPressOut={100}
+          disabled={true}
+          onPress={[Function]}
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "white",
+                "borderRadius": 50,
+                "borderWidth": 3,
+                "height": 100,
+                "justifyContent": "center",
+                "width": 100,
+              },
+              Object {
+                "borderColor": "#333333",
+              },
+            ]
+          }
+          underlayColor="black"
+        >
+          <Component />
+        </TouchableHighlight>
+      </Component>
+      <Component
+        style={
+          Object {
+            "flex": 3,
+          }
+        }
+      />
+    </Component>
+  </Component>
+</SafeAreaView>
 `;
+
+exports[`Scanner renders error message if not authorized 1`] = `<DisabledScanner />`;

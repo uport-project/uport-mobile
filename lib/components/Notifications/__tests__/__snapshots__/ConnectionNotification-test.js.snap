@@ -57,7 +57,7 @@ exports[`Connection Notification renders an connection notification correctly 1`
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 22,
             "lineHeight": 30,
             "padding": 19,
@@ -79,12 +79,12 @@ exports[`Connection Notification renders an connection notification correctly 1`
               "justifyContent": "center",
             },
             Object {
-              "borderRadius": 3,
+              "borderRadius": 36,
               "height": 72,
               "width": 72,
             },
             Object {
-              "backgroundColor": "rgba(91,84,199,1)",
+              "backgroundColor": "rgba(216,216,216,1)",
             },
             Object {
               "padding": 18,
@@ -99,14 +99,13 @@ exports[`Connection Notification renders an connection notification correctly 1`
           style={
             Array [
               Object {
-                "fontFamily": "NunitoSans-Regular",
-                "fontSize": 17.5,
+                "fontFamily": undefined,
+                "fontSize": 15,
                 "textAlign": "center",
               },
               undefined,
               Object {
-                "color": "white",
-                "fontSize": 18,
+                "fontSize": 24,
               },
             ]
           }
@@ -123,7 +122,6 @@ exports[`Connection Notification renders an connection notification correctly 1`
         Array [
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
             "fontSize": 20,
             "lineHeight": 27,
             "textAlign": "center",
@@ -144,7 +142,6 @@ exports[`Connection Notification renders an connection notification correctly 1`
         Array [
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Light",
             "fontSize": 16,
             "lineHeight": 22,
             "textAlign": "center",
@@ -205,7 +202,7 @@ exports[`Connection Notification renders an connection notification correctly 1`
           style={
             Array [
               Object {
-                "fontFamily": "NunitoSans-Bold",
+                "fontFamily": "Montserrat",
                 "fontSize": 18,
                 "textAlign": "center",
               },
@@ -255,7 +252,7 @@ exports[`Connection Notification renders an connection notification correctly 1`
           style={
             Array [
               Object {
-                "fontFamily": "NunitoSans-Bold",
+                "fontFamily": "Montserrat",
                 "fontSize": 18,
                 "textAlign": "center",
               },
@@ -331,7 +328,7 @@ exports[`Connection Notification renders an connection notification that has bee
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 22,
             "lineHeight": 30,
             "padding": 19,
@@ -353,12 +350,12 @@ exports[`Connection Notification renders an connection notification that has bee
               "justifyContent": "center",
             },
             Object {
-              "borderRadius": 3,
+              "borderRadius": 36,
               "height": 72,
               "width": 72,
             },
             Object {
-              "backgroundColor": "rgba(91,84,199,1)",
+              "backgroundColor": "rgba(216,216,216,1)",
             },
             Object {
               "padding": 18,
@@ -373,14 +370,13 @@ exports[`Connection Notification renders an connection notification that has bee
           style={
             Array [
               Object {
-                "fontFamily": "NunitoSans-Regular",
-                "fontSize": 17.5,
+                "fontFamily": undefined,
+                "fontSize": 15,
                 "textAlign": "center",
               },
               undefined,
               Object {
-                "color": "white",
-                "fontSize": 18,
+                "fontSize": 24,
               },
             ]
           }
@@ -397,7 +393,6 @@ exports[`Connection Notification renders an connection notification that has bee
         Array [
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
             "fontSize": 20,
             "lineHeight": 27,
             "textAlign": "center",
@@ -418,7 +413,6 @@ exports[`Connection Notification renders an connection notification that has bee
         Array [
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Light",
             "fontSize": 16,
             "lineHeight": 22,
             "textAlign": "center",
@@ -492,7 +486,7 @@ exports[`Connection Notification renders an connection notification that has bee
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 22,
             "lineHeight": 30,
             "padding": 19,
@@ -514,12 +508,12 @@ exports[`Connection Notification renders an connection notification that has bee
               "justifyContent": "center",
             },
             Object {
-              "borderRadius": 3,
+              "borderRadius": 36,
               "height": 72,
               "width": 72,
             },
             Object {
-              "backgroundColor": "rgba(91,84,199,1)",
+              "backgroundColor": "rgba(216,216,216,1)",
             },
             Object {
               "padding": 18,
@@ -534,14 +528,13 @@ exports[`Connection Notification renders an connection notification that has bee
           style={
             Array [
               Object {
-                "fontFamily": "NunitoSans-Regular",
-                "fontSize": 17.5,
+                "fontFamily": undefined,
+                "fontSize": 15,
                 "textAlign": "center",
               },
               undefined,
               Object {
-                "color": "white",
-                "fontSize": 18,
+                "fontSize": 24,
               },
             ]
           }
@@ -558,7 +551,6 @@ exports[`Connection Notification renders an connection notification that has bee
         Array [
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
             "fontSize": 20,
             "lineHeight": 27,
             "textAlign": "center",
@@ -579,7 +571,6 @@ exports[`Connection Notification renders an connection notification that has bee
         Array [
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Light",
             "fontSize": 16,
             "lineHeight": 22,
             "textAlign": "center",

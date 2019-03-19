@@ -57,7 +57,7 @@ exports[`Recovery Notification renders an recovery notification correctly 1`] = 
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 22,
             "lineHeight": 30,
             "padding": 19,
@@ -130,7 +130,7 @@ exports[`Recovery Notification renders an recovery notification that has been au
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 22,
             "lineHeight": 30,
             "padding": 19,
@@ -203,7 +203,7 @@ exports[`Recovery Notification renders an recovery notification that has been ca
         style={
           Object {
             "color": "rgba(74,74,74,1)",
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 22,
             "lineHeight": 30,
             "padding": 19,

@@ -1,0 +1,4407 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SettingsRoot renders Settings screen with 1`] = `
+<RCTSafeAreaView
+  style={
+    Object {
+      "backgroundColor": "#EFEEF3",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    pointerEvents="auto"
+    style={
+      Object {
+        "alignItems": undefined,
+        "backgroundColor": undefined,
+        "borderRadius": undefined,
+        "flex": 1,
+        "flexDirection": undefined,
+        "height": undefined,
+        "justifyContent": undefined,
+        "marginBottom": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginTop": undefined,
+        "padding": undefined,
+        "paddingBottom": undefined,
+        "paddingHorizontal": undefined,
+        "paddingLeft": undefined,
+        "paddingRight": undefined,
+        "paddingTop": undefined,
+        "width": undefined,
+      }
+    }
+  >
+    <RCTScrollView
+      contentContainerStyle={Object {}}
+      contentInset={
+        Object {
+          "bottom": 0,
+        }
+      }
+      contentOffset={
+        Object {
+          "x": 0,
+          "y": 0,
+        }
+      }
+      getTextInputRefs={[Function]}
+      onContentSizeChange={[Function]}
+      onLayout={[Function]}
+      onScroll={[Function]}
+      scrollEventThrottle={200}
+      scrollToBottomOnKBShow={false}
+      scrollToInputAdditionalOffset={75}
+      startScrolledToBottom={false}
+      style={
+        Object {
+          "backgroundColor": "#EFEEF3",
+        }
+      }
+    >
+      <View>
+        <View
+          pointerEvents="auto"
+          style={
+            Object {
+              "alignItems": undefined,
+              "backgroundColor": "#EFEEF3",
+              "borderRadius": undefined,
+              "flex": 1,
+              "flexDirection": undefined,
+              "height": undefined,
+              "justifyContent": undefined,
+              "marginBottom": undefined,
+              "marginLeft": undefined,
+              "marginRight": undefined,
+              "marginTop": undefined,
+              "padding": undefined,
+              "paddingBottom": 15,
+              "paddingHorizontal": undefined,
+              "paddingLeft": undefined,
+              "paddingRight": undefined,
+              "paddingTop": undefined,
+              "width": undefined,
+            }
+          }
+        >
+          <View
+            pointerEvents="auto"
+            style={
+              Object {
+                "alignItems": undefined,
+                "backgroundColor": undefined,
+                "borderRadius": undefined,
+                "flex": undefined,
+                "flexDirection": undefined,
+                "height": undefined,
+                "justifyContent": undefined,
+                "marginBottom": undefined,
+                "marginLeft": undefined,
+                "marginRight": undefined,
+                "marginTop": 20,
+                "padding": undefined,
+                "paddingBottom": undefined,
+                "paddingHorizontal": undefined,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+                "paddingTop": undefined,
+                "width": undefined,
+              }
+            }
+          >
+            <View
+              pointerEvents="auto"
+              style={
+                Object {
+                  "alignItems": undefined,
+                  "backgroundColor": undefined,
+                  "borderRadius": undefined,
+                  "flex": undefined,
+                  "flexDirection": undefined,
+                  "height": undefined,
+                  "justifyContent": undefined,
+                  "marginBottom": undefined,
+                  "marginLeft": undefined,
+                  "marginRight": undefined,
+                  "marginTop": undefined,
+                  "padding": undefined,
+                  "paddingBottom": undefined,
+                  "paddingHorizontal": undefined,
+                  "paddingLeft": 15,
+                  "paddingRight": undefined,
+                  "paddingTop": undefined,
+                  "width": undefined,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#BBBBBB",
+                    "fontSize": 14,
+                    "paddingBottom": 15,
+                  }
+                }
+              />
+            </View>
+            <View
+              pointerEvents="auto"
+              style={
+                Object {
+                  "alignItems": undefined,
+                  "backgroundColor": "#FFFFFF",
+                  "borderBottomColor": "#CCCCCC",
+                  "borderBottomWidth": 0.5,
+                  "borderRadius": undefined,
+                  "borderTopColor": "#CCCCCC",
+                  "borderTopWidth": 0.5,
+                  "flex": undefined,
+                  "flexDirection": undefined,
+                  "height": undefined,
+                  "justifyContent": undefined,
+                  "marginBottom": undefined,
+                  "marginLeft": undefined,
+                  "marginRight": undefined,
+                  "marginTop": undefined,
+                  "padding": undefined,
+                  "paddingBottom": undefined,
+                  "paddingHorizontal": undefined,
+                  "paddingLeft": undefined,
+                  "paddingRight": undefined,
+                  "paddingTop": undefined,
+                  "width": undefined,
+                }
+              }
+            >
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "#FFFFFF",
+                  }
+                }
+              >
+                <View
+                  pointerEvents="auto"
+                  style={
+                    Object {
+                      "alignItems": undefined,
+                      "backgroundColor": undefined,
+                      "borderRadius": undefined,
+                      "flex": 1,
+                      "flexDirection": "row",
+                      "height": undefined,
+                      "justifyContent": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "padding": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": undefined,
+                      "width": undefined,
+                    }
+                  }
+                >
+                  <View
+                    pointerEvents="auto"
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": undefined,
+                        "borderBottomColor": "#CCCCCC",
+                        "borderBottomWidth": 0.5,
+                        "borderRadius": undefined,
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "height": undefined,
+                        "justifyContent": undefined,
+                        "marginBottom": undefined,
+                        "marginLeft": 15,
+                        "marginRight": undefined,
+                        "marginTop": undefined,
+                        "padding": undefined,
+                        "paddingBottom": 10,
+                        "paddingHorizontal": undefined,
+                        "paddingLeft": undefined,
+                        "paddingRight": 15,
+                        "paddingTop": 10,
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": undefined,
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": 1,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "overflow": "hidden",
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "#333333",
+                            "fontSize": 18,
+                          }
+                        }
+                      >
+                        App Version
+                      </Text>
+                    </View>
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": undefined,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <View
+                        pointerEvents="auto"
+                        style={
+                          Object {
+                            "alignItems": undefined,
+                            "backgroundColor": undefined,
+                            "borderRadius": undefined,
+                            "flex": undefined,
+                            "flexDirection": undefined,
+                            "height": undefined,
+                            "justifyContent": undefined,
+                            "marginBottom": undefined,
+                            "marginLeft": 15,
+                            "marginRight": 15,
+                            "marginTop": undefined,
+                            "padding": undefined,
+                            "paddingBottom": 5,
+                            "paddingHorizontal": undefined,
+                            "paddingLeft": undefined,
+                            "paddingRight": undefined,
+                            "paddingTop": 5,
+                            "width": undefined,
+                          }
+                        }
+                      >
+                        <Text
+                          accessible={true}
+                          allowFontScaling={true}
+                          ellipsizeMode="tail"
+                          style={
+                            Object {
+                              "color": "#BBBBBB",
+                              "fontSize": 15,
+                            }
+                          }
+                        >
+                          256 (undefined)
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "#FFFFFF",
+                  }
+                }
+              >
+                <View
+                  pointerEvents="auto"
+                  style={
+                    Object {
+                      "alignItems": undefined,
+                      "backgroundColor": undefined,
+                      "borderRadius": undefined,
+                      "flex": 1,
+                      "flexDirection": "row",
+                      "height": undefined,
+                      "justifyContent": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "padding": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": undefined,
+                      "width": undefined,
+                    }
+                  }
+                >
+                  <View
+                    pointerEvents="auto"
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": undefined,
+                        "borderBottomColor": "#CCCCCC",
+                        "borderBottomWidth": 0.5,
+                        "borderRadius": undefined,
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "height": undefined,
+                        "justifyContent": undefined,
+                        "marginBottom": undefined,
+                        "marginLeft": 15,
+                        "marginRight": undefined,
+                        "marginTop": undefined,
+                        "padding": undefined,
+                        "paddingBottom": 10,
+                        "paddingHorizontal": undefined,
+                        "paddingLeft": undefined,
+                        "paddingRight": 15,
+                        "paddingTop": 10,
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": undefined,
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": 1,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "overflow": "hidden",
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "#333333",
+                            "fontSize": 18,
+                          }
+                        }
+                      >
+                        uPort ID
+                      </Text>
+                    </View>
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": undefined,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <View
+                        pointerEvents="auto"
+                        style={
+                          Object {
+                            "alignItems": undefined,
+                            "backgroundColor": undefined,
+                            "borderRadius": undefined,
+                            "flex": undefined,
+                            "flexDirection": undefined,
+                            "height": undefined,
+                            "justifyContent": undefined,
+                            "marginBottom": undefined,
+                            "marginLeft": 15,
+                            "marginRight": 15,
+                            "marginTop": undefined,
+                            "padding": undefined,
+                            "paddingBottom": 5,
+                            "paddingHorizontal": undefined,
+                            "paddingLeft": undefined,
+                            "paddingRight": undefined,
+                            "paddingTop": 5,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                      <Icon
+                        color="#BBBBBB"
+                        name="ios-arrow-forward"
+                        size={24}
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "#FFFFFF",
+                  }
+                }
+              >
+                <View
+                  pointerEvents="auto"
+                  style={
+                    Object {
+                      "alignItems": undefined,
+                      "backgroundColor": undefined,
+                      "borderRadius": undefined,
+                      "flex": 1,
+                      "flexDirection": "row",
+                      "height": undefined,
+                      "justifyContent": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "padding": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": undefined,
+                      "width": undefined,
+                    }
+                  }
+                >
+                  <View
+                    pointerEvents="auto"
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": undefined,
+                        "borderBottomColor": "#CCCCCC",
+                        "borderBottomWidth": 0.5,
+                        "borderRadius": undefined,
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "height": undefined,
+                        "justifyContent": undefined,
+                        "marginBottom": undefined,
+                        "marginLeft": 15,
+                        "marginRight": undefined,
+                        "marginTop": undefined,
+                        "padding": undefined,
+                        "paddingBottom": 10,
+                        "paddingHorizontal": undefined,
+                        "paddingLeft": undefined,
+                        "paddingRight": 15,
+                        "paddingTop": 10,
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": undefined,
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": 1,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "overflow": "hidden",
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "#333333",
+                            "fontSize": 18,
+                          }
+                        }
+                      >
+                        Try uPort
+                      </Text>
+                    </View>
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": undefined,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <View
+                        pointerEvents="auto"
+                        style={
+                          Object {
+                            "alignItems": undefined,
+                            "backgroundColor": undefined,
+                            "borderRadius": undefined,
+                            "flex": undefined,
+                            "flexDirection": undefined,
+                            "height": undefined,
+                            "justifyContent": undefined,
+                            "marginBottom": undefined,
+                            "marginLeft": 15,
+                            "marginRight": 15,
+                            "marginTop": undefined,
+                            "padding": undefined,
+                            "paddingBottom": 5,
+                            "paddingHorizontal": undefined,
+                            "paddingLeft": undefined,
+                            "paddingRight": undefined,
+                            "paddingTop": 5,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                      <Icon
+                        color="#BBBBBB"
+                        name="ios-arrow-forward"
+                        size={24}
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "#FFFFFF",
+                  }
+                }
+              >
+                <View
+                  pointerEvents="auto"
+                  style={
+                    Object {
+                      "alignItems": undefined,
+                      "backgroundColor": undefined,
+                      "borderRadius": undefined,
+                      "flex": 1,
+                      "flexDirection": "row",
+                      "height": undefined,
+                      "justifyContent": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "padding": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": undefined,
+                      "width": undefined,
+                    }
+                  }
+                >
+                  <View
+                    pointerEvents="auto"
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": undefined,
+                        "borderRadius": undefined,
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "height": undefined,
+                        "justifyContent": undefined,
+                        "marginBottom": undefined,
+                        "marginLeft": 15,
+                        "marginRight": undefined,
+                        "marginTop": undefined,
+                        "padding": undefined,
+                        "paddingBottom": 10,
+                        "paddingHorizontal": undefined,
+                        "paddingLeft": undefined,
+                        "paddingRight": 15,
+                        "paddingTop": 10,
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": undefined,
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": 1,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "overflow": "hidden",
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "#333333",
+                            "fontSize": 18,
+                          }
+                        }
+                      >
+                        Support
+                      </Text>
+                    </View>
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": undefined,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <View
+                        pointerEvents="auto"
+                        style={
+                          Object {
+                            "alignItems": undefined,
+                            "backgroundColor": undefined,
+                            "borderRadius": undefined,
+                            "flex": undefined,
+                            "flexDirection": undefined,
+                            "height": undefined,
+                            "justifyContent": undefined,
+                            "marginBottom": undefined,
+                            "marginLeft": 15,
+                            "marginRight": 15,
+                            "marginTop": undefined,
+                            "padding": undefined,
+                            "paddingBottom": 5,
+                            "paddingHorizontal": undefined,
+                            "paddingLeft": undefined,
+                            "paddingRight": undefined,
+                            "paddingTop": 5,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                      <Icon
+                        color="#BBBBBB"
+                        name="ios-link"
+                        size={24}
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            pointerEvents="auto"
+            style={
+              Object {
+                "alignItems": undefined,
+                "backgroundColor": undefined,
+                "borderRadius": undefined,
+                "flex": undefined,
+                "flexDirection": undefined,
+                "height": undefined,
+                "justifyContent": undefined,
+                "marginBottom": undefined,
+                "marginLeft": undefined,
+                "marginRight": undefined,
+                "marginTop": 20,
+                "padding": undefined,
+                "paddingBottom": undefined,
+                "paddingHorizontal": undefined,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+                "paddingTop": undefined,
+                "width": undefined,
+              }
+            }
+          >
+            <View
+              pointerEvents="auto"
+              style={
+                Object {
+                  "alignItems": undefined,
+                  "backgroundColor": undefined,
+                  "borderRadius": undefined,
+                  "flex": undefined,
+                  "flexDirection": undefined,
+                  "height": undefined,
+                  "justifyContent": undefined,
+                  "marginBottom": undefined,
+                  "marginLeft": undefined,
+                  "marginRight": undefined,
+                  "marginTop": undefined,
+                  "padding": undefined,
+                  "paddingBottom": undefined,
+                  "paddingHorizontal": undefined,
+                  "paddingLeft": 15,
+                  "paddingRight": undefined,
+                  "paddingTop": undefined,
+                  "width": undefined,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#BBBBBB",
+                    "fontSize": 14,
+                    "paddingBottom": 15,
+                  }
+                }
+              />
+            </View>
+            <View
+              pointerEvents="auto"
+              style={
+                Object {
+                  "alignItems": undefined,
+                  "backgroundColor": "#FFFFFF",
+                  "borderBottomColor": "#CCCCCC",
+                  "borderBottomWidth": 0.5,
+                  "borderRadius": undefined,
+                  "borderTopColor": "#CCCCCC",
+                  "borderTopWidth": 0.5,
+                  "flex": undefined,
+                  "flexDirection": undefined,
+                  "height": undefined,
+                  "justifyContent": undefined,
+                  "marginBottom": undefined,
+                  "marginLeft": undefined,
+                  "marginRight": undefined,
+                  "marginTop": undefined,
+                  "padding": undefined,
+                  "paddingBottom": undefined,
+                  "paddingHorizontal": undefined,
+                  "paddingLeft": undefined,
+                  "paddingRight": undefined,
+                  "paddingTop": undefined,
+                  "width": undefined,
+                }
+              }
+            >
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "#FFFFFF",
+                  }
+                }
+              >
+                <View
+                  pointerEvents="auto"
+                  style={
+                    Object {
+                      "alignItems": undefined,
+                      "backgroundColor": undefined,
+                      "borderRadius": undefined,
+                      "flex": 1,
+                      "flexDirection": "row",
+                      "height": undefined,
+                      "justifyContent": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "padding": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": undefined,
+                      "width": undefined,
+                    }
+                  }
+                >
+                  <View
+                    pointerEvents="auto"
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": undefined,
+                        "borderBottomColor": "#CCCCCC",
+                        "borderBottomWidth": 0.5,
+                        "borderRadius": undefined,
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "height": undefined,
+                        "justifyContent": undefined,
+                        "marginBottom": undefined,
+                        "marginLeft": 15,
+                        "marginRight": undefined,
+                        "marginTop": undefined,
+                        "padding": undefined,
+                        "paddingBottom": 10,
+                        "paddingHorizontal": undefined,
+                        "paddingLeft": undefined,
+                        "paddingRight": 15,
+                        "paddingTop": 10,
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": undefined,
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": 1,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "overflow": "hidden",
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "#333333",
+                            "fontSize": 18,
+                          }
+                        }
+                      >
+                        Device
+                      </Text>
+                    </View>
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": undefined,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <View
+                        pointerEvents="auto"
+                        style={
+                          Object {
+                            "alignItems": undefined,
+                            "backgroundColor": undefined,
+                            "borderRadius": undefined,
+                            "flex": undefined,
+                            "flexDirection": undefined,
+                            "height": undefined,
+                            "justifyContent": undefined,
+                            "marginBottom": undefined,
+                            "marginLeft": 15,
+                            "marginRight": 15,
+                            "marginTop": undefined,
+                            "padding": undefined,
+                            "paddingBottom": 5,
+                            "paddingHorizontal": undefined,
+                            "paddingLeft": undefined,
+                            "paddingRight": undefined,
+                            "paddingTop": 5,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                      <Icon
+                        color="#BBBBBB"
+                        name="ios-arrow-forward"
+                        size={24}
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "#FFFFFF",
+                  }
+                }
+              >
+                <View
+                  pointerEvents="auto"
+                  style={
+                    Object {
+                      "alignItems": undefined,
+                      "backgroundColor": undefined,
+                      "borderRadius": undefined,
+                      "flex": 1,
+                      "flexDirection": "row",
+                      "height": undefined,
+                      "justifyContent": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "padding": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": undefined,
+                      "width": undefined,
+                    }
+                  }
+                >
+                  <View
+                    pointerEvents="auto"
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": undefined,
+                        "borderBottomColor": "#CCCCCC",
+                        "borderBottomWidth": 0.5,
+                        "borderRadius": undefined,
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "height": undefined,
+                        "justifyContent": undefined,
+                        "marginBottom": undefined,
+                        "marginLeft": 15,
+                        "marginRight": undefined,
+                        "marginTop": undefined,
+                        "padding": undefined,
+                        "paddingBottom": 10,
+                        "paddingHorizontal": undefined,
+                        "paddingLeft": undefined,
+                        "paddingRight": 15,
+                        "paddingTop": 10,
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": undefined,
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": 1,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "overflow": "hidden",
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "#333333",
+                            "fontSize": 18,
+                          }
+                        }
+                      >
+                        System Messages
+                      </Text>
+                    </View>
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": undefined,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <View
+                        pointerEvents="auto"
+                        style={
+                          Object {
+                            "alignItems": undefined,
+                            "backgroundColor": undefined,
+                            "borderRadius": undefined,
+                            "flex": undefined,
+                            "flexDirection": undefined,
+                            "height": undefined,
+                            "justifyContent": undefined,
+                            "marginBottom": undefined,
+                            "marginLeft": 15,
+                            "marginRight": 15,
+                            "marginTop": undefined,
+                            "padding": undefined,
+                            "paddingBottom": 5,
+                            "paddingHorizontal": undefined,
+                            "paddingLeft": undefined,
+                            "paddingRight": undefined,
+                            "paddingTop": 5,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                      <Icon
+                        color="#BBBBBB"
+                        name="ios-arrow-forward"
+                        size={24}
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "#FFFFFF",
+                  }
+                }
+              >
+                <View
+                  pointerEvents="auto"
+                  style={
+                    Object {
+                      "alignItems": undefined,
+                      "backgroundColor": undefined,
+                      "borderRadius": undefined,
+                      "flex": 1,
+                      "flexDirection": "row",
+                      "height": undefined,
+                      "justifyContent": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "padding": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": undefined,
+                      "width": undefined,
+                    }
+                  }
+                >
+                  <View
+                    pointerEvents="auto"
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": undefined,
+                        "borderRadius": undefined,
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "height": undefined,
+                        "justifyContent": undefined,
+                        "marginBottom": undefined,
+                        "marginLeft": 15,
+                        "marginRight": undefined,
+                        "marginTop": undefined,
+                        "padding": undefined,
+                        "paddingBottom": 10,
+                        "paddingHorizontal": undefined,
+                        "paddingLeft": undefined,
+                        "paddingRight": 15,
+                        "paddingTop": 10,
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": undefined,
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": 1,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "overflow": "hidden",
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "#333333",
+                            "fontSize": 18,
+                          }
+                        }
+                      >
+                        Network
+                      </Text>
+                    </View>
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": undefined,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <View
+                        pointerEvents="auto"
+                        style={
+                          Object {
+                            "alignItems": undefined,
+                            "backgroundColor": undefined,
+                            "borderRadius": undefined,
+                            "flex": undefined,
+                            "flexDirection": undefined,
+                            "height": undefined,
+                            "justifyContent": undefined,
+                            "marginBottom": undefined,
+                            "marginLeft": 15,
+                            "marginRight": 15,
+                            "marginTop": undefined,
+                            "padding": undefined,
+                            "paddingBottom": 5,
+                            "paddingHorizontal": undefined,
+                            "paddingLeft": undefined,
+                            "paddingRight": undefined,
+                            "paddingTop": 5,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                      <Icon
+                        color="#BBBBBB"
+                        name="ios-arrow-forward"
+                        size={24}
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            pointerEvents="auto"
+            style={
+              Object {
+                "alignItems": undefined,
+                "backgroundColor": undefined,
+                "borderRadius": undefined,
+                "flex": undefined,
+                "flexDirection": undefined,
+                "height": undefined,
+                "justifyContent": undefined,
+                "marginBottom": undefined,
+                "marginLeft": undefined,
+                "marginRight": undefined,
+                "marginTop": 20,
+                "padding": undefined,
+                "paddingBottom": undefined,
+                "paddingHorizontal": undefined,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+                "paddingTop": undefined,
+                "width": undefined,
+              }
+            }
+          >
+            <View
+              pointerEvents="auto"
+              style={
+                Object {
+                  "alignItems": undefined,
+                  "backgroundColor": undefined,
+                  "borderRadius": undefined,
+                  "flex": undefined,
+                  "flexDirection": undefined,
+                  "height": undefined,
+                  "justifyContent": undefined,
+                  "marginBottom": undefined,
+                  "marginLeft": undefined,
+                  "marginRight": undefined,
+                  "marginTop": undefined,
+                  "padding": undefined,
+                  "paddingBottom": undefined,
+                  "paddingHorizontal": undefined,
+                  "paddingLeft": 15,
+                  "paddingRight": undefined,
+                  "paddingTop": undefined,
+                  "width": undefined,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#BBBBBB",
+                    "fontSize": 14,
+                    "paddingBottom": 15,
+                  }
+                }
+              />
+            </View>
+            <View
+              pointerEvents="auto"
+              style={
+                Object {
+                  "alignItems": undefined,
+                  "backgroundColor": "#FFFFFF",
+                  "borderBottomColor": "#CCCCCC",
+                  "borderBottomWidth": 0.5,
+                  "borderRadius": undefined,
+                  "borderTopColor": "#CCCCCC",
+                  "borderTopWidth": 0.5,
+                  "flex": undefined,
+                  "flexDirection": undefined,
+                  "height": undefined,
+                  "justifyContent": undefined,
+                  "marginBottom": undefined,
+                  "marginLeft": undefined,
+                  "marginRight": undefined,
+                  "marginTop": undefined,
+                  "padding": undefined,
+                  "paddingBottom": undefined,
+                  "paddingHorizontal": undefined,
+                  "paddingLeft": undefined,
+                  "paddingRight": undefined,
+                  "paddingTop": undefined,
+                  "width": undefined,
+                }
+              }
+            >
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "#FFFFFF",
+                  }
+                }
+              >
+                <View
+                  pointerEvents="auto"
+                  style={
+                    Object {
+                      "alignItems": undefined,
+                      "backgroundColor": undefined,
+                      "borderRadius": undefined,
+                      "flex": 1,
+                      "flexDirection": "row",
+                      "height": undefined,
+                      "justifyContent": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "padding": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": undefined,
+                      "width": undefined,
+                    }
+                  }
+                >
+                  <View
+                    pointerEvents="auto"
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": undefined,
+                        "borderBottomColor": "#CCCCCC",
+                        "borderBottomWidth": 0.5,
+                        "borderRadius": undefined,
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "height": undefined,
+                        "justifyContent": undefined,
+                        "marginBottom": undefined,
+                        "marginLeft": 15,
+                        "marginRight": undefined,
+                        "marginTop": undefined,
+                        "padding": undefined,
+                        "paddingBottom": 10,
+                        "paddingHorizontal": undefined,
+                        "paddingLeft": undefined,
+                        "paddingRight": 15,
+                        "paddingTop": 10,
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": undefined,
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": 1,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "overflow": "hidden",
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "#333333",
+                            "fontSize": 18,
+                          }
+                        }
+                      >
+                        Privacy Policy
+                      </Text>
+                    </View>
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": undefined,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <View
+                        pointerEvents="auto"
+                        style={
+                          Object {
+                            "alignItems": undefined,
+                            "backgroundColor": undefined,
+                            "borderRadius": undefined,
+                            "flex": undefined,
+                            "flexDirection": undefined,
+                            "height": undefined,
+                            "justifyContent": undefined,
+                            "marginBottom": undefined,
+                            "marginLeft": 15,
+                            "marginRight": 15,
+                            "marginTop": undefined,
+                            "padding": undefined,
+                            "paddingBottom": 5,
+                            "paddingHorizontal": undefined,
+                            "paddingLeft": undefined,
+                            "paddingRight": undefined,
+                            "paddingTop": 5,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                      <Icon
+                        color="#BBBBBB"
+                        name="ios-arrow-forward"
+                        size={24}
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "#FFFFFF",
+                  }
+                }
+              >
+                <View
+                  pointerEvents="auto"
+                  style={
+                    Object {
+                      "alignItems": undefined,
+                      "backgroundColor": undefined,
+                      "borderRadius": undefined,
+                      "flex": 1,
+                      "flexDirection": "row",
+                      "height": undefined,
+                      "justifyContent": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "padding": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": undefined,
+                      "width": undefined,
+                    }
+                  }
+                >
+                  <View
+                    pointerEvents="auto"
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": undefined,
+                        "borderRadius": undefined,
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "height": undefined,
+                        "justifyContent": undefined,
+                        "marginBottom": undefined,
+                        "marginLeft": 15,
+                        "marginRight": undefined,
+                        "marginTop": undefined,
+                        "padding": undefined,
+                        "paddingBottom": 10,
+                        "paddingHorizontal": undefined,
+                        "paddingLeft": undefined,
+                        "paddingRight": 15,
+                        "paddingTop": 10,
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": undefined,
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": 1,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "overflow": "hidden",
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "#333333",
+                            "fontSize": 18,
+                          }
+                        }
+                      >
+                        Terms & Conditions
+                      </Text>
+                    </View>
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": undefined,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <View
+                        pointerEvents="auto"
+                        style={
+                          Object {
+                            "alignItems": undefined,
+                            "backgroundColor": undefined,
+                            "borderRadius": undefined,
+                            "flex": undefined,
+                            "flexDirection": undefined,
+                            "height": undefined,
+                            "justifyContent": undefined,
+                            "marginBottom": undefined,
+                            "marginLeft": 15,
+                            "marginRight": 15,
+                            "marginTop": undefined,
+                            "padding": undefined,
+                            "paddingBottom": 5,
+                            "paddingHorizontal": undefined,
+                            "paddingLeft": undefined,
+                            "paddingRight": undefined,
+                            "paddingTop": 5,
+                            "width": undefined,
+                          }
+                        }
+                      >
+                        <Text
+                          accessible={true}
+                          allowFontScaling={true}
+                          ellipsizeMode="tail"
+                          style={
+                            Object {
+                              "color": "#BBBBBB",
+                              "fontSize": 15,
+                            }
+                          }
+                        >
+                          v1.2 (5/24/2018)
+                        </Text>
+                      </View>
+                      <Icon
+                        color="#BBBBBB"
+                        name="ios-arrow-forward"
+                        size={24}
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`SettingsRoot renders a connected SettingsRoot as expected 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Settings
+    connections={Array []}
+    dispatch={[Function]}
+    hasHDWallet={false}
+    navigator={
+      FakeNavigator {
+        "event": [Function],
+      }
+    }
+    seedConfirmed={null}
+    version="256"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <Section>
+          <ListItem
+            accessoryRight="256 (undefined)"
+          >
+            App Version
+          </ListItem>
+          <ListItem
+            onPress={[Function]}
+          >
+            uPort ID
+          </ListItem>
+          <ListItem
+            onPress={[Function]}
+          >
+            Try uPort
+          </ListItem>
+          <ListItem
+            externalLink="https://chat.uport.me"
+            last={true}
+          >
+            Support
+          </ListItem>
+        </Section>,
+        false,
+        <Section>
+          <ListItem
+            onPress={[Function]}
+          >
+            Device
+          </ListItem>
+          <ListItem
+            onPress={[Function]}
+          >
+            System Messages
+          </ListItem>
+          <ListItem
+            last={true}
+            onPress={[Function]}
+          >
+            Network
+          </ListItem>
+        </Section>,
+        <Section>
+          <ListItem
+            onPress={[Function]}
+          >
+            Privacy Policy
+          </ListItem>
+          <ListItem
+            accessoryRight="v1.2 (5/24/2018)"
+            last={true}
+            onPress={[Function]}
+          >
+            Terms & Conditions
+          </ListItem>
+        </Section>,
+      ],
+      "config": "safeScroll",
+      "keyboardAvoiding": false,
+      "statusBarHidden": false,
+      "type": "secondary",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <ListItem
+              accessoryRight="256 (undefined)"
+            >
+              App Version
+            </ListItem>,
+            <ListItem
+              onPress={[Function]}
+            >
+              uPort ID
+            </ListItem>,
+            <ListItem
+              onPress={[Function]}
+            >
+              Try uPort
+            </ListItem>,
+            <ListItem
+              externalLink="https://chat.uport.me"
+              last={true}
+            >
+              Support
+            </ListItem>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "accessoryRight": "256 (undefined)",
+              "children": "App Version",
+            },
+            "ref": null,
+            "rendered": "App Version",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "uPort ID",
+              "onPress": [Function],
+            },
+            "ref": null,
+            "rendered": "uPort ID",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "Try uPort",
+              "onPress": [Function],
+            },
+            "ref": null,
+            "rendered": "Try uPort",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "Support",
+              "externalLink": "https://chat.uport.me",
+              "last": true,
+            },
+            "ref": null,
+            "rendered": "Support",
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      false,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <ListItem
+              onPress={[Function]}
+            >
+              Device
+            </ListItem>,
+            false,
+            <ListItem
+              onPress={[Function]}
+            >
+              System Messages
+            </ListItem>,
+            <ListItem
+              last={true}
+              onPress={[Function]}
+            >
+              Network
+            </ListItem>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "Device",
+              "onPress": [Function],
+            },
+            "ref": null,
+            "rendered": "Device",
+            "type": [Function],
+          },
+          false,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "System Messages",
+              "onPress": [Function],
+            },
+            "ref": null,
+            "rendered": "System Messages",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "Network",
+              "last": true,
+              "onPress": [Function],
+            },
+            "ref": null,
+            "rendered": "Network",
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <ListItem
+              onPress={[Function]}
+            >
+              Privacy Policy
+            </ListItem>,
+            <ListItem
+              accessoryRight="v1.2 (5/24/2018)"
+              last={true}
+              onPress={[Function]}
+            >
+              Terms & Conditions
+            </ListItem>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "Privacy Policy",
+              "onPress": [Function],
+            },
+            "ref": null,
+            "rendered": "Privacy Policy",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "accessoryRight": "v1.2 (5/24/2018)",
+              "children": "Terms & Conditions",
+              "last": true,
+              "onPress": [Function],
+            },
+            "ref": null,
+            "rendered": "Terms & Conditions",
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Section>
+            <ListItem
+              accessoryRight="256 (undefined)"
+            >
+              App Version
+            </ListItem>
+            <ListItem
+              onPress={[Function]}
+            >
+              uPort ID
+            </ListItem>
+            <ListItem
+              onPress={[Function]}
+            >
+              Try uPort
+            </ListItem>
+            <ListItem
+              externalLink="https://chat.uport.me"
+              last={true}
+            >
+              Support
+            </ListItem>
+          </Section>,
+          false,
+          <Section>
+            <ListItem
+              onPress={[Function]}
+            >
+              Device
+            </ListItem>
+            <ListItem
+              onPress={[Function]}
+            >
+              System Messages
+            </ListItem>
+            <ListItem
+              last={true}
+              onPress={[Function]}
+            >
+              Network
+            </ListItem>
+          </Section>,
+          <Section>
+            <ListItem
+              onPress={[Function]}
+            >
+              Privacy Policy
+            </ListItem>
+            <ListItem
+              accessoryRight="v1.2 (5/24/2018)"
+              last={true}
+              onPress={[Function]}
+            >
+              Terms & Conditions
+            </ListItem>
+          </Section>,
+        ],
+        "config": "safeScroll",
+        "keyboardAvoiding": false,
+        "statusBarHidden": false,
+        "type": "secondary",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <ListItem
+                accessoryRight="256 (undefined)"
+              >
+                App Version
+              </ListItem>,
+              <ListItem
+                onPress={[Function]}
+              >
+                uPort ID
+              </ListItem>,
+              <ListItem
+                onPress={[Function]}
+              >
+                Try uPort
+              </ListItem>,
+              <ListItem
+                externalLink="https://chat.uport.me"
+                last={true}
+              >
+                Support
+              </ListItem>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "accessoryRight": "256 (undefined)",
+                "children": "App Version",
+              },
+              "ref": null,
+              "rendered": "App Version",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "uPort ID",
+                "onPress": [Function],
+              },
+              "ref": null,
+              "rendered": "uPort ID",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Try uPort",
+                "onPress": [Function],
+              },
+              "ref": null,
+              "rendered": "Try uPort",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Support",
+                "externalLink": "https://chat.uport.me",
+                "last": true,
+              },
+              "ref": null,
+              "rendered": "Support",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        false,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <ListItem
+                onPress={[Function]}
+              >
+                Device
+              </ListItem>,
+              false,
+              <ListItem
+                onPress={[Function]}
+              >
+                System Messages
+              </ListItem>,
+              <ListItem
+                last={true}
+                onPress={[Function]}
+              >
+                Network
+              </ListItem>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Device",
+                "onPress": [Function],
+              },
+              "ref": null,
+              "rendered": "Device",
+              "type": [Function],
+            },
+            false,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "System Messages",
+                "onPress": [Function],
+              },
+              "ref": null,
+              "rendered": "System Messages",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Network",
+                "last": true,
+                "onPress": [Function],
+              },
+              "ref": null,
+              "rendered": "Network",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <ListItem
+                onPress={[Function]}
+              >
+                Privacy Policy
+              </ListItem>,
+              <ListItem
+                accessoryRight="v1.2 (5/24/2018)"
+                last={true}
+                onPress={[Function]}
+              >
+                Terms & Conditions
+              </ListItem>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Privacy Policy",
+                "onPress": [Function],
+              },
+              "ref": null,
+              "rendered": "Privacy Policy",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "accessoryRight": "v1.2 (5/24/2018)",
+                "children": "Terms & Conditions",
+                "last": true,
+                "onPress": [Function],
+              },
+              "ref": null,
+              "rendered": "Terms & Conditions",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "context": Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "storeSubscription": Subscription {
+        "listeners": Object {
+          "clear": [Function],
+          "get": [Function],
+          "notify": [Function],
+          "subscribe": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": [Function],
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
+
+exports[`SettingsRoot renders without exploding 1`] = `
+<RCTSafeAreaView
+  style={
+    Object {
+      "backgroundColor": "#EFEEF3",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    pointerEvents="auto"
+    style={
+      Object {
+        "alignItems": undefined,
+        "backgroundColor": undefined,
+        "borderRadius": undefined,
+        "flex": 1,
+        "flexDirection": undefined,
+        "height": undefined,
+        "justifyContent": undefined,
+        "marginBottom": undefined,
+        "marginLeft": undefined,
+        "marginRight": undefined,
+        "marginTop": undefined,
+        "padding": undefined,
+        "paddingBottom": undefined,
+        "paddingHorizontal": undefined,
+        "paddingLeft": undefined,
+        "paddingRight": undefined,
+        "paddingTop": undefined,
+        "width": undefined,
+      }
+    }
+  >
+    <RCTScrollView
+      contentContainerStyle={Object {}}
+      contentInset={
+        Object {
+          "bottom": 0,
+        }
+      }
+      contentOffset={
+        Object {
+          "x": 0,
+          "y": 0,
+        }
+      }
+      getTextInputRefs={[Function]}
+      onContentSizeChange={[Function]}
+      onLayout={[Function]}
+      onScroll={[Function]}
+      scrollEventThrottle={200}
+      scrollToBottomOnKBShow={false}
+      scrollToInputAdditionalOffset={75}
+      startScrolledToBottom={false}
+      style={
+        Object {
+          "backgroundColor": "#EFEEF3",
+        }
+      }
+    >
+      <View>
+        <View
+          pointerEvents="auto"
+          style={
+            Object {
+              "alignItems": undefined,
+              "backgroundColor": "#EFEEF3",
+              "borderRadius": undefined,
+              "flex": 1,
+              "flexDirection": undefined,
+              "height": undefined,
+              "justifyContent": undefined,
+              "marginBottom": undefined,
+              "marginLeft": undefined,
+              "marginRight": undefined,
+              "marginTop": undefined,
+              "padding": undefined,
+              "paddingBottom": 15,
+              "paddingHorizontal": undefined,
+              "paddingLeft": undefined,
+              "paddingRight": undefined,
+              "paddingTop": undefined,
+              "width": undefined,
+            }
+          }
+        >
+          <View
+            pointerEvents="auto"
+            style={
+              Object {
+                "alignItems": undefined,
+                "backgroundColor": undefined,
+                "borderRadius": undefined,
+                "flex": undefined,
+                "flexDirection": undefined,
+                "height": undefined,
+                "justifyContent": undefined,
+                "marginBottom": undefined,
+                "marginLeft": undefined,
+                "marginRight": undefined,
+                "marginTop": 20,
+                "padding": undefined,
+                "paddingBottom": undefined,
+                "paddingHorizontal": undefined,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+                "paddingTop": undefined,
+                "width": undefined,
+              }
+            }
+          >
+            <View
+              pointerEvents="auto"
+              style={
+                Object {
+                  "alignItems": undefined,
+                  "backgroundColor": undefined,
+                  "borderRadius": undefined,
+                  "flex": undefined,
+                  "flexDirection": undefined,
+                  "height": undefined,
+                  "justifyContent": undefined,
+                  "marginBottom": undefined,
+                  "marginLeft": undefined,
+                  "marginRight": undefined,
+                  "marginTop": undefined,
+                  "padding": undefined,
+                  "paddingBottom": undefined,
+                  "paddingHorizontal": undefined,
+                  "paddingLeft": 15,
+                  "paddingRight": undefined,
+                  "paddingTop": undefined,
+                  "width": undefined,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#BBBBBB",
+                    "fontSize": 14,
+                    "paddingBottom": 15,
+                  }
+                }
+              />
+            </View>
+            <View
+              pointerEvents="auto"
+              style={
+                Object {
+                  "alignItems": undefined,
+                  "backgroundColor": "#FFFFFF",
+                  "borderBottomColor": "#CCCCCC",
+                  "borderBottomWidth": 0.5,
+                  "borderRadius": undefined,
+                  "borderTopColor": "#CCCCCC",
+                  "borderTopWidth": 0.5,
+                  "flex": undefined,
+                  "flexDirection": undefined,
+                  "height": undefined,
+                  "justifyContent": undefined,
+                  "marginBottom": undefined,
+                  "marginLeft": undefined,
+                  "marginRight": undefined,
+                  "marginTop": undefined,
+                  "padding": undefined,
+                  "paddingBottom": undefined,
+                  "paddingHorizontal": undefined,
+                  "paddingLeft": undefined,
+                  "paddingRight": undefined,
+                  "paddingTop": undefined,
+                  "width": undefined,
+                }
+              }
+            >
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "#FFFFFF",
+                  }
+                }
+              >
+                <View
+                  pointerEvents="auto"
+                  style={
+                    Object {
+                      "alignItems": undefined,
+                      "backgroundColor": undefined,
+                      "borderRadius": undefined,
+                      "flex": 1,
+                      "flexDirection": "row",
+                      "height": undefined,
+                      "justifyContent": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "padding": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": undefined,
+                      "width": undefined,
+                    }
+                  }
+                >
+                  <View
+                    pointerEvents="auto"
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": undefined,
+                        "borderBottomColor": "#CCCCCC",
+                        "borderBottomWidth": 0.5,
+                        "borderRadius": undefined,
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "height": undefined,
+                        "justifyContent": undefined,
+                        "marginBottom": undefined,
+                        "marginLeft": 15,
+                        "marginRight": undefined,
+                        "marginTop": undefined,
+                        "padding": undefined,
+                        "paddingBottom": 10,
+                        "paddingHorizontal": undefined,
+                        "paddingLeft": undefined,
+                        "paddingRight": 15,
+                        "paddingTop": 10,
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": undefined,
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": 1,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "overflow": "hidden",
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "#333333",
+                            "fontSize": 18,
+                          }
+                        }
+                      >
+                        App Version
+                      </Text>
+                    </View>
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": undefined,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <View
+                        pointerEvents="auto"
+                        style={
+                          Object {
+                            "alignItems": undefined,
+                            "backgroundColor": undefined,
+                            "borderRadius": undefined,
+                            "flex": undefined,
+                            "flexDirection": undefined,
+                            "height": undefined,
+                            "justifyContent": undefined,
+                            "marginBottom": undefined,
+                            "marginLeft": 15,
+                            "marginRight": 15,
+                            "marginTop": undefined,
+                            "padding": undefined,
+                            "paddingBottom": 5,
+                            "paddingHorizontal": undefined,
+                            "paddingLeft": undefined,
+                            "paddingRight": undefined,
+                            "paddingTop": 5,
+                            "width": undefined,
+                          }
+                        }
+                      >
+                        <Text
+                          accessible={true}
+                          allowFontScaling={true}
+                          ellipsizeMode="tail"
+                          style={
+                            Object {
+                              "color": "#BBBBBB",
+                              "fontSize": 15,
+                            }
+                          }
+                        >
+                          256 (undefined)
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "#FFFFFF",
+                  }
+                }
+              >
+                <View
+                  pointerEvents="auto"
+                  style={
+                    Object {
+                      "alignItems": undefined,
+                      "backgroundColor": undefined,
+                      "borderRadius": undefined,
+                      "flex": 1,
+                      "flexDirection": "row",
+                      "height": undefined,
+                      "justifyContent": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "padding": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": undefined,
+                      "width": undefined,
+                    }
+                  }
+                >
+                  <View
+                    pointerEvents="auto"
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": undefined,
+                        "borderBottomColor": "#CCCCCC",
+                        "borderBottomWidth": 0.5,
+                        "borderRadius": undefined,
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "height": undefined,
+                        "justifyContent": undefined,
+                        "marginBottom": undefined,
+                        "marginLeft": 15,
+                        "marginRight": undefined,
+                        "marginTop": undefined,
+                        "padding": undefined,
+                        "paddingBottom": 10,
+                        "paddingHorizontal": undefined,
+                        "paddingLeft": undefined,
+                        "paddingRight": 15,
+                        "paddingTop": 10,
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": undefined,
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": 1,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "overflow": "hidden",
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "#333333",
+                            "fontSize": 18,
+                          }
+                        }
+                      >
+                        uPort ID
+                      </Text>
+                    </View>
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": undefined,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <View
+                        pointerEvents="auto"
+                        style={
+                          Object {
+                            "alignItems": undefined,
+                            "backgroundColor": undefined,
+                            "borderRadius": undefined,
+                            "flex": undefined,
+                            "flexDirection": undefined,
+                            "height": undefined,
+                            "justifyContent": undefined,
+                            "marginBottom": undefined,
+                            "marginLeft": 15,
+                            "marginRight": 15,
+                            "marginTop": undefined,
+                            "padding": undefined,
+                            "paddingBottom": 5,
+                            "paddingHorizontal": undefined,
+                            "paddingLeft": undefined,
+                            "paddingRight": undefined,
+                            "paddingTop": 5,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                      <Icon
+                        color="#BBBBBB"
+                        name="ios-arrow-forward"
+                        size={24}
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "#FFFFFF",
+                  }
+                }
+              >
+                <View
+                  pointerEvents="auto"
+                  style={
+                    Object {
+                      "alignItems": undefined,
+                      "backgroundColor": undefined,
+                      "borderRadius": undefined,
+                      "flex": 1,
+                      "flexDirection": "row",
+                      "height": undefined,
+                      "justifyContent": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "padding": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": undefined,
+                      "width": undefined,
+                    }
+                  }
+                >
+                  <View
+                    pointerEvents="auto"
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": undefined,
+                        "borderBottomColor": "#CCCCCC",
+                        "borderBottomWidth": 0.5,
+                        "borderRadius": undefined,
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "height": undefined,
+                        "justifyContent": undefined,
+                        "marginBottom": undefined,
+                        "marginLeft": 15,
+                        "marginRight": undefined,
+                        "marginTop": undefined,
+                        "padding": undefined,
+                        "paddingBottom": 10,
+                        "paddingHorizontal": undefined,
+                        "paddingLeft": undefined,
+                        "paddingRight": 15,
+                        "paddingTop": 10,
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": undefined,
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": 1,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "overflow": "hidden",
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "#333333",
+                            "fontSize": 18,
+                          }
+                        }
+                      >
+                        Try uPort
+                      </Text>
+                    </View>
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": undefined,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <View
+                        pointerEvents="auto"
+                        style={
+                          Object {
+                            "alignItems": undefined,
+                            "backgroundColor": undefined,
+                            "borderRadius": undefined,
+                            "flex": undefined,
+                            "flexDirection": undefined,
+                            "height": undefined,
+                            "justifyContent": undefined,
+                            "marginBottom": undefined,
+                            "marginLeft": 15,
+                            "marginRight": 15,
+                            "marginTop": undefined,
+                            "padding": undefined,
+                            "paddingBottom": 5,
+                            "paddingHorizontal": undefined,
+                            "paddingLeft": undefined,
+                            "paddingRight": undefined,
+                            "paddingTop": 5,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                      <Icon
+                        color="#BBBBBB"
+                        name="ios-arrow-forward"
+                        size={24}
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "#FFFFFF",
+                  }
+                }
+              >
+                <View
+                  pointerEvents="auto"
+                  style={
+                    Object {
+                      "alignItems": undefined,
+                      "backgroundColor": undefined,
+                      "borderRadius": undefined,
+                      "flex": 1,
+                      "flexDirection": "row",
+                      "height": undefined,
+                      "justifyContent": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "padding": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": undefined,
+                      "width": undefined,
+                    }
+                  }
+                >
+                  <View
+                    pointerEvents="auto"
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": undefined,
+                        "borderRadius": undefined,
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "height": undefined,
+                        "justifyContent": undefined,
+                        "marginBottom": undefined,
+                        "marginLeft": 15,
+                        "marginRight": undefined,
+                        "marginTop": undefined,
+                        "padding": undefined,
+                        "paddingBottom": 10,
+                        "paddingHorizontal": undefined,
+                        "paddingLeft": undefined,
+                        "paddingRight": 15,
+                        "paddingTop": 10,
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": undefined,
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": 1,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "overflow": "hidden",
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "#333333",
+                            "fontSize": 18,
+                          }
+                        }
+                      >
+                        Support
+                      </Text>
+                    </View>
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": undefined,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <View
+                        pointerEvents="auto"
+                        style={
+                          Object {
+                            "alignItems": undefined,
+                            "backgroundColor": undefined,
+                            "borderRadius": undefined,
+                            "flex": undefined,
+                            "flexDirection": undefined,
+                            "height": undefined,
+                            "justifyContent": undefined,
+                            "marginBottom": undefined,
+                            "marginLeft": 15,
+                            "marginRight": 15,
+                            "marginTop": undefined,
+                            "padding": undefined,
+                            "paddingBottom": 5,
+                            "paddingHorizontal": undefined,
+                            "paddingLeft": undefined,
+                            "paddingRight": undefined,
+                            "paddingTop": 5,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                      <Icon
+                        color="#BBBBBB"
+                        name="ios-link"
+                        size={24}
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            pointerEvents="auto"
+            style={
+              Object {
+                "alignItems": undefined,
+                "backgroundColor": undefined,
+                "borderRadius": undefined,
+                "flex": undefined,
+                "flexDirection": undefined,
+                "height": undefined,
+                "justifyContent": undefined,
+                "marginBottom": undefined,
+                "marginLeft": undefined,
+                "marginRight": undefined,
+                "marginTop": 20,
+                "padding": undefined,
+                "paddingBottom": undefined,
+                "paddingHorizontal": undefined,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+                "paddingTop": undefined,
+                "width": undefined,
+              }
+            }
+          >
+            <View
+              pointerEvents="auto"
+              style={
+                Object {
+                  "alignItems": undefined,
+                  "backgroundColor": undefined,
+                  "borderRadius": undefined,
+                  "flex": undefined,
+                  "flexDirection": undefined,
+                  "height": undefined,
+                  "justifyContent": undefined,
+                  "marginBottom": undefined,
+                  "marginLeft": undefined,
+                  "marginRight": undefined,
+                  "marginTop": undefined,
+                  "padding": undefined,
+                  "paddingBottom": undefined,
+                  "paddingHorizontal": undefined,
+                  "paddingLeft": 15,
+                  "paddingRight": undefined,
+                  "paddingTop": undefined,
+                  "width": undefined,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#BBBBBB",
+                    "fontSize": 14,
+                    "paddingBottom": 15,
+                  }
+                }
+              />
+            </View>
+            <View
+              pointerEvents="auto"
+              style={
+                Object {
+                  "alignItems": undefined,
+                  "backgroundColor": "#FFFFFF",
+                  "borderBottomColor": "#CCCCCC",
+                  "borderBottomWidth": 0.5,
+                  "borderRadius": undefined,
+                  "borderTopColor": "#CCCCCC",
+                  "borderTopWidth": 0.5,
+                  "flex": undefined,
+                  "flexDirection": undefined,
+                  "height": undefined,
+                  "justifyContent": undefined,
+                  "marginBottom": undefined,
+                  "marginLeft": undefined,
+                  "marginRight": undefined,
+                  "marginTop": undefined,
+                  "padding": undefined,
+                  "paddingBottom": undefined,
+                  "paddingHorizontal": undefined,
+                  "paddingLeft": undefined,
+                  "paddingRight": undefined,
+                  "paddingTop": undefined,
+                  "width": undefined,
+                }
+              }
+            >
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "#FFFFFF",
+                  }
+                }
+              >
+                <View
+                  pointerEvents="auto"
+                  style={
+                    Object {
+                      "alignItems": undefined,
+                      "backgroundColor": undefined,
+                      "borderRadius": undefined,
+                      "flex": 1,
+                      "flexDirection": "row",
+                      "height": undefined,
+                      "justifyContent": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "padding": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": undefined,
+                      "width": undefined,
+                    }
+                  }
+                >
+                  <View
+                    pointerEvents="auto"
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": undefined,
+                        "borderBottomColor": "#CCCCCC",
+                        "borderBottomWidth": 0.5,
+                        "borderRadius": undefined,
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "height": undefined,
+                        "justifyContent": undefined,
+                        "marginBottom": undefined,
+                        "marginLeft": 15,
+                        "marginRight": undefined,
+                        "marginTop": undefined,
+                        "padding": undefined,
+                        "paddingBottom": 10,
+                        "paddingHorizontal": undefined,
+                        "paddingLeft": undefined,
+                        "paddingRight": 15,
+                        "paddingTop": 10,
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": undefined,
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": 1,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "overflow": "hidden",
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "#333333",
+                            "fontSize": 18,
+                          }
+                        }
+                      >
+                        Device
+                      </Text>
+                    </View>
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": undefined,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <View
+                        pointerEvents="auto"
+                        style={
+                          Object {
+                            "alignItems": undefined,
+                            "backgroundColor": undefined,
+                            "borderRadius": undefined,
+                            "flex": undefined,
+                            "flexDirection": undefined,
+                            "height": undefined,
+                            "justifyContent": undefined,
+                            "marginBottom": undefined,
+                            "marginLeft": 15,
+                            "marginRight": 15,
+                            "marginTop": undefined,
+                            "padding": undefined,
+                            "paddingBottom": 5,
+                            "paddingHorizontal": undefined,
+                            "paddingLeft": undefined,
+                            "paddingRight": undefined,
+                            "paddingTop": 5,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                      <Icon
+                        color="#BBBBBB"
+                        name="ios-arrow-forward"
+                        size={24}
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "#FFFFFF",
+                  }
+                }
+              >
+                <View
+                  pointerEvents="auto"
+                  style={
+                    Object {
+                      "alignItems": undefined,
+                      "backgroundColor": undefined,
+                      "borderRadius": undefined,
+                      "flex": 1,
+                      "flexDirection": "row",
+                      "height": undefined,
+                      "justifyContent": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "padding": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": undefined,
+                      "width": undefined,
+                    }
+                  }
+                >
+                  <View
+                    pointerEvents="auto"
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": undefined,
+                        "borderBottomColor": "#CCCCCC",
+                        "borderBottomWidth": 0.5,
+                        "borderRadius": undefined,
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "height": undefined,
+                        "justifyContent": undefined,
+                        "marginBottom": undefined,
+                        "marginLeft": 15,
+                        "marginRight": undefined,
+                        "marginTop": undefined,
+                        "padding": undefined,
+                        "paddingBottom": 10,
+                        "paddingHorizontal": undefined,
+                        "paddingLeft": undefined,
+                        "paddingRight": 15,
+                        "paddingTop": 10,
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": undefined,
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": 1,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "overflow": "hidden",
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "#333333",
+                            "fontSize": 18,
+                          }
+                        }
+                      >
+                        System Messages
+                      </Text>
+                    </View>
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": undefined,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <View
+                        pointerEvents="auto"
+                        style={
+                          Object {
+                            "alignItems": undefined,
+                            "backgroundColor": undefined,
+                            "borderRadius": undefined,
+                            "flex": undefined,
+                            "flexDirection": undefined,
+                            "height": undefined,
+                            "justifyContent": undefined,
+                            "marginBottom": undefined,
+                            "marginLeft": 15,
+                            "marginRight": 15,
+                            "marginTop": undefined,
+                            "padding": undefined,
+                            "paddingBottom": 5,
+                            "paddingHorizontal": undefined,
+                            "paddingLeft": undefined,
+                            "paddingRight": undefined,
+                            "paddingTop": 5,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                      <Icon
+                        color="#BBBBBB"
+                        name="ios-arrow-forward"
+                        size={24}
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "#FFFFFF",
+                  }
+                }
+              >
+                <View
+                  pointerEvents="auto"
+                  style={
+                    Object {
+                      "alignItems": undefined,
+                      "backgroundColor": undefined,
+                      "borderRadius": undefined,
+                      "flex": 1,
+                      "flexDirection": "row",
+                      "height": undefined,
+                      "justifyContent": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "padding": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": undefined,
+                      "width": undefined,
+                    }
+                  }
+                >
+                  <View
+                    pointerEvents="auto"
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": undefined,
+                        "borderRadius": undefined,
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "height": undefined,
+                        "justifyContent": undefined,
+                        "marginBottom": undefined,
+                        "marginLeft": 15,
+                        "marginRight": undefined,
+                        "marginTop": undefined,
+                        "padding": undefined,
+                        "paddingBottom": 10,
+                        "paddingHorizontal": undefined,
+                        "paddingLeft": undefined,
+                        "paddingRight": 15,
+                        "paddingTop": 10,
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": undefined,
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": 1,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "overflow": "hidden",
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "#333333",
+                            "fontSize": 18,
+                          }
+                        }
+                      >
+                        Network
+                      </Text>
+                    </View>
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": undefined,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <View
+                        pointerEvents="auto"
+                        style={
+                          Object {
+                            "alignItems": undefined,
+                            "backgroundColor": undefined,
+                            "borderRadius": undefined,
+                            "flex": undefined,
+                            "flexDirection": undefined,
+                            "height": undefined,
+                            "justifyContent": undefined,
+                            "marginBottom": undefined,
+                            "marginLeft": 15,
+                            "marginRight": 15,
+                            "marginTop": undefined,
+                            "padding": undefined,
+                            "paddingBottom": 5,
+                            "paddingHorizontal": undefined,
+                            "paddingLeft": undefined,
+                            "paddingRight": undefined,
+                            "paddingTop": 5,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                      <Icon
+                        color="#BBBBBB"
+                        name="ios-arrow-forward"
+                        size={24}
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            pointerEvents="auto"
+            style={
+              Object {
+                "alignItems": undefined,
+                "backgroundColor": undefined,
+                "borderRadius": undefined,
+                "flex": undefined,
+                "flexDirection": undefined,
+                "height": undefined,
+                "justifyContent": undefined,
+                "marginBottom": undefined,
+                "marginLeft": undefined,
+                "marginRight": undefined,
+                "marginTop": 20,
+                "padding": undefined,
+                "paddingBottom": undefined,
+                "paddingHorizontal": undefined,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+                "paddingTop": undefined,
+                "width": undefined,
+              }
+            }
+          >
+            <View
+              pointerEvents="auto"
+              style={
+                Object {
+                  "alignItems": undefined,
+                  "backgroundColor": undefined,
+                  "borderRadius": undefined,
+                  "flex": undefined,
+                  "flexDirection": undefined,
+                  "height": undefined,
+                  "justifyContent": undefined,
+                  "marginBottom": undefined,
+                  "marginLeft": undefined,
+                  "marginRight": undefined,
+                  "marginTop": undefined,
+                  "padding": undefined,
+                  "paddingBottom": undefined,
+                  "paddingHorizontal": undefined,
+                  "paddingLeft": 15,
+                  "paddingRight": undefined,
+                  "paddingTop": undefined,
+                  "width": undefined,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#BBBBBB",
+                    "fontSize": 14,
+                    "paddingBottom": 15,
+                  }
+                }
+              />
+            </View>
+            <View
+              pointerEvents="auto"
+              style={
+                Object {
+                  "alignItems": undefined,
+                  "backgroundColor": "#FFFFFF",
+                  "borderBottomColor": "#CCCCCC",
+                  "borderBottomWidth": 0.5,
+                  "borderRadius": undefined,
+                  "borderTopColor": "#CCCCCC",
+                  "borderTopWidth": 0.5,
+                  "flex": undefined,
+                  "flexDirection": undefined,
+                  "height": undefined,
+                  "justifyContent": undefined,
+                  "marginBottom": undefined,
+                  "marginLeft": undefined,
+                  "marginRight": undefined,
+                  "marginTop": undefined,
+                  "padding": undefined,
+                  "paddingBottom": undefined,
+                  "paddingHorizontal": undefined,
+                  "paddingLeft": undefined,
+                  "paddingRight": undefined,
+                  "paddingTop": undefined,
+                  "width": undefined,
+                }
+              }
+            >
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "#FFFFFF",
+                  }
+                }
+              >
+                <View
+                  pointerEvents="auto"
+                  style={
+                    Object {
+                      "alignItems": undefined,
+                      "backgroundColor": undefined,
+                      "borderRadius": undefined,
+                      "flex": 1,
+                      "flexDirection": "row",
+                      "height": undefined,
+                      "justifyContent": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "padding": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": undefined,
+                      "width": undefined,
+                    }
+                  }
+                >
+                  <View
+                    pointerEvents="auto"
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": undefined,
+                        "borderBottomColor": "#CCCCCC",
+                        "borderBottomWidth": 0.5,
+                        "borderRadius": undefined,
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "height": undefined,
+                        "justifyContent": undefined,
+                        "marginBottom": undefined,
+                        "marginLeft": 15,
+                        "marginRight": undefined,
+                        "marginTop": undefined,
+                        "padding": undefined,
+                        "paddingBottom": 10,
+                        "paddingHorizontal": undefined,
+                        "paddingLeft": undefined,
+                        "paddingRight": 15,
+                        "paddingTop": 10,
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": undefined,
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": 1,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "overflow": "hidden",
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "#333333",
+                            "fontSize": 18,
+                          }
+                        }
+                      >
+                        Privacy Policy
+                      </Text>
+                    </View>
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": undefined,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <View
+                        pointerEvents="auto"
+                        style={
+                          Object {
+                            "alignItems": undefined,
+                            "backgroundColor": undefined,
+                            "borderRadius": undefined,
+                            "flex": undefined,
+                            "flexDirection": undefined,
+                            "height": undefined,
+                            "justifyContent": undefined,
+                            "marginBottom": undefined,
+                            "marginLeft": 15,
+                            "marginRight": 15,
+                            "marginTop": undefined,
+                            "padding": undefined,
+                            "paddingBottom": 5,
+                            "paddingHorizontal": undefined,
+                            "paddingLeft": undefined,
+                            "paddingRight": undefined,
+                            "paddingTop": 5,
+                            "width": undefined,
+                          }
+                        }
+                      />
+                      <Icon
+                        color="#BBBBBB"
+                        name="ios-arrow-forward"
+                        size={24}
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "#FFFFFF",
+                  }
+                }
+              >
+                <View
+                  pointerEvents="auto"
+                  style={
+                    Object {
+                      "alignItems": undefined,
+                      "backgroundColor": undefined,
+                      "borderRadius": undefined,
+                      "flex": 1,
+                      "flexDirection": "row",
+                      "height": undefined,
+                      "justifyContent": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "padding": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": undefined,
+                      "width": undefined,
+                    }
+                  }
+                >
+                  <View
+                    pointerEvents="auto"
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": undefined,
+                        "borderRadius": undefined,
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "height": undefined,
+                        "justifyContent": undefined,
+                        "marginBottom": undefined,
+                        "marginLeft": 15,
+                        "marginRight": undefined,
+                        "marginTop": undefined,
+                        "padding": undefined,
+                        "paddingBottom": 10,
+                        "paddingHorizontal": undefined,
+                        "paddingLeft": undefined,
+                        "paddingRight": 15,
+                        "paddingTop": 10,
+                        "width": undefined,
+                      }
+                    }
+                  >
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": undefined,
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": 1,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "overflow": "hidden",
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        style={
+                          Object {
+                            "color": "#333333",
+                            "fontSize": 18,
+                          }
+                        }
+                      >
+                        Terms & Conditions
+                      </Text>
+                    </View>
+                    <View
+                      pointerEvents="auto"
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": undefined,
+                          "borderRadius": undefined,
+                          "flex": undefined,
+                          "flexDirection": "row",
+                          "height": undefined,
+                          "justifyContent": undefined,
+                          "marginBottom": undefined,
+                          "marginLeft": undefined,
+                          "marginRight": undefined,
+                          "marginTop": undefined,
+                          "padding": undefined,
+                          "paddingBottom": undefined,
+                          "paddingHorizontal": undefined,
+                          "paddingLeft": undefined,
+                          "paddingRight": undefined,
+                          "paddingTop": undefined,
+                          "width": undefined,
+                        }
+                      }
+                    >
+                      <View
+                        pointerEvents="auto"
+                        style={
+                          Object {
+                            "alignItems": undefined,
+                            "backgroundColor": undefined,
+                            "borderRadius": undefined,
+                            "flex": undefined,
+                            "flexDirection": undefined,
+                            "height": undefined,
+                            "justifyContent": undefined,
+                            "marginBottom": undefined,
+                            "marginLeft": 15,
+                            "marginRight": 15,
+                            "marginTop": undefined,
+                            "padding": undefined,
+                            "paddingBottom": 5,
+                            "paddingHorizontal": undefined,
+                            "paddingLeft": undefined,
+                            "paddingRight": undefined,
+                            "paddingTop": 5,
+                            "width": undefined,
+                          }
+                        }
+                      >
+                        <Text
+                          accessible={true}
+                          allowFontScaling={true}
+                          ellipsizeMode="tail"
+                          style={
+                            Object {
+                              "color": "#BBBBBB",
+                              "fontSize": 15,
+                            }
+                          }
+                        >
+                          v1.2 (5/24/2018)
+                        </Text>
+                      </View>
+                      <Icon
+                        color="#BBBBBB"
+                        name="ios-arrow-forward"
+                        size={24}
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</RCTSafeAreaView>
+`;

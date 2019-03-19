@@ -178,9 +178,7 @@ def checkLocalSigningData() {
             signingProps.load(it)
         }
         project.ext.signingProps = signingProps
-    } else {
-        project.ext.signingProps = null
-    }
+    } else { project.ext.signingProps = null }
 }
 
 def checkVaultEnvironment() {

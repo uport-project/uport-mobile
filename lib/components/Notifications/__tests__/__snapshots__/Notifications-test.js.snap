@@ -2,7 +2,6 @@
 
 exports[`Notifications renders a connected component as expected 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Notifications
     authorizeRequest={[Function]}
@@ -67,8 +66,10 @@ ShallowWrapper {
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -446,6 +447,20 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
     "context": Object {
@@ -457,8 +472,28 @@ ShallowWrapper {
         "replaceReducer": [Function],
         "subscribe": [Function],
       },
+      "storeSubscription": Subscription {
+        "listeners": Object {
+          "clear": [Function],
+          "get": [Function],
+          "notify": [Function],
+          "subscribe": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": [Function],
+      },
     },
   },
+  Symbol(enzyme.__childContext__): null,
 }
 `;
 
@@ -776,7 +811,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                   style={
                     Object {
                       "color": "rgba(74,74,74,1)",
-                      "fontFamily": "NunitoSans-Regular",
+                      "fontFamily": undefined,
                       "fontSize": 22,
                       "lineHeight": 30,
                       "padding": 19,
@@ -807,15 +842,15 @@ exports[`Notifications renders correctly with notifications 1`] = `
                           "justifyContent": "center",
                         },
                         Object {
-                          "borderRadius": 3,
-                          "height": 70,
-                          "width": 70,
+                          "borderRadius": 30,
+                          "height": 60,
+                          "width": 60,
                         },
                         Object {
-                          "backgroundColor": "rgba(91,84,199,1)",
+                          "backgroundColor": "rgba(216,216,216,1)",
                         },
                         Object {
-                          "padding": 17.5,
+                          "padding": 15,
                         },
                       ]
                     }
@@ -827,14 +862,13 @@ exports[`Notifications renders correctly with notifications 1`] = `
                       style={
                         Array [
                           Object {
-                            "fontFamily": "NunitoSans-Regular",
-                            "fontSize": 17.5,
+                            "fontFamily": undefined,
+                            "fontSize": 15,
                             "textAlign": "center",
                           },
                           undefined,
                           Object {
-                            "color": "white",
-                            "fontSize": 17.5,
+                            "fontSize": 20,
                           },
                         ]
                       }
@@ -846,7 +880,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                 <Image
                   source={
                     Object {
-                      "testUri": "../../../images/ForwardArrow.png",
+                      "testUri": "../../../assets/images/ForwardArrow.png",
                     }
                   }
                   style={
@@ -869,15 +903,15 @@ exports[`Notifications renders correctly with notifications 1`] = `
                             "justifyContent": "center",
                           },
                           Object {
-                            "borderRadius": 3,
-                            "height": 70,
-                            "width": 70,
+                            "borderRadius": 30,
+                            "height": 60,
+                            "width": 60,
                           },
                           Object {
-                            "backgroundColor": "rgba(91,84,199,1)",
+                            "backgroundColor": "rgba(216,216,216,1)",
                           },
                           Object {
-                            "padding": 17.5,
+                            "padding": 15,
                           },
                         ]
                       }
@@ -889,14 +923,13 @@ exports[`Notifications renders correctly with notifications 1`] = `
                         style={
                           Array [
                             Object {
-                              "fontFamily": "NunitoSans-Regular",
-                              "fontSize": 17.5,
+                              "fontFamily": undefined,
+                              "fontSize": 15,
                               "textAlign": "center",
                             },
                             undefined,
                             Object {
-                              "color": "white",
-                              "fontSize": 17.5,
+                              "fontSize": 20,
                             },
                           ]
                         }
@@ -915,7 +948,6 @@ exports[`Notifications renders correctly with notifications 1`] = `
                   Array [
                     Object {
                       "color": "rgba(74,74,74,1)",
-                      "fontFamily": "NunitoSans-Regular",
                       "fontSize": 20,
                       "lineHeight": 27,
                       "textAlign": "center",
@@ -935,7 +967,6 @@ exports[`Notifications renders correctly with notifications 1`] = `
                 style={
                   Object {
                     "color": "rgba(74,74,74,1)",
-                    "fontFamily": "NunitoSans-Light",
                     "fontSize": 16,
                     "lineHeight": 22,
                     "textAlign": "center",
@@ -992,7 +1023,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                     style={
                       Array [
                         Object {
-                          "fontFamily": "NunitoSans-Bold",
+                          "fontFamily": "Montserrat",
                           "fontSize": 18,
                           "textAlign": "center",
                         },
@@ -1042,7 +1073,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                     style={
                       Array [
                         Object {
-                          "fontFamily": "NunitoSans-Bold",
+                          "fontFamily": "Montserrat",
                           "fontSize": 18,
                           "textAlign": "center",
                         },
@@ -1122,7 +1153,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                   style={
                     Object {
                       "color": "rgba(74,74,74,1)",
-                      "fontFamily": "NunitoSans-Regular",
+                      "fontFamily": undefined,
                       "fontSize": 22,
                       "lineHeight": 30,
                       "padding": 19,
@@ -1144,12 +1175,12 @@ exports[`Notifications renders correctly with notifications 1`] = `
                         "justifyContent": "center",
                       },
                       Object {
-                        "borderRadius": 3,
+                        "borderRadius": 36,
                         "height": 72,
                         "width": 72,
                       },
                       Object {
-                        "backgroundColor": "rgba(91,84,199,1)",
+                        "backgroundColor": "rgba(216,216,216,1)",
                       },
                       Object {
                         "padding": 18,
@@ -1164,14 +1195,13 @@ exports[`Notifications renders correctly with notifications 1`] = `
                     style={
                       Array [
                         Object {
-                          "fontFamily": "NunitoSans-Regular",
-                          "fontSize": 17.5,
+                          "fontFamily": undefined,
+                          "fontSize": 15,
                           "textAlign": "center",
                         },
                         undefined,
                         Object {
-                          "color": "white",
-                          "fontSize": 18,
+                          "fontSize": 24,
                         },
                       ]
                     }
@@ -1188,7 +1218,6 @@ exports[`Notifications renders correctly with notifications 1`] = `
                   Array [
                     Object {
                       "color": "rgba(74,74,74,1)",
-                      "fontFamily": "NunitoSans-Regular",
                       "fontSize": 20,
                       "lineHeight": 27,
                       "textAlign": "center",
@@ -1249,7 +1278,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                     style={
                       Array [
                         Object {
-                          "fontFamily": "NunitoSans-Bold",
+                          "fontFamily": "Montserrat",
                           "fontSize": 18,
                           "textAlign": "center",
                         },
@@ -1299,7 +1328,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                     style={
                       Array [
                         Object {
-                          "fontFamily": "NunitoSans-Bold",
+                          "fontFamily": "Montserrat",
                           "fontSize": 18,
                           "textAlign": "center",
                         },
@@ -1379,7 +1408,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                   style={
                     Object {
                       "color": "rgba(74,74,74,1)",
-                      "fontFamily": "NunitoSans-Regular",
+                      "fontFamily": undefined,
                       "fontSize": 22,
                       "lineHeight": 30,
                       "padding": 19,
@@ -1439,7 +1468,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                     style={
                       Array [
                         Object {
-                          "fontFamily": "NunitoSans-Bold",
+                          "fontFamily": "Montserrat",
                           "fontSize": 18,
                           "textAlign": "center",
                         },
@@ -1489,7 +1518,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                     style={
                       Array [
                         Object {
-                          "fontFamily": "NunitoSans-Bold",
+                          "fontFamily": "Montserrat",
                           "fontSize": 18,
                           "textAlign": "center",
                         },
@@ -1569,7 +1598,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                   style={
                     Object {
                       "color": "rgba(74,74,74,1)",
-                      "fontFamily": "NunitoSans-Regular",
+                      "fontFamily": undefined,
                       "fontSize": 22,
                       "lineHeight": 30,
                       "padding": 19,
@@ -1591,12 +1620,12 @@ exports[`Notifications renders correctly with notifications 1`] = `
                         "justifyContent": "center",
                       },
                       Object {
-                        "borderRadius": 3,
+                        "borderRadius": 36,
                         "height": 72,
                         "width": 72,
                       },
                       Object {
-                        "backgroundColor": "rgba(91,84,199,1)",
+                        "backgroundColor": "rgba(216,216,216,1)",
                       },
                       Object {
                         "padding": 18,
@@ -1611,14 +1640,13 @@ exports[`Notifications renders correctly with notifications 1`] = `
                     style={
                       Array [
                         Object {
-                          "fontFamily": "NunitoSans-Regular",
-                          "fontSize": 17.5,
+                          "fontFamily": undefined,
+                          "fontSize": 15,
                           "textAlign": "center",
                         },
                         undefined,
                         Object {
-                          "color": "white",
-                          "fontSize": 18,
+                          "fontSize": 24,
                         },
                       ]
                     }
@@ -1635,7 +1663,6 @@ exports[`Notifications renders correctly with notifications 1`] = `
                   Array [
                     Object {
                       "color": "rgba(74,74,74,1)",
-                      "fontFamily": "NunitoSans-Regular",
                       "fontSize": 20,
                       "lineHeight": 27,
                       "textAlign": "center",
@@ -1656,7 +1683,6 @@ exports[`Notifications renders correctly with notifications 1`] = `
                   Array [
                     Object {
                       "color": "rgba(74,74,74,1)",
-                      "fontFamily": "NunitoSans-Light",
                       "fontSize": 16,
                       "lineHeight": 22,
                       "textAlign": "center",
@@ -1717,7 +1743,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                     style={
                       Array [
                         Object {
-                          "fontFamily": "NunitoSans-Bold",
+                          "fontFamily": "Montserrat",
                           "fontSize": 18,
                           "textAlign": "center",
                         },
@@ -1767,7 +1793,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                     style={
                       Array [
                         Object {
-                          "fontFamily": "NunitoSans-Bold",
+                          "fontFamily": "Montserrat",
                           "fontSize": 18,
                           "textAlign": "center",
                         },
@@ -1847,7 +1873,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                   style={
                     Object {
                       "color": "rgba(74,74,74,1)",
-                      "fontFamily": "NunitoSans-Regular",
+                      "fontFamily": undefined,
                       "fontSize": 22,
                       "lineHeight": 30,
                       "padding": 19,
@@ -1924,7 +1950,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                   style={
                     Object {
                       "color": "rgba(74,74,74,1)",
-                      "fontFamily": "NunitoSans-Regular",
+                      "fontFamily": undefined,
                       "fontSize": 22,
                       "lineHeight": 30,
                       "padding": 19,
@@ -1984,7 +2010,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                     style={
                       Array [
                         Object {
-                          "fontFamily": "NunitoSans-Bold",
+                          "fontFamily": "Montserrat",
                           "fontSize": 18,
                           "textAlign": "center",
                         },
@@ -2034,7 +2060,7 @@ exports[`Notifications renders correctly with notifications 1`] = `
                     style={
                       Array [
                         Object {
-                          "fontFamily": "NunitoSans-Bold",
+                          "fontFamily": "Montserrat",
                           "fontSize": 18,
                           "textAlign": "center",
                         },

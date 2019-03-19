@@ -51,7 +51,7 @@ exports[`ClosableModal renders with title 1`] = `
       style={
         Object {
           "color": "rgba(74,74,74,1)",
-          "fontFamily": "NunitoSans-Regular",
+          "fontFamily": undefined,
           "fontSize": 16,
           "marginLeft": 16,
         }

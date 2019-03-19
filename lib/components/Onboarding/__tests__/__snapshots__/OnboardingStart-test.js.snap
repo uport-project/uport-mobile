@@ -6,7 +6,6 @@ exports[`OnboardingStart renders Onboarding Start screen 1`] = `
     Object {
       "backgroundColor": "white",
       "flex": 1,
-      "paddingTop": 10,
     }
   }
 >
@@ -34,7 +33,6 @@ exports[`OnboardingStart renders Onboarding Start screen 1`] = `
       Object {
         "backgroundColor": "white",
         "flex": 1,
-        "paddingTop": 10,
       }
     }
   >
@@ -42,7 +40,7 @@ exports[`OnboardingStart renders Onboarding Start screen 1`] = `
       <Image
         source={
           Object {
-            "testUri": "../../../images/uport-blurple.png",
+            "testUri": "../../../assets/images/uport-blurple.png",
           }
         }
         style={
@@ -65,7 +63,7 @@ exports[`OnboardingStart renders Onboarding Start screen 1`] = `
             undefined,
             Object {
               "color": "#3c3a49",
-              "fontFamily": "NunitoSans-Regular",
+              "fontFamily": undefined,
               "fontSize": 24,
               "lineHeight": 30,
               "marginBottom": 40,
@@ -156,7 +154,7 @@ exports[`OnboardingStart renders Onboarding Start screen 1`] = `
                     "marginRight": 15,
                   },
                   Object {
-                    "borderColor": "rgba(92,80,202,1)",
+                    "borderColor": "#6A54D1",
                   },
                 ],
               ]
@@ -169,20 +167,20 @@ exports[`OnboardingStart renders Onboarding Start screen 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
                   Array [
                     Object {
                       "color": "rgba(54,184,123,1)",
-                      "fontFamily": "NunitoSans-Bold",
+                      "fontFamily": undefined,
                       "fontSize": 18,
                       "lineHeight": 25,
                       "padding": 3,
                     },
                     Object {
-                      "color": "rgba(92,80,202,1)",
+                      "color": "#6A54D1",
                     },
                   ],
                   Object {},
@@ -236,13 +234,13 @@ exports[`OnboardingStart renders Onboarding Start screen 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
                   Object {
-                    "color": "rgba(92,80,202,1)",
-                    "fontFamily": "NunitoSans-Regular",
+                    "color": "#6A54D1",
+                    "fontFamily": undefined,
                     "fontSize": 18,
                     "lineHeight": 25,
                   },
@@ -262,7 +260,6 @@ exports[`OnboardingStart renders Onboarding Start screen 1`] = `
 
 exports[`OnboardingStart renders a connected component as expected 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ConectedComponent
     fetchCurrentCountry={[Function]}
@@ -275,8 +272,10 @@ ShallowWrapper {
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -356,6 +355,20 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
     "context": Object {
@@ -367,7 +380,27 @@ ShallowWrapper {
         "replaceReducer": [Function],
         "subscribe": [Function],
       },
+      "storeSubscription": Subscription {
+        "listeners": Object {
+          "clear": [Function],
+          "get": [Function],
+          "notify": [Function],
+          "subscribe": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": [Function],
+      },
     },
   },
+  Symbol(enzyme.__childContext__): null,
 }
 `;

@@ -38,7 +38,7 @@ exports[`OnboardingInfo renders Onboarding Info screen 1`] = `
           <Image
             source={
               Object {
-                "testUri": "../../../images/Logo.png",
+                "testUri": "../../../assets/images/Logo.png",
               }
             }
             style={
@@ -128,7 +128,7 @@ exports[`OnboardingInfo renders Onboarding Info screen 1`] = `
         <Image
           source={
             Object {
-              "testUri": "../../../images/2.png",
+              "testUri": "../../../assets/images/2.png",
             }
           }
           style={
@@ -197,7 +197,7 @@ exports[`OnboardingInfo renders Onboarding Info screen 1`] = `
         <Image
           source={
             Object {
-              "testUri": "../../../images/3.png",
+              "testUri": "../../../assets/images/3.png",
             }
           }
           style={
@@ -266,7 +266,7 @@ exports[`OnboardingInfo renders Onboarding Info screen 1`] = `
         <Image
           source={
             Object {
-              "testUri": "../../../images/4.png",
+              "testUri": "../../../assets/images/4.png",
             }
           }
           style={
@@ -336,7 +336,7 @@ exports[`OnboardingInfo renders Onboarding Info screen 1`] = `
         <Image
           source={
             Object {
-              "testUri": "../../../images/5.png",
+              "testUri": "../../../assets/images/5.png",
             }
           }
           style={

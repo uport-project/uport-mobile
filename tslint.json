@@ -1,55 +1,51 @@
 {
-    "extends": [
-      "tslint:recommended",
-      "tslint-react",
-      "tslint-eslint-rules"
-    ],
-    "defaultSeverity": "warning",
-    "jsRules": {
-      "object-literal-shorthand": true,
-      "trailing-comma": [false]
-    },
-    "rules": {
-      "ban": [
-        true,
-        ["describe", "only"],
-        ["it", "only"]
-      ],
-      "arrow-parens": false,
-      "comment-format": false,
-      "curly": [true, "ignore-same-line"],
-      "eofline": true,
-      "interface-name": false,
-      "jsx-boolean-value": false,
-      "jsx-curly-spacing": false,
-      "jsx-no-multiline-js": false,
-      "jsx-no-lambda": false,  //if we have performance issues, we might have to reenable this,
-      "linebreak-style": [true, "LF"],
-      "max-classes-per-file": [true, 5],
-      "max-line-length": [true, 180],
-      "member-access": [true, "no-public"],
-      "no-console": true,
-      "no-empty-interface": false,
-      "no-implicit-dependencies": false,
-      "no-invalid-this": [true, "check-function-in-method"],
-      "no-angle-bracket-type-assertion": false,
-      "no-submodule-imports": false,
-      "no-unused-expression": false,  //should be true but TS lint doesn't recognise && operator and considers it as this error,
-      "no-unused-variable": true,
-      "object-curly-spacing": [true, "always"],
-      "object-literal-sort-keys": false,
-      "ordered-imports": false,
-      "prefer-object-spread": false,
-      "quotemark": [true, "single", "jsx-double", "avoid-escape"],
-      "semicolon": [false, "always"],
-      "trailing-comma": [true, {"multiline": "always", "singleline": "never"}],
-      "variable-name": [
-        true,
-        "ban-keywords",
-        "check-format",
-        "allow-leading-underscore",
-        "allow-pascal-case"
-      ]
-    }
+  "extends": [
+    "tslint:recommended",
+    "tslint-react",
+    "tslint-eslint-rules",
+    "tslint-config-prettier"
+  ],
+  "defaultSeverity": "warning",
+  "jsRules": {
+    "object-literal-shorthand": true,
+    "trailing-comma": [false]
+  },
+  "rules": {
+    "ban": [true, ["describe", "only"], ["it", "only"]],
+    "arrow-parens": false,
+    "comment-format": false,
+    "curly": [true, "ignore-same-line"],
+    "eofline": true,
+    "interface-name": false,
+    "jsx-boolean-value": false,
+    "jsx-curly-spacing": false,
+    "jsx-no-multiline-js": false,
+    "jsx-no-lambda": false, //if we have performance issues, we might have to reenable this,
+    "linebreak-style": [true, "LF"],
+    "max-classes-per-file": [true, 5],
+    "max-line-length": [true, 180],
+    "member-access": [true, "no-public"],
+    "no-console": true,
+    "no-empty-interface": false,
+    "no-implicit-dependencies": false,
+    "no-invalid-this": [true, "check-function-in-method"],
+    "no-angle-bracket-type-assertion": false,
+    "no-submodule-imports": false,
+    "no-unused-expression": false, //should be true but TS lint doesn't recognise && operator and considers it as this error,
+    "no-unused-variable": true,
+    "object-curly-spacing": [true, "always"],
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+    "prefer-object-spread": false,
+    "quotemark": [true, "single", "jsx-double", "avoid-escape"],
+    "semicolon": [false, "always"],
+    "trailing-comma": [true],
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore",
+      "allow-pascal-case"
+    ]
   }
-  
+}

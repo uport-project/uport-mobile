@@ -1,0 +1,22 @@
+{
+  "onboarding": {
+    "slides": {
+      "slide1": {
+        "title": "Title 1",
+        "body": "Body 1"
+      },
+      "slide2": {
+        "title": "Title 1",
+        "body": "Body 1"
+      },
+      "slide3": {
+        "title": "Title 1",
+        "body": "Body 1"
+      },
+      "slide4": {
+        "title": "Title 1",
+        "body": "Body 1"
+      }
+    }
+  }
+}

@@ -6,7 +6,6 @@ exports[`OnboardingTerms renders Onboarding Terms screen 1`] = `
     Object {
       "backgroundColor": "white",
       "flex": 1,
-      "paddingTop": 10,
     }
   }
 >
@@ -29,7 +28,7 @@ exports[`OnboardingTerms renders Onboarding Terms screen 1`] = `
           undefined,
           Object {
             "color": "#3c3a49",
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 24,
             "lineHeight": 30,
             "marginBottom": 40,
@@ -59,123 +58,195 @@ exports[`OnboardingTerms renders Onboarding Terms screen 1`] = `
        Terms and Conditions
     </Text>
   </View>
-  <View
+  <RCTSafeAreaView
     style={
-      Array [
-        Object {
-          "flex": 1,
-        },
-        false,
-      ]
+      Object {
+        "backgroundColor": "#EFEEF3",
+        "flex": 1,
+      }
     }
   >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          Object {
-            "color": "#3c3a49",
-          },
-          undefined,
-          undefined,
-          Object {
-            "color": "rgba(130, 130, 130, 1)",
-            "fontFamily": "NunitoSans-Bold",
-            "fontSize": 12,
-            "lineHeight": 19,
-            "marginBottom": 25,
-            "marginTop": -40,
-            "textAlign": "center",
-          },
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-        ]
-      }
-    >
-      Last modified May 24, 2018
-    </Text>
-    <RCTScrollView
-      contentContainerStyle={
-        Object {
-          "padding": 15,
-        }
-      }
-      contentInset={
-        Object {
-          "bottom": 0,
-        }
-      }
-      getTextInputRefs={[Function]}
-      onContentSizeChange={[Function]}
-      onLayout={[Function]}
-      onScroll={[Function]}
-      scrollEventThrottle={200}
-      scrollToBottomOnKBShow={false}
-      scrollToInputAdditionalOffset={75}
-      startScrolledToBottom={false}
+    <View
+      pointerEvents="auto"
       style={
         Object {
-          "backgroundColor": "white",
+          "alignItems": undefined,
+          "backgroundColor": undefined,
+          "borderRadius": undefined,
           "flex": 1,
-          "paddingTop": 10,
+          "flexDirection": undefined,
+          "height": undefined,
+          "justifyContent": undefined,
+          "marginBottom": undefined,
+          "marginLeft": undefined,
+          "marginRight": undefined,
+          "marginTop": undefined,
+          "padding": undefined,
+          "paddingBottom": undefined,
+          "paddingHorizontal": undefined,
+          "paddingLeft": undefined,
+          "paddingRight": undefined,
+          "paddingTop": undefined,
+          "width": undefined,
         }
       }
     >
-      <View>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Array [
-              Object {
-                "color": "#3c3a49",
-              },
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              Object {
-                "color": "#3c3a49",
-                "fontFamily": "NunitoSans-Regular",
-                "fontSize": 16,
-                "lineHeight": 27,
-                "marginBottom": 15,
-              },
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-            ]
+      <RCTScrollView
+        contentContainerStyle={Object {}}
+        contentInset={
+          Object {
+            "bottom": 0,
           }
-        >
-          Terms of Use Version 1.2
+        }
+        contentOffset={
+          Object {
+            "x": 0,
+            "y": 0,
+          }
+        }
+        getTextInputRefs={[Function]}
+        onContentSizeChange={[Function]}
+        onLayout={[Function]}
+        onScroll={[Function]}
+        scrollEventThrottle={200}
+        scrollToBottomOnKBShow={false}
+        scrollToInputAdditionalOffset={75}
+        startScrolledToBottom={false}
+        style={
+          Object {
+            "backgroundColor": "#EFEEF3",
+          }
+        }
+      >
+        <View>
+          <View
+            pointerEvents="auto"
+            style={
+              Object {
+                "alignItems": undefined,
+                "backgroundColor": "#EFEEF3",
+                "borderRadius": undefined,
+                "flex": 1,
+                "flexDirection": undefined,
+                "height": undefined,
+                "justifyContent": undefined,
+                "marginBottom": undefined,
+                "marginLeft": undefined,
+                "marginRight": undefined,
+                "marginTop": undefined,
+                "padding": undefined,
+                "paddingBottom": 15,
+                "paddingHorizontal": undefined,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+                "paddingTop": undefined,
+                "width": undefined,
+              }
+            }
+          >
+            <View
+              pointerEvents="auto"
+              style={
+                Object {
+                  "alignItems": undefined,
+                  "backgroundColor": undefined,
+                  "borderRadius": undefined,
+                  "flex": 1,
+                  "flexDirection": undefined,
+                  "height": undefined,
+                  "justifyContent": undefined,
+                  "marginBottom": undefined,
+                  "marginLeft": undefined,
+                  "marginRight": undefined,
+                  "marginTop": undefined,
+                  "padding": undefined,
+                  "paddingBottom": undefined,
+                  "paddingHorizontal": undefined,
+                  "paddingLeft": undefined,
+                  "paddingRight": undefined,
+                  "paddingTop": undefined,
+                  "width": undefined,
+                }
+              }
+            >
+              <View
+                pointerEvents="auto"
+                style={
+                  Object {
+                    "alignItems": undefined,
+                    "backgroundColor": undefined,
+                    "borderRadius": undefined,
+                    "flex": undefined,
+                    "flexDirection": undefined,
+                    "height": undefined,
+                    "justifyContent": undefined,
+                    "marginBottom": undefined,
+                    "marginLeft": undefined,
+                    "marginRight": undefined,
+                    "marginTop": undefined,
+                    "padding": 15,
+                    "paddingBottom": undefined,
+                    "paddingHorizontal": undefined,
+                    "paddingLeft": undefined,
+                    "paddingRight": undefined,
+                    "paddingTop": undefined,
+                    "width": undefined,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "#BBBBBB",
+                      "fontSize": 14,
+                    }
+                  }
+                >
+                  Last modified May 24, 2018
+                </Text>
+              </View>
+              <View
+                pointerEvents="auto"
+                style={
+                  Object {
+                    "alignItems": undefined,
+                    "backgroundColor": undefined,
+                    "borderRadius": undefined,
+                    "flex": undefined,
+                    "flexDirection": undefined,
+                    "height": undefined,
+                    "justifyContent": undefined,
+                    "marginBottom": undefined,
+                    "marginLeft": undefined,
+                    "marginRight": undefined,
+                    "marginTop": undefined,
+                    "padding": undefined,
+                    "paddingBottom": undefined,
+                    "paddingHorizontal": 15,
+                    "paddingLeft": undefined,
+                    "paddingRight": undefined,
+                    "paddingTop": undefined,
+                    "width": undefined,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "#333333",
+                      "fontSize": 16,
+                      "lineHeight": 22,
+                    }
+                  }
+                >
+                  
+Terms of Use Version 1.2
 
 IMPORTANT NOTICE: THIS AGREEMENT IS SUBJECT TO BINDING ARBITRATION AND A WAIVER OF CLASS ACTION RIGHTS AS DETAILED IN SECTION 14. PLEASE READ THE AGREEMENT CAREFULLY.
 
@@ -203,45 +274,20 @@ Your private key, corresponding to your public Ethereum identity address is stor
 DID
 
 By using the uPort app, you acknowledge, accept and consent to the creation of a decentralized identity (DID) for you.  DID is essentially a public address, a string that serves asan “on-chain identifier.”  Because uPort is an identity platform on the Ethereum blockchain,  DIDs are linked to the Ethereum blockchain as transactions.  As a user of uPort, you acknowledge that because transactions on the Ethereum blockchain are immutable, the record of your DID’s on-chain transactions are also immutable and cannot be deleted from the Ethereum blockchain.  Your DID, as it is designed in the uPort mobile application, is not tied to your natural name or personal information, and uPort does not collect data that would enable the two to be linked or associated together. 
-        </Text>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Array [
-              Object {
-                "color": "#3c3a49",
-              },
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              Object {
-                "color": "#3c3a49",
-                "fontFamily": "NunitoSans-Regular",
-                "fontSize": 16,
-                "lineHeight": 27,
-                "marginBottom": 15,
-              },
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-            ]
-          }
-        >
-          
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "#333333",
+                      "fontSize": 16,
+                      "lineHeight": 22,
+                    }
+                  }
+                >
+                  
 5. Representations, Warranties, and Risks
 
 5.1. Warranty Disclaimer
@@ -274,45 +320,20 @@ In some instances, third-party attestations may be made through the uPort Signin
 
 uPort allows you to affirmatively opt-in and choose to send and store an encrypted copy of all your claims, attestations and corresponding associations of that information (“ID Data”) to your account that is stored in a service that is maintained by uPort and runs on servers and infrastructure owned and operated by third-party vendors. This means you will have the ability to recover ID Data but only after restoring the keys to your ID Data from your seed.  uPort does not back-up your private keys, only ID data. By opting in, you not only have the ability to back-up your ID data, but you can also delete all data on uPort’s open-sourced managed, third-party servers from within the mobile application.   You acknowledge that uPort is not responsible for the security or integrity of the third-party managed servers.
 
-        </Text>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Array [
-              Object {
-                "color": "#3c3a49",
-              },
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              Object {
-                "color": "#3c3a49",
-                "fontFamily": "NunitoSans-Regular",
-                "fontSize": 16,
-                "lineHeight": 27,
-                "marginBottom": 15,
-              },
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-            ]
-          }
-        >
-          7. Indemnity
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "#333333",
+                      "fontSize": 16,
+                      "lineHeight": 22,
+                    }
+                  }
+                >
+                  7. Indemnity
 You agree to release and to indemnify, defend and hold harmless uPort and its parents, subsidiaries, affiliates and agencies, as well as the officers, directors, employees, shareholders and representatives of any of the foregoing entities, from and against any and all losses, liabilities, expenses, damages, costs (including attorneys’ fees and court costs) claims or actions of any kind whatsoever arising or resulting from your use of the Service, your violation of these Terms of Use, and any of your acts or omissions that implicate publicity rights, defamation or invasion of privacy. uPort reserves the right, at its own expense, to assume exclusive defense and control of any matter otherwise subject to indemnification by you and, in such case, you agree to cooperate with uPort in the defense of such matter.
  
 8. Limitation on Liability
@@ -330,45 +351,20 @@ The Service provides, or third parties may provide, links to other World Wide We
 uPort may, in its sole discretion, terminate or suspend all or part of the Service and your uPort access immediately, without prior notice or liability, if you breach any of the terms or conditions of the Terms. Upon termination of your access, your right to use the Service will immediately cease.
 
 The following provisions of the Terms survive any termination of these Terms: INDEMNITY; WARRANTY DISCLAIMERS; LIMITATION ON LIABILITY; OUR PROPRIETARY RIGHTS; LINKS; TERMINATION; NO THIRD PARTY BENEFICIARIES; BINDING ARBITRATION AND CLASS ACTION WAIVER; GENERAL INFORMATION.
-        </Text>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Array [
-              Object {
-                "color": "#3c3a49",
-              },
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              Object {
-                "color": "#3c3a49",
-                "fontFamily": "NunitoSans-Regular",
-                "fontSize": 16,
-                "lineHeight": 27,
-                "marginBottom": 15,
-              },
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-            ]
-          }
-        >
-          12. No Third Party Beneficiaries
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "#333333",
+                      "fontSize": 16,
+                      "lineHeight": 22,
+                    }
+                  }
+                >
+                  12. No Third Party Beneficiaries
 You agree that, except as otherwise expressly provided in these Terms, (a) there shall be no third party beneficiaries to the Terms and (b) nothing in these Terms shall be construed as creating or implying any relationship of agency, franchise, partnership, or joint venture between you and uPort.
 
 13. Notice and Procedure for Making Claims of Copyright Infringement
@@ -423,11 +419,14 @@ The section titles in the Terms are for convenience only and have no legal or co
 15.5. Communications
 Users with questions, complaints or claims with respect to the Service may contact us at legal@uPort.me.
 
-
-        </Text>
-      </View>
-    </RCTScrollView>
-  </View>
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </RCTScrollView>
+    </View>
+  </RCTSafeAreaView>
   <View
     style={
       Object {
@@ -465,7 +464,7 @@ Users with questions, complaints or claims with respect to the Service may conta
               "marginRight": 15,
             },
             Object {
-              "borderColor": "rgba(92,80,202,1)",
+              "borderColor": "#6A54D1",
             },
           ],
         ]
@@ -478,20 +477,20 @@ Users with questions, complaints or claims with respect to the Service may conta
         style={
           Array [
             Object {
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 18,
               "textAlign": "center",
             },
             Array [
               Object {
                 "color": "rgba(54,184,123,1)",
-                "fontFamily": "NunitoSans-Bold",
+                "fontFamily": undefined,
                 "fontSize": 18,
                 "lineHeight": 25,
                 "padding": 3,
               },
               Object {
-                "color": "rgba(92,80,202,1)",
+                "color": "#6A54D1",
               },
             ],
             Object {},

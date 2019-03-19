@@ -6,7 +6,6 @@ exports[`disabled button error 1`] = `
     Object {
       "backgroundColor": "white",
       "flex": 1,
-      "paddingTop": 10,
     }
   }
 >
@@ -34,7 +33,6 @@ exports[`disabled button error 1`] = `
       Object {
         "backgroundColor": "white",
         "flex": 1,
-        "paddingTop": 10,
       }
     }
   >
@@ -64,7 +62,6 @@ exports[`disabled button error 1`] = `
             Array [
               Object {
                 "color": "rgba(155,155,155,1)",
-                "fontFamily": "NunitoSans-Light",
                 "fontSize": 14,
                 "lineHeight": 19,
                 "textAlign": "center",
@@ -140,7 +137,7 @@ exports[`disabled button error 1`] = `
                     "marginRight": 15,
                   },
                   Object {
-                    "borderColor": "rgba(92,80,202,1)",
+                    "borderColor": "#6A54D1",
                   },
                 ],
               ]
@@ -153,20 +150,20 @@ exports[`disabled button error 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
                   Array [
                     Object {
                       "color": "rgba(54,184,123,1)",
-                      "fontFamily": "NunitoSans-Bold",
+                      "fontFamily": undefined,
                       "fontSize": 18,
                       "lineHeight": 25,
                       "padding": 3,
                     },
                     Object {
-                      "color": "rgba(92,80,202,1)",
+                      "color": "#6A54D1",
                     },
                   ],
                   Object {},
@@ -189,7 +186,6 @@ exports[`disabled button invalid state 1`] = `
     Object {
       "backgroundColor": "white",
       "flex": 1,
-      "paddingTop": 10,
     }
   }
 >
@@ -217,7 +213,6 @@ exports[`disabled button invalid state 1`] = `
       Object {
         "backgroundColor": "white",
         "flex": 1,
-        "paddingTop": 10,
       }
     }
   >
@@ -299,14 +294,14 @@ exports[`disabled button invalid state 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
                   Array [
                     Object {
                       "color": "rgba(54,184,123,1)",
-                      "fontFamily": "NunitoSans-Bold",
+                      "fontFamily": undefined,
                       "fontSize": 18,
                       "lineHeight": 25,
                       "padding": 3,
@@ -337,7 +332,6 @@ exports[`disabled button offline 1`] = `
     Object {
       "backgroundColor": "white",
       "flex": 1,
-      "paddingTop": 10,
     }
   }
 >
@@ -365,7 +359,6 @@ exports[`disabled button offline 1`] = `
       Object {
         "backgroundColor": "white",
         "flex": 1,
-        "paddingTop": 10,
       }
     }
   >
@@ -395,7 +388,6 @@ exports[`disabled button offline 1`] = `
             Array [
               Object {
                 "color": "rgba(155,155,155,1)",
-                "fontFamily": "NunitoSans-Light",
                 "fontSize": 14,
                 "lineHeight": 19,
                 "textAlign": "center",
@@ -469,7 +461,7 @@ exports[`disabled button offline 1`] = `
                     "marginRight": 15,
                   },
                   Object {
-                    "borderColor": "rgba(92,80,202,1)",
+                    "borderColor": "#6A54D1",
                   },
                 ],
               ]
@@ -482,20 +474,20 @@ exports[`disabled button offline 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
                   Array [
                     Object {
                       "color": "rgba(54,184,123,1)",
-                      "fontFamily": "NunitoSans-Bold",
+                      "fontFamily": undefined,
                       "fontSize": 18,
                       "lineHeight": 25,
                       "padding": 3,
                     },
                     Object {
-                      "color": "rgba(92,80,202,1)",
+                      "color": "#6A54D1",
                     },
                   ],
                   Object {},
@@ -518,7 +510,6 @@ exports[`disabled button working 1`] = `
     Object {
       "backgroundColor": "white",
       "flex": 1,
-      "paddingTop": 10,
     }
   }
 >
@@ -546,7 +537,6 @@ exports[`disabled button working 1`] = `
       Object {
         "backgroundColor": "white",
         "flex": 1,
-        "paddingTop": 10,
       }
     }
   >
@@ -650,14 +640,14 @@ exports[`disabled button working 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
                   Array [
                     Object {
                       "color": "rgba(54,184,123,1)",
-                      "fontFamily": "NunitoSans-Bold",
+                      "fontFamily": undefined,
                       "fontSize": 18,
                       "lineHeight": 25,
                       "padding": 3,
@@ -688,7 +678,6 @@ exports[`disabled button working and message 1`] = `
     Object {
       "backgroundColor": "white",
       "flex": 1,
-      "paddingTop": 10,
     }
   }
 >
@@ -716,7 +705,6 @@ exports[`disabled button working and message 1`] = `
       Object {
         "backgroundColor": "white",
         "flex": 1,
-        "paddingTop": 10,
       }
     }
   >
@@ -757,7 +745,6 @@ exports[`disabled button working and message 1`] = `
             Array [
               Object {
                 "color": "rgba(155,155,155,1)",
-                "fontFamily": "NunitoSans-Light",
                 "fontSize": 14,
                 "lineHeight": 19,
                 "textAlign": "center",
@@ -839,14 +826,14 @@ exports[`disabled button working and message 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
                   Array [
                     Object {
                       "color": "rgba(54,184,123,1)",
-                      "fontFamily": "NunitoSans-Bold",
+                      "fontFamily": undefined,
                       "fontSize": 18,
                       "lineHeight": 25,
                       "padding": 3,
@@ -877,7 +864,6 @@ exports[`event handling calls onComplete if onProcess returns true 1`] = `
     Object {
       "backgroundColor": "white",
       "flex": 1,
-      "paddingTop": 10,
     }
   }
 >
@@ -905,7 +891,6 @@ exports[`event handling calls onComplete if onProcess returns true 1`] = `
       Object {
         "backgroundColor": "white",
         "flex": 1,
-        "paddingTop": 10,
       }
     }
   >
@@ -979,7 +964,7 @@ exports[`event handling calls onComplete if onProcess returns true 1`] = `
                     "marginRight": 15,
                   },
                   Object {
-                    "borderColor": "rgba(92,80,202,1)",
+                    "borderColor": "#6A54D1",
                   },
                 ],
               ]
@@ -992,20 +977,20 @@ exports[`event handling calls onComplete if onProcess returns true 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
                   Array [
                     Object {
                       "color": "rgba(54,184,123,1)",
-                      "fontFamily": "NunitoSans-Bold",
+                      "fontFamily": undefined,
                       "fontSize": 18,
                       "lineHeight": 25,
                       "padding": 3,
                     },
                     Object {
-                      "color": "rgba(92,80,202,1)",
+                      "color": "#6A54D1",
                     },
                   ],
                   Object {},
@@ -1028,7 +1013,6 @@ exports[`event handling calls onComplete if onProcess returns true 2`] = `
     Object {
       "backgroundColor": "white",
       "flex": 1,
-      "paddingTop": 10,
     }
   }
 >
@@ -1056,7 +1040,6 @@ exports[`event handling calls onComplete if onProcess returns true 2`] = `
       Object {
         "backgroundColor": "white",
         "flex": 1,
-        "paddingTop": 10,
       }
     }
   >
@@ -1130,7 +1113,7 @@ exports[`event handling calls onComplete if onProcess returns true 2`] = `
                     "marginRight": 15,
                   },
                   Object {
-                    "borderColor": "rgba(92,80,202,1)",
+                    "borderColor": "#6A54D1",
                   },
                 ],
               ]
@@ -1143,20 +1126,20 @@ exports[`event handling calls onComplete if onProcess returns true 2`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
                   Array [
                     Object {
                       "color": "rgba(54,184,123,1)",
-                      "fontFamily": "NunitoSans-Bold",
+                      "fontFamily": undefined,
                       "fontSize": 18,
                       "lineHeight": 25,
                       "padding": 3,
                     },
                     Object {
-                      "color": "rgba(92,80,202,1)",
+                      "color": "#6A54D1",
                     },
                   ],
                   Object {},
@@ -1179,7 +1162,6 @@ exports[`event handling calls onContinue if no onProcess 1`] = `
     Object {
       "backgroundColor": "white",
       "flex": 1,
-      "paddingTop": 10,
     }
   }
 >
@@ -1207,7 +1189,6 @@ exports[`event handling calls onContinue if no onProcess 1`] = `
       Object {
         "backgroundColor": "white",
         "flex": 1,
-        "paddingTop": 10,
       }
     }
   >
@@ -1281,7 +1262,7 @@ exports[`event handling calls onContinue if no onProcess 1`] = `
                     "marginRight": 15,
                   },
                   Object {
-                    "borderColor": "rgba(92,80,202,1)",
+                    "borderColor": "#6A54D1",
                   },
                 ],
               ]
@@ -1294,20 +1275,20 @@ exports[`event handling calls onContinue if no onProcess 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
                   Array [
                     Object {
                       "color": "rgba(54,184,123,1)",
-                      "fontFamily": "NunitoSans-Bold",
+                      "fontFamily": undefined,
                       "fontSize": 18,
                       "lineHeight": 25,
                       "padding": 3,
                     },
                     Object {
-                      "color": "rgba(92,80,202,1)",
+                      "color": "#6A54D1",
                     },
                   ],
                   Object {},
@@ -1330,7 +1311,6 @@ exports[`event handling calls onContinue if no onProcess 2`] = `
     Object {
       "backgroundColor": "white",
       "flex": 1,
-      "paddingTop": 10,
     }
   }
 >
@@ -1358,7 +1338,6 @@ exports[`event handling calls onContinue if no onProcess 2`] = `
       Object {
         "backgroundColor": "white",
         "flex": 1,
-        "paddingTop": 10,
       }
     }
   >
@@ -1432,7 +1411,7 @@ exports[`event handling calls onContinue if no onProcess 2`] = `
                     "marginRight": 15,
                   },
                   Object {
-                    "borderColor": "rgba(92,80,202,1)",
+                    "borderColor": "#6A54D1",
                   },
                 ],
               ]
@@ -1445,20 +1424,20 @@ exports[`event handling calls onContinue if no onProcess 2`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
                   Array [
                     Object {
                       "color": "rgba(54,184,123,1)",
-                      "fontFamily": "NunitoSans-Bold",
+                      "fontFamily": undefined,
                       "fontSize": 18,
                       "lineHeight": 25,
                       "padding": 3,
                     },
                     Object {
-                      "color": "rgba(92,80,202,1)",
+                      "color": "#6A54D1",
                     },
                   ],
                   Object {},
@@ -1481,7 +1460,6 @@ exports[`event handling calls only onProcess 1`] = `
     Object {
       "backgroundColor": "white",
       "flex": 1,
-      "paddingTop": 10,
     }
   }
 >
@@ -1509,7 +1487,6 @@ exports[`event handling calls only onProcess 1`] = `
       Object {
         "backgroundColor": "white",
         "flex": 1,
-        "paddingTop": 10,
       }
     }
   >
@@ -1583,7 +1560,7 @@ exports[`event handling calls only onProcess 1`] = `
                     "marginRight": 15,
                   },
                   Object {
-                    "borderColor": "rgba(92,80,202,1)",
+                    "borderColor": "#6A54D1",
                   },
                 ],
               ]
@@ -1596,20 +1573,20 @@ exports[`event handling calls only onProcess 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
                   Array [
                     Object {
                       "color": "rgba(54,184,123,1)",
-                      "fontFamily": "NunitoSans-Bold",
+                      "fontFamily": undefined,
                       "fontSize": 18,
                       "lineHeight": 25,
                       "padding": 3,
                     },
                     Object {
-                      "color": "rgba(92,80,202,1)",
+                      "color": "#6A54D1",
                     },
                   ],
                   Object {},
@@ -1632,7 +1609,6 @@ exports[`event handling calls only onProcess 2`] = `
     Object {
       "backgroundColor": "white",
       "flex": 1,
-      "paddingTop": 10,
     }
   }
 >
@@ -1660,7 +1636,6 @@ exports[`event handling calls only onProcess 2`] = `
       Object {
         "backgroundColor": "white",
         "flex": 1,
-        "paddingTop": 10,
       }
     }
   >
@@ -1734,7 +1709,7 @@ exports[`event handling calls only onProcess 2`] = `
                     "marginRight": 15,
                   },
                   Object {
-                    "borderColor": "rgba(92,80,202,1)",
+                    "borderColor": "#6A54D1",
                   },
                 ],
               ]
@@ -1747,20 +1722,20 @@ exports[`event handling calls only onProcess 2`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
                   Array [
                     Object {
                       "color": "rgba(54,184,123,1)",
-                      "fontFamily": "NunitoSans-Bold",
+                      "fontFamily": undefined,
                       "fontSize": 18,
                       "lineHeight": 25,
                       "padding": 3,
                     },
                     Object {
-                      "color": "rgba(92,80,202,1)",
+                      "color": "#6A54D1",
                     },
                   ],
                   Object {},
@@ -1783,7 +1758,6 @@ exports[`renders continue button 1`] = `
     Object {
       "backgroundColor": "white",
       "flex": 1,
-      "paddingTop": 10,
     }
   }
 >
@@ -1811,7 +1785,6 @@ exports[`renders continue button 1`] = `
       Object {
         "backgroundColor": "white",
         "flex": 1,
-        "paddingTop": 10,
       }
     }
   >
@@ -1885,7 +1858,7 @@ exports[`renders continue button 1`] = `
                     "marginRight": 15,
                   },
                   Object {
-                    "borderColor": "rgba(92,80,202,1)",
+                    "borderColor": "#6A54D1",
                   },
                 ],
               ]
@@ -1898,20 +1871,20 @@ exports[`renders continue button 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
                   Array [
                     Object {
                       "color": "rgba(54,184,123,1)",
-                      "fontFamily": "NunitoSans-Bold",
+                      "fontFamily": undefined,
                       "fontSize": 18,
                       "lineHeight": 25,
                       "padding": 3,
                     },
                     Object {
-                      "color": "rgba(92,80,202,1)",
+                      "color": "#6A54D1",
                     },
                   ],
                   Object {},
@@ -1934,7 +1907,6 @@ exports[`renders skip button if skippable 1`] = `
     Object {
       "backgroundColor": "white",
       "flex": 1,
-      "paddingTop": 10,
     }
   }
 >
@@ -1962,7 +1934,6 @@ exports[`renders skip button if skippable 1`] = `
       Object {
         "backgroundColor": "white",
         "flex": 1,
-        "paddingTop": 10,
       }
     }
   >
@@ -2036,7 +2007,7 @@ exports[`renders skip button if skippable 1`] = `
                     "marginRight": 15,
                   },
                   Object {
-                    "borderColor": "rgba(92,80,202,1)",
+                    "borderColor": "#6A54D1",
                   },
                 ],
               ]
@@ -2049,20 +2020,20 @@ exports[`renders skip button if skippable 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
                   Array [
                     Object {
                       "color": "rgba(54,184,123,1)",
-                      "fontFamily": "NunitoSans-Bold",
+                      "fontFamily": undefined,
                       "fontSize": 18,
                       "lineHeight": 25,
                       "padding": 3,
                     },
                     Object {
-                      "color": "rgba(92,80,202,1)",
+                      "color": "#6A54D1",
                     },
                   ],
                   Object {},
@@ -2116,13 +2087,13 @@ exports[`renders skip button if skippable 1`] = `
               style={
                 Array [
                   Object {
-                    "fontFamily": "NunitoSans-Bold",
+                    "fontFamily": "Montserrat",
                     "fontSize": 18,
                     "textAlign": "center",
                   },
                   Object {
-                    "color": "rgba(92,80,202,1)",
-                    "fontFamily": "NunitoSans-Regular",
+                    "color": "#6A54D1",
+                    "fontFamily": undefined,
                     "fontSize": 18,
                     "lineHeight": 25,
                   },
