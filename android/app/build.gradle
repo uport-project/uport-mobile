@@ -173,6 +173,8 @@ android {
         multiDexEnabled true
         multiDexKeepFile file('multidex-config.txt')
 
+        missingDimensionStrategy 'react-native-camera', 'general'
+
     }
 
 
