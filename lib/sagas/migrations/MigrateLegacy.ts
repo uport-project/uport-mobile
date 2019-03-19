@@ -25,14 +25,17 @@ import {
   encryptionPublicKey,
   DEFAULT_LEVEL,
 } from 'uPortMobile/lib/sagas/keychain'
+import { createAttestationToken } from 'uPortMobile/lib/sagas/jwt'
 import { MigrationStep } from 'uPortMobile/lib/constants/MigrationActionTypes'
 import { saveMessage } from 'uPortMobile/lib/actions/processStatusActions'
 import { resetHub } from 'uPortMobile/lib/actions/hubActions'
 import { subAccounts, currentAddress, ownClaimsMap } from 'uPortMobile/lib/selectors/identities'
+import { hasAttestations } from 'uPortMobile/lib/selectors/attestations'
 import { updateIdentity, storeIdentity } from 'uPortMobile/lib/actions/uportActions'
 import { hdRootAddress } from 'uPortMobile/lib/selectors/hdWallet'
 import { resetHDWallet } from 'uPortMobile/lib/actions/HDWalletActions'
 import { track } from 'uPortMobile/lib/actions/metricActions'
+import { handleURL } from 'uPortMobile/lib/actions/requestActions'
 
 import { Alert } from 'react-native'
 
@@ -70,6 +73,7 @@ export function* migrate(): any {
   const oldRoot = yield select(currentAddress)
   const accounts = yield select(subAccounts, oldRoot)
   const own = (yield select(ownClaimsMap)) || {}
+  const createOwnershipLink = yield select(hasAttestations)
   let newRoot
   if (yield call(hasWorkingSeed)) {
     const account = yield call(addressFor, 0, 0)
@@ -101,6 +105,10 @@ export function* migrate(): any {
   }
   if (yield call(canSignFor, oldRoot)) {
     yield put(updateIdentity(oldRoot, { parent: newRoot }))
+    if (createOwnershipLink) {
+      const link = yield call(createAttestationToken, oldRoot, newRoot, {owns: oldRoot})
+      yield put(handleURL(`me.uport:req/${link}`, {popup: false}))
+    }
   } else {
     yield put(
       updateIdentity(oldRoot, {

@@ -44,7 +44,6 @@ import {
 } from 'uPortMobile/lib/selectors/identities'
 import { migrationStepStatus, migrationTargets, pendingMigrations } from 'uPortMobile/lib/selectors/migrations'
 import { NavigationActions } from 'uPortMobile/lib/utilities/NavigationActions'
-import { hasAttestations } from '../selectors/attestations'
 import CleanUpAfterMissingSeed from './migrations/CleanUpAfterMissingSeed'
 import IdentityManagerChangeOwner from './migrations/IdentityManagerChangeOwner'
 import MigrateLegacy from './migrations/MigrateLegacy'
@@ -75,14 +74,7 @@ export function* checkup(): any {
   // console.log('id', (yield select(currentIdentityJS)))
   if (yield call(checkIfAbleToSign)) {
     if (yield call(checkForLegacy)) {
-      // We define highValue as having mainnet accounts and attestations
-      const highValue = (yield select(hasAttestations)) || (yield select(hasMainnetAccounts))
-      if (highValue) {
-        const fullHD = yield select(isFullyHD)
-        if (!fullHD) yield put(addMigrationTarget(MigrationTarget.PreHD))
-      } else {
-        yield put(addMigrationTarget(MigrationTarget.Legacy))
-      }
+      yield put(addMigrationTarget(MigrationTarget.Legacy))
     }
   } else {
     const hd = yield select(isHD, address)
