@@ -168,7 +168,7 @@ android {
         minSdkVersion min_sdk_version
         targetSdkVersion target_sdk_version
         versionCode = getBuildVersionCode()
-        versionName = "1.5.${versionCode} Alpha"
+        versionName = "1.6.${versionCode} Alpha"
 
         multiDexEnabled true
         multiDexKeepFile file('multidex-config.txt')
