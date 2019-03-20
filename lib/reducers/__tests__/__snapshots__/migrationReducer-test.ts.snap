@@ -4,7 +4,7 @@ exports[`addMigrationTarget adds a target 1`] = `
 Object {
   "steps": Object {},
   "targets": Array [
-    "PreHD",
+    "Legacy",
   ],
 }
 `;
@@ -12,7 +12,7 @@ Object {
 exports[`completedMigrationStep completes a step 1`] = `
 Object {
   "steps": Object {
-    "IdentityManagerChangeOwner": 2,
+    "MigrateLegacy": 2,
   },
   "targets": Array [],
 }
@@ -21,11 +21,10 @@ Object {
 exports[`completedMigrationStep should complete an additional step 1`] = `
 Object {
   "steps": Object {
-    "IdentityManagerChangeOwner": 1,
-    "UpdatePreHDRootToHD": 2,
+    "MigrateLegacy": 2,
   },
   "targets": Array [
-    "PreHD",
+    "Legacy",
   ],
 }
 `;
@@ -33,7 +32,7 @@ Object {
 exports[`failedMigrationStep fails a step 1`] = `
 Object {
   "steps": Object {
-    "IdentityManagerChangeOwner": 3,
+    "MigrateLegacy": 3,
   },
   "targets": Array [],
 }
@@ -42,11 +41,10 @@ Object {
 exports[`failedMigrationStep should fail an additional step 1`] = `
 Object {
   "steps": Object {
-    "IdentityManagerChangeOwner": 1,
-    "UpdatePreHDRootToHD": 3,
+    "MigrateLegacy": 3,
   },
   "targets": Array [
-    "PreHD",
+    "Legacy",
   ],
 }
 `;
@@ -54,11 +52,10 @@ Object {
 exports[`startedMigrationStep should start an additional step 1`] = `
 Object {
   "steps": Object {
-    "IdentityManagerChangeOwner": 1,
-    "UpdatePreHDRootToHD": 1,
+    "MigrateLegacy": 1,
   },
   "targets": Array [
-    "PreHD",
+    "Legacy",
   ],
 }
 `;
@@ -66,7 +63,7 @@ Object {
 exports[`startedMigrationStep starts a step 1`] = `
 Object {
   "steps": Object {
-    "IdentityManagerChangeOwner": 1,
+    "MigrateLegacy": 1,
   },
   "targets": Array [],
 }

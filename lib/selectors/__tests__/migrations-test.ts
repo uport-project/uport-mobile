@@ -31,22 +31,18 @@ const empty: globalState = {
 
 const populated: globalState = {
   migrations: {
-    targets: [MigrationTarget.PreHD],
+    targets: [MigrationTarget.Legacy],
     steps: {}
   }
 }
-populated.migrations.steps[MigrationStep[MigrationStep.IdentityManagerChangeOwner]] = MigrationStatus.Started
+populated.migrations.steps[MigrationStep[MigrationStep.MigrateLegacy]] = MigrationStatus.Started
 
 const completed: globalState = {
   migrations: {
-    targets: [MigrationTarget.PreHD],
+    targets: [MigrationTarget.Legacy],
     steps: {}
   }
 }
-completed.migrations.steps[MigrationStep[MigrationStep.CleanUpAfterMissingSeed]] = MigrationStatus.Completed
-completed.migrations.steps[MigrationStep[MigrationStep.IdentityManagerChangeOwner]] = MigrationStatus.Completed
-completed.migrations.steps[MigrationStep[MigrationStep.UpdatePreHDRootToHD]] = MigrationStatus.Completed
-completed.migrations.steps[MigrationStep[MigrationStep.UportRegistryDDORefresh]] = MigrationStatus.Completed
 completed.migrations.steps[MigrationStep[MigrationStep.MigrateLegacy]] = MigrationStatus.Completed
 
 describe('migrationTargets', () => {
@@ -58,7 +54,7 @@ describe('migrationTargets', () => {
 
   describe('populated', () => {
     it('should return a list with targets', () => {
-      expect(migrationTargets(populated)).toEqual([MigrationTarget.PreHD])
+      expect(migrationTargets(populated)).toEqual([MigrationTarget.Legacy])
     })  
   })
 })
@@ -67,13 +63,13 @@ describe('migrationTargets', () => {
 describe('migrationStepStatus', () => {
   describe('empty', () => {
     it('should return NotStarted', () => {
-      expect(migrationStepStatus(empty, MigrationStep.IdentityManagerChangeOwner)).toEqual(MigrationStatus.NotStarted)
+      expect(migrationStepStatus(empty, MigrationStep.MigrateLegacy)).toEqual(MigrationStatus.NotStarted)
     })
   })
 
   describe('started', () => {
     it('should return Started', () => {
-      expect(migrationStepStatus(populated, MigrationStep.IdentityManagerChangeOwner)).toEqual(MigrationStatus.Started)
+      expect(migrationStepStatus(populated, MigrationStep.MigrateLegacy)).toEqual(MigrationStatus.Started)
     })
   })
 })
@@ -81,19 +77,19 @@ describe('migrationStepStatus', () => {
 describe('migrationCompleted', () => {
   describe('empty', () => {
     it('should not be completed', () => {
-      expect(migrationCompleted(empty, MigrationTarget.PreHD)).toBeFalsy()
+      expect(migrationCompleted(empty, MigrationTarget.Legacy)).toBeFalsy()
     })
   })
 
   describe('populated', () => {
     it('should not be completed', () => {
-      expect(migrationCompleted(populated, MigrationTarget.PreHD)).toBeFalsy()
+      expect(migrationCompleted(populated, MigrationTarget.Legacy)).toBeFalsy()
     })
   })
 
   describe('completed', () => {
     it('should be completed', () => {
-      expect(migrationCompleted(completed, MigrationTarget.PreHD)).toBeTruthy()
+      expect(migrationCompleted(completed, MigrationTarget.Legacy)).toBeTruthy()
     })
   })
 })
@@ -107,7 +103,7 @@ describe('pendingMigrations', () => {
 
   describe('populated', () => {
     it('should not be completed', () => {
-      expect(pendingMigrations(populated)).toEqual([MigrationTarget.PreHD])
+      expect(pendingMigrations(populated)).toEqual([MigrationTarget.Legacy])
     })
   })
 

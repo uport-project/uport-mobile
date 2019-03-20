@@ -21,7 +21,7 @@ import { throwError } from 'redux-saga-test-plan/providers'
 import { select, call } from 'redux-saga/effects'
 import { delay } from 'redux-saga'
 import migrationsSaga, { performStep, runImplementationStep, checkIfAbleToSign, checkForLegacy, runMigrations, alert } from '../migrationsSaga'
-import IdentityManagerChangeOwner from '../migrations/IdentityManagerChangeOwner'
+import MigrateLegacy from '../migrations/MigrateLegacy'
 import { listSeedAddresses, canSignFor, hasWorkingSeed } from 'uPortMobile/lib/sagas/keychain'
 import { 
   RUN_MIGRATIONS,
@@ -120,7 +120,6 @@ describe('checkup', () => {
             [select(migrateableIdentities), [{address: '0x'}]]
           ])
           .put(addMigrationTarget(MigrationTarget.Legacy))
-          .not.put(addMigrationTarget(MigrationTarget.PreHD))
           .dispatch(loadedDB())
           .silentRun()
         })
@@ -139,7 +138,6 @@ describe('checkup', () => {
             [select(migrateableIdentities), [{address: '0x'}]]
           ])
           .put(addMigrationTarget(MigrationTarget.Legacy))
-          .not.put(addMigrationTarget(MigrationTarget.PreHD))
           .dispatch(loadedDB())
           .silentRun()
         })
@@ -157,7 +155,6 @@ describe('checkup', () => {
             [select(migrateableIdentities), [{address: '0x'}]]
           ])
           .put(addMigrationTarget(MigrationTarget.Legacy))
-          .not.put(addMigrationTarget(MigrationTarget.PreHD))
           .dispatch(loadedDB())
           .silentRun()
         })
@@ -167,7 +164,7 @@ describe('checkup', () => {
     describe('Pre HD wallet', () => {
       describe('able to sign', () => {
         describe('has attestations', () => {
-          it('adds PreHD Migration Target', () => {
+          it('adds Legacy Migration Target', () => {
             return expectSaga(migrationsSaga)
                 .provide([
                   [select(currentAddress), root],
@@ -178,14 +175,13 @@ describe('checkup', () => {
                   [select(migrateableIdentities), [{address: '0x'}]]
                 ])
                 .put(addMigrationTarget(MigrationTarget.Legacy))
-                .not.put(addMigrationTarget(MigrationTarget.PreHD))
                 .dispatch(loadedDB())
                 .silentRun()
           })
         })
 
         describe('without attestations', () => {
-          it('adds PreHD Migration Target', () => {
+          it('adds Legacy Migration Target', () => {
             return expectSaga(migrationsSaga)
                 .provide([
                   [select(currentAddress), root],
@@ -273,51 +269,39 @@ describe('checkup', () => {
 describe('runMigrations', () => {
   describe('with targets', () => {
     it('should run all steps', () => {
-      return expectSaga(runMigrations, runMigrationAction(MigrationTarget.PreHD))
+      return expectSaga(runMigrations, runMigrationAction(MigrationTarget.Legacy))
         .provide([
-          [select(migrationTargets), [MigrationTarget.PreHD]],
-          [select(migrationStepStatus, MigrationStep.CleanUpAfterMissingSeed), MigrationStatus.Completed],
-          [select(migrationStepStatus, MigrationStep.IdentityManagerChangeOwner), MigrationStatus.Completed],
-          [select(migrationStepStatus, MigrationStep.UpdatePreHDRootToHD), MigrationStatus.Completed],
-          [select(migrationStepStatus, MigrationStep.UportRegistryDDORefresh), MigrationStatus.Completed],
-          [select(migrationCompleted, MigrationTarget.PreHD), true],
+          [select(migrationTargets), [MigrationTarget.Legacy]],
+          [select(migrationStepStatus, MigrationStep.MigrateLegacy), MigrationStatus.Completed],
+          [select(migrationCompleted, MigrationTarget.Legacy), true],
           [matchers.call.fn(performStep), undefined]
         ])
-        .put(startWorking(MigrationTarget.PreHD))
-        .call(performStep, MigrationStep.CleanUpAfterMissingSeed)
-        .call(performStep, MigrationStep.IdentityManagerChangeOwner)
-        .call(performStep, MigrationStep.UpdatePreHDRootToHD)
-        .call(performStep, MigrationStep.UportRegistryDDORefresh)
-        .put(completeProcess(MigrationTarget.PreHD))
+        .put(startWorking(MigrationTarget.Legacy))
+        .call(performStep, MigrationStep.MigrateLegacy)
+        .put(completeProcess(MigrationTarget.Legacy))
         .returns(true)
         .silentRun()
     })
   })
 
   it('should stop running unless a step was completed', () => {
-    return expectSaga(runMigrations, runMigrationAction(MigrationTarget.PreHD))
+    return expectSaga(runMigrations, runMigrationAction(MigrationTarget.Legacy))
       .provide([
-        [select(migrationTargets), [MigrationTarget.PreHD]],
-        [select(migrationStepStatus, MigrationStep.CleanUpAfterMissingSeed), MigrationStatus.Completed],
-        [select(migrationStepStatus, MigrationStep.IdentityManagerChangeOwner), MigrationStatus.Completed],
-        [select(migrationStepStatus, MigrationStep.UpdatePreHDRootToHD), MigrationStatus.Error],
-        [select(migrationStepStatus, MigrationStep.UportRegistryDDORefresh), undefined],
-        [select(migrationCompleted, MigrationTarget.PreHD), false],
+        [select(migrationTargets), [MigrationTarget.Legacy]],
+        [select(migrationStepStatus, MigrationStep.MigrateLegacy), undefined],
+        [select(migrationCompleted, MigrationTarget.Legacy), false],
         [matchers.call.fn(performStep), undefined]
       ])
-      .call(performStep, MigrationStep.CleanUpAfterMissingSeed)
-      .call(performStep, MigrationStep.IdentityManagerChangeOwner)
-      .call(performStep, MigrationStep.UpdatePreHDRootToHD)
-      .not.call(performStep, MigrationStep.UportRegistryDDORefresh)
-      .put(failProcess(MigrationTarget.PreHD))
+      .call(performStep, MigrationStep.MigrateLegacy)
+      .put(failProcess(MigrationTarget.Legacy))
       .returns(false)
-      .dispatch(runMigrationAction(MigrationTarget.PreHD))
+      .dispatch(runMigrationAction(MigrationTarget.Legacy))
       .silentRun()
   })
 })
 
 describe('performStep', () => {
-  const step = MigrationStep.IdentityManagerChangeOwner
+  const step = MigrationStep.MigrateLegacy
   describe('completed', () => {
     it('should not do anything', () => {
       return expectSaga(performStep, step)
@@ -385,11 +369,11 @@ describe('performStep', () => {
 
 describe('runImplementationStep', () => {
   it('should select and run actual migration', () => {
-    return expectSaga(runImplementationStep, MigrationStep.IdentityManagerChangeOwner)
+    return expectSaga(runImplementationStep, MigrationStep.MigrateLegacy)
       .provide([
-        [call(IdentityManagerChangeOwner), true]
+        [call(MigrateLegacy), true]
       ])
-      .call(IdentityManagerChangeOwner)
+      .call(MigrateLegacy)
       .returns(true)
       .run()
   })

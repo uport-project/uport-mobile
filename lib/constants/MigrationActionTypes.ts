@@ -24,17 +24,12 @@ export const COMPLETED_MIGRATION_STEP = 'COMPLETED_MIGRATION_STEP'
 export const FAILED_MIGRATION_STEP = 'FAILED_MIGRATION_STEP'
 
 export enum MigrationTarget {
-  PreHD = "PreHD",
   Legacy = "Legacy",
   MissingKeys = "MissingKeys",
   RecoverSeed = "RecoverSeed"
 }
 
 export enum MigrationStep {
-  IdentityManagerChangeOwner = 'IdentityManagerChangeOwner',
-  UpdatePreHDRootToHD = 'UpdatePreHDRootToHD',
-  UportRegistryDDORefresh = 'UportRegistryDDORefresh',
-  CleanUpAfterMissingSeed = 'CleanUpAfterMissingSeed',
   MigrateLegacy = 'MigrateLegacy',
   EnterSeed = 'EnterSeed'
 }
@@ -51,7 +46,6 @@ export interface Recipes {
 }
 
 export const targetRecipes : Recipes = {
-  PreHD: [MigrationStep.CleanUpAfterMissingSeed, MigrationStep.IdentityManagerChangeOwner, MigrationStep.UpdatePreHDRootToHD, MigrationStep.UportRegistryDDORefresh],
   Legacy: [MigrationStep.MigrateLegacy],
   RecoverSeed: [MigrationStep.EnterSeed]
 }
@@ -61,7 +55,6 @@ export interface MigrationScreens {
 }
 
 export const migrationScreens: MigrationScreens = {
-  PreHD: 'migrations.PreHD',
   RecoverSeed: 'recovery.seedInstructions'
 }
 
