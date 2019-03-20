@@ -1,5 +1,12 @@
 # Change Log
 
+## [v421](https://github.com/uport-project/uport-mobile/tree/v421) (2019-03-20)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v420...v421)
+
+**Merged pull requests:**
+
+- Bugfixes [\#86](https://github.com/uport-project/uport-mobile/pull/86) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v420](https://github.com/uport-project/uport-mobile/tree/v420) (2019-03-19)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v419...v420)
 
