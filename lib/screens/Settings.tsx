@@ -97,11 +97,11 @@ export class Settings extends React.Component<SettingsProps> {
             <ListItem
               warn={!this.props.seedConfirmed}
               accessoryRight={this.props.seedConfirmed ? undefined : 'Account At Risk'}
-              onPress={() => this.goToScreen('backup.seedInstructions')}
+              onPress={() => this.goToScreen('backup.dataInstructions')}
             >
               Account Back Up
             </ListItem>
-            <ListItem last onPress={() => this.goToScreen('backup.dataInstructions')}>
+            <ListItem last onPress={() => this.goToScreen('recovery.seedInstructions')}>
               Account Recovery
             </ListItem>
           </Section>
