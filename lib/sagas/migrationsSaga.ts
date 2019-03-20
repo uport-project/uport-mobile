@@ -44,11 +44,7 @@ import {
 } from 'uPortMobile/lib/selectors/identities'
 import { migrationStepStatus, migrationTargets, pendingMigrations } from 'uPortMobile/lib/selectors/migrations'
 import { NavigationActions } from 'uPortMobile/lib/utilities/NavigationActions'
-import CleanUpAfterMissingSeed from './migrations/CleanUpAfterMissingSeed'
-import IdentityManagerChangeOwner from './migrations/IdentityManagerChangeOwner'
 import MigrateLegacy from './migrations/MigrateLegacy'
-import UpdatePreHDRootToHD from './migrations/UpdatePreHDRootToHD'
-import UportRegistryDDORefresh from './migrations/UportRegistryDDORefresh'
 import { hdRootAddress } from '../selectors/hdWallet'
 import { Alert } from 'react-native'
 
@@ -127,14 +123,6 @@ export function* runMigrations({ target }: TargetAction): any {
 
 export function* runImplementationStep(step: MigrationStep): any {
   switch (step) {
-    case MigrationStep.IdentityManagerChangeOwner:
-      return yield call(IdentityManagerChangeOwner)
-    case MigrationStep.UpdatePreHDRootToHD:
-      return yield call(UpdatePreHDRootToHD)
-    case MigrationStep.UportRegistryDDORefresh:
-      return yield call(UportRegistryDDORefresh)
-    case MigrationStep.CleanUpAfterMissingSeed:
-      return yield call(CleanUpAfterMissingSeed)
     case MigrationStep.MigrateLegacy:
       return yield call(MigrateLegacy)
   }
