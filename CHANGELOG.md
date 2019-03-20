@@ -1,5 +1,12 @@
 # Change Log
 
+## [v422](https://github.com/uport-project/uport-mobile/tree/v422) (2019-03-20)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v421...v422)
+
+**Merged pull requests:**
+
+- Switch recovery screens in settings [\#87](https://github.com/uport-project/uport-mobile/pull/87) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v421](https://github.com/uport-project/uport-mobile/tree/v421) (2019-03-20)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v420...v421)
 
