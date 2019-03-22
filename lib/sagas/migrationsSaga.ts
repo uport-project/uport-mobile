@@ -41,12 +41,14 @@ import {
   migrateableIdentities,
   hasMainnetAccounts,
   currentIdentityJS,
+  otherIdentities,
 } from 'uPortMobile/lib/selectors/identities'
 import { migrationStepStatus, migrationTargets, pendingMigrations } from 'uPortMobile/lib/selectors/migrations'
 import { NavigationActions } from 'uPortMobile/lib/utilities/NavigationActions'
 import MigrateLegacy from './migrations/MigrateLegacy'
 import { hdRootAddress } from '../selectors/hdWallet'
 import { Alert } from 'react-native'
+import { switchIdentity } from '../actions/uportActions';
 
 export function* checkIfAbleToSign(): any {
   const address = yield select(currentAddress)
@@ -59,8 +61,29 @@ export function* alert(title: string, message: string) {
   yield call([Alert, Alert.alert], title, message)
 }
 
-export function* checkup(): any {
+interface HasAddress {
+  address: string
+}
+
+export function* primaryAddress() {
   const address = yield select(currentAddress)
+  if (!address) return
+  if (address.match(/did:ethr:0x[0-9a-fA-F]{40}/)) {
+    return address
+  } else {
+    const others = yield select(otherIdentities)
+    const primary = others.find(({ address }: HasAddress) => address.match(/did:ethr:0x[0-9a-fA-F]{40}/))
+    if (primary) {
+      yield put(switchIdentity(primary.address))
+      return primary.address
+    }
+    return address
+  }
+}
+
+
+export function* checkup(): any {
+  const address = yield call(primaryAddress)
   if (!address) return
   // console.log('id', (yield select(currentIdentityJS)))
   if (!address.match(/did:ethr:0x[0-9a-fA-F]{40}/)) {
