@@ -16,6 +16,7 @@
 // along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
 //
 import { call, select, put } from 'redux-saga/effects'
+import { delay } from 'redux-saga'
 import {
   createIdentityKeyPair,
   canSignFor,
@@ -37,21 +38,32 @@ import { Alert } from 'react-native'
 
 const step = MigrationStep.MigrateLegacy
 
-function* alertBeforeMigration(): any {
-  return Alert.alert(
-    'New identity',
-    // tslint:disable-next-line:max-line-length
-    'Your current identity is no longer supported. Create new identity to continue. By creating a new identity all of your uPort data including credentials will be lost and cannot be recovered.',
-    [
-      { text: 'Create New Identity', onPress: () => call(migrate) },
-      {
-        text: 'Cancel',
-        onPress: () => put(track('Legacy migration cancelled')),
-        style: 'cancel',
-      },
-    ],
-    { cancelable: true },
-  )
+function alertPromise(): any {
+  return new Promise((resolve, reject) => {
+    Alert.alert(
+      'New Identity',
+      // tslint:disable-next-line:max-line-length
+      'Your current identity is a legacy testnet identity and is no longer supported. Create a new identity to continue. By creating a new identity all of your uPort data including credentials will be lost and cannot be recovered.',
+      [
+        {
+          text: 'Create New Identity',
+          onPress: () => resolve('confirmed'),
+        },
+        { text: 'Cancel', onPress: () => reject('cancelled') },
+      ],
+      { cancelable: true },
+    )
+  })
+}
+
+export function* alertBeforeMigration(): any {
+  try {
+    yield call(delay, 500)
+    yield call(alertPromise)
+    yield call(migrate)
+  } catch (error) {
+    yield put(track('Legacy migration cancelled'))
+  }
 }
 
 export function* migrate(): any {
