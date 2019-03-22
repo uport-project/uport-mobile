@@ -51,7 +51,7 @@ function alertPromise(): any {
         },
         { text: 'Cancel', onPress: () => reject('cancelled') },
       ],
-      { cancelable: false },
+      { cancelable: true },
     )
   })
 }
