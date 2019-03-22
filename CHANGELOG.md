@@ -1,5 +1,12 @@
 # Change Log
 
+## [v423](https://github.com/uport-project/uport-mobile/tree/v423) (2019-03-22)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v422...v423)
+
+**Merged pull requests:**
+
+- Fix migration alert dialog [\#88](https://github.com/uport-project/uport-mobile/pull/88) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v422](https://github.com/uport-project/uport-mobile/tree/v422) (2019-03-20)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v421...v422)
 
