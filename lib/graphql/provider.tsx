@@ -37,18 +37,18 @@ let link
 let needsMigrations = false
 
 // local
-const driver = new RnSqlite()
-const api = new Api(driver)
-needsMigrations = true
-link = new SchemaLink({
-  schema,
-  context: { api },
-})
+// const driver = new RnSqlite()
+// const api = new Api(driver)
+// needsMigrations = true
+// link = new SchemaLink({
+//   schema,
+//   context: { api },
+// })
 
 // external
-// link = createHttpLink({
-//   uri: 'https://d3b5df20.ngrok.io/graphql',
-// })
+link = createHttpLink({
+  uri: 'https://4c196a54.ngrok.io',
+})
 
 const graphqlClient = new ApolloClient({
   cache: new InMemoryCache(),
@@ -76,7 +76,7 @@ const graphqlClient = new ApolloClient({
         return mobileDidManager.newDid()
       },
     },
-  },  
+  },
 })
 
 interface Props extends RX.CommonProps {

@@ -1,33 +1,31 @@
-import EthrDID, { createKeyPair } from 'ethr-did'
-import { DIDManager } from 'uport-graph-api'
+import { Types } from 'uport-graph-api'
 
-export class MobileDidManager implements DIDManager {
+export class WebDidManager implements Types.DIDManager {
 
   private ethrDids: { [key:string]: any } = {}
+  private keyPairs: { [key:string]: any } = {}
 
-  constructor() {
-    const keypair = EthrDID.createKeyPair()
-    console.log({keypair, EthrDID})
-    const did = new EthrDID({...keypair})
-    this.ethrDids[did.did] = did
+  async init() {
   }
 
   getDids() {
-    return Object.keys(this.ethrDids)
+    return []
   }
 
   newDid() {
-    const keypair = EthrDID.createKeyPair()
-    const did = new EthrDID({...keypair})
-    this.ethrDids[did.did] = did
-    return did.did
+
+    return ''
   }
 
-  signJWT(obj: string, did: string) {
-    return this.ethrDids[did].signJWT(obj)
+  removeDid(did: string) {
+  }
+
+  async signJWT(obj: string, did: string) {
+    return 'JWT'
   }
 
 }
 
-const didManager = new MobileDidManager()
+const didManager = new WebDidManager()
+didManager.init()
 export default didManager

@@ -1120,7 +1120,7 @@ assert-plus@1.0.0, assert-plus@^1.0.0:
   resolved "https://registry.yarnpkg.com/assert-plus/-/assert-plus-1.0.0.tgz#f12e0f3c5d77b0b1cdd9146942e4e96c1e4dd525"
   integrity sha1-8S4PPF13sLHN2RRpQuTpbB5N1SU=
 
-assert@^1.1.1, assert@^1.4.0:
+assert@1.4.1, assert@^1.1.1, assert@^1.4.0:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/assert/-/assert-1.4.1.tgz#99912d591836b5a6f5b345c0f07eefc08fc65d91"
   integrity sha1-mZEtWRg2tab1s0XA8H7vwI/GXZE=
@@ -2235,6 +2235,11 @@ bitcore-mnemonic@^1.2.2:
     bitcore-lib "^0.16.0"
     unorm "^1.4.1"
 
+blakejs@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/blakejs/-/blakejs-1.1.0.tgz#69df92ef953aa88ca51a32df6ab1c54a155fc7a5"
+  integrity sha1-ad+S75U6qIylGjLfarHFShVfx6U=
+
 blob-polyfill@^1.0.20150320:
   version "1.0.20150320"
   resolved "https://registry.yarnpkg.com/blob-polyfill/-/blob-polyfill-1.0.20150320.tgz#03692dd6820569ef25a87632fa619c951d5748da"
@@ -2826,7 +2831,7 @@ collection-visit@^1.0.0:
     map-visit "^1.0.0"
     object-visit "^1.0.0"
 
-color-convert@^1.3.0, color-convert@^1.9.0:
+color-convert@^1.3.0, color-convert@^1.9.0, color-convert@^1.9.1:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-1.9.3.tgz#bb71850690e1f136567de629d2d5471deda4c1e8"
   integrity sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==
@@ -2850,6 +2855,14 @@ color-string@^0.3.0:
   dependencies:
     color-name "^1.0.0"
 
+color-string@^1.5.2:
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/color-string/-/color-string-1.5.3.tgz#c9bbc5f01b58b5492f3d6857459cb6590ce204cc"
+  integrity sha512-dC2C5qeWoYkxki5UAXapdjqO672AM4vZuPGRQfO8b5HKuKGBbKWpITyDYN7TOFKvRW7kOgAn3746clDBMDJyQw==
+  dependencies:
+    color-name "^1.0.0"
+    simple-swizzle "^0.2.2"
+
 color-support@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/color-support/-/color-support-1.1.3.tgz#93834379a1cc9a0c61f82f52f0d04322251bd5a2"
@@ -2863,6 +2876,14 @@ color@^0.11.1:
     clone "^1.0.2"
     color-convert "^1.3.0"
     color-string "^0.3.0"
+
+color@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/color/-/color-2.0.1.tgz#e4ed78a3c4603d0891eba5430b04b86314f4c839"
+  integrity sha512-ubUCVVKfT7r2w2D3qtHakj8mbmKms+tThR8gI8zEYCbUBl8/voqFGt3kgBqGwXAopgXybnkuOq+qMYCRrp4cXw==
+  dependencies:
+    color-convert "^1.9.1"
+    color-string "^1.5.2"
 
 combine-source-map@^0.8.0, combine-source-map@~0.8.0:
   version "0.8.0"
@@ -5419,6 +5440,11 @@ is-arrayish@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/is-arrayish/-/is-arrayish-0.2.1.tgz#77c99840527aa8ecb1a8ba697b80645a7a926a9d"
   integrity sha1-d8mYQFJ6qOyxqLppe4BkWnqSap0=
+
+is-arrayish@^0.3.1:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/is-arrayish/-/is-arrayish-0.3.2.tgz#4574a2ae56f7ab206896fb431eaeed066fdf8f03"
+  integrity sha512-eVRqCvVlZbuw3GrM63ovNSNAeA1K16kaR/LRY/92w0zxQ5/1YzwblUX652i4Xs9RwAGjW9d9y6X88t8OaAJfWQ==
 
 is-binary-path@^1.0.0:
   version "1.0.1"
@@ -8506,6 +8532,15 @@ react-native-svg@5.5.1:
     color "^0.11.1"
     lodash "^4.16.6"
 
+react-native-svg@8.0.8:
+  version "8.0.8"
+  resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-8.0.8.tgz#5d4c636751d9db2d98a9b3cfc4ef45c4eac65d60"
+  integrity sha512-a5q7896HJztH3XBa4MouuBcwhOvDsJXRZB/PPvEMvc4NhudIDXDUKpwd9V7Hm6beDjg5CjFIdE/c92jnVo+0CA==
+  dependencies:
+    color "^2.0.1"
+    lodash "^4.16.6"
+    pegjs "^0.10.0"
+
 react-native-touch-id@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/react-native-touch-id/-/react-native-touch-id-3.1.0.tgz#5e1ea668a5dfe9218a7a49bfb1feb3f9bd77965f"
@@ -8694,6 +8729,14 @@ reactotron-redux@^1.12.2:
     ramdasauce "^2.0.0"
     reactotron-core-client "^1.13.0"
     redux "^3.7.1"
+
+reactxp-imagesvg@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/reactxp-imagesvg/-/reactxp-imagesvg-1.5.0.tgz#4fc73f46124b7680e027fea39ca2741bf4e91054"
+  integrity sha512-PSx9T1MmwqITsSRHS+cFJ/emxf5hRHeZvK+caNfEMArvNugOKLLi7hao1blIJALJTgZ/XlnJhl+w27KOc3spSw==
+  dependencies:
+    assert "1.4.1"
+    react-native-svg "8.0.8"
 
 reactxp@^1.6.0-rc.1:
   version "1.6.0-rc.1"
@@ -9444,6 +9487,13 @@ simple-plist@^0.2.1:
     bplist-creator "0.0.7"
     bplist-parser "0.1.1"
     plist "2.0.1"
+
+simple-swizzle@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/simple-swizzle/-/simple-swizzle-0.2.2.tgz#a4da6b635ffcccca33f70d17cb92592de95e557a"
+  integrity sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo=
+  dependencies:
+    is-arrayish "^0.3.1"
 
 sinon@^4.0.1:
   version "4.5.0"
@@ -10426,9 +10476,9 @@ uport-did-resolver@0.0.4, uport-did-resolver@^0.0.4:
 
 "uport-graph-api@file:../uport-graph/graph-api":
   version "0.0.1"
-
-"uport-graph-api@file:./../uport-graph/graph-api":
-  version "0.0.1"
+  dependencies:
+    blakejs "^1.1.0"
+    did-jwt "^0.1.1"
 
 uport-identity@2.0.0-beta:
   version "2.0.0-beta"
@@ -10451,6 +10501,11 @@ uport-lite@^1.0.2, uport-lite@^1.0.3:
     xmlhttprequest "^1.8.0"
 
 "uport-ui-components@file:../uport-graph/ui-components":
+  version "1.0.0"
+  dependencies:
+    reactxp "^1.6.0-rc.1"
+
+"uport-ui-components@file:./../uport-graph/ui-components":
   version "1.0.0"
   dependencies:
     reactxp "^1.6.0-rc.1"
