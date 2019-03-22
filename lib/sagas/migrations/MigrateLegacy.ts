@@ -31,7 +31,7 @@ import { saveMessage } from 'uPortMobile/lib/actions/processStatusActions'
 import { resetHub } from 'uPortMobile/lib/actions/hubActions'
 import { subAccounts, currentAddress, ownClaimsMap } from 'uPortMobile/lib/selectors/identities'
 import { hasAttestations } from 'uPortMobile/lib/selectors/attestations'
-import { updateIdentity, storeIdentity } from 'uPortMobile/lib/actions/uportActions'
+import { updateIdentity, storeIdentity, storeConnection } from 'uPortMobile/lib/actions/uportActions'
 import { hdRootAddress } from 'uPortMobile/lib/selectors/hdWallet'
 import { resetHDWallet } from 'uPortMobile/lib/actions/HDWalletActions'
 import { track } from 'uPortMobile/lib/actions/metricActions'
@@ -106,8 +106,9 @@ export function* migrate(): any {
   if (yield call(canSignFor, oldRoot)) {
     yield put(updateIdentity(oldRoot, { parent: newRoot }))
     if (createOwnershipLink) {
-      const link = yield call(createAttestationToken, oldRoot, newRoot, {owns: oldRoot})
-      yield put(handleURL(`me.uport:req/${link}`, {popup: false}))
+      const link = yield call(createAttestationToken, oldRoot, newRoot, { owns: oldRoot })
+      yield put(handleURL(`me.uport:req/${link}`, { popup: false }))
+      yield put(storeConnection(newRoot, 'owns', oldRoot))
     }
   } else {
     yield put(

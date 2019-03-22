@@ -23,7 +23,7 @@ import { MigrationStep } from 'uPortMobile/lib/constants/MigrationActionTypes'
 import { saveMessage } from 'uPortMobile/lib/actions/processStatusActions'
 import { resetHub } from 'uPortMobile/lib/actions/hubActions'
 import { subAccounts, currentAddress, ownClaimsMap } from 'uPortMobile/lib/selectors/identities'
-import { updateIdentity, storeIdentity } from 'uPortMobile/lib/actions/uportActions'
+import { updateIdentity, storeIdentity, storeConnection } from 'uPortMobile/lib/actions/uportActions'
 import {
   createIdentityKeyPair,
   canSignFor,
@@ -418,7 +418,7 @@ describe('MigrateLegacy', () => {
             const OWNS = 'OWNS'
             return expectSaga(migrate)
               .provide([
-                [call(createAttestationToken, legacyDID, `did:ethr:${hdroot}`, {owns: legacyDID}), OWNS],
+                [call(createAttestationToken, legacyDID, `did:ethr:${hdroot}`, { owns: legacyDID }), OWNS],
                 [call(canSignFor, legacyDID), true],
                 [call(hasWorkingSeed), true],
                 [select(currentAddress), legacyDID],
@@ -428,7 +428,7 @@ describe('MigrateLegacy', () => {
                 [call(encryptionPublicKey, { idIndex: 0, actIndex: 0 }), encPublicKey],
                 [select(ownClaimsMap), own],
                 [select(subAccounts, legacyDID), []],
-                ])
+              ])
               .put(
                 storeIdentity({
                   address: newDID,
@@ -449,10 +449,11 @@ describe('MigrateLegacy', () => {
                   parent: newDID,
                 }),
               )
-              .call(createAttestationToken, legacyDID, newDID, {owns: legacyDID})
-              .put(handleURL(`me.uport:req/${OWNS}`, {popup: false}))
+              .call(createAttestationToken, legacyDID, newDID, { owns: legacyDID })
+              .put(handleURL(`me.uport:req/${OWNS}`, { popup: false }))
+              .put(storeConnection(newDID, 'owns', legacyDID))
               .put(resetHub())
-              .put(saveMessage(step, 'New mainnet identity is created'))    
+              .put(saveMessage(step, 'New mainnet identity is created'))
               .returns(true)
               .run()
           })
