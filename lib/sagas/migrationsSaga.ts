@@ -54,11 +54,6 @@ export function* checkIfAbleToSign(): any {
   return yield call(canSignFor, address)
 }
 
-export function* checkForLegacy(): any {
-  const migrateable = yield select(migrateableIdentities)
-  return migrateable.length > 0
-}
-
 export function* alert(title: string, message: string) {
   yield call(delay, 500)
   yield call([Alert, Alert.alert], title, message)
@@ -68,24 +63,24 @@ export function* checkup(): any {
   const address = yield select(currentAddress)
   if (!address) return
   // console.log('id', (yield select(currentIdentityJS)))
-  if (yield call(checkIfAbleToSign)) {
-    if (yield call(checkForLegacy)) {
-      yield put(addMigrationTarget(MigrationTarget.Legacy))
-    }
+  if (!address.match(/did:ethr:0x[0-9a-fA-F]{40}/)) {
+    yield put(addMigrationTarget(MigrationTarget.Legacy))
   } else {
-    const hd = yield select(isHD, address)
-    if (hd) {
-      yield put(addMigrationTarget(MigrationTarget.RecoverSeed))
-    } else {
-      yield put(addMigrationTarget(MigrationTarget.Legacy))
+    if (!(yield call(checkIfAbleToSign))) {
+      const hd = yield select(isHD, address)
+      if (hd) {
+        yield put(addMigrationTarget(MigrationTarget.RecoverSeed))
+      } else {
+        yield put(addMigrationTarget(MigrationTarget.Legacy))
+      }
     }
   }
   const pending = yield select(pendingMigrations)
   // console.log('pending migrations', pending)
   if (pending.length > 0) {
     const target = pending[0]
+    yield call(delay, 1000)
     if (migrationScreens[target]) {
-      yield call(delay, 1000)
       yield call(NavigationActions.push, {
         screen: migrationScreens[target],
         animationType: 'slide-up',
@@ -135,7 +130,6 @@ export function* performStep(step: MigrationStep): any {
   yield put(startWorking(step))
   try {
     const success = yield call(runImplementationStep, step)
-    // console.log(step, `success: ${success}`)
     if (success) {
       yield put(stopWorking(step))
       yield put(completedMigrationStep(step))

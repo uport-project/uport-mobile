@@ -18,18 +18,15 @@
 import { expectSaga } from 'redux-saga-test-plan'
 import * as matchers from 'redux-saga-test-plan/matchers'
 import { throwError } from 'redux-saga-test-plan/providers'
-import { select, call } from 'redux-saga/effects'
 import { delay } from 'redux-saga'
-import migrationsSaga, { performStep, runImplementationStep, checkIfAbleToSign, checkForLegacy, runMigrations, alert } from '../migrationsSaga'
+import { select, call } from 'redux-saga/effects'
+import migrationsSaga, { performStep, runImplementationStep, checkIfAbleToSign, runMigrations, alert } from '../migrationsSaga'
 import MigrateLegacy from '../migrations/MigrateLegacy'
-import { listSeedAddresses, canSignFor, hasWorkingSeed } from 'uPortMobile/lib/sagas/keychain'
+import { canSignFor, hasWorkingSeed } from 'uPortMobile/lib/sagas/keychain'
 import {
-  RUN_MIGRATIONS,
   MigrationStep,
   MigrationTarget,
-  MigrationStatus,
-  TargetAction,
-  StepAction
+  MigrationStatus
 } from 'uPortMobile/lib/constants/MigrationActionTypes'
 
 import { loadedDB } from 'uPortMobile/lib/actions/globalActions'
@@ -56,7 +53,7 @@ import { migrateableIdentities, currentAddress, hasMainnetAccounts } from 'uPort
 import { Alert } from 'react-native';
 
 describe('checkup', () => {
-  const root = '0xroot'
+  const root = '2ozYQa2fucphC7u8RLaADFnZeCPUZ3MTzMT'
 
   describe('no identity', () => {
     it('does not add migration target', () => {
@@ -72,6 +69,7 @@ describe('checkup', () => {
   })
 
   describe('ethr did', () => {
+    const root = 'did:ethr:0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a'
     it('does not Add Migration Target', () => {
       return expectSaga(migrationsSaga)
         .provide([
@@ -246,13 +244,14 @@ describe('checkup', () => {
             .provide([
               [select(currentAddress), root],
               [call(checkIfAbleToSign), true],
-              [call(checkForLegacy), true],
               [select(isFullyHD), false],
               [select(hasMainnetAccounts), false],
               [select(pendingMigrations), [MigrationTarget.Legacy]],
+              [call(delay, 1000), undefined],
               [call(runMigrations, runMigrationAction(MigrationTarget.Legacy)), true]
             ])
             .put(addMigrationTarget(MigrationTarget.Legacy))
+            .call(delay, 1000)
             .call(runMigrations, runMigrationAction(MigrationTarget.Legacy))
             .call(alert,
               'Your Identity has been upgraded',
