@@ -23,7 +23,7 @@ import { MigrationStep } from 'uPortMobile/lib/constants/MigrationActionTypes'
 import { saveMessage } from 'uPortMobile/lib/actions/processStatusActions'
 import { resetHub } from 'uPortMobile/lib/actions/hubActions'
 import { subAccounts, currentAddress, ownClaimsMap } from 'uPortMobile/lib/selectors/identities'
-import { updateIdentity, storeIdentity, storeConnection } from 'uPortMobile/lib/actions/uportActions'
+import { updateIdentity, storeIdentity, storeConnection, storeExternalUport } from 'uPortMobile/lib/actions/uportActions'
 import {
   createIdentityKeyPair,
   canSignFor,
@@ -402,11 +402,6 @@ describe('MigrateLegacy', () => {
                 securityLevel: DEFAULT_LEVEL,
               }),
             )
-            .put(
-              updateIdentity(legacyDID, {
-                parent: newDID,
-              }),
-            )
             .put(resetHub())
             .put(saveMessage(step, 'New mainnet identity is created'))
             .returns(true)
@@ -444,14 +439,10 @@ describe('MigrateLegacy', () => {
                   securityLevel: DEFAULT_LEVEL,
                 }),
               )
-              .put(
-                updateIdentity(legacyDID, {
-                  parent: newDID,
-                }),
-              )
               .call(createAttestationToken, legacyDID, newDID, { owns: legacyDID })
               .put(handleURL(`me.uport:req/${OWNS}`, { popup: false }))
-              .put(storeConnection(newDID, 'owns', legacyDID))
+              .put(storeExternalUport(legacyDID, own))
+              .put(storeConnection(newDID, 'knows', legacyDID))
               .put(resetHub())
               .put(saveMessage(step, 'New mainnet identity is created'))
               .returns(true)
@@ -491,11 +482,6 @@ describe('MigrateLegacy', () => {
                     publicKey,
                     own,
                     securityLevel: DEFAULT_LEVEL,
-                  }),
-                )
-                .put(
-                  updateIdentity(legacyDID, {
-                    parent: newDID,
                   }),
                 )
                 .put(updateIdentity('account1', { parent: newDID }))
@@ -538,11 +524,6 @@ describe('MigrateLegacy', () => {
                     publicKey,
                     own,
                     securityLevel: DEFAULT_LEVEL,
-                  }),
-                )
-                .put(
-                  updateIdentity(legacyDID, {
-                    parent: newDID,
                   }),
                 )
                 .put(
@@ -585,11 +566,6 @@ describe('MigrateLegacy', () => {
             .put(resetHDWallet())
             .call(createIdentityKeyPair)
             .put(updateIdentity(newDID, { own }))
-            .put(
-              updateIdentity(legacyDID, {
-                parent: newDID,
-              }),
-            )
             .put(resetHub())
             .put(saveMessage(step, 'New mainnet identity is created'))
             .returns(true)
@@ -612,11 +588,6 @@ describe('MigrateLegacy', () => {
             ])
             .call(createIdentityKeyPair)
             .put(updateIdentity(newDID, { own }))
-            .put(
-              updateIdentity(legacyDID, {
-                parent: newDID,
-              }),
-            )
             .put(resetHub())
             .put(saveMessage(step, 'New mainnet identity is created'))
             .returns(true)
@@ -643,11 +614,6 @@ describe('MigrateLegacy', () => {
                 ])
                 .call(createIdentityKeyPair)
                 .put(updateIdentity(newDID, { own }))
-                .put(
-                  updateIdentity(legacyDID, {
-                    parent: newDID,
-                  }),
-                )
                 .put(updateIdentity('account1', { parent: newDID }))
                 .put(updateIdentity('account2', { parent: newDID }))
                 .put(updateIdentity('account3', { parent: newDID }))
@@ -676,11 +642,6 @@ describe('MigrateLegacy', () => {
                 ])
                 .call(createIdentityKeyPair)
                 .put(updateIdentity(newDID, { own }))
-                .put(
-                  updateIdentity(legacyDID, {
-                    parent: newDID,
-                  }),
-                )
                 .put(
                   updateIdentity('account1', {
                     disabled: true,
