@@ -49,7 +49,7 @@ import { NavigationActions } from 'uPortMobile/lib/utilities/NavigationActions'
 import { migrationStepStatus, migrationTargets, pendingMigrations, migrationCompleted } from 'uPortMobile/lib/selectors/migrations'
 import { isFullyHD, isHD } from 'uPortMobile/lib/selectors/chains'
 import { hdRootAddress } from 'uPortMobile/lib/selectors/hdWallet'
-import { migrateableIdentities, currentAddress, hasMainnetAccounts, otherIdentities } from 'uPortMobile/lib/selectors/identities'
+import { migrateableIdentities, currentAddress, hasMainnetAccounts, validPrimaryIdentities } from 'uPortMobile/lib/selectors/identities'
 import { Alert } from 'react-native';
 
 describe('checkup', () => {
@@ -111,7 +111,7 @@ describe('checkup', () => {
           return expectSaga(migrationsSaga)
             .provide([
               [select(currentAddress), root],
-              [select(otherIdentities), []],
+              [select(validPrimaryIdentities), []],
               [call(canSignFor, root), true],
               [select(isFullyHD), true],
               [select(hasMainnetAccounts), false],
@@ -130,7 +130,7 @@ describe('checkup', () => {
             .provide([
               // TODO add selector for mainnet
               [select(currentAddress), root],
-              [select(otherIdentities), []],
+              [select(validPrimaryIdentities), []],
               [call(canSignFor, root), true],
               [select(isFullyHD), true],
               [select(hasMainnetAccounts), true],
@@ -148,7 +148,7 @@ describe('checkup', () => {
           return expectSaga(migrationsSaga)
             .provide([
               [select(currentAddress), root],
-              [select(otherIdentities), []],
+              [select(validPrimaryIdentities), []],
               [call(canSignFor, root), true],
               [select(isFullyHD), true],
               [select(hasMainnetAccounts), false],
@@ -170,7 +170,7 @@ describe('checkup', () => {
               .provide([
                 [select(currentAddress), root],
                 [select(isFullyHD), false],
-                [select(otherIdentities), []],
+                [select(validPrimaryIdentities), []],
                 [call(canSignFor, root), true],
                 [select(hasMainnetAccounts), false],
                 [select(pendingMigrations), []],
@@ -188,7 +188,7 @@ describe('checkup', () => {
               .provide([
                 [select(currentAddress), root],
                 [call(canSignFor, root), true],
-                [select(otherIdentities), []],
+                [select(validPrimaryIdentities), []],
                 [select(isFullyHD), false],
                 [select(hasMainnetAccounts), false],
                 [select(pendingMigrations), []],
@@ -207,7 +207,7 @@ describe('checkup', () => {
             .provide([
               [select(currentAddress), root],
               [call(canSignFor, root), false],
-              [select(otherIdentities), []],
+              [select(validPrimaryIdentities), []],
               [select(hasMainnetAccounts), false],
               [select(pendingMigrations), []],
               [select(hdRootAddress), undefined],
@@ -225,7 +225,7 @@ describe('checkup', () => {
           return expectSaga(migrationsSaga)
             .provide([
               [select(currentAddress), root],
-              [select(otherIdentities), []],
+              [select(validPrimaryIdentities), []],
               [call(canSignFor, root), false],
               [select(isFullyHD), false],
               [select(hasMainnetAccounts), false],
@@ -252,7 +252,7 @@ describe('checkup', () => {
               [select(currentAddress), root],
               [call(checkIfAbleToSign), true],
               [select(isFullyHD), false],
-              [select(otherIdentities), []],
+              [select(validPrimaryIdentities), []],
               [select(hasMainnetAccounts), false],
               [select(pendingMigrations), [MigrationTarget.Legacy]],
               [call(delay, 1000), undefined],
