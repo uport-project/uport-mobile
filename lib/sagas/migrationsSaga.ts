@@ -34,19 +34,15 @@ import {
   targetRecipes,
   migrationScreens,
 } from 'uPortMobile/lib/constants/MigrationActionTypes'
-import { canSignFor, hasWorkingSeed } from 'uPortMobile/lib/sagas/keychain'
-import { isFullyHD, isHD } from 'uPortMobile/lib/selectors/chains'
+import { canSignFor } from 'uPortMobile/lib/sagas/keychain'
+import { isHD } from 'uPortMobile/lib/selectors/chains'
 import {
   currentAddress,
-  migrateableIdentities,
-  hasMainnetAccounts,
-  currentIdentityJS,
-  otherIdentities,
+  validPrimaryIdentities,
 } from 'uPortMobile/lib/selectors/identities'
 import { migrationStepStatus, migrationTargets, pendingMigrations } from 'uPortMobile/lib/selectors/migrations'
 import { NavigationActions } from 'uPortMobile/lib/utilities/NavigationActions'
 import MigrateLegacy from './migrations/MigrateLegacy'
-import { hdRootAddress } from '../selectors/hdWallet'
 import { Alert } from 'react-native'
 import { switchIdentity } from '../actions/uportActions';
 
@@ -61,21 +57,16 @@ export function* alert(title: string, message: string) {
   yield call([Alert, Alert.alert], title, message)
 }
 
-interface HasAddress {
-  address: string
-}
-
 export function* primaryAddress() {
   const address = yield select(currentAddress)
   if (!address) return
   if (address.match(/did:ethr:0x[0-9a-fA-F]{40}/)) {
     return address
   } else {
-    const others = yield select(otherIdentities)
-    const primary = others.find(({ address }: HasAddress) => address.match(/did:ethr:0x[0-9a-fA-F]{40}/))
-    if (primary) {
-      yield put(switchIdentity(primary.address))
-      return primary.address
+    const others = yield select(validPrimaryIdentities)
+    if (others.length > 0) {
+      yield put(switchIdentity(others[0]))
+      return others[0]
     }
     return address
   }
@@ -85,7 +76,6 @@ export function* primaryAddress() {
 export function* checkup(): any {
   const address = yield call(primaryAddress)
   if (!address) return
-  // console.log('id', (yield select(currentIdentityJS)))
   if (!address.match(/did:ethr:0x[0-9a-fA-F]{40}/)) {
     yield put(addMigrationTarget(MigrationTarget.Legacy))
   } else {
@@ -99,7 +89,6 @@ export function* checkup(): any {
     }
   }
   const pending = yield select(pendingMigrations)
-  // console.log('pending migrations', pending)
   if (pending.length > 0) {
     const target = pending[0]
     yield call(delay, 1000)

@@ -190,32 +190,12 @@ Object {
 }
 `;
 
-exports[`validPrimaryAddresses returns all primary identities valid for current network 1`] = `
-Array [
-  "2osGwhCweF72aBMFFkk59JrFHNdyG9mwrNV",
-]
-`;
+exports[`validPrimaryIdentities returns all primary identities with ethr-dids 1`] = `Array []`;
 
-exports[`validPrimaryAddresses returns all primary identities valid for current network 2`] = `
-Array [
-  "2osGwhCweF72aBMFFkk59JrFHNdyG9mwrNV",
-]
-`;
+exports[`validPrimaryIdentities returns all primary identities with ethr-dids 2`] = `Array []`;
 
-exports[`validPrimaryAddresses returns all primary identities valid for current network 3`] = `
-Array [
-  "2osGwhCweF72aBMFFkk59JrFHNdyG9mwrNV",
-]
-`;
+exports[`validPrimaryIdentities returns all primary identities with ethr-dids 3`] = `Array []`;
 
-exports[`validPrimaryAddresses returns all primary identities valid for current network 4`] = `
-Array [
-  "2osGwhCweF72aBMFFkk59JrFHNdyG9mwrNV",
-]
-`;
+exports[`validPrimaryIdentities returns all primary identities with ethr-dids 4`] = `Array []`;
 
-exports[`validPrimaryAddresses returns all primary identities valid for current network 5`] = `
-Array [
-  "2osGwhCweF72aBMFFkk59JrFHNdyG9mwrNV",
-]
-`;
+exports[`validPrimaryIdentities returns all primary identities with ethr-dids 5`] = `Array []`;
