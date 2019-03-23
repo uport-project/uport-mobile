@@ -63,7 +63,7 @@ export function* alertBeforeMigration(): any {
   try {
     yield call(delay, 500)
     yield call(alertPromise)
-    yield call(migrate)
+    return yield call(migrate)
   } catch (error) {
     yield put(track('Legacy migration cancelled'))
   }
@@ -148,4 +148,4 @@ export function* migrate(): any {
     return true
 }
 
-export default migrate
+export default alertBeforeMigration
