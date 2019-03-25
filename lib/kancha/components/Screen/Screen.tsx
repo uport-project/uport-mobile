@@ -101,10 +101,10 @@ const Screen: React.FunctionComponent<ScreenProps> & {
   }
   const scrollViewContentInset = {
     ...(props.footerNavComponent ? { bottom: 0 } : {}),
-    ...(props.expandingHeaderContent ? { top: -SPACER_SIZE } : {}),
+    ...(props.expandingHeaderContent ? { top: 0 } : {}),
   }
   const scrollViewContentOffset = {
-    ...(props.expandingHeaderContent ? { y: SPACER_SIZE, x: 0 } : { y: 0, x: 0 }),
+    ...(props.expandingHeaderContent ? { y: 0, x: 0 } : { y: 0, x: 0 }),
   }
   const safeAreaViewStyle = {
     flex: 1,
@@ -126,15 +126,10 @@ const Screen: React.FunctionComponent<ScreenProps> & {
    * Main content to be rendered within a ScrollView
    */
   const scrollViewContent = (
-    <KeyboardAwareScrollView
-      contentInset={scrollViewContentInset}
-      contentOffset={scrollViewContentOffset}
-      style={scrollViewStyle}
-      contentContainerStyle={scrollViewContentStyle}
-    >
+    <KeyboardAwareScrollView style={scrollViewStyle} contentContainerStyle={scrollViewContentStyle}>
       {props.expandingHeaderContent && (
         <React.Fragment>
-          {Device.isIOS && <Container h={1000} />}
+          {Device.isIOS && <Container h={0} />}
           <Container background={props.expandingHeaderType}>{props.expandingHeaderContent}</Container>
           {/* <ImageBackground source={Images.backgrounds.purpleGradient}>{props.expandingHeaderContent}</ImageBackground> */}
         </React.Fragment>
