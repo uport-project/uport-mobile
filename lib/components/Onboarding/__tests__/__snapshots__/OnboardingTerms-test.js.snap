@@ -98,12 +98,6 @@ exports[`OnboardingTerms renders Onboarding Terms screen 1`] = `
             "bottom": 0,
           }
         }
-        contentOffset={
-          Object {
-            "x": 0,
-            "y": 0,
-          }
-        }
         getTextInputRefs={[Function]}
         onContentSizeChange={[Function]}
         onLayout={[Function]}
