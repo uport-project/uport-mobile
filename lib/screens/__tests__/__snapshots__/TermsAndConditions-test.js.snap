@@ -78,7 +78,7 @@ exports[`renders Settings screen with 1`] = `
               "marginRight": undefined,
               "marginTop": undefined,
               "padding": undefined,
-              "paddingBottom": 15,
+              "paddingBottom": undefined,
               "paddingHorizontal": undefined,
               "paddingLeft": undefined,
               "paddingRight": undefined,

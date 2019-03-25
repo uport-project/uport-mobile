@@ -8090,12 +8090,12 @@ react-native-cache@^1.0.3:
     async "^2.6.1"
     mocha "^5.2.0"
 
-react-native-camera@mirceanis/react-native-camera#1.2.2-emu:
-  version "1.1.2"
-  resolved "https://codeload.github.com/mirceanis/react-native-camera/tar.gz/269418c126d6446b63c7ccef05f8bbfaf11d7f9f"
+react-native-camera@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-camera/-/react-native-camera-2.0.1.tgz#2263d9c656054a137e5abddaaa0d02d14dc3fb38"
+  integrity sha512-ZAKYegDYLVvGu48HfDMOu7CL/ybcxLLr8VdUjXqIFcyd4AVgePGu4yTm9JNSaWMe1G6lbUhERXJPSvGIfApzKA==
   dependencies:
-    lodash "^4.17.4"
-    prop-types "^15.5.10"
+    prop-types "^15.6.2"
 
 react-native-device-info@^0.13.0:
   version "0.13.0"

@@ -49,7 +49,7 @@ export class Settings extends React.Component<SettingsProps> {
     // this is the onPress handler for the two buttons together
     if (event.type === 'NavBarButtonPress') {
       // this is the event type for button presses
-      if (event.id === 'scan') {
+      if (event.id === 'scan' && Device.isAndroid) {
         // this is the same id field from the static navigatorButtons definition
         this.props.navigator.showModal({
           screen: 'uport.scanner',
@@ -62,7 +62,7 @@ export class Settings extends React.Component<SettingsProps> {
   }
 
   componentDidMount() {
-    if (!Device.isIOS) {
+    if (Device.isAndroid) {
       MaterialIcons.getImageSource('qrcode-scan', 26, '#FFFFFF').then(icon => {
         this.props.navigator.setButtons({
           fab: {
