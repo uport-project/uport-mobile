@@ -63,6 +63,7 @@ const Icons: { [index: string]: any } = {
   rocket: Device.isIOS ? 'ios-rocket' : 'md-rocket',
   close: 'x',
   edit: 'edit',
+  more: 'ios-more',
 }
 
 const Icon: React.FunctionComponent<IconProps> = ({ font, name, size, color, animated, image }: IconProps) => {

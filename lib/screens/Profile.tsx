@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { TouchableOpacity } from 'react-native'
+import { TouchableOpacity, Alert } from 'react-native'
 import { Navigator } from 'react-native-navigation'
-import { Screen, Container, Text, Section, ListItem, Button, Theme } from '@kancha'
+import { Screen, Container, Text, Section, ListItem, Button, Theme, Icon } from '@kancha'
 import Avatar from 'uPortMobile/lib/components/shared/Avatar'
 import { currentAddress, ownClaims, myAccounts, otherIdentities } from 'uPortMobile/lib/selectors/identities'
 import { externalProfile } from 'uPortMobile/lib/selectors/requests'
@@ -97,6 +97,22 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
     }
   }
 
+  showSwitchModal() {
+    Alert.alert(
+      'Switch Identity',
+      'Switching identities will allow you to view your old testnet identity and the data associated with it.',
+      [
+        { text: 'Switch', onPress: () => this.props.switchIdentity('') },
+        {
+          text: 'Cancel',
+          // tslint:disable-next-line:no-console
+          onPress: () => console.log('Cancel Pressed'),
+          style: 'cancel',
+        },
+      ],
+    )
+  }
+
   render() {
     return (
       <Screen
@@ -121,10 +137,18 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
               </TouchableOpacity>
             )}
             <Avatar source={this.props.avatar} size={150} style={{ borderWidth: 2, borderColor: 'white' }} />
-            <Container padding>
-              <Text bold type={Text.Types.H2} textColor={'#FFFFFF'}>
-                {this.props.name}
-              </Text>
+
+            <Container padding flexDirection={'row'}>
+              <Container alignItems={'center'} flex={1}>
+                <TouchableOpacity onPress={!this.state.editMode ? this.showSwitchModal : () => null}>
+                  <Container flexDirection={'row'} alignItems={'center'}>
+                    <Text bold type={Text.Types.H2} textColor={'#FFFFFF'}>
+                      {this.props.name}
+                    </Text>
+                  </Container>
+                </TouchableOpacity>
+                <Text textColor={'#FFFFFF'}>Legacy testnet identity</Text>
+              </Container>
             </Container>
           </Container>
         }
@@ -138,7 +162,7 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
                   last={index === 3}
                   key={item.type}
                   editMode={this.state.editMode}
-                  updateItem={value => this.handleChange({ [item.type]: value })}
+                  updateItem={(value: string) => this.handleChange({ [item.type]: value })}
                 >
                   {item.value}
                 </ListItem>
