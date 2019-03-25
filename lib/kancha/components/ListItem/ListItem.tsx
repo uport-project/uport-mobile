@@ -18,7 +18,7 @@
  ***/
 
 import * as React from 'react'
-import { Image, TouchableHighlight, ViewStyle, Linking } from 'react-native'
+import { Image, TouchableHighlight, ViewStyle, Linking, TextInput } from 'react-native'
 import { Container, Text, Icon, Theme } from '@kancha'
 
 interface ListItemProps {
@@ -66,6 +66,21 @@ interface ListItemProps {
    * This is the last item in a list
    */
   last?: boolean
+
+  /**
+   * Show the text input
+   */
+  editMode?: boolean
+
+  /**
+   * A title for the list item
+   */
+  title?: string
+
+  /**
+   * Function that gets called when text is changed
+   */
+  updateItem?: (item: string) => void
 }
 
 /** Move to kancha utils */
@@ -94,6 +109,12 @@ const ListItem: React.FunctionComponent<ListItemProps> = props => {
             {props.avatarComponent}
           </Container>
         )}
+
+        {props.editMode && (
+          <Container alignItems={'center'} justifyContent={'center'} paddingLeft paddingTop={8} paddingBottom={8}>
+            <Icon name={'edit'} font={'feather'} color={'grey'} />
+          </Container>
+        )}
         <Container
           flex={1}
           flexDirection={'row'}
@@ -105,7 +126,20 @@ const ListItem: React.FunctionComponent<ListItemProps> = props => {
           paddingRight
         >
           <Container flexDirection={'row'} flex={1} viewStyle={{ overflow: 'hidden' }}>
-            <Text type={Text.Types.ListItem}>{props.children}</Text>
+            <Container>
+              <Container paddingBottom={5}>
+                {props.title && <Text type={Text.Types.SubTitle}>{props.title}</Text>}
+              </Container>
+              {props.editMode ? (
+                <TextInput
+                  style={{ fontSize: 18, padding: 0 }}
+                  defaultValue={(props.children && props.children.toString()) || ''}
+                  onChangeText={props.updateItem}
+                />
+              ) : (
+                <Text type={Text.Types.ListItem}>{props.children}</Text>
+              )}
+            </Container>
           </Container>
           <Container flexDirection={'row'} alignItems={'center'}>
             <Container marginRight marginLeft paddingTop={5} paddingBottom={5}>

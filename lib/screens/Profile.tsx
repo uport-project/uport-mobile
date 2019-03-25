@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { TouchableOpacity } from 'react-native'
 import { Navigator } from 'react-native-navigation'
 import { Screen, Container, Text, Section, ListItem, Button, Theme } from '@kancha'
 import Avatar from 'uPortMobile/lib/components/shared/Avatar'
@@ -8,14 +9,22 @@ import { externalProfile } from 'uPortMobile/lib/selectors/requests'
 import { editMyInfo, updateShareToken } from 'uPortMobile/lib/actions/myInfoActions'
 import { addClaims, addImage, switchIdentity } from 'uPortMobile/lib/actions/uportActions'
 import { onlyPendingAndLatestAttestations } from 'uPortMobile/lib/selectors/attestations'
+
+import photoSelectionHandler from 'uPortMobile/lib/utilities/photoSelection'
 import Mori from 'mori'
 
 /**
- * Temp hardcoded user data fields
+ * User data fields (Self attested claims)
  */
 const USER_FIELDS = ['name', 'email', 'country', 'phone', 'avatar']
 
+interface SelfClaim {
+  type: string
+  value: string | undefined
+}
+
 interface UserProfileProps {
+  [index: string]: any
   navigator: Navigator
   avatar: any
   name: string
@@ -28,8 +37,16 @@ interface UserProfileProps {
   verifications: any
   others: string
   accounts: any
+
+  /**
+   * Redux actions
+   */
   updateShareToken: (address: string) => any
   accountProfileLookup: (clientId: string) => any
+  storeOwnClaim: (address: string, claims: any) => void
+  editMyInfo: (change: any) => void
+  addImage: (address: string, claimType: string, image: any) => void
+  switchIdentity: (address: string) => void
 }
 
 interface UserProfileState {
@@ -47,6 +64,37 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
     this.state = {
       editMode: false,
     }
+
+    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this))
+    this.photoSelection = this.photoSelection.bind(this)
+  }
+
+  onNavigatorEvent(event: any) {
+    // this is the onPress handler for the two buttons together
+    if (event.type === 'NavBarButtonPress') {
+      // this is the event type for button presses
+      if (event.id === 'edit') {
+        // this is the same id field from the static navigatorButtons definition
+        this.setState({ editMode: true })
+        this.setEditModeButtons()
+      }
+      if (event.id === 'save') {
+        this.handleSubmit()
+        this.setState({ editMode: false })
+        this.setDefaultButtons()
+      }
+      if (event.id === 'cancel') {
+        this.setState({ editMode: false })
+        this.setDefaultButtons()
+        this.handleCancel()
+      }
+      if (event.id === 'share') {
+        // this.openShareModal()
+      }
+      if (event.id === 'send') {
+        // this.showModal()
+      }
+    }
   }
 
   render() {
@@ -57,6 +105,21 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
         expandingHeaderType={'custom'}
         expandingHeaderContent={
           <Container justifyContent={'center'} alignItems={'center'} paddingTop>
+            {this.state.editMode && (
+              <TouchableOpacity
+                onPress={this.photoSelection}
+                style={{
+                  position: 'absolute',
+                  top: 20,
+                  backgroundColor: 'rgba(0,0,0,0.8)',
+                  zIndex: 1,
+                  borderRadius: 8,
+                  padding: 5,
+                }}
+              >
+                <Text textColor={'#FFFFFF'}>Update avatar</Text>
+              </TouchableOpacity>
+            )}
             <Avatar source={this.props.avatar} size={150} style={{ borderWidth: 2, borderColor: 'white' }} />
             <Container padding>
               <Text bold type={Text.Types.H2} textColor={'#FFFFFF'}>
@@ -67,14 +130,34 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
         }
       >
         <Section title={'Personal'} sectionTitleType={Text.Types.H3}>
-          <ListItem>uPort ID</ListItem>
-          <ListItem>uPort ID</ListItem>
-          <ListItem>uPort ID</ListItem>
-          <ListItem>uPort ID</ListItem>
-          <ListItem>uPort ID</ListItem>
-          <ListItem last>uPort ID</ListItem>
+          {this.selfAttestedClaims().map((item: SelfClaim, index: number) => {
+            return (
+              item.type !== 'avatar' && (
+                <ListItem
+                  title={item.type.toUpperCase()}
+                  last={index === 3}
+                  key={item.type}
+                  editMode={this.state.editMode}
+                  updateItem={value => this.handleChange({ [item.type]: value })}
+                >
+                  {item.value}
+                </ListItem>
+              )
+            )
+          })}
         </Section>
       </Screen>
+    )
+  }
+
+  selfAttestedClaims() {
+    return USER_FIELDS.map(
+      (item: string): SelfClaim => {
+        return {
+          type: item,
+          value: this.props[item],
+        }
+      },
     )
   }
 
@@ -82,11 +165,13 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
    * Update share token
    */
   componentDidMount() {
+    this.setDefaultButtons()
+
     this.props.updateShareToken(this.props.address)
   }
 
   /**
-   * Seettig the edit buttons
+   * Setttig the edit buttons
    */
   setEditModeButtons() {
     this.props.navigator.setButtons({
@@ -101,6 +186,65 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
         },
       ],
     })
+  }
+
+  setDefaultButtons() {
+    this.props.navigator.setButtons({
+      rightButtons: [
+        {
+          title: 'Edit',
+          id: 'edit',
+        },
+      ],
+    })
+  }
+
+  /**
+   * Using the old methods here. These will be cleaned up next
+   */
+  photoSelection() {
+    photoSelectionHandler({
+      cameraStatus: null,
+      photoStatus: null,
+      segmentId: '',
+      addFn: this.props.editMyInfo,
+    })
+  }
+
+  handleChange(change: any) {
+    this.props.editMyInfo(change)
+  }
+
+  handleCancel() {
+    const change: { [index: string]: any } = {}
+    USER_FIELDS.map(attr => {
+      change[attr] = this.props.userData[attr]
+    })
+    this.props.editMyInfo(change)
+    this.setState({ editMode: false })
+  }
+
+  changed() {
+    const change: { [index: string]: any } = {}
+    USER_FIELDS.map(attr => {
+      if (this.props[attr] !== this.props.userData[attr]) {
+        change[attr] = this.props[attr]
+      }
+    })
+    return change
+  }
+
+  handleSubmit() {
+    const change = this.changed()
+    // tslint:disable-next-line:no-string-literal
+    delete change['avatar']
+    if (Object.keys(change).length > 0) {
+      this.props.storeOwnClaim(this.props.address, change)
+    }
+    if (this.props.avatar && this.props.avatar.data) {
+      this.props.addImage(this.props.address, 'avatar', this.props.avatar)
+    }
+    this.props.updateShareToken(this.props.address)
   }
 }
 

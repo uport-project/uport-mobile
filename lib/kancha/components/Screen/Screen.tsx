@@ -22,8 +22,8 @@ import { SafeAreaView, ScrollView, ViewStyle, ImageBackground, ImageSourcePropTy
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scrollview'
 import { Container, Theme, Device } from '@kancha'
 
-/** Temporary spacer size */
-const SPACER_SIZE = 1000
+/** Spacer size */
+const SPACER_SIZE = 500
 
 /***
  * 1 - SafeAreaView with scrolling
@@ -101,10 +101,10 @@ const Screen: React.FunctionComponent<ScreenProps> & {
   }
   const scrollViewContentInset = {
     ...(props.footerNavComponent ? { bottom: 0 } : {}),
-    ...(props.expandingHeaderContent ? { top: 0 } : {}),
+    ...(props.expandingHeaderContent ? { top: -SPACER_SIZE } : {}),
   }
   const scrollViewContentOffset = {
-    ...(props.expandingHeaderContent ? { y: 0, x: 0 } : { y: 0, x: 0 }),
+    ...(props.expandingHeaderContent ? { y: SPACER_SIZE, x: 0 } : { y: 0, x: 0 }),
   }
   const safeAreaViewStyle = {
     flex: 1,
@@ -125,11 +125,16 @@ const Screen: React.FunctionComponent<ScreenProps> & {
   /**
    * Main content to be rendered within a ScrollView
    */
+
+  // style={{ backgroundColor: BOTTOM_COLOR }}
+  // contentContainerStyle={{ backgroundColor: TOP_COLOR }}
+  // contentInset={{ top: -SPACER_SIZE }}
+  // contentOffset={{ y: SPACER_SIZE }}
   const scrollViewContent = (
     <KeyboardAwareScrollView style={scrollViewStyle} contentContainerStyle={scrollViewContentStyle}>
       {props.expandingHeaderContent && (
         <React.Fragment>
-          {Device.isIOS && <Container h={0} />}
+          {/* {Device.isIOS && <Container h={SPACER_SIZE} />} */}
           <Container background={props.expandingHeaderType}>{props.expandingHeaderContent}</Container>
           {/* <ImageBackground source={Images.backgrounds.purpleGradient}>{props.expandingHeaderContent}</ImageBackground> */}
         </React.Fragment>
