@@ -28,20 +28,20 @@ class Contact extends React.Component<ContactProps> {
   render() {
     return (
       <Screen
-        type={'primary'}
+        type={Screen.Types.Primary}
         headerBackgroundColor={Theme.colors.tertiary.background}
         expandingHeaderContent={
           <Container justifyContent={'center'} alignItems={'center'}>
             <Avatar source={this.props.user.avatar} size={100} style={{ borderWidth: 2, borderColor: 'white' }} />
             <Container padding>
-              <Text bold type={Text.Types.H1}>
+              <Text bold type={Text.Types.H2}>
                 {this.props.user.name}
               </Text>
             </Container>
           </Container>
         }
       >
-        <Section title={'Personal'} sectionTitleType={Text.Types.H3}>
+        <Section title={'Personal'} sectionTitleType={Text.Types.SectionHeader}>
           <ListItem last accessoryRight={Strings.abbreviate(this.props.user.address, 20)}>
             uPort ID
           </ListItem>

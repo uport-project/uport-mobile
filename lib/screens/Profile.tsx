@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { TouchableOpacity, Alert } from 'react-native'
+import { TouchableOpacity, Share } from 'react-native'
 import { Screen, Container, Text, Section, ListItem, Button, Theme, Icon } from '@kancha'
 import Avatar from 'uPortMobile/lib/components/shared/Avatar'
 
@@ -156,19 +156,50 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
               size={150}
               style={{ borderWidth: 2, borderColor: Theme.colors.inverted.accessories }}
             />
-
-            <Container padding flexDirection={'row'}>
-              <Container alignItems={'center'} flex={1}>
-                <Container flexDirection={'row'} alignItems={'center'}>
-                  <Text bold type={Text.Types.H2} textColor={Theme.colors.inverted.text}>
-                    {this.props.name}
-                  </Text>
-                </Container>
-              </Container>
+            <Container padding flexDirection={'row'} alignItems={'center'}>
+              <Text bold type={Text.Types.H2} textColor={Theme.colors.inverted.text}>
+                {this.props.name}
+              </Text>
             </Container>
           </Container>
         }
       >
+        <Container
+          padding
+          flexDirection={'row'}
+          alignItems={'center'}
+          flex={1}
+          backgroundColor={Theme.colors.primary.background}
+          dividerBottom
+        >
+          <Container flex={3} alignItems={'center'}>
+            <Button
+              block={Button.Block.Clear}
+              onPress={() => this.props.navigator.switchToTab({ tabIndex: 0 })}
+              buttonText={'1'}
+            />
+            <Container paddingTop={5}>
+              <Text type={Text.Types.ListItemNote}>Credentials</Text>
+            </Container>
+          </Container>
+          <Container flex={3} alignItems={'center'}>
+            <Button
+              block={Button.Block.Clear}
+              icon={<Icon name={'qrcode'} font={'fontawesome'} color={Theme.colors.primary.accessories} />}
+              onPress={() => this.showQRCode()}
+            />
+            <Text type={Text.Types.ListItemNote}>QR Code</Text>
+          </Container>
+          <Container flex={3} alignItems={'center'}>
+            <Button
+              block={Button.Block.Clear}
+              icon={<Icon name={'share'} color={Theme.colors.primary.accessories} />}
+              onPress={() => this.showQShareDialog()}
+            />
+            <Text type={Text.Types.ListItemNote}>Share</Text>
+          </Container>
+        </Container>
+
         {this.props.allIdentities.length > 1 && (
           <Section title={'Identities'} sectionTitleType={Text.Types.SectionHeader}>
             {this.formattedIdentityList().map(({ name, address, network, isCurrent }: Identity, index: number) => {
@@ -237,6 +268,39 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
           </Section>
         )}
       </Screen>
+    )
+  }
+
+  showQRCode() {
+    const url = `https://id.uport.me/req/${this.props.shareToken}`
+
+    this.props.navigator.showModal({
+      screen: 'uport.QRCodeModal',
+      passProps: {
+        title: this.props.name,
+        url,
+        onClose: this.props.navigator.dismissModal,
+      },
+      navigatorStyle: {
+        navBarHidden: true,
+        screenBackgroundColor: 'white',
+      },
+    })
+  }
+
+  showQShareDialog() {
+    this.props.updateShareToken(this.props.address)
+    const url = `https://id.uport.me/req/${this.props.shareToken}`
+
+    Share.share(
+      {
+        url,
+        title: `Share contact`,
+        message: `${this.props.name} would like you to add them as a contact`,
+      },
+      {
+        dialogTitle: `Share contact`,
+      },
     )
   }
 

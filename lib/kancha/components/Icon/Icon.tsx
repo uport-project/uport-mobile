@@ -23,10 +23,12 @@ import { Device } from '@kancha'
 
 import Feather from 'react-native-vector-icons/Feather'
 import Ionicons from 'react-native-vector-icons/Ionicons'
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
 const IconSets: { [index: string]: any } = {
   ionicons: Ionicons,
   feather: Feather,
+  fontawesome: FontAwesome,
 }
 
 interface IconProps {
@@ -52,8 +54,23 @@ interface IconProps {
 /**
  * A definitive list of Icons to be listed here
  */
+interface IconsStatic {
+  [index: string]: any
+  forward: string
+  link: string
+  sync: string
+  success: string
+  checkbox_empty: string
+  checkbox_checked: string
+  rocket: string
+  share: string
+  close: string
+  edit: string
+  more: string
+  checkmark: string
+}
 
-const Icons: { [index: string]: any } = {
+const Icons: IconsStatic = {
   forward: Device.isIOS ? 'ios-arrow-forward' : 'md-arrow-forward',
   link: Device.isIOS ? 'ios-link' : 'md-link',
   sync: Device.isIOS ? 'ios-sync' : 'md-sync',
@@ -61,13 +78,22 @@ const Icons: { [index: string]: any } = {
   checkbox_empty: Device.isIOS ? 'ios-radio-button-off' : 'md-radio-button-off',
   checkbox_checked: Device.isIOS ? 'ios-checkmark-circle' : 'md-checkmark-circle',
   rocket: Device.isIOS ? 'ios-rocket' : 'md-rocket',
+  share: Device.isIOS ? 'ios-share' : 'md-share',
   close: 'x',
   edit: 'edit',
   more: 'ios-more',
   checkmark: Device.isIOS ? 'ios-checkmark' : 'md-checkmark',
+  qrcode: 'qrcode',
 }
 
-const Icon: React.FunctionComponent<IconProps> = ({ font, name, size, color, animated, image }: IconProps) => {
+const Icon: React.FunctionComponent<IconProps> & { Names: IconsStatic } = ({
+  font,
+  name,
+  size,
+  color,
+  animated,
+  image,
+}: IconProps) => {
   const IconFont = font ? IconSets[font] : Ionicons
   const spinValue = new Animated.Value(0)
 
@@ -99,5 +125,7 @@ Icon.defaultProps = {
   color: 'black',
   name: 'ionicons',
 }
+
+Icon.Names = Icons
 
 export default Icon
