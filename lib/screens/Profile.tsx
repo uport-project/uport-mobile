@@ -54,7 +54,7 @@ interface UserProfileProps {
   address: string
   shareToken: string
   verifications: any
-  others: string
+  others: any[]
   accounts: any
 
   /**
@@ -172,35 +172,32 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
                     {this.props.name}
                   </Text>
                 </Container>
-                {!this.isMainIdentity(this.props.address) && (
-                  <Container paddingHorizontal>
-                    <Text textColor={Theme.colors.inverted.text}>Legacy testnet identity</Text>
-                  </Container>
-                )}
               </Container>
             </Container>
           </Container>
         }
       >
-        <Section title={'Identities'} sectionTitleType={Text.Types.SectionHeader}>
-          {this.formattedIdentityList().map(({ name, address, network, isCurrent }: Identity, index: number) => {
-            return (
-              <ListItem
-                hideForwardArrow
-                avatarComponent={
-                  isCurrent && <Icon name={'checkmark'} size={40} color={Theme.colors.confirm.accessories} />
-                }
-                title={network}
-                contentRight={address}
-                key={address}
-                onPress={() => this.switchIdentity(address)}
-                last={index === 1}
-              >
-                {name}
-              </ListItem>
-            )
-          })}
-        </Section>
+        {this.props.others.length > 1 && (
+          <Section title={'Identities'} sectionTitleType={Text.Types.SectionHeader}>
+            {this.formattedIdentityList().map(({ name, address, network, isCurrent }: Identity, index: number) => {
+              return (
+                <ListItem
+                  hideForwardArrow
+                  avatarComponent={
+                    isCurrent && <Icon name={'checkmark'} size={40} color={Theme.colors.confirm.accessories} />
+                  }
+                  title={network}
+                  contentRight={address}
+                  key={address}
+                  onPress={() => this.switchIdentity(address)}
+                  last={index === 1}
+                >
+                  {name}
+                </ListItem>
+              )
+            })}
+          </Section>
+        )}
 
         <Section title={'Personal'} sectionTitleType={Text.Types.SectionHeader}>
           {this.selfAttestedClaims().map((item: SelfClaim, index: number) => {
@@ -270,7 +267,7 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
 
   formattedIdentityList(): Identity[] {
     /**
-     * Replace with this.props.others
+     * Stubb data for testing UI
      */
     const identities = [
       {
@@ -283,7 +280,7 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
       },
     ]
 
-    return identities.map(
+    return this.props.others.map(
       ({ address, network }): Identity => {
         return {
           name: `${address.match(/did:ethr:/) ? 'Primary Identity' : 'Legacy Identity'}`,
@@ -330,11 +327,18 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
       ...Theme.navigation,
       navBarNoBorder: true,
     })
+
+    this.props.navigator.setTitle({
+      title: '',
+    })
   }
 
   setWarningNavigationBar() {
     this.props.navigator.setStyle({
       navBarBackgroundColor: Theme.colors.warning.background,
+    })
+    this.props.navigator.setTitle({
+      title: 'Legacy Testnet Identity',
     })
   }
 
