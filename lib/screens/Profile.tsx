@@ -176,7 +176,7 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
             <Button
               block={Button.Block.Clear}
               onPress={() => this.props.navigator.switchToTab({ tabIndex: 0 })}
-              buttonText={'1'}
+              buttonText={Mori.count(this.props.verifications)}
             />
             <Container paddingTop={5}>
               <Text type={Text.Types.ListItemNote}>Credentials</Text>
