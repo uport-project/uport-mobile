@@ -70,7 +70,6 @@ interface UserProfileProps {
 
 interface UserProfileState {
   editMode: boolean
-  showIdentitySwitcher: boolean
 }
 
 class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
@@ -79,7 +78,6 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
 
     this.state = {
       editMode: false,
-      showIdentitySwitcher: false,
     }
 
     this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this))
@@ -122,6 +120,12 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
    * Update UI when user switches awy from a mainnet identity
    */
   switchIdentity(address: string) {
+    if (!this.isMainIdentity(address)) {
+      this.setLegacyModeButtons()
+    } else {
+      this.setDefaultButtons()
+    }
+
     this.props.switchIdentity(address)
   }
 
@@ -170,6 +174,7 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
             {this.formattedIdentityList().map(({ name, address, network, isCurrent }: Identity, index: number) => {
               return (
                 <ListItem
+                  disabled={this.state.editMode}
                   hideForwardArrow
                   selected={isCurrent}
                   title={network}
@@ -184,7 +189,6 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
             })}
           </Section>
         )}
-
         <Section title={'Personal'} sectionTitleType={Text.Types.SectionHeader}>
           {this.selfAttestedClaims().map((item: SelfClaim, index: number) => {
             return (
@@ -254,11 +258,6 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
   }
 
   formattedIdentityList(): Identity[] {
-    // const currentIdentity = {
-    //   address: this.props.address,
-    //   network: this.props.net,
-    // }
-
     return this.props.allIdentities
       .map(
         ({ address, network }): Identity => {
@@ -330,6 +329,12 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
           id: 'edit',
         },
       ],
+    })
+  }
+
+  setLegacyModeButtons() {
+    this.props.navigator.setButtons({
+      rightButtons: [],
     })
   }
 

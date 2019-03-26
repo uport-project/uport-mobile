@@ -294,19 +294,19 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           pointerEvents="auto"
                           style={
                             Object {
-                              "alignItems": undefined,
+                              "alignItems": "center",
                               "backgroundColor": undefined,
                               "borderRadius": undefined,
                               "flex": undefined,
-                              "flexDirection": undefined,
+                              "flexDirection": "row",
                               "height": undefined,
-                              "justifyContent": undefined,
+                              "justifyContent": "center",
                               "marginBottom": undefined,
                               "marginLeft": undefined,
                               "marginRight": undefined,
                               "marginTop": undefined,
                               "padding": undefined,
-                              "paddingBottom": 5,
+                              "paddingBottom": undefined,
                               "paddingHorizontal": undefined,
                               "paddingLeft": undefined,
                               "paddingRight": undefined,
@@ -314,20 +314,21 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                               "width": undefined,
                             }
                           }
-                        />
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "#333333",
-                              "fontSize": 18,
-                            }
-                          }
                         >
-                          App Version
-                        </Text>
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "color": "#333333",
+                                "fontSize": 18,
+                              }
+                            }
+                          >
+                            App Version
+                          </Text>
+                        </View>
                       </View>
                     </View>
                     <View
@@ -520,19 +521,19 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           pointerEvents="auto"
                           style={
                             Object {
-                              "alignItems": undefined,
+                              "alignItems": "center",
                               "backgroundColor": undefined,
                               "borderRadius": undefined,
                               "flex": undefined,
-                              "flexDirection": undefined,
+                              "flexDirection": "row",
                               "height": undefined,
-                              "justifyContent": undefined,
+                              "justifyContent": "center",
                               "marginBottom": undefined,
                               "marginLeft": undefined,
                               "marginRight": undefined,
                               "marginTop": undefined,
                               "padding": undefined,
-                              "paddingBottom": 5,
+                              "paddingBottom": undefined,
                               "paddingHorizontal": undefined,
                               "paddingLeft": undefined,
                               "paddingRight": undefined,
@@ -540,20 +541,21 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                               "width": undefined,
                             }
                           }
-                        />
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "#333333",
-                              "fontSize": 18,
-                            }
-                          }
                         >
-                          uPort ID
-                        </Text>
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "color": "#333333",
+                                "fontSize": 18,
+                              }
+                            }
+                          >
+                            uPort ID
+                          </Text>
+                        </View>
                       </View>
                     </View>
                     <View
@@ -737,19 +739,19 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           pointerEvents="auto"
                           style={
                             Object {
-                              "alignItems": undefined,
+                              "alignItems": "center",
                               "backgroundColor": undefined,
                               "borderRadius": undefined,
                               "flex": undefined,
-                              "flexDirection": undefined,
+                              "flexDirection": "row",
                               "height": undefined,
-                              "justifyContent": undefined,
+                              "justifyContent": "center",
                               "marginBottom": undefined,
                               "marginLeft": undefined,
                               "marginRight": undefined,
                               "marginTop": undefined,
                               "padding": undefined,
-                              "paddingBottom": 5,
+                              "paddingBottom": undefined,
                               "paddingHorizontal": undefined,
                               "paddingLeft": undefined,
                               "paddingRight": undefined,
@@ -757,20 +759,21 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                               "width": undefined,
                             }
                           }
-                        />
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "#333333",
-                              "fontSize": 18,
-                            }
-                          }
                         >
-                          Try uPort
-                        </Text>
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "color": "#333333",
+                                "fontSize": 18,
+                              }
+                            }
+                          >
+                            Try uPort
+                          </Text>
+                        </View>
                       </View>
                     </View>
                     <View
@@ -952,19 +955,19 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           pointerEvents="auto"
                           style={
                             Object {
-                              "alignItems": undefined,
+                              "alignItems": "center",
                               "backgroundColor": undefined,
                               "borderRadius": undefined,
                               "flex": undefined,
-                              "flexDirection": undefined,
+                              "flexDirection": "row",
                               "height": undefined,
-                              "justifyContent": undefined,
+                              "justifyContent": "center",
                               "marginBottom": undefined,
                               "marginLeft": undefined,
                               "marginRight": undefined,
                               "marginTop": undefined,
                               "padding": undefined,
-                              "paddingBottom": 5,
+                              "paddingBottom": undefined,
                               "paddingHorizontal": undefined,
                               "paddingLeft": undefined,
                               "paddingRight": undefined,
@@ -972,20 +975,21 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                               "width": undefined,
                             }
                           }
-                        />
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "#333333",
-                              "fontSize": 18,
-                            }
-                          }
                         >
-                          Support
-                        </Text>
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "color": "#333333",
+                                "fontSize": 18,
+                              }
+                            }
+                          >
+                            Support
+                          </Text>
+                        </View>
                       </View>
                     </View>
                     <View
@@ -1263,19 +1267,19 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           pointerEvents="auto"
                           style={
                             Object {
-                              "alignItems": undefined,
+                              "alignItems": "center",
                               "backgroundColor": undefined,
                               "borderRadius": undefined,
                               "flex": undefined,
-                              "flexDirection": undefined,
+                              "flexDirection": "row",
                               "height": undefined,
-                              "justifyContent": undefined,
+                              "justifyContent": "center",
                               "marginBottom": undefined,
                               "marginLeft": undefined,
                               "marginRight": undefined,
                               "marginTop": undefined,
                               "padding": undefined,
-                              "paddingBottom": 5,
+                              "paddingBottom": undefined,
                               "paddingHorizontal": undefined,
                               "paddingLeft": undefined,
                               "paddingRight": undefined,
@@ -1283,20 +1287,21 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                               "width": undefined,
                             }
                           }
-                        />
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "#333333",
-                              "fontSize": 18,
-                            }
-                          }
                         >
-                          Device
-                        </Text>
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "color": "#333333",
+                                "fontSize": 18,
+                              }
+                            }
+                          >
+                            Device
+                          </Text>
+                        </View>
                       </View>
                     </View>
                     <View
@@ -1480,19 +1485,19 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           pointerEvents="auto"
                           style={
                             Object {
-                              "alignItems": undefined,
+                              "alignItems": "center",
                               "backgroundColor": undefined,
                               "borderRadius": undefined,
                               "flex": undefined,
-                              "flexDirection": undefined,
+                              "flexDirection": "row",
                               "height": undefined,
-                              "justifyContent": undefined,
+                              "justifyContent": "center",
                               "marginBottom": undefined,
                               "marginLeft": undefined,
                               "marginRight": undefined,
                               "marginTop": undefined,
                               "padding": undefined,
-                              "paddingBottom": 5,
+                              "paddingBottom": undefined,
                               "paddingHorizontal": undefined,
                               "paddingLeft": undefined,
                               "paddingRight": undefined,
@@ -1500,20 +1505,21 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                               "width": undefined,
                             }
                           }
-                        />
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "#333333",
-                              "fontSize": 18,
-                            }
-                          }
                         >
-                          System Messages
-                        </Text>
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "color": "#333333",
+                                "fontSize": 18,
+                              }
+                            }
+                          >
+                            System Messages
+                          </Text>
+                        </View>
                       </View>
                     </View>
                     <View
@@ -1695,19 +1701,19 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           pointerEvents="auto"
                           style={
                             Object {
-                              "alignItems": undefined,
+                              "alignItems": "center",
                               "backgroundColor": undefined,
                               "borderRadius": undefined,
                               "flex": undefined,
-                              "flexDirection": undefined,
+                              "flexDirection": "row",
                               "height": undefined,
-                              "justifyContent": undefined,
+                              "justifyContent": "center",
                               "marginBottom": undefined,
                               "marginLeft": undefined,
                               "marginRight": undefined,
                               "marginTop": undefined,
                               "padding": undefined,
-                              "paddingBottom": 5,
+                              "paddingBottom": undefined,
                               "paddingHorizontal": undefined,
                               "paddingLeft": undefined,
                               "paddingRight": undefined,
@@ -1715,20 +1721,21 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                               "width": undefined,
                             }
                           }
-                        />
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "#333333",
-                              "fontSize": 18,
-                            }
-                          }
                         >
-                          Network
-                        </Text>
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "color": "#333333",
+                                "fontSize": 18,
+                              }
+                            }
+                          >
+                            Network
+                          </Text>
+                        </View>
                       </View>
                     </View>
                     <View
@@ -2006,19 +2013,19 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           pointerEvents="auto"
                           style={
                             Object {
-                              "alignItems": undefined,
+                              "alignItems": "center",
                               "backgroundColor": undefined,
                               "borderRadius": undefined,
                               "flex": undefined,
-                              "flexDirection": undefined,
+                              "flexDirection": "row",
                               "height": undefined,
-                              "justifyContent": undefined,
+                              "justifyContent": "center",
                               "marginBottom": undefined,
                               "marginLeft": undefined,
                               "marginRight": undefined,
                               "marginTop": undefined,
                               "padding": undefined,
-                              "paddingBottom": 5,
+                              "paddingBottom": undefined,
                               "paddingHorizontal": undefined,
                               "paddingLeft": undefined,
                               "paddingRight": undefined,
@@ -2026,20 +2033,21 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                               "width": undefined,
                             }
                           }
-                        />
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "#333333",
-                              "fontSize": 18,
-                            }
-                          }
                         >
-                          Privacy Policy
-                        </Text>
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "color": "#333333",
+                                "fontSize": 18,
+                              }
+                            }
+                          >
+                            Privacy Policy
+                          </Text>
+                        </View>
                       </View>
                     </View>
                     <View
@@ -2221,19 +2229,19 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           pointerEvents="auto"
                           style={
                             Object {
-                              "alignItems": undefined,
+                              "alignItems": "center",
                               "backgroundColor": undefined,
                               "borderRadius": undefined,
                               "flex": undefined,
-                              "flexDirection": undefined,
+                              "flexDirection": "row",
                               "height": undefined,
-                              "justifyContent": undefined,
+                              "justifyContent": "center",
                               "marginBottom": undefined,
                               "marginLeft": undefined,
                               "marginRight": undefined,
                               "marginTop": undefined,
                               "padding": undefined,
-                              "paddingBottom": 5,
+                              "paddingBottom": undefined,
                               "paddingHorizontal": undefined,
                               "paddingLeft": undefined,
                               "paddingRight": undefined,
@@ -2241,20 +2249,21 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                               "width": undefined,
                             }
                           }
-                        />
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "#333333",
-                              "fontSize": 18,
-                            }
-                          }
                         >
-                          Terms & Conditions
-                        </Text>
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "color": "#333333",
+                                "fontSize": 18,
+                              }
+                            }
+                          >
+                            Terms & Conditions
+                          </Text>
+                        </View>
                       </View>
                     </View>
                     <View
@@ -3265,19 +3274,19 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           pointerEvents="auto"
                           style={
                             Object {
-                              "alignItems": undefined,
+                              "alignItems": "center",
                               "backgroundColor": undefined,
                               "borderRadius": undefined,
                               "flex": undefined,
-                              "flexDirection": undefined,
+                              "flexDirection": "row",
                               "height": undefined,
-                              "justifyContent": undefined,
+                              "justifyContent": "center",
                               "marginBottom": undefined,
                               "marginLeft": undefined,
                               "marginRight": undefined,
                               "marginTop": undefined,
                               "padding": undefined,
-                              "paddingBottom": 5,
+                              "paddingBottom": undefined,
                               "paddingHorizontal": undefined,
                               "paddingLeft": undefined,
                               "paddingRight": undefined,
@@ -3285,20 +3294,21 @@ exports[`SettingsRoot renders without exploding 1`] = `
                               "width": undefined,
                             }
                           }
-                        />
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "#333333",
-                              "fontSize": 18,
-                            }
-                          }
                         >
-                          App Version
-                        </Text>
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "color": "#333333",
+                                "fontSize": 18,
+                              }
+                            }
+                          >
+                            App Version
+                          </Text>
+                        </View>
                       </View>
                     </View>
                     <View
@@ -3491,19 +3501,19 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           pointerEvents="auto"
                           style={
                             Object {
-                              "alignItems": undefined,
+                              "alignItems": "center",
                               "backgroundColor": undefined,
                               "borderRadius": undefined,
                               "flex": undefined,
-                              "flexDirection": undefined,
+                              "flexDirection": "row",
                               "height": undefined,
-                              "justifyContent": undefined,
+                              "justifyContent": "center",
                               "marginBottom": undefined,
                               "marginLeft": undefined,
                               "marginRight": undefined,
                               "marginTop": undefined,
                               "padding": undefined,
-                              "paddingBottom": 5,
+                              "paddingBottom": undefined,
                               "paddingHorizontal": undefined,
                               "paddingLeft": undefined,
                               "paddingRight": undefined,
@@ -3511,20 +3521,21 @@ exports[`SettingsRoot renders without exploding 1`] = `
                               "width": undefined,
                             }
                           }
-                        />
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "#333333",
-                              "fontSize": 18,
-                            }
-                          }
                         >
-                          uPort ID
-                        </Text>
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "color": "#333333",
+                                "fontSize": 18,
+                              }
+                            }
+                          >
+                            uPort ID
+                          </Text>
+                        </View>
                       </View>
                     </View>
                     <View
@@ -3708,19 +3719,19 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           pointerEvents="auto"
                           style={
                             Object {
-                              "alignItems": undefined,
+                              "alignItems": "center",
                               "backgroundColor": undefined,
                               "borderRadius": undefined,
                               "flex": undefined,
-                              "flexDirection": undefined,
+                              "flexDirection": "row",
                               "height": undefined,
-                              "justifyContent": undefined,
+                              "justifyContent": "center",
                               "marginBottom": undefined,
                               "marginLeft": undefined,
                               "marginRight": undefined,
                               "marginTop": undefined,
                               "padding": undefined,
-                              "paddingBottom": 5,
+                              "paddingBottom": undefined,
                               "paddingHorizontal": undefined,
                               "paddingLeft": undefined,
                               "paddingRight": undefined,
@@ -3728,20 +3739,21 @@ exports[`SettingsRoot renders without exploding 1`] = `
                               "width": undefined,
                             }
                           }
-                        />
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "#333333",
-                              "fontSize": 18,
-                            }
-                          }
                         >
-                          Try uPort
-                        </Text>
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "color": "#333333",
+                                "fontSize": 18,
+                              }
+                            }
+                          >
+                            Try uPort
+                          </Text>
+                        </View>
                       </View>
                     </View>
                     <View
@@ -3923,19 +3935,19 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           pointerEvents="auto"
                           style={
                             Object {
-                              "alignItems": undefined,
+                              "alignItems": "center",
                               "backgroundColor": undefined,
                               "borderRadius": undefined,
                               "flex": undefined,
-                              "flexDirection": undefined,
+                              "flexDirection": "row",
                               "height": undefined,
-                              "justifyContent": undefined,
+                              "justifyContent": "center",
                               "marginBottom": undefined,
                               "marginLeft": undefined,
                               "marginRight": undefined,
                               "marginTop": undefined,
                               "padding": undefined,
-                              "paddingBottom": 5,
+                              "paddingBottom": undefined,
                               "paddingHorizontal": undefined,
                               "paddingLeft": undefined,
                               "paddingRight": undefined,
@@ -3943,20 +3955,21 @@ exports[`SettingsRoot renders without exploding 1`] = `
                               "width": undefined,
                             }
                           }
-                        />
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "#333333",
-                              "fontSize": 18,
-                            }
-                          }
                         >
-                          Support
-                        </Text>
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "color": "#333333",
+                                "fontSize": 18,
+                              }
+                            }
+                          >
+                            Support
+                          </Text>
+                        </View>
                       </View>
                     </View>
                     <View
@@ -4234,19 +4247,19 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           pointerEvents="auto"
                           style={
                             Object {
-                              "alignItems": undefined,
+                              "alignItems": "center",
                               "backgroundColor": undefined,
                               "borderRadius": undefined,
                               "flex": undefined,
-                              "flexDirection": undefined,
+                              "flexDirection": "row",
                               "height": undefined,
-                              "justifyContent": undefined,
+                              "justifyContent": "center",
                               "marginBottom": undefined,
                               "marginLeft": undefined,
                               "marginRight": undefined,
                               "marginTop": undefined,
                               "padding": undefined,
-                              "paddingBottom": 5,
+                              "paddingBottom": undefined,
                               "paddingHorizontal": undefined,
                               "paddingLeft": undefined,
                               "paddingRight": undefined,
@@ -4254,20 +4267,21 @@ exports[`SettingsRoot renders without exploding 1`] = `
                               "width": undefined,
                             }
                           }
-                        />
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "#333333",
-                              "fontSize": 18,
-                            }
-                          }
                         >
-                          Device
-                        </Text>
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "color": "#333333",
+                                "fontSize": 18,
+                              }
+                            }
+                          >
+                            Device
+                          </Text>
+                        </View>
                       </View>
                     </View>
                     <View
@@ -4451,19 +4465,19 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           pointerEvents="auto"
                           style={
                             Object {
-                              "alignItems": undefined,
+                              "alignItems": "center",
                               "backgroundColor": undefined,
                               "borderRadius": undefined,
                               "flex": undefined,
-                              "flexDirection": undefined,
+                              "flexDirection": "row",
                               "height": undefined,
-                              "justifyContent": undefined,
+                              "justifyContent": "center",
                               "marginBottom": undefined,
                               "marginLeft": undefined,
                               "marginRight": undefined,
                               "marginTop": undefined,
                               "padding": undefined,
-                              "paddingBottom": 5,
+                              "paddingBottom": undefined,
                               "paddingHorizontal": undefined,
                               "paddingLeft": undefined,
                               "paddingRight": undefined,
@@ -4471,20 +4485,21 @@ exports[`SettingsRoot renders without exploding 1`] = `
                               "width": undefined,
                             }
                           }
-                        />
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "#333333",
-                              "fontSize": 18,
-                            }
-                          }
                         >
-                          System Messages
-                        </Text>
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "color": "#333333",
+                                "fontSize": 18,
+                              }
+                            }
+                          >
+                            System Messages
+                          </Text>
+                        </View>
                       </View>
                     </View>
                     <View
@@ -4666,19 +4681,19 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           pointerEvents="auto"
                           style={
                             Object {
-                              "alignItems": undefined,
+                              "alignItems": "center",
                               "backgroundColor": undefined,
                               "borderRadius": undefined,
                               "flex": undefined,
-                              "flexDirection": undefined,
+                              "flexDirection": "row",
                               "height": undefined,
-                              "justifyContent": undefined,
+                              "justifyContent": "center",
                               "marginBottom": undefined,
                               "marginLeft": undefined,
                               "marginRight": undefined,
                               "marginTop": undefined,
                               "padding": undefined,
-                              "paddingBottom": 5,
+                              "paddingBottom": undefined,
                               "paddingHorizontal": undefined,
                               "paddingLeft": undefined,
                               "paddingRight": undefined,
@@ -4686,20 +4701,21 @@ exports[`SettingsRoot renders without exploding 1`] = `
                               "width": undefined,
                             }
                           }
-                        />
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "#333333",
-                              "fontSize": 18,
-                            }
-                          }
                         >
-                          Network
-                        </Text>
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "color": "#333333",
+                                "fontSize": 18,
+                              }
+                            }
+                          >
+                            Network
+                          </Text>
+                        </View>
                       </View>
                     </View>
                     <View
@@ -4977,19 +4993,19 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           pointerEvents="auto"
                           style={
                             Object {
-                              "alignItems": undefined,
+                              "alignItems": "center",
                               "backgroundColor": undefined,
                               "borderRadius": undefined,
                               "flex": undefined,
-                              "flexDirection": undefined,
+                              "flexDirection": "row",
                               "height": undefined,
-                              "justifyContent": undefined,
+                              "justifyContent": "center",
                               "marginBottom": undefined,
                               "marginLeft": undefined,
                               "marginRight": undefined,
                               "marginTop": undefined,
                               "padding": undefined,
-                              "paddingBottom": 5,
+                              "paddingBottom": undefined,
                               "paddingHorizontal": undefined,
                               "paddingLeft": undefined,
                               "paddingRight": undefined,
@@ -4997,20 +5013,21 @@ exports[`SettingsRoot renders without exploding 1`] = `
                               "width": undefined,
                             }
                           }
-                        />
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "#333333",
-                              "fontSize": 18,
-                            }
-                          }
                         >
-                          Privacy Policy
-                        </Text>
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "color": "#333333",
+                                "fontSize": 18,
+                              }
+                            }
+                          >
+                            Privacy Policy
+                          </Text>
+                        </View>
                       </View>
                     </View>
                     <View
@@ -5192,19 +5209,19 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           pointerEvents="auto"
                           style={
                             Object {
-                              "alignItems": undefined,
+                              "alignItems": "center",
                               "backgroundColor": undefined,
                               "borderRadius": undefined,
                               "flex": undefined,
-                              "flexDirection": undefined,
+                              "flexDirection": "row",
                               "height": undefined,
-                              "justifyContent": undefined,
+                              "justifyContent": "center",
                               "marginBottom": undefined,
                               "marginLeft": undefined,
                               "marginRight": undefined,
                               "marginTop": undefined,
                               "padding": undefined,
-                              "paddingBottom": 5,
+                              "paddingBottom": undefined,
                               "paddingHorizontal": undefined,
                               "paddingLeft": undefined,
                               "paddingRight": undefined,
@@ -5212,20 +5229,21 @@ exports[`SettingsRoot renders without exploding 1`] = `
                               "width": undefined,
                             }
                           }
-                        />
-                        <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
-                          style={
-                            Object {
-                              "color": "#333333",
-                              "fontSize": 18,
-                            }
-                          }
                         >
-                          Terms & Conditions
-                        </Text>
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "color": "#333333",
+                                "fontSize": 18,
+                              }
+                            }
+                          >
+                            Terms & Conditions
+                          </Text>
+                        </View>
                       </View>
                     </View>
                     <View

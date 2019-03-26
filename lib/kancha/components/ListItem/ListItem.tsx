@@ -86,6 +86,11 @@ interface ListItemProps {
    * Function that gets called when text is changed
    */
   updateItem?: (item: string) => void
+
+  /**
+   * Disable tap events on list item
+   */
+  disabled?: boolean
 }
 
 /** Move to kancha utils */
@@ -107,7 +112,12 @@ const ListItem: React.FunctionComponent<ListItemProps> = props => {
   const actionIcon = props.onPress && !props.hideForwardArrow ? 'forward' : props.externalLink ? 'link' : undefined
 
   return (
-    <TouchableHighlight style={styles} onPress={onPressAction} underlayColor={Theme.colors.primary.underlay}>
+    <TouchableHighlight
+      style={styles}
+      onPress={onPressAction}
+      underlayColor={Theme.colors.primary.underlay}
+      disabled={props.disabled}
+    >
       <Container flex={1} flexDirection={'row'}>
         {props.avatarComponent && (
           <Container alignItems={'center'} justifyContent={'center'} paddingLeft paddingTop={8} paddingBottom={8}>
