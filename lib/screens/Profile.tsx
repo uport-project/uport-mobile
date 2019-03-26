@@ -1,9 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { TouchableOpacity, Alert } from 'react-native'
-import { Navigator } from 'react-native-navigation'
 import { Screen, Container, Text, Section, ListItem, Button, Theme, Icon } from '@kancha'
 import Avatar from 'uPortMobile/lib/components/shared/Avatar'
+
+import { Navigator } from 'react-native-navigation'
+import { wei2eth } from 'uPortMobile/lib/helpers/conversions'
 import { currentAddress, ownClaims, myAccounts, otherIdentities } from 'uPortMobile/lib/selectors/identities'
 import { externalProfile } from 'uPortMobile/lib/selectors/requests'
 import { editMyInfo, updateShareToken } from 'uPortMobile/lib/actions/myInfoActions'
@@ -12,14 +14,25 @@ import { onlyPendingAndLatestAttestations } from 'uPortMobile/lib/selectors/atte
 
 import photoSelectionHandler from 'uPortMobile/lib/utilities/photoSelection'
 import Mori from 'mori'
+// import console = require('console');
 
 /**
  * User data fields (Self attested claims)
  */
 const USER_FIELDS = ['name', 'email', 'country', 'phone', 'avatar']
 
+interface EthereumAccountListItem {
+  name: string
+  network: string
+  balance: string
+  address: string
+  accountProfile: any
+  isLast: boolean
+}
+
 interface SelfClaim {
   type: string
+  name: string
   value: string | undefined
 }
 
@@ -117,7 +130,6 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
     return (
       <Screen
         config={Screen.Config.Scroll}
-        type={'primary'}
         expandingHeaderType={'custom'}
         expandingHeaderContent={
           <Container justifyContent={'center'} alignItems={'center'} paddingTop>
@@ -153,12 +165,12 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
           </Container>
         }
       >
-        <Section title={'Personal'} sectionTitleType={Text.Types.H3}>
+        <Section title={'Personal'} sectionTitleType={Text.Types.SectionHeader}>
           {this.selfAttestedClaims().map((item: SelfClaim, index: number) => {
             return (
               item.type !== 'avatar' && (
                 <ListItem
-                  title={item.type.toUpperCase()}
+                  title={item.name}
                   last={index === 3}
                   key={item.type}
                   editMode={this.state.editMode}
@@ -170,15 +182,61 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
             )
           })}
         </Section>
+        <Section title={'Ethereum Accounts'} sectionTitleType={Text.Types.SectionHeader}>
+          {this.formattedAccountList().map((account: EthereumAccountListItem, index: number) => {
+            return (
+              <ListItem
+                title={account.network}
+                key={account.address}
+                contentRight={account.balance}
+                last={account.isLast}
+                onPress={() =>
+                  this.props.navigator.push({
+                    screen: 'screen.Account',
+                    title: account.name,
+                    passProps: {
+                      address: account.address,
+                      network: account.network,
+                      accountProfile: account.accountProfile,
+                    },
+                    navigatorStyle: {
+                      largeTitle: false,
+                    },
+                  })
+                }
+              >
+                {account.name}
+              </ListItem>
+            )
+          })}
+        </Section>
       </Screen>
     )
   }
 
-  selfAttestedClaims() {
+  formattedAccountList(): EthereumAccountListItem[] {
+    return this.props.accounts.map(
+      (account: any, index: number): EthereumAccountListItem => {
+        const accountProfile = account.clientId ? this.props.accountProfileLookup(account.clientId) : null
+        const networkName = account.network.charAt(0).toUpperCase() + account.network.slice(1).toLowerCase()
+        return {
+          name: accountProfile ? accountProfile.name : 'Ethereum Account',
+          network: networkName,
+          balance: account.balance && `${wei2eth(account.balance.ethBalance)} ETH`,
+          address: account.address,
+          accountProfile,
+          isLast: this.props.accounts.length === index + 1,
+        }
+      },
+    )
+  }
+
+  selfAttestedClaims(): SelfClaim[] {
     return USER_FIELDS.map(
       (item: string): SelfClaim => {
         return {
           type: item,
+          name: item.charAt(0).toUpperCase() + item.slice(1),
           value: this.props[item],
         }
       },
@@ -190,7 +248,6 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
    */
   componentDidMount() {
     this.setDefaultButtons()
-
     this.props.updateShareToken(this.props.address)
   }
 
