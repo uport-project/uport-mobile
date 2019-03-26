@@ -179,7 +179,7 @@ const DefaultTheme: Kancha.ThemeStatic = {
     custom: {
       brand: COLORS.TRANSPARENT,
       text: COLORS.WHITE,
-      background: COLORS.ROYAL_PURPLE,
+      background: COLORS.TRANSPARENT,
       divider: COLORS.TRANSPARENT,
       accessories: COLORS.TRANSPARENT,
       underlay: COLORS.TRANSPARENT,

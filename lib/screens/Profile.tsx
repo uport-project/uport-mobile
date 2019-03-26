@@ -14,7 +14,6 @@ import { onlyPendingAndLatestAttestations } from 'uPortMobile/lib/selectors/atte
 
 import photoSelectionHandler from 'uPortMobile/lib/utilities/photoSelection'
 import Mori from 'mori'
-// import console = require('console');
 
 /**
  * User data fields (Self attested claims)
@@ -130,9 +129,13 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
     return (
       <Screen
         config={Screen.Config.Scroll}
-        expandingHeaderType={'custom'}
         expandingHeaderContent={
-          <Container justifyContent={'center'} alignItems={'center'} paddingTop>
+          <Container
+            justifyContent={'center'}
+            alignItems={'center'}
+            backgroundColor={Theme.colors.primary.brand}
+            paddingTop
+          >
             {this.state.editMode && (
               <TouchableOpacity
                 onPress={this.photoSelection}
@@ -249,6 +252,8 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
   componentDidMount() {
     this.setDefaultButtons()
     this.props.updateShareToken(this.props.address)
+
+    console.tron.log(this.props.others)
   }
 
   /**
