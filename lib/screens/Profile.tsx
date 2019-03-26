@@ -135,15 +135,11 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
     return (
       <Screen
         config={Screen.Config.Scroll}
+        headerBackgroundColor={
+          this.isMainIdentity(this.props.address) ? Theme.colors.primary.brand : Theme.colors.warning.background
+        }
         expandingHeaderContent={
-          <Container
-            justifyContent={'center'}
-            alignItems={'center'}
-            backgroundColor={
-              this.isMainIdentity(this.props.address) ? Theme.colors.primary.brand : Theme.colors.warning.background
-            }
-            paddingTop
-          >
+          <Container justifyContent={'center'} alignItems={'center'} paddingTop>
             {this.state.editMode && (
               <TouchableOpacity
                 onPress={this.photoSelection}

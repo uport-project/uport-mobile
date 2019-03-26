@@ -1,10 +1,22 @@
 import React from 'react'
 import { Share } from 'react-native'
+import { Navigator } from 'react-native-navigation'
 import { Screen, Container, Text, Theme, ListItem, Section, Strings } from '@kancha'
-
 import Avatar from 'uPortMobile/lib/components/shared/Avatar'
 
-class Contact extends React.Component {
+interface User {
+  name: string
+  avatar: any
+  address: string
+  shareToken: string
+}
+
+interface ContactProps {
+  navigator: Navigator
+  user: User
+}
+
+class Contact extends React.Component<ContactProps> {
   static navigatorStyle = {
     largeTitle: false,
     navBarNoBorder: true,
@@ -17,12 +29,9 @@ class Contact extends React.Component {
     return (
       <Screen
         type={'primary'}
-        expandingHeaderType={'tertiary'}
+        headerBackgroundColor={Theme.colors.tertiary.background}
         expandingHeaderContent={
           <Container justifyContent={'center'} alignItems={'center'}>
-            {/**
-             * Avatar to be refactored to not need style prop
-             */}
             <Avatar source={this.props.user.avatar} size={100} style={{ borderWidth: 2, borderColor: 'white' }} />
             <Container padding>
               <Text bold type={Text.Types.H1}>

@@ -61,7 +61,7 @@ interface ScreenProps {
   /**
    * Type of header. This sets the header background color -- May change
    */
-  expandingHeaderType?: Kancha.BrandPropOptions
+  headerBackgroundColor?: string
   /**
    * The content to show in the expanding header zone. A config with a scrollView must be enabled.
    */
@@ -96,16 +96,7 @@ const Screen: React.FunctionComponent<ScreenProps> & {
     backgroundColor: props.type && Theme.colors[props.type].background,
     // ...(props.footerNavComponent ? { paddingBottom: 100 } : {}),
   }
-  const scrollViewContentStyle = {
-    ...(props.expandingHeaderType ? { backgroundColor: Theme.colors[props.expandingHeaderType].background } : {}),
-  }
-  const scrollViewContentInset = {
-    ...(props.footerNavComponent ? { bottom: 0 } : {}),
-    ...(props.expandingHeaderContent ? { top: -SPACER_SIZE } : {}),
-  }
-  const scrollViewContentOffset = {
-    ...(props.expandingHeaderContent ? { y: SPACER_SIZE, x: 0 } : { y: 0, x: 0 }),
-  }
+
   const safeAreaViewStyle = {
     flex: 1,
     ...(props.type && !props.backgroundImage
@@ -125,18 +116,12 @@ const Screen: React.FunctionComponent<ScreenProps> & {
   /**
    * Main content to be rendered within a ScrollView
    */
-
-  // style={{ backgroundColor: BOTTOM_COLOR }}
-  // contentContainerStyle={{ backgroundColor: TOP_COLOR }}
-  // contentInset={{ top: -SPACER_SIZE }}
-  // contentOffset={{ y: SPACER_SIZE }}
   const scrollViewContent = (
-    <KeyboardAwareScrollView style={scrollViewStyle} contentContainerStyle={scrollViewContentStyle}>
+    <KeyboardAwareScrollView style={scrollViewStyle}>
       {props.expandingHeaderContent && (
         <React.Fragment>
-          {/* {Device.isIOS && <Container h={SPACER_SIZE} />} */}
-          <Container background={props.expandingHeaderType}>{props.expandingHeaderContent}</Container>
-          {/* <ImageBackground source={Images.backgrounds.purpleGradient}>{props.expandingHeaderContent}</ImageBackground> */}
+          <Container backgroundColor={props.headerBackgroundColor}>{props.expandingHeaderContent}</Container>
+          {/* Background image -> <ImageBackground source={Images.backgrounds.purpleGradient}>{props.expandingHeaderContent}</ImageBackground> */}
         </React.Fragment>
       )}
       {mainContent}
