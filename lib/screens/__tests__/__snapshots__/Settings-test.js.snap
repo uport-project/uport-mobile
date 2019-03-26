@@ -35,7 +35,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
     }
   >
     <RCTScrollView
-      contentContainerStyle={Object {}}
       contentInset={
         Object {
           "bottom": 0,
@@ -3007,7 +3006,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
     }
   >
     <RCTScrollView
-      contentContainerStyle={Object {}}
       contentInset={
         Object {
           "bottom": 0,

@@ -35,7 +35,6 @@ exports[`renders Settings screen with 1`] = `
     }
   >
     <RCTScrollView
-      contentContainerStyle={Object {}}
       contentInset={
         Object {
           "bottom": 0,
