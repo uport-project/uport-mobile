@@ -176,6 +176,20 @@ const DefaultTheme: Kancha.ThemeStatic = {
         clear: COLORS.WASHED_GREEN,
       },
     },
+    inverted: {
+      brand: COLORS.TRANSPARENT,
+      text: COLORS.WHITE,
+      background: COLORS.TRANSPARENT,
+      divider: COLORS.WHITE,
+      accessories: COLORS.WHITE,
+      underlay: COLORS.TRANSPARENT,
+      button: COLORS.WHITE,
+      buttonText: {
+        filled: COLORS.ROYAL_PURPLE,
+        outlined: COLORS.WHITE,
+        clear: COLORS.WHITE,
+      },
+    },
     custom: {
       brand: COLORS.TRANSPARENT,
       text: COLORS.WHITE,

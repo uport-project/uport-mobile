@@ -29,6 +29,13 @@ interface EthereumAccountListItem {
   isLast: boolean
 }
 
+interface Identity {
+  name: string
+  address: string
+  network: string
+  isCurrent: boolean
+}
+
 interface SelfClaim {
   type: string
   name: string
@@ -63,18 +70,16 @@ interface UserProfileProps {
 
 interface UserProfileState {
   editMode: boolean
+  showIdentitySwitcher: boolean
 }
 
 class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
-  static navigatorStyle = {
-    ...Theme.navigation,
-    navBarNoBorder: true,
-  }
   constructor(props: UserProfileProps) {
     super(props)
 
     this.state = {
       editMode: false,
+      showIdentitySwitcher: false,
     }
 
     this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this))
@@ -109,20 +114,21 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
     }
   }
 
-  showSwitchModal() {
-    Alert.alert(
-      'Switch Identity',
-      'Switching identities will allow you to view your old testnet identity and the data associated with it.',
-      [
-        { text: 'Switch', onPress: () => this.props.switchIdentity('') },
-        {
-          text: 'Cancel',
-          // tslint:disable-next-line:no-console
-          onPress: () => console.log('Cancel Pressed'),
-          style: 'cancel',
-        },
-      ],
-    )
+  isMainIdentity(address: string) {
+    return address.match(/did:ethr/)
+  }
+
+  /**
+   * Update UI when user switches awy from a mainnet identity
+   */
+  switchIdentity(address: string) {
+    if (this.isMainIdentity(address)) {
+      this.setDefaultNavigationBar()
+    } else {
+      this.setWarningNavigationBar()
+    }
+
+    this.props.switchIdentity(address)
   }
 
   render() {
@@ -133,7 +139,9 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
           <Container
             justifyContent={'center'}
             alignItems={'center'}
-            backgroundColor={Theme.colors.primary.brand}
+            backgroundColor={
+              this.isMainIdentity(this.props.address) ? Theme.colors.primary.brand : Theme.colors.warning.background
+            }
             paddingTop
           >
             {this.state.editMode && (
@@ -148,26 +156,52 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
                   padding: 5,
                 }}
               >
-                <Text textColor={'#FFFFFF'}>Update avatar</Text>
+                <Text textColor={Theme.colors.inverted.text}>Update avatar</Text>
               </TouchableOpacity>
             )}
-            <Avatar source={this.props.avatar} size={150} style={{ borderWidth: 2, borderColor: 'white' }} />
+            <Avatar
+              source={this.props.avatar}
+              size={150}
+              style={{ borderWidth: 2, borderColor: Theme.colors.inverted.accessories }}
+            />
 
             <Container padding flexDirection={'row'}>
               <Container alignItems={'center'} flex={1}>
-                <TouchableOpacity onPress={!this.state.editMode ? this.showSwitchModal : () => null}>
-                  <Container flexDirection={'row'} alignItems={'center'}>
-                    <Text bold type={Text.Types.H2} textColor={'#FFFFFF'}>
-                      {this.props.name}
-                    </Text>
+                <Container flexDirection={'row'} alignItems={'center'}>
+                  <Text bold type={Text.Types.H2} textColor={Theme.colors.inverted.text}>
+                    {this.props.name}
+                  </Text>
+                </Container>
+                {!this.isMainIdentity(this.props.address) && (
+                  <Container paddingHorizontal>
+                    <Text textColor={Theme.colors.inverted.text}>Legacy testnet identity</Text>
                   </Container>
-                </TouchableOpacity>
-                <Text textColor={'#FFFFFF'}>Legacy testnet identity</Text>
+                )}
               </Container>
             </Container>
           </Container>
         }
       >
+        <Section title={'Identities'} sectionTitleType={Text.Types.SectionHeader}>
+          {this.formattedIdentityList().map(({ name, address, network, isCurrent }: Identity, index: number) => {
+            return (
+              <ListItem
+                hideForwardArrow
+                avatarComponent={
+                  isCurrent && <Icon name={'checkmark'} size={40} color={Theme.colors.confirm.accessories} />
+                }
+                title={network}
+                contentRight={address}
+                key={address}
+                onPress={() => this.switchIdentity(address)}
+                last={index === 1}
+              >
+                {name}
+              </ListItem>
+            )
+          })}
+        </Section>
+
         <Section title={'Personal'} sectionTitleType={Text.Types.SectionHeader}>
           {this.selfAttestedClaims().map((item: SelfClaim, index: number) => {
             return (
@@ -234,6 +268,33 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
     )
   }
 
+  formattedIdentityList(): Identity[] {
+    /**
+     * Replace with this.props.others
+     */
+    const identities = [
+      {
+        address: this.props.address,
+        network: 'mainnet',
+      },
+      {
+        address: 'did:uport:2323424234234235234523424234',
+        network: 'ropsten',
+      },
+    ]
+
+    return identities.map(
+      ({ address, network }): Identity => {
+        return {
+          name: `${address.match(/did:ethr:/) ? 'Primary Identity' : 'Legacy Identity'}`,
+          address,
+          network: `${network.charAt(0).toUpperCase() + network.slice(1)}`,
+          isCurrent: address === this.props.address,
+        }
+      },
+    )
+  }
+
   selfAttestedClaims(): SelfClaim[] {
     return USER_FIELDS.map(
       (item: string): SelfClaim => {
@@ -251,9 +312,30 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
    */
   componentDidMount() {
     this.setDefaultButtons()
-    this.props.updateShareToken(this.props.address)
+    this.setNavBarStyle()
 
-    console.tron.log(this.props.others)
+    this.props.updateShareToken(this.props.address)
+  }
+
+  setNavBarStyle() {
+    if (this.isMainIdentity(this.props.address)) {
+      this.setDefaultNavigationBar()
+    } else {
+      this.setWarningNavigationBar()
+    }
+  }
+
+  setDefaultNavigationBar() {
+    this.props.navigator.setStyle({
+      ...Theme.navigation,
+      navBarNoBorder: true,
+    })
+  }
+
+  setWarningNavigationBar() {
+    this.props.navigator.setStyle({
+      navBarBackgroundColor: Theme.colors.warning.background,
+    })
   }
 
   /**

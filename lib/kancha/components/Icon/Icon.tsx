@@ -64,6 +64,7 @@ const Icons: { [index: string]: any } = {
   close: 'x',
   edit: 'edit',
   more: 'ios-more',
+  checkmark: Device.isIOS ? 'ios-checkmark' : 'md-checkmark',
 }
 
 const Icon: React.FunctionComponent<IconProps> = ({ font, name, size, color, animated, image }: IconProps) => {
