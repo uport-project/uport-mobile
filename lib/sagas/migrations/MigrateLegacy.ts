@@ -31,7 +31,12 @@ import { saveMessage } from 'uPortMobile/lib/actions/processStatusActions'
 import { resetHub } from 'uPortMobile/lib/actions/hubActions'
 import { subAccounts, currentAddress, ownClaimsMap } from 'uPortMobile/lib/selectors/identities'
 import { hasAttestations } from 'uPortMobile/lib/selectors/attestations'
-import { updateIdentity, storeIdentity, storeConnection, storeExternalUport } from 'uPortMobile/lib/actions/uportActions'
+import {
+  updateIdentity,
+  storeIdentity,
+  storeConnection,
+  storeExternalUport,
+} from 'uPortMobile/lib/actions/uportActions'
 import { hdRootAddress } from 'uPortMobile/lib/selectors/hdWallet'
 import { resetHDWallet } from 'uPortMobile/lib/actions/HDWalletActions'
 import { track } from 'uPortMobile/lib/actions/metricActions'
@@ -46,15 +51,14 @@ function alertPromise(): any {
     Alert.alert(
       'New Identity',
       // tslint:disable-next-line:max-line-length
-      'Your current identity is a legacy testnet identity and is no longer supported. Create a new identity to continue. By creating a new identity all of your uPort data including credentials will be lost and cannot be recovered.',
+      'Your current identity is a legacy testnet identity and is no longer supported. A new identity will now be created. If you have credentials you will be able to view them by switching identities in your user profile.',
       [
         {
-          text: 'Create New Identity',
+          text: 'Okay',
           onPress: () => resolve('confirmed'),
         },
-        { text: 'Cancel', onPress: () => reject('cancelled') },
       ],
-      { cancelable: true },
+      { cancelable: false },
     )
   })
 }
@@ -70,84 +74,83 @@ export function* alertBeforeMigration(): any {
 }
 
 export function* migrate(): any {
-    const oldRoot = yield select(currentAddress)
-    const accounts = yield select(subAccounts, oldRoot)
-    const own = (yield select(ownClaimsMap)) || {}
-    const createOwnershipLink = yield select(hasAttestations)
-    
-    let newRoot
-    if (yield call(hasWorkingSeed)) {
-      const account = yield call(addressFor, 0, 0)
-      const encPublicKey = yield call(encryptionPublicKey, { idIndex: 0, actIndex: 0 })
-      newRoot = `did:ethr:${account.address}`
-      yield put(
-        storeIdentity({
-          address: newRoot,
-          deviceAddress: account.address,
-          hexaddress: account.address,
-          signerType: 'KeyPair',
-          recoveryType: 'seed',
-          hdindex: 0,
-          network: 'mainnet',
-          securityLevel: DEFAULT_LEVEL,
-          publicKey: account.publicKey,
-          encPublicKey,
-          own,
-        }),
-      )
-    } else {
-      const hdroot = yield select(hdRootAddress)
-      if (hdroot) {
-        yield put(resetHDWallet())
-      }
-      const newId = yield call(createIdentityKeyPair)
-      newRoot = newId.address
-      yield put(updateIdentity(newRoot, { own }))
+  const oldRoot = yield select(currentAddress)
+  const accounts = yield select(subAccounts, oldRoot)
+  const own = (yield select(ownClaimsMap)) || {}
+  const createOwnershipLink = yield select(hasAttestations)
+
+  let newRoot
+  if (yield call(hasWorkingSeed)) {
+    const account = yield call(addressFor, 0, 0)
+    const encPublicKey = yield call(encryptionPublicKey, { idIndex: 0, actIndex: 0 })
+    newRoot = `did:ethr:${account.address}`
+    yield put(
+      storeIdentity({
+        address: newRoot,
+        deviceAddress: account.address,
+        hexaddress: account.address,
+        signerType: 'KeyPair',
+        recoveryType: 'seed',
+        hdindex: 0,
+        network: 'mainnet',
+        securityLevel: DEFAULT_LEVEL,
+        publicKey: account.publicKey,
+        encPublicKey,
+        own,
+      }),
+    )
+  } else {
+    const hdroot = yield select(hdRootAddress)
+    if (hdroot) {
+      yield put(resetHDWallet())
     }
-    
+    const newId = yield call(createIdentityKeyPair)
+    newRoot = newId.address
+    yield put(updateIdentity(newRoot, { own }))
+  }
+
+  if (createOwnershipLink) {
+    yield put(storeExternalUport(oldRoot, own))
+    yield put(storeConnection(newRoot, 'knows', oldRoot))
+  }
+
+  if (yield call(canSignFor, oldRoot)) {
     if (createOwnershipLink) {
-      yield put(storeExternalUport(oldRoot, own))
-      yield put(storeConnection(newRoot, 'knows', oldRoot))
+      const link = yield call(createAttestationToken, oldRoot, newRoot, { owns: oldRoot })
+      yield put(handleURL(`me.uport:req/${link}`, { popup: false }))
+    } else {
+      yield put(updateIdentity(oldRoot, { parent: newRoot }))
     }
+  } else {
+    yield put(
+      updateIdentity(oldRoot, {
+        disabled: true,
+        error: `Legacy Test Net Identity has been Disabled`,
+      }),
+    )
+  }
 
-    if (yield call(canSignFor, oldRoot)) {
-      if (createOwnershipLink) {
-        const link = yield call(createAttestationToken, oldRoot, newRoot, { owns: oldRoot })
-        yield put(handleURL(`me.uport:req/${link}`, { popup: false }))
-      } else {
-        yield put(updateIdentity(oldRoot, {parent: newRoot}))
-      }
-
+  for (const account of accounts) {
+    const available = yield call(canSignFor, account.address)
+    if (available) {
+      yield put(
+        updateIdentity(account.address, {
+          parent: newRoot,
+        }),
+      )
     } else {
       yield put(
-        updateIdentity(oldRoot, {
+        updateIdentity(account.address, {
           disabled: true,
-          error: `Legacy Test Net Identity has been Disabled`,
+          error: `Legacy Identity has been Disabled. Keys are no longer available.`,
         }),
       )
     }
+  }
+  yield put(resetHub())
+  yield put(saveMessage(step, 'New mainnet identity is created'))
 
-    for (const account of accounts) {
-      const available = yield call(canSignFor, account.address)
-      if (available) {
-        yield put(
-          updateIdentity(account.address, {
-            parent: newRoot,
-          }),
-        )
-      } else {
-        yield put(
-          updateIdentity(account.address, {
-            disabled: true,
-            error: `Legacy Identity has been Disabled. Keys are no longer available.`,
-          }),
-        )
-      }
-    }
-    yield put(resetHub())
-    yield put(saveMessage(step, 'New mainnet identity is created'))
-
-    return true
+  return true
 }
 
 export default alertBeforeMigration
