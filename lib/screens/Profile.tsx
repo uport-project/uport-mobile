@@ -112,6 +112,178 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
     }
   }
 
+  render() {
+    return (
+      <Screen
+        config={Screen.Config.Scroll}
+        headerBackgroundColor={Theme.colors.primary.brand}
+        expandingHeaderContent={this.renderHeader()}
+      >
+        {this.renderInfoBar()}
+        {this.renderIdentitySwitcher()}
+        {this.renderPersonalInformation()}
+        {this.renderEthereumAccounts()}
+      </Screen>
+    )
+  }
+
+  renderHeader() {
+    return (
+      <Container justifyContent={'center'} alignItems={'center'} paddingTop>
+        {this.state.editMode && (
+          <TouchableOpacity
+            onPress={this.photoSelection}
+            style={{
+              position: 'absolute',
+              top: 20,
+              backgroundColor: 'rgba(0,0,0,0.8)',
+              zIndex: 1,
+              borderRadius: 8,
+              padding: 5,
+            }}
+          >
+            <Text textColor={Theme.colors.inverted.text}>Update avatar</Text>
+          </TouchableOpacity>
+        )}
+        <Avatar
+          source={this.props.avatar}
+          size={150}
+          style={{ borderWidth: 2, borderColor: Theme.colors.inverted.accessories }}
+        />
+        <Container padding flexDirection={'row'} alignItems={'center'}>
+          <Text bold type={Text.Types.H2} textColor={Theme.colors.inverted.text}>
+            {this.props.name}
+          </Text>
+        </Container>
+      </Container>
+    )
+  }
+
+  renderInfoBar() {
+    return (
+      <Container
+        padding
+        flexDirection={'row'}
+        alignItems={'center'}
+        flex={1}
+        backgroundColor={Theme.colors.primary.background}
+        dividerBottom
+      >
+        <Container flex={3} alignItems={'center'}>
+          <Button
+            block={Button.Block.Clear}
+            onPress={() => this.props.navigator.switchToTab({ tabIndex: 0 })}
+            buttonText={Mori.count(this.props.verifications)}
+          />
+          <Container paddingTop={5}>
+            <Text type={Text.Types.ListItemNote}>Credentials</Text>
+          </Container>
+        </Container>
+        <Container flex={3} alignItems={'center'}>
+          <Button
+            block={Button.Block.Clear}
+            icon={<Icon name={'qrcode'} font={'fontawesome'} color={Theme.colors.primary.accessories} />}
+            onPress={() => this.showQRCode()}
+          />
+          <Text type={Text.Types.ListItemNote}>QR Code</Text>
+        </Container>
+        <Container flex={3} alignItems={'center'}>
+          <Button
+            block={Button.Block.Clear}
+            icon={<Icon name={'share'} color={Theme.colors.primary.accessories} />}
+            onPress={() => this.showQShareDialog()}
+          />
+          <Text type={Text.Types.ListItemNote}>Share</Text>
+        </Container>
+      </Container>
+    )
+  }
+
+  renderIdentitySwitcher() {
+    return (
+      this.props.allIdentities.length > 1 && (
+        <Section title={'Identities'} sectionTitleType={Text.Types.SectionHeader}>
+          {this.formattedIdentityList().map(({ name, address, network, isCurrent }: Identity, index: number) => {
+            return (
+              <ListItem
+                disabled={this.state.editMode}
+                hideForwardArrow
+                selected={isCurrent}
+                title={network}
+                contentRight={address}
+                key={address}
+                onPress={() => this.switchIdentity(address)}
+                last={index === 1}
+              >
+                {name}
+              </ListItem>
+            )
+          })}
+        </Section>
+      )
+    )
+  }
+
+  renderPersonalInformation() {
+    return (
+      <Section title={'Personal'} sectionTitleType={Text.Types.SectionHeader}>
+        {this.selfAttestedClaims().map((item: SelfClaim, index: number) => {
+          return (
+            item.type !== 'avatar' && (
+              <ListItem
+                title={item.name}
+                last={index === 3}
+                key={item.type}
+                editMode={this.state.editMode}
+                updateItem={(value: string) => this.handleChange({ [item.type]: value })}
+              >
+                {item.value}
+              </ListItem>
+            )
+          )
+        })}
+      </Section>
+    )
+  }
+
+  renderEthereumAccounts() {
+    return (
+      this.props.accounts.length > 0 && (
+        <Section title={'Ethereum Accounts'} sectionTitleType={Text.Types.SectionHeader}>
+          {this.formattedAccountList().map((account: EthereumAccountListItem, index: number) => {
+            return (
+              <ListItem
+                title={account.network}
+                key={account.address}
+                contentRight={account.balance}
+                last={account.isLast}
+                onPress={() =>
+                  this.props.navigator.push({
+                    screen: 'screen.Account',
+                    title: account.name,
+                    passProps: {
+                      address: account.address,
+                      network: account.network,
+                      accountProfile: account.accountProfile,
+                    },
+                    navigatorStyle: {
+                      largeTitle: false,
+                    },
+                  })
+                }
+              >
+                {account.name}
+              </ListItem>
+            )
+          })}
+        </Section>
+      )
+    )
+  }
+
+  /**
+   * Check if identity matches /did:ethr/ (mainnet)
+   */
   isMainIdentity(address: string) {
     return address.match(/did:ethr/)
   }
@@ -129,148 +301,9 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
     this.props.switchIdentity(address)
   }
 
-  render() {
-    return (
-      <Screen
-        config={Screen.Config.Scroll}
-        headerBackgroundColor={Theme.colors.primary.brand}
-        expandingHeaderContent={
-          <Container justifyContent={'center'} alignItems={'center'} paddingTop>
-            {this.state.editMode && (
-              <TouchableOpacity
-                onPress={this.photoSelection}
-                style={{
-                  position: 'absolute',
-                  top: 20,
-                  backgroundColor: 'rgba(0,0,0,0.8)',
-                  zIndex: 1,
-                  borderRadius: 8,
-                  padding: 5,
-                }}
-              >
-                <Text textColor={Theme.colors.inverted.text}>Update avatar</Text>
-              </TouchableOpacity>
-            )}
-            <Avatar
-              source={this.props.avatar}
-              size={150}
-              style={{ borderWidth: 2, borderColor: Theme.colors.inverted.accessories }}
-            />
-            <Container padding flexDirection={'row'} alignItems={'center'}>
-              <Text bold type={Text.Types.H2} textColor={Theme.colors.inverted.text}>
-                {this.props.name}
-              </Text>
-            </Container>
-          </Container>
-        }
-      >
-        <Container
-          padding
-          flexDirection={'row'}
-          alignItems={'center'}
-          flex={1}
-          backgroundColor={Theme.colors.primary.background}
-          dividerBottom
-        >
-          <Container flex={3} alignItems={'center'}>
-            <Button
-              block={Button.Block.Clear}
-              onPress={() => this.props.navigator.switchToTab({ tabIndex: 0 })}
-              buttonText={Mori.count(this.props.verifications)}
-            />
-            <Container paddingTop={5}>
-              <Text type={Text.Types.ListItemNote}>Credentials</Text>
-            </Container>
-          </Container>
-          <Container flex={3} alignItems={'center'}>
-            <Button
-              block={Button.Block.Clear}
-              icon={<Icon name={'qrcode'} font={'fontawesome'} color={Theme.colors.primary.accessories} />}
-              onPress={() => this.showQRCode()}
-            />
-            <Text type={Text.Types.ListItemNote}>QR Code</Text>
-          </Container>
-          <Container flex={3} alignItems={'center'}>
-            <Button
-              block={Button.Block.Clear}
-              icon={<Icon name={'share'} color={Theme.colors.primary.accessories} />}
-              onPress={() => this.showQShareDialog()}
-            />
-            <Text type={Text.Types.ListItemNote}>Share</Text>
-          </Container>
-        </Container>
-
-        {this.props.allIdentities.length > 1 && (
-          <Section title={'Identities'} sectionTitleType={Text.Types.SectionHeader}>
-            {this.formattedIdentityList().map(({ name, address, network, isCurrent }: Identity, index: number) => {
-              return (
-                <ListItem
-                  disabled={this.state.editMode}
-                  hideForwardArrow
-                  selected={isCurrent}
-                  title={network}
-                  contentRight={address}
-                  key={address}
-                  onPress={() => this.switchIdentity(address)}
-                  last={index === 1}
-                >
-                  {name}
-                </ListItem>
-              )
-            })}
-          </Section>
-        )}
-        <Section title={'Personal'} sectionTitleType={Text.Types.SectionHeader}>
-          {this.selfAttestedClaims().map((item: SelfClaim, index: number) => {
-            return (
-              item.type !== 'avatar' && (
-                <ListItem
-                  title={item.name}
-                  last={index === 3}
-                  key={item.type}
-                  editMode={this.state.editMode}
-                  updateItem={(value: string) => this.handleChange({ [item.type]: value })}
-                >
-                  {item.value}
-                </ListItem>
-              )
-            )
-          })}
-        </Section>
-        {this.props.accounts.length > 0 && (
-          <Section title={'Ethereum Accounts'} sectionTitleType={Text.Types.SectionHeader}>
-            {this.formattedAccountList().map((account: EthereumAccountListItem, index: number) => {
-              return (
-                <ListItem
-                  title={account.network}
-                  key={account.address}
-                  contentRight={account.balance}
-                  last={account.isLast}
-                  onPress={() =>
-                    this.props.navigator.push({
-                      screen: 'screen.Account',
-                      title: account.name,
-                      passProps: {
-                        address: account.address,
-                        network: account.network,
-                        accountProfile: account.accountProfile,
-                      },
-                      navigatorStyle: {
-                        largeTitle: false,
-                      },
-                    })
-                  }
-                >
-                  {account.name}
-                </ListItem>
-              )
-            })}
-          </Section>
-        )}
-      </Screen>
-    )
-  }
-
+  /**
+   * Show QRCode of users profile for sharing
+   */
   showQRCode() {
     const url = `https://id.uport.me/req/${this.props.shareToken}`
 
@@ -288,6 +321,9 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
     })
   }
 
+  /**
+   * Show share dialog
+   */
   showQShareDialog() {
     this.props.updateShareToken(this.props.address)
     const url = `https://id.uport.me/req/${this.props.shareToken}`
@@ -304,6 +340,9 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
     )
   }
 
+  /**
+   * Formatting account list
+   */
   formattedAccountList(): EthereumAccountListItem[] {
     return this.props.accounts.map(
       (account: any, index: number): EthereumAccountListItem => {
@@ -321,6 +360,9 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
     )
   }
 
+  /**
+   * Formatting list of identities
+   */
   formattedIdentityList(): Identity[] {
     return this.props.allIdentities
       .map(
@@ -336,6 +378,9 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
       .reverse()
   }
 
+  /**
+   * Formatting personal info
+   */
   selfAttestedClaims(): SelfClaim[] {
     return USER_FIELDS.map(
       (item: string): SelfClaim => {
@@ -358,6 +403,9 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
     this.props.updateShareToken(this.props.address)
   }
 
+  /**
+   * Set default navigation
+   */
   setDefaultNavigationBar() {
     this.props.navigator.setStyle({
       ...Theme.navigation,
