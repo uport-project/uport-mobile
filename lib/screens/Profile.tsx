@@ -6,7 +6,7 @@ import Avatar from 'uPortMobile/lib/components/shared/Avatar'
 
 import { Navigator } from 'react-native-navigation'
 import { wei2eth } from 'uPortMobile/lib/helpers/conversions'
-import { currentAddress, ownClaims, myAccounts, otherIdentities } from 'uPortMobile/lib/selectors/identities'
+import { currentAddress, ownClaims, myAccounts, allIdentities } from 'uPortMobile/lib/selectors/identities'
 import { externalProfile } from 'uPortMobile/lib/selectors/requests'
 import { editMyInfo, updateShareToken } from 'uPortMobile/lib/actions/myInfoActions'
 import { addClaims, addImage, switchIdentity } from 'uPortMobile/lib/actions/uportActions'
@@ -54,7 +54,7 @@ interface UserProfileProps {
   address: string
   shareToken: string
   verifications: any
-  others: any[]
+  allIdentities: any[]
   accounts: any
 
   /**
@@ -122,12 +122,6 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
    * Update UI when user switches awy from a mainnet identity
    */
   switchIdentity(address: string) {
-    if (this.isMainIdentity(address)) {
-      this.setDefaultNavigationBar()
-    } else {
-      this.setWarningNavigationBar()
-    }
-
     this.props.switchIdentity(address)
   }
 
@@ -135,9 +129,7 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
     return (
       <Screen
         config={Screen.Config.Scroll}
-        headerBackgroundColor={
-          this.isMainIdentity(this.props.address) ? Theme.colors.primary.brand : Theme.colors.warning.background
-        }
+        headerBackgroundColor={Theme.colors.primary.brand}
         expandingHeaderContent={
           <Container justifyContent={'center'} alignItems={'center'} paddingTop>
             {this.state.editMode && (
@@ -173,15 +165,13 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
           </Container>
         }
       >
-        {this.props.others.length > 1 && (
+        {this.props.allIdentities.length > 1 && (
           <Section title={'Identities'} sectionTitleType={Text.Types.SectionHeader}>
             {this.formattedIdentityList().map(({ name, address, network, isCurrent }: Identity, index: number) => {
               return (
                 <ListItem
                   hideForwardArrow
-                  avatarComponent={
-                    isCurrent && <Icon name={'checkmark'} size={40} color={Theme.colors.confirm.accessories} />
-                  }
+                  selected={isCurrent}
                   title={network}
                   contentRight={address}
                   key={address}
@@ -212,34 +202,36 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
             )
           })}
         </Section>
-        <Section title={'Ethereum Accounts'} sectionTitleType={Text.Types.SectionHeader}>
-          {this.formattedAccountList().map((account: EthereumAccountListItem, index: number) => {
-            return (
-              <ListItem
-                title={account.network}
-                key={account.address}
-                contentRight={account.balance}
-                last={account.isLast}
-                onPress={() =>
-                  this.props.navigator.push({
-                    screen: 'screen.Account',
-                    title: account.name,
-                    passProps: {
-                      address: account.address,
-                      network: account.network,
-                      accountProfile: account.accountProfile,
-                    },
-                    navigatorStyle: {
-                      largeTitle: false,
-                    },
-                  })
-                }
-              >
-                {account.name}
-              </ListItem>
-            )
-          })}
-        </Section>
+        {this.props.accounts.length > 0 && (
+          <Section title={'Ethereum Accounts'} sectionTitleType={Text.Types.SectionHeader}>
+            {this.formattedAccountList().map((account: EthereumAccountListItem, index: number) => {
+              return (
+                <ListItem
+                  title={account.network}
+                  key={account.address}
+                  contentRight={account.balance}
+                  last={account.isLast}
+                  onPress={() =>
+                    this.props.navigator.push({
+                      screen: 'screen.Account',
+                      title: account.name,
+                      passProps: {
+                        address: account.address,
+                        network: account.network,
+                        accountProfile: account.accountProfile,
+                      },
+                      navigatorStyle: {
+                        largeTitle: false,
+                      },
+                    })
+                  }
+                >
+                  {account.name}
+                </ListItem>
+              )
+            })}
+          </Section>
+        )}
       </Screen>
     )
   }
@@ -262,30 +254,23 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
   }
 
   formattedIdentityList(): Identity[] {
-    /**
-     * Stubb data for testing UI
-     */
-    const identities = [
-      {
-        address: this.props.address,
-        network: 'mainnet',
-      },
-      {
-        address: 'did:uport:2323424234234235234523424234',
-        network: 'ropsten',
-      },
-    ]
+    // const currentIdentity = {
+    //   address: this.props.address,
+    //   network: this.props.net,
+    // }
 
-    return this.props.others.map(
-      ({ address, network }): Identity => {
-        return {
-          name: `${address.match(/did:ethr:/) ? 'Primary Identity' : 'Legacy Identity'}`,
-          address,
-          network: `${network.charAt(0).toUpperCase() + network.slice(1)}`,
-          isCurrent: address === this.props.address,
-        }
-      },
-    )
+    return this.props.allIdentities
+      .map(
+        ({ address, network }): Identity => {
+          return {
+            name: `${address.match(/did:ethr:/) ? 'Primary' : 'Legacy'}`,
+            address,
+            network: `${network.charAt(0).toUpperCase() + network.slice(1)}`,
+            isCurrent: address === this.props.address,
+          }
+        },
+      )
+      .reverse()
   }
 
   selfAttestedClaims(): SelfClaim[] {
@@ -305,36 +290,17 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
    */
   componentDidMount() {
     this.setDefaultButtons()
-    this.setNavBarStyle()
+    this.setDefaultNavigationBar()
 
     this.props.updateShareToken(this.props.address)
-  }
-
-  setNavBarStyle() {
-    if (this.isMainIdentity(this.props.address)) {
-      this.setDefaultNavigationBar()
-    } else {
-      this.setWarningNavigationBar()
-    }
   }
 
   setDefaultNavigationBar() {
     this.props.navigator.setStyle({
       ...Theme.navigation,
       navBarNoBorder: true,
-    })
-
-    this.props.navigator.setTitle({
-      title: '',
-    })
-  }
-
-  setWarningNavigationBar() {
-    this.props.navigator.setStyle({
-      navBarBackgroundColor: Theme.colors.warning.background,
-    })
-    this.props.navigator.setTitle({
-      title: 'Legacy Testnet Identity',
+      navBarTextColor: Theme.colors.inverted.text,
+      navBarButtonColor: Theme.colors.inverted.text,
     })
   }
 
@@ -429,7 +395,7 @@ const mapStateToProps = (state: any, ownProps: any) => {
     address: currentAddress(state),
     shareToken: state.myInfo.shareToken,
     verifications: onlyPendingAndLatestAttestations(state),
-    others: otherIdentities(state),
+    allIdentities: Mori.toJs(allIdentities(state)),
     accounts: myAccounts(state),
     accountProfileLookup: (clientId: string) => Mori.toJs(externalProfile(state, clientId)),
   }

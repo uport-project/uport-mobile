@@ -78,6 +78,11 @@ interface ListItemProps {
   title?: string
 
   /**
+   * If selected
+   */
+  selected?: boolean
+
+  /**
    * Function that gets called when text is changed
    */
   updateItem?: (item: string) => void
@@ -127,17 +132,23 @@ const ListItem: React.FunctionComponent<ListItemProps> = props => {
         >
           <Container flexDirection={'row'} flex={1} viewStyle={{ overflow: 'hidden' }}>
             <Container>
-              <Container paddingBottom={5}>
-                {props.title && <Text type={Text.Types.SubTitle}>{props.title}</Text>}
-              </Container>
+              {props.title && <Text type={Text.Types.SubTitle}>{props.title}</Text>}
               {props.editMode ? (
                 <TextInput
                   style={{ fontSize: 18, padding: 0 }}
                   defaultValue={(props.children && props.children.toString()) || ''}
                   onChangeText={props.updateItem}
+                  placeholder={'Not provided'}
                 />
               ) : (
-                <Text type={Text.Types.ListItem}>{props.children}</Text>
+                <Container flexDirection={'row'} alignItems={'center'} justifyContent={'center'}>
+                  <Text type={Text.Types.ListItem}>{props.children}</Text>
+                  {props.selected && (
+                    <Container paddingLeft={8}>
+                      <Icon name={'checkbox_checked'} color={Theme.colors.confirm.accessories} size={18} />
+                    </Container>
+                  )}
+                </Container>
               )}
             </Container>
           </Container>
