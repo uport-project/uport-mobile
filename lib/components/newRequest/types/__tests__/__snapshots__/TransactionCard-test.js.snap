@@ -355,7 +355,7 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
             }
           }
         >
-          Update Stuff
+          Function
         </Text>
         <Text
           accessible={true}
@@ -367,11 +367,7 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
             }
           }
         >
-          123
-          0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02
-          hello
-there
-          QmWmyoMoctfbAaiEs2G46gpeUmhqFRDW6KWo64y5r581Vz
+          Update Stuff
         </Text>
       </View>
       <View
@@ -797,7 +793,7 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
             }
           }
         >
-          Buy Tokens
+          Function
         </Text>
         <Text
           accessible={true}
@@ -808,7 +804,9 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
               "fontSize": 14,
             }
           }
-        />
+        >
+          Buy Tokens
+        </Text>
       </View>
       <View
         style={
@@ -2838,7 +2836,7 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
             }
           }
         >
-          Set Attributes
+          Function
         </Text>
         <Text
           accessible={true}
@@ -2850,7 +2848,7 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
             }
           }
         >
-          afadfadf
+          Set Attributes
         </Text>
       </View>
       <View
