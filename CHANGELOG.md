@@ -1,5 +1,75 @@
 # Change Log
 
+## [v426](https://github.com/uport-project/uport-mobile/tree/v426) (2019-03-27)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v425...v426)
+
+**Merged pull requests:**
+
+- Fix for tx card function params [\#94](https://github.com/uport-project/uport-mobile/pull/94) ([simonas-notcat](https://github.com/simonas-notcat))
+
+## [v425](https://github.com/uport-project/uport-mobile/tree/v425) (2019-03-27)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v424...v425)
+
+**Merged pull requests:**
+
+- Bump release version to 1.6.1 [\#93](https://github.com/uport-project/uport-mobile/pull/93) ([jasonhealy](https://github.com/jasonhealy))
+
+## [v424](https://github.com/uport-project/uport-mobile/tree/v424) (2019-03-27)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v423...v424)
+
+**Merged pull requests:**
+
+- Fix for metrics [\#92](https://github.com/uport-project/uport-mobile/pull/92) ([simonas-notcat](https://github.com/simonas-notcat))
+- Showing authorization prompt when sharing claims [\#91](https://github.com/uport-project/uport-mobile/pull/91) ([simonas-notcat](https://github.com/simonas-notcat))
+- Switch identity UI [\#90](https://github.com/uport-project/uport-mobile/pull/90) ([jasonhealy](https://github.com/jasonhealy))
+- Info notification [\#89](https://github.com/uport-project/uport-mobile/pull/89) ([simonas-notcat](https://github.com/simonas-notcat))
+- Upgraded scanner component [\#84](https://github.com/uport-project/uport-mobile/pull/84) ([jasonhealy](https://github.com/jasonhealy))
+
+## [v423](https://github.com/uport-project/uport-mobile/tree/v423) (2019-03-22)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v422...v423)
+
+**Merged pull requests:**
+
+- Fix migration alert dialog [\#88](https://github.com/uport-project/uport-mobile/pull/88) ([jasonhealy](https://github.com/jasonhealy))
+
+## [v422](https://github.com/uport-project/uport-mobile/tree/v422) (2019-03-20)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v421...v422)
+
+**Merged pull requests:**
+
+- Switch recovery screens in settings [\#87](https://github.com/uport-project/uport-mobile/pull/87) ([jasonhealy](https://github.com/jasonhealy))
+
+## [v421](https://github.com/uport-project/uport-mobile/tree/v421) (2019-03-20)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v420...v421)
+
+**Merged pull requests:**
+
+- Bugfixes [\#86](https://github.com/uport-project/uport-mobile/pull/86) ([jasonhealy](https://github.com/jasonhealy))
+
+## [v420](https://github.com/uport-project/uport-mobile/tree/v420) (2019-03-19)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v419...v420)
+
+**Merged pull requests:**
+
+- uport mobile v1.6 [\#80](https://github.com/uport-project/uport-mobile/pull/80) ([jasonhealy](https://github.com/jasonhealy))
+
+## [v419](https://github.com/uport-project/uport-mobile/tree/v419) (2019-03-12)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v418...v419)
+
+**Merged pull requests:**
+
+- Prompt before creating new identity [\#83](https://github.com/uport-project/uport-mobile/pull/83) ([jasonhealy](https://github.com/jasonhealy))
+
+## [v418](https://github.com/uport-project/uport-mobile/tree/v418) (2019-03-07)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v417...v418)
+
+**Merged pull requests:**
+
+- Fix scrolling on seed recovery success screen [\#82](https://github.com/uport-project/uport-mobile/pull/82) ([jasonhealy](https://github.com/jasonhealy))
+
+## [v417](https://github.com/uport-project/uport-mobile/tree/v417) (2019-02-28)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v416...v417)
+
 ## [v416](https://github.com/uport-project/uport-mobile/tree/v416) (2019-02-28)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v415...v416)
 

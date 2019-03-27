@@ -2,7 +2,6 @@
 
 exports[`ConnectionCard renders a connected Connection Card index as expected 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ConnectionCard
     authorizeRequest={[Function]}
@@ -14,8 +13,10 @@ ShallowWrapper {
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -107,7 +108,7 @@ ShallowWrapper {
             style={
               Object {
                 "color": "#FFFFFF",
-                "fontFamily": "NunitoSans-Regular",
+                "fontFamily": undefined,
                 "fontSize": 13,
                 "letterSpacing": 1,
                 "lineHeight": 15,
@@ -132,7 +133,7 @@ ShallowWrapper {
             style={
               Object {
                 "color": undefined,
-                "fontFamily": "NunitoSans-Regular",
+                "fontFamily": undefined,
                 "fontSize": 20,
                 "lineHeight": 24,
                 "marginBottom": 20,
@@ -293,7 +294,7 @@ ShallowWrapper {
             style={
               Object {
                 "color": "#FFFFFF",
-                "fontFamily": "NunitoSans-Regular",
+                "fontFamily": undefined,
                 "fontSize": 13,
                 "letterSpacing": 1,
                 "lineHeight": 15,
@@ -327,7 +328,7 @@ ShallowWrapper {
             "ellipsizeMode": "tail",
             "style": Object {
               "color": "#FFFFFF",
-              "fontFamily": "NunitoSans-Regular",
+              "fontFamily": undefined,
               "fontSize": 13,
               "letterSpacing": 1,
               "lineHeight": 15,
@@ -352,7 +353,7 @@ ShallowWrapper {
             style={
               Object {
                 "color": undefined,
-                "fontFamily": "NunitoSans-Regular",
+                "fontFamily": undefined,
                 "fontSize": 20,
                 "lineHeight": 24,
                 "marginBottom": 20,
@@ -377,7 +378,7 @@ ShallowWrapper {
             "ellipsizeMode": "tail",
             "style": Object {
               "color": undefined,
-              "fontFamily": "NunitoSans-Regular",
+              "fontFamily": undefined,
               "fontSize": 20,
               "lineHeight": 24,
               "marginBottom": 20,
@@ -497,7 +498,7 @@ ShallowWrapper {
               style={
                 Object {
                   "color": "#FFFFFF",
-                  "fontFamily": "NunitoSans-Regular",
+                  "fontFamily": undefined,
                   "fontSize": 13,
                   "letterSpacing": 1,
                   "lineHeight": 15,
@@ -522,7 +523,7 @@ ShallowWrapper {
               style={
                 Object {
                   "color": undefined,
-                  "fontFamily": "NunitoSans-Regular",
+                  "fontFamily": undefined,
                   "fontSize": 20,
                   "lineHeight": 24,
                   "marginBottom": 20,
@@ -683,7 +684,7 @@ ShallowWrapper {
               style={
                 Object {
                   "color": "#FFFFFF",
-                  "fontFamily": "NunitoSans-Regular",
+                  "fontFamily": undefined,
                   "fontSize": 13,
                   "letterSpacing": 1,
                   "lineHeight": 15,
@@ -717,7 +718,7 @@ ShallowWrapper {
               "ellipsizeMode": "tail",
               "style": Object {
                 "color": "#FFFFFF",
-                "fontFamily": "NunitoSans-Regular",
+                "fontFamily": undefined,
                 "fontSize": 13,
                 "letterSpacing": 1,
                 "lineHeight": 15,
@@ -742,7 +743,7 @@ ShallowWrapper {
               style={
                 Object {
                   "color": undefined,
-                  "fontFamily": "NunitoSans-Regular",
+                  "fontFamily": undefined,
                   "fontSize": 20,
                   "lineHeight": 24,
                   "marginBottom": 20,
@@ -767,7 +768,7 @@ ShallowWrapper {
               "ellipsizeMode": "tail",
               "style": Object {
                 "color": undefined,
-                "fontFamily": "NunitoSans-Regular",
+                "fontFamily": undefined,
                 "fontSize": 20,
                 "lineHeight": 24,
                 "marginBottom": 20,
@@ -803,6 +804,20 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
     "context": Object {
@@ -813,6 +828,25 @@ ShallowWrapper {
         "getState": [Function],
         "replaceReducer": [Function],
         "subscribe": [Function],
+      },
+      "storeSubscription": Subscription {
+        "listeners": Object {
+          "clear": [Function],
+          "get": [Function],
+          "notify": [Function],
+          "subscribe": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": [Function],
       },
     },
   },
@@ -900,12 +934,12 @@ exports[`ConnectionCard renders correctly with a authorizedAt Request 1`] = `
               "justifyContent": "center",
             },
             Object {
-              "borderRadius": 3,
+              "borderRadius": 92,
               "height": 184,
               "width": 184,
             },
             Object {
-              "backgroundColor": "rgba(91,84,199,1)",
+              "backgroundColor": "rgba(216,216,216,1)",
             },
             Object {
               "padding": 46,
@@ -920,14 +954,13 @@ exports[`ConnectionCard renders correctly with a authorizedAt Request 1`] = `
           style={
             Array [
               Object {
-                "fontFamily": "NunitoSans-Regular",
-                "fontSize": 17.5,
+                "fontFamily": undefined,
+                "fontSize": 15,
                 "textAlign": "center",
               },
               undefined,
               Object {
-                "color": "white",
-                "fontSize": 46,
+                "fontSize": 61.333333333333336,
               },
             ]
           }
@@ -959,7 +992,7 @@ exports[`ConnectionCard renders correctly with a authorizedAt Request 1`] = `
       style={
         Object {
           "color": "#FFFFFF",
-          "fontFamily": "NunitoSans-Regular",
+          "fontFamily": undefined,
           "fontSize": 13,
           "letterSpacing": 1,
           "lineHeight": 15,
@@ -984,7 +1017,7 @@ exports[`ConnectionCard renders correctly with a authorizedAt Request 1`] = `
       style={
         Object {
           "color": undefined,
-          "fontFamily": "NunitoSans-Regular",
+          "fontFamily": undefined,
           "fontSize": 20,
           "lineHeight": 24,
           "marginBottom": 20,
@@ -1004,7 +1037,6 @@ exports[`ConnectionCard renders correctly with a authorizedAt Request 1`] = `
       style={
         Object {
           "color": "#ffffff",
-          "fontFamily": "Rubik-Medium",
           "fontSize": 13,
           "letterSpacing": 1,
           "textAlign": "center",
@@ -1098,12 +1130,12 @@ exports[`ConnectionCard renders correctly with a cancelled Request 1`] = `
               "justifyContent": "center",
             },
             Object {
-              "borderRadius": 3,
+              "borderRadius": 92,
               "height": 184,
               "width": 184,
             },
             Object {
-              "backgroundColor": "rgba(91,84,199,1)",
+              "backgroundColor": "rgba(216,216,216,1)",
             },
             Object {
               "padding": 46,
@@ -1118,14 +1150,13 @@ exports[`ConnectionCard renders correctly with a cancelled Request 1`] = `
           style={
             Array [
               Object {
-                "fontFamily": "NunitoSans-Regular",
-                "fontSize": 17.5,
+                "fontFamily": undefined,
+                "fontSize": 15,
                 "textAlign": "center",
               },
               undefined,
               Object {
-                "color": "white",
-                "fontSize": 46,
+                "fontSize": 61.333333333333336,
               },
             ]
           }
@@ -1157,7 +1188,7 @@ exports[`ConnectionCard renders correctly with a cancelled Request 1`] = `
       style={
         Object {
           "color": "#FFFFFF",
-          "fontFamily": "NunitoSans-Regular",
+          "fontFamily": undefined,
           "fontSize": 13,
           "letterSpacing": 1,
           "lineHeight": 15,
@@ -1182,7 +1213,7 @@ exports[`ConnectionCard renders correctly with a cancelled Request 1`] = `
       style={
         Object {
           "color": undefined,
-          "fontFamily": "NunitoSans-Regular",
+          "fontFamily": undefined,
           "fontSize": 20,
           "lineHeight": 24,
           "marginBottom": 20,
@@ -1202,7 +1233,6 @@ exports[`ConnectionCard renders correctly with a cancelled Request 1`] = `
       style={
         Object {
           "color": "#ffffff",
-          "fontFamily": "Rubik-Medium",
           "fontSize": 13,
           "letterSpacing": 1,
           "textAlign": "center",
@@ -1296,12 +1326,12 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
               "justifyContent": "center",
             },
             Object {
-              "borderRadius": 3,
+              "borderRadius": 92,
               "height": 184,
               "width": 184,
             },
             Object {
-              "backgroundColor": "rgba(91,84,199,1)",
+              "backgroundColor": "rgba(216,216,216,1)",
             },
             Object {
               "padding": 46,
@@ -1316,14 +1346,13 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
           style={
             Array [
               Object {
-                "fontFamily": "NunitoSans-Regular",
-                "fontSize": 17.5,
+                "fontFamily": undefined,
+                "fontSize": 15,
                 "textAlign": "center",
               },
               undefined,
               Object {
-                "color": "white",
-                "fontSize": 46,
+                "fontSize": 61.333333333333336,
               },
             ]
           }
@@ -1355,7 +1384,7 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
       style={
         Object {
           "color": "#FFFFFF",
-          "fontFamily": "NunitoSans-Regular",
+          "fontFamily": undefined,
           "fontSize": 13,
           "letterSpacing": 1,
           "lineHeight": 15,
@@ -1380,7 +1409,7 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
       style={
         Object {
           "color": undefined,
-          "fontFamily": "NunitoSans-Regular",
+          "fontFamily": undefined,
           "fontSize": 20,
           "lineHeight": 24,
           "marginBottom": 20,
@@ -1440,7 +1469,7 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
         style={
           Array [
             Object {
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 18,
               "textAlign": "center",
             },
@@ -1490,7 +1519,7 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
         style={
           Array [
             Object {
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 18,
               "textAlign": "center",
             },
@@ -1589,12 +1618,12 @@ exports[`ConnectionCard renders correctly with a contact that is me 1`] = `
               "justifyContent": "center",
             },
             Object {
-              "borderRadius": 3,
+              "borderRadius": 92,
               "height": 184,
               "width": 184,
             },
             Object {
-              "backgroundColor": "rgba(91,84,199,1)",
+              "backgroundColor": "rgba(216,216,216,1)",
             },
             Object {
               "padding": 46,
@@ -1609,14 +1638,13 @@ exports[`ConnectionCard renders correctly with a contact that is me 1`] = `
           style={
             Array [
               Object {
-                "fontFamily": "NunitoSans-Regular",
-                "fontSize": 17.5,
+                "fontFamily": undefined,
+                "fontSize": 15,
                 "textAlign": "center",
               },
               undefined,
               Object {
-                "color": "white",
-                "fontSize": 46,
+                "fontSize": 61.333333333333336,
               },
             ]
           }
@@ -1648,7 +1676,7 @@ exports[`ConnectionCard renders correctly with a contact that is me 1`] = `
       style={
         Object {
           "color": "#FFFFFF",
-          "fontFamily": "NunitoSans-Regular",
+          "fontFamily": undefined,
           "fontSize": 13,
           "letterSpacing": 1,
           "lineHeight": 15,
@@ -1673,7 +1701,7 @@ exports[`ConnectionCard renders correctly with a contact that is me 1`] = `
       style={
         Object {
           "color": undefined,
-          "fontFamily": "NunitoSans-Regular",
+          "fontFamily": undefined,
           "fontSize": 20,
           "lineHeight": 24,
           "marginBottom": 20,
@@ -1693,7 +1721,6 @@ exports[`ConnectionCard renders correctly with a contact that is me 1`] = `
       style={
         Object {
           "color": "#ffffff",
-          "fontFamily": "Rubik-Medium",
           "fontSize": 13,
           "letterSpacing": 1,
           "textAlign": "center",
@@ -1787,12 +1814,12 @@ exports[`ConnectionCard renders correctly with a existing Request 1`] = `
               "justifyContent": "center",
             },
             Object {
-              "borderRadius": 3,
+              "borderRadius": 92,
               "height": 184,
               "width": 184,
             },
             Object {
-              "backgroundColor": "rgba(91,84,199,1)",
+              "backgroundColor": "rgba(216,216,216,1)",
             },
             Object {
               "padding": 46,
@@ -1807,14 +1834,13 @@ exports[`ConnectionCard renders correctly with a existing Request 1`] = `
           style={
             Array [
               Object {
-                "fontFamily": "NunitoSans-Regular",
-                "fontSize": 17.5,
+                "fontFamily": undefined,
+                "fontSize": 15,
                 "textAlign": "center",
               },
               undefined,
               Object {
-                "color": "white",
-                "fontSize": 46,
+                "fontSize": 61.333333333333336,
               },
             ]
           }
@@ -1846,7 +1872,7 @@ exports[`ConnectionCard renders correctly with a existing Request 1`] = `
       style={
         Object {
           "color": "#FFFFFF",
-          "fontFamily": "NunitoSans-Regular",
+          "fontFamily": undefined,
           "fontSize": 13,
           "letterSpacing": 1,
           "lineHeight": 15,
@@ -1871,7 +1897,7 @@ exports[`ConnectionCard renders correctly with a existing Request 1`] = `
       style={
         Object {
           "color": undefined,
-          "fontFamily": "NunitoSans-Regular",
+          "fontFamily": undefined,
           "fontSize": 20,
           "lineHeight": 24,
           "marginBottom": 20,
@@ -1891,7 +1917,6 @@ exports[`ConnectionCard renders correctly with a existing Request 1`] = `
       style={
         Object {
           "color": "#ffffff",
-          "fontFamily": "Rubik-Medium",
           "fontSize": 13,
           "letterSpacing": 1,
           "textAlign": "center",
@@ -1985,40 +2010,41 @@ exports[`ConnectionCard renders correctly with an unkown contact 1`] = `
               "justifyContent": "center",
             },
             Object {
-              "borderRadius": 3,
+              "borderRadius": 92,
               "height": 184,
               "width": 184,
-            },
-            Object {
-              "backgroundColor": "rgba(91,84,199,1)",
-            },
-            Object {
-              "padding": 46,
             },
           ]
         }
       >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+        <Image
+          resizeMode="cover"
+          source={
+            Object {
+              "testUri": "../../../assets/images/ethereum-white-icon.png",
+            }
+          }
           style={
             Array [
               Object {
-                "fontFamily": "NunitoSans-Regular",
-                "fontSize": 17.5,
-                "textAlign": "center",
+                "borderRadius": 92,
+                "height": 184,
+                "width": 184,
               },
-              undefined,
               Object {
-                "color": "white",
-                "fontSize": 46,
+                "position": "absolute",
               },
+              Array [
+                Object {
+                  "borderRadius": 92,
+                  "height": 184,
+                  "width": 184,
+                },
+                undefined,
+              ],
             ]
           }
-        >
-          
-        </Text>
+        />
       </View>
     </View>
   </View>
@@ -2044,7 +2070,7 @@ exports[`ConnectionCard renders correctly with an unkown contact 1`] = `
       style={
         Object {
           "color": "#FFFFFF",
-          "fontFamily": "NunitoSans-Regular",
+          "fontFamily": undefined,
           "fontSize": 13,
           "letterSpacing": 1,
           "lineHeight": 15,
@@ -2069,7 +2095,7 @@ exports[`ConnectionCard renders correctly with an unkown contact 1`] = `
       style={
         Object {
           "color": undefined,
-          "fontFamily": "NunitoSans-Regular",
+          "fontFamily": undefined,
           "fontSize": 20,
           "lineHeight": 24,
           "marginBottom": 20,
@@ -2127,7 +2153,7 @@ exports[`ConnectionCard renders correctly with an unkown contact 1`] = `
         style={
           Array [
             Object {
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 18,
               "textAlign": "center",
             },
@@ -2177,7 +2203,7 @@ exports[`ConnectionCard renders correctly with an unkown contact 1`] = `
         style={
           Array [
             Object {
-              "fontFamily": "NunitoSans-Bold",
+              "fontFamily": "Montserrat",
               "fontSize": 18,
               "textAlign": "center",
             },

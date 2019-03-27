@@ -33,6 +33,7 @@ import com.poberwong.launcher.IntentLauncherPackage;
 import com.reactnativenavigation.NavigationApplication;
 import com.uport.sdk.react.signer.NativeSignerPackage;
 
+
 import org.reactnative.camera.RNCameraPackage;
 
 import java.util.Arrays;

@@ -9,7 +9,7 @@ exports[`renders TextInput with label 1`] = `
     style={
       Object {
         "color": "rgba(130, 130, 130, 1)",
-        "fontFamily": "NunitoSans-Bold",
+        "fontFamily": undefined,
         "fontSize": 12,
         "marginBottom": 5,
       }
@@ -45,7 +45,7 @@ exports[`renders TextInput with label 1`] = `
           Object {
             "color": "#3c3a49",
             "flex": 1,
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 16,
           },
           undefined,
@@ -86,7 +86,7 @@ exports[`renders TextInput without label 1`] = `
           Object {
             "color": "#3c3a49",
             "flex": 1,
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 16,
           },
           undefined,

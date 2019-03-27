@@ -201,9 +201,6 @@ fabric.properties
 .AppleDouble
 .LSOverride
 
-# Icon must end with two \r
-Icon
-
 # Thumbnails
 
 # Files that might appear in the root of a volume
@@ -370,10 +367,6 @@ typings/
 
 ### ReactNative.macOS Stack ###
 # General
-
-# Icon must end with two \r
-Icon
-
 
 # Thumbnails
 

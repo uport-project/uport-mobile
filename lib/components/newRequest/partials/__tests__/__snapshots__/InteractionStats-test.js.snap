@@ -28,7 +28,7 @@ exports[`InteractionStats renders nothing if no counter party 1`] = `
         Array [
           Object {
             "color": "rgba(138,155,161,1.0)",
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 13,
           },
           Object {
@@ -74,7 +74,7 @@ exports[`InteractionStats renders short address if no name is present 1`] = `
         Array [
           Object {
             "color": "rgba(138,155,161,1.0)",
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 13,
           },
           Object {
@@ -120,7 +120,7 @@ exports[`InteractionStats renders with "2 times" if exactly 2 as stats 1`] = `
         Array [
           Object {
             "color": "rgba(138,155,161,1.0)",
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 13,
           },
           Object {
@@ -141,7 +141,7 @@ exports[`InteractionStats renders with "2 times" if exactly 2 as stats 1`] = `
           Array [
             Object {
               "color": "rgba(138,155,161,1.0)",
-              "fontFamily": "NunitoSans-Regular",
+              "fontFamily": undefined,
               "fontSize": 13,
             },
             Object {
@@ -185,7 +185,7 @@ exports[`InteractionStats renders with "once" if exactly 1 as stats 1`] = `
         Array [
           Object {
             "color": "rgba(138,155,161,1.0)",
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 13,
           },
           Object {
@@ -206,7 +206,7 @@ exports[`InteractionStats renders with "once" if exactly 1 as stats 1`] = `
           Array [
             Object {
               "color": "rgba(138,155,161,1.0)",
-              "fontFamily": "NunitoSans-Regular",
+              "fontFamily": undefined,
               "fontSize": 13,
             },
             Object {
@@ -250,7 +250,7 @@ exports[`InteractionStats renders you have never if 0 stats 1`] = `
         Array [
           Object {
             "color": "rgba(138,155,161,1.0)",
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 13,
           },
           Object {
@@ -296,7 +296,7 @@ exports[`InteractionStats renders you have never if no stats 1`] = `
         Array [
           Object {
             "color": "rgba(138,155,161,1.0)",
-            "fontFamily": "NunitoSans-Regular",
+            "fontFamily": undefined,
             "fontSize": 13,
           },
           Object {

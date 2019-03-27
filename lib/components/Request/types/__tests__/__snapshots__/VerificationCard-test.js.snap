@@ -2,7 +2,6 @@
 
 exports[`VerificationCard renders a connected VerificationCard as expected 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <VerificationCard
     address={null}
@@ -36,8 +35,10 @@ ShallowWrapper {
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -72,7 +73,7 @@ ShallowWrapper {
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
-                  "fontFamily": "NunitoSans-Light",
+                  "fontFamily": undefined,
                   "fontSize": 14,
                   "lineHeight": 19,
                 }
@@ -101,7 +102,7 @@ ShallowWrapper {
             }
           }
         >
-          <ConectedComponent
+          <NestedInfo
             data={
               Object {
                 "loading": "loading",
@@ -150,7 +151,7 @@ ShallowWrapper {
                 style={
                   Object {
                     "color": "rgba(74,74,74,1)",
-                    "fontFamily": "NunitoSans-Light",
+                    "fontFamily": undefined,
                     "fontSize": 14,
                     "lineHeight": 19,
                   }
@@ -192,7 +193,7 @@ ShallowWrapper {
                   style={
                     Object {
                       "color": "rgba(74,74,74,1)",
-                      "fontFamily": "NunitoSans-Light",
+                      "fontFamily": undefined,
                       "fontSize": 14,
                       "lineHeight": 19,
                     }
@@ -244,7 +245,7 @@ ShallowWrapper {
                   "ellipsizeMode": "tail",
                   "style": Object {
                     "color": "rgba(74,74,74,1)",
-                    "fontFamily": "NunitoSans-Light",
+                    "fontFamily": undefined,
                     "fontSize": 14,
                     "lineHeight": 19,
                   },
@@ -295,7 +296,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": <ConectedComponent
+          "children": <NestedInfo
             data={
               Object {
                 "loading": "loading",
@@ -380,7 +381,7 @@ ShallowWrapper {
                 style={
                   Object {
                     "color": "rgba(74,74,74,1)",
-                    "fontFamily": "NunitoSans-Light",
+                    "fontFamily": undefined,
                     "fontSize": 14,
                     "lineHeight": 19,
                   }
@@ -409,7 +410,7 @@ ShallowWrapper {
               }
             }
           >
-            <ConectedComponent
+            <NestedInfo
               data={
                 Object {
                   "loading": "loading",
@@ -458,7 +459,7 @@ ShallowWrapper {
                   style={
                     Object {
                       "color": "rgba(74,74,74,1)",
-                      "fontFamily": "NunitoSans-Light",
+                      "fontFamily": undefined,
                       "fontSize": 14,
                       "lineHeight": 19,
                     }
@@ -500,7 +501,7 @@ ShallowWrapper {
                     style={
                       Object {
                         "color": "rgba(74,74,74,1)",
-                        "fontFamily": "NunitoSans-Light",
+                        "fontFamily": undefined,
                         "fontSize": 14,
                         "lineHeight": 19,
                       }
@@ -552,7 +553,7 @@ ShallowWrapper {
                     "ellipsizeMode": "tail",
                     "style": Object {
                       "color": "rgba(74,74,74,1)",
-                      "fontFamily": "NunitoSans-Light",
+                      "fontFamily": undefined,
                       "fontSize": 14,
                       "lineHeight": 19,
                     },
@@ -603,7 +604,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": <ConectedComponent
+            "children": <NestedInfo
               data={
                 Object {
                   "loading": "loading",
@@ -661,6 +662,20 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
     "context": Object {
@@ -672,7 +687,27 @@ ShallowWrapper {
         "replaceReducer": [Function],
         "subscribe": [Function],
       },
+      "storeSubscription": Subscription {
+        "listeners": Object {
+          "clear": [Function],
+          "get": [Function],
+          "notify": [Function],
+          "subscribe": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": [Function],
+      },
     },
   },
+  Symbol(enzyme.__childContext__): null,
 }
 `;

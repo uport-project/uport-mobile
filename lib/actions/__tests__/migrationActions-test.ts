@@ -19,21 +19,21 @@ import { addMigrationTarget, runMigrations, startedMigrationStep, completedMigra
 import { MigrationStep, MigrationTarget } from 'uPortMobile/lib/constants/MigrationActionTypes'
 
 it('creates a ADD_MIGRATION_TARGET action', () => {
-  expect(addMigrationTarget(MigrationTarget.PreHD)).toMatchSnapshot()
+  expect(addMigrationTarget(MigrationTarget.Legacy)).toMatchSnapshot()
 })
 
 it('creates a RUN_MIGRATIONS action', () => {
-  expect(runMigrations(MigrationTarget.PreHD)).toMatchSnapshot()
+  expect(runMigrations(MigrationTarget.Legacy)).toMatchSnapshot()
 })
 
 it('creates a STARTED_MIGRATION_STEP action', () => {
-  expect(startedMigrationStep(MigrationStep.IdentityManagerChangeOwner)).toMatchSnapshot()
+  expect(startedMigrationStep(MigrationStep.MigrateLegacy)).toMatchSnapshot()
 })
 
 it('creates a COMPLETED_MIGRATION_STEP action', () => {
-  expect(completedMigrationStep(MigrationStep.IdentityManagerChangeOwner)).toMatchSnapshot()
+  expect(completedMigrationStep(MigrationStep.MigrateLegacy)).toMatchSnapshot()
 })
 
 it('creates a FAILED_MIGRATION_STEP action', () => {
-  expect(failedMigrationStep(MigrationStep.IdentityManagerChangeOwner)).toMatchSnapshot()
+  expect(failedMigrationStep(MigrationStep.MigrateLegacy)).toMatchSnapshot()
 })
