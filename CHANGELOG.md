@@ -1,5 +1,12 @@
 # Change Log
 
+## [v427](https://github.com/uport-project/uport-mobile/tree/v427) (2019-03-27)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v426...v427)
+
+**Merged pull requests:**
+
+- Re-render camera on Appstate change [\#95](https://github.com/uport-project/uport-mobile/pull/95) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v426](https://github.com/uport-project/uport-mobile/tree/v426) (2019-03-27)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v425...v426)
 

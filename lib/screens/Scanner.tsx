@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { Vibration } from 'react-native'
+import { Vibration, AppState } from 'react-native'
 import { Navigator } from 'react-native-navigation'
 import { Screen, Container, Scanner, Device } from '@kancha'
-import Permissions from 'react-native-permissions'
+// import Permissions from 'react-native-permissions'
 
 // Redux Connect
 import { connect } from 'react-redux'
@@ -20,7 +20,7 @@ interface ScannerScreenProps {
 
 interface ScannerScreenState {
   isEnabled: boolean
-  hasCameraPermission: boolean | null
+  appState: string
 }
 
 class ScannerScreen extends React.Component<ScannerScreenProps, ScannerScreenState> {
@@ -34,7 +34,7 @@ class ScannerScreen extends React.Component<ScannerScreenProps, ScannerScreenSta
      */
     this.state = {
       isEnabled: false,
-      hasCameraPermission: null,
+      appState: AppState.currentState,
     }
 
     this.startScanner = this.startScanner.bind(this)
@@ -43,32 +43,16 @@ class ScannerScreen extends React.Component<ScannerScreenProps, ScannerScreenSta
     this.closeScanner = this.closeScanner.bind(this)
   }
 
-  async componentDidMount() {
-    /**
-     * Hide Android tabs as this is just a regular view. To be addressed after nav upgrade
-     */
-    if (Device.isAndroid) {
-      this.props.navigator.toggleTabs({
-        to: 'hidden',
-        animated: false,
-      })
-    }
-
-    /**
-     * Permisison state is not passed through redux anymore
-     */
-    // let status = await Permissions.check('camera')
-    // if (status === 'undetermined') {
-    //   status = await Permissions.request('camera')
-    // }
-    // this.setCamerPermissions(status)
+  componentDidMount() {
+    AppState.addEventListener('change', this._handleAppStateChange)
   }
 
-  setCamerPermissions(status: string) {
-    this.setState({
-      ...this.state,
-      hasCameraPermission: status === 'authorized',
-    })
+  componentWillUnmount() {
+    AppState.removeEventListener('change', this._handleAppStateChange)
+  }
+
+  _handleAppStateChange = (nextAppState: string) => {
+    this.setState({ ...this.state, appState: nextAppState })
   }
 
   /**
@@ -132,12 +116,14 @@ class ScannerScreen extends React.Component<ScannerScreenProps, ScannerScreenSta
     return (
       <Screen statusBarHidden config={Screen.Config.NoScroll} type={Screen.Types.Primary}>
         <Container flex={1}>
-          <Scanner
-            isEnabled={this.state.isEnabled}
-            onBarcodeRead={this.onBarCodeRead}
-            startScanner={this.startScanner}
-            closeScanner={this.closeScanner}
-          />
+          {this.state.appState === 'active' && (
+            <Scanner
+              isEnabled={this.state.isEnabled}
+              onBarcodeRead={this.onBarCodeRead}
+              startScanner={this.startScanner}
+              closeScanner={this.closeScanner}
+            />
+          )}
         </Container>
       </Screen>
     )
