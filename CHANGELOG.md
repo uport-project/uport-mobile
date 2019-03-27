@@ -1,5 +1,16 @@
 # Change Log
 
+## [v424](https://github.com/uport-project/uport-mobile/tree/v424) (2019-03-27)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v423...v424)
+
+**Merged pull requests:**
+
+- Fix for metrics [\#92](https://github.com/uport-project/uport-mobile/pull/92) ([simonas-notcat](https://github.com/simonas-notcat))
+- Showing authorization prompt when sharing claims [\#91](https://github.com/uport-project/uport-mobile/pull/91) ([simonas-notcat](https://github.com/simonas-notcat))
+- Switch identity UI [\#90](https://github.com/uport-project/uport-mobile/pull/90) ([jasonhealy](https://github.com/jasonhealy))
+- Info notification [\#89](https://github.com/uport-project/uport-mobile/pull/89) ([simonas-notcat](https://github.com/simonas-notcat))
+- Upgraded scanner component [\#84](https://github.com/uport-project/uport-mobile/pull/84) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v423](https://github.com/uport-project/uport-mobile/tree/v423) (2019-03-22)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v422...v423)
 

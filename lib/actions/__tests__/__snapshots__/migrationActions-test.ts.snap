@@ -3,7 +3,7 @@
 exports[`creates a ADD_MIGRATION_TARGET action 1`] = `
 Object {
   "_backup": true,
-  "target": "PreHD",
+  "target": "Legacy",
   "type": "ADD_MIGRATION_TARGET",
 }
 `;
@@ -11,7 +11,7 @@ Object {
 exports[`creates a COMPLETED_MIGRATION_STEP action 1`] = `
 Object {
   "_backup": true,
-  "step": "IdentityManagerChangeOwner",
+  "step": "MigrateLegacy",
   "type": "COMPLETED_MIGRATION_STEP",
 }
 `;
@@ -19,14 +19,14 @@ Object {
 exports[`creates a FAILED_MIGRATION_STEP action 1`] = `
 Object {
   "_backup": true,
-  "step": "IdentityManagerChangeOwner",
+  "step": "MigrateLegacy",
   "type": "FAILED_MIGRATION_STEP",
 }
 `;
 
 exports[`creates a RUN_MIGRATIONS action 1`] = `
 Object {
-  "target": "PreHD",
+  "target": "Legacy",
   "type": "RUN_MIGRATIONS",
 }
 `;
@@ -34,7 +34,7 @@ Object {
 exports[`creates a STARTED_MIGRATION_STEP action 1`] = `
 Object {
   "_backup": true,
-  "step": "IdentityManagerChangeOwner",
+  "step": "MigrateLegacy",
   "type": "STARTED_MIGRATION_STEP",
 }
 `;

@@ -34,24 +34,17 @@ import {
   targetRecipes,
   migrationScreens,
 } from 'uPortMobile/lib/constants/MigrationActionTypes'
-import { canSignFor, hasWorkingSeed } from 'uPortMobile/lib/sagas/keychain'
-import { isFullyHD, isHD } from 'uPortMobile/lib/selectors/chains'
+import { canSignFor } from 'uPortMobile/lib/sagas/keychain'
+import { isHD } from 'uPortMobile/lib/selectors/chains'
 import {
   currentAddress,
-  migrateableIdentities,
-  hasMainnetAccounts,
-  currentIdentityJS,
+  validPrimaryIdentities,
 } from 'uPortMobile/lib/selectors/identities'
 import { migrationStepStatus, migrationTargets, pendingMigrations } from 'uPortMobile/lib/selectors/migrations'
 import { NavigationActions } from 'uPortMobile/lib/utilities/NavigationActions'
-import { hasAttestations } from '../selectors/attestations'
-import CleanUpAfterMissingSeed from './migrations/CleanUpAfterMissingSeed'
-import IdentityManagerChangeOwner from './migrations/IdentityManagerChangeOwner'
 import MigrateLegacy from './migrations/MigrateLegacy'
-import UpdatePreHDRootToHD from './migrations/UpdatePreHDRootToHD'
-import UportRegistryDDORefresh from './migrations/UportRegistryDDORefresh'
-import { hdRootAddress } from '../selectors/hdWallet'
 import { Alert } from 'react-native'
+import { switchIdentity } from '../actions/uportActions';
 
 export function* checkIfAbleToSign(): any {
   const address = yield select(currentAddress)
@@ -59,45 +52,47 @@ export function* checkIfAbleToSign(): any {
   return yield call(canSignFor, address)
 }
 
-export function* checkForLegacy(): any {
-  const migrateable = yield select(migrateableIdentities)
-  return migrateable.length > 0
-}
-
 export function* alert(title: string, message: string) {
   yield call(delay, 500)
   yield call([Alert, Alert.alert], title, message)
 }
 
-export function* checkup(): any {
+export function* primaryAddress() {
   const address = yield select(currentAddress)
   if (!address) return
-  // console.log('id', (yield select(currentIdentityJS)))
-  if (yield call(checkIfAbleToSign)) {
-    if (yield call(checkForLegacy)) {
-      // We define highValue as having mainnet accounts and attestations
-      const highValue = (yield select(hasAttestations)) || (yield select(hasMainnetAccounts))
-      if (highValue) {
-        const fullHD = yield select(isFullyHD)
-        if (!fullHD) yield put(addMigrationTarget(MigrationTarget.PreHD))
+  if (address.match(/did:ethr:0x[0-9a-fA-F]{40}/)) {
+    return address
+  } else {
+    const others = yield select(validPrimaryIdentities)
+    if (others.length > 0) {
+      yield put(switchIdentity(others[0]))
+      return others[0]
+    }
+    return address
+  }
+}
+
+
+export function* checkup(): any {
+  const address = yield call(primaryAddress)
+  if (!address) return
+  if (!address.match(/did:ethr:0x[0-9a-fA-F]{40}/)) {
+    yield put(addMigrationTarget(MigrationTarget.Legacy))
+  } else {
+    if (!(yield call(checkIfAbleToSign))) {
+      const hd = yield select(isHD, address)
+      if (hd) {
+        yield put(addMigrationTarget(MigrationTarget.RecoverSeed))
       } else {
         yield put(addMigrationTarget(MigrationTarget.Legacy))
       }
     }
-  } else {
-    const hd = yield select(isHD, address)
-    if (hd) {
-      yield put(addMigrationTarget(MigrationTarget.RecoverSeed))
-    } else {
-      yield put(addMigrationTarget(MigrationTarget.Legacy))
-    }
   }
   const pending = yield select(pendingMigrations)
-  // console.log('pending migrations', pending)
   if (pending.length > 0) {
     const target = pending[0]
+    yield call(delay, 1000)
     if (migrationScreens[target]) {
-      yield call(delay, 1000)
       yield call(NavigationActions.push, {
         screen: migrationScreens[target],
         animationType: 'slide-up',
@@ -135,14 +130,6 @@ export function* runMigrations({ target }: TargetAction): any {
 
 export function* runImplementationStep(step: MigrationStep): any {
   switch (step) {
-    case MigrationStep.IdentityManagerChangeOwner:
-      return yield call(IdentityManagerChangeOwner)
-    case MigrationStep.UpdatePreHDRootToHD:
-      return yield call(UpdatePreHDRootToHD)
-    case MigrationStep.UportRegistryDDORefresh:
-      return yield call(UportRegistryDDORefresh)
-    case MigrationStep.CleanUpAfterMissingSeed:
-      return yield call(CleanUpAfterMissingSeed)
     case MigrationStep.MigrateLegacy:
       return yield call(MigrateLegacy)
   }
@@ -155,7 +142,6 @@ export function* performStep(step: MigrationStep): any {
   yield put(startWorking(step))
   try {
     const success = yield call(runImplementationStep, step)
-    // console.log(step, `success: ${success}`)
     if (success) {
       yield put(stopWorking(step))
       yield put(completedMigrationStep(step))
