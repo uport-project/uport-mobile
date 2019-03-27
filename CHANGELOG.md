@@ -1,5 +1,12 @@
 # Change Log
 
+## [v426](https://github.com/uport-project/uport-mobile/tree/v426) (2019-03-27)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v425...v426)
+
+**Merged pull requests:**
+
+- Fix for tx card function params [\#94](https://github.com/uport-project/uport-mobile/pull/94) ([simonas-notcat](https://github.com/simonas-notcat))
+
 ## [v425](https://github.com/uport-project/uport-mobile/tree/v425) (2019-03-27)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v424...v425)
 
