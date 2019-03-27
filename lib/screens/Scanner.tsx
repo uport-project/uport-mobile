@@ -115,7 +115,7 @@ class ScannerScreen extends React.Component<ScannerScreenProps, ScannerScreenSta
   }
 
   popAndroidScannerView() {
-    this.props.navigator.pop()
+    this.props.navigator.dismissModal()
   }
 
   closeScanner() {
