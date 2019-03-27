@@ -1,5 +1,12 @@
 # Change Log
 
+## [v425](https://github.com/uport-project/uport-mobile/tree/v425) (2019-03-27)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v424...v425)
+
+**Merged pull requests:**
+
+- Bump release version to 1.6.1 [\#93](https://github.com/uport-project/uport-mobile/pull/93) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v424](https://github.com/uport-project/uport-mobile/tree/v424) (2019-03-27)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v423...v424)
 
