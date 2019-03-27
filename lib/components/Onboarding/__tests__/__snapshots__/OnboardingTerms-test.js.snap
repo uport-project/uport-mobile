@@ -92,16 +92,9 @@ exports[`OnboardingTerms renders Onboarding Terms screen 1`] = `
       }
     >
       <RCTScrollView
-        contentContainerStyle={Object {}}
         contentInset={
           Object {
             "bottom": 0,
-          }
-        }
-        contentOffset={
-          Object {
-            "x": 0,
-            "y": 0,
           }
         }
         getTextInputRefs={[Function]}

@@ -26,59 +26,59 @@ const initialState : MigrationState = {
 }
 
 const populated : MigrationState = {
-  targets: [MigrationTarget.PreHD],
+  targets: [MigrationTarget.Legacy],
   steps: {}
 }
-populated.steps[MigrationStep[MigrationStep.IdentityManagerChangeOwner]] = MigrationStatus.Started
+populated.steps[MigrationStep[MigrationStep.MigrateLegacy]] = MigrationStatus.Started
 
 describe('addMigrationTarget', () => {
   it('adds a target', () => {
-    expect(reducer(initialState, addMigrationTarget(MigrationTarget.PreHD))).toMatchSnapshot()
+    expect(reducer(initialState, addMigrationTarget(MigrationTarget.Legacy))).toMatchSnapshot()
   })
 
   it('does not add an existing target', () => {
-    expect(reducer(populated, addMigrationTarget(MigrationTarget.PreHD))).toEqual(populated)
+    expect(reducer(populated, addMigrationTarget(MigrationTarget.Legacy))).toEqual(populated)
   })
 })
 
 describe('startedMigrationStep', () => {
   it('starts a step', () => {
-    expect(reducer(initialState, startedMigrationStep(MigrationStep.IdentityManagerChangeOwner))).toMatchSnapshot()
+    expect(reducer(initialState, startedMigrationStep(MigrationStep.MigrateLegacy))).toMatchSnapshot()
   })
 
   it('does not a step if already started', () => {
-    expect(reducer(populated, startedMigrationStep(MigrationStep.IdentityManagerChangeOwner))).toEqual(populated)
+    expect(reducer(populated, startedMigrationStep(MigrationStep.MigrateLegacy))).toEqual(populated)
   })
 
   it('should start an additional step', () => {
-    expect(reducer(populated, startedMigrationStep(MigrationStep.UpdatePreHDRootToHD))).toMatchSnapshot()
+    expect(reducer(populated, startedMigrationStep(MigrationStep.MigrateLegacy))).toMatchSnapshot()
   })
 })
 
 describe('completedMigrationStep', () => {
   it('completes a step', () => {
-    expect(reducer(initialState, completedMigrationStep(MigrationStep.IdentityManagerChangeOwner))).toMatchSnapshot()
+    expect(reducer(initialState, completedMigrationStep(MigrationStep.MigrateLegacy))).toMatchSnapshot()
   })
 
   it('completes a step if already started', () => {
-    expect(reducer(populated, completedMigrationStep(MigrationStep.IdentityManagerChangeOwner)).steps[MigrationStep.IdentityManagerChangeOwner]).toEqual(MigrationStatus.Completed)
+    expect(reducer(populated, completedMigrationStep(MigrationStep.MigrateLegacy)).steps[MigrationStep.MigrateLegacy]).toEqual(MigrationStatus.Completed)
   })
 
   it('should complete an additional step', () => {
-    expect(reducer(populated, completedMigrationStep(MigrationStep.UpdatePreHDRootToHD))).toMatchSnapshot()
+    expect(reducer(populated, completedMigrationStep(MigrationStep.MigrateLegacy))).toMatchSnapshot()
   })
 })
 
 describe('failedMigrationStep', () => {
   it('fails a step', () => {
-    expect(reducer(initialState, failedMigrationStep(MigrationStep.IdentityManagerChangeOwner))).toMatchSnapshot()
+    expect(reducer(initialState, failedMigrationStep(MigrationStep.MigrateLegacy))).toMatchSnapshot()
   })
 
   it('fails a step if already started', () => {
-    expect(reducer(populated, failedMigrationStep(MigrationStep.IdentityManagerChangeOwner)).steps[MigrationStep.IdentityManagerChangeOwner]).toEqual(MigrationStatus.Error)
+    expect(reducer(populated, failedMigrationStep(MigrationStep.MigrateLegacy)).steps[MigrationStep.MigrateLegacy]).toEqual(MigrationStatus.Error)
   })
 
   it('should fail an additional step', () => {
-    expect(reducer(populated, failedMigrationStep(MigrationStep.UpdatePreHDRootToHD))).toMatchSnapshot()
+    expect(reducer(populated, failedMigrationStep(MigrationStep.MigrateLegacy))).toMatchSnapshot()
   })
 })

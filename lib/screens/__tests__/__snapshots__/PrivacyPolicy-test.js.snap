@@ -35,16 +35,9 @@ exports[`renders Settings screen with 1`] = `
     }
   >
     <RCTScrollView
-      contentContainerStyle={Object {}}
       contentInset={
         Object {
           "bottom": 0,
-        }
-      }
-      contentOffset={
-        Object {
-          "x": 0,
-          "y": 0,
         }
       }
       getTextInputRefs={[Function]}

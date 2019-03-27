@@ -18,11 +18,12 @@
 import { expectSaga } from 'redux-saga-test-plan'
 import { select, call } from 'redux-saga/effects'
 import { migrate } from '../MigrateLegacy'
+import { createAttestationToken } from 'uPortMobile/lib/sagas/jwt'
 import { MigrationStep } from 'uPortMobile/lib/constants/MigrationActionTypes'
 import { saveMessage } from 'uPortMobile/lib/actions/processStatusActions'
 import { resetHub } from 'uPortMobile/lib/actions/hubActions'
 import { subAccounts, currentAddress, ownClaimsMap } from 'uPortMobile/lib/selectors/identities'
-import { updateIdentity, storeIdentity } from 'uPortMobile/lib/actions/uportActions'
+import { updateIdentity, storeIdentity, storeConnection, storeExternalUport } from 'uPortMobile/lib/actions/uportActions'
 import {
   createIdentityKeyPair,
   canSignFor,
@@ -33,7 +34,9 @@ import {
 } from '../../keychain'
 import { networkSettings } from 'uPortMobile/lib/selectors/chains'
 import { hdRootAddress } from 'uPortMobile/lib/selectors/hdWallet'
+import { hasAttestations } from 'uPortMobile/lib/selectors/attestations';
 import { resetHDWallet } from 'uPortMobile/lib/actions/HDWalletActions'
+import { handleURL } from 'uPortMobile/lib/actions/requestActions';
 
 const step = MigrationStep.MigrateLegacy
 
@@ -87,6 +90,7 @@ describe('MigrateLegacy', () => {
                 [call(addressFor, 0, 0), { address: hdroot, publicKey }],
                 [call(encryptionPublicKey, { idIndex: 0, actIndex: 0 }), encPublicKey],
                 [select(ownClaimsMap), own],
+                [select(hasAttestations), false],
                 [select(subAccounts, legacyDID), []],
               ])
               .put(
@@ -128,6 +132,7 @@ describe('MigrateLegacy', () => {
                     [call(addressFor, 0, 0), { address: hdroot, publicKey }],
                     [call(encryptionPublicKey, { idIndex: 0, actIndex: 0 }), encPublicKey],
                     [select(ownClaimsMap), own],
+                    [select(hasAttestations), false],
                     [select(subAccounts, legacyDID), accounts],
                     [call(canSignFor, 'account1'), true],
                     [call(canSignFor, 'account2'), true],
@@ -175,6 +180,7 @@ describe('MigrateLegacy', () => {
                     [call(addressFor, 0, 0), { address: hdroot, publicKey }],
                     [call(encryptionPublicKey, { idIndex: 0, actIndex: 0 }), encPublicKey],
                     [select(ownClaimsMap), own],
+                    [select(hasAttestations), false],
                     [select(subAccounts, legacyDID), accounts],
                     [call(canSignFor, 'account1'), false],
                     [call(canSignFor, 'account2'), false],
@@ -233,6 +239,7 @@ describe('MigrateLegacy', () => {
                 [call(hasWorkingSeed), false],
                 [select(hdRootAddress), hdroot],
                 [select(networkSettings), oldId],
+                [select(hasAttestations), false],
                 [call(createIdentityKeyPair), { address: newDID }],
                 [select(ownClaimsMap), own],
                 [select(subAccounts, legacyDID), []],
@@ -261,6 +268,7 @@ describe('MigrateLegacy', () => {
                 [call(hasWorkingSeed), false],
                 [select(hdRootAddress), undefined],
                 [select(networkSettings), oldId],
+                [select(hasAttestations), false],
                 [call(createIdentityKeyPair), { address: newDID }],
                 [select(ownClaimsMap), own],
                 [select(subAccounts, legacyDID), []],
@@ -290,6 +298,7 @@ describe('MigrateLegacy', () => {
                     [select(hdRootAddress), undefined],
                     [call(createIdentityKeyPair), { address: newDID }],
                     [select(ownClaimsMap), own],
+                    [select(hasAttestations), false],
                     [select(subAccounts, legacyDID), accounts],
                     [call(canSignFor, 'account1'), true],
                     [call(canSignFor, 'account2'), true],
@@ -323,6 +332,7 @@ describe('MigrateLegacy', () => {
                     [select(networkSettings), oldId],
                     [call(createIdentityKeyPair), { address: newDID }],
                     [select(ownClaimsMap), own],
+                    [select(hasAttestations), false],
                     [select(subAccounts, legacyDID), accounts],
                     [call(canSignFor, 'account1'), false],
                     [call(canSignFor, 'account2'), false],
@@ -371,6 +381,7 @@ describe('MigrateLegacy', () => {
               [call(hasWorkingSeed), true],
               [select(currentAddress), legacyDID],
               [select(networkSettings), oldId],
+              [select(hasAttestations), false],
               [call(addressFor, 0, 0), { address: hdroot, publicKey }],
               [call(encryptionPublicKey, { idIndex: 0, actIndex: 0 }), encPublicKey],
               [select(ownClaimsMap), own],
@@ -391,15 +402,53 @@ describe('MigrateLegacy', () => {
                 securityLevel: DEFAULT_LEVEL,
               }),
             )
-            .put(
-              updateIdentity(legacyDID, {
-                parent: newDID,
-              }),
-            )
             .put(resetHub())
             .put(saveMessage(step, 'New mainnet identity is created'))
             .returns(true)
             .run()
+        })
+
+        describe('with attestations', () => {
+          it('should replace root Identity using hdroot as device key', () => {
+            const OWNS = 'OWNS'
+            return expectSaga(migrate)
+              .provide([
+                [call(createAttestationToken, legacyDID, `did:ethr:${hdroot}`, { owns: legacyDID }), OWNS],
+                [call(canSignFor, legacyDID), true],
+                [call(hasWorkingSeed), true],
+                [select(currentAddress), legacyDID],
+                [select(networkSettings), oldId],
+                [select(hasAttestations), true],
+                [call(addressFor, 0, 0), { address: hdroot, publicKey }],
+                [call(encryptionPublicKey, { idIndex: 0, actIndex: 0 }), encPublicKey],
+                [select(ownClaimsMap), own],
+                [select(subAccounts, legacyDID), []],
+              ])
+              .put(
+                storeIdentity({
+                  address: newDID,
+                  network: 'mainnet',
+                  deviceAddress: hdroot,
+                  hexaddress: hdroot,
+                  recoveryType: 'seed',
+                  signerType: 'KeyPair',
+                  hdindex: 0,
+                  encPublicKey,
+                  publicKey,
+                  own,
+                  securityLevel: DEFAULT_LEVEL,
+                }),
+              )
+              .call(createAttestationToken, legacyDID, newDID, { owns: legacyDID })
+              .put(handleURL(`me.uport:req/${OWNS}`, { popup: false }))
+              .put(storeExternalUport(legacyDID, own))
+              .put(storeConnection(newDID, 'knows', legacyDID))
+              .put(resetHub())
+              .put(saveMessage(step, 'New mainnet identity is created'))
+              .returns(true)
+              .run()
+          })
+
         })
 
         describe('with sub accounts', () => {
@@ -411,6 +460,7 @@ describe('MigrateLegacy', () => {
                   [call(hasWorkingSeed), true],
                   [select(currentAddress), legacyDID],
                   [select(networkSettings), oldId],
+                  [select(hasAttestations), false],
                   [call(addressFor, 0, 0), { address: hdroot, publicKey }],
                   [call(encryptionPublicKey, { idIndex: 0, actIndex: 0 }), encPublicKey],
                   [select(ownClaimsMap), own],
@@ -434,11 +484,6 @@ describe('MigrateLegacy', () => {
                     securityLevel: DEFAULT_LEVEL,
                   }),
                 )
-                .put(
-                  updateIdentity(legacyDID, {
-                    parent: newDID,
-                  }),
-                )
                 .put(updateIdentity('account1', { parent: newDID }))
                 .put(updateIdentity('account2', { parent: newDID }))
                 .put(updateIdentity('account3', { parent: newDID }))
@@ -457,6 +502,7 @@ describe('MigrateLegacy', () => {
                   [call(hasWorkingSeed), true],
                   [select(currentAddress), legacyDID],
                   [select(networkSettings), oldId],
+                  [select(hasAttestations), false],
                   [call(addressFor, 0, 0), { address: hdroot, publicKey }],
                   [call(encryptionPublicKey, { idIndex: 0, actIndex: 0 }), encPublicKey],
                   [select(ownClaimsMap), own],
@@ -478,11 +524,6 @@ describe('MigrateLegacy', () => {
                     publicKey,
                     own,
                     securityLevel: DEFAULT_LEVEL,
-                  }),
-                )
-                .put(
-                  updateIdentity(legacyDID, {
-                    parent: newDID,
                   }),
                 )
                 .put(
@@ -516,6 +557,7 @@ describe('MigrateLegacy', () => {
               [call(canSignFor, legacyDID), true],
               [call(hasWorkingSeed), false],
               [select(hdRootAddress), hdroot],
+              [select(hasAttestations), false],
               [select(networkSettings), oldId],
               [call(createIdentityKeyPair), { address: newDID }],
               [select(ownClaimsMap), own],
@@ -524,11 +566,6 @@ describe('MigrateLegacy', () => {
             .put(resetHDWallet())
             .call(createIdentityKeyPair)
             .put(updateIdentity(newDID, { own }))
-            .put(
-              updateIdentity(legacyDID, {
-                parent: newDID,
-              }),
-            )
             .put(resetHub())
             .put(saveMessage(step, 'New mainnet identity is created'))
             .returns(true)
@@ -544,17 +581,13 @@ describe('MigrateLegacy', () => {
               [call(hasWorkingSeed), false],
               [select(hdRootAddress), undefined],
               [select(networkSettings), oldId],
+              [select(hasAttestations), false],
               [call(createIdentityKeyPair), { address: newDID }],
               [select(ownClaimsMap), own],
               [select(subAccounts, legacyDID), []],
             ])
             .call(createIdentityKeyPair)
             .put(updateIdentity(newDID, { own }))
-            .put(
-              updateIdentity(legacyDID, {
-                parent: newDID,
-              }),
-            )
             .put(resetHub())
             .put(saveMessage(step, 'New mainnet identity is created'))
             .returns(true)
@@ -571,6 +604,7 @@ describe('MigrateLegacy', () => {
                   [call(hasWorkingSeed), false],
                   [select(hdRootAddress), undefined],
                   [select(networkSettings), oldId],
+                  [select(hasAttestations), false],
                   [call(createIdentityKeyPair), { address: newDID }],
                   [select(ownClaimsMap), own],
                   [select(subAccounts, legacyDID), accounts],
@@ -580,11 +614,6 @@ describe('MigrateLegacy', () => {
                 ])
                 .call(createIdentityKeyPair)
                 .put(updateIdentity(newDID, { own }))
-                .put(
-                  updateIdentity(legacyDID, {
-                    parent: newDID,
-                  }),
-                )
                 .put(updateIdentity('account1', { parent: newDID }))
                 .put(updateIdentity('account2', { parent: newDID }))
                 .put(updateIdentity('account3', { parent: newDID }))
@@ -603,6 +632,7 @@ describe('MigrateLegacy', () => {
                   [call(hasWorkingSeed), false],
                   [select(hdRootAddress), undefined],
                   [select(networkSettings), oldId],
+                  [select(hasAttestations), false],
                   [call(createIdentityKeyPair), { address: newDID }],
                   [select(ownClaimsMap), own],
                   [select(subAccounts, legacyDID), accounts],
@@ -612,11 +642,6 @@ describe('MigrateLegacy', () => {
                 ])
                 .call(createIdentityKeyPair)
                 .put(updateIdentity(newDID, { own }))
-                .put(
-                  updateIdentity(legacyDID, {
-                    parent: newDID,
-                  }),
-                )
                 .put(
                   updateIdentity('account1', {
                     disabled: true,
