@@ -11,9 +11,6 @@ registerScreens({ store, Provider })
 
 const App = () => {
   Navigation.events().registerAppLaunchedListener(() => {
-    Navigation.setDefaultOptions({
-      topBar: { visible: true },
-    })
     startOnboarding()
     // startMain()
   })

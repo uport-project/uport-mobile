@@ -2,9 +2,32 @@ import { Navigation } from 'react-native-navigation'
 import SCREENS from '../screens/Screens'
 
 export const startOnboarding = () => {
+  Navigation.setDefaultOptions({
+    topBar: {
+      drawBehind: true,
+      background: {
+        color: 'transparent',
+      },
+      buttonColor: 'white',
+      backButton: {
+        title: 'Back',
+        color: 'white',
+        visible: true,
+      },
+    },
+  })
+
   Navigation.setRoot({
     root: {
-      component: { name: SCREENS.Welcome },
+      stack: {
+        children: [
+          {
+            component: {
+              name: SCREENS.Welcome,
+            },
+          },
+        ],
+      },
     },
   })
 }
