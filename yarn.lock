@@ -562,13 +562,6 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.0.tgz#4c48fed958d6dcf9487195a0ef6456d5f6e0163a"
   integrity sha512-eItQyV43bj4rR3JPV0Skpl1SncRCdziTEK9/v8VwXmV6d/qOUO8/EuWeHBbCZcsfSHfzI5UyMJLCSXtxxznyZg==
 
-"@types/react-native-navigation@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@types/react-native-navigation/-/react-native-navigation-2.0.0.tgz#9a2353be6b31a864336e8fef4e3be305c3ee1422"
-  integrity sha512-/TJjCHETkiJSNjsI4IZsL1SSl2CHVGSx0z1PcHVNqyBPa0CiMU8rQESOJeUQecUROAiJHef+naqKuBokuNONBA==
-  dependencies:
-    react-native-navigation "*"
-
 "@types/react-native-permissions@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@types/react-native-permissions/-/react-native-permissions-1.1.1.tgz#297f39ed19234045e1dc1cd0abd85b86bdf9c606"
@@ -7867,7 +7860,7 @@ react-native-keyboard-aware-scrollview@^2.0.0:
   resolved "https://registry.yarnpkg.com/react-native-keyboard-aware-scrollview/-/react-native-keyboard-aware-scrollview-2.0.0.tgz#a7e2cc31b7230893db5dc05eb6fed3f358500a55"
   integrity sha512-VAkwrmNl00bjTLXcvB3EMxuJ06kEBVRfpUq61X0Wl6Gdy1iSQpv04dVbZZ3KIflA9VhAlE0HFPltLLXIGjf2Ug==
 
-react-native-navigation@*, react-native-navigation@^2.16.0:
+react-native-navigation@^2.16.0:
   version "2.16.0"
   resolved "https://registry.yarnpkg.com/react-native-navigation/-/react-native-navigation-2.16.0.tgz#017e4c6ad58aa979f75742abf9d7dedda55cd268"
   integrity sha512-2vVsaIxxNYRuGmIvrhGo0lGGHA0JCKEcHTmsY6RoxAmQ4fUuz4/OGmKu12yDjduQWOOYTTWw4J2YT9ZYmDOVag==

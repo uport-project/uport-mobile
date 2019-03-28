@@ -10,7 +10,7 @@ import { segmentId } from 'uPortMobile/lib/selectors/identities'
 import TESTID from 'uPortMobile/lib/e2e/testIDs'
 
 interface WelcomeProps {
-  navigator: Navigator
+  navigator: any
   trackSegment: (event: any) => any
 }
 

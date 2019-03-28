@@ -17,7 +17,7 @@
  * 
  ***/
 
-import { Navigation, ScreenVisibilityListener as RNNScreenVisibilityListener } from 'react-native-navigation'
+import { Navigation } from 'react-native-navigation'
 import requestQueue from './utilities/requestQueue'
 import { Provider } from 'react-redux'
 import store from './store/store'
@@ -35,22 +35,22 @@ import console = require('console');
 const isIOS = Platform.OS === 'ios' ? true : false
 
 export function start() {
-  registerScreens(store, Provider)
+  // registerScreens(store, Provider)
   UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true)
 }
 
 // Actual initialization is done by startupSaga during initialization of `store`.
 // When DB is ready it calls one of these.
 export function startMain() {
-  startAppModernUI()
+  // startAppModernUI()
   //startLegacyApp()
 }
 
-export const screenVisibilityListener = new RNNScreenVisibilityListener({
-  didAppear: async (event: any) => {
-    store.dispatch(screen(event.screen, event))
-  },
-})
+// export const screenVisibilityListener = new RNNScreenVisibilityListener({
+//   didAppear: async (event: any) => {
+//     store.dispatch(screen(event.screen, event))
+//   },
+// })
 
 // Add GUI startup tasks here for already onboarded user
 export async function startAppModernUI() {
@@ -155,18 +155,18 @@ export async function startAppModernUI() {
    * The typings are out of date so we need to cast them as any for now
    *
    */
-  const StartTabBasedApp: any = Navigation.startTabBasedApp
+  // const StartTabBasedApp: any = Navigation.startTabBasedApp
 
-  StartTabBasedApp({
-    tabs: commonPlatformOptions.tabs,
-    tabsStyle: IOSOptions.tabsStyle,
-    drawer: isIOS ? IOSOptions.drawer : AndroidOptions.drawer,
-    appStyle: isIOS ? {} : AndroidOptions.appStyle,
-    animationType: 'fade',
-  })
+  // StartTabBasedApp({
+  //   tabs: commonPlatformOptions.tabs,
+  //   tabsStyle: IOSOptions.tabsStyle,
+  //   drawer: isIOS ? IOSOptions.drawer : AndroidOptions.drawer,
+  //   appStyle: isIOS ? {} : AndroidOptions.appStyle,
+  //   animationType: 'fade',
+  // })
 
-  screenVisibilityListener.register()
-  requestQueue((url: string) => store.dispatch(handleURL(url)))
+  // screenVisibilityListener.register()
+  // requestQueue((url: string) => store.dispatch(handleURL(url)))
 }
 
 // Add GUI startup tasks here for already onboarded user
@@ -199,13 +199,13 @@ export async function startOnboarding() {
     }
   }
 
-  Navigation.startSingleScreenApp({
-    screen: {
-      screen: startupScreen,
-      navigatorStyle: {
-        navBarHidden: true,
-      },
-    },
-    animationType: 'fade',
-  })
+  // Navigation.startSingleScreenApp({
+  //   screen: {
+  //     screen: startupScreen,
+  //     navigatorStyle: {
+  //       navBarHidden: true,
+  //     },
+  //   },
+  //   animationType: 'fade',
+  // })
 }
