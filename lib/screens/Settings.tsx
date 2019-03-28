@@ -52,7 +52,7 @@ export class Settings extends React.Component<SettingsProps> {
       if (event.id === 'scan' && Device.isAndroid) {
         // this is the same id field from the static navigatorButtons definition
         this.props.navigator.showModal({
-          screen: 'uport.scanner',
+          screen: 'screen.Scanner',
           navigatorStyle: {
             navBarHidden: true,
           },
