@@ -1,5 +1,12 @@
 # Change Log
 
+## [v428](https://github.com/uport-project/uport-mobile/tree/v428) (2019-03-28)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v427...v428)
+
+**Merged pull requests:**
+
+- Fixed scanner screen name [\#96](https://github.com/uport-project/uport-mobile/pull/96) ([simonas-notcat](https://github.com/simonas-notcat))
+
 ## [v427](https://github.com/uport-project/uport-mobile/tree/v427) (2019-03-27)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v426...v427)
 
