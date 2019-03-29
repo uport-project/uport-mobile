@@ -106,7 +106,9 @@ class ScannerScreen extends React.Component<ScannerScreenProps, ScannerScreenSta
     if (Device.isIOS) {
       this.toggleIOSDrawer()
     } else {
-      this.popAndroidScannerView()
+      setTimeout(() => {
+        this.popAndroidScannerView()
+      }, 250)
     }
 
     this.stopScannerTimer()
