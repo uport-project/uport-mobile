@@ -1,13 +1,22 @@
 import * as React from 'react'
 import { Image } from 'react-native'
 import { Navigator } from 'react-native-navigation'
+import { connect } from 'react-redux'
 import { Screen, Container, Button, Text, Images } from '@kancha'
+
+import { track } from 'uPortMobile/lib/actions/metricActions'
+import { segmentId } from 'uPortMobile/lib/selectors/identities'
 
 interface WelcomeProps {
   navigator: Navigator
+  trackSegment: (event: any) => any
 }
 
 class Welcome extends React.Component<WelcomeProps> {
+  componentDidMount() {
+    this.props.trackSegment('Start')
+  }
+
   render() {
     return (
       <Screen
@@ -46,6 +55,21 @@ class Welcome extends React.Component<WelcomeProps> {
         </Container>
       </Screen>
     )
+  }
+}
+
+const mapStateToProps = (state: any, ownProps: any) => {
+  return {
+    ...ownProps,
+    segmentId: segmentId(state),
+  }
+}
+
+export const mapDispatchToProps = (dispatch: any) => {
+  return {
+    trackSegment: (event: any) => {
+      dispatch(track(`Onboarding ${event}`))
+    },
   }
 }
 
