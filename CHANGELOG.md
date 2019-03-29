@@ -1,7 +1,7 @@
 # Change Log
 
-## [v430](https://github.com/uport-project/uport-mobile/tree/v430) (2019-03-29)
-[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v430...v430)
+## [v431](https://github.com/uport-project/uport-mobile/tree/v431) (2019-03-29)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v430...v431)
 
 **Merged pull requests:**
 
