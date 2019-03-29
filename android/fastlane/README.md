@@ -26,6 +26,11 @@ Runs all the tests
 fastlane android local
 ```
 run a local debug build
+### android internal
+```
+fastlane android internal
+```
+Submit a new Release Build to Google Play Internal testing channel
 ### android alpha
 ```
 fastlane android alpha
