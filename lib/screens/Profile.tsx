@@ -4,7 +4,7 @@ import { TouchableOpacity, Share } from 'react-native'
 import { Screen, Container, Text, Section, ListItem, Button, Theme, Icon } from '@kancha'
 import Avatar from 'uPortMobile/lib/components/shared/Avatar'
 
-import { Navigator } from 'react-native-navigation'
+import { Navigation } from 'react-native-navigation'
 import { wei2eth } from 'uPortMobile/lib/helpers/conversions'
 import { currentAddress, ownClaims, myAccounts, allIdentities } from 'uPortMobile/lib/selectors/identities'
 import { externalProfile } from 'uPortMobile/lib/selectors/requests'
@@ -80,7 +80,6 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
       editMode: false,
     }
 
-    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this))
     this.photoSelection = this.photoSelection.bind(this)
   }
 
@@ -172,7 +171,9 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
         <Container flex={3} alignItems={'center'}>
           <Button
             block={Button.Block.Clear}
-            onPress={() => this.props.navigator.switchToTab({ tabIndex: 0 })}
+            onPress={() => {
+              ''
+            }}
             buttonText={Mori.count(this.props.verifications)}
           />
           <Container paddingTop={5}>
@@ -257,19 +258,22 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
                 key={account.address}
                 contentRight={account.balance}
                 last={account.isLast}
-                onPress={() =>
-                  this.props.navigator.push({
-                    screen: 'screen.Account',
-                    title: account.name,
-                    passProps: {
-                      address: account.address,
-                      network: account.network,
-                      accountProfile: account.accountProfile,
-                    },
-                    navigatorStyle: {
-                      largeTitle: false,
-                    },
-                  })
+                onPress={
+                  () => {
+                    ''
+                  }
+                  // this.props.navigator.push({
+                  //   screen: 'screen.Account',
+                  //   title: account.name,
+                  //   passProps: {
+                  //     address: account.address,
+                  //     network: account.network,
+                  //     accountProfile: account.accountProfile,
+                  //   },
+                  //   navigatorStyle: {
+                  //     largeTitle: false,
+                  //   },
+                  // })
                 }
               >
                 {account.name}
@@ -307,18 +311,18 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
   showQRCode() {
     const url = `https://id.uport.me/req/${this.props.shareToken}`
 
-    this.props.navigator.showModal({
-      screen: 'uport.QRCodeModal',
-      passProps: {
-        title: this.props.name,
-        url,
-        onClose: this.props.navigator.dismissModal,
-      },
-      navigatorStyle: {
-        navBarHidden: true,
-        screenBackgroundColor: 'white',
-      },
-    })
+    // this.props.navigator.showModal({
+    //   screen: 'uport.QRCodeModal',
+    //   passProps: {
+    //     title: this.props.name,
+    //     url,
+    //     onClose: this.props.navigator.dismissModal,
+    //   },
+    //   navigatorStyle: {
+    //     navBarHidden: true,
+    //     screenBackgroundColor: 'white',
+    //   },
+    // })
   }
 
   /**
@@ -407,47 +411,47 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
    * Set default navigation
    */
   setDefaultNavigationBar() {
-    this.props.navigator.setStyle({
-      ...Theme.navigation,
-      navBarNoBorder: true,
-      navBarTextColor: Theme.colors.inverted.text,
-      navBarButtonColor: Theme.colors.inverted.text,
-    })
+    // this.props.navigator.setStyle({
+    //   ...Theme.navigation,
+    //   navBarNoBorder: true,
+    //   navBarTextColor: Theme.colors.inverted.text,
+    //   navBarButtonColor: Theme.colors.inverted.text,
+    // })
   }
 
   /**
    * Setttig the edit buttons
    */
   setEditModeButtons() {
-    this.props.navigator.setButtons({
-      rightButtons: [
-        {
-          title: 'Save',
-          id: 'save',
-        },
-        {
-          title: 'Cancel',
-          id: 'cancel',
-        },
-      ],
-    })
+    // this.props.navigator.setButtons({
+    //   rightButtons: [
+    //     {
+    //       title: 'Save',
+    //       id: 'save',
+    //     },
+    //     {
+    //       title: 'Cancel',
+    //       id: 'cancel',
+    //     },
+    //   ],
+    // })
   }
 
   setDefaultButtons() {
-    this.props.navigator.setButtons({
-      rightButtons: [
-        {
-          title: 'Edit',
-          id: 'edit',
-        },
-      ],
-    })
+    // this.props.navigator.setButtons({
+    //   rightButtons: [
+    //     {
+    //       title: 'Edit',
+    //       id: 'edit',
+    //     },
+    //   ],
+    // })
   }
 
   setLegacyModeButtons() {
-    this.props.navigator.setButtons({
-      rightButtons: [],
-    })
+    // this.props.navigator.setButtons({
+    //   rightButtons: [],
+    // })
   }
 
   /**

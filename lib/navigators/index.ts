@@ -11,8 +11,8 @@ registerScreens({ store, Provider })
 
 const App = () => {
   Navigation.events().registerAppLaunchedListener(() => {
-    startOnboarding()
-    // startMain()
+    // startOnboarding()
+    startMain()
   })
 }
 

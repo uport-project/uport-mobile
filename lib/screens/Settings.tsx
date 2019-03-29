@@ -20,13 +20,12 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
 import { Screen, ListItem, Section, Theme, Device } from '@kancha'
-import { Navigator } from 'react-native-navigation'
+import { Navigation } from 'react-native-navigation'
 import MaterialIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import { connections } from 'uPortMobile/lib/selectors/identities'
 import { hdRootAddress, seedConfirmedSelector } from 'uPortMobile/lib/selectors/hdWallet'
 
 interface SettingsProps {
-  navigator: Navigator
   connections: any[]
   hasHDWallet: boolean
   seedConfirmed: boolean
@@ -42,7 +41,6 @@ export class Settings extends React.Component<SettingsProps> {
 
   constructor(props: SettingsProps) {
     super(props)
-    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this))
   }
 
   onNavigatorEvent(event: any) {
@@ -51,12 +49,12 @@ export class Settings extends React.Component<SettingsProps> {
       // this is the event type for button presses
       if (event.id === 'scan' && Device.isAndroid) {
         // this is the same id field from the static navigatorButtons definition
-        this.props.navigator.showModal({
-          screen: 'screen.Scanner',
-          navigatorStyle: {
-            navBarHidden: true,
-          },
-        })
+        // this.props.navigator.showModal({
+        //   screen: 'uport.scanner',
+        //   navigatorStyle: {
+        //     navBarHidden: true,
+        //   },
+        // })
       }
     }
   }
@@ -64,20 +62,20 @@ export class Settings extends React.Component<SettingsProps> {
   componentDidMount() {
     if (Device.isAndroid) {
       MaterialIcons.getImageSource('qrcode-scan', 26, '#FFFFFF').then(icon => {
-        this.props.navigator.setButtons({
-          fab: {
-            collapsedId: 'scan',
-            collapsedIcon: icon,
-            collapsedIconColor: Theme.colors.primary.background,
-            backgroundColor: Theme.colors.primary.brand,
-          },
-        })
+        // this.props.navigator.setButtons({
+        //   fab: {
+        //     collapsedId: 'scan',
+        //     collapsedIcon: icon,
+        //     collapsedIconColor: Theme.colors.primary.background,
+        //     backgroundColor: Theme.colors.primary.brand,
+        //   },
+        // })
       })
     }
   }
 
   goToScreen(screenID: string) {
-    this.props.navigator.push({ screen: screenID, navigatorStyle: { largeTitle: false } })
+    // this.props.navigator.push({ screen: screenID, navigatorStyle: { largeTitle: false } })
   }
 
   render() {

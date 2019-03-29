@@ -1,5 +1,6 @@
 import { Navigation } from 'react-native-navigation'
 import SCREENS from '../screens/Screens'
+import { Theme } from '../kancha'
 
 export const startOnboarding = () => {
   Navigation.setDefaultOptions({
@@ -33,37 +34,160 @@ export const startOnboarding = () => {
 }
 
 export const startMain = () => {
+  Navigation.setDefaultOptions({
+    topBar: {
+      drawBehind: true,
+      background: {
+        color: Theme.colors.primary.brand,
+        translucent: false,
+      },
+      buttonColor: 'white',
+      backButton: {
+        title: 'Back',
+        color: 'white',
+        visible: true,
+      },
+    },
+  })
+
+  const topBar = {
+    largeTitle: { visible: true },
+  }
+
   Navigation.setRoot({
     root: {
       bottomTabs: {
         children: [
           {
-            component: {
-              name: SCREENS.Credentials,
+            stack: {
+              children: [
+                {
+                  component: {
+                    name: SCREENS.Credentials,
+                    options: {
+                      topBar: {
+                        largeTitle: {
+                          visible: true,
+                        },
+                      },
+                      bottomTab: {
+                        text: 'TAB1',
+                      },
+                    },
+                  },
+                },
+              ],
             },
           },
           {
-            component: {
-              name: SCREENS.Profile,
+            stack: {
+              children: [
+                {
+                  component: {
+                    name: SCREENS.Profile,
+                    options: {
+                      bottomTab: {
+                        text: 'TAB2',
+                      },
+                    },
+                  },
+                },
+              ],
             },
           },
           {
-            component: {
-              name: SCREENS.Contacts,
+            stack: {
+              children: [
+                {
+                  component: {
+                    name: SCREENS.Contacts,
+                    options: {
+                      bottomTab: {
+                        text: 'TAB3',
+                      },
+                    },
+                  },
+                },
+              ],
             },
           },
           {
-            component: {
-              name: SCREENS.Notifications,
+            stack: {
+              children: [
+                {
+                  component: {
+                    name: SCREENS.Notifications,
+                    options: {
+                      bottomTab: {
+                        text: 'TAB4',
+                      },
+                    },
+                  },
+                },
+              ],
             },
           },
           {
-            component: {
-              name: SCREENS.Settings,
+            stack: {
+              children: [
+                {
+                  component: {
+                    name: SCREENS.Settings,
+                    options: {
+                      bottomTab: {
+                        text: 'TAB5',
+                      },
+                    },
+                  },
+                },
+              ],
             },
           },
         ],
       },
+      // stack: {
+      //   children: [
+      //     {
+      //       component: {
+      //         name: SCREENS.Credentials,
+      //       },
+      //     },
+      //   ],
+      //   options: {
+      //     bottomTab: {
+      //       text: 'Tab 1',
+      //     },
+      //   },
+      // },
+      // bottomTabs: {
+      //   children: [
+      //     {
+      //       component: {
+      //         name: SCREENS.Credentials,
+      //       },
+      //     },
+      //     {
+      //       component: {
+      //         name: SCREENS.Profile,
+      //       },
+      //     },
+      //     {
+      //       component: {
+      //         name: SCREENS.Contacts,
+      //       },
+      //     },
+      //     {
+      //       component: {
+      //         name: SCREENS.Notifications,
+      //       },
+      //     },
+      //     {
+      //       component: {
+      //         name: SCREENS.Settings,
+      //       },
+      //     },
+      //   ],
+      // },
     },
   })
 }
