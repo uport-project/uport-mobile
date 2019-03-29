@@ -184,7 +184,7 @@ jobs:
       - run: wget https://releases.hashicorp.com/vault/0.10.1/vault_0.10.1_linux_amd64.zip -O ~/vault.zip
       - run: unzip ~/vault.zip -d ~/vault/
 
-      - run: PATH=$PATH:$HOME/vault && bash ../scripts/pull_service_key.sh && fastlane android alpha; rm -f ../google-play-key-file.json
+      - run: PATH=$PATH:$HOME/vault && bash ../scripts/pull_service_key.sh && fastlane android internal; rm -f ../google-play-key-file.json
   deploy-ios:
     working_directory: ~/uport-mobile
     environment:
