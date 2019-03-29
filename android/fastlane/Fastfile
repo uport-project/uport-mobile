@@ -64,7 +64,7 @@ platform :android do
         './app/build/outputs/apk/release/app-x86-release.apk'
         ],
   ## uncomment this to disable apk upload
-      validate_only: true,
+  #    validate_only: true,
       skip_upload_metadata: true,
       skip_upload_images: true,
       skip_upload_screenshots: true
