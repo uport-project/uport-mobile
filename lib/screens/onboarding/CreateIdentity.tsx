@@ -11,6 +11,7 @@ import { activationEvent } from 'uPortMobile/lib/actions/userActivationActions'
 import { track } from 'uPortMobile/lib/actions/metricActions'
 import { startMain } from 'uPortMobile/lib/start'
 import { createIdentity, addClaims, addImage } from 'uPortMobile/lib/actions/uportActions'
+import { registerDeviceForNotifications } from 'uPortMobile/lib/actions/snsRegistrationActions'
 
 interface ImageObj {
   fileSize: number
@@ -19,11 +20,15 @@ interface ImageObj {
 
 interface CreateIdentityProps {
   navigator: Navigator
+  address: string
+
+  //**Redux Actions */
   createIdentity: () => void
   finishOnboarding: () => void
   addImage: (address: string, claimType: string, image: ImageObj) => void
   storeOwnClaim: (address: string, claims: any) => void
-  address: string
+  trackSegment: (event: any) => any
+  registerDeviceForNotifications: () => void
 }
 
 interface CreateIdentityState {
@@ -71,6 +76,10 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
     }
 
     this.addImage = this.addImage.bind(this)
+  }
+
+  componentDidMount() {
+    this.props.trackSegment('Open')
   }
 
   onChangeText = (text: string) => {
@@ -283,6 +292,11 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
         }
 
         /**
+         * Fire get started event
+         */
+        this.props.trackSegment('Get Started')
+
+        /**
          * Onboarding complete
          */
         this.props.finishOnboarding()
@@ -305,15 +319,22 @@ export const mapDispatchToProps = (dispatch: any) => {
   return {
     createIdentity: () => dispatch(createIdentity()),
     finishOnboarding: () => {
-      startMain()
       dispatch(activationEvent('ONBOARDED'))
       dispatch(track('Onboarding Complete Finished'))
+      //**Start app after tracking events fire */
+      startMain()
+    },
+    trackSegment: (event: any) => {
+      dispatch(track(`Onboarding Complete ${event}`))
     },
     addImage: (address: string, claimType: string, image: any) => {
       dispatch(addImage(address, claimType, image))
     },
     storeOwnClaim: (address: string, claims: any) => {
       dispatch(addClaims(address, claims))
+    },
+    registerDeviceForNotifications: () => {
+      dispatch(registerDeviceForNotifications())
     },
   }
 }
