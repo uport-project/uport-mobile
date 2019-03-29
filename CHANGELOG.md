@@ -1,5 +1,13 @@
 # Change Log
 
+## [v429](https://github.com/uport-project/uport-mobile/tree/v429) (2019-03-29)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v428...v429)
+
+**Merged pull requests:**
+
+- Correct seed recovery screen [\#98](https://github.com/uport-project/uport-mobile/pull/98) ([jasonhealy](https://github.com/jasonhealy))
+- On-boarding tracking events [\#97](https://github.com/uport-project/uport-mobile/pull/97) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v428](https://github.com/uport-project/uport-mobile/tree/v428) (2019-03-28)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v427...v428)
 
