@@ -1,5 +1,52 @@
 # Change Log
 
+## [v429](https://github.com/uport-project/uport-mobile/tree/v429) (2019-03-29)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v428...v429)
+
+**Merged pull requests:**
+
+- Correct seed recovery screen [\#98](https://github.com/uport-project/uport-mobile/pull/98) ([jasonhealy](https://github.com/jasonhealy))
+- On-boarding tracking events [\#97](https://github.com/uport-project/uport-mobile/pull/97) ([jasonhealy](https://github.com/jasonhealy))
+
+## [v428](https://github.com/uport-project/uport-mobile/tree/v428) (2019-03-28)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v427...v428)
+
+**Merged pull requests:**
+
+- Fixed scanner screen name [\#96](https://github.com/uport-project/uport-mobile/pull/96) ([simonas-notcat](https://github.com/simonas-notcat))
+
+## [v427](https://github.com/uport-project/uport-mobile/tree/v427) (2019-03-27)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v426...v427)
+
+**Merged pull requests:**
+
+- Re-render camera on Appstate change [\#95](https://github.com/uport-project/uport-mobile/pull/95) ([jasonhealy](https://github.com/jasonhealy))
+
+## [v426](https://github.com/uport-project/uport-mobile/tree/v426) (2019-03-27)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v425...v426)
+
+**Merged pull requests:**
+
+- Fix for tx card function params [\#94](https://github.com/uport-project/uport-mobile/pull/94) ([simonas-notcat](https://github.com/simonas-notcat))
+
+## [v425](https://github.com/uport-project/uport-mobile/tree/v425) (2019-03-27)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v424...v425)
+
+**Merged pull requests:**
+
+- Bump release version to 1.6.1 [\#93](https://github.com/uport-project/uport-mobile/pull/93) ([jasonhealy](https://github.com/jasonhealy))
+
+## [v424](https://github.com/uport-project/uport-mobile/tree/v424) (2019-03-27)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v423...v424)
+
+**Merged pull requests:**
+
+- Fix for metrics [\#92](https://github.com/uport-project/uport-mobile/pull/92) ([simonas-notcat](https://github.com/simonas-notcat))
+- Showing authorization prompt when sharing claims [\#91](https://github.com/uport-project/uport-mobile/pull/91) ([simonas-notcat](https://github.com/simonas-notcat))
+- Switch identity UI [\#90](https://github.com/uport-project/uport-mobile/pull/90) ([jasonhealy](https://github.com/jasonhealy))
+- Info notification [\#89](https://github.com/uport-project/uport-mobile/pull/89) ([simonas-notcat](https://github.com/simonas-notcat))
+- Upgraded scanner component [\#84](https://github.com/uport-project/uport-mobile/pull/84) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v423](https://github.com/uport-project/uport-mobile/tree/v423) (2019-03-22)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v422...v423)
 
