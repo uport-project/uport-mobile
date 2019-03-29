@@ -100,7 +100,7 @@ export class Settings extends React.Component<SettingsProps> {
             >
               Account Back Up
             </ListItem>
-            <ListItem last onPress={() => this.goToScreen('recovery.seedInstructions')}>
+            <ListItem last onPress={() => this.goToScreen('backup.seedInstructions')}>
               Account Recovery
             </ListItem>
           </Section>
