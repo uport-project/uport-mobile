@@ -1,5 +1,16 @@
 # Change Log
 
+## [v431](https://github.com/uport-project/uport-mobile/tree/v431) (2019-03-29)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v430...v431)
+
+**Merged pull requests:**
+
+- Publish android to internal track [\#100](https://github.com/uport-project/uport-mobile/pull/100) ([mirceanis](https://github.com/mirceanis))
+- Fix for android camera glitch [\#99](https://github.com/uport-project/uport-mobile/pull/99) ([simonas-notcat](https://github.com/simonas-notcat))
+
+## [v430](https://github.com/uport-project/uport-mobile/tree/v430) (2019-03-29)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v429...v430)
+
 ## [v429](https://github.com/uport-project/uport-mobile/tree/v429) (2019-03-29)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v428...v429)
 
