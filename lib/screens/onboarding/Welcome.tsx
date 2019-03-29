@@ -73,4 +73,7 @@ export const mapDispatchToProps = (dispatch: any) => {
   }
 }
 
-export default Welcome
+export default connect(
+  mapDispatchToProps,
+  mapDispatchToProps,
+)(Welcome)
