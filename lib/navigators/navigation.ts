@@ -73,6 +73,13 @@ export async function startMain() {
   Navigation.setRoot({
     root: {
       bottomTabs: {
+        options: {
+          bottomTab: {},
+          bottomTabs: {
+            translucent: true,
+            drawBehind: true,
+          },
+        },
         children: [
           {
             stack: {
@@ -84,6 +91,9 @@ export async function startMain() {
                       topBar: navBarText('Credentials', true),
                       bottomTab: {
                         icon: credentialsIcon,
+                        iconColor: Theme.colors.primary.accessories,
+                        selectedIconColor: Theme.colors.primary.brand,
+                        iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
                       },
                     },
                   },
@@ -101,6 +111,9 @@ export async function startMain() {
                       topBar: navBarText('', false, true),
                       bottomTab: {
                         icon: profileIcon,
+                        iconColor: Theme.colors.primary.accessories,
+                        selectedIconColor: Theme.colors.primary.brand,
+                        iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
                       },
                     },
                   },
@@ -118,6 +131,9 @@ export async function startMain() {
                       topBar: navBarText('Contacts', false),
                       bottomTab: {
                         icon: contactsIcon,
+                        iconColor: Theme.colors.primary.accessories,
+                        selectedIconColor: Theme.colors.primary.brand,
+                        iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
                       },
                     },
                   },
@@ -135,6 +151,9 @@ export async function startMain() {
                       topBar: navBarText('Notifications', false),
                       bottomTab: {
                         icon: notificationsIcon,
+                        iconColor: Theme.colors.primary.accessories,
+                        selectedIconColor: Theme.colors.primary.brand,
+                        iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
                       },
                     },
                   },
@@ -152,6 +171,9 @@ export async function startMain() {
                       topBar: navBarText('Settings', false),
                       bottomTab: {
                         icon: settingsIcon,
+                        iconColor: Theme.colors.primary.accessories,
+                        selectedIconColor: Theme.colors.primary.brand,
+                        iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
                       },
                     },
                   },

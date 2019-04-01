@@ -9,7 +9,7 @@ import photoSelectionHandler from 'uPortMobile/lib/utilities/photoSelection'
 import { currentAddress } from '../../selectors/identities'
 import { activationEvent } from 'uPortMobile/lib/actions/userActivationActions'
 import { track } from 'uPortMobile/lib/actions/metricActions'
-import { startMain } from 'uPortMobile/lib/start'
+import { startMain } from 'uPortMobile/lib/navigators/navigation'
 import { createIdentity, addClaims, addImage } from 'uPortMobile/lib/actions/uportActions'
 import { registerDeviceForNotifications } from 'uPortMobile/lib/actions/snsRegistrationActions'
 
