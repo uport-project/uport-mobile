@@ -1,8 +1,22 @@
 import { Navigation } from 'react-native-navigation'
-import SCREENS from '../screens/Screens'
 import { Theme, Icon } from '../kancha'
+import SCREENS from '../screens/Screens'
 
-export const startOnboarding = () => {
+/**
+ * This is called by the startUpSaga when the app is ready to launch
+ */
+export function startApp(root: string) {
+  Navigation.events().registerAppLaunchedListener(() => {
+    switch (root) {
+      case 'ONBOARDING':
+        return startOnboarding()
+      case 'MAIN_APP':
+        return startMain()
+    }
+  })
+}
+
+const startOnboarding = () => {
   Navigation.setDefaultOptions({
     topBar: {
       drawBehind: true,
@@ -33,6 +47,20 @@ export const startOnboarding = () => {
   })
 }
 
+const navBarText = (title: string, largeTitle: boolean, noBorder?: boolean) => {
+  return {
+    noBorder: noBorder && noBorder,
+    title: {
+      text: title,
+      color: Theme.colors.inverted.text,
+    },
+    largeTitle: {
+      visible: largeTitle,
+      color: Theme.colors.inverted.text,
+    },
+  }
+}
+
 export async function startMain() {
   const credentialsIcon = await Icon.getImageSource('feather', 'check-circle', 26)
   const profileIcon = await Icon.getImageSource('feather', 'user', 26)
@@ -55,20 +83,6 @@ export async function startMain() {
       },
     },
   })
-
-  const navBarText = (title: string, largeTitle: boolean, noBorder?: boolean) => {
-    return {
-      noBorder: noBorder && noBorder,
-      title: {
-        text: title,
-        color: Theme.colors.inverted.text,
-      },
-      largeTitle: {
-        visible: largeTitle,
-        color: Theme.colors.inverted.text,
-      },
-    }
-  }
 
   Navigation.setRoot({
     root: {
@@ -128,7 +142,7 @@ export async function startMain() {
                   component: {
                     name: SCREENS.Contacts,
                     options: {
-                      topBar: navBarText('Contacts', false),
+                      topBar: navBarText('Contacts', true),
                       bottomTab: {
                         icon: contactsIcon,
                         iconColor: Theme.colors.primary.accessories,
@@ -148,7 +162,7 @@ export async function startMain() {
                   component: {
                     name: SCREENS.Notifications,
                     options: {
-                      topBar: navBarText('Notifications', false),
+                      topBar: navBarText('Notifications', true),
                       bottomTab: {
                         icon: notificationsIcon,
                         iconColor: Theme.colors.primary.accessories,
@@ -168,7 +182,7 @@ export async function startMain() {
                   component: {
                     name: SCREENS.Settings,
                     options: {
-                      topBar: navBarText('Settings', false),
+                      topBar: navBarText('Settings', true),
                       bottomTab: {
                         icon: settingsIcon,
                         iconColor: Theme.colors.primary.accessories,

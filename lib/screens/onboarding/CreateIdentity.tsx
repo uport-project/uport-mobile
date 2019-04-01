@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Image, Modal, KeyboardAvoidingView } from 'react-native'
+import { Image, Modal } from 'react-native'
 import { ActivityIndicator } from 'react-native'
 import { connect } from 'react-redux'
 import { Screen, Container, Input, Text, Button, Theme, Icon, Images, Checkbox, Section, ListItem } from '@kancha'
