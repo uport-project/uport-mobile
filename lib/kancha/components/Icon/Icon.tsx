@@ -86,14 +86,14 @@ const Icons: IconsStatic = {
   qrcode: 'qrcode',
 }
 
-const Icon: React.FunctionComponent<IconProps> & { Names: IconsStatic } = ({
-  font,
-  name,
-  size,
-  color,
-  animated,
-  image,
-}: IconProps) => {
+const IconImageSource = (font: string, icon: string, size: number) => {
+  return IconSets[font].getImageSource(icon, size)
+}
+
+const Icon: React.FunctionComponent<IconProps> & {
+  Names: IconsStatic
+  getImageSource: (font: string, icon: string, size: number) => any
+} = ({ font, name, size, color, animated, image }: IconProps) => {
   const IconFont = font ? IconSets[font] : Ionicons
   const spinValue = new Animated.Value(0)
 
@@ -127,5 +127,6 @@ Icon.defaultProps = {
 }
 
 Icon.Names = Icons
+Icon.getImageSource = IconImageSource
 
 export default Icon

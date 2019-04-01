@@ -1,6 +1,6 @@
 import { Navigation } from 'react-native-navigation'
 import SCREENS from '../screens/Screens'
-import { Theme } from '../kancha'
+import { Theme, Icon } from '../kancha'
 
 export const startOnboarding = () => {
   Navigation.setDefaultOptions({
@@ -33,7 +33,13 @@ export const startOnboarding = () => {
   })
 }
 
-export const startMain = () => {
+export async function startMain() {
+  const credentialsIcon = await Icon.getImageSource('feather', 'check-circle', 26)
+  const profileIcon = await Icon.getImageSource('feather', 'user', 26)
+  const contactsIcon = await Icon.getImageSource('feather', 'users', 26)
+  const notificationsIcon = await Icon.getImageSource('feather', 'bell', 26)
+  const settingsIcon = await Icon.getImageSource('feather', 'settings', 26)
+
   Navigation.setDefaultOptions({
     topBar: {
       drawBehind: true,
@@ -50,8 +56,18 @@ export const startMain = () => {
     },
   })
 
-  const topBar = {
-    largeTitle: { visible: true },
+  const navBarText = (title: string, largeTitle: boolean, noBorder?: boolean) => {
+    return {
+      noBorder: noBorder && noBorder,
+      title: {
+        text: title,
+        color: Theme.colors.inverted.text,
+      },
+      largeTitle: {
+        visible: largeTitle,
+        color: Theme.colors.inverted.text,
+      },
+    }
   }
 
   Navigation.setRoot({
@@ -65,13 +81,9 @@ export const startMain = () => {
                   component: {
                     name: SCREENS.Credentials,
                     options: {
-                      topBar: {
-                        largeTitle: {
-                          visible: true,
-                        },
-                      },
+                      topBar: navBarText('Credentials', true),
                       bottomTab: {
-                        text: 'TAB1',
+                        icon: credentialsIcon,
                       },
                     },
                   },
@@ -86,8 +98,9 @@ export const startMain = () => {
                   component: {
                     name: SCREENS.Profile,
                     options: {
+                      topBar: navBarText('', false, true),
                       bottomTab: {
-                        text: 'TAB2',
+                        icon: profileIcon,
                       },
                     },
                   },
@@ -102,8 +115,9 @@ export const startMain = () => {
                   component: {
                     name: SCREENS.Contacts,
                     options: {
+                      topBar: navBarText('Contacts', false),
                       bottomTab: {
-                        text: 'TAB3',
+                        icon: contactsIcon,
                       },
                     },
                   },
@@ -118,8 +132,9 @@ export const startMain = () => {
                   component: {
                     name: SCREENS.Notifications,
                     options: {
+                      topBar: navBarText('Notifications', false),
                       bottomTab: {
-                        text: 'TAB4',
+                        icon: notificationsIcon,
                       },
                     },
                   },
@@ -134,8 +149,9 @@ export const startMain = () => {
                   component: {
                     name: SCREENS.Settings,
                     options: {
+                      topBar: navBarText('Settings', false),
                       bottomTab: {
-                        text: 'TAB5',
+                        icon: settingsIcon,
                       },
                     },
                   },
@@ -145,49 +161,6 @@ export const startMain = () => {
           },
         ],
       },
-      // stack: {
-      //   children: [
-      //     {
-      //       component: {
-      //         name: SCREENS.Credentials,
-      //       },
-      //     },
-      //   ],
-      //   options: {
-      //     bottomTab: {
-      //       text: 'Tab 1',
-      //     },
-      //   },
-      // },
-      // bottomTabs: {
-      //   children: [
-      //     {
-      //       component: {
-      //         name: SCREENS.Credentials,
-      //       },
-      //     },
-      //     {
-      //       component: {
-      //         name: SCREENS.Profile,
-      //       },
-      //     },
-      //     {
-      //       component: {
-      //         name: SCREENS.Contacts,
-      //       },
-      //     },
-      //     {
-      //       component: {
-      //         name: SCREENS.Notifications,
-      //       },
-      //     },
-      //     {
-      //       component: {
-      //         name: SCREENS.Settings,
-      //       },
-      //     },
-      //   ],
-      // },
     },
   })
 }
