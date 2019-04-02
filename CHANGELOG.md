@@ -1,5 +1,14 @@
 # Change Log
 
+## [v432](https://github.com/uport-project/uport-mobile/tree/v432) (2019-04-02)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v431...v432)
+
+**Merged pull requests:**
+
+- Waiting for sync to end after ID recovery [\#104](https://github.com/uport-project/uport-mobile/pull/104) ([simonas-notcat](https://github.com/simonas-notcat))
+- Refreshing account balance on diclosure and tx req [\#103](https://github.com/uport-project/uport-mobile/pull/103) ([simonas-notcat](https://github.com/simonas-notcat))
+- Bugfixes for release v431 [\#102](https://github.com/uport-project/uport-mobile/pull/102) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v431](https://github.com/uport-project/uport-mobile/tree/v431) (2019-03-29)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v430...v431)
 
