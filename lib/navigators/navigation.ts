@@ -1,5 +1,5 @@
 import { Navigation } from 'react-native-navigation'
-import { Theme, Icon } from '../kancha'
+import { Theme, Icon, Device } from '../kancha'
 import SCREENS from '../screens/Screens'
 
 /**
@@ -68,7 +68,18 @@ export async function startMain() {
   const notificationsIcon = await Icon.getImageSource('feather', 'bell', 26)
   const settingsIcon = await Icon.getImageSource('feather', 'settings', 26)
 
+  /**
+   * Some options have not been updated in the nav library so we need to override it :(
+   */
+
   Navigation.setDefaultOptions({
+    sideMenu: {
+      right: {
+        enabled: true,
+        // @ts-ignore
+        width: Device.w,
+      },
+    },
     topBar: {
       drawBehind: true,
       background: {
@@ -86,116 +97,119 @@ export async function startMain() {
 
   Navigation.setRoot({
     root: {
-      bottomTabs: {
-        options: {
-          bottomTab: {},
-          bottomTabs: {
-            translucent: true,
-            drawBehind: true,
+      sideMenu: {
+        right: {
+          component: {
+            name: SCREENS.Scanner,
           },
         },
-        children: [
-          {
-            stack: {
-              children: [
-                {
-                  component: {
-                    name: SCREENS.Credentials,
-                    options: {
-                      topBar: navBarText('Credentials', true),
-                      bottomTab: {
-                        icon: credentialsIcon,
-                        iconColor: Theme.colors.primary.accessories,
-                        selectedIconColor: Theme.colors.primary.brand,
-                        iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
+        center: {
+          bottomTabs: {
+            options: {},
+            children: [
+              {
+                stack: {
+                  children: [
+                    {
+                      component: {
+                        name: SCREENS.Credentials,
+                        options: {
+                          topBar: navBarText('Credentials', true),
+                          bottomTab: {
+                            icon: credentialsIcon,
+                            iconColor: Theme.colors.primary.accessories,
+                            selectedIconColor: Theme.colors.primary.brand,
+                            iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
+                          },
+                        },
                       },
                     },
-                  },
+                  ],
                 },
-              ],
-            },
-          },
-          {
-            stack: {
-              children: [
-                {
-                  component: {
-                    name: SCREENS.Profile,
-                    options: {
-                      topBar: navBarText('', false, true),
-                      bottomTab: {
-                        icon: profileIcon,
-                        iconColor: Theme.colors.primary.accessories,
-                        selectedIconColor: Theme.colors.primary.brand,
-                        iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
+              },
+              {
+                stack: {
+                  children: [
+                    {
+                      component: {
+                        name: SCREENS.Profile,
+                        options: {
+                          topBar: navBarText('', false, true),
+                          bottomTab: {
+                            icon: profileIcon,
+                            iconColor: Theme.colors.primary.accessories,
+                            selectedIconColor: Theme.colors.primary.brand,
+                            iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
+                          },
+                        },
                       },
                     },
-                  },
+                  ],
                 },
-              ],
-            },
-          },
-          {
-            stack: {
-              children: [
-                {
-                  component: {
-                    name: SCREENS.Contacts,
-                    options: {
-                      topBar: navBarText('Contacts', true),
-                      bottomTab: {
-                        icon: contactsIcon,
-                        iconColor: Theme.colors.primary.accessories,
-                        selectedIconColor: Theme.colors.primary.brand,
-                        iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
+              },
+              {
+                stack: {
+                  children: [
+                    {
+                      component: {
+                        name: SCREENS.Contacts,
+                        options: {
+                          topBar: navBarText('Contacts', true),
+                          bottomTab: {
+                            icon: contactsIcon,
+                            iconColor: Theme.colors.primary.accessories,
+                            selectedIconColor: Theme.colors.primary.brand,
+                            iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
+                          },
+                        },
                       },
                     },
-                  },
+                  ],
                 },
-              ],
-            },
-          },
-          {
-            stack: {
-              children: [
-                {
-                  component: {
-                    name: SCREENS.Notifications,
-                    options: {
-                      topBar: navBarText('Notifications', true),
-                      bottomTab: {
-                        icon: notificationsIcon,
-                        iconColor: Theme.colors.primary.accessories,
-                        selectedIconColor: Theme.colors.primary.brand,
-                        iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
+              },
+              {
+                stack: {
+                  children: [
+                    {
+                      component: {
+                        name: SCREENS.Notifications,
+                        options: {
+                          topBar: navBarText('Notifications', true),
+                          bottomTab: {
+                            icon: notificationsIcon,
+                            iconColor: Theme.colors.primary.accessories,
+                            selectedIconColor: Theme.colors.primary.brand,
+                            iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
+                          },
+                        },
                       },
                     },
-                  },
+                  ],
                 },
-              ],
-            },
-          },
-          {
-            stack: {
-              children: [
-                {
-                  component: {
-                    name: SCREENS.Settings,
-                    options: {
-                      topBar: navBarText('Settings', true),
-                      bottomTab: {
-                        icon: settingsIcon,
-                        iconColor: Theme.colors.primary.accessories,
-                        selectedIconColor: Theme.colors.primary.brand,
-                        iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
+              },
+              {
+                stack: {
+                  children: [
+                    {
+                      component: {
+                        name: SCREENS.Settings,
+                        options: {
+                          topBar: navBarText('Settings', true),
+                          bottomTab: {
+                            icon: settingsIcon,
+                            iconColor: Theme.colors.primary.accessories,
+                            selectedIconColor: Theme.colors.primary.brand,
+                            iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
+                          },
+                        },
                       },
                     },
-                  },
+                  ],
                 },
-              ],
-            },
+              },
+            ],
           },
-        ],
+        },
       },
     },
   })

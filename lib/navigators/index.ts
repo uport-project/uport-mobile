@@ -1,7 +1,7 @@
 import { Navigation } from 'react-native-navigation'
-import store from '../store/store'
 import { Provider } from 'react-redux'
 import { registerScreens } from '../screens/index'
+import store from '../store/store'
 import { screen } from 'uPortMobile/lib/actions/metricActions'
 
 /**
@@ -9,6 +9,9 @@ import { screen } from 'uPortMobile/lib/actions/metricActions'
  */
 registerScreens({ store, Provider })
 
+/**
+ * Register global event listener for screen
+ */
 const App = () => {
   Navigation.events().registerComponentDidAppearListener(({ componentName }) => {
     store.dispatch(screen(componentName))

@@ -7,24 +7,28 @@ import SCREENS from './Screens'
 /**
  * Screen components
  */
-import Account from 'uPortMobile/lib/screens/Account'
-import Credentials from 'uPortMobile/lib/screens/Credentials'
-import Credential from 'uPortMobile/lib/screens/Credential'
-import Contacts from 'uPortMobile/lib/screens/Contacts'
-import Contact from 'uPortMobile/lib/screens/Contact'
-import Notifications from 'uPortMobile/lib/screens/Notifications'
-import Settings from 'uPortMobile/lib/screens/Settings'
-import Profile from 'uPortMobile/lib/screens/Profile'
-import ShareContactModal from 'uPortMobile/lib/screens/ShareContact'
-import DesignSystem from 'uPortMobile/lib/screens/DesignSystem'
-import Scanner from 'uPortMobile/lib/screens/Scanner'
+import Account from './Account'
+import Credentials from './Credentials'
+import Credential from './Credential'
+import Contacts from './Contacts'
+import Contact from './Contact'
+import Notifications from './Notifications'
+import Settings from './Settings'
+import Profile from './Profile'
+import ShareContactModal from './ShareContact'
+import DesignSystem from './DesignSystem'
+import Scanner from './Scanner'
 
-import Welcome from 'uPortMobile/lib/screens/onboarding/Welcome'
-import Learn from 'uPortMobile/lib/screens/onboarding/Learn'
-import CreateIdentity from 'uPortMobile/lib/screens/onboarding/CreateIdentity'
-import Terms from 'uPortMobile/lib/screens/onboarding/Terms'
-import Privacy from 'uPortMobile/lib/screens/onboarding/Privacy'
+import Welcome from './onboarding/Welcome'
+import Learn from './onboarding/Learn'
+import CreateIdentity from './onboarding/CreateIdentity'
+import Terms from './onboarding/Terms'
+import Privacy from './onboarding/Privacy'
 
+/**
+ * Wrapper component for redux
+ * @TODO Change `component` to accept path to be used in a require function
+ */
 const registerComponentWithRedux = (redux: any) => (name: string, component: any) => {
   Navigation.registerComponentWithRedux(name, () => component, redux.Provider, redux.store)
 }
@@ -53,4 +57,13 @@ export function registerScreens(redux: any) {
   registerComponentWithRedux(redux)(SCREENS.CreateIdentity, CreateIdentity)
   registerComponentWithRedux(redux)(SCREENS.Terms, Terms)
   registerComponentWithRedux(redux)(SCREENS.Privacy, Privacy)
+
+  /**
+   * Settings screens
+   */
+  // registerComponentWithRedux(redux)(SCREENS.Welcome, Welcome)
+  // registerComponentWithRedux(redux)(SCREENS.Learn, Learn)
+  // registerComponentWithRedux(redux)(SCREENS.CreateIdentity, CreateIdentity)
+  // registerComponentWithRedux(redux)(SCREENS.Terms, Terms)
+  // registerComponentWithRedux(redux)(SCREENS.Privacy, Privacy)
 }
