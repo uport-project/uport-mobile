@@ -25,6 +25,8 @@ import CreateIdentity from './onboarding/CreateIdentity'
 import Terms from './onboarding/Terms'
 import Privacy from './onboarding/Privacy'
 
+import ProfileQRCode from 'uPortMobile/lib/components/shared/QRCodeModal'
+
 /**
  * Wrapper component for redux
  * @TODO Change `component` to accept path to be used in a require function
@@ -57,6 +59,11 @@ export function registerScreens(redux: any) {
   registerComponentWithRedux(redux)(SCREENS.CreateIdentity, CreateIdentity)
   registerComponentWithRedux(redux)(SCREENS.Terms, Terms)
   registerComponentWithRedux(redux)(SCREENS.Privacy, Privacy)
+
+  /**
+   * Modal screens
+   */
+  registerComponentWithRedux(redux)(SCREENS.ProfileQRCode, ProfileQRCode)
 
   /**
    * Settings screens

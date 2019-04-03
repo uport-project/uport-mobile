@@ -303,6 +303,23 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
   showQRCode() {
     const url = `https://id.uport.me/req/${this.props.shareToken}`
 
+    Navigation.showModal({
+      component: {
+        name: SCREENS.ProfileQRCode,
+        passProps: {
+          url,
+          title: this.props.name,
+          onClose: Navigation.dismissModal,
+          componentId: this.props.componentId,
+        },
+        options: {
+          topBar: {
+            visible: false,
+          },
+        },
+      },
+    })
+
     // this.props.navigator.showModal({
     //   screen: 'uport.QRCodeModal',
     //   passProps: {

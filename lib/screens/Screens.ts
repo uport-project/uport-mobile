@@ -19,4 +19,6 @@ export default {
   CreateIdentity: 'CreateIdentity',
   Privacy: 'Privacy',
   Terms: 'Terms',
+
+  ProfileQRCode: 'ProfileQRCode',
 }
