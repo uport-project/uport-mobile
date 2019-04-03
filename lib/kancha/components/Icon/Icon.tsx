@@ -68,6 +68,8 @@ interface IconsStatic {
   edit: string
   more: string
   checkmark: string
+  scan: string
+  qrcode: string
 }
 
 const Icons: IconsStatic = {
@@ -79,11 +81,12 @@ const Icons: IconsStatic = {
   checkbox_checked: Device.isIOS ? 'ios-checkmark-circle' : 'md-checkmark-circle',
   rocket: Device.isIOS ? 'ios-rocket' : 'md-rocket',
   share: Device.isIOS ? 'ios-share' : 'md-share',
-  close: 'x',
-  edit: 'edit',
-  more: 'ios-more',
+  scan: Device.isIOS ? 'ios-qr-scanner' : 'md-qr-scanner',
   checkmark: Device.isIOS ? 'ios-checkmark' : 'md-checkmark',
-  qrcode: 'qrcode',
+  edit: Device.isIOS ? 'edit' : 'edit',
+  more: Device.isIOS ? 'ios-more' : 'ios-more',
+  qrcode: Device.isIOS ? 'qrcode' : 'qrcode',
+  close: Device.isIOS ? 'x' : 'x',
 }
 
 const IconImageSource = (font: string, icon: string, size: number) => {

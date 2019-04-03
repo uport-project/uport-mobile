@@ -62,11 +62,15 @@ const navBarText = (title: string, largeTitle: boolean, noBorder?: boolean) => {
 }
 
 export async function startMain() {
+  /**
+   * After icon design cleanup sort these out.
+   */
   const credentialsIcon = await Icon.getImageSource('feather', 'check-circle', 26)
   const profileIcon = await Icon.getImageSource('feather', 'user', 26)
   const contactsIcon = await Icon.getImageSource('feather', 'users', 26)
   const notificationsIcon = await Icon.getImageSource('feather', 'bell', 26)
   const settingsIcon = await Icon.getImageSource('feather', 'settings', 26)
+  const scanIcon = await Icon.getImageSource('ionicons', Icon.Names.scan, 30)
 
   /**
    * Some options have not been updated in the nav library so we need to override it :(
@@ -100,12 +104,23 @@ export async function startMain() {
       sideMenu: {
         right: {
           component: {
+            id: SCREENS.Scanner,
             name: SCREENS.Scanner,
           },
         },
         center: {
           bottomTabs: {
-            options: {},
+            options: {
+              //** Android only */
+              fab: {
+                visible: true,
+                id: 'scanFabButton',
+                icon: scanIcon,
+                iconColor: 'white',
+                size: 30,
+                backgroundColor: Theme.colors.primary.brand,
+              },
+            },
             children: [
               {
                 stack: {
