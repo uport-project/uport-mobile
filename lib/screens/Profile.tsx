@@ -11,7 +11,7 @@ import { externalProfile } from 'uPortMobile/lib/selectors/requests'
 import { editMyInfo, updateShareToken } from 'uPortMobile/lib/actions/myInfoActions'
 import { addClaims, addImage, switchIdentity } from 'uPortMobile/lib/actions/uportActions'
 import { onlyLatestAttestationsWithIssuer } from 'uPortMobile/lib/selectors/attestations'
-
+import SCREENS from '../screens/Screens'
 import photoSelectionHandler from 'uPortMobile/lib/utilities/photoSelection'
 import Mori from 'mori'
 
@@ -80,34 +80,27 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
       editMode: false,
     }
 
+    Navigation.events().bindComponent(this)
     this.photoSelection = this.photoSelection.bind(this)
   }
 
-  onNavigatorEvent(event: any) {
-    // this is the onPress handler for the two buttons together
-    if (event.type === 'NavBarButtonPress') {
-      // this is the event type for button presses
-      if (event.id === 'edit') {
-        // this is the same id field from the static navigatorButtons definition
+  /** Method from Navigator */
+  navigationButtonPressed({ buttonId }: { buttonId: string }) {
+    switch (buttonId) {
+      case 'edit':
         this.setState({ editMode: true })
         this.setEditModeButtons()
-      }
-      if (event.id === 'save') {
+        return
+      case 'save':
         this.handleSubmit()
         this.setState({ editMode: false })
         this.setDefaultButtons()
-      }
-      if (event.id === 'cancel') {
+        return
+      case 'cancel':
         this.setState({ editMode: false })
         this.setDefaultButtons()
         this.handleCancel()
-      }
-      if (event.id === 'share') {
-        // this.openShareModal()
-      }
-      if (event.id === 'send') {
-        // this.showModal()
-      }
+        return
     }
   }
 
@@ -171,9 +164,13 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
         <Container flex={3} alignItems={'center'}>
           <Button
             block={Button.Block.Clear}
-            onPress={() => {
-              ''
-            }}
+            onPress={() =>
+              Navigation.mergeOptions(this.props.componentId, {
+                bottomTabs: {
+                  currentTabIndex: 0,
+                },
+              })
+            }
             buttonText={Mori.count(this.props.verifications)}
           />
           <Container paddingTop={5}>
@@ -258,22 +255,17 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
                 key={account.address}
                 contentRight={account.balance}
                 last={account.isLast}
-                onPress={
-                  () => {
-                    ''
-                  }
-                  // this.props.navigator.push({
-                  //   screen: 'screen.Account',
-                  //   title: account.name,
-                  //   passProps: {
-                  //     address: account.address,
-                  //     network: account.network,
-                  //     accountProfile: account.accountProfile,
-                  //   },
-                  //   navigatorStyle: {
-                  //     largeTitle: false,
-                  //   },
-                  // })
+                onPress={() =>
+                  Navigation.push(this.props.componentId, {
+                    component: {
+                      name: SCREENS.Account,
+                      passProps: {
+                        address: account.address,
+                        network: account.network,
+                        accountProfile: account.accountProfile,
+                      },
+                    },
+                  })
                 }
               >
                 {account.name}
@@ -402,50 +394,40 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
    */
   componentDidMount() {
     this.setDefaultButtons()
-    this.setDefaultNavigationBar()
-
     this.props.updateShareToken(this.props.address)
-  }
-
-  /**
-   * Set default navigation
-   */
-  setDefaultNavigationBar() {
-    // this.props.navigator.setStyle({
-    //   ...Theme.navigation,
-    //   navBarNoBorder: true,
-    //   navBarTextColor: Theme.colors.inverted.text,
-    //   navBarButtonColor: Theme.colors.inverted.text,
-    // })
   }
 
   /**
    * Setttig the edit buttons
    */
   setEditModeButtons() {
-    // this.props.navigator.setButtons({
-    //   rightButtons: [
-    //     {
-    //       title: 'Save',
-    //       id: 'save',
-    //     },
-    //     {
-    //       title: 'Cancel',
-    //       id: 'cancel',
-    //     },
-    //   ],
-    // })
+    Navigation.mergeOptions(this.props.componentId, {
+      topBar: {
+        rightButtons: [
+          {
+            id: 'cancel',
+            text: 'Cancel',
+          },
+          {
+            id: 'save',
+            text: 'Save',
+          },
+        ],
+      },
+    })
   }
 
   setDefaultButtons() {
-    // this.props.navigator.setButtons({
-    //   rightButtons: [
-    //     {
-    //       title: 'Edit',
-    //       id: 'edit',
-    //     },
-    //   ],
-    // })
+    Navigation.mergeOptions(this.props.componentId, {
+      topBar: {
+        rightButtons: [
+          {
+            id: 'edit',
+            text: 'Edit',
+          },
+        ],
+      },
+    })
   }
 
   setLegacyModeButtons() {
