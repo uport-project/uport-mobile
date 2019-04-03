@@ -1,5 +1,12 @@
 # Change Log
 
+## [v433](https://github.com/uport-project/uport-mobile/tree/v433) (2019-04-03)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v432...v433)
+
+**Merged pull requests:**
+
+- Fixed "BigNumber" crash [\#105](https://github.com/uport-project/uport-mobile/pull/105) ([simonas-notcat](https://github.com/simonas-notcat))
+
 ## [v432](https://github.com/uport-project/uport-mobile/tree/v432) (2019-04-02)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v431...v432)
 
