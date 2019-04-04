@@ -29,7 +29,7 @@ import { createAttestationToken } from 'uPortMobile/lib/sagas/jwt'
 import { MigrationStep } from 'uPortMobile/lib/constants/MigrationActionTypes'
 import { saveMessage } from 'uPortMobile/lib/actions/processStatusActions'
 import { resetHub } from 'uPortMobile/lib/actions/hubActions'
-import { subAccounts, currentAddress, ownClaimsMap } from 'uPortMobile/lib/selectors/identities'
+import { subAccounts, currentAddress, ownClaimsMap, hasMainnetAccounts } from 'uPortMobile/lib/selectors/identities'
 import { hasAttestations } from 'uPortMobile/lib/selectors/attestations'
 import {
   updateIdentity,
@@ -77,7 +77,20 @@ export function* migrate(): any {
   const oldRoot = yield select(currentAddress)
   const accounts = yield select(subAccounts, oldRoot)
   const own = (yield select(ownClaimsMap)) || {}
-  const createOwnershipLink = yield select(hasAttestations)
+ 
+  for (const account of accounts) {
+    const available = yield call(canSignFor, account.address)
+    if (!available) {
+      yield put(
+        updateIdentity(account.address, {
+          disabled: true,
+          error: `Legacy Identity has been Disabled. Keys are no longer available.`,
+        }),
+      )
+    }
+  }
+
+  const createOwnershipLink = (yield select(hasAttestations)) || (yield select(hasMainnetAccounts))
 
   let newRoot
   if (yield call(hasWorkingSeed)) {
@@ -129,27 +142,8 @@ export function* migrate(): any {
       }),
     )
   }
-
-  for (const account of accounts) {
-    const available = yield call(canSignFor, account.address)
-    if (available) {
-      yield put(
-        updateIdentity(account.address, {
-          parent: newRoot,
-        }),
-      )
-    } else {
-      yield put(
-        updateIdentity(account.address, {
-          disabled: true,
-          error: `Legacy Identity has been Disabled. Keys are no longer available.`,
-        }),
-      )
-    }
-  }
-  yield put(resetHub())
   yield put(saveMessage(step, 'New mainnet identity is created'))
-
+  yield put(resetHub())
   return true
 }
 
