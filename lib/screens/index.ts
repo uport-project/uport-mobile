@@ -7,23 +7,6 @@ import SCREENS from './Screens'
 /**
  * Screen components
  */
-import Account from './Account'
-import Credentials from './Credentials'
-import Credential from './Credential'
-import Contacts from './Contacts'
-import Contact from './Contact'
-import Notifications from './Notifications'
-import Settings from './Settings'
-import Profile from './Profile'
-import ShareContactModal from './ShareContact'
-import DesignSystem from './DesignSystem'
-import Scanner from './Scanner'
-
-import Welcome from './onboarding/Welcome'
-import Learn from './onboarding/Learn'
-import CreateIdentity from './onboarding/CreateIdentity'
-import Terms from './onboarding/Terms'
-import Privacy from './onboarding/Privacy'
 
 import ProfileQRCode from 'uPortMobile/lib/components/shared/QRCodeModal'
 
@@ -48,7 +31,7 @@ import RestoreSeedSuccess from '../components/Recovery/SeedRecoverySuccess'
 
 /**
  * Wrapper component for redux
- * @TODO Change `component` to accept path to be used in a require function
+ * @TODO Refactor all screens registers to use require
  */
 const registerComponentWithRedux = (redux: any) => (name: string, component: any) => {
   Navigation.registerComponentWithRedux(name, () => component, redux.Provider, redux.store)
@@ -58,26 +41,26 @@ export function registerScreens(redux: any) {
   /**
    * Top level screens
    */
-  registerComponentWithRedux(redux)(SCREENS.Credentials, Credentials)
-  registerComponentWithRedux(redux)(SCREENS.Credential, Credential)
-  registerComponentWithRedux(redux)(SCREENS.Contacts, Contacts)
-  registerComponentWithRedux(redux)(SCREENS.Contact, Contact)
-  registerComponentWithRedux(redux)(SCREENS.ShareContact, ShareContactModal)
-  registerComponentWithRedux(redux)(SCREENS.Account, Account)
-  registerComponentWithRedux(redux)(SCREENS.Notifications, Notifications)
-  registerComponentWithRedux(redux)(SCREENS.Settings, Settings)
-  registerComponentWithRedux(redux)(SCREENS.Profile, Profile)
-  registerComponentWithRedux(redux)(SCREENS.DesignSystem, DesignSystem)
-  registerComponentWithRedux(redux)(SCREENS.Scanner, Scanner)
+  registerComponentWithRedux(redux)(SCREENS.Credentials, require('./Credentials').default)
+  registerComponentWithRedux(redux)(SCREENS.Credential, require('./Credential').default)
+  registerComponentWithRedux(redux)(SCREENS.Contacts, require('./Contacts').default)
+  registerComponentWithRedux(redux)(SCREENS.Contact, require('./Contact').default)
+  registerComponentWithRedux(redux)(SCREENS.ShareContact, require('./ShareContact').default)
+  registerComponentWithRedux(redux)(SCREENS.Account, require('./Account').default)
+  registerComponentWithRedux(redux)(SCREENS.Notifications, require('./Notifications').default)
+  registerComponentWithRedux(redux)(SCREENS.Settings, require('./Settings').default)
+  registerComponentWithRedux(redux)(SCREENS.Profile, require('./Profile').default)
+  registerComponentWithRedux(redux)(SCREENS.DesignSystem, require('./DesignSystem').default)
+  registerComponentWithRedux(redux)(SCREENS.Scanner, require('./Scanner').default)
 
   /**
    * Onboarding screens
    */
-  registerComponentWithRedux(redux)(SCREENS.Welcome, Welcome)
-  registerComponentWithRedux(redux)(SCREENS.Learn, Learn)
-  registerComponentWithRedux(redux)(SCREENS.CreateIdentity, CreateIdentity)
-  registerComponentWithRedux(redux)(SCREENS.Terms, Terms)
-  registerComponentWithRedux(redux)(SCREENS.Privacy, Privacy)
+  registerComponentWithRedux(redux)(SCREENS.Welcome, require('./onboarding/Welcome').default)
+  registerComponentWithRedux(redux)(SCREENS.Learn, require('./onboarding/Learn').default)
+  registerComponentWithRedux(redux)(SCREENS.CreateIdentity, require('./onboarding/CreateIdentity').default)
+  registerComponentWithRedux(redux)(SCREENS.Terms, require('./onboarding/Terms').default)
+  registerComponentWithRedux(redux)(SCREENS.Privacy, require('./onboarding/Privacy').default)
 
   /**
    * Modal screens
