@@ -16,6 +16,23 @@ export function startApp(root: string) {
   })
 }
 
+const listenForAndroidFabButtonEvent = () => {
+  Navigation.events().registerNavigationButtonPressedListener(({ buttonId }) => {
+    if (buttonId === 'androidScan') {
+      Navigation.showModal({
+        component: {
+          name: SCREENS.Scanner,
+          options: {
+            topBar: {
+              visible: false,
+            },
+          },
+        },
+      })
+    }
+  })
+}
+
 const startOnboarding = () => {
   Navigation.setDefaultOptions({
     topBar: {
@@ -99,6 +116,9 @@ export async function startMain() {
     },
   })
 
+  /**
+   * Begin root
+   */
   Navigation.setRoot({
     root: {
       sideMenu: {
@@ -114,7 +134,7 @@ export async function startMain() {
               //** Android only */
               fab: {
                 visible: true,
-                id: 'scanFabButton',
+                id: 'androidScan',
                 icon: scanIcon,
                 iconColor: 'white',
                 size: 30,
@@ -228,4 +248,12 @@ export async function startMain() {
       },
     },
   })
+  /** ^^ End root ^^ */
+
+  /**
+   * Set up global listener for android fab button
+   */
+  if (Device.isAndroid) {
+    listenForAndroidFabButtonEvent()
+  }
 }

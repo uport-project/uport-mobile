@@ -21,4 +21,27 @@ export default {
   Terms: 'Terms',
 
   ProfileQRCode: 'ProfileQRCode',
+
+  UPortId: 'UPortId',
+  Device: 'Device',
+  Network: 'Network',
+  Status: 'Status',
+  Hub: 'Hub',
+  TryUport: 'TryUport',
+  KeyChain: 'KeyChain',
+
+  BACKUP: {
+    DataBackupInstructions: 'DataBackupInstructions',
+    DataBackupSuccess: 'DataBackupSuccess',
+    CreateSeedInstructions: 'CreateSeedInstructions',
+    CreateSeedPhrase: 'CreateSeedPhrase',
+    CreateSeedPhraseConfirm: 'CreateSeedPhraseConfirm',
+    CreateSeedSuccess: 'CreateSeedSuccess',
+  },
+
+  RECOVERY: {
+    RestoreSeedInstructions: 'RestoreSeedInstructions',
+    RestoreSeedPhrase: 'RestoreSeedPhrase',
+    RestoreSeedSuccess: 'RestoreSeedSuccess',
+  },
 }
