@@ -1,5 +1,40 @@
 # Change Log
 
+## [v433](https://github.com/uport-project/uport-mobile/tree/v433) (2019-04-03)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v432...v433)
+
+**Merged pull requests:**
+
+- Fixed "BigNumber" crash [\#105](https://github.com/uport-project/uport-mobile/pull/105) ([simonas-notcat](https://github.com/simonas-notcat))
+
+## [v432](https://github.com/uport-project/uport-mobile/tree/v432) (2019-04-02)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v431...v432)
+
+**Merged pull requests:**
+
+- Waiting for sync to end after ID recovery [\#104](https://github.com/uport-project/uport-mobile/pull/104) ([simonas-notcat](https://github.com/simonas-notcat))
+- Refreshing account balance on diclosure and tx req [\#103](https://github.com/uport-project/uport-mobile/pull/103) ([simonas-notcat](https://github.com/simonas-notcat))
+- Bugfixes for release v431 [\#102](https://github.com/uport-project/uport-mobile/pull/102) ([jasonhealy](https://github.com/jasonhealy))
+
+## [v431](https://github.com/uport-project/uport-mobile/tree/v431) (2019-03-29)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v430...v431)
+
+**Merged pull requests:**
+
+- Publish android to internal track [\#100](https://github.com/uport-project/uport-mobile/pull/100) ([mirceanis](https://github.com/mirceanis))
+- Fix for android camera glitch [\#99](https://github.com/uport-project/uport-mobile/pull/99) ([simonas-notcat](https://github.com/simonas-notcat))
+
+## [v430](https://github.com/uport-project/uport-mobile/tree/v430) (2019-03-29)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v429...v430)
+
+## [v429](https://github.com/uport-project/uport-mobile/tree/v429) (2019-03-29)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v428...v429)
+
+**Merged pull requests:**
+
+- Correct seed recovery screen [\#98](https://github.com/uport-project/uport-mobile/pull/98) ([jasonhealy](https://github.com/jasonhealy))
+- On-boarding tracking events [\#97](https://github.com/uport-project/uport-mobile/pull/97) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v428](https://github.com/uport-project/uport-mobile/tree/v428) (2019-03-28)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v427...v428)
 

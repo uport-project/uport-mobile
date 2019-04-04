@@ -232,7 +232,7 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
             item.type !== 'avatar' && (
               <ListItem
                 title={item.name}
-                last={index === 3}
+                last={true} /** Remove divider */
                 key={item.type}
                 editMode={this.state.editMode}
                 updateItem={(value: string) => this.handleChange({ [item.type]: value })}
@@ -351,7 +351,7 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
         return {
           name: accountProfile ? accountProfile.name : 'Ethereum Account',
           network: networkName,
-          balance: account.balance && `${wei2eth(account.balance.ethBalance)} ETH`,
+          balance: account.balance && account.balance.ethBalance && `${wei2eth(account.balance.ethBalance)} ETH`,
           address: account.address,
           accountProfile,
           isLast: this.props.accounts.length === index + 1,

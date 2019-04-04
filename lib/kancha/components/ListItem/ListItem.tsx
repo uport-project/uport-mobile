@@ -91,6 +91,11 @@ interface ListItemProps {
    * Disable tap events on list item
    */
   disabled?: boolean
+
+  /**
+   * Show bottom divider line
+   */
+  dividerBottom?: boolean
 }
 
 /** Move to kancha utils */
@@ -134,24 +139,27 @@ const ListItem: React.FunctionComponent<ListItemProps> = props => {
           flex={1}
           flexDirection={'row'}
           alignItems={'center'}
-          dividerBottom={!props.last}
+          dividerBottom={!props.last || props.dividerBottom}
           marginLeft
           paddingTop={10}
           paddingBottom={10}
           paddingRight
         >
           <Container flexDirection={'row'} flex={1} viewStyle={{ overflow: 'hidden' }}>
-            <Container>
+            <Container flex={1}>
               {props.title && <Text type={Text.Types.SubTitle}>{props.title}</Text>}
               {props.editMode ? (
-                <TextInput
-                  style={{ fontSize: 18, padding: 0 }}
-                  defaultValue={(props.children && props.children.toString()) || ''}
-                  onChangeText={props.updateItem}
-                  placeholder={'Not provided'}
-                />
+                <Container>
+                  <TextInput
+                    style={{ fontSize: 18, padding: 0, flex: 1 }}
+                    defaultValue={(props.children && props.children.toString()) || ''}
+                    onChangeText={props.updateItem}
+                    placeholder={'Not provided'}
+                    underlineColorAndroid={'rgba(0,0,0,0)'}
+                  />
+                </Container>
               ) : (
-                <Container flexDirection={'row'} alignItems={'center'} justifyContent={'center'}>
+                <Container flexDirection={'row'} alignItems={'center'}>
                   <Text type={Text.Types.ListItem}>{props.children}</Text>
                   {props.selected && (
                     <Container paddingLeft={8}>

@@ -49,6 +49,29 @@ platform :android do
     )
   end
 
+  desc "Submit a new Release Build to Google Play Internal testing channel"
+  lane :internal do
+
+    ## the app should already be built by CircleCI, no need to call this again
+    # gradle(
+    #  task: 'deliverArchives'
+    # )
+
+    upload_to_play_store(
+      track: 'internal',
+      apk_paths: [
+        './app/build/outputs/apk/release/app-armeabi-v7a-release.apk',
+        './app/build/outputs/apk/release/app-x86-release.apk'
+        ],
+  ## uncomment this to disable apk upload
+  #    validate_only: true,
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true
+    )
+
+  end
+
   desc "Submit a new Release Build to Google Play Alpha channel"
   lane :alpha do
 
@@ -70,7 +93,6 @@ platform :android do
       skip_upload_screenshots: true  
     )
 
-    # You can also use other beta testing services here
   end
 
   # You can define as many lanes as you want
