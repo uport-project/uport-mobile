@@ -22,7 +22,6 @@ import { connect } from 'react-redux'
 import { Screen, ListItem, Section, Theme, Device } from '@kancha'
 import { Navigation } from 'react-native-navigation'
 import SCREENS from '../screens/Screens'
-import MaterialIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import { connections } from 'uPortMobile/lib/selectors/identities'
 import { hdRootAddress, seedConfirmedSelector } from 'uPortMobile/lib/selectors/hdWallet'
 

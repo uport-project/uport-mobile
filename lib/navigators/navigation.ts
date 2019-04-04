@@ -64,7 +64,7 @@ const startOnboarding = () => {
   })
 }
 
-const navBarText = (title: string, largeTitle: boolean, noBorder?: boolean) => {
+const navBarText = (title: string, noBorder?: boolean) => {
   return {
     noBorder: noBorder && noBorder,
     title: {
@@ -72,7 +72,7 @@ const navBarText = (title: string, largeTitle: boolean, noBorder?: boolean) => {
       color: Theme.colors.inverted.text,
     },
     largeTitle: {
-      visible: largeTitle,
+      visible: true,
       color: Theme.colors.inverted.text,
     },
   }
@@ -113,6 +113,9 @@ export async function startMain() {
         color: 'white',
         visible: true,
       },
+      largeTitle: {
+        color: 'white',
+      },
     },
   })
 
@@ -150,7 +153,7 @@ export async function startMain() {
                       component: {
                         name: SCREENS.Credentials,
                         options: {
-                          topBar: navBarText('Credentials', true),
+                          topBar: navBarText('Credentials'),
                           bottomTab: {
                             icon: credentialsIcon,
                             iconColor: Theme.colors.primary.accessories,
@@ -170,7 +173,7 @@ export async function startMain() {
                       component: {
                         name: SCREENS.Profile,
                         options: {
-                          topBar: navBarText('', false, true),
+                          topBar: navBarText('', true),
                           bottomTab: {
                             icon: profileIcon,
                             iconColor: Theme.colors.primary.accessories,
