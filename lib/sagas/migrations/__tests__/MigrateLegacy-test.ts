@@ -37,6 +37,9 @@ import { hdRootAddress } from 'uPortMobile/lib/selectors/hdWallet'
 import { hasAttestations } from 'uPortMobile/lib/selectors/attestations';
 import { resetHDWallet } from 'uPortMobile/lib/actions/HDWalletActions'
 import { handleURL } from 'uPortMobile/lib/actions/requestActions';
+import { dataBackup } from 'uPortMobile/lib/selectors/settings';
+import { deleteData } from '../../hubSaga';
+import { setDataBackup } from 'uPortMobile/lib/actions/settingsActions';
 
 const step = MigrationStep.MigrateLegacy
 
@@ -83,6 +86,7 @@ describe('MigrateLegacy', () => {
           it('should replace root Identity using hdroot as device key', () => {
             return expectSaga(migrate)
               .provide([
+                [select(dataBackup), false],
                 [call(canSignFor, legacyDID), false],
                 [call(hasWorkingSeed), true],
                 [select(currentAddress), legacyDID],
@@ -115,7 +119,6 @@ describe('MigrateLegacy', () => {
                   error: `Legacy Test Net Identity has been Disabled`,
                 }),
               )
-              .put(resetHub())
               .put(saveMessage(step, 'New mainnet identity is created'))
               .returns(true)
               .run()
@@ -126,6 +129,7 @@ describe('MigrateLegacy', () => {
               it('should clean it up', () => {
                 return expectSaga(migrate)
                   .provide([
+                    [select(dataBackup), false],
                     [call(canSignFor, legacyDID), false],
                     [call(hasWorkingSeed), true],
                     [select(currentAddress), legacyDID],
@@ -161,7 +165,6 @@ describe('MigrateLegacy', () => {
                       error: `Legacy Test Net Identity has been Disabled`,
                     }),
                   )
-                  .put(resetHub())
                   .put(saveMessage(step, 'New mainnet identity is created'))
                   .returns(true)
                   .run()
@@ -172,6 +175,7 @@ describe('MigrateLegacy', () => {
               it('should clean it up', () => {
                 return expectSaga(migrate)
                   .provide([
+                    [select(dataBackup), false],
                     [call(canSignFor, legacyDID), false],
                     [call(hasWorkingSeed), true],
                     [select(currentAddress), legacyDID],
@@ -219,7 +223,6 @@ describe('MigrateLegacy', () => {
                       error: `Legacy Identity has been Disabled. Keys are no longer available.`,
                     }),
                   )
-                  .put(resetHub())
                   .put(saveMessage(step, 'New mainnet identity is created'))
                   .returns(true)
                   .run()
@@ -233,6 +236,7 @@ describe('MigrateLegacy', () => {
           it('should replace root Identity using hdroot as device key', () => {
             return expectSaga(migrate)
               .provide([
+                [select(dataBackup), false],
                 [select(currentAddress), legacyDID],
                 [call(canSignFor, legacyDID), false],
                 [call(hasWorkingSeed), false],
@@ -254,7 +258,6 @@ describe('MigrateLegacy', () => {
                 }),
               )
               .put(saveMessage(step, 'New mainnet identity is created'))
-              .put(resetHub())
               .returns(true)
               .run()
           })
@@ -263,6 +266,7 @@ describe('MigrateLegacy', () => {
           it('should replace root Identity using hdroot as device key', () => {
             return expectSaga(migrate)
               .provide([
+                [select(dataBackup), false],
                 [select(currentAddress), legacyDID],
                 [call(canSignFor, legacyDID), false],
                 [call(hasWorkingSeed), false],
@@ -282,7 +286,6 @@ describe('MigrateLegacy', () => {
                   error: `Legacy Test Net Identity has been Disabled`,
                 }),
               )
-              .put(resetHub())
               .put(saveMessage(step, 'New mainnet identity is created'))
               .returns(true)
               .run()
@@ -293,6 +296,7 @@ describe('MigrateLegacy', () => {
               it('should clean it up', () => {
                 return expectSaga(migrate)
                   .provide([
+                    [select(dataBackup), false],
                     [select(currentAddress), legacyDID],
                     [call(canSignFor, legacyDID), false],
                     [call(hasWorkingSeed), false],
@@ -324,6 +328,7 @@ describe('MigrateLegacy', () => {
               it('should clean it up', () => {
                 return expectSaga(migrate)
                   .provide([
+                    [select(dataBackup), false],
                     [select(currentAddress), legacyDID],
                     [call(canSignFor, legacyDID), false],
                     [call(hasWorkingSeed), false],
@@ -358,7 +363,6 @@ describe('MigrateLegacy', () => {
                       error: `Legacy Identity has been Disabled. Keys are no longer available.`,
                     }),
                   )
-                  .put(resetHub())
                   .put(saveMessage(step, 'New mainnet identity is created'))
                   .returns(true)
                   .run()
@@ -376,6 +380,7 @@ describe('MigrateLegacy', () => {
         it('should replace root Identity using hdroot as device key', () => {
           return expectSaga(migrate)
             .provide([
+              [select(dataBackup), false],
               [call(canSignFor, legacyDID), true],
               [call(hasWorkingSeed), true],
               [select(currentAddress), legacyDID],
@@ -402,10 +407,50 @@ describe('MigrateLegacy', () => {
                 securityLevel: DEFAULT_LEVEL,
               }),
             )
-            .put(resetHub())
             .put(saveMessage(step, 'New mainnet identity is created'))
             .returns(true)
             .run()
+        })
+
+        describe('backed up', () => {
+          it('should replace root Identity using hdroot as device key', () => {
+            return expectSaga(migrate)
+              .provide([
+                [select(dataBackup), true],
+                [call(canSignFor, legacyDID), true],
+                [call(hasWorkingSeed), true],
+                [select(currentAddress), legacyDID],
+                [select(networkSettings), oldId],
+                [select(hasAttestations), false],
+                [select(hasMainnetAccounts), false],
+                [call(addressFor, 0, 0), { address: hdroot, publicKey }],
+                [call(encryptionPublicKey, { idIndex: 0, actIndex: 0 }), encPublicKey],
+                [select(ownClaimsMap), own],
+                [select(subAccounts, legacyDID), []],
+                [call(deleteData), undefined]
+              ])
+              .call(deleteData)
+              .put(setDataBackup(false))
+              .put(
+                storeIdentity({
+                  address: newDID,
+                  network: 'mainnet',
+                  deviceAddress: hdroot,
+                  hexaddress: hdroot,
+                  recoveryType: 'seed',
+                  signerType: 'KeyPair',
+                  hdindex: 0,
+                  encPublicKey,
+                  publicKey,
+                  own,
+                  securityLevel: DEFAULT_LEVEL,
+                }),
+              )
+              .put(saveMessage(step, 'New mainnet identity is created'))
+              .put(setDataBackup(true))
+              .returns(true)
+              .run()
+          })  
         })
 
         describe('with mainnet accounts', () => {
@@ -413,6 +458,7 @@ describe('MigrateLegacy', () => {
             const OWNS = 'OWNS'
             return expectSaga(migrate)
               .provide([
+                [select(dataBackup), false],
                 [call(createAttestationToken, legacyDID, `did:ethr:${hdroot}`, { owns: legacyDID }), OWNS],
                 [call(canSignFor, legacyDID), true],
                 [call(hasWorkingSeed), true],
@@ -444,7 +490,6 @@ describe('MigrateLegacy', () => {
               .put(handleURL(`me.uport:req/${OWNS}`, { popup: false }))
               .put(storeExternalUport(legacyDID, own))
               .put(storeConnection(newDID, 'knows', legacyDID))
-              .put(resetHub())
               .put(saveMessage(step, 'New mainnet identity is created'))
               .returns(true)
               .run()
@@ -456,6 +501,7 @@ describe('MigrateLegacy', () => {
             const OWNS = 'OWNS'
             return expectSaga(migrate)
               .provide([
+                [select(dataBackup), false],
                 [call(createAttestationToken, legacyDID, `did:ethr:${hdroot}`, { owns: legacyDID }), OWNS],
                 [call(canSignFor, legacyDID), true],
                 [call(hasWorkingSeed), true],
@@ -487,7 +533,6 @@ describe('MigrateLegacy', () => {
               .put(handleURL(`me.uport:req/${OWNS}`, { popup: false }))
               .put(storeExternalUport(legacyDID, own))
               .put(storeConnection(newDID, 'knows', legacyDID))
-              .put(resetHub())
               .put(saveMessage(step, 'New mainnet identity is created'))
               .returns(true)
               .run()
@@ -500,6 +545,7 @@ describe('MigrateLegacy', () => {
             it('should clean it up', () => {
               return expectSaga(migrate)
                 .provide([
+                  [select(dataBackup), false],
                   [call(canSignFor, legacyDID), true],
                   [call(hasWorkingSeed), true],
                   [select(currentAddress), legacyDID],
@@ -529,7 +575,6 @@ describe('MigrateLegacy', () => {
                     securityLevel: DEFAULT_LEVEL,
                   }),
                 )
-                .put(resetHub())
                 .put(saveMessage(step, 'New mainnet identity is created'))
                 .returns(true)
                 .run()
@@ -540,6 +585,7 @@ describe('MigrateLegacy', () => {
             it('should clean it up', () => {
               return expectSaga(migrate)
                 .provide([
+                  [select(dataBackup), false],
                   [call(canSignFor, legacyDID), true],
                   [call(hasWorkingSeed), true],
                   [select(currentAddress), legacyDID],
@@ -581,7 +627,6 @@ describe('MigrateLegacy', () => {
                     error: `Legacy Identity has been Disabled. Keys are no longer available.`,
                   }),
                 )
-                .put(resetHub())
                 .put(saveMessage(step, 'New mainnet identity is created'))
                 .returns(true)
                 .run()
@@ -595,6 +640,7 @@ describe('MigrateLegacy', () => {
         it('should replace root Identity using hdroot as device key', () => {
           return expectSaga(migrate)
             .provide([
+              [select(dataBackup), false],
               [select(currentAddress), legacyDID],
               [call(canSignFor, legacyDID), true],
               [call(hasWorkingSeed), false],
@@ -609,7 +655,6 @@ describe('MigrateLegacy', () => {
             .put(resetHDWallet())
             .call(createIdentityKeyPair)
             .put(updateIdentity(newDID, { own }))
-            .put(resetHub())
             .put(saveMessage(step, 'New mainnet identity is created'))
             .returns(true)
             .run()
@@ -619,6 +664,7 @@ describe('MigrateLegacy', () => {
         it('should replace root Identity using hdroot as device key', () => {
           return expectSaga(migrate)
             .provide([
+              [select(dataBackup), false],
               [select(currentAddress), legacyDID],
               [call(canSignFor, legacyDID), true],
               [call(hasWorkingSeed), false],
@@ -632,7 +678,6 @@ describe('MigrateLegacy', () => {
             ])
             .call(createIdentityKeyPair)
             .put(updateIdentity(newDID, { own }))
-            .put(resetHub())
             .put(saveMessage(step, 'New mainnet identity is created'))
             .returns(true)
             .run()

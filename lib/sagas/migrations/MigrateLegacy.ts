@@ -15,7 +15,7 @@
 // You should have received a copy of the GNU General Public License
 // along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
 //
-import { call, select, put } from 'redux-saga/effects'
+import { call, select, put, spawn } from 'redux-saga/effects'
 import { delay } from 'redux-saga'
 import {
   createIdentityKeyPair,
@@ -43,6 +43,9 @@ import { track } from 'uPortMobile/lib/actions/metricActions'
 import { handleURL } from 'uPortMobile/lib/actions/requestActions'
 
 import { Alert } from 'react-native'
+import { dataBackup } from 'uPortMobile/lib/selectors/settings';
+import { setDataBackup } from 'uPortMobile/lib/actions/settingsActions';
+import { deleteData } from '../hubSaga';
 
 const step = MigrationStep.MigrateLegacy
 
@@ -78,6 +81,12 @@ export function* migrate(): any {
   const accounts = yield select(subAccounts, oldRoot)
   const own = (yield select(ownClaimsMap)) || {}
  
+  const backedup = yield select(dataBackup)
+  if (backedup) {
+    // This has to be done inline as it would mess up if it doesn't finish
+    yield call(deleteData)
+    yield put(setDataBackup(false))
+  }
   for (const account of accounts) {
     const available = yield call(canSignFor, account.address)
     if (!available) {
@@ -143,7 +152,9 @@ export function* migrate(): any {
     )
   }
   yield put(saveMessage(step, 'New mainnet identity is created'))
-  yield put(resetHub())
+  if (backedup) {
+    yield put(setDataBackup(true))
+  }
   return true
 }
 
