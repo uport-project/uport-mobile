@@ -30,6 +30,10 @@ export default {
   TryUport: 'TryUport',
   KeyChain: 'KeyChain',
 
+  Request: 'Request',
+  NewRequest: 'NewRequest',
+  NestedInfo: 'NestedInfo',
+
   BACKUP: {
     DataBackupInstructions: 'DataBackupInstructions',
     DataBackupSuccess: 'DataBackupSuccess',

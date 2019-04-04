@@ -17,6 +17,8 @@ const App = () => {
   Navigation.events().registerComponentDidAppearListener(({ componentName }) => {
     store.dispatch(screen(componentName))
   })
+
+  requestQueue((url: string) => store.dispatch(handleURL(url)))
 }
 
 export default App

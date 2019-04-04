@@ -91,4 +91,9 @@ export function registerScreens(redux: any) {
   registerComponentWithRedux(redux)(SCREENS.RECOVERY.RestoreSeedInstructions, RestoreSeedInstructions)
   registerComponentWithRedux(redux)(SCREENS.RECOVERY.RestoreSeedPhrase, RestoreSeedPhrase)
   registerComponentWithRedux(redux)(SCREENS.RECOVERY.RestoreSeedSuccess, RestoreSeedSuccess)
+
+  registerComponentWithRedux(redux)(SCREENS.Request, require('../components/Request/index').default)
+  registerComponentWithRedux(redux)(SCREENS.NewRequest, require('../components/newRequest/index').default)
+
+  registerComponentWithRedux(redux)(SCREENS.NestedInfo, require('../components/shared/NestedInfo').default)
 }
