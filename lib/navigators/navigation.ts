@@ -130,6 +130,7 @@ export async function startMain() {
         },
         center: {
           bottomTabs: {
+            id: 'MainTabsId',
             options: {
               //** Android only */
               fab: {
