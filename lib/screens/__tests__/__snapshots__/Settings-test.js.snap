@@ -2355,11 +2355,7 @@ ShallowWrapper {
     connections={Array []}
     dispatch={[Function]}
     hasHDWallet={false}
-    navigator={
-      FakeNavigator {
-        "event": [Function],
-      }
-    }
+    navigator={FakeNavigator {}}
     seedConfirmed={null}
     version="256"
   />,
@@ -2395,7 +2391,11 @@ ShallowWrapper {
             Try uPort
           </ListItem>
           <ListItem
+<<<<<<< HEAD
             externalLink="https://uport.zendesk.com/hc/en-us/requests/new"
+=======
+            externalLink="https://uport.zendesk.com"
+>>>>>>> Fixing/removing tests
             last={true}
           >
             Support
@@ -2464,7 +2464,11 @@ ShallowWrapper {
               Try uPort
             </ListItem>,
             <ListItem
+<<<<<<< HEAD
               externalLink="https://uport.zendesk.com/hc/en-us/requests/new"
+=======
+              externalLink="https://uport.zendesk.com"
+>>>>>>> Fixing/removing tests
               last={true}
             >
               Support
@@ -2515,7 +2519,11 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": "Support",
+<<<<<<< HEAD
               "externalLink": "https://uport.zendesk.com/hc/en-us/requests/new",
+=======
+              "externalLink": "https://uport.zendesk.com",
+>>>>>>> Fixing/removing tests
               "last": true,
             },
             "ref": null,
@@ -2672,7 +2680,11 @@ ShallowWrapper {
               Try uPort
             </ListItem>
             <ListItem
+<<<<<<< HEAD
               externalLink="https://uport.zendesk.com/hc/en-us/requests/new"
+=======
+              externalLink="https://uport.zendesk.com"
+>>>>>>> Fixing/removing tests
               last={true}
             >
               Support
@@ -2741,7 +2753,11 @@ ShallowWrapper {
                 Try uPort
               </ListItem>,
               <ListItem
+<<<<<<< HEAD
                 externalLink="https://uport.zendesk.com/hc/en-us/requests/new"
+=======
+                externalLink="https://uport.zendesk.com"
+>>>>>>> Fixing/removing tests
                 last={true}
               >
                 Support
@@ -2792,7 +2808,11 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": "Support",
+<<<<<<< HEAD
                 "externalLink": "https://uport.zendesk.com/hc/en-us/requests/new",
+=======
+                "externalLink": "https://uport.zendesk.com",
+>>>>>>> Fixing/removing tests
                 "last": true,
               },
               "ref": null,

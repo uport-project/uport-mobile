@@ -90,7 +90,7 @@ export function* checkup(): any {
     const target = pending[0]
     yield call(delay, 1000)
     if (migrationScreens[target]) {
-      yield call(Navigation.showModal, {
+      Navigation.showModal({
         component: {
           name: migrationScreens[target],
         },

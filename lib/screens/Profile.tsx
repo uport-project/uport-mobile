@@ -319,19 +319,6 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
         },
       },
     })
-
-    // this.props.navigator.showModal({
-    //   screen: 'uport.QRCodeModal',
-    //   passProps: {
-    //     title: this.props.name,
-    //     url,
-    //     onClose: this.props.navigator.dismissModal,
-    //   },
-    //   navigatorStyle: {
-    //     navBarHidden: true,
-    //     screenBackgroundColor: 'white',
-    //   },
-    // })
   }
 
   /**
@@ -448,9 +435,11 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
   }
 
   setLegacyModeButtons() {
-    // this.props.navigator.setButtons({
-    //   rightButtons: [],
-    // })
+    Navigation.mergeOptions(this.props.componentId, {
+      topBar: {
+        rightButtons: [],
+      },
+    })
   }
 
   /**
