@@ -30,8 +30,6 @@ import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.poberwong.launcher.IntentLauncherPackage;
 import com.reactlibrary.RNUportSignerPackage;
-import com.reactnativenavigation.NavigationApplication;
-
 
 import org.reactnative.camera.RNCameraPackage;
 
@@ -48,7 +46,23 @@ import io.invertase.firebase.messaging.RNFirebaseMessagingPackage;
 import cl.json.RNSharePackage;
 import cl.json.ShareApplication;
 
-public class MainApplication extends NavigationApplication implements ShareApplication{
+import com.facebook.react.ReactNativeHost;
+import com.reactnativenavigation.NavigationApplication;
+import com.reactnativenavigation.react.NavigationReactNativeHost;
+import com.reactnativenavigation.react.ReactGateway;
+
+public class MainApplication extends NavigationApplication implements ShareApplication {
+
+    @Override
+    protected ReactGateway createReactGateway() {
+        ReactNativeHost host = new NavigationReactNativeHost(this, isDebug(), createAdditionalReactPackages()) {
+            @Override
+            protected String getJSMainModuleName() {
+                return "index";
+            }
+        };
+        return new ReactGateway(this, isDebug(), host);
+    }
 
     @Override
     public void onCreate() {
@@ -68,37 +82,22 @@ public class MainApplication extends NavigationApplication implements ShareAppli
         return getPackages();
     }
 
-
     public boolean getUseDeveloperSupport() {
         return BuildConfig.DEBUG;
     }
-    
+
     @Override
     public String getFileProviderAuthority() {
-           return "com.uportMobile.provider";
-    }    
+        return "com.uportMobile.provider";
+    }
 
     protected List<ReactPackage> getPackages() {
-        return Arrays.<ReactPackage>asList(
-                new MainReactPackage(),
-                new RNSharePackage(),
-                new RNFirebasePackage(),
-                new RNFirebaseRemoteConfigPackage(),
-                new RNFirebaseNotificationsPackage(),
-                new RNFirebaseMessagingPackage(),
-                new SvgPackage(),
-                new RNDeviceInfo(),
-                new RNFetchBlobPackage(),
-                new VectorIconsPackage(),
-                new RNCameraPackage(),
-                new RandomBytesPackage(),
-                new ImagePickerPackage(),
-                new AuthenticationScreenPackage(),
-                new MySNSPackage(),
-                new IntentLauncherPackage(),
-                new RNUportSignerPackage(),
-                new RNFirebaseAnalyticsPackage()
-        );
+        return Arrays.<ReactPackage>asList(new RNSharePackage(), new RNFirebasePackage(),
+                new RNFirebaseRemoteConfigPackage(), new RNFirebaseNotificationsPackage(),
+                new RNFirebaseMessagingPackage(), new SvgPackage(), new RNDeviceInfo(), new RNFetchBlobPackage(),
+                new VectorIconsPackage(), new RNCameraPackage(), new RandomBytesPackage(), new ImagePickerPackage(),
+                new AuthenticationScreenPackage(), new MySNSPackage(), new IntentLauncherPackage(),
+                new RNUportSignerPackage(), new RNFirebaseAnalyticsPackage());
     }
 
 }
