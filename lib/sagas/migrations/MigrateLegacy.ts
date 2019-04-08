@@ -45,7 +45,7 @@ import { handleURL } from 'uPortMobile/lib/actions/requestActions'
 import { Alert } from 'react-native'
 import { dataBackup } from 'uPortMobile/lib/selectors/settings';
 import { setDataBackup } from 'uPortMobile/lib/actions/settingsActions';
-import { deleteData } from '../hubSaga';
+import { handleStartSwitchingSettingsChange } from '../hubSaga';
 
 const step = MigrationStep.MigrateLegacy
 
@@ -83,9 +83,7 @@ export function* migrate(): any {
  
   const backedup = yield select(dataBackup)
   if (backedup) {
-    // This has to be done inline as it would mess up if it doesn't finish
-    yield call(deleteData)
-    yield put(setDataBackup(false))
+    yield call(handleStartSwitchingSettingsChange, { isOn: false })
   }
   for (const account of accounts) {
     const available = yield call(canSignFor, account.address)
@@ -153,7 +151,7 @@ export function* migrate(): any {
   }
   yield put(saveMessage(step, 'New mainnet identity is created'))
   if (backedup) {
-    yield put(setDataBackup(true))
+    yield call(handleStartSwitchingSettingsChange, { isOn: true })
   }
   return true
 }
