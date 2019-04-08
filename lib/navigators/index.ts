@@ -14,6 +14,9 @@ registerScreens({ store, Provider })
  * Register global event listener for screen
  */
 const App = () => {
+  Navigation.events().registerAppLaunchedListener(() => {
+    //Hello
+  })
   Navigation.events().registerComponentDidAppearListener(({ componentName }) => {
     store.dispatch(screen(componentName))
   })

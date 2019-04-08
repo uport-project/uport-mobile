@@ -61,7 +61,4 @@ public class MainActivity extends NavigationActivity {
     // public int getSplashLayout() {
     //     return R.layout.splash;
     // }
-
-    
-    
 }

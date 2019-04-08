@@ -6,16 +6,17 @@ import SCREENS from '../screens/Screens'
  * This is called by the startUpSaga when the app is ready to launch
  */
 export function startApp(root: string) {
-  Navigation.events().registerAppLaunchedListener(() => {
-    switch (root) {
-      case 'ONBOARDING':
-        return startOnboarding()
-      case 'MAIN_APP':
-        return startMain()
-    }
-  })
+  switch (root) {
+    case 'ONBOARDING':
+      return startOnboarding()
+    case 'MAIN_APP':
+      return startMain()
+  }
 }
 
+/**
+ * Global listener for Android Scan button
+ */
 const listenForAndroidFabButtonEvent = () => {
   Navigation.events().registerNavigationButtonPressedListener(({ buttonId }) => {
     if (buttonId === 'androidScan') {
@@ -23,6 +24,11 @@ const listenForAndroidFabButtonEvent = () => {
         component: {
           name: SCREENS.Scanner,
           options: {
+            animations: {
+              showModal: {
+                enabled: false,
+              },
+            },
             topBar: {
               visible: false,
             },
@@ -101,17 +107,21 @@ export async function startMain() {
         width: Device.w,
       },
     },
+    bottomTabs: {
+      animate: false,
+      titleDisplayMode: 'alwaysHide',
+    },
     topBar: {
-      drawBehind: true,
       background: {
         color: Theme.colors.primary.brand,
         translucent: false,
       },
+      elevation: 0,
       buttonColor: 'white',
       backButton: {
         title: 'Back',
         color: 'white',
-        visible: true,
+        // visible: true,
       },
       largeTitle: {
         color: 'white',
@@ -134,17 +144,6 @@ export async function startMain() {
         center: {
           bottomTabs: {
             id: 'MainTabsId',
-            options: {
-              //** Android only */
-              fab: {
-                visible: true,
-                id: 'androidScan',
-                icon: scanIcon,
-                iconColor: 'white',
-                size: 30,
-                backgroundColor: Theme.colors.primary.brand,
-              },
-            },
             children: [
               {
                 stack: {
@@ -159,6 +158,15 @@ export async function startMain() {
                             iconColor: Theme.colors.primary.accessories,
                             selectedIconColor: Theme.colors.primary.brand,
                             iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
+                          },
+                          fab: {
+                            id: 'androidScan',
+                            visible: true,
+                            backgroundColor: Theme.colors.primary.brand,
+                            clickColor: '#FFF',
+                            rippleColor: '#ddd',
+                            icon: scanIcon,
+                            iconColor: '#FFF',
                           },
                         },
                       },
@@ -180,6 +188,15 @@ export async function startMain() {
                             selectedIconColor: Theme.colors.primary.brand,
                             iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
                           },
+                          fab: {
+                            id: 'androidScan',
+                            visible: true,
+                            backgroundColor: Theme.colors.primary.brand,
+                            clickColor: '#FFF',
+                            rippleColor: '#ddd',
+                            icon: scanIcon,
+                            iconColor: '#FFF',
+                          },
                         },
                       },
                     },
@@ -199,6 +216,15 @@ export async function startMain() {
                             iconColor: Theme.colors.primary.accessories,
                             selectedIconColor: Theme.colors.primary.brand,
                             iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
+                          },
+                          fab: {
+                            id: 'androidScan',
+                            visible: true,
+                            backgroundColor: Theme.colors.primary.brand,
+                            clickColor: '#FFF',
+                            rippleColor: '#ddd',
+                            icon: scanIcon,
+                            iconColor: '#FFF',
                           },
                         },
                       },
@@ -220,6 +246,15 @@ export async function startMain() {
                             selectedIconColor: Theme.colors.primary.brand,
                             iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
                           },
+                          fab: {
+                            id: 'androidScan',
+                            visible: true,
+                            backgroundColor: Theme.colors.primary.brand,
+                            clickColor: '#FFF',
+                            rippleColor: '#ddd',
+                            icon: scanIcon,
+                            iconColor: '#FFF',
+                          },
                         },
                       },
                     },
@@ -239,6 +274,15 @@ export async function startMain() {
                             iconColor: Theme.colors.primary.accessories,
                             selectedIconColor: Theme.colors.primary.brand,
                             iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
+                          },
+                          fab: {
+                            id: 'androidScan',
+                            visible: true,
+                            backgroundColor: Theme.colors.primary.brand,
+                            clickColor: '#FFF',
+                            rippleColor: '#ddd',
+                            icon: scanIcon,
+                            iconColor: '#FFF',
                           },
                         },
                       },
