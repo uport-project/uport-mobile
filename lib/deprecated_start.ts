@@ -17,34 +17,34 @@
  * 
  ***/
 
-import { Navigation } from 'react-native-navigation'
-import requestQueue from './utilities/requestQueue'
-import { Provider } from 'react-redux'
-import store from './store/store'
-import { registerScreens } from './screens'
-import { Platform, NativeModules, UIManager } from 'react-native'
-import FeatherIcons from 'react-native-vector-icons/Feather'
-import { handleURL } from './actions/requestActions'
-import { registerDeviceForNotifications } from 'uPortMobile/lib/actions/snsRegistrationActions'
-import { track, screen } from 'uPortMobile/lib/actions/metricActions'
-import { colors } from 'uPortMobile/lib/styles/globalStyles'
-import { RNUportSigner, RNUportHDSigner } from 'react-native-uport-signer'
-import { print } from 'util';
-import console = require('console');
+// import { Navigation } from 'react-native-navigation'
+// import requestQueue from './utilities/requestQueue'
+// import { Provider } from 'react-redux'
+// import store from './store/store'
+// import { registerScreens } from './screens'
+// import { Platform, NativeModules, UIManager } from 'react-native'
+// import FeatherIcons from 'react-native-vector-icons/Feather'
+// import { handleURL } from './actions/requestActions'
+// import { registerDeviceForNotifications } from 'uPortMobile/lib/actions/snsRegistrationActions'
+// import { track, screen } from 'uPortMobile/lib/actions/metricActions'
+// import { colors } from 'uPortMobile/lib/styles/globalStyles'
+// import { RNUportSigner, RNUportHDSigner } from 'react-native-uport-signer'
+// import { print } from 'util';
+// import console = require('console');
 
-const isIOS = Platform.OS === 'ios' ? true : false
+// const isIOS = Platform.OS === 'ios' ? true : false
 
-export function start() {
-  // registerScreens(store, Provider)
-  UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true)
-}
+// export function start() {
+//   // registerScreens(store, Provider)
+//   UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true)
+// }
 
 // Actual initialization is done by startupSaga during initialization of `store`.
 // When DB is ready it calls one of these.
-export function startMain() {
-  // startAppModernUI()
-  //startLegacyApp()
-}
+// export function startMain() {
+//   // startAppModernUI()
+//   //startLegacyApp()
+// }
 
 // export const screenVisibilityListener = new RNNScreenVisibilityListener({
 //   didAppear: async (event: any) => {
@@ -53,159 +53,256 @@ export function startMain() {
 // })
 
 // Add GUI startup tasks here for already onboarded user
-export async function startAppModernUI() {
-  /** Ask for notificatiosn on startup */
-  store.dispatch(registerDeviceForNotifications())
+// export async function startAppModernUI() {
+//   /** Ask for notificatiosn on startup */
+//   store.dispatch(registerDeviceForNotifications())
 
-  const accountsIcon = await FeatherIcons.getImageSource('check-circle', 26)
-  const contactsIcon = await FeatherIcons.getImageSource('users', 26)
-  const contactIcon = await FeatherIcons.getImageSource('user', 26)
-  const settingsIcon = await FeatherIcons.getImageSource('settings', 26)
-  const notificationsIcon = await FeatherIcons.getImageSource('bell', 26)
-  const AndroidOptions = {
-    appStyle: {
-      tabBarBackgroundColor: colors.brand,
-      tabBarButtonColor: '#ffffff',
-      tabBarHideShadow: true,
-      tabBarSelectedButtonColor: '#63d7cc',
-      tabBarTranslucent: false,
-      tabFontSize: 10,
-      selectedTabFontSize: 12,
-    },
-    drawer: {},
-  }
-  const IOSOptions = {
-    tabsStyle: {
-      tabBarBackgroundColor: colors.white,
-      tabBarSelectedButtonColor: colors.brand,
-    },
-    drawer: {
-      right: {
-        screen: 'screen.Scanner',
-      },
-      style: {
-        rightDrawerWidth: 100,
-        drawerShadow: false,
-      },
-    },
-  }
-  const commonPlatformOptions = {
-    tabsStyle: {
-      tabBarBackgroundColor: colors.brand,
-      tabBarSelectedButtonColor: colors.white216,
-    },
-    tabs: [
-      // {
-      //   screen: 'screen.DesignSystem',
-      //   title: 'Settings',
-      //   icon: settingsIcon,
-      //   iconInsets: { // add this to change icon position (optional, iOS only).
-      //     bottom: -8, // optional, default is 0.
-      //   },
-      // },
-      {
-        screen: 'screen.Credentials',
-        title: 'Credentials',
-        icon: accountsIcon,
-        iconInsets: {
-          // add this to change icon position (optional, iOS only).
-          bottom: -8, // optional, default is 0.
-        },
-      },
-      {
-        screen: 'screen.User',
-        icon: contactIcon,
-        iconInsets: {
-          // add this to change icon position (optional, iOS only).
-          bottom: -8, // optional, default is 0.
-        },
-      },
-      {
-        screen: 'screen.Contacts',
-        title: 'Contacts',
-        icon: contactsIcon,
-        iconInsets: {
-          // add this to change icon position (optional, iOS only).
-          bottom: -8, // optional, default is 0.
-        },
-      },
-      {
-        screen: 'screen.Notifications',
-        title: 'Notifications',
-        icon: notificationsIcon,
-        iconInsets: {
-          // add this to change icon position (optional, iOS only).
-          bottom: -8, // optional, default is 0.
-        },
-      },
-      {
-        screen: 'screen.Settings',
-        title: 'Settings',
-        icon: settingsIcon,
-        iconInsets: {
-          // add this to change icon position (optional, iOS only).
-          bottom: -8, // optional, default is 0.
-        },
-      },
-    ],
-    animationType: 'none',
-  }
-
-  /**
-   * The typings are out of date so we need to cast them as any for now
-   *
-   */
-  // const StartTabBasedApp: any = Navigation.startTabBasedApp
-
-  // StartTabBasedApp({
-  //   tabs: commonPlatformOptions.tabs,
-  //   tabsStyle: IOSOptions.tabsStyle,
-  //   drawer: isIOS ? IOSOptions.drawer : AndroidOptions.drawer,
-  //   appStyle: isIOS ? {} : AndroidOptions.appStyle,
-  //   animationType: 'fade',
-  // })
-
-  // screenVisibilityListener.register()
-  // requestQueue((url: string) => store.dispatch(handleURL(url)))
-}
-
-// Add GUI startup tasks here for already onboarded user
-// export async function startLegacyApp(this: any) {
-//   Platform.OS === 'android' ? store.dispatch(registerDeviceForNotifications()) : null
-//   Navigation.startSingleScreenApp({
-//     screen: {
-//       screen: 'uport.home', // unique ID registered with Navigation.registerScreen
-//       // override the navigator style for the screen, see "Styling the navigator" below (optional)
-//       // navigatorButtons: {} // override the nav buttons for the screen, see "Adding buttons to the navigator" below (optional)
-//       navigatorStyle: {
-//         navBarHidden: true,
-//       }, // override the navigator style for the screen, see "Styling the navigator" below (optional)
+//   const accountsIcon = await FeatherIcons.getImageSource('check-circle', 26)
+//   const contactsIcon = await FeatherIcons.getImageSource('users', 26)
+//   const contactIcon = await FeatherIcons.getImageSource('user', 26)
+//   const settingsIcon = await FeatherIcons.getImageSource('settings', 26)
+//   const notificationsIcon = await FeatherIcons.getImageSource('bell', 26)
+//   const AndroidOptions = {
+//     appStyle: {
+//       tabBarBackgroundColor: colors.brand,
+//       tabBarButtonColor: '#ffffff',
+//       tabBarHideShadow: true,
+//       tabBarSelectedButtonColor: '#63d7cc',
+//       tabBarTranslucent: false,
+//       tabFontSize: 10,
+//       selectedTabFontSize: 12,
 //     },
-//     // passProps: {}, // simple serializable object that will pass as props to all top screens (optional)
-//     animationType: 'none', // optional, add transition animation to root change: 'none', 'slide-down', 'fade'
-//   })
-//   this.listener = screenVisibilityListener.register()
-//   requestQueue((url: string) => store.dispatch(handleURL(url)))
+//     drawer: {},
+//   }
+//   const IOSOptions = {
+//     tabsStyle: {
+//       tabBarBackgroundColor: colors.white,
+//       tabBarSelectedButtonColor: colors.brand,
+//     },
+//     drawer: {
+//       right: {
+//         screen: 'screen.Scanner',
+//       },
+//       style: {
+//         rightDrawerWidth: 100,
+//         drawerShadow: false,
+//       },
+//     },
+//   }
+//   const commonPlatformOptions = {
+//     tabsStyle: {
+//       tabBarBackgroundColor: colors.brand,
+//       tabBarSelectedButtonColor: colors.white216,
+//     },
+//     tabs: [
+//       // {
+//       //   screen: 'screen.DesignSystem',
+//       //   title: 'Settings',
+//       //   icon: settingsIcon,
+//       //   iconInsets: { // add this to change icon position (optional, iOS only).
+//       //     bottom: -8, // optional, default is 0.
+//       //   },
+//       // },
+//       {
+//         screen: 'screen.Credentials',
+//         title: 'Credentials',
+//         icon: accountsIcon,
+//         iconInsets: {
+//           // add this to change icon position (optional, iOS only).
+//           bottom: -8, // optional, default is 0.
+//         },
+//       },
+//       {
+//         screen: 'screen.User',
+//         icon: contactIcon,
+//         iconInsets: {
+//           // add this to change icon position (optional, iOS only).
+//           bottom: -8, // optional, default is 0.
+//         },
+//       },
+//       {
+//         screen: 'screen.Contacts',
+//         title: 'Contacts',
+//         icon: contactsIcon,
+//         iconInsets: {
+//           // add this to change icon position (optional, iOS only).
+//           bottom: -8, // optional, default is 0.
+//         },
+//       },
+//       {
+//         screen: 'screen.Notifications',
+//         title: 'Notifications',
+//         icon: notificationsIcon,
+//         iconInsets: {
+//           // add this to change icon position (optional, iOS only).
+//           bottom: -8, // optional, default is 0.
+//         },
+//       },
+//       {
+//         screen: 'screen.Settings',
+//         title: 'Settings',
+//         icon: settingsIcon,
+//         iconInsets: {
+//           // add this to change icon position (optional, iOS only).
+//           bottom: -8, // optional, default is 0.
+//         },
+//       },
+//     ],
+//     animationType: 'none',
+//   }
+
+//   const accountsIcon = await FeatherIcons.getImageSource('check-circle', 26)
+//   const contactsIcon = await FeatherIcons.getImageSource('users', 26)
+//   const contactIcon = await FeatherIcons.getImageSource('user', 26)
+//   const settingsIcon = await FeatherIcons.getImageSource('settings', 26)
+//   const notificationsIcon = await FeatherIcons.getImageSource('bell', 26)
+//   const AndroidOptions = {
+//     appStyle: {
+//       tabBarBackgroundColor: colors.brand,
+//       tabBarButtonColor: '#ffffff',
+//       tabBarHideShadow: true,
+//       tabBarSelectedButtonColor: '#63d7cc',
+//       tabBarTranslucent: false,
+//       tabFontSize: 10,
+//       selectedTabFontSize: 12,
+//     },
+//     drawer: {},
+//   }
+//   const IOSOptions = {
+//     tabsStyle: {
+//       tabBarBackgroundColor: colors.white,
+//       tabBarSelectedButtonColor: colors.brand,
+//     },
+//     drawer: {
+//       right: {
+//         screen: 'screen.Scanner',
+//       },
+//       style: {
+//         rightDrawerWidth: 100,
+//         drawerShadow: false,
+//       },
+//     },
+//   }
+//   const commonPlatformOptions = {
+//     tabsStyle: {
+//       tabBarBackgroundColor: colors.brand,
+//       tabBarSelectedButtonColor: colors.white216,
+//     },
+//     tabs: [
+//       // {
+//       //   screen: 'screen.DesignSystem',
+//       //   title: 'Settings',
+//       //   icon: settingsIcon,
+//       //   iconInsets: { // add this to change icon position (optional, iOS only).
+//       //     bottom: -8, // optional, default is 0.
+//       //   },
+//       // },
+//       {
+//         screen: 'screen.Credentials',
+//         title: 'Credentials',
+//         icon: accountsIcon,
+//         iconInsets: {
+//           // add this to change icon position (optional, iOS only).
+//           bottom: -8, // optional, default is 0.
+//         },
+//       },
+//       {
+//         screen: 'screen.User',
+//         icon: contactIcon,
+//         iconInsets: {
+//           // add this to change icon position (optional, iOS only).
+//           bottom: -8, // optional, default is 0.
+//         },
+//       },
+//       {
+//         screen: 'screen.Contacts',
+//         title: 'Contacts',
+//         icon: contactsIcon,
+//         iconInsets: {
+//           // add this to change icon position (optional, iOS only).
+//           bottom: -8, // optional, default is 0.
+//         },
+//       },
+//       {
+//         screen: 'screen.Notifications',
+//         title: 'Notifications',
+//         icon: notificationsIcon,
+//         iconInsets: {
+//           // add this to change icon position (optional, iOS only).
+//           bottom: -8, // optional, default is 0.
+//         },
+//       },
+//       {
+//         screen: 'screen.Settings',
+//         title: 'Settings',
+//         icon: settingsIcon,
+//         iconInsets: {
+//           // add this to change icon position (optional, iOS only).
+//           bottom: -8, // optional, default is 0.
+//         },
+//       },
+//     ],
+//     animationType: 'none',
+//   }
+
+//   /**
+//    * The typings are out of date so we need to cast them as any for now
+//    *
+//    */
+//   // const StartTabBasedApp: any = Navigation.startTabBasedApp
+
+//   // StartTabBasedApp({
+//   //   tabs: commonPlatformOptions.tabs,
+//   //   tabsStyle: IOSOptions.tabsStyle,
+//   //   drawer: isIOS ? IOSOptions.drawer : AndroidOptions.drawer,
+//   //   appStyle: isIOS ? {} : AndroidOptions.appStyle,
+//   //   animationType: 'fade',
+//   // })
+
+//   // screenVisibilityListener.register()
+//   // requestQueue((url: string) => store.dispatch(handleURL(url)))
 // }
 
-// Add GUI startup tasks here for onboarding new user
-export async function startOnboarding() {
-  let startupScreen = 'onboarding2.Welcome'
+// // Add GUI startup tasks here for already onboarded user
+// // export async function startLegacyApp(this: any) {
+// //   Platform.OS === 'android' ? store.dispatch(registerDeviceForNotifications()) : null
+// //   Navigation.startSingleScreenApp({
+// //     screen: {
+// //       screen: 'uport.home', // unique ID registered with Navigation.registerScreen
+// //       // override the navigator style for the screen, see "Styling the navigator" below (optional)
+// //       // navigatorButtons: {} // override the nav buttons for the screen, see "Adding buttons to the navigator" below (optional)
+// //       navigatorStyle: {
+// //         navBarHidden: true,
+// //       }, // override the navigator style for the screen, see "Styling the navigator" below (optional)
+// //     },
+// //     // passProps: {}, // simple serializable object that will pass as props to all top screens (optional)
+// //     animationType: 'none', // optional, add transition animation to root change: 'none', 'slide-down', 'fade'
+// //   })
+// //   this.listener = screenVisibilityListener.register()
+// //   requestQueue((url: string) => store.dispatch(handleURL(url)))
+// // }
 
-  if (RNUportSigner && RNUportSigner.hasSecureKeyguard) {
-    const hasSecureKeyguard = await RNUportSigner.hasSecureKeyguard()
-    if (!hasSecureKeyguard) {
-      startupScreen = 'onboarding.securityBlock'
-    }
-  }
+// if (RNUportSigner && RNUportSigner.hasSecureKeyguard) {
+//   const hasSecureKeyguard = await RNUportSigner.hasSecureKeyguard()
+//   if (!hasSecureKeyguard) {
+//     startupScreen = 'onboarding.securityBlock'
+//   }
+// }
 
-  // Navigation.startSingleScreenApp({
-  //   screen: {
-  //     screen: startupScreen,
-  //     navigatorStyle: {
-  //       navBarHidden: true,
-  //     },
-  //   },
-  //   animationType: 'fade',
-  // })
-}
+//   if (NativeModules.NativeSignerModule && NativeModules.NativeSignerModule.hasSecureKeyguard) {
+//     const hasSecureKeyguard = await NativeModules.NativeSignerModule.hasSecureKeyguard()
+//     if (!hasSecureKeyguard) {
+//       startupScreen = 'onboarding.securityBlock'
+//     }
+//   }
+
+//   // Navigation.startSingleScreenApp({
+//   //   screen: {
+//   //     screen: startupScreen,
+//   //     navigatorStyle: {
+//   //       navBarHidden: true,
+//   //     },
+//   //   },
+//   //   animationType: 'fade',
+//   // })
+// }

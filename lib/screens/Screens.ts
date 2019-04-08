@@ -34,6 +34,8 @@ export default {
   NewRequest: 'NewRequest',
   NestedInfo: 'NestedInfo',
 
+  SecurityBlock: 'SecurityBlock',
+
   BACKUP: {
     DataBackupInstructions: 'DataBackupInstructions',
     DataBackupSuccess: 'DataBackupSuccess',

@@ -1,3 +1,4 @@
+import { NativeModules } from 'react-native'
 import { Navigation } from 'react-native-navigation'
 import { Theme, Icon, Device } from '../kancha'
 import SCREENS from '../screens/Screens'
@@ -39,7 +40,7 @@ const listenForAndroidFabButtonEvent = () => {
   })
 }
 
-const startOnboarding = () => {
+const startOnboarding = async () => {
   Navigation.setDefaultOptions({
     topBar: {
       drawBehind: true,
@@ -55,13 +56,22 @@ const startOnboarding = () => {
     },
   })
 
+  /**
+   * Check if we have a securtiy pin set
+   */
+  let STARTUP_SCREEN = ''
+  if (NativeModules.NativeSignerModule && NativeModules.NativeSignerModule.hasSecureKeyguard) {
+    const hasSecureKeyguard = await NativeModules.NativeSignerModule.hasSecureKeyguard()
+    STARTUP_SCREEN = hasSecureKeyguard ? SCREENS.Welcome : SCREENS.SecurityBlock
+  }
+
   Navigation.setRoot({
     root: {
       stack: {
         children: [
           {
             component: {
-              name: SCREENS.Welcome,
+              name: STARTUP_SCREEN,
             },
           },
         ],
