@@ -59,7 +59,7 @@ const startOnboarding = async () => {
   /**
    * Check if we have a securtiy pin set
    */
-  let STARTUP_SCREEN = ''
+  let STARTUP_SCREEN = SCREENS.Welcome
   if (NativeModules.NativeSignerModule && NativeModules.NativeSignerModule.hasSecureKeyguard) {
     const hasSecureKeyguard = await NativeModules.NativeSignerModule.hasSecureKeyguard()
     STARTUP_SCREEN = hasSecureKeyguard ? SCREENS.Welcome : SCREENS.SecurityBlock
