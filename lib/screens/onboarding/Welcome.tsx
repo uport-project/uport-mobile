@@ -7,6 +7,8 @@ import { Screen, Container, Button, Text, Images } from '@kancha'
 import { track } from 'uPortMobile/lib/actions/metricActions'
 import { segmentId } from 'uPortMobile/lib/selectors/identities'
 
+import TESTID from 'uPortMobile/lib/e2e/testIDs'
+
 interface WelcomeProps {
   navigator: Navigator
   trackSegment: (event: any) => any
@@ -35,6 +37,7 @@ class Welcome extends React.Component<WelcomeProps> {
           <Container flex={1} paddingTop alignItems={'center'}>
             <Container w={300}>
               <Button
+                testID={TESTID.ONBOARDING_GET_STARTED}
                 bold
                 fullWidth
                 buttonText={'Get Started'}
@@ -43,6 +46,7 @@ class Welcome extends React.Component<WelcomeProps> {
                 block={Button.Block.Filled}
               />
               <Button
+                testID={TESTID.ONBOARDING_RECOVER}
                 bold
                 fullWidth
                 buttonText={'Recover Identity'}

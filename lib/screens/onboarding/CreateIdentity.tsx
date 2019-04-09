@@ -13,6 +13,8 @@ import { startMain } from 'uPortMobile/lib/start'
 import { createIdentity, addClaims, addImage } from 'uPortMobile/lib/actions/uportActions'
 import { registerDeviceForNotifications } from 'uPortMobile/lib/actions/snsRegistrationActions'
 
+import TESTID from 'uPortMobile/lib/e2e/testIDs'
+
 interface ImageObj {
   fileSize: number
   uri: string
@@ -107,6 +109,7 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
           <Container alignItems={'center'}>
             <Container w={300}>
               <Button
+                testID={TESTID.ONBOARDING_CREATE_IDENTITY}
                 icon={
                   this.state.userCreatingidentity && <ActivityIndicator color={'white'} style={{ marginRight: 10 }} />
                 }
@@ -161,6 +164,7 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
           </Container>
           <Container flexDirection={'row'} w={280}>
             <Input
+              testID={TESTID.ONBOARDING_NAME_INPUT}
               placeholder={'Enter name or username'}
               textType={Text.Types.H4}
               value={this.state.name}
@@ -179,6 +183,7 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
             <ListItem
               avatarComponent={
                 <Checkbox
+                  testID={TESTID.ONBOARDING_TERMS_RADIO}
                   selected={this.state.termsAccepted}
                   toggleSelect={checked => this.setState({ termsAccepted: checked })}
                 />
@@ -191,6 +196,7 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
               last
               avatarComponent={
                 <Checkbox
+                  testID={TESTID.ONBOARDING_PRIVACY_RADIO}
                   selected={this.state.privacyAccepted}
                   toggleSelect={checked => this.setState({ privacyAccepted: checked })}
                 />
@@ -218,7 +224,7 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
    */
   renderIdentityCreationSuccess() {
     return (
-      <Container flex={1} justifyContent={'center'} alignItems={'center'}>
+      <Container flex={1} justifyContent={'center'} alignItems={'center'} testID={TESTID.ONBOARDING_SUCCESS_MODAL}>
         <Container
           padding
           marginLeft

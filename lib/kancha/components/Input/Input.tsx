@@ -16,6 +16,7 @@ interface InputProps {
   placeholder?: string
   onChangeText?: (text: string) => void
   valid?: boolean
+  testID?: string
 }
 
 interface InputState {
@@ -57,6 +58,7 @@ class Input extends React.Component<InputProps, InputState> {
         paddingRight={5}
       >
         <TextInput
+          testID={this.props.testID}
           underlineColorAndroid={'rgba(0,0,0,0)'}
           placeholder={this.props.placeholder}
           autoFocus={this.props.autoFocus}
