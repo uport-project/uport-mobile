@@ -269,7 +269,6 @@ dependencies {
     implementation project(':react-native-fetch-blob')
     implementation project(':react-native-vector-icons')
     implementation project(':react-native-passcode-android')
-    implementation project(':react-native-fcm')
     implementation project(':react-native-randombytes')
     implementation project(':react-native-image-picker')
     implementation(project(':react-native-camera')) {
@@ -285,6 +284,10 @@ dependencies {
     implementation(
             //required by react-native-firebase
             "com.google.firebase:firebase-config:$play_services_version",
+    )
+    implementation(
+            //required by react-native-firebase
+            "com.google.firebase:firebase-messaging:$play_services_version",
     )
 
     // From node_modules

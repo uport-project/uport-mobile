@@ -21,7 +21,6 @@ import com.RNFetchBlob.RNFetchBlobPackage;
 import com.authentication.AuthenticationScreenPackage;
 import com.bitgo.randombytes.RandomBytesPackage;
 import com.crashlytics.android.Crashlytics;
-import com.evollu.react.fcm.FIRMessagingPackage;
 import com.facebook.common.logging.FLog;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -43,6 +42,8 @@ import io.fabric.sdk.android.Fabric;
 import io.invertase.firebase.RNFirebasePackage;
 import io.invertase.firebase.analytics.RNFirebaseAnalyticsPackage;
 import io.invertase.firebase.config.RNFirebaseRemoteConfigPackage;
+import io.invertase.firebase.notifications.RNFirebaseNotificationsPackage;
+import io.invertase.firebase.messaging.RNFirebaseMessagingPackage;
 
 import cl.json.RNSharePackage;
 import cl.json.ShareApplication;
@@ -83,8 +84,9 @@ public class MainApplication extends NavigationApplication implements ShareAppli
                 new RNSharePackage(),
                 new RNFirebasePackage(),
                 new RNFirebaseRemoteConfigPackage(),
+                new RNFirebaseNotificationsPackage(),
+                new RNFirebaseMessagingPackage(),
                 new SvgPackage(),
-                new FIRMessagingPackage(),
                 new RNDeviceInfo(),
                 new RNFetchBlobPackage(),
                 new VectorIconsPackage(),
