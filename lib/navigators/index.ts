@@ -15,12 +15,20 @@ registerScreens({ store, Provider })
  */
 const App = () => {
   Navigation.events().registerAppLaunchedListener(() => {
-    //Hello
+    /**
+     * The start function will get called from the startup saga after this fires
+     */
   })
   Navigation.events().registerComponentDidAppearListener(({ componentName }) => {
+    /**
+     * Global event listener for screens
+     */
     store.dispatch(screen(componentName))
   })
 
+  /**
+   * Global request queue
+   */
   requestQueue((url: string) => store.dispatch(handleURL(url)))
 }
 

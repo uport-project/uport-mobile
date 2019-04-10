@@ -34,6 +34,9 @@ import {
 import { runMigrations } from 'uPortMobile/lib/actions/migrationActions'
 import Icon from 'react-native-vector-icons/Ionicons'
 import { colors } from 'uPortMobile/lib/styles/globalStyles'
+import { Navigation } from 'react-native-navigation'
+import { SCREEN } from 'uPortMobile/lib/constants/MetricActionTypes'
+import Screens from 'uPortMobile/lib/screens/Screens'
 
 const S = require('string')
 
@@ -117,6 +120,7 @@ export const Step = connect(
 )(StepView)
 
 interface MigrateProps {
+  componentId: string
   navigator: Navigator
   migrate: Function
   working: boolean
@@ -134,16 +138,20 @@ const Migrate: React.SFC<MigrateProps> = props => {
       onlyOnline
       onProcess={() => props.migrate(props.target)}
       onContinue={() =>
-        props.navigator.push({
-          screen: 'migrations.complete',
-          navigatorStyle: {
-            navBarHidden: true,
+        Navigation.push(props.componentId, {
+          component: {
+            name: Screens.MIGRATION.Complete,
+            options: {
+              topBar: {
+                visible: false,
+              },
+            },
           },
         })
       }
-      skipTitle='Cancel'
+      skipTitle={'Cancel'}
       skippable={!props.working && !props.completed}
-      onSkip={() => props.navigator.popToRoot({ animated: true })}
+      onSkip={() => Navigation.popToRoot(props.componentId)}
     >
       {props.children}
     </ProcessCard>
