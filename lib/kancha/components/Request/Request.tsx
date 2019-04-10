@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Container, Text } from '@kancha'
+import { Container, Text, Banner, RequestContent } from '@kancha'
 
 interface RequestContent {
   /**
@@ -24,15 +24,9 @@ interface RequestProps {
   loading: boolean
   activity: string
   type: string
-  actions: {
-    accept: () => void
-    reject: () => void
-  }
   createKeys: boolean
   content: RequestContent[]
-  self: {
-    currentIdentity: string
-  }
+  currentIdentity: string
   initiator: {}
 }
 interface RequestState {}
@@ -44,7 +38,14 @@ class Request extends React.Component<RequestProps, RequestState> {
   render() {
     return (
       <Container>
-        <Text>Hello</Text>
+        {this.props.loading ? (
+          /**
+           * Main loading screen view when the request is not ready to interact with
+           */
+          <Container />
+        ) : (
+          <Container />
+        )}
       </Container>
     )
   }
