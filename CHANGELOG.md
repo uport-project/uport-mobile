@@ -1,5 +1,12 @@
 # Change Log
 
+## [v436](https://github.com/uport-project/uport-mobile/tree/v436) (2019-04-10)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v435...v436)
+
+**Merged pull requests:**
+
+- Changing infura to cloudflare for IPFS [\#111](https://github.com/uport-project/uport-mobile/pull/111) ([simonas-notcat](https://github.com/simonas-notcat))
+
 ## [v435](https://github.com/uport-project/uport-mobile/tree/v435) (2019-04-10)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v434...v435)
 
