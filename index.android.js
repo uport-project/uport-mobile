@@ -4,13 +4,14 @@ import firebase from 'react-native-firebase'
 const bgMessaging = async (message) => {
     // handle your message
     console.log({message})
-    // const customNotification = JSON.parse(message.data.custom_notification)
+    const customNotification = JSON.parse(message.data.custom_notification)
     const notification = new firebase.notifications.Notification()
       .setNotificationId(message.messageId)
-      .setTitle('My notification title')
-      .setBody('My notification body')
+      .setTitle(customNotification.title)
+      .setBody(customNotification.body)
       .setData(message.data)
       .android.setChannelId('main')
+      .android.setSmallIcon(customNotification.icon)
 
     firebase.notifications().displayNotification(notification)
     return Promise.resolve()
