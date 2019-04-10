@@ -3,6 +3,7 @@ import { Device, Screen, Images, Theme, Slide, NavBar, OnboardingSwiperSlide, Bu
 import { Navigator, NavigatorStyle } from 'react-native-navigation'
 import Swiper from 'react-native-swiper'
 import { OnboardingContent } from 'uPortMobile/lib/content/onboardingSlideContent'
+import TESTID from 'uPortMobile/lib/e2e/testIDs'
 
 const onboardingSlides: OnboardingSwiperSlide[] = OnboardingContent(Images)
 
@@ -21,6 +22,7 @@ const Learn: React.FC<LearnProps> & { navigatorStyle: NavigatorStyle } = props =
         <Container alignItems={'center'}>
           <Container w={300}>
             <Button
+              testID={TESTID.ONBOARDING_LEARN_CONTINUE}
               fullWidth
               buttonText={'Continue'}
               type={Button.Types.Primary}

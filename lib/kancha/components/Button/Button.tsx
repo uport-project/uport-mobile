@@ -65,11 +65,25 @@ interface ButtonProps {
    */
   navButton?: boolean
 
+  /**
+   * Provide an icon component
+   */
   icon?: React.ReactNode
 
+  /**
+   * Remove button padding for icon buttons
+   */
   noPadding?: boolean
 
+  /**
+   * Text decoration
+   */
   textDecorationLine?: 'none' | 'underline' | 'line-through' | 'underline line-through' | undefined
+
+  /**
+   * Provide a testID for e2e tests
+   */
+  testID?: string
 }
 
 const Button: React.FC<ButtonProps> & {
@@ -88,6 +102,7 @@ const Button: React.FC<ButtonProps> & {
   icon,
   noPadding,
   textDecorationLine,
+  testID,
   children,
 }) => {
   const style: ViewStyle = {
@@ -110,7 +125,7 @@ const Button: React.FC<ButtonProps> & {
   }
 
   return navButton ? (
-    <TouchableOpacity style={style} onPress={onPress} disabled={disabled}>
+    <TouchableOpacity style={style} onPress={onPress} disabled={disabled} testID={testID}>
       <Text
         textDecorationLine={textDecorationLine}
         type={Text.Types.NavButton}
@@ -122,6 +137,7 @@ const Button: React.FC<ButtonProps> & {
     </TouchableOpacity>
   ) : (
     <TouchableHighlight
+      testID={testID}
       disabled={disabled}
       onPress={onPress}
       style={style}
