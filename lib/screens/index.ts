@@ -4,30 +4,17 @@
 import { Navigation } from 'react-native-navigation'
 import SCREENS from './Screens'
 
-/**
- * Screen components
- */
 
-import ProfileQRCode from 'uPortMobile/lib/components/shared/QRCodeModal'
+// import DataBackupInstructions from '../components/Backup/DataBackupInstructions'
+// import DataBackupSuccess from '../components/Backup/DataBackupSuccess'
+// import CreateSeedInstructions from '../components/Backup/SeedBackupInstructions'
+// import CreateSeedPhrase from '../components/Backup/SeedBackupPhrase'
+// import CreateSeedPhraseConfirm from '../components/Backup/SeedBackupConfirm'
+// import CreateSeedSuccess from '../components/Backup/SeedBackupSuccess'
 
-import Device from '../screens/settings/Device'
-import Network from '../screens/settings/Network'
-import Status from '../screens/settings/StatusMessages'
-import Hub from '../screens/settings/HubStatus'
-import TryUport from '../screens/settings/TryUport'
-import UPortId from '../screens/settings/UportId'
-import KeyChain from '../screens/settings/SeedAddresses'
-
-import DataBackupInstructions from '../components/Backup/DataBackupInstructions'
-import DataBackupSuccess from '../components/Backup/DataBackupSuccess'
-import CreateSeedInstructions from '../components/Backup/SeedBackupInstructions'
-import CreateSeedPhrase from '../components/Backup/SeedBackupPhrase'
-import CreateSeedPhraseConfirm from '../components/Backup/SeedBackupConfirm'
-import CreateSeedSuccess from '../components/Backup/SeedBackupSuccess'
-
-import RestoreSeedInstructions from '../components/Recovery/SeedRecoveryInstructions'
-import RestoreSeedPhrase from '../components/Recovery/SeedRecoveryPhrase'
-import RestoreSeedSuccess from '../components/Recovery/SeedRecoverySuccess'
+// import RestoreSeedInstructions from '../components/Recovery/SeedRecoveryInstructions'
+// import RestoreSeedPhrase from '../components/Recovery/SeedRecoveryPhrase'
+// import RestoreSeedSuccess from '../components/Recovery/SeedRecoverySuccess'
 
 /**
  * Wrapper component for redux
@@ -66,35 +53,40 @@ export function registerScreens(redux: any) {
   /**
    * Modal screens
    */
-  registerComponentWithRedux(redux)(SCREENS.ProfileQRCode, ProfileQRCode)
+  registerComponentWithRedux(redux)(SCREENS.ProfileQRCode, require('uPortMobile/lib/components/shared/QRCodeModal'))
 
   /**
    * Settings screens
    */
-  registerComponentWithRedux(redux)(SCREENS.UPortId, UPortId)
-  registerComponentWithRedux(redux)(SCREENS.TryUport, TryUport)
-  registerComponentWithRedux(redux)(SCREENS.Device, Device)
-  registerComponentWithRedux(redux)(SCREENS.Hub, Hub)
-  registerComponentWithRedux(redux)(SCREENS.Status, Status)
-  registerComponentWithRedux(redux)(SCREENS.Network, Network)
+  registerComponentWithRedux(redux)(SCREENS.UPortId, require('../screens/settings/UportId').default)
+  registerComponentWithRedux(redux)(SCREENS.TryUport, require('../screens/settings/TryUport').default)
+  registerComponentWithRedux(redux)(SCREENS.Device, require('../screens/settings/Device').default)
+  registerComponentWithRedux(redux)(SCREENS.Hub, require('../screens/settings/HubStatus').default)
+  registerComponentWithRedux(redux)(SCREENS.Status, require('../screens/settings/StatusMessages').default)
+  registerComponentWithRedux(redux)(SCREENS.Network, require('../screens/settings/Network').default)
 
   /**
    * Backup & Recovery screens
    */
+  registerComponentWithRedux(redux)(SCREENS.BACKUP.DataBackupInstructions, require('../components/Backup/DataBackupInstructions').default)
+  registerComponentWithRedux(redux)(SCREENS.BACKUP.DataBackupSuccess, require('../components/Backup/DataBackupSuccess').default)
+  registerComponentWithRedux(redux)(SCREENS.BACKUP.CreateSeedInstructions, require('../components/Backup/SeedBackupInstructions').default)
+  registerComponentWithRedux(redux)(SCREENS.BACKUP.CreateSeedPhrase, require('../components/Backup/SeedBackupPhrase').default)
+  registerComponentWithRedux(redux)(SCREENS.BACKUP.CreateSeedPhraseConfirm, require('../components/Backup/SeedBackupConfirm').default)
+  registerComponentWithRedux(redux)(SCREENS.BACKUP.CreateSeedSuccess, require('../components/Backup/SeedBackupSuccess').default)
 
-  registerComponentWithRedux(redux)(SCREENS.BACKUP.DataBackupInstructions, DataBackupInstructions)
-  registerComponentWithRedux(redux)(SCREENS.BACKUP.DataBackupSuccess, DataBackupSuccess)
-  registerComponentWithRedux(redux)(SCREENS.BACKUP.CreateSeedInstructions, CreateSeedInstructions)
-  registerComponentWithRedux(redux)(SCREENS.BACKUP.CreateSeedPhrase, CreateSeedPhrase)
-  registerComponentWithRedux(redux)(SCREENS.BACKUP.CreateSeedPhraseConfirm, CreateSeedPhraseConfirm)
-  registerComponentWithRedux(redux)(SCREENS.BACKUP.CreateSeedSuccess, CreateSeedSuccess)
+  registerComponentWithRedux(redux)(SCREENS.RECOVERY.RestoreSeedInstructions, require('../components/Recovery/SeedRecoveryInstructions').default)
+  registerComponentWithRedux(redux)(SCREENS.RECOVERY.RestoreSeedPhrase, require('../components/Recovery/SeedRecoveryPhrase').default)
+  registerComponentWithRedux(redux)(SCREENS.RECOVERY.RestoreSeedSuccess, require('../components/Recovery/SeedRecoverySuccess').default)
 
-  registerComponentWithRedux(redux)(SCREENS.RECOVERY.RestoreSeedInstructions, RestoreSeedInstructions)
-  registerComponentWithRedux(redux)(SCREENS.RECOVERY.RestoreSeedPhrase, RestoreSeedPhrase)
-  registerComponentWithRedux(redux)(SCREENS.RECOVERY.RestoreSeedSuccess, RestoreSeedSuccess)
 
   registerComponentWithRedux(redux)(SCREENS.Request, require('../components/Request/index').default)
   registerComponentWithRedux(redux)(SCREENS.NewRequest, require('../components/newRequest/index').default)
-
   registerComponentWithRedux(redux)(SCREENS.NestedInfo, require('../components/shared/NestedInfo').default)
+
+  /**
+   * Migration screens
+   */
+  registerComponentWithRedux(redux)(SCREENS.MIGRATION.Complete, require('./components/Migrations/LegacyMigration').default)
+  registerComponentWithRedux(redux)(SCREENS.MIGRATION.Legacy, require('./components/Migrations/MigrationComplete').default)
 }

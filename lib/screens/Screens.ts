@@ -50,4 +50,9 @@ export default {
     RestoreSeedPhrase: 'RestoreSeedPhrase',
     RestoreSeedSuccess: 'RestoreSeedSuccess',
   },
+
+  MIGRATION: {
+    Legacy: 'MigrationLegacy',
+    Complete: 'MigrationComplete',
+  },
 }
