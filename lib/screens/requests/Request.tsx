@@ -24,17 +24,9 @@ class RequestScreen extends React.Component<RequestScreenProps, RequestScreenSta
           activity={''}
           type={''}
           loading={false}
-          actions={{
-            accept: () => {
-              ''
-            },
-            reject: () => {
-              ''
-            },
-          }}
           content={[{ title: 'Jack Black', subTitle: 'Name' }]}
           createKeys={false}
-          self={{ currentIdentity: '' }}
+          currentIdentity={''}
           initiator={{}}
         />
       </Screen>
