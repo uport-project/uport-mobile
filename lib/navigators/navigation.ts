@@ -42,6 +42,15 @@ const listenForAndroidFabButtonEvent = () => {
 
 const startOnboarding = async () => {
   Navigation.setDefaultOptions({
+    animations: {
+      setRoot: {
+        alpha: {
+          from: 0,
+          to: 1,
+          duration: 500,
+        },
+      },
+    },
     topBar: {
       drawBehind: true,
       background: {
@@ -110,6 +119,18 @@ export async function startMain() {
    */
 
   Navigation.setDefaultOptions({
+    animations: {
+      setRoot: {
+        alpha: {
+          from: 0,
+          to: 1,
+          duration: 500,
+        },
+      },
+    },
+    layout: {
+      backgroundColor: Theme.colors.secondary.background,
+    },
     sideMenu: {
       right: {
         enabled: true,

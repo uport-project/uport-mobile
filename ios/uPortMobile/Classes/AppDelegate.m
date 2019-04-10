@@ -36,8 +36,8 @@
   
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
 
-  // self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-  // self.window.backgroundColor =  [UIColor colorWithRed:0.99 green:0.99 blue:0.99 alpha:1];
+  self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+  self.window.backgroundColor =  [UIColor colorWithRed:0.99 green:0.99 blue:0.99 alpha:1];
   
   [ReactNativeNavigation bootstrap:jsCodeLocation launchOptions:launchOptions];
   
