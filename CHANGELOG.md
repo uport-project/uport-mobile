@@ -1,5 +1,17 @@
 # Change Log
 
+## [v435](https://github.com/uport-project/uport-mobile/tree/v435) (2019-04-10)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v434...v435)
+
+**Merged pull requests:**
+
+- Fixed push notification behaviour on iOS and Android [\#110](https://github.com/uport-project/uport-mobile/pull/110) ([simonas-notcat](https://github.com/simonas-notcat))
+- Adding automation testIDs for onboarding [\#109](https://github.com/uport-project/uport-mobile/pull/109) ([jasonhealy](https://github.com/jasonhealy))
+- Spawn out the adding of ipfs vcs [\#108](https://github.com/uport-project/uport-mobile/pull/108) ([pelle](https://github.com/pelle))
+
+## [v434](https://github.com/uport-project/uport-mobile/tree/v434) (2019-04-04)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v433...v434)
+
 ## [v433](https://github.com/uport-project/uport-mobile/tree/v433) (2019-04-03)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v432...v433)
 
