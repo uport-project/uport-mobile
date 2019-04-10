@@ -87,6 +87,6 @@ export function registerScreens(redux: any) {
   /**
    * Migration screens
    */
-  registerComponentWithRedux(redux)(SCREENS.MIGRATION.Complete, require('./components/Migrations/LegacyMigration').default)
-  registerComponentWithRedux(redux)(SCREENS.MIGRATION.Legacy, require('./components/Migrations/MigrationComplete').default)
+  registerComponentWithRedux(redux)(SCREENS.MIGRATION.Complete, require('../components/Migrations/MigrationComplete').default)
+  registerComponentWithRedux(redux)(SCREENS.MIGRATION.Legacy, require('../components/Migrations/LegacyMigration').default)
 }
