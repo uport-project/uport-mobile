@@ -53,7 +53,7 @@ export function registerScreens(redux: any) {
   /**
    * Modal screens
    */
-  registerComponentWithRedux(redux)(SCREENS.ProfileQRCode, require('uPortMobile/lib/components/shared/QRCodeModal'))
+  registerComponentWithRedux(redux)(SCREENS.ProfileQRCode, require('uPortMobile/lib/components/shared/QRCodeModal').default)
 
   /**
    * Settings screens
