@@ -139,17 +139,17 @@
         </activity>
         <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
 
-        <service android:name="com.evollu.react.fcm.MessagingService">
+        <service android:name="io.invertase.firebase.messaging.RNFirebaseBackgroundMessagingService" />
+
+        <service android:name="io.invertase.firebase.messaging.RNFirebaseMessagingService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
-        <service
-            android:name="com.evollu.react.fcm.InstanceIdService"
-            android:exported="false">
+        <service android:name="io.invertase.firebase.messaging.RNFirebaseInstanceIdService">
             <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
             </intent-filter>
         </service>
 
@@ -157,19 +157,7 @@
             android:name="io.fabric.ApiKey"
             android:value="d727ebc9dbf0bbfb341f6ad2c33f118b18400891" />
 
-        <receiver android:name="com.evollu.react.fcm.FIRLocalMessagingPublisher" />
-        <receiver
-            android:name="com.evollu.react.fcm.FIRSystemBootEventReceiver"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
-                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </receiver>
+        
         <provider
              android:name="android.support.v4.content.FileProvider"
              android:authorities="${applicationId}.provider"
