@@ -37,8 +37,11 @@
   
   
   [[RCCManager sharedInstance] initBridgeWithBundleURL:jsCodeLocation];
-
-  [Fabric with:@[[Crashlytics class]]];
+  
+  #if DEBUG == 0
+    [Fabric with:@[[Crashlytics class]]];
+  #endif
+  
   RCTSetLogThreshold(RCTLogLevelInfo);
   RCTSetLogFunction(CrashlyticsReactLogFunction);
 
