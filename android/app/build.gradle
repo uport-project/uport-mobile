@@ -204,6 +204,7 @@ android {
         debug {
             manifestPlaceholders = [excludeSystemAlertWindowPermission: "false"]
             versionNameSuffix "-debug"
+            ext.enableCrashlytics = false
         }
         release {
             manifestPlaceholders = [excludeSystemAlertWindowPermission: "true"]

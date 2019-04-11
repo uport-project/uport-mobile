@@ -53,7 +53,17 @@ public class MainApplication extends NavigationApplication implements ShareAppli
     @Override
     public void onCreate() {
         super.onCreate();
-        Fabric.with(this, new Crashlytics());
+        // Fabric.with(this, new Crashlytics());
+        // FLog.setLoggingDelegate(ReactNativeFabricLogger.getInstance());
+        configureCrashReporting();
+    }
+
+     private void configureCrashReporting() {
+        // Set up Crashlytics, disabled for debug builds
+        Crashlytics crashlyticsKit = new Crashlytics.Builder().disabled(BuildConfig.DEBUG).build();
+        // Initialize Fabric with the debug-disabled crashlytics.
+        Fabric.with(this, crashlyticsKit);
+        
         FLog.setLoggingDelegate(ReactNativeFabricLogger.getInstance());
     }
 
