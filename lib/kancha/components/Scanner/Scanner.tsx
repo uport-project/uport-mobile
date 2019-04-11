@@ -52,19 +52,20 @@ const QRCodeScanner: React.FC<ScannerProps> = ({ onBarcodeRead, closeScanner, ha
   const scannerViewStyles: ViewStyle = {
     flex: 1,
     justifyContent: 'flex-end',
+    alignItems: 'center',
   }
 
   return hasPermission ? (
     <RNCamera captureAudio={false} onBarCodeRead={onBarcodeRead} style={{ flex: 1 }}>
       <SafeAreaView style={scannerViewStyles}>
-        <Button
-          type={Button.Types.Primary}
-          onPress={() => {
-            ''
-          }}
-          block={Button.Block.Clear}
-          icon={<Icon size={30} name={'x'} />}
-        />
+        <Container paddingBottom={35}>
+          <Button
+            type={Button.Types.Secondary}
+            onPress={() => closeScanner()}
+            block={Button.Block.Clear}
+            buttonText={'Close'}
+          />
+        </Container>
       </SafeAreaView>
     </RNCamera>
   ) : (
