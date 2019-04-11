@@ -57,9 +57,13 @@ class Welcome extends React.Component<WelcomeProps> {
                 bold
                 fullWidth
                 buttonText={'Recover Identity'}
-                onPress={() => {
-                  ''
-                }}
+                onPress={() =>
+                  Navigation.push(this.props.componentId, {
+                    component: {
+                      name: SCREENS.RECOVERY.RestoreSeedInstructions,
+                    },
+                  })
+                }
                 type={Button.Types.Custom}
                 block={Button.Block.Clear}
               />
