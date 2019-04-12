@@ -8,6 +8,7 @@ export default {
   Contact: 'Contact',
   ShareContact: 'ShareContact',
   Account: 'Account',
+  AccountFunding: 'AccountFunding',
   Notifications: 'Notifications',
   Settings: 'Settings',
   Profile: 'Profile',
