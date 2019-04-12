@@ -1,5 +1,14 @@
 # Change Log
 
+## [v437](https://github.com/uport-project/uport-mobile/tree/v437) (2019-04-12)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v436...v437)
+
+**Merged pull requests:**
+
+- Fix for iOS notifications [\#114](https://github.com/uport-project/uport-mobile/pull/114) ([simonas-notcat](https://github.com/simonas-notcat))
+- Revert "upgrade uport-credentials, did-jwt, uport-did-resolver, and uport-lite" [\#113](https://github.com/uport-project/uport-mobile/pull/113) ([simonas-notcat](https://github.com/simonas-notcat))
+- upgrade uport-credentials, did-jwt, uport-did-resolver, and uport-lite [\#112](https://github.com/uport-project/uport-mobile/pull/112) ([simonas-notcat](https://github.com/simonas-notcat))
+
 ## [v436](https://github.com/uport-project/uport-mobile/tree/v436) (2019-04-10)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v435...v436)
 
