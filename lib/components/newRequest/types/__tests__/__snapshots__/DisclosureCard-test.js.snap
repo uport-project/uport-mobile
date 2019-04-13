@@ -29,7 +29,7 @@ ShallowWrapper {
     snsRegistered={false}
     uportVerified={false}
     usdBalance={0}
-    verified={Object {}}
+    verified={Array []}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
