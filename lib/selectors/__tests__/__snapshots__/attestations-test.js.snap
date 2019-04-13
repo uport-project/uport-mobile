@@ -36,6 +36,7 @@ Array [
     "claim": Object {
       "nationalId": "xxx0xxxx0xxx",
     },
+    "iat": 1555183569,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0014.TOKEN",
   },
@@ -43,6 +44,7 @@ Array [
     "claim": Object {
       "phone": "555-555-5555",
     },
+    "iat": 1555183568,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0013.TOKEN",
   },
@@ -50,7 +52,8 @@ Array [
     "claim": Object {
       "name": "Alice",
     },
-    "exp": 2,
+    "exp": 1555183567,
+    "iat": 1555183566,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0015.TOKEN",
   },
@@ -58,7 +61,8 @@ Array [
     "claim": Object {
       "name": "Alice",
     },
-    "exp": 1,
+    "exp": 1555183566000,
+    "iat": 1555183565000,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0011.TOKEN",
   },
@@ -71,6 +75,7 @@ Array [
     "claim": Object {
       "nationalId": "xxx0xxxx0xxx",
     },
+    "iat": 1555183569,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0014.TOKEN",
   },
@@ -78,6 +83,7 @@ Array [
     "claim": Object {
       "phone": "555-555-5555",
     },
+    "iat": 1555183568,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0013.TOKEN",
   },
@@ -90,6 +96,7 @@ Array [
     "claim": Object {
       "name": "Alice",
     },
+    "iat": 1555183567,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
     "token": "0012.TOKEN",
   },
@@ -97,7 +104,8 @@ Array [
     "claim": Object {
       "name": "Alice",
     },
-    "exp": 2,
+    "exp": 1555183567,
+    "iat": 1555183566,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0015.TOKEN",
   },
@@ -138,6 +146,7 @@ Array [
     "claim": Object {
       "nationalId": "xxx0xxxx0xxx",
     },
+    "iat": 1555183569,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "issuer": Object {
       "name": "Issuer 1",
@@ -148,6 +157,7 @@ Array [
     "claim": Object {
       "phone": "555-555-5555",
     },
+    "iat": 1555183568,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "issuer": Object {
       "name": "Issuer 1",
@@ -158,6 +168,7 @@ Array [
     "claim": Object {
       "name": "Alice",
     },
+    "iat": 1555183567,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
     "issuer": Object {
       "name": "Issuer 2",
@@ -168,7 +179,8 @@ Array [
     "claim": Object {
       "name": "Alice",
     },
-    "exp": 2,
+    "exp": 1555183567,
+    "iat": 1555183566,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "issuer": Object {
       "name": "Issuer 1",
@@ -184,6 +196,7 @@ Array [
     "claim": Object {
       "nationalId": "xxx0xxxx0xxx",
     },
+    "iat": 1555183569,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "issuer": Object {
       "name": "Issuer 1",
@@ -194,6 +207,7 @@ Array [
     "claim": Object {
       "phone": "555-555-5555",
     },
+    "iat": 1555183568,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "issuer": Object {
       "name": "Issuer 1",
@@ -275,20 +289,7 @@ Object {
 }
 `;
 
-exports[`returns full ledger 1`] = `
-V {
-  "C": Hd {
-    "j": 65937614,
-    "k": null,
-    "q": 8192,
-  },
-  "cb": null,
-  "j": 32374988,
-  "k": null,
-  "p": null,
-  "q": 0,
-}
-`;
+exports[`returns full ledger 1`] = `Array []`;
 
 exports[`returns full ledger 2`] = `
 Array [
@@ -296,6 +297,7 @@ Array [
     "claim": Object {
       "nationalId": "xxx0xxxx0xxx",
     },
+    "iat": 1555183569,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0014.TOKEN",
   },
@@ -303,6 +305,7 @@ Array [
     "claim": Object {
       "phone": "555-555-5555",
     },
+    "iat": 1555183568,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0013.TOKEN",
   },
@@ -310,6 +313,7 @@ Array [
     "claim": Object {
       "name": "Alice",
     },
+    "iat": 1555183567,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
     "token": "0012.TOKEN",
   },
@@ -317,7 +321,8 @@ Array [
     "claim": Object {
       "name": "Alice",
     },
-    "exp": 2,
+    "exp": 1555183567,
+    "iat": 1555183566,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0015.TOKEN",
   },
@@ -325,7 +330,8 @@ Array [
     "claim": Object {
       "name": "Alice",
     },
-    "exp": 1,
+    "exp": 1555183566000,
+    "iat": 1555183565000,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0011.TOKEN",
   },
@@ -338,6 +344,7 @@ Array [
     "claim": Object {
       "nationalId": "xxx0xxxx0xxx",
     },
+    "iat": 1555183569,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0014.TOKEN",
   },
@@ -345,6 +352,7 @@ Array [
     "claim": Object {
       "phone": "555-555-5555",
     },
+    "iat": 1555183568,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0013.TOKEN",
   },
@@ -354,7 +362,7 @@ Array [
 exports[`returns ledger with only the latest attestations 1`] = `
 V {
   "C": null,
-  "cb": [Function],
+  "cb": null,
   "j": 32374988,
   "k": null,
   "p": null,
@@ -368,6 +376,7 @@ Array [
     "claim": Object {
       "nationalId": "xxx0xxxx0xxx",
     },
+    "iat": 1555183569,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0014.TOKEN",
   },
@@ -375,6 +384,7 @@ Array [
     "claim": Object {
       "phone": "555-555-5555",
     },
+    "iat": 1555183568,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0013.TOKEN",
   },
@@ -382,6 +392,7 @@ Array [
     "claim": Object {
       "name": "Alice",
     },
+    "iat": 1555183567,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
     "token": "0012.TOKEN",
   },
@@ -389,7 +400,8 @@ Array [
     "claim": Object {
       "name": "Alice",
     },
-    "exp": 2,
+    "exp": 1555183567,
+    "iat": 1555183566,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0015.TOKEN",
   },
@@ -402,6 +414,7 @@ Array [
     "claim": Object {
       "nationalId": "xxx0xxxx0xxx",
     },
+    "iat": 1555183569,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0014.TOKEN",
   },
@@ -409,6 +422,7 @@ Array [
     "claim": Object {
       "phone": "555-555-5555",
     },
+    "iat": 1555183568,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0013.TOKEN",
   },
@@ -460,6 +474,7 @@ Array [
     "claim": Object {
       "name": "Alice",
     },
+    "iat": 1555183567,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
     "token": "0012.TOKEN",
   },
@@ -467,7 +482,8 @@ Array [
     "claim": Object {
       "name": "Alice",
     },
-    "exp": 2,
+    "exp": 1555183567,
+    "iat": 1555183566,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0015.TOKEN",
   },
@@ -480,6 +496,7 @@ Array [
     "claim": Object {
       "name": "Alice",
     },
+    "iat": 1555183567,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
     "token": "0012.TOKEN",
   },
@@ -487,7 +504,8 @@ Array [
     "claim": Object {
       "name": "Alice",
     },
-    "exp": 2,
+    "exp": 1555183567,
+    "iat": 1555183566,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0015.TOKEN",
   },
@@ -495,6 +513,7 @@ Array [
     "claim": Object {
       "nationalId": "xxx0xxxx0xxx",
     },
+    "iat": 1555183569,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0014.TOKEN",
   },
@@ -511,6 +530,7 @@ Array [
     "claim": Object {
       "nationalId": "xxx0xxxx0xxx",
     },
+    "iat": 1555183569,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0014.TOKEN",
   },
@@ -526,6 +546,7 @@ Object {
       "claim": Object {
         "name": "Alice",
       },
+      "iat": 1555183567,
       "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
       "token": "0012.TOKEN",
     },
@@ -533,7 +554,8 @@ Object {
       "claim": Object {
         "name": "Alice",
       },
-      "exp": 2,
+      "exp": 1555183567,
+      "iat": 1555183566,
       "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
       "token": "0015.TOKEN",
     },
@@ -548,6 +570,7 @@ Object {
       "claim": Object {
         "name": "Alice",
       },
+      "iat": 1555183567,
       "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
       "token": "0012.TOKEN",
     },
@@ -555,7 +578,8 @@ Object {
       "claim": Object {
         "name": "Alice",
       },
-      "exp": 2,
+      "exp": 1555183567,
+      "iat": 1555183566,
       "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
       "token": "0015.TOKEN",
     },
@@ -565,6 +589,7 @@ Object {
       "claim": Object {
         "nationalId": "xxx0xxxx0xxx",
       },
+      "iat": 1555183569,
       "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
       "token": "0014.TOKEN",
     },
@@ -583,6 +608,7 @@ Object {
       "claim": Object {
         "nationalId": "xxx0xxxx0xxx",
       },
+      "iat": 1555183569,
       "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
       "token": "0014.TOKEN",
     },
@@ -599,6 +625,7 @@ Object {
       "claim": Object {
         "name": "Alice",
       },
+      "iat": 1555183567,
       "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
       "issuer": Object {
         "name": "Issuer 2",
@@ -609,7 +636,8 @@ Object {
       "claim": Object {
         "name": "Alice",
       },
-      "exp": 2,
+      "exp": 1555183567,
+      "iat": 1555183566,
       "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
       "issuer": Object {
         "name": "Issuer 1",
@@ -627,6 +655,7 @@ Object {
       "claim": Object {
         "name": "Alice",
       },
+      "iat": 1555183567,
       "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
       "issuer": Object {
         "name": "Issuer 2",
@@ -637,7 +666,8 @@ Object {
       "claim": Object {
         "name": "Alice",
       },
-      "exp": 2,
+      "exp": 1555183567,
+      "iat": 1555183566,
       "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
       "issuer": Object {
         "name": "Issuer 1",
@@ -650,6 +680,7 @@ Object {
       "claim": Object {
         "nationalId": "xxx0xxxx0xxx",
       },
+      "iat": 1555183569,
       "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
       "issuer": Object {
         "name": "Issuer 1",
@@ -671,6 +702,7 @@ Object {
       "claim": Object {
         "nationalId": "xxx0xxxx0xxx",
       },
+      "iat": 1555183569,
       "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
       "issuer": Object {
         "name": "Issuer 1",
