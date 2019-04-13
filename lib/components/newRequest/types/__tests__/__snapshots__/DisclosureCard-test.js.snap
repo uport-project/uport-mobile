@@ -3493,25 +3493,37 @@ exports[`DisclosureCard renders correctly with a full disclosure request and ver
                   >
                     jeffTest TestWard
                   </Text>
-                  <Text
+                  <View
                     accessible={true}
-                    allowFontScaling={true}
-                    ellipsizeMode="tail"
-                    style={
-                      Object {
-                        "color": "rgba(16,18,32,1)",
-                        "fontFamily": undefined,
-                        "fontSize": 10,
-                        "letterSpacing": 0.5,
-                        "lineHeight": 17,
-                        "marginTop": 3,
-                        "textAlign": "right",
-                      }
-                    }
+                    isTVSelectable={true}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={null}
                   >
-                    Verified by:
-                    Global Enterprises
-                  </Text>
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "rgba(16,18,32,1)",
+                          "fontFamily": undefined,
+                          "fontSize": 10,
+                          "letterSpacing": 0.5,
+                          "lineHeight": 17,
+                          "marginTop": 3,
+                          "textAlign": "right",
+                        }
+                      }
+                    >
+                      Verified by:
+                      Global Enterprises
+                    </Text>
+                  </View>
                 </View>
               </View>
             </View>
