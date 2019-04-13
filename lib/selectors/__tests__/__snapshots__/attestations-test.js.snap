@@ -6,14 +6,14 @@ Array [
     "claim": Object {
       "nationalId": "xxx0xxxx0xxx",
     },
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0014.TOKEN",
   },
   Object {
     "claim": Object {
       "phone": "555-555-5555",
     },
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0013.TOKEN",
   },
   Object {
@@ -21,7 +21,7 @@ Array [
       "name": "Alice",
     },
     "exp": 2,
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0015.TOKEN",
   },
   Object {
@@ -29,7 +29,7 @@ Array [
       "name": "Alice",
     },
     "exp": 1,
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0011.TOKEN",
   },
 ]
@@ -41,14 +41,14 @@ Array [
     "claim": Object {
       "nationalId": "xxx0xxxx0xxx",
     },
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0014.TOKEN",
   },
   Object {
     "claim": Object {
       "phone": "555-555-5555",
     },
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0013.TOKEN",
   },
 ]
@@ -60,15 +60,15 @@ Array [
     "claim": Object {
       "name": "Alice",
     },
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
-    "token": "0011.TOKEN",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+    "token": "0012.TOKEN",
   },
   Object {
     "claim": Object {
       "name": "Alice",
     },
     "exp": 2,
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0015.TOKEN",
   },
 ]
@@ -80,7 +80,7 @@ exports[`returns all onlyPendingAndLatestAttestations 1`] = `
 Array [
   Object {
     "claimType": "nationalId",
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "issuer": Object {
       "name": "Issuer 1",
     },
@@ -90,7 +90,7 @@ Array [
   },
   Object {
     "claimType": "name",
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "issuer": Object {
       "name": "Issuer 1",
     },
@@ -98,7 +98,7 @@ Array [
   },
   Object {
     "claimType": "nationalId",
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
     "issuer": Object {
       "name": "Issuer 2",
     },
@@ -108,7 +108,7 @@ Array [
     "claim": Object {
       "nationalId": "xxx0xxxx0xxx",
     },
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "issuer": Object {
       "name": "Issuer 1",
     },
@@ -118,7 +118,7 @@ Array [
     "claim": Object {
       "phone": "555-555-5555",
     },
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "issuer": Object {
       "name": "Issuer 1",
     },
@@ -128,18 +128,18 @@ Array [
     "claim": Object {
       "name": "Alice",
     },
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
     "issuer": Object {
       "name": "Issuer 2",
     },
-    "token": "0011.TOKEN",
+    "token": "0012.TOKEN",
   },
   Object {
     "claim": Object {
       "name": "Alice",
     },
     "exp": 2,
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "issuer": Object {
       "name": "Issuer 1",
     },
@@ -154,7 +154,7 @@ Array [
     "claim": Object {
       "nationalId": "xxx0xxxx0xxx",
     },
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "issuer": Object {
       "name": "Issuer 1",
     },
@@ -164,7 +164,7 @@ Array [
     "claim": Object {
       "phone": "555-555-5555",
     },
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "issuer": Object {
       "name": "Issuer 1",
     },
@@ -177,19 +177,19 @@ exports[`returns all pendingAttestations 1`] = `
 Array [
   Object {
     "claimType": "nationalId",
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "options": Object {
       "applicant_id": 1234,
     },
   },
   Object {
     "claimType": "name",
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "options": Object {},
   },
   Object {
     "claimType": "nationalId",
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
     "options": Object {},
   },
 ]
@@ -266,29 +266,29 @@ Array [
     "claim": Object {
       "nationalId": "xxx0xxxx0xxx",
     },
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0014.TOKEN",
   },
   Object {
     "claim": Object {
       "phone": "555-555-5555",
     },
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0013.TOKEN",
   },
   Object {
     "claim": Object {
       "name": "Alice",
     },
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
-    "token": "0011.TOKEN",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+    "token": "0012.TOKEN",
   },
   Object {
     "claim": Object {
       "name": "Alice",
     },
     "exp": 2,
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0015.TOKEN",
   },
   Object {
@@ -296,7 +296,7 @@ Array [
       "name": "Alice",
     },
     "exp": 1,
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0011.TOKEN",
   },
 ]
@@ -308,14 +308,14 @@ Array [
     "claim": Object {
       "nationalId": "xxx0xxxx0xxx",
     },
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0014.TOKEN",
   },
   Object {
     "claim": Object {
       "phone": "555-555-5555",
     },
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0013.TOKEN",
   },
 ]
@@ -338,29 +338,29 @@ Array [
     "claim": Object {
       "nationalId": "xxx0xxxx0xxx",
     },
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0014.TOKEN",
   },
   Object {
     "claim": Object {
       "phone": "555-555-5555",
     },
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0013.TOKEN",
   },
   Object {
     "claim": Object {
       "name": "Alice",
     },
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
-    "token": "0011.TOKEN",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+    "token": "0012.TOKEN",
   },
   Object {
     "claim": Object {
       "name": "Alice",
     },
     "exp": 2,
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0015.TOKEN",
   },
 ]
@@ -372,14 +372,14 @@ Array [
     "claim": Object {
       "nationalId": "xxx0xxxx0xxx",
     },
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0014.TOKEN",
   },
   Object {
     "claim": Object {
       "phone": "555-555-5555",
     },
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0013.TOKEN",
   },
 ]
@@ -388,7 +388,7 @@ Array [
 exports[`returns pendingAttestation for issuer and type 1`] = `
 Object {
   "claimType": "nationalId",
-  "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+  "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
   "options": Object {
     "applicant_id": 1234,
   },
@@ -460,15 +460,15 @@ Array [
     "claim": Object {
       "name": "Alice",
     },
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
-    "token": "0011.TOKEN",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+    "token": "0012.TOKEN",
   },
   Object {
     "claim": Object {
       "name": "Alice",
     },
     "exp": 2,
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0015.TOKEN",
   },
 ]
@@ -480,22 +480,22 @@ Array [
     "claim": Object {
       "nationalId": "xxx0xxxx0xxx",
     },
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0014.TOKEN",
   },
   Object {
     "claim": Object {
       "name": "Alice",
     },
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
-    "token": "0011.TOKEN",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+    "token": "0012.TOKEN",
   },
   Object {
     "claim": Object {
       "name": "Alice",
     },
     "exp": 2,
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0015.TOKEN",
   },
 ]
@@ -511,7 +511,7 @@ Array [
     "claim": Object {
       "nationalId": "xxx0xxxx0xxx",
     },
-    "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0014.TOKEN",
   },
 ]
@@ -526,15 +526,15 @@ Object {
       "claim": Object {
         "name": "Alice",
       },
-      "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
-      "token": "0011.TOKEN",
+      "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+      "token": "0012.TOKEN",
     },
     Object {
       "claim": Object {
         "name": "Alice",
       },
       "exp": 2,
-      "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+      "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
       "token": "0015.TOKEN",
     },
   ],
@@ -548,15 +548,15 @@ Object {
       "claim": Object {
         "name": "Alice",
       },
-      "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
-      "token": "0011.TOKEN",
+      "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+      "token": "0012.TOKEN",
     },
     Object {
       "claim": Object {
         "name": "Alice",
       },
       "exp": 2,
-      "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+      "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
       "token": "0015.TOKEN",
     },
   ],
@@ -565,7 +565,7 @@ Object {
       "claim": Object {
         "nationalId": "xxx0xxxx0xxx",
       },
-      "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+      "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
       "token": "0014.TOKEN",
     },
   ],
@@ -583,7 +583,7 @@ Object {
       "claim": Object {
         "nationalId": "xxx0xxxx0xxx",
       },
-      "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+      "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
       "token": "0014.TOKEN",
     },
   ],
@@ -599,15 +599,15 @@ Object {
       "claim": Object {
         "name": "Alice",
       },
-      "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
-      "token": "0011.TOKEN",
+      "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+      "token": "0012.TOKEN",
     },
     Object {
       "claim": Object {
         "name": "Alice",
       },
       "exp": 2,
-      "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+      "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
       "token": "0015.TOKEN",
     },
   ],
@@ -621,15 +621,15 @@ Object {
       "claim": Object {
         "name": "Alice",
       },
-      "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
-      "token": "0011.TOKEN",
+      "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+      "token": "0012.TOKEN",
     },
     Object {
       "claim": Object {
         "name": "Alice",
       },
       "exp": 2,
-      "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+      "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
       "token": "0015.TOKEN",
     },
   ],
@@ -638,7 +638,7 @@ Object {
       "claim": Object {
         "nationalId": "xxx0xxxx0xxx",
       },
-      "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+      "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
       "token": "0014.TOKEN",
     },
   ],
@@ -656,35 +656,35 @@ Object {
       "claim": Object {
         "nationalId": "xxx0xxxx0xxx",
       },
-      "iss": "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+      "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
       "token": "0014.TOKEN",
     },
   ],
 }
 `;
 
-exports[`returns verifiedClaimsTokens 1`] = `Array []`;
+exports[`verifiedClaimsTokens returns verifiedClaimsTokens 1`] = `Array []`;
 
-exports[`returns verifiedClaimsTokens 2`] = `
+exports[`verifiedClaimsTokens returns verifiedClaimsTokens 2`] = `
 Array [
-  "0011.TOKEN",
+  "0012.TOKEN",
   "0015.TOKEN",
 ]
 `;
 
-exports[`returns verifiedClaimsTokens 3`] = `
+exports[`verifiedClaimsTokens returns verifiedClaimsTokens 3`] = `
 Array [
   "0014.TOKEN",
-  "0011.TOKEN",
+  "0012.TOKEN",
   "0015.TOKEN",
 ]
 `;
 
-exports[`returns verifiedClaimsTokens 4`] = `Array []`;
+exports[`verifiedClaimsTokens returns verifiedClaimsTokens 4`] = `Array []`;
 
-exports[`returns verifiedClaimsTokens 5`] = `Array []`;
+exports[`verifiedClaimsTokens returns verifiedClaimsTokens 5`] = `Array []`;
 
-exports[`returns verifiedClaimsTokens 6`] = `
+exports[`verifiedClaimsTokens returns verifiedClaimsTokens 6`] = `
 Array [
   "0014.TOKEN",
 ]
