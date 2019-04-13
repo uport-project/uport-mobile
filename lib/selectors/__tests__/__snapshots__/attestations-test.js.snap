@@ -1,5 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`requestedClaims returns self attested 1`] = `Object {}`;
+
+exports[`requestedClaims returns self attested 2`] = `
+Object {
+  "name": "Alice",
+}
+`;
+
+exports[`requestedClaims returns self attested 3`] = `
+Object {
+  "name": "Alice",
+  "nationalId": "xxx0xxxx0xxx",
+}
+`;
+
+exports[`requestedClaims returns self attested 4`] = `Object {}`;
+
+exports[`requestedClaims returns self attested 5`] = `
+Object {
+  "name": "Alice Kovan",
+}
+`;
+
+exports[`requestedClaims returns self attested 6`] = `
+Object {
+  "name": "Alice Kovan",
+  "nationalId": "xxx0xxxx0xxx",
+}
+`;
+
+exports[`requestedClaims returns self attested 7`] = `Object {}`;
+
+exports[`requestedClaims returns self attested 8`] = `
+Object {
+  "name": "Alice",
+}
+`;
+
+exports[`requestedClaims returns self attested 9`] = `
+Object {
+  "name": "Alice",
+  "nationalId": "xxx0xxxx0xxx",
+}
+`;
+
+exports[`requestedClaims returns self attested 10`] = `Object {}`;
+
+exports[`requestedClaims returns self attested 11`] = `
+Object {
+  "name": "Alice Kovan",
+}
+`;
+
+exports[`requestedClaims returns self attested 12`] = `
+Object {
+  "name": "Alice Kovan",
+  "nationalId": "xxx0xxxx0xxx",
+}
+`;
+
 exports[`returns all attestations issued by someone 1`] = `
 Array [
   Object {
@@ -396,36 +456,6 @@ Object {
 `;
 
 exports[`returns pendingAttestation for issuer and type 2`] = `undefined`;
-
-exports[`returns requestedClaims 1`] = `Object {}`;
-
-exports[`returns requestedClaims 2`] = `
-Object {
-  "name": "Alice",
-}
-`;
-
-exports[`returns requestedClaims 3`] = `
-Object {
-  "name": "Alice",
-  "nationalId": "xxx0xxxx0xxx",
-}
-`;
-
-exports[`returns requestedClaims 4`] = `Object {}`;
-
-exports[`returns requestedClaims 5`] = `
-Object {
-  "name": "Alice Kovan",
-}
-`;
-
-exports[`returns requestedClaims 6`] = `
-Object {
-  "name": "Alice Kovan",
-  "nationalId": "xxx0xxxx0xxx",
-}
-`;
 
 exports[`returns third party attestations summary 1`] = `
 Object {
