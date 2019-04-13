@@ -30,36 +30,6 @@ Object {
 }
 `;
 
-exports[`requestedClaims returns self attested 7`] = `Object {}`;
-
-exports[`requestedClaims returns self attested 8`] = `
-Object {
-  "name": "Alice",
-}
-`;
-
-exports[`requestedClaims returns self attested 9`] = `
-Object {
-  "name": "Alice",
-  "nationalId": "xxx0xxxx0xxx",
-}
-`;
-
-exports[`requestedClaims returns self attested 10`] = `Object {}`;
-
-exports[`requestedClaims returns self attested 11`] = `
-Object {
-  "name": "Alice Kovan",
-}
-`;
-
-exports[`requestedClaims returns self attested 12`] = `
-Object {
-  "name": "Alice Kovan",
-  "nationalId": "xxx0xxxx0xxx",
-}
-`;
-
 exports[`returns all attestations issued by someone 1`] = `
 Array [
   Object {
@@ -630,6 +600,9 @@ Object {
         "name": "Alice",
       },
       "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+      "issuer": Object {
+        "name": "Issuer 2",
+      },
       "token": "0012.TOKEN",
     },
     Object {
@@ -638,6 +611,9 @@ Object {
       },
       "exp": 2,
       "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+      "issuer": Object {
+        "name": "Issuer 1",
+      },
       "token": "0015.TOKEN",
     },
   ],
@@ -652,6 +628,9 @@ Object {
         "name": "Alice",
       },
       "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
+      "issuer": Object {
+        "name": "Issuer 2",
+      },
       "token": "0012.TOKEN",
     },
     Object {
@@ -660,6 +639,9 @@ Object {
       },
       "exp": 2,
       "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+      "issuer": Object {
+        "name": "Issuer 1",
+      },
       "token": "0015.TOKEN",
     },
   ],
@@ -669,6 +651,9 @@ Object {
         "nationalId": "xxx0xxxx0xxx",
       },
       "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+      "issuer": Object {
+        "name": "Issuer 1",
+      },
       "token": "0014.TOKEN",
     },
   ],
@@ -687,6 +672,9 @@ Object {
         "nationalId": "xxx0xxxx0xxx",
       },
       "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+      "issuer": Object {
+        "name": "Issuer 1",
+      },
       "token": "0014.TOKEN",
     },
   ],
