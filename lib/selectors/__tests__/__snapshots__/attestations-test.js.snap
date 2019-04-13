@@ -478,13 +478,6 @@ exports[`returns verifiedClaims 3`] = `
 Array [
   Object {
     "claim": Object {
-      "nationalId": "xxx0xxxx0xxx",
-    },
-    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
-    "token": "0014.TOKEN",
-  },
-  Object {
-    "claim": Object {
       "name": "Alice",
     },
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
@@ -497,6 +490,13 @@ Array [
     "exp": 2,
     "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
     "token": "0015.TOKEN",
+  },
+  Object {
+    "claim": Object {
+      "nationalId": "xxx0xxxx0xxx",
+    },
+    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
+    "token": "0014.TOKEN",
   },
 ]
 `;
@@ -674,9 +674,9 @@ Array [
 
 exports[`verifiedClaimsTokens returns verifiedClaimsTokens 3`] = `
 Array [
-  "0014.TOKEN",
   "0012.TOKEN",
   "0015.TOKEN",
+  "0014.TOKEN",
 ]
 `;
 
