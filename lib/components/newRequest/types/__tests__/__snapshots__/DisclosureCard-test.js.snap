@@ -1255,9 +1255,7 @@ exports[`DisclosureCard missing claims renders enabled button and descriptions f
                         "textAlign": "left",
                         "width": 83,
                       },
-                      Object {
-                        "color": "red",
-                      },
+                      Object {},
                     ]
                   }
                 >
