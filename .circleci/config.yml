@@ -15,7 +15,11 @@ jobs:
             - node-{{ arch }}-v2-{{ checksum "package.json" }}
             - node-{{ arch }}-v2
 
-      - run: yarn install
+      - run:
+          name: install-dependencies
+          command: |
+            sudo npm i -g  codecov node-gyp
+            yarn
 
       - save_cache:
           key: yarn-{{ arch }}-v2-{{ checksum "yarn.lock" }}
@@ -29,9 +33,13 @@ jobs:
           name: jest tests
           command: |
             mkdir -p test-results/jest
-            yarn run test --ci --coverage --maxWorkers=3
+            yarn run test --ci --coverage --maxWorkers=3 && codecov
           environment:
             JEST_JUNIT_OUTPUT: test-results/jest/junit.xml
+
+      - run:
+          name: code-coverage
+          command: bash <(curl -s https://codecov.io/bash)
 
       - run:
           name: package react native android bundle independently
