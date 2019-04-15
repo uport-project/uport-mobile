@@ -114,34 +114,8 @@ Array [
 
 exports[`returns all attestations matching a claim type and name 2`] = `Array []`;
 
-exports[`returns all onlyPendingAndLatestAttestations 1`] = `
+exports[`returns all onlyLatestAttestationsWithIssuer 1`] = `
 Array [
-  Object {
-    "claimType": "nationalId",
-    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
-    "issuer": Object {
-      "name": "Issuer 1",
-    },
-    "options": Object {
-      "applicant_id": 1234,
-    },
-  },
-  Object {
-    "claimType": "name",
-    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
-    "issuer": Object {
-      "name": "Issuer 1",
-    },
-    "options": Object {},
-  },
-  Object {
-    "claimType": "nationalId",
-    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
-    "issuer": Object {
-      "name": "Issuer 2",
-    },
-    "options": Object {},
-  },
   Object {
     "claim": Object {
       "nationalId": "xxx0xxxx0xxx",
@@ -190,7 +164,7 @@ Array [
 ]
 `;
 
-exports[`returns all onlyPendingAndLatestAttestations 2`] = `
+exports[`returns all onlyLatestAttestationsWithIssuer 2`] = `
 Array [
   Object {
     "claim": Object {
@@ -216,30 +190,6 @@ Array [
   },
 ]
 `;
-
-exports[`returns all pendingAttestations 1`] = `
-Array [
-  Object {
-    "claimType": "nationalId",
-    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
-    "options": Object {
-      "applicant_id": 1234,
-    },
-  },
-  Object {
-    "claimType": "name",
-    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
-    "options": Object {},
-  },
-  Object {
-    "claimType": "nationalId",
-    "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
-    "options": Object {},
-  },
-]
-`;
-
-exports[`returns all pendingAttestations 2`] = `Array []`;
 
 exports[`returns allClaims 1`] = `
 Object {
@@ -360,17 +310,6 @@ Array [
 `;
 
 exports[`returns ledger with only the latest attestations 1`] = `
-V {
-  "C": null,
-  "cb": null,
-  "j": 32374988,
-  "k": null,
-  "p": null,
-  "q": 0,
-}
-`;
-
-exports[`returns ledger with only the latest attestations 2`] = `
 Array [
   Object {
     "claim": Object {
@@ -408,7 +347,7 @@ Array [
 ]
 `;
 
-exports[`returns ledger with only the latest attestations 3`] = `
+exports[`returns ledger with only the latest attestations 2`] = `
 Array [
   Object {
     "claim": Object {
@@ -428,18 +367,6 @@ Array [
   },
 ]
 `;
-
-exports[`returns pendingAttestation for issuer and type 1`] = `
-Object {
-  "claimType": "nationalId",
-  "iss": "did:ethr:0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
-  "options": Object {
-    "applicant_id": 1234,
-  },
-}
-`;
-
-exports[`returns pendingAttestation for issuer and type 2`] = `undefined`;
 
 exports[`returns third party attestations summary 1`] = `
 Object {
