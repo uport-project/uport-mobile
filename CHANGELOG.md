@@ -1,5 +1,13 @@
 # Change Log
 
+## [v438](https://github.com/uport-project/uport-mobile/tree/v438) (2019-04-15)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v437...v438)
+
+**Merged pull requests:**
+
+- \[Fixed \#165256826\] Upgrade uport libs [\#117](https://github.com/uport-project/uport-mobile/pull/117) ([simonas-notcat](https://github.com/simonas-notcat))
+- Add codecov back [\#115](https://github.com/uport-project/uport-mobile/pull/115) ([pelle](https://github.com/pelle))
+
 ## [v437](https://github.com/uport-project/uport-mobile/tree/v437) (2019-04-12)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v436...v437)
 
