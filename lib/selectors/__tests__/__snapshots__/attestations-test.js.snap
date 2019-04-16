@@ -30,6 +30,20 @@ Object {
 }
 `;
 
+exports[`requestedOwnClaims returns self attested 1`] = `Object {}`;
+
+exports[`requestedOwnClaims returns self attested 2`] = `
+Object {
+  "name": "Alice Kovan",
+}
+`;
+
+exports[`requestedOwnClaims returns self attested 3`] = `
+Object {
+  "name": "Alice Kovan",
+}
+`;
+
 exports[`returns all attestations issued by someone 1`] = `
 Array [
   Object {
