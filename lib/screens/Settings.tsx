@@ -87,7 +87,7 @@ export class Settings extends React.Component<SettingsProps> {
           <ListItem accessoryRight={`${this.props.version} (${this.props.channel})`}>App Version</ListItem>
           <ListItem onPress={() => this.goToScreen('advanced.uport')}>uPort ID</ListItem>
           <ListItem onPress={() => this.goToScreen('advanced.try-uport')}>Try uPort</ListItem>
-          <ListItem externalLink={'https://chat.uport.me'} last>
+          <ListItem externalLink={'https://uport.zendesk.com/hc/en-us/requests/new'} last>
             Support
           </ListItem>
         </Section>
