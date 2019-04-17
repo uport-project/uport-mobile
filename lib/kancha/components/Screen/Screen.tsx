@@ -20,7 +20,7 @@
 import * as React from 'react'
 import { SafeAreaView, ScrollView, ViewStyle, ImageBackground, ImageSourcePropType, StatusBar } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scrollview'
-import { Container, Theme, Device } from '@kancha'
+import { Container, Theme, Device, Text } from '@kancha'
 
 /** Spacer size */
 const SPACER_SIZE = 500
@@ -108,39 +108,48 @@ const Screen: React.FunctionComponent<ScreenProps> & {
    * Main content to be rendered
    */
   const mainContent = (
-    <Container background={props.type} flex={1}>
-      <StatusBar hidden={props.statusBarHidden} />
-      {props.children}
-    </Container>
+    <React.Fragment>
+      <Container background={props.type} flex={1}>
+        <StatusBar hidden={props.statusBarHidden} animated />
+        {props.children}
+      </Container>
+    </React.Fragment>
   )
   /**
    * Main content to be rendered within a ScrollView
    */
   const scrollViewContent = (
-    <KeyboardAwareScrollView style={scrollViewStyle}>
-      {props.expandingHeaderContent && (
-        <React.Fragment>
-          <Container backgroundColor={props.headerBackgroundColor}>{props.expandingHeaderContent}</Container>
-          {/* Background image -> <ImageBackground source={Images.backgrounds.purpleGradient}>{props.expandingHeaderContent}</ImageBackground> */}
-        </React.Fragment>
+    <React.Fragment>
+      <KeyboardAwareScrollView style={scrollViewStyle}>
+        {props.expandingHeaderContent && (
+          <React.Fragment>
+            <Container backgroundColor={props.headerBackgroundColor}>{props.expandingHeaderContent}</Container>
+          </React.Fragment>
+        )}
+        {mainContent}
+      </KeyboardAwareScrollView>
+
+      {props.footerNavComponent && (
+        <SafeAreaView>
+          <Container paddingTop dividerTop>
+            {props.footerNavComponent}
+          </Container>
+        </SafeAreaView>
       )}
-      {mainContent}
-    </KeyboardAwareScrollView>
+    </React.Fragment>
   )
   /**
    * Main content to be rendered within a SafeAreaView
    */
   const safeAreaView = (
     <SafeAreaView style={safeAreaViewStyle}>
-      <Container flex={1}>
-        {props.config === ScreenConfigs.SafeNoScroll ? mainContent : scrollViewContent}
+      <Container flex={1}>{props.config === ScreenConfigs.SafeNoScroll ? mainContent : scrollViewContent}</Container>
 
-        {props.footerNavComponent && (
-          <Container paddingBottom paddingTop>
-            {props.footerNavComponent}
-          </Container>
-        )}
-      </Container>
+      {props.footerNavComponent && props.config === ScreenConfigs.SafeNoScroll && (
+        <Container paddingBottom paddingTop dividerTop>
+          {props.footerNavComponent}
+        </Container>
+      )}
     </SafeAreaView>
   )
 

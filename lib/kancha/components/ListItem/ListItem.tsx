@@ -164,7 +164,7 @@ const ListItem: React.FunctionComponent<ListItemProps> = props => {
                   />
                 </Container>
               ) : (
-                <Container flexDirection={'row'} alignItems={'center'}>
+                <Container flexDirection={'row'} alignItems={'center'} paddingTop={3}>
                   <Text type={Text.Types.ListItem}>{props.children}</Text>
                   {props.selected && (
                     <Container paddingLeft={8}>

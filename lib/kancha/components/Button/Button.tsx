@@ -84,6 +84,16 @@ interface ButtonProps {
    * Provide a testID for e2e tests
    */
   testID?: string
+
+  /**
+   * Shadow depth
+   */
+  depth?: number
+
+  /**
+   * Shadow depth
+   */
+  iconButton?: boolean
 }
 
 const Button: React.FC<ButtonProps> & {
@@ -104,6 +114,8 @@ const Button: React.FC<ButtonProps> & {
   textDecorationLine,
   testID,
   children,
+  depth,
+  iconButton,
 }) => {
   const style: ViewStyle = {
     ...(block && block === 'filled'
@@ -116,7 +128,7 @@ const Button: React.FC<ButtonProps> & {
           borderColor: type ? Theme.colors[type].button : Theme.colors.primary.button,
         }
       : {}),
-    ...(noPadding ? {} : { padding: Theme.spacing.default }),
+    ...(noPadding || iconButton ? {} : { padding: Theme.spacing.default }),
     alignItems: 'center',
     ...(fullWidth ? {} : { maxWidth: 300 }),
     borderRadius: Theme.roundedCorners.buttons,
@@ -142,7 +154,7 @@ const Button: React.FC<ButtonProps> & {
       disabled={disabled}
       onPress={onPress}
       style={style}
-      underlayColor={block === ButtonBlocks.Clear ? 'transparent' : type && Theme.colors[type].underlay}
+      underlayColor={block === ButtonBlocks.Clear || iconButton ? 'transparent' : type && Theme.colors[type].underlay}
     >
       <Container flexDirection={'row'}>
         {icon && icon}

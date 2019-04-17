@@ -24,11 +24,13 @@ import { Device } from '@kancha'
 import Feather from 'react-native-vector-icons/Feather'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
+import EvilIcons from 'react-native-vector-icons/EvilIcons'
 
 const IconSets: { [index: string]: any } = {
   ionicons: Ionicons,
   feather: Feather,
   fontawesome: FontAwesome,
+  evil: EvilIcons,
 }
 
 interface IconProps {
@@ -82,11 +84,11 @@ const Icons: IconsStatic = {
   rocket: Device.isIOS ? 'ios-rocket' : 'md-rocket',
   share: Device.isIOS ? 'ios-share' : 'md-share',
   scan: Device.isIOS ? 'ios-qr-scanner' : 'md-qr-scanner',
+  close: Device.isIOS ? 'close' : 'close',
   checkmark: Device.isIOS ? 'ios-checkmark' : 'md-checkmark',
   edit: Device.isIOS ? 'edit' : 'edit',
   more: Device.isIOS ? 'ios-more' : 'ios-more',
   qrcode: Device.isIOS ? 'qrcode' : 'qrcode',
-  close: Device.isIOS ? 'x' : 'x',
 }
 
 const IconImageSource = (font: string, icon: string, size: number) => {
