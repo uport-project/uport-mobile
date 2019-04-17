@@ -387,40 +387,6 @@ Object {
 }
 `;
 
-exports[`creates an ADD_PENDING_ATTESTATION action 1`] = `
-Object {
-  "_backup": true,
-  "address": "0x123afdasdfasdfasdf",
-  "claimType": "name",
-  "iss": "0xdsasdfasdf",
-  "options": Object {},
-  "type": "ADD_PENDING_ATTESTATION",
-}
-`;
-
-exports[`creates an ADD_PENDING_ATTESTATION action 2`] = `
-Object {
-  "_backup": true,
-  "address": "0x123afdasdfasdfasdf",
-  "claimType": "name",
-  "iss": "0xdsasdfasdf",
-  "options": Object {
-    "applicant_id": 1234,
-  },
-  "type": "ADD_PENDING_ATTESTATION",
-}
-`;
-
-exports[`creates an REMOVE_PENDING_ATTESTATION action 1`] = `
-Object {
-  "_backup": true,
-  "address": "0x123afdasdfasdfasdf",
-  "claimType": "name",
-  "iss": "0xdsasdfasdf",
-  "type": "REMOVE_PENDING_ATTESTATION",
-}
-`;
-
 exports[`creates an STORE_ATTESTATION action 1`] = `
 Object {
   "_backup": true,
