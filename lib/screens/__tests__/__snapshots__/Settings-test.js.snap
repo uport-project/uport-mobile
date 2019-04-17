@@ -2391,11 +2391,7 @@ ShallowWrapper {
             Try uPort
           </ListItem>
           <ListItem
-<<<<<<< HEAD
             externalLink="https://uport.zendesk.com/hc/en-us/requests/new"
-=======
-            externalLink="https://uport.zendesk.com"
->>>>>>> Fixing/removing tests
             last={true}
           >
             Support
@@ -2464,11 +2460,7 @@ ShallowWrapper {
               Try uPort
             </ListItem>,
             <ListItem
-<<<<<<< HEAD
               externalLink="https://uport.zendesk.com/hc/en-us/requests/new"
-=======
-              externalLink="https://uport.zendesk.com"
->>>>>>> Fixing/removing tests
               last={true}
             >
               Support
@@ -2519,11 +2511,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": "Support",
-<<<<<<< HEAD
               "externalLink": "https://uport.zendesk.com/hc/en-us/requests/new",
-=======
-              "externalLink": "https://uport.zendesk.com",
->>>>>>> Fixing/removing tests
               "last": true,
             },
             "ref": null,
@@ -2680,11 +2668,7 @@ ShallowWrapper {
               Try uPort
             </ListItem>
             <ListItem
-<<<<<<< HEAD
               externalLink="https://uport.zendesk.com/hc/en-us/requests/new"
-=======
-              externalLink="https://uport.zendesk.com"
->>>>>>> Fixing/removing tests
               last={true}
             >
               Support
@@ -2753,11 +2737,7 @@ ShallowWrapper {
                 Try uPort
               </ListItem>,
               <ListItem
-<<<<<<< HEAD
                 externalLink="https://uport.zendesk.com/hc/en-us/requests/new"
-=======
-                externalLink="https://uport.zendesk.com"
->>>>>>> Fixing/removing tests
                 last={true}
               >
                 Support
@@ -2808,11 +2788,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": "Support",
-<<<<<<< HEAD
                 "externalLink": "https://uport.zendesk.com/hc/en-us/requests/new",
-=======
-                "externalLink": "https://uport.zendesk.com",
->>>>>>> Fixing/removing tests
                 "last": true,
               },
               "ref": null,
