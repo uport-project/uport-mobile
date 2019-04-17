@@ -1,5 +1,14 @@
 # Change Log
 
+## [v439](https://github.com/uport-project/uport-mobile/tree/v439) (2019-04-17)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v438...v439)
+
+**Merged pull requests:**
+
+- Update support url to Zendesk [\#120](https://github.com/uport-project/uport-mobile/pull/120) ([jasonhealy](https://github.com/jasonhealy))
+- Upgrade to the latest uport libs [\#118](https://github.com/uport-project/uport-mobile/pull/118) ([simonas-notcat](https://github.com/simonas-notcat))
+- Implemented verifiable credentials specs [\#116](https://github.com/uport-project/uport-mobile/pull/116) ([pelle](https://github.com/pelle))
+
 ## [v438](https://github.com/uport-project/uport-mobile/tree/v438) (2019-04-15)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v437...v438)
 
