@@ -1,5 +1,12 @@
 # Change Log
 
+## [v440](https://github.com/uport-project/uport-mobile/tree/v440) (2019-04-17)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v439...v440)
+
+**Merged pull requests:**
+
+- Support any https url as profileImage [\#121](https://github.com/uport-project/uport-mobile/pull/121) ([simonas-notcat](https://github.com/simonas-notcat))
+
 ## [v439](https://github.com/uport-project/uport-mobile/tree/v439) (2019-04-17)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v438...v439)
 
