@@ -10,7 +10,7 @@ import { currentAddress, ownClaims, myAccounts, allIdentities } from 'uPortMobil
 import { externalProfile } from 'uPortMobile/lib/selectors/requests'
 import { editMyInfo, updateShareToken } from 'uPortMobile/lib/actions/myInfoActions'
 import { addClaims, addImage, switchIdentity } from 'uPortMobile/lib/actions/uportActions'
-import { onlyPendingAndLatestAttestations } from 'uPortMobile/lib/selectors/attestations'
+import { onlyLatestAttestationsWithIssuer } from 'uPortMobile/lib/selectors/attestations'
 
 import photoSelectionHandler from 'uPortMobile/lib/utilities/photoSelection'
 import Mori from 'mori'
@@ -511,7 +511,7 @@ const mapStateToProps = (state: any, ownProps: any) => {
     userData,
     address: currentAddress(state),
     shareToken: state.myInfo.shareToken,
-    verifications: onlyPendingAndLatestAttestations(state),
+    verifications: onlyLatestAttestationsWithIssuer(state),
     allIdentities: Mori.toJs(allIdentities(state)),
     accounts: myAccounts(state),
     accountProfileLookup: (clientId: string) => Mori.toJs(externalProfile(state, clientId)),

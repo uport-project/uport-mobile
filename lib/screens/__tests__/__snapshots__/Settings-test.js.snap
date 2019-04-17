@@ -2395,7 +2395,7 @@ ShallowWrapper {
             Try uPort
           </ListItem>
           <ListItem
-            externalLink="https://chat.uport.me"
+            externalLink="https://uport.zendesk.com/hc/en-us/requests/new"
             last={true}
           >
             Support
@@ -2464,7 +2464,7 @@ ShallowWrapper {
               Try uPort
             </ListItem>,
             <ListItem
-              externalLink="https://chat.uport.me"
+              externalLink="https://uport.zendesk.com/hc/en-us/requests/new"
               last={true}
             >
               Support
@@ -2515,7 +2515,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": "Support",
-              "externalLink": "https://chat.uport.me",
+              "externalLink": "https://uport.zendesk.com/hc/en-us/requests/new",
               "last": true,
             },
             "ref": null,
@@ -2672,7 +2672,7 @@ ShallowWrapper {
               Try uPort
             </ListItem>
             <ListItem
-              externalLink="https://chat.uport.me"
+              externalLink="https://uport.zendesk.com/hc/en-us/requests/new"
               last={true}
             >
               Support
@@ -2741,7 +2741,7 @@ ShallowWrapper {
                 Try uPort
               </ListItem>,
               <ListItem
-                externalLink="https://chat.uport.me"
+                externalLink="https://uport.zendesk.com/hc/en-us/requests/new"
                 last={true}
               >
                 Support
@@ -2792,7 +2792,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": "Support",
-                "externalLink": "https://chat.uport.me",
+                "externalLink": "https://uport.zendesk.com/hc/en-us/requests/new",
                 "last": true,
               },
               "ref": null,
