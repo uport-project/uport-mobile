@@ -35,9 +35,6 @@ import console = require('console');
 const isIOS = Platform.OS === 'ios' ? true : false
 
 export function start() {
-  console.log('==============================')
-  console.log(RNUportSigner)
-  console.log(RNUportHDSigner)
   registerScreens(store, Provider)
   UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true)
 }
@@ -45,8 +42,6 @@ export function start() {
 // Actual initialization is done by startupSaga during initialization of `store`.
 // When DB is ready it calls one of these.
 export function startMain() {
-  console.log('==============================')
-  console.log(RNUportSigner)
   startAppModernUI()
   //startLegacyApp()
 }
