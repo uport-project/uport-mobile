@@ -1,5 +1,12 @@
 # Change Log
 
+## [v443](https://github.com/uport-project/uport-mobile/tree/v443) (2019-04-18)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v442...v443)
+
+**Merged pull requests:**
+
+- Date display fix [\#124](https://github.com/uport-project/uport-mobile/pull/124) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v442](https://github.com/uport-project/uport-mobile/tree/v442) (2019-04-18)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v441...v442)
 
