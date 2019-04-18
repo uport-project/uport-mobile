@@ -50,8 +50,9 @@ export const screenVisibilityListener = new RNNScreenVisibilityListener({
 })
 
 // Add GUI startup tasks here for already onboarded user
-export async function startAppModernUI(this: any) {
-  isIOS ? null : store.dispatch(registerDeviceForNotifications())
+export async function startAppModernUI() {
+  /** Ask for notificatiosn on startup */
+  store.dispatch(registerDeviceForNotifications())
 
   const accountsIcon = await FeatherIcons.getImageSource('check-circle', 26)
   const contactsIcon = await FeatherIcons.getImageSource('users', 26)
