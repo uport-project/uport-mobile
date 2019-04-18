@@ -10,18 +10,37 @@ interface RequestProps {
 interface RequestState {}
 
 const IndicatorBar: React.FC<any> = () => {
+  const triangle: ViewStyle = {
+    width: 0,
+    height: 0,
+    backgroundColor: 'transparent',
+    borderStyle: 'solid',
+    borderLeftWidth: 20,
+    borderRightWidth: 20,
+    borderBottomWidth: 15,
+    borderLeftColor: 'transparent',
+    borderRightColor: 'transparent',
+    borderBottomColor: '#333333',
+    transform: [{ rotate: '180deg' }],
+  }
+
   return (
-    <Container backgroundColor={'#333333'} padding>
-      <Text textColor={'#FFFFFF'} type={Text.Types.SectionHeader} textAlign={'center'}>
-        JP Morgan is requesting you do something
-      </Text>
+    <Container backgroundColor={'#FFFFFF'}>
+      <Container backgroundColor={'#333333'} padding>
+        <Text textColor={'#FFFFFF'} type={Text.Types.SectionHeader} textAlign={'center'}>
+          JP Morgan is requesting you do something
+        </Text>
+      </Container>
+      <Container alignItems={'center'}>
+        <Container viewStyle={triangle} />
+      </Container>
     </Container>
   )
 }
 
 const RequestContent: React.FC<any> = () => {
   return (
-    <Section>
+    <Section noTopMargin noTopBorder>
       <ListItem title={'Title of item'}>Main Item Name</ListItem>
       <ListItem title={'Title of item'}>Main Item Name</ListItem>
       <ListItem last title={'Title of item'}>
