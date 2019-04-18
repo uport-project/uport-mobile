@@ -1,5 +1,15 @@
 # Change Log
 
+## [v442](https://github.com/uport-project/uport-mobile/tree/v442) (2019-04-18)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v441...v442)
+
+**Merged pull requests:**
+
+- Ask for push permissions on load for iOS [\#122](https://github.com/uport-project/uport-mobile/pull/122) ([jasonhealy](https://github.com/jasonhealy))
+
+## [v441](https://github.com/uport-project/uport-mobile/tree/v441) (2019-04-17)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v440...v441)
+
 ## [v440](https://github.com/uport-project/uport-mobile/tree/v440) (2019-04-17)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v439...v440)
 
