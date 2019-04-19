@@ -426,10 +426,10 @@ describe('MigrateLegacy', () => {
                 [call(encryptionPublicKey, { idIndex: 0, actIndex: 0 }), encPublicKey],
                 [select(ownClaimsMap), own],
                 [select(subAccounts, legacyDID), []],
-                [call(handleStartSwitchingSettingsChange, { isOn: false}), undefined],
-                [call(handleStartSwitchingSettingsChange, { isOn: true}), undefined]
+                [call(handleStartSwitchingSettingsChange, { isOn: false }), undefined],
+                [call(handleStartSwitchingSettingsChange, { isOn: true }), undefined]
               ])
-              .call(handleStartSwitchingSettingsChange, { isOn: false})
+              .call(handleStartSwitchingSettingsChange, { isOn: false })
               .put(
                 storeIdentity({
                   address: newDID,
@@ -446,7 +446,7 @@ describe('MigrateLegacy', () => {
                 }),
               )
               .put(saveMessage(step, 'New mainnet identity is created'))
-              .call(handleStartSwitchingSettingsChange, { isOn: true})
+              .call(handleStartSwitchingSettingsChange, { isOn: true })
               .returns(true)
               .run()
           })  
