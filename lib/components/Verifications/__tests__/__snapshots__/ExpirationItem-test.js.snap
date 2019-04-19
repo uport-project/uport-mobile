@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExpirationItem renders ExpirationItem in milliseconds 1`] = `
+<View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "rgba(74,74,74,1)",
+        "fontFamily": undefined,
+        "fontSize": 12,
+        "lineHeight": 16,
+      }
+    }
+  >
+    Exp: 
+    Mar 1st 2020
+  </Text>
+</View>
+`;
+
+exports[`ExpirationItem renders ExpirationItem in seconds 1`] = `
+<View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "rgba(74,74,74,1)",
+        "fontFamily": undefined,
+        "fontSize": 12,
+        "lineHeight": 16,
+      }
+    }
+  >
+    Exp: 
+    Mar 1st 2020
+  </Text>
+</View>
+`;

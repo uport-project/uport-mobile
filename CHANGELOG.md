@@ -1,5 +1,13 @@
 # Change Log
 
+## [v444](https://github.com/uport-project/uport-mobile/tree/v444) (2019-04-19)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v443...v444)
+
+**Merged pull requests:**
+
+- Handle milliseconds in expiry [\#126](https://github.com/uport-project/uport-mobile/pull/126) ([jasonhealy](https://github.com/jasonhealy))
+- Handle exeptions in sagas [\#125](https://github.com/uport-project/uport-mobile/pull/125) ([simonas-notcat](https://github.com/simonas-notcat))
+
 ## [v443](https://github.com/uport-project/uport-mobile/tree/v443) (2019-04-18)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v442...v443)
 
