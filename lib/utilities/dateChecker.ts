@@ -4,7 +4,7 @@ import moment from 'moment'
  *
  */
 const dateChecker = (date: number) => {
-  const isMilliSeconds = date && date.toString().length >= 13
+  const isMilliSeconds = date && date >= 1000000000000
   const formattedDate = isMilliSeconds ? moment(date).format('MMM Do YYYY') : moment.unix(date).format('MMM Do YYYY')
   return formattedDate
 }
