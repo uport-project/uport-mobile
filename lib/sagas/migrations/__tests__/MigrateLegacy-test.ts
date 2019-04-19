@@ -21,7 +21,6 @@ import { migrate } from '../MigrateLegacy'
 import { createAttestationToken } from 'uPortMobile/lib/sagas/jwt'
 import { MigrationStep } from 'uPortMobile/lib/constants/MigrationActionTypes'
 import { saveMessage } from 'uPortMobile/lib/actions/processStatusActions'
-import { resetHub } from 'uPortMobile/lib/actions/hubActions'
 import { subAccounts, currentAddress, ownClaimsMap, hasMainnetAccounts } from 'uPortMobile/lib/selectors/identities'
 import { updateIdentity, storeIdentity, storeConnection, storeExternalUport } from 'uPortMobile/lib/actions/uportActions'
 import {
@@ -38,7 +37,7 @@ import { hasAttestations } from 'uPortMobile/lib/selectors/attestations';
 import { resetHDWallet } from 'uPortMobile/lib/actions/HDWalletActions'
 import { handleURL } from 'uPortMobile/lib/actions/requestActions';
 import { dataBackup } from 'uPortMobile/lib/selectors/settings';
-import { deleteData } from '../../hubSaga';
+import { handleStartSwitchingSettingsChange } from '../../hubSaga';
 import { setDataBackup } from 'uPortMobile/lib/actions/settingsActions';
 
 const step = MigrationStep.MigrateLegacy
@@ -427,10 +426,10 @@ describe('MigrateLegacy', () => {
                 [call(encryptionPublicKey, { idIndex: 0, actIndex: 0 }), encPublicKey],
                 [select(ownClaimsMap), own],
                 [select(subAccounts, legacyDID), []],
-                [call(deleteData), undefined]
+                [call(handleStartSwitchingSettingsChange, { isOn: false}), undefined],
+                [call(handleStartSwitchingSettingsChange, { isOn: true}), undefined]
               ])
-              .call(deleteData)
-              .put(setDataBackup(false))
+              .call(handleStartSwitchingSettingsChange, { isOn: false})
               .put(
                 storeIdentity({
                   address: newDID,
@@ -447,7 +446,7 @@ describe('MigrateLegacy', () => {
                 }),
               )
               .put(saveMessage(step, 'New mainnet identity is created'))
-              .put(setDataBackup(true))
+              .call(handleStartSwitchingSettingsChange, { isOn: true})
               .returns(true)
               .run()
           })  
