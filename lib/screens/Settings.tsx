@@ -93,14 +93,13 @@ export class Settings extends React.Component<SettingsProps> {
         </Section>
         {this.props.hasHDWallet && (
           <Section>
+            <ListItem onPress={() => this.goToScreen('backup.dataInstructions')}>Account Back Up</ListItem>
             <ListItem
               warn={!this.props.seedConfirmed}
               accessoryRight={this.props.seedConfirmed ? undefined : 'Account At Risk'}
-              onPress={() => this.goToScreen('backup.dataInstructions')}
+              onPress={() => this.goToScreen('backup.seedInstructions')}
+              last
             >
-              Account Back Up
-            </ListItem>
-            <ListItem last onPress={() => this.goToScreen('backup.seedInstructions')}>
               Account Recovery
             </ListItem>
           </Section>
