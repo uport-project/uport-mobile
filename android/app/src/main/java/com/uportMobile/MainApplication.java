@@ -29,8 +29,8 @@ import com.imagepicker.ImagePickerPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.poberwong.launcher.IntentLauncherPackage;
+import com.reactlibrary.RNUportSignerPackage;
 import com.reactnativenavigation.NavigationApplication;
-import com.uport.sdk.react.signer.NativeSignerPackage;
 
 
 import org.reactnative.camera.RNCameraPackage;
@@ -96,7 +96,7 @@ public class MainApplication extends NavigationApplication implements ShareAppli
                 new AuthenticationScreenPackage(),
                 new MySNSPackage(),
                 new IntentLauncherPackage(),
-                new NativeSignerPackage(),
+                new RNUportSignerPackage(),
                 new RNFirebaseAnalyticsPackage()
         );
     }
