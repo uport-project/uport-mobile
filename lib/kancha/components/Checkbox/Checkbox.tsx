@@ -25,6 +25,7 @@ const Checkbox: React.FC<CheckboxProps> = ({ selected, toggleSelect, testID }) =
       underlayColor={'transparent'}
       onPress={toggleSelect ? () => toggleSelect(!selected) : () => ''}
       testID={testID}
+      accessibilityLabel={testID}
     >
       <Icon
         size={40}
