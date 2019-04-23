@@ -1,5 +1,15 @@
 # Change Log
 
+## [v445](https://github.com/uport-project/uport-mobile/tree/v445) (2019-04-23)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v444...v445)
+
+**Merged pull requests:**
+
+- Fix android camera permissions [\#129](https://github.com/uport-project/uport-mobile/pull/129) ([jasonhealy](https://github.com/jasonhealy))
+- Add accessibility labels to buttons [\#128](https://github.com/uport-project/uport-mobile/pull/128) ([jasonhealy](https://github.com/jasonhealy))
+- Warn account recovery on correct menu item [\#127](https://github.com/uport-project/uport-mobile/pull/127) ([jasonhealy](https://github.com/jasonhealy))
+- Use RNUportSigner library  [\#123](https://github.com/uport-project/uport-mobile/pull/123) ([aldigjo](https://github.com/aldigjo))
+
 ## [v444](https://github.com/uport-project/uport-mobile/tree/v444) (2019-04-19)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v443...v444)
 
