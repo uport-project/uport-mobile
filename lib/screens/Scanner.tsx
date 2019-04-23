@@ -48,10 +48,10 @@ export class ScannerScreen extends React.Component<ScannerScreenProps, ScannerSc
   async componentDidMount() {
     AppState.addEventListener('change', this._handleAppStateChange)
 
-    const hasPermission = await Permissions.check('photo')
+    const hasPermission = await Permissions.check('camera')
 
     if (hasPermission !== 'authorized') {
-      const request = await Permissions.request('photo')
+      const request = await Permissions.request('camera')
       this.setState({ hasPermission: request })
     }
   }
