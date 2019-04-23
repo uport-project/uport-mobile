@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Vibration, AppState } from 'react-native'
 import { Navigator } from 'react-native-navigation'
 import { Screen, Container, Scanner, Device } from '@kancha'
-// import Permissions from 'react-native-permissions'
+import Permissions from 'react-native-permissions'
 
 // Redux Connect
 import { connect } from 'react-redux'
@@ -21,9 +21,10 @@ interface ScannerScreenProps {
 interface ScannerScreenState {
   isEnabled: boolean
   appState: string
+  hasPermission: null | string
 }
 
-class ScannerScreen extends React.Component<ScannerScreenProps, ScannerScreenState> {
+export class ScannerScreen extends React.Component<ScannerScreenProps, ScannerScreenState> {
   timeout: any
 
   constructor(props: ScannerScreenProps) {
@@ -35,6 +36,7 @@ class ScannerScreen extends React.Component<ScannerScreenProps, ScannerScreenSta
     this.state = {
       isEnabled: false,
       appState: AppState.currentState,
+      hasPermission: null,
     }
 
     this.startScanner = this.startScanner.bind(this)
@@ -43,8 +45,17 @@ class ScannerScreen extends React.Component<ScannerScreenProps, ScannerScreenSta
     this.closeScanner = this.closeScanner.bind(this)
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     AppState.addEventListener('change', this._handleAppStateChange)
+
+    const hasPermission = await Permissions.check('camera')
+
+    if (hasPermission !== 'authorized') {
+      const request = await Permissions.request('camera')
+      this.setState({ hasPermission: request })
+    }
+
+    this.setState({ hasPermission })
   }
 
   componentWillUnmount() {
@@ -120,6 +131,7 @@ class ScannerScreen extends React.Component<ScannerScreenProps, ScannerScreenSta
         <Container flex={1}>
           {this.state.appState === 'active' && (
             <Scanner
+              hasPermission={this.state.hasPermission === 'authorized'}
               isEnabled={this.state.isEnabled}
               onBarcodeRead={this.onBarCodeRead}
               startScanner={this.startScanner}
