@@ -21,7 +21,7 @@ interface ScannerScreenProps {
 interface ScannerScreenState {
   isEnabled: boolean
   appState: string
-  hasPermission: null | string
+  hasPermission: null | boolean
 }
 
 export class ScannerScreen extends React.Component<ScannerScreenProps, ScannerScreenState> {
@@ -48,14 +48,13 @@ export class ScannerScreen extends React.Component<ScannerScreenProps, ScannerSc
   async componentDidMount() {
     AppState.addEventListener('change', this._handleAppStateChange)
 
-    const hasPermission = await Permissions.check('camera')
+    let status = await Permissions.check('camera')
 
-    if (hasPermission !== 'authorized') {
-      const request = await Permissions.request('camera')
-      this.setState({ hasPermission: request })
+    if (status === 'undetermined') {
+      status = await Permissions.request('camera')
     }
 
-    this.setState({ hasPermission })
+    this.setState({ ...this.state, hasPermission: status === 'authorized' })
   }
 
   componentWillUnmount() {
@@ -131,7 +130,7 @@ export class ScannerScreen extends React.Component<ScannerScreenProps, ScannerSc
         <Container flex={1}>
           {this.state.appState === 'active' && (
             <Scanner
-              hasPermission={this.state.hasPermission === 'authorized'}
+              hasPermission={this.state.hasPermission}
               isEnabled={this.state.isEnabled}
               onBarcodeRead={this.onBarCodeRead}
               startScanner={this.startScanner}
