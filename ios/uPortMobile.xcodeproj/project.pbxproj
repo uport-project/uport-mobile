@@ -15,17 +15,8 @@
 		00E356F31AD99517003FC87E /* uPortMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* uPortMobileTests.m */; };
 		030297BC2005526E008D4098 /* HDSignerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 030297BB2005526E008D4098 /* HDSignerTests.m */; };
 		032335471F9E62BA005306F9 /* SignerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 032335461F9E62BA005306F9 /* SignerTests.m */; };
-		032335761F9EC7B1005306F9 /* CoreBitcoin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038F15C71F95630500DF45E1 /* CoreBitcoin.framework */; };
-		032BD33B2006CC1F0062A379 /* UPTHDSigner+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 032BD33A2006CC1F0062A379 /* UPTHDSigner+Utils.m */; };
-		032BD33E200975780062A379 /* UPTHDSignerReactNativeBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 032BD33D200975780062A379 /* UPTHDSignerReactNativeBridge.m */; };
 		03459E6B1F97F372004DDC10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03459E3B1F97F371004DDC10 /* AppDelegate.m */; };
-		03459E731F97F397004DDC10 /* UPTEthSignerReactNativeBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 03459E711F97F397004DDC10 /* UPTEthSignerReactNativeBridge.m */; };
-		03459E791F97F5AA004DDC10 /* UPTEthSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 03459E781F97F5AA004DDC10 /* UPTEthSigner.m */; };
-		03459E7F1F97F8B0004DDC10 /* UPTEthSigner+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 03459E7E1F97F8B0004DDC10 /* UPTEthSigner+Utils.m */; };
-		038F14DC1F9547C500DF45E1 /* keccak.c in Sources */ = {isa = PBXBuildFile; fileRef = 038F14D91F9547C500DF45E1 /* keccak.c */; };
-		038F15CA1F9563DC00DF45E1 /* CoreBitcoin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038F15C71F95630500DF45E1 /* CoreBitcoin.framework */; };
 		03E8E86A1FD094A600920AA2 /* RNSNS.m in Sources */ = {isa = PBXBuildFile; fileRef = 03459E7B1F97F75D004DDC10 /* RNSNS.m */; };
-		03F16B492000173B008D1038 /* UPTHDSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F16B482000173B008D1038 /* UPTHDSigner.m */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -44,7 +35,6 @@
 		601B76DD1D410D3F00F62DDB /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601B76DB1D410D3F00F62DDB /* Fabric.framework */; };
 		601B76DE1D410D3F00F62DDB /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601B76DC1D410D3F00F62DDB /* Crashlytics.framework */; };
 		641C9A161E17390C008A4D38 /* libRCTPushNotification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 641C9A131E1738F3008A4D38 /* libRCTPushNotification.a */; };
-		641CA98D21A0AE09008FB9ED /* EthereumSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 641CA98C21A0AE09008FB9ED /* EthereumSigner.m */; };
 		64E31FBD1DF234CF0062465A /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D17E3DCF1DEDEF6B00C460F9 /* libRCTAnimation.a */; };
 		70F06EA01FC5C160000BD332 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70F06E6E1FC5C15F000BD332 /* GoogleService-Info.plist */; };
 		7F465938BBBE499DA8ECEFF4 /* libTouchID.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B137393457A4411B6A82656 /* libTouchID.a */; };
@@ -88,6 +78,7 @@
 		A5E6E91C4DDD470496F9A6A5 /* libRNRandomBytes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 544D74BA2AF94BF89CBE0725 /* libRNRandomBytes.a */; };
 		BB2AA137FC69402481534198 /* libRNImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16999B55454D4C328D7FACD3 /* libRNImagePicker.a */; };
 		BFED6FE87DBC4919A58988CD /* libPasscodeAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB278FF1A5046B9972A3597 /* libPasscodeAuth.a */; };
+		C8D855E5225FC8490086560A /* libRNUportSigner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D855E4225FC8430086560A /* libRNUportSigner.a */; };
 		D142E5671F25D96500A43483 /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D142E55B1F25D77900A43483 /* libReactNativeNavigation.a */; };
 		D6EA3454F6A041D7814CCCD3 /* libRNFirebase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4808EA30EA4B79B99DD6D0 /* libRNFirebase.a */; };
 		E850396E4153417FBC5EC4C0 /* libRNFetchBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F473FD8BE754AA592BCA8F9 /* libRNFetchBlob.a */; };
@@ -395,6 +386,48 @@
 			remoteGlobalIDString = A39873CE1EA65EE60051E01A;
 			remoteInfo = "RNVectorIcons-tvOS";
 		};
+		C8D312DC2269198A003E3199 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8D312D12269198A003E3199 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E0DE6F743640C50AB8DCC15E25BF482C;
+			remoteInfo = CoreEthereum;
+		};
+		C8D312DE2269198A003E3199 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8D312D12269198A003E3199 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DDFE48E56BDCB0FE5320C9636058896E;
+			remoteInfo = ISO8601DateFormatter;
+		};
+		C8D312E02269198A003E3199 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8D312D12269198A003E3199 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 689616588B476A3ADFAC3F5F841183F1;
+			remoteInfo = "Pods-RNUportSigner";
+		};
+		C8D312E22269198A003E3199 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8D312D12269198A003E3199 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C99C36EFB547C9DA651AB8BBB95EB36C;
+			remoteInfo = UPTEthereumSigner;
+		};
+		C8D312E42269198A003E3199 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8D312D12269198A003E3199 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EF771B274FACEB6636746186D1AB9B74;
+			remoteInfo = Valet;
+		};
+		C8D855E3225FC8430086560A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8D855DE225FC8420086560A /* RNUportSigner.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNUportSigner;
+		};
 		D142E55A1F25D77900A43483 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D142E5331F25D77900A43483 /* ReactNativeNavigation.xcodeproj */;
@@ -534,20 +567,10 @@
 		00E356F21AD99517003FC87E /* uPortMobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = uPortMobileTests.m; sourceTree = "<group>"; };
 		030297BB2005526E008D4098 /* HDSignerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDSignerTests.m; sourceTree = "<group>"; };
 		032335461F9E62BA005306F9 /* SignerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignerTests.m; sourceTree = "<group>"; };
-		032BD3392006CC1F0062A379 /* UPTHDSigner+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UPTHDSigner+Utils.h"; path = "uPortMobile/Classes/UPTHDSigner+Utils.h"; sourceTree = "<group>"; };
-		032BD33A2006CC1F0062A379 /* UPTHDSigner+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UPTHDSigner+Utils.m"; path = "uPortMobile/Classes/UPTHDSigner+Utils.m"; sourceTree = "<group>"; };
-		032BD33C200975780062A379 /* UPTHDSignerReactNativeBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UPTHDSignerReactNativeBridge.h; path = uPortMobile/Classes/UPTHDSignerReactNativeBridge.h; sourceTree = "<group>"; };
-		032BD33D200975780062A379 /* UPTHDSignerReactNativeBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UPTHDSignerReactNativeBridge.m; path = uPortMobile/Classes/UPTHDSignerReactNativeBridge.m; sourceTree = "<group>"; };
 		03459E3B1F97F371004DDC10 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = uPortMobile/Classes/AppDelegate.m; sourceTree = "<group>"; };
 		03459E6A1F97F372004DDC10 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = uPortMobile/Classes/AppDelegate.h; sourceTree = "<group>"; };
-		03459E711F97F397004DDC10 /* UPTEthSignerReactNativeBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UPTEthSignerReactNativeBridge.m; path = uPortMobile/Classes/UPTEthSignerReactNativeBridge.m; sourceTree = "<group>"; };
-		03459E721F97F397004DDC10 /* UPTEthSignerReactNativeBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UPTEthSignerReactNativeBridge.h; path = uPortMobile/Classes/UPTEthSignerReactNativeBridge.h; sourceTree = "<group>"; };
-		03459E771F97F5AA004DDC10 /* UPTEthSigner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UPTEthSigner.h; path = uPortMobile/Classes/UPTEthSigner.h; sourceTree = "<group>"; };
-		03459E781F97F5AA004DDC10 /* UPTEthSigner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UPTEthSigner.m; path = uPortMobile/Classes/UPTEthSigner.m; sourceTree = "<group>"; };
 		03459E7B1F97F75D004DDC10 /* RNSNS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RNSNS.m; path = uPortMobile/Classes/RNSNS.m; sourceTree = "<group>"; };
 		03459E7C1F97F75D004DDC10 /* RNSNS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RNSNS.h; path = uPortMobile/Classes/RNSNS.h; sourceTree = "<group>"; };
-		03459E7D1F97F8B0004DDC10 /* UPTEthSigner+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UPTEthSigner+Utils.h"; path = "uPortMobile/Classes/UPTEthSigner+Utils.h"; sourceTree = "<group>"; };
-		03459E7E1F97F8B0004DDC10 /* UPTEthSigner+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UPTEthSigner+Utils.m"; path = "uPortMobile/Classes/UPTEthSigner+Utils.m"; sourceTree = "<group>"; };
 		037EA23E1F75DB850015DD6A /* uPortMobile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "uPortMobile-Bridging-Header.h"; sourceTree = "<group>"; };
 		038F14D91F9547C500DF45E1 /* keccak.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = keccak.c; path = uPortMobile/keccak.c; sourceTree = "<group>"; };
 		038F14DA1F9547C500DF45E1 /* keccak.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = keccak.h; path = uPortMobile/keccak.h; sourceTree = "<group>"; };
@@ -629,9 +652,6 @@
 		038F152E1F954FCA00DF45E1 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		038F152F1F954FCA00DF45E1 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		038F15301F954FCA00DF45E1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		038F15C71F95630500DF45E1 /* CoreBitcoin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreBitcoin.framework; sourceTree = "<group>"; };
-		03F16B472000173B008D1038 /* UPTHDSigner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UPTHDSigner.h; path = uPortMobile/Classes/UPTHDSigner.h; sourceTree = "<group>"; };
-		03F16B482000173B008D1038 /* UPTHDSigner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = UPTHDSigner.m; path = uPortMobile/Classes/UPTHDSigner.m; sourceTree = "<group>"; };
 		0B137393457A4411B6A82656 /* libTouchID.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libTouchID.a; sourceTree = "<group>"; };
 		0FF12F882F814AF2842C390A /* libRNKeychain.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNKeychain.a; sourceTree = "<group>"; };
 		11738FDE267F889900DBAB73 /* Pods_uPortMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_uPortMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -663,8 +683,6 @@
 		62FA6261B132A60C0AFA99A4 /* Pods-uPortMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uPortMobileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uPortMobileTests/Pods-uPortMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
 		641915B2200ECEB70042DA49 /* ReactNativePermissions.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativePermissions.xcodeproj; path = "../node_modules/react-native-permissions/ios/ReactNativePermissions.xcodeproj"; sourceTree = "<group>"; };
 		641C9A0D1E1738F3008A4D38 /* RCTPushNotification.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTPushNotification.xcodeproj; path = "../node_modules/react-native/Libraries/PushNotificationIOS/RCTPushNotification.xcodeproj"; sourceTree = "<group>"; };
-		641CA95421A0ADB9008FB9ED /* EthereumSigner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EthereumSigner.h; path = uPortMobile/Classes/EthereumSigner.h; sourceTree = "<group>"; };
-		641CA98C21A0AE09008FB9ED /* EthereumSigner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = EthereumSigner.m; path = uPortMobile/Classes/EthereumSigner.m; sourceTree = "<group>"; };
 		64BE8C84877D1A6F45E58FF9 /* Pods-uPortMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uPortMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-uPortMobile/Pods-uPortMobile.release.xcconfig"; sourceTree = "<group>"; };
 		64E92F5B1D8CCCED0001FE7A /* uPort.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = uPort.entitlements; path = uPortMobile/uPort.entitlements; sourceTree = "<group>"; };
 		6F0D5A3203A64CCBB09EE7F6 /* PasscodeAuth.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = PasscodeAuth.xcodeproj; path = "../node_modules/react-native-passcode-auth/PasscodeAuth.xcodeproj"; sourceTree = "<group>"; };
@@ -713,6 +731,8 @@
 		9D3BBAA8C3514D689B8A4ECA /* RNRandomBytes.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNRandomBytes.xcodeproj; path = "../node_modules/react-native-randombytes/RNRandomBytes.xcodeproj"; sourceTree = "<group>"; };
 		AC8CE00CDBB3F3D8A93D2848 /* Pods-uPortMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uPortMobileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-uPortMobileTests/Pods-uPortMobileTests.release.xcconfig"; sourceTree = "<group>"; };
 		BE4808EA30EA4B79B99DD6D0 /* libRNFirebase.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNFirebase.a; sourceTree = "<group>"; };
+		C8D312D12269198A003E3199 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = "../node_modules/react-native-uport-signer/ios/Pods/Pods.xcodeproj"; sourceTree = "<group>"; };
+		C8D855DE225FC8420086560A /* RNUportSigner.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNUportSigner.xcodeproj; path = "../node_modules/react-native-uport-signer/ios/RNUportSigner.xcodeproj"; sourceTree = "<group>"; };
 		CD973928068447CEA3F98B20 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
 		D142E5331F25D77900A43483 /* ReactNativeNavigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeNavigation.xcodeproj; path = "../node_modules/react-native-navigation/ios/ReactNativeNavigation.xcodeproj"; sourceTree = "<group>"; };
 		D17E3DC91DEDEF6A00C460F9 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
@@ -728,7 +748,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				032335761F9EC7B1005306F9 /* CoreBitcoin.framework in Frameworks */,
 				25BA382724C11DC0665FE966 /* Pods_uPortMobileTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -737,9 +756,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8D855E5225FC8490086560A /* libRNUportSigner.a in Frameworks */,
 				9628732F2241213E002158C5 /* libRNCamera.a in Frameworks */,
 				96B2A1802228ACCC005F3514 /* libRNShare.a in Frameworks */,
-				038F15CA1F9563DC00DF45E1 /* CoreBitcoin.framework in Frameworks */,
 				D142E5671F25D96500A43483 /* libReactNativeNavigation.a in Frameworks */,
 				600A93DB1D0F813700DB5AEB /* libRCTCameraRoll.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -836,17 +855,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0314F6821FFEDDEE00912E04 /* HDSigner */ = {
-			isa = PBXGroup;
-			children = (
-				03F16B472000173B008D1038 /* UPTHDSigner.h */,
-				03F16B482000173B008D1038 /* UPTHDSigner.m */,
-				032BD3392006CC1F0062A379 /* UPTHDSigner+Utils.h */,
-				032BD33A2006CC1F0062A379 /* UPTHDSigner+Utils.m */,
-			);
-			name = HDSigner;
-			sourceTree = "<group>";
-		};
 		03459E7A1F97F707004DDC10 /* PushNotifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -860,7 +868,6 @@
 			isa = PBXGroup;
 			children = (
 				03459E7A1F97F707004DDC10 /* PushNotifications */,
-				038F15CC1F96973C00DF45E1 /* Signer */,
 				038F14D91F9547C500DF45E1 /* keccak.c */,
 				038F14DA1F9547C500DF45E1 /* keccak.h */,
 				03459E6A1F97F372004DDC10 /* AppDelegate.h */,
@@ -991,32 +998,6 @@
 			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		038F15CC1F96973C00DF45E1 /* Signer */ = {
-			isa = PBXGroup;
-			children = (
-				032BD33C200975780062A379 /* UPTHDSignerReactNativeBridge.h */,
-				032BD33D200975780062A379 /* UPTHDSignerReactNativeBridge.m */,
-				03459E721F97F397004DDC10 /* UPTEthSignerReactNativeBridge.h */,
-				03459E711F97F397004DDC10 /* UPTEthSignerReactNativeBridge.m */,
-				0314F6821FFEDDEE00912E04 /* HDSigner */,
-				038F15CD1F96977300DF45E1 /* EthSigner */,
-				641CA95421A0ADB9008FB9ED /* EthereumSigner.h */,
-				641CA98C21A0AE09008FB9ED /* EthereumSigner.m */,
-			);
-			name = Signer;
-			sourceTree = "<group>";
-		};
-		038F15CD1F96977300DF45E1 /* EthSigner */ = {
-			isa = PBXGroup;
-			children = (
-				03459E771F97F5AA004DDC10 /* UPTEthSigner.h */,
-				03459E781F97F5AA004DDC10 /* UPTEthSigner.m */,
-				03459E7D1F97F8B0004DDC10 /* UPTEthSigner+Utils.h */,
-				03459E7E1F97F8B0004DDC10 /* UPTEthSigner+Utils.m */,
-			);
-			name = EthSigner;
-			sourceTree = "<group>";
-		};
 		139105B71AF99BAD00B5F7CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -1077,7 +1058,6 @@
 			children = (
 				70304EFE221EB2E50092DB60 /* MessageUI.framework */,
 				70304EFC221EB2DD0092DB60 /* Social.framework */,
-				038F15C71F95630500DF45E1 /* CoreBitcoin.framework */,
 				2287C0EB70D14ECEA474A926 /* libz.tbd */,
 				11738FDE267F889900DBAB73 /* Pods_uPortMobile.framework */,
 				D8068C66CD9E6262A70001AC /* Pods_uPortMobileTests.framework */,
@@ -1254,6 +1234,8 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				C8D312D12269198A003E3199 /* Pods.xcodeproj */,
+				C8D855DE225FC8420086560A /* RNUportSigner.xcodeproj */,
 				962873292241212B002158C5 /* RNCamera.xcodeproj */,
 				70304EBE221EB29F0092DB60 /* RNShare.xcodeproj */,
 				641915B2200ECEB70042DA49 /* ReactNativePermissions.xcodeproj */,
@@ -1375,6 +1357,26 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		C8D312D22269198A003E3199 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C8D312DD2269198A003E3199 /* libCoreEthereum.a */,
+				C8D312DF2269198A003E3199 /* libISO8601DateFormatter.a */,
+				C8D312E12269198A003E3199 /* libPods-RNUportSigner.a */,
+				C8D312E32269198A003E3199 /* libUPTEthereumSigner.a */,
+				C8D312E52269198A003E3199 /* libValet.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C8D855DF225FC8420086560A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C8D855E4225FC8430086560A /* libRNUportSigner.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D142E5341F25D77900A43483 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -1492,6 +1494,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -1506,6 +1509,10 @@
 				{
 					ProductGroup = 644844121CEF6C7C004FD57D /* Products */;
 					ProjectRef = 6F0D5A3203A64CCBB09EE7F6 /* PasscodeAuth.xcodeproj */;
+				},
+				{
+					ProductGroup = C8D312D22269198A003E3199 /* Products */;
+					ProjectRef = C8D312D12269198A003E3199 /* Pods.xcodeproj */;
 				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
@@ -1602,6 +1609,10 @@
 				{
 					ProductGroup = 708720D81F948CFF00652388 /* Products */;
 					ProjectRef = F973AADA9982437081A5BF65 /* RNSVG.xcodeproj */;
+				},
+				{
+					ProductGroup = C8D855DF225FC8420086560A /* Products */;
+					ProjectRef = C8D855DE225FC8420086560A /* RNUportSigner.xcodeproj */;
 				},
 				{
 					ProductGroup = 644F4B2E1DDC9DB2000BAC54 /* Products */;
@@ -1915,6 +1926,48 @@
 			remoteRef = 962C3BFB21F09A1A004CE5A6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		C8D312DD2269198A003E3199 /* libCoreEthereum.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCoreEthereum.a;
+			remoteRef = C8D312DC2269198A003E3199 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C8D312DF2269198A003E3199 /* libISO8601DateFormatter.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libISO8601DateFormatter.a;
+			remoteRef = C8D312DE2269198A003E3199 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C8D312E12269198A003E3199 /* libPods-RNUportSigner.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-RNUportSigner.a";
+			remoteRef = C8D312E02269198A003E3199 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C8D312E32269198A003E3199 /* libUPTEthereumSigner.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libUPTEthereumSigner.a;
+			remoteRef = C8D312E22269198A003E3199 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C8D312E52269198A003E3199 /* libValet.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libValet.a;
+			remoteRef = C8D312E42269198A003E3199 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C8D855E4225FC8430086560A /* libRNUportSigner.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNUportSigner.a;
+			remoteRef = C8D855E3225FC8430086560A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		D142E55B1F25D77900A43483 /* libReactNativeNavigation.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -2206,17 +2259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03459E791F97F5AA004DDC10 /* UPTEthSigner.m in Sources */,
-				641CA98D21A0AE09008FB9ED /* EthereumSigner.m in Sources */,
 				03459E6B1F97F372004DDC10 /* AppDelegate.m in Sources */,
-				03459E731F97F397004DDC10 /* UPTEthSignerReactNativeBridge.m in Sources */,
-				032BD33E200975780062A379 /* UPTHDSignerReactNativeBridge.m in Sources */,
-				03F16B492000173B008D1038 /* UPTHDSigner.m in Sources */,
-				03459E7F1F97F8B0004DDC10 /* UPTEthSigner+Utils.m in Sources */,
 				03E8E86A1FD094A600920AA2 /* RNSNS.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-				032BD33B2006CC1F0062A379 /* UPTHDSigner+Utils.m in Sources */,
-				038F14DC1F9547C500DF45E1 /* keccak.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2341,7 +2386,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				COPY_HEADERS_RUN_UNIFDEF = NO;
-				CURRENT_PROJECT_VERSION = 444;
+				CURRENT_PROJECT_VERSION = 445;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 82SAVLYZ3K;
 				ENABLE_BITCODE = NO;
@@ -2410,7 +2455,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				COPY_HEADERS_RUN_UNIFDEF = NO;
-				CURRENT_PROJECT_VERSION = 444;
+				CURRENT_PROJECT_VERSION = 445;
 				DEVELOPMENT_TEAM = 82SAVLYZ3K;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (

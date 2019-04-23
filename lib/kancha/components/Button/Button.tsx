@@ -125,7 +125,7 @@ const Button: React.FC<ButtonProps> & {
   }
 
   return navButton ? (
-    <TouchableOpacity style={style} onPress={onPress} disabled={disabled} testID={testID}>
+    <TouchableOpacity style={style} onPress={onPress} disabled={disabled} testID={testID} accessibilityLabel={testID}>
       <Text
         textDecorationLine={textDecorationLine}
         type={Text.Types.NavButton}
@@ -138,6 +138,7 @@ const Button: React.FC<ButtonProps> & {
   ) : (
     <TouchableHighlight
       testID={testID}
+      accessibilityLabel={testID}
       disabled={disabled}
       onPress={onPress}
       style={style}
