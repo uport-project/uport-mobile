@@ -24,7 +24,7 @@ interface ScannerScreenState {
   hasPermission: null | string
 }
 
-class ScannerScreen extends React.Component<ScannerScreenProps, ScannerScreenState> {
+export class ScannerScreen extends React.Component<ScannerScreenProps, ScannerScreenState> {
   timeout: any
 
   constructor(props: ScannerScreenProps) {
