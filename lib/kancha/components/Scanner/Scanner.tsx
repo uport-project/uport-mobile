@@ -25,7 +25,7 @@ interface ScannerProps {
   /**
    * Camera has permission
    */
-  hasPermission: boolean
+  hasPermission: boolean | null
 }
 
 const NoPermission = () => {
