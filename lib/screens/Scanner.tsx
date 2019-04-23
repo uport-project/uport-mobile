@@ -50,10 +50,14 @@ export class ScannerScreen extends React.Component<ScannerScreenProps, ScannerSc
 
     const hasPermission = await Permissions.check('camera')
 
+    console.tron.log(hasPermission)
+
     if (hasPermission !== 'authorized') {
       const request = await Permissions.request('camera')
       this.setState({ hasPermission: request })
     }
+
+    this.setState({ hasPermission })
   }
 
   componentWillUnmount() {
@@ -124,6 +128,7 @@ export class ScannerScreen extends React.Component<ScannerScreenProps, ScannerSc
   }
 
   render() {
+    console.tron.log(this.state)
     return (
       <Screen config={Screen.Config.NoScroll} type={Screen.Types.Primary}>
         <Container flex={1}>
