@@ -1,5 +1,12 @@
 # Change Log
 
+## [v446](https://github.com/uport-project/uport-mobile/tree/v446) (2019-04-23)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v445...v446)
+
+**Merged pull requests:**
+
+- Change scanner permission logic [\#130](https://github.com/uport-project/uport-mobile/pull/130) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v445](https://github.com/uport-project/uport-mobile/tree/v445) (2019-04-23)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v444...v445)
 
