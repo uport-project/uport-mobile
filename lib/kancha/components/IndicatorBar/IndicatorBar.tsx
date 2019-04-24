@@ -17,13 +17,13 @@ const IndicatorBar: React.FC<IndicatorBarProps> = ({ text }) => {
     borderBottomWidth: 15,
     borderLeftColor: 'transparent',
     borderRightColor: 'transparent',
-    borderBottomColor: '#333333',
+    borderBottomColor: '#222222',
     transform: [{ rotate: '180deg' }],
   }
 
   return (
-    <Container backgroundColor={'#FFFFFF'}>
-      <Container backgroundColor={'#333333'} padding>
+    <Container>
+      <Container backgroundColor={'#222222'} padding>
         <Text textColor={'#FFFFFF'} type={Text.Types.SectionHeader} textAlign={'center'}>
           {text}
         </Text>

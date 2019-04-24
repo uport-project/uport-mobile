@@ -30,3 +30,4 @@ export { default as ScannerControl } from './components/ScannerControl/ScannerCo
 export { default as Request } from './components/Request/Request'
 export { default as Banner } from './components/Banner/Banner'
 export { default as RequestContent } from './components/RequestContent/RequestContent'
+export { default as IndicatorBar } from './components/IndicatorBar/IndicatorBar'

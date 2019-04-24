@@ -16,7 +16,7 @@
 // along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
 //
 import React from 'react'
-import PropTypes from 'prop-types'
+import PropTypes, { string } from 'prop-types'
 import { StyleSheet, View, Image, TouchableOpacity, Linking } from 'react-native'
 import { connect } from 'react-redux'
 import InteractionStats from '../partials/InteractionStats'
@@ -44,100 +44,7 @@ import { formatWeiAsEth } from 'uPortMobile/lib/helpers/conversions'
 // Actions
 import { authorizeRequest, cancelRequest, clearRequest, authorizeAccount } from 'uPortMobile/lib/actions/requestActions'
 
-// Styles
-// import { textStyles, colors } from 'uPortMobile/lib/styles/globalStyles'
-// import { metrics, defaultTheme } from 'uPortMobile/lib/styles/index'
-
-import { Container, Text, Banner, Icon, Button, Screen } from '@kancha'
-
-// const styles = StyleSheet.create({
-//   titleContainer: {
-//     flexDirection: 'row',
-//     justifyContent: 'space-between',
-//     borderWidth: 1,
-//     marginBottom: 40,
-//     marginTop: 22
-//   },
-//   errorMessage: {
-//     borderColor: '#C94444',
-//     padding: 10,
-//     margin: 15,
-//     marginBottom: 0,
-//     backgroundColor: '#E86B6B',
-//     fontSize: 14,
-//     color: colors.white,
-//     textAlign: 'center'
-//   },
-//   accountAvatar: {
-//     marginRight: metrics.spacing.horizontal.medium
-//   },
-//   accountTile: {
-//     marginLeft: metrics.spacing.horizontal.medium,
-//     marginRight: metrics.spacing.horizontal.medium,
-//     paddingLeft: metrics.spacing.horizontal.medium,
-//     paddingRight: metrics.spacing.horizontal.medium,
-//     paddingTop: metrics.spacing.vertical.medium,
-//     paddingBottom: metrics.spacing.vertical.medium,
-//     backgroundColor: defaultTheme.colors.background,
-//     flexDirection: 'row',
-//     alignItems: 'center',
-//     shadowColor: 'rgb(0,0,0)',
-//     shadowOffset: {width: 0, height: 4},
-//     shadowOpacity: 0.3,
-//     borderRadius: 10,
-//     borderWidth: 0.5,
-//     borderColor: 'rgba(92,80,202,1)'
-//   },
-//   credentialsListContainer: {
-//     flex: 0,
-//     borderWidth: 0.1,
-//     borderRadius: 8,
-//     shadowRadius: 8,
-//     shadowColor: 'rgb(0,0,0)',
-//     shadowOffset: {width: 1, height: 2},
-//     shadowOpacity: 0.3,
-//     marginLeft: 16,
-//     marginRight: 16,
-//     marginBottom: 30,
-//     marginTop: 30
-//   },
-//   smallText: {
-//     marginLeft: metrics.spacing.horizontal.medium,
-//     textAlign: 'left',
-//     fontWeight: 'bold',
-//     color: colors.grey4,
-//     fontSize: 12,
-//     paddingBottom: 12,
-//     flex: 0
-//   },
-//   smallTouchableOpacity: {
-//     flexDirection: 'row',
-//     justifyContent: 'space-between',
-//     paddingLeft: 27,
-//     paddingRight: 27,
-//     paddingTop: 19,
-//     paddingBottom: 19
-//   },
-//   cardTitle: {
-//     flex: 1,
-//     fontFamily: 'Montserrat',
-//     fontWeight: 'bold',
-//     fontSize: 24,
-//     color: '#3F3D4B'
-//   },
-//   disclosureBar: {
-//     flexDirection: 'row',
-//     alignItems: 'center',
-//     justifyContent: 'flex-start',
-//     paddingTop: 22,
-//     paddingLeft: 16,
-//     paddingRight: 22,
-//   },
-//   url: {
-//     flexDirection: 'row',
-//     justifyContent: 'center',
-//   },
-// })
+import { Container, Text, Banner, Icon, Button, Screen, Section, ListItem, IndicatorBar } from '@kancha'
 
 const parseErrorMessage = (message: string) => {
   return message.startsWith('JWT has expired') ? 'This credential has expired.' : message
@@ -187,37 +94,164 @@ interface DisclosureCardProps {
   accountProfileLookup: (clientId: string) => void
 }
 
+interface RequestActionButton {
+  disabled: boolean
+  text: string
+  action: (requestId: string, type?: string) => any
+}
+
+interface DisclosureRequestModelType {
+  title: string
+  description: string
+  actionType: string
+  actionButton: RequestActionButton
+  cancelButton: RequestActionButton
+  showEthereumAccounts: boolean
+}
+/**
+ * function to return a configuration object. The component just renders the out put and doesnmt have to parse expensive JSX logic
+ */
+const DisclosureRequestModel = (props: any): DisclosureRequestModelType => {
+  /**
+   * Create New Account
+   */
+  if (props.actType !== 'none' && !props.account && props.accountAuthorized === false) {
+    return {
+      title: 'Create Account',
+      description: `You need to create an ethereum keypair to interact with ${props.client.name}`,
+      actionType: 'new',
+      actionButton: {
+        text: 'Create New Account',
+        action: props.authorizeAccount,
+        disabled: props.pushWorking || !!props.error,
+      },
+      cancelButton: {
+        text: 'Cancel',
+        action: cancelRequest,
+        disabled: false,
+      },
+      showEthereumAccounts: false,
+    }
+  }
+  /**
+   * Login with existing Account
+   */
+  if (props.actType !== 'none' && props.account && props.interactionStats && props.accountAuthorized === false) {
+    return {
+      title: 'Login with account',
+      description: ``,
+      actionType: 'existing',
+      actionButton: {
+        text: 'Login',
+        action: props.authorizeAccount,
+        disabled: false,
+      },
+      cancelButton: {
+        text: 'Cancel',
+        action: cancelRequest,
+        disabled: false,
+      },
+      showEthereumAccounts: false,
+    }
+  }
+
+  /**
+   * Share to Login
+   */
+  if (props.actType === 'none' || props.accountAuthorized === true) {
+    return {
+      title: 'Share to login',
+      description: ``,
+      actionType: 'none',
+      actionButton: {
+        text: 'Login',
+        action: props.authorizeRequest,
+        disabled: props.missingRequired,
+      },
+      cancelButton: {
+        text: 'Cancel',
+        action: props.cancelRequest,
+        disabled: false,
+      },
+      showEthereumAccounts: false,
+    }
+  }
+
+  return {
+    title: 'Default Title',
+    description: 'Some description',
+    actionType: 'none',
+    actionButton: {
+      text: 'Default Button',
+      action: () => {
+        ''
+      },
+      disabled: false,
+    },
+    cancelButton: {
+      text: 'Cancel',
+      action: () => {
+        ''
+      },
+      disabled: false,
+    },
+    showEthereumAccounts: false,
+  }
+}
+
+const InteractionStatsMessage = (intStats: any, client: string) => {
+  return countStats(intStats) === 0
+    ? `You have never interacted with ${client}`
+    : `You have interacted with ${client} ${countStats(intStats)} times`
+}
+
+const DisclosureRequestItemModel = (props: any) => {
+  if (!!props.actType && (props.actType === 'none' || props.accountAuthorized === true)) {
+    const requested =
+      props.requested &&
+      Object.keys(props.requested).map((claim, index) => {
+        return {
+          key: index + claim,
+          type: claim.toUpperCase(),
+          value: typeof props.requested[claim] !== 'object' ? props.requested[claim] : null,
+        }
+      })
+    return requested
+  }
+
+  return []
+}
+
 export const DisclosureCard: React.FC<DisclosureCardProps> = props => {
   // const showUrl = props.client && props.client.url !== undefined
+
+  const DisclosureConfig = DisclosureRequestModel(props)
+  const statsMessage = InteractionStatsMessage(props.interactionStats, props.client && props.client.name)
+  const requestItems = DisclosureRequestItemModel(props)
 
   return (
     <Screen
       footerNavComponent={
         <Container>
-          {/* <InteractionStats stats={props.interactionStats} actionText='interacted' counterParty={props.client} /> */}
           <Text textAlign={'center'} type={Text.Types.SectionHeader}>
-            {`You have interacted with ${props.client && props.client.name} ${countStats(
-              props.interactionStats,
-            )} times`}
+            {statsMessage}
           </Text>
           <Container flexDirection={'row'} padding>
             <Container flex={1} paddingRight>
-              {' '}
               <Button
                 depth={1}
-                buttonText={'Decline'}
+                buttonText={DisclosureConfig.cancelButton.text}
                 block={Button.Block.Clear}
                 type={Button.Types.Warning}
-                onPress={() => props.cancelRequest(props.requestId)}
+                onPress={() => DisclosureConfig.cancelButton.action(props.requestId)}
               />
             </Container>
             <Container flex={2}>
-              {' '}
               <Button
-                buttonText={'Accept'}
+                buttonText={DisclosureConfig.actionButton.text}
                 block={Button.Block.Filled}
                 type={Button.Types.Primary}
-                onPress={() => props.authorizeRequest(props.requestId)}
+                onPress={() => DisclosureConfig.actionButton.action(props.requestId, DisclosureConfig.actionType)}
               />
             </Container>
           </Container>
@@ -233,7 +267,7 @@ export const DisclosureCard: React.FC<DisclosureCardProps> = props => {
             iconButton
             noPadding
             icon={<Icon name={Icon.Names.close} font={'evil'} color={'#FFFFFF'} size={30} />}
-            onPress={() => props.cancelRequest(props.requestId)}
+            onPress={() => DisclosureConfig.cancelButton.action(props.requestId)}
           />
         </Container>
         <Banner
@@ -243,6 +277,21 @@ export const DisclosureCard: React.FC<DisclosureCardProps> = props => {
           requestor={props.client && props.client.name}
         />
       </Container>
+      <IndicatorBar text={DisclosureConfig.title} />
+      <Container padding>
+        <Text type={Text.Types.Body}>{DisclosureConfig.description}</Text>
+      </Container>
+      {requestItems.length > 0 && (
+        <Section>
+          {requestItems.map(item => {
+            return (
+              <ListItem key={item.key} title={item.type}>
+                {item.value}
+              </ListItem>
+            )
+          })}
+        </Section>
+      )}
     </Screen>
   )
 
@@ -443,11 +492,11 @@ const mapStateToProps = (state: any) => {
 
   const request = currentRequest(state) || {}
   const account = request.account
-  const accountProfile = request.client_id ? Mori.toJs(externalProfile(state, request.client_id)) : null
+  const accountProfile = request.client_id ? externalProfile(state, request.client_id) : null
   const network = NETWORKS[request.network] || { network_id: request.network, name: request.network }
   const networkName = network.name
   const client = clientProfile(state)
-  const currentIdentity = Mori.toJs(publicUport(state))
+  const currentIdentity = publicUport(state)
   const requested = requestedOwnClaims(state)
   const verified = request && request.verified ? requestedVerifiableClaims(state) : []
   const missing = request && request.verified ? missingClaims(state) : []
