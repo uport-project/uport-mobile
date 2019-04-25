@@ -16,17 +16,8 @@
 // along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
 //
 import React from 'react'
-import PropTypes, { string } from 'prop-types'
-import { StyleSheet, View, Image, TouchableOpacity, Linking } from 'react-native'
 import { connect } from 'react-redux'
-import InteractionStats from '../partials/InteractionStats'
-import RequestItem, { RequestItemList } from '../partials/RequestItem'
-import { PrimaryButton } from 'uPortMobile/lib/components/shared/Button'
-import Status from 'uPortMobile/lib/components/shared/Status'
-import { debounce } from 'lodash'
-import Avatar from 'uPortMobile/lib/components/shared/Avatar'
-import EvilIcon from 'react-native-vector-icons/EvilIcons'
-import AccountTileSmall from 'uPortMobile/lib/components/shared/AccountTileSmall'
+
 // Selectors
 import { clientProfile, currentRequest, externalProfile } from 'uPortMobile/lib/selectors/requests'
 import { publicUport, currentAddress, interactionStats, subAccounts } from 'uPortMobile/lib/selectors/identities'
@@ -34,7 +25,6 @@ import { requestedOwnClaims, requestedVerifiableClaims, missingClaims } from 'uP
 import { working, errorMessage } from 'uPortMobile/lib/selectors/processStatus'
 import { endpointArn } from 'uPortMobile/lib/selectors/snsRegistrationStatus'
 import { networkSettingsForAddress } from 'uPortMobile/lib/selectors/chains'
-import { profileForDID } from 'uPortMobile/lib/selectors/vc'
 
 import Mori from 'mori'
 import verifiedByUport from 'uPortMobile/lib/utilities/verifiedByUport'
@@ -45,21 +35,7 @@ import { formatWeiAsEth } from 'uPortMobile/lib/helpers/conversions'
 import { authorizeRequest, cancelRequest, clearRequest, authorizeAccount } from 'uPortMobile/lib/actions/requestActions'
 
 import { Container, Text, Banner, Icon, Button, Screen, Section, ListItem, IndicatorBar } from '@kancha'
-
-const parseErrorMessage = (message: string) => {
-  return message.startsWith('JWT has expired') ? 'This credential has expired.' : message
-}
-
-/**
- * Move to utils
- */
-const countStats = (stats: { [key: string]: number }) => {
-  let total = 0
-  typeof stats === 'object'
-    ? Object.keys(stats).forEach(value => (value !== 'request' ? (total += stats[value]) : null))
-    : null
-  return total
-}
+import DisclosureRequestModel from './DisclosureRequestModel'
 
 interface DisclosureCardProps {
   currentIdentity: string
@@ -94,203 +70,79 @@ interface DisclosureCardProps {
   accountProfileLookup: (clientId: string) => void
 }
 
-interface RequestActionButton {
-  disabled: boolean
-  text: string
-  action: (requestId: string, type?: string) => any
-}
-
-interface DisclosureRequestModelType {
-  title: string
-  description: string
-  actionType: string
-  actionButton: RequestActionButton
-  cancelButton: RequestActionButton
-  showEthereumAccounts: boolean
-}
 /**
- * function to return a configuration object. The component just renders the out put and doesnmt have to parse expensive JSX logic
+ * Dumb request component. Please DO NOT litter with conditional logic.
+ * All business logic should live in the RequestModel
  */
-const DisclosureRequestModel = (props: any): DisclosureRequestModelType => {
-  /**
-   * Create New Account
-   */
-  if (props.actType !== 'none' && !props.account && props.accountAuthorized === false) {
-    return {
-      title: 'Create Account',
-      description: `You need to create an ethereum keypair to interact with ${props.client.name}`,
-      actionType: 'new',
-      actionButton: {
-        text: 'Create New Account',
-        action: props.authorizeAccount,
-        disabled: props.pushWorking || !!props.error,
-      },
-      cancelButton: {
-        text: 'Cancel',
-        action: cancelRequest,
-        disabled: false,
-      },
-      showEthereumAccounts: false,
-    }
-  }
-  /**
-   * Login with existing Account
-   */
-  if (props.actType !== 'none' && props.account && props.interactionStats && props.accountAuthorized === false) {
-    return {
-      title: 'Login with account',
-      description: ``,
-      actionType: 'existing',
-      actionButton: {
-        text: 'Login',
-        action: props.authorizeAccount,
-        disabled: false,
-      },
-      cancelButton: {
-        text: 'Cancel',
-        action: cancelRequest,
-        disabled: false,
-      },
-      showEthereumAccounts: false,
-    }
-  }
-
-  /**
-   * Share to Login
-   */
-  if (props.actType === 'none' || props.accountAuthorized === true) {
-    return {
-      title: 'Share to login',
-      description: ``,
-      actionType: 'none',
-      actionButton: {
-        text: 'Login',
-        action: props.authorizeRequest,
-        disabled: props.missingRequired,
-      },
-      cancelButton: {
-        text: 'Cancel',
-        action: props.cancelRequest,
-        disabled: false,
-      },
-      showEthereumAccounts: false,
-    }
-  }
-
-  return {
-    title: 'Default Title',
-    description: 'Some description',
-    actionType: 'none',
-    actionButton: {
-      text: 'Default Button',
-      action: () => {
-        ''
-      },
-      disabled: false,
-    },
-    cancelButton: {
-      text: 'Cancel',
-      action: () => {
-        ''
-      },
-      disabled: false,
-    },
-    showEthereumAccounts: false,
-  }
-}
-
-const InteractionStatsMessage = (intStats: any, client: string) => {
-  return countStats(intStats) === 0
-    ? `You have never interacted with ${client}`
-    : `You have interacted with ${client} ${countStats(intStats)} times`
-}
-
-const DisclosureRequestItemModel = (props: any) => {
-  if (!!props.actType && (props.actType === 'none' || props.accountAuthorized === true)) {
-    const requested =
-      props.requested &&
-      Object.keys(props.requested).map((claim, index) => {
-        return {
-          key: index + claim,
-          type: claim.toUpperCase(),
-          value: typeof props.requested[claim] !== 'object' ? props.requested[claim] : null,
-        }
-      })
-    return requested
-  }
-
-  return []
-}
-
 export const DisclosureCard: React.FC<DisclosureCardProps> = props => {
-  // const showUrl = props.client && props.client.url !== undefined
-
-  const DisclosureConfig = DisclosureRequestModel(props)
-  const statsMessage = InteractionStatsMessage(props.interactionStats, props.client && props.client.name)
-  const requestItems = DisclosureRequestItemModel(props)
-
+  const requestModel = DisclosureRequestModel(props)
   return (
     <Screen
       footerNavComponent={
-        <Container>
-          <Text textAlign={'center'} type={Text.Types.SectionHeader}>
-            {statsMessage}
-          </Text>
-          <Container flexDirection={'row'} padding>
-            <Container flex={1} paddingRight>
-              <Button
-                depth={1}
-                buttonText={DisclosureConfig.cancelButton.text}
-                block={Button.Block.Clear}
-                type={Button.Types.Warning}
-                onPress={() => DisclosureConfig.cancelButton.action(props.requestId)}
-              />
-            </Container>
-            <Container flex={2}>
-              <Button
-                buttonText={DisclosureConfig.actionButton.text}
-                block={Button.Block.Filled}
-                type={Button.Types.Primary}
-                onPress={() => DisclosureConfig.actionButton.action(props.requestId, DisclosureConfig.actionType)}
-              />
+        requestModel && (
+          <Container>
+            <Text textAlign={'center'} type={Text.Types.SectionHeader}>
+              {requestModel.statsMessage}
+            </Text>
+            <Container flexDirection={'row'} padding>
+              <Container flex={1} paddingRight>
+                <Button
+                  depth={1}
+                  buttonText={requestModel.cancelButton.text}
+                  block={Button.Block.Clear}
+                  type={Button.Types.Warning}
+                  onPress={() => requestModel.cancelButton.action(props.requestId)}
+                />
+              </Container>
+              <Container flex={2}>
+                <Button
+                  buttonText={requestModel.actionButton.text}
+                  block={Button.Block.Filled}
+                  type={Button.Types.Primary}
+                  onPress={() => requestModel.actionButton.action(props.requestId, requestModel.actionType)}
+                />
+              </Container>
             </Container>
           </Container>
-        </Container>
+        )
       }
       config={Screen.Config.Scroll}
       type={Screen.Types.Secondary}
       statusBarHidden
     >
-      <Container>
-        <Container viewStyle={{ position: 'absolute', zIndex: 10, top: 20, right: 20 }}>
-          <Button
-            iconButton
-            noPadding
-            icon={<Icon name={Icon.Names.close} font={'evil'} color={'#FFFFFF'} size={30} />}
-            onPress={() => DisclosureConfig.cancelButton.action(props.requestId)}
+      {requestModel && (
+        <Container>
+          <Container viewStyle={{ position: 'absolute', zIndex: 10, top: 20, right: 20 }}>
+            <Button
+              iconButton
+              noPadding
+              icon={<Icon name={Icon.Names.close} font={'evil'} color={'#FFFFFF'} size={30} />}
+              onPress={() => requestModel.cancelButton.action(props.requestId)}
+            />
+          </Container>
+          <Banner
+            httpsResolveStatus={'OKAY'}
+            backgroundImage={props.client && props.client.bannerImage}
+            avatar={props.client && props.client.avatar}
+            requestor={props.client && props.client.name}
           />
+
+          <IndicatorBar text={requestModel.title} />
+          <Container padding>
+            <Text type={Text.Types.Body}>{requestModel.description}</Text>
+          </Container>
+          {requestModel.requestItems.length > 0 && (
+            <Section>
+              {requestModel.requestItems.map((item: any) => {
+                return (
+                  <ListItem key={item.key} title={item.type}>
+                    {item.value}
+                  </ListItem>
+                )
+              })}
+            </Section>
+          )}
         </Container>
-        <Banner
-          httpsResolveStatus={'OKAY'}
-          backgroundImage={props.client && props.client.bannerImage}
-          avatar={props.client && props.client.avatar}
-          requestor={props.client && props.client.name}
-        />
-      </Container>
-      <IndicatorBar text={DisclosureConfig.title} />
-      <Container padding>
-        <Text type={Text.Types.Body}>{DisclosureConfig.description}</Text>
-      </Container>
-      {requestItems.length > 0 && (
-        <Section>
-          {requestItems.map(item => {
-            return (
-              <ListItem key={item.key} title={item.type}>
-                {item.value}
-              </ListItem>
-            )
-          })}
-        </Section>
       )}
     </Screen>
   )
@@ -490,22 +342,31 @@ const mapStateToProps = (state: any) => {
   const NETWORKS: { [index: string]: any } = networks
   const VERIFIED_BY_UPORT: { [index: string]: any } = verifiedByUport
 
+  /**
+   * Cast selectors to accept additional argument
+   */
+  const requestedProfileClaimsTyped: (state: any, requested: any) => any = requestedOwnClaims
+  const requestedVerifiableClaimsTyped: (state: any, request: any) => any = requestedVerifiableClaims
+  const missingClaimsTypes: (state: any, verified: boolean) => any = missingClaims
+  const networkSettingsForAddressTyped: (state: any, account: any) => any = networkSettingsForAddress
+
   const request = currentRequest(state) || {}
   const account = request.account
-  const accountProfile = request.client_id ? externalProfile(state, request.client_id) : null
+  const accountProfile = request.client_id ? Mori.toJs(externalProfile(state, request.client_id)) : null // Mori
   const network = NETWORKS[request.network] || { network_id: request.network, name: request.network }
   const networkName = network.name
   const client = clientProfile(state)
-  const currentIdentity = publicUport(state)
-  const requested = requestedOwnClaims(state)
-  const verified = request && request.verified ? requestedVerifiableClaims(state) : []
-  const missing = request && request.verified ? missingClaims(state) : []
+  const currentIdentity = Mori.toJs(publicUport(state)) // Mori
+  const requested = requestedProfileClaimsTyped(state, request && request.requested)
+  const verified =
+    request && request.verified ? requestedVerifiableClaimsTyped(state, request && request.requested) : []
+  const missing = request && request.verified ? missingClaimsTypes(state, request.verified) : []
   const missingRequired = !!missing.find((spec: any) => spec.essential)
   const uportVerified = request && request.client_id ? VERIFIED_BY_UPORT[request.client_id] : false
   const pushWorking = working(state)
   const pushError = errorMessage(state)
   const createSubAccount = working(state)
-  const networkSettings = networkSettingsForAddress(state) || {}
+  const networkSettings = networkSettingsForAddressTyped(state, account) || {}
   const ethBalance =
     networkSettings.balance && networkSettings.balance.ethBalance
       ? formatWeiAsEth(networkSettings.balance.ethBalance)
