@@ -99,7 +99,9 @@ export const DisclosureCard: React.FC<DisclosureCardProps> = props => {
                   buttonText={requestModel.actionButton.text}
                   block={Button.Block.Filled}
                   type={Button.Types.Primary}
-                  onPress={() => requestModel.actionButton.action(props.requestId, requestModel.actionType)}
+                  onPress={() =>
+                    requestModel.actionButton.action(props.requestId, requestModel.actionButton.actionType)
+                  }
                 />
               </Container>
             </Container>
@@ -128,11 +130,13 @@ export const DisclosureCard: React.FC<DisclosureCardProps> = props => {
           />
 
           <IndicatorBar text={requestModel.title} />
-          <Container padding>
-            <Text type={Text.Types.Body}>{requestModel.description}</Text>
-          </Container>
+          {requestModel.description && (
+            <Container padding>
+              <Text type={Text.Types.Body}>{requestModel.description}</Text>
+            </Container>
+          )}
           {requestModel.requestItems.length > 0 && (
-            <Section>
+            <Section noTopBorder noTopMargin>
               {requestModel.requestItems.map((item: any) => {
                 return (
                   <ListItem key={item.key} title={item.type}>

@@ -116,6 +116,7 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
         type={Screen.Types.Primary}
         config={Screen.Config.SafeScroll}
         statusBarHidden
+        footerNavDivider
         footerNavComponent={
           <Container alignItems={'center'}>
             <Container w={300}>

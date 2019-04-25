@@ -83,6 +83,11 @@ interface ScreenProps {
   footerNavComponent?: React.ReactNode
 
   /**
+   * A footer component that works with KAV
+   */
+  footerNavDivider?: boolean
+
+  /**
    * Use a keyboard avoiding view for text inputs
    */
   keyboardAvoiding?: boolean
@@ -131,7 +136,7 @@ const Screen: React.FunctionComponent<ScreenProps> & {
 
       {props.footerNavComponent && (
         <SafeAreaView>
-          <Container paddingTop dividerTop>
+          <Container paddingTop dividerTop={props.footerNavDivider}>
             {props.footerNavComponent}
           </Container>
         </SafeAreaView>
@@ -146,7 +151,7 @@ const Screen: React.FunctionComponent<ScreenProps> & {
       <Container flex={1}>{props.config === ScreenConfigs.SafeNoScroll ? mainContent : scrollViewContent}</Container>
 
       {props.footerNavComponent && props.config === ScreenConfigs.SafeNoScroll && (
-        <Container paddingBottom paddingTop dividerTop>
+        <Container paddingBottom paddingTop dividerTop={props.footerNavDivider}>
           {props.footerNavComponent}
         </Container>
       )}

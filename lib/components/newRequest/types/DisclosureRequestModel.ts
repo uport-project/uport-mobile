@@ -4,7 +4,6 @@
 interface DisclosureRequestModelType {
   title: string
   description: string
-  actionType: string
   actionButton: RequestActionButton
   cancelButton: RequestActionButton
   showEthereumAccounts: boolean
@@ -17,6 +16,7 @@ interface RequestActionButton {
   disabled: boolean
   text: string
   action: (requestId: string, type?: string) => any
+  actionType?: string
 }
 
 const parseErrorMessage = (message: string) => {
@@ -57,7 +57,36 @@ const disclosureRequestItemModel = (props: any) => {
           value: typeof props.requested[claim] !== 'object' ? props.requested[claim] : null,
         }
       })
-    return requested
+
+    const pushStatus = props.pushPermissions && [
+      {
+        key: 'pushStatus',
+        type: 'Push Notifications',
+        value: props.snsRegistered ? 'Allow' : props.pushWorking ? 'Registering' : props.pushError || 'Not available',
+      },
+    ]
+
+    const network = props.network && [
+      {
+        key: 'requestednetwork',
+        type: 'Network',
+        value: props.networkName,
+      },
+    ]
+
+    const account = props.network && [
+      {
+        key: 'accountaddress',
+        type: 'Address',
+        value:
+          props.account ||
+          `New account will be created for ${
+            props.actType === 'segregated' ? props.client.name || props.client.address.slice(0, 10) : props.networkName
+          }`,
+      },
+    ]
+
+    return [...requested, ...pushStatus, ...network, ...account]
   }
 
   return []
@@ -82,12 +111,13 @@ const DisclosureRequestModel = (props: any): DisclosureRequestModelType | null =
 
   /**
    * Create New Account
+   *
+   * props.actType !== 'none' && props.account && props.interactionStats && props.accountAuthorized === false
    */
   if (props.actType !== 'none' && !props.account && props.accountAuthorized === false) {
     return {
       title: 'Create Account',
       description: `You need to create an ethereum keypair to interact with ${props.client.name}`,
-      actionType: 'new',
       actionButton: {
         text: 'Create New Account',
         action: props.authorizeAccount,
@@ -109,11 +139,11 @@ const DisclosureRequestModel = (props: any): DisclosureRequestModelType | null =
     return {
       title: 'Login with account',
       description: ``,
-      actionType: 'existing',
       actionButton: {
         text: 'Login',
         action: props.authorizeAccount,
         disabled: false,
+        actionType: 'existing',
       },
       cancelButton: {
         text: 'Cancel',
@@ -132,11 +162,11 @@ const DisclosureRequestModel = (props: any): DisclosureRequestModelType | null =
     return {
       title: 'Share to login',
       description: ``,
-      actionType: 'none',
       actionButton: {
         text: 'Login',
         action: props.authorizeRequest,
         disabled: props.missingRequired,
+        actionType: 'none',
       },
       cancelButton: {
         text: 'Cancel',
