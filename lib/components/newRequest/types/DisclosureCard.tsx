@@ -137,9 +137,9 @@ export const DisclosureCard: React.FC<DisclosureCardProps> = props => {
           )}
           {requestModel.requestItems.length > 0 && (
             <Section noTopBorder noTopMargin>
-              {requestModel.requestItems.map((item: any) => {
+              {requestModel.requestItems.map((item: any, index: number) => {
                 return (
-                  <ListItem key={item.key} title={item.type}>
+                  <ListItem key={item.key} title={item.type} last={requestModel.requestItems.length - 1 === index}>
                     {item.value}
                   </ListItem>
                 )
@@ -353,6 +353,8 @@ const mapStateToProps = (state: any) => {
   const requestedVerifiableClaimsTyped: (state: any, request: any) => any = requestedVerifiableClaims
   const missingClaimsTypes: (state: any, verified: boolean) => any = missingClaims
   const networkSettingsForAddressTyped: (state: any, account: any) => any = networkSettingsForAddress
+  const workingTyped: (state: any, action: string) => any = working
+  const pushErrorTyped: (state: any, action: string) => any = errorMessage
 
   const request = currentRequest(state) || {}
   const account = request.account
@@ -367,9 +369,9 @@ const mapStateToProps = (state: any) => {
   const missing = request && request.verified ? missingClaimsTypes(state, request.verified) : []
   const missingRequired = !!missing.find((spec: any) => spec.essential)
   const uportVerified = request && request.client_id ? VERIFIED_BY_UPORT[request.client_id] : false
-  const pushWorking = working(state)
-  const pushError = errorMessage(state)
-  const createSubAccount = working(state)
+  const pushWorking = workingTyped(state, 'push')
+  const pushError = pushErrorTyped(state, 'push')
+  const createSubAccount = workingTyped(state, 'createSubAccount')
   const networkSettings = networkSettingsForAddressTyped(state, account) || {}
   const ethBalance =
     networkSettings.balance && networkSettings.balance.ethBalance

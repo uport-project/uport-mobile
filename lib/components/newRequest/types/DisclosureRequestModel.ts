@@ -1,3 +1,5 @@
+import { capitalizeFirstLetter } from 'uPortMobile/lib/utilities/string'
+
 /**
  * Types for the disclourse request
  */
@@ -53,7 +55,7 @@ const disclosureRequestItemModel = (props: any) => {
       Object.keys(props.requested).map((claim, index) => {
         return {
           key: index + claim,
-          type: claim.toUpperCase(),
+          type: capitalizeFirstLetter(claim),
           value: typeof props.requested[claim] !== 'object' ? props.requested[claim] : null,
         }
       })
@@ -62,7 +64,11 @@ const disclosureRequestItemModel = (props: any) => {
       {
         key: 'pushStatus',
         type: 'Push Notifications',
-        value: props.snsRegistered ? 'Allow' : props.pushWorking ? 'Registering' : props.pushError || 'Not available',
+        value: props.snsRegistered
+          ? 'Allow'
+          : props.pushWorking
+          ? 'Registering'
+          : capitalizeFirstLetter(props.pushError) || 'Not available',
       },
     ]
 
@@ -70,19 +76,15 @@ const disclosureRequestItemModel = (props: any) => {
       {
         key: 'requestednetwork',
         type: 'Network',
-        value: props.networkName,
+        value: capitalizeFirstLetter(props.networkName),
       },
     ]
 
-    const account = props.network && [
+    const account = props.account && [
       {
         key: 'accountaddress',
         type: 'Address',
-        value:
-          props.account ||
-          `New account will be created for ${
-            props.actType === 'segregated' ? props.client.name || props.client.address.slice(0, 10) : props.networkName
-          }`,
+        value: props.account,
       },
     ]
 
@@ -90,6 +92,15 @@ const disclosureRequestItemModel = (props: any) => {
   }
 
   return []
+}
+
+const ethereumAccount = (props: any) => {
+  if (props.actType !== 'none' && props.account && props.accountAuthorized === false) {
+    // console.tron.log(props.client)
+    return {}
+  }
+
+  return null
 }
 
 /**
@@ -107,6 +118,7 @@ const DisclosureRequestModel = (props: any): DisclosureRequestModelType | null =
     },
     statsMessage: interactionStatsMessage(props.interactionStats, props.client && props.client.name),
     requestItems: disclosureRequestItemModel(props),
+    ethereumAccount: ethereumAccount(props),
   }
 
   /**
@@ -136,23 +148,12 @@ const DisclosureRequestModel = (props: any): DisclosureRequestModelType | null =
    * Login with existing Account
    */
   if (props.actType !== 'none' && props.account && props.interactionStats && props.accountAuthorized === false) {
-    return {
-      title: 'Login with account',
-      description: ``,
-      actionButton: {
-        text: 'Login',
-        action: props.authorizeAccount,
-        disabled: false,
-        actionType: 'existing',
-      },
-      cancelButton: {
-        text: 'Cancel',
-        action: props.cancelRequest,
-        disabled: false,
-      },
-      showEthereumAccounts: false,
-      ...disclosureRequestCommon,
-    }
+    /**
+     * Auto confirm the account to be used
+     */
+    props.authorizeAccount(props.requestId, 'existing')
+
+    return null
   }
 
   /**
