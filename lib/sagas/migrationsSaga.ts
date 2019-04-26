@@ -36,15 +36,13 @@ import {
 } from 'uPortMobile/lib/constants/MigrationActionTypes'
 import { canSignFor } from 'uPortMobile/lib/sagas/keychain'
 import { isHD } from 'uPortMobile/lib/selectors/chains'
-import {
-  currentAddress,
-  validPrimaryIdentities,
-} from 'uPortMobile/lib/selectors/identities'
-import { migrationStepStatus, migrationTargets, pendingMigrations } from 'uPortMobile/lib/selectors/migrations'
-import { NavigationActions } from 'uPortMobile/lib/utilities/NavigationActions'
+import { currentAddress, validPrimaryIdentities } from 'uPortMobile/lib/selectors/identities'
+import { migrationStepStatus, pendingMigrations } from 'uPortMobile/lib/selectors/migrations'
+import { Navigation } from 'react-native-navigation'
+
 import MigrateLegacy from './migrations/MigrateLegacy'
 import { Alert } from 'react-native'
-import { switchIdentity } from '../actions/uportActions';
+import { switchIdentity } from '../actions/uportActions'
 
 export function* checkIfAbleToSign(): any {
   const address = yield select(currentAddress)
@@ -72,7 +70,6 @@ export function* primaryAddress() {
   }
 }
 
-
 export function* checkup(): any {
   const address = yield call(primaryAddress)
   if (!address) return
@@ -93,9 +90,10 @@ export function* checkup(): any {
     const target = pending[0]
     yield call(delay, 1000)
     if (migrationScreens[target]) {
-      yield call(NavigationActions.push, {
-        screen: migrationScreens[target],
-        animationType: 'slide-up',
+      Navigation.showModal({
+        component: {
+          name: migrationScreens[target],
+        },
       })
     } else {
       if (yield call(runMigrations, { type: RUN_MIGRATIONS, target })) {

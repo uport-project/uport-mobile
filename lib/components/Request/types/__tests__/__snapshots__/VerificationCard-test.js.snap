@@ -17,11 +17,7 @@ ShallowWrapper {
       ]
     }
     issuer={Object {}}
-    navigator={
-      FakeNavigator {
-        "event": [Function],
-      }
-    }
+    navigator={FakeNavigator {}}
     request={Object {}}
     showActions={true}
     title="loading"
@@ -79,7 +75,8 @@ ShallowWrapper {
                 }
               }
             >
-              from: 
+              from:
+               
               <Text
                 accessible={true}
                 allowFontScaling={true}
@@ -106,11 +103,6 @@ ShallowWrapper {
             data={
               Object {
                 "loading": "loading",
-              }
-            }
-            navigator={
-              FakeNavigator {
-                "event": [Function],
               }
             }
           />
@@ -157,7 +149,8 @@ ShallowWrapper {
                   }
                 }
               >
-                from: 
+                from:
+                 
                 <Text
                   accessible={true}
                   allowFontScaling={true}
@@ -199,7 +192,8 @@ ShallowWrapper {
                     }
                   }
                 >
-                  from: 
+                  from:
+                   
                   <Text
                     accessible={true}
                     allowFontScaling={true}
@@ -230,7 +224,8 @@ ShallowWrapper {
                   "accessible": true,
                   "allowFontScaling": true,
                   "children": Array [
-                    "from: ",
+                    "from:",
+                    " ",
                     <Text
                       accessible={true}
                       allowFontScaling={true}
@@ -252,7 +247,8 @@ ShallowWrapper {
                 },
                 "ref": null,
                 "rendered": Array [
-                  "from: ",
+                  "from:",
+                  " ",
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -302,11 +298,6 @@ ShallowWrapper {
                 "loading": "loading",
               }
             }
-            navigator={
-              FakeNavigator {
-                "event": [Function],
-              }
-            }
           />,
           "style": Object {
             "flex": 1,
@@ -319,11 +310,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "componentId": undefined,
             "data": Object {
               "loading": "loading",
-            },
-            "navigator": FakeNavigator {
-              "event": [Function],
             },
           },
           "ref": null,
@@ -387,7 +376,8 @@ ShallowWrapper {
                   }
                 }
               >
-                from: 
+                from:
+                 
                 <Text
                   accessible={true}
                   allowFontScaling={true}
@@ -414,11 +404,6 @@ ShallowWrapper {
               data={
                 Object {
                   "loading": "loading",
-                }
-              }
-              navigator={
-                FakeNavigator {
-                  "event": [Function],
                 }
               }
             />
@@ -465,7 +450,8 @@ ShallowWrapper {
                     }
                   }
                 >
-                  from: 
+                  from:
+                   
                   <Text
                     accessible={true}
                     allowFontScaling={true}
@@ -507,7 +493,8 @@ ShallowWrapper {
                       }
                     }
                   >
-                    from: 
+                    from:
+                     
                     <Text
                       accessible={true}
                       allowFontScaling={true}
@@ -538,7 +525,8 @@ ShallowWrapper {
                     "accessible": true,
                     "allowFontScaling": true,
                     "children": Array [
-                      "from: ",
+                      "from:",
+                      " ",
                       <Text
                         accessible={true}
                         allowFontScaling={true}
@@ -560,7 +548,8 @@ ShallowWrapper {
                   },
                   "ref": null,
                   "rendered": Array [
-                    "from: ",
+                    "from:",
+                    " ",
                     Object {
                       "instance": null,
                       "key": undefined,
@@ -610,11 +599,6 @@ ShallowWrapper {
                   "loading": "loading",
                 }
               }
-              navigator={
-                FakeNavigator {
-                  "event": [Function],
-                }
-              }
             />,
             "style": Object {
               "flex": 1,
@@ -627,11 +611,9 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "componentId": undefined,
               "data": Object {
                 "loading": "loading",
-              },
-              "navigator": FakeNavigator {
-                "event": [Function],
               },
             },
             "ref": null,

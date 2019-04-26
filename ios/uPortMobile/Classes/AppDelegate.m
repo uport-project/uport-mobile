@@ -8,15 +8,19 @@
  */
 
 #import "RCTPushNotificationManager.h"
-#import "AppDelegate.h"
-#import "RCTBundleURLProvider.h"
-#import "RCTRootView.h"
 #import "RCTLinkingManager.h"
+
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
 #import <asl.h>
-#import "RCTLog.h"
-#import "RCCManager.h"
+#import <React/RCTLog.h>
+
+#import <React/RCTBundleURLProvider.h>
+#import <React/RCTRootView.h>
+#import <ReactNativeNavigation/ReactNativeNavigation.h>
+
+#import "AppDelegate.h"
+
 @import Firebase;
 #import "RNFirebaseNotifications.h"
 #import "RNFirebaseMessaging.h"
@@ -35,14 +39,12 @@
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   self.window.backgroundColor =  [UIColor colorWithRed:0.99 green:0.99 blue:0.99 alpha:1];
   
+  [ReactNativeNavigation bootstrap:jsCodeLocation launchOptions:launchOptions];
   
-  [[RCCManager sharedInstance] initBridgeWithBundleURL:jsCodeLocation];
-
   [Fabric with:@[[Crashlytics class]]];
   RCTSetLogThreshold(RCTLogLevelInfo);
   RCTSetLogFunction(CrashlyticsReactLogFunction);
 
-  
   return YES;
 }
 

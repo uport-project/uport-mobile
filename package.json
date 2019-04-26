@@ -3,6 +3,7 @@
   "version": "0.0.8",
   "private": true,
   "scripts": {
+    "fxrncamera": "bash ./scripts/fix-rn-camera-search-paths.sh ./node_modules/react-native-camera/ios/RNCamera.xcodeproj/project.pbxproj",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "build-solidity-coder": "browserify node_modules/web3/lib/solidity/coder.js --s Coder | derequire > lib/browserified/coder.js",
     "build-bip39": "browserify node_modules/bip39/index.js --s BIP39 | derequire > lib/browserified/bip39.js",
@@ -11,6 +12,7 @@
     "lint": "./node_modules/.bin/standard",
     "lint-fix": "./node_modules/.bin/standard --fix",
     "test": "./node_modules/.bin/jest",
+    "android": "cd ./android && ./gradlew app:assembleDebug && ./gradlew installDebug",
     "package-android": "mkdir -p android/app/build/jsbundle/assets/ && mkdir -p android/app/build/jsbundle/res && node node_modules/react-native/local-cli/cli.js bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/build/jsbundle/assets/index.android.bundle --assets-dest android/app/build/jsbundle/res",
     "package-android-release": "cd android && ./gradlew clean && cd - && mkdir -p android/app/build/jsbundle/assets/ && mkdir -p android/app/build/jsbundle/res && node node_modules/react-native/local-cli/cli.js bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/build/jsbundle/assets/index.android.bundle --assets-dest android/app/build/jsbundle/res && cd android && ./gradlew deliverArchives -x bundleReleaseJsAndAssets",
     "package-android-dummy": "cd android && ./gradlew clean && cd - && mkdir -p android/app/build/jsbundle/assets/ && mkdir -p android/app/build/jsbundle/res && node node_modules/react-native/local-cli/cli.js bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/build/jsbundle/assets/index.android.bundle --assets-dest android/app/build/jsbundle/res && cd android && ./gradlew deliverArchives -x bundleReleaseJsAndAssets -PIGNORE_VAULT=true -PIGNORE_REPOSITORY_STATE=true"
@@ -129,7 +131,7 @@
     "react-native-image-picker": "uport-project/react-native-image-picker#develop",
     "react-native-intent-launcher": "^0.1.1",
     "react-native-keyboard-aware-scrollview": "^2.0.0",
-    "react-native-navigation": "https://github.com/jasonhealy/react-native-navigation",
+    "react-native-navigation": "^2.16.0",
     "react-native-passcode-android": "uport-project/react-native-passcode-android#feature/support-api21",
     "react-native-passcode-auth": "blendlabs/react-native-passcode-auth#b79815e509ee082a5d83ccf0ea5e652e3567335c",
     "react-native-permissions": "^1.0.6",
@@ -165,7 +167,6 @@
     "@types/mockdate": "^2.0.0",
     "@types/react": "^16.7.20",
     "@types/react-native": "^0.57.32",
-    "@types/react-native-navigation": "1.x",
     "@types/react-native-permissions": "^1.1.1",
     "@types/react-native-tab-view": "^1.0.2",
     "@types/react-native-vector-icons": "^4.6.4",
