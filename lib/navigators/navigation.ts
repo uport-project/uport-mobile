@@ -2,6 +2,7 @@ import { NativeModules } from 'react-native'
 import { Navigation } from 'react-native-navigation'
 import { Theme, Icon, Device } from '../kancha'
 import SCREENS from '../screens/Screens'
+import { RNUportSigner } from 'react-native-uport-signer'
 
 /**
  * This is called by the startUpSaga when the app is ready to launch
@@ -69,8 +70,8 @@ const startOnboarding = async () => {
    * Check if we have a securtiy pin set
    */
   let STARTUP_SCREEN = SCREENS.Welcome
-  if (NativeModules.NativeSignerModule && NativeModules.NativeSignerModule.hasSecureKeyguard) {
-    const hasSecureKeyguard = await NativeModules.NativeSignerModule.hasSecureKeyguard()
+  if (RNUportSigner && RNUportSigner.hasSecureKeyguard) {
+    const hasSecureKeyguard = await RNUportSigner.hasSecureKeyguard()
     STARTUP_SCREEN = hasSecureKeyguard ? SCREENS.Welcome : SCREENS.SecurityBlock
   }
 
