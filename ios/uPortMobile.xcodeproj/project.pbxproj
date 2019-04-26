@@ -44,7 +44,7 @@
 		9645633021CBC6B100FC1C48 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9645632E21CBC6B100FC1C48 /* Launch.storyboard */; };
 		96A54A9721949D250094C07A /* file-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 70D18C4D218C53CB0004E667 /* file-icon.png */; };
 		96B2A1802228ACCC005F3514 /* libRNShare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70304EF6221EB29F0092DB60 /* libRNShare.a */; };
-		96EE2640224BF17600BC72FE /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96EE263D224BF16300BC72FE /* libReactNativeNavigation.a */; };
+		96D5BFC82273452F005F91A7 /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D5BFC52273450F005F91A7 /* libReactNativeNavigation.a */; };
 		96EF03122189C50C00D0B280 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96EF03072189C50B00D0B280 /* Feather.ttf */; };
 		96EF03132189C50C00D0B280 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96EF03082189C50B00D0B280 /* EvilIcons.ttf */; };
 		96EF03142189C50C00D0B280 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96EF03092189C50B00D0B280 /* Entypo.ttf */; };
@@ -80,7 +80,7 @@
 		BB2AA137FC69402481534198 /* libRNImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16999B55454D4C328D7FACD3 /* libRNImagePicker.a */; };
 		BFED6FE87DBC4919A58988CD /* libPasscodeAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB278FF1A5046B9972A3597 /* libPasscodeAuth.a */; };
 		C8D855E5225FC8490086560A /* libRNUportSigner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D855E4225FC8430086560A /* libRNUportSigner.a */; };
-		D142E5671F25D96500A43483 /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D142E55B1F25D77900A43483 /* libReactNativeNavigation.a */; };
+		D142E5671F25D96500A43483 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		D6EA3454F6A041D7814CCCD3 /* libRNFirebase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4808EA30EA4B79B99DD6D0 /* libRNFirebase.a */; };
 		E850396E4153417FBC5EC4C0 /* libRNFetchBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F473FD8BE754AA592BCA8F9 /* libRNFetchBlob.a */; };
 /* End PBXBuildFile section */
@@ -387,6 +387,20 @@
 			remoteGlobalIDString = A39873CE1EA65EE60051E01A;
 			remoteInfo = "RNVectorIcons-tvOS";
 		};
+		96D5BFC42273450F005F91A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96D5BFBF2273450F005F91A7 /* ReactNativeNavigation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D8AFADBD1BEE6F3F00A4592D;
+			remoteInfo = ReactNativeNavigation;
+		};
+		96D5BFC62273450F005F91A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96D5BFBF2273450F005F91A7 /* ReactNativeNavigation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7B49FEBB1E95090800DEB3EA;
+			remoteInfo = ReactNativeNavigationTests;
+		};
 		C8D312DC2269198A003E3199 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C8D312D12269198A003E3199 /* Pods.xcodeproj */;
@@ -428,20 +442,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RNUportSigner;
-		};
-		D142E55A1F25D77900A43483 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 96EE2637224BF16300BC72FE /* ReactNativeNavigation.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D8AFADBD1BEE6F3F00A4592D;
-			remoteInfo = ReactNativeNavigation;
-		};
-		96EE263E224BF16300BC72FE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 96EE2637224BF16300BC72FE /* ReactNativeNavigation.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 7B49FEBB1E95090800DEB3EA;
-			remoteInfo = ReactNativeNavigationTests;
 		};
 		D17E3DA81DECAA8800C460F9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -704,7 +704,7 @@
 		962873292241212B002158C5 /* RNCamera.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RNCamera.xcodeproj"; sourceTree = "<group>"; };
 		9645632F21CBC6B100FC1C48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = uPortMobile/Base.lproj/Launch.storyboard; sourceTree = "<group>"; };
 		9688718E2D954B93AD154055 /* libRNSVG.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSVG.a; sourceTree = "<group>"; };
-		96EE2637224BF16300BC72FE /* ReactNativeNavigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeNavigation.xcodeproj; path = "../node_modules/react-native-navigation/lib/ios/ReactNativeNavigation.xcodeproj"; sourceTree = "<group>"; };
+		96D5BFBF2273450F005F91A7 /* ReactNativeNavigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeNavigation.xcodeproj; path = "../node_modules/react-native-navigation/lib/ios/ReactNativeNavigation.xcodeproj"; sourceTree = "<group>"; };
 		96EF03072189C50B00D0B280 /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		96EF03082189C50B00D0B280 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		96EF03092189C50B00D0B280 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
@@ -764,10 +764,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96D5BFC82273452F005F91A7 /* libReactNativeNavigation.a in Frameworks */,
 				C8D855E5225FC8490086560A /* libRNUportSigner.a in Frameworks */,
 				9628732F2241213E002158C5 /* libRNCamera.a in Frameworks */,
 				96B2A1802228ACCC005F3514 /* libRNShare.a in Frameworks */,
-				D142E5671F25D96500A43483 /* libReactNativeNavigation.a in Frameworks */,
+				D142E5671F25D96500A43483 /* (null) in Frameworks */,
 				600A93DB1D0F813700DB5AEB /* libRCTCameraRoll.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				601B76DE1D410D3F00F62DDB /* Crashlytics.framework in Frameworks */,
@@ -1242,9 +1243,9 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				96D5BFBF2273450F005F91A7 /* ReactNativeNavigation.xcodeproj */,
 				C8D312D12269198A003E3199 /* Pods.xcodeproj */,
 				C8D855DE225FC8420086560A /* RNUportSigner.xcodeproj */,
-				96EE2637224BF16300BC72FE /* ReactNativeNavigation.xcodeproj */,
 				962873292241212B002158C5 /* RNCamera.xcodeproj */,
 				70304EBE221EB29F0092DB60 /* RNShare.xcodeproj */,
 				641915B2200ECEB70042DA49 /* ReactNativePermissions.xcodeproj */,
@@ -1319,11 +1320,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		96EE2638224BF16300BC72FE /* Products */ = {
+		96D5BFC02273450F005F91A7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				96EE263D224BF16300BC72FE /* libReactNativeNavigation.a */,
-				96EE263F224BF16300BC72FE /* ReactNativeNavigationTests.xctest */,
+				96D5BFC52273450F005F91A7 /* libReactNativeNavigation.a */,
+				96D5BFC72273450F005F91A7 /* ReactNativeNavigationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1390,14 +1391,6 @@
 			isa = PBXGroup;
 			children = (
 				C8D855E4225FC8430086560A /* libRNUportSigner.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		D142E5341F25D77900A43483 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D142E55B1F25D77900A43483 /* libReactNativeNavigation.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1584,8 +1577,8 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
-					ProductGroup = 96EE2638224BF16300BC72FE /* Products */;
-					ProjectRef = 96EE2637224BF16300BC72FE /* ReactNativeNavigation.xcodeproj */;
+					ProductGroup = 96D5BFC02273450F005F91A7 /* Products */;
+					ProjectRef = 96D5BFBF2273450F005F91A7 /* ReactNativeNavigation.xcodeproj */;
 				},
 				{
 					ProductGroup = 641915B3200ECEB70042DA49 /* Products */;
@@ -1943,6 +1936,20 @@
 			remoteRef = 962C3BFB21F09A1A004CE5A6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		96D5BFC52273450F005F91A7 /* libReactNativeNavigation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libReactNativeNavigation.a;
+			remoteRef = 96D5BFC42273450F005F91A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		96D5BFC72273450F005F91A7 /* ReactNativeNavigationTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ReactNativeNavigationTests.xctest;
+			remoteRef = 96D5BFC62273450F005F91A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		C8D312DD2269198A003E3199 /* libCoreEthereum.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1983,20 +1990,6 @@
 			fileType = archive.ar;
 			path = libRNUportSigner.a;
 			remoteRef = C8D855E3225FC8430086560A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		96EE263D224BF16300BC72FE /* libReactNativeNavigation.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libReactNativeNavigation.a;
-			remoteRef = 96EE263C224BF16300BC72FE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		96EE263F224BF16300BC72FE /* ReactNativeNavigationTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ReactNativeNavigationTests.xctest;
-			remoteRef = 96EE263E224BF16300BC72FE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		D17E3DA91DECAA8800C460F9 /* libRCTImage-tvOS.a */ = {

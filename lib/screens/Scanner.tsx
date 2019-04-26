@@ -99,7 +99,7 @@ export class ScannerScreen extends React.Component<ScannerScreenProps, ScannerSc
   }
 
   popAndroidScannerView() {
-    // this.props.navigator.dismissModal()
+    Navigation.dismissAllModals()
   }
 
   closeScanner() {
@@ -110,8 +110,6 @@ export class ScannerScreen extends React.Component<ScannerScreenProps, ScannerSc
         this.popAndroidScannerView()
       }, 250)
     }
-
-    // this.stopScannerTimer()
   }
 
   render() {
