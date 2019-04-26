@@ -214,6 +214,9 @@
     "stream": false,
     "crypto": false
   },
+  "react-native": {
+    "crypto": false
+  },
   "standard": {
     "ignore": [
       "lib/browserified/**",

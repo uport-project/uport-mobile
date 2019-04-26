@@ -1,5 +1,12 @@
 # Change Log
 
+## [v448](https://github.com/uport-project/uport-mobile/tree/v448) (2019-04-26)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v447...v448)
+
+**Merged pull requests:**
+
+- Fix migration of accounts [\#106](https://github.com/uport-project/uport-mobile/pull/106) ([pelle](https://github.com/pelle))
+
 ## [v447](https://github.com/uport-project/uport-mobile/tree/v447) (2019-04-26)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v446...v447)
 
