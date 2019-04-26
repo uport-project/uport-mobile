@@ -39,7 +39,8 @@
       "./jest-setup/react-native-svg.js",
       "./jest-setup/react-native-firebase.js",
       "./jest-setup/react-native-device-info.js",
-      "./jest-setup/react-native-camera.js"
+      "./jest-setup/react-native-camera.js",
+      "./jest-setup/moment.js"
     ],
     "testPathIgnorePatterns": [
       "/node_modules/",
@@ -151,7 +152,7 @@
     "rlp": "2.0.0",
     "string": "^3.3.1",
     "tslib": "^1.9.3",
-    "uport-credentials": "^1.1.7",
+    "uport-credentials": "^1.2.0",
     "uport-did-resolver": "^0.0.7",
     "uport-identity": "2.0.0-beta",
     "uport-lite": "^1.0.5",
@@ -192,6 +193,7 @@
     "jsdom-global": "^3.0.2",
     "jsontokens": "^0.7.7",
     "mockdate": "^2.0.2",
+    "moment-timezone": "^0.5.25",
     "nock": "^9.0.18",
     "prettier": "^1.15.3",
     "react-native-typescript-transformer": "^1.2.10",

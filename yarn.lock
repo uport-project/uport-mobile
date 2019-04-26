@@ -5954,7 +5954,7 @@ jsonpointer@^4.0.0:
   resolved "https://registry.yarnpkg.com/jsonpointer/-/jsonpointer-4.0.1.tgz#4fd92cb34e0e9db3c89c8622ecf51f9b978c6cb9"
   integrity sha1-T9kss04OnbPInIYi7PUfm5eMbLk=
 
-jsontokens@^0.7.7, jsontokens@^0.7.8:
+jsontokens@^0.7.7:
   version "0.7.8"
   resolved "https://registry.yarnpkg.com/jsontokens/-/jsontokens-0.7.8.tgz#9210bb98944ee93a156c72754c1c281b2c52d419"
   integrity sha512-vTZ06cDSDoFeXJUnZNFHsh8aP+L3Xz5Ke7XPb6nyT3n5wb9uxyq4TE8gUl0H4hmzSe/YIrDi+mneuHIh37AMiA==
@@ -6659,7 +6659,14 @@ module-deps@^6.0.0:
     through2 "^2.0.0"
     xtend "^4.0.0"
 
-moment@^2.17.1:
+moment-timezone@^0.5.25:
+  version "0.5.25"
+  resolved "https://registry.yarnpkg.com/moment-timezone/-/moment-timezone-0.5.25.tgz#a11bfa2f74e088327f2cd4c08b3e7bdf55957810"
+  integrity sha512-DgEaTyN/z0HFaVcVbSyVCUU6HeFdnNC3vE4c9cgu2dgMTvjBUBdBzWfasTBmAW45u5OIMeCJtU8yNjM22DHucw==
+  dependencies:
+    moment ">= 2.9.0"
+
+"moment@>= 2.9.0", moment@^2.17.1:
   version "2.24.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
   integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
@@ -9632,19 +9639,17 @@ unset-value@^1.0.0:
     has-value "^0.3.1"
     isobject "^3.0.0"
 
-uport-credentials@^1.1.7:
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/uport-credentials/-/uport-credentials-1.1.7.tgz#32171e9bb54784f6d44057dfd24ab4e056714dea"
-  integrity sha512-wOmfRYLjaTHpUv94aYLwkliZTIe3tTyLe12jP42ykWVc8p1tddhidN2e2oRNAV9JfPxvOGQHxLK1jNlhMf2q9Q==
+uport-credentials@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/uport-credentials/-/uport-credentials-1.2.0.tgz#c1d6353f375372a4cce19434289bceccf31a5c06"
+  integrity sha512-+3dMgTIaAlGj14UHztAa2XkC/5ngnMEoDHc5e4RxE6jKvGQCEmEcckBU4P9yZ+Oy2akYq7DVTNfiDDQGmp5T5w==
   dependencies:
     did-jwt "^0.1.3"
     did-resolver "^0.0.6"
-    ethjs-util "^0.1.3"
+    elliptic "^6.4.1"
     ethr-did-resolver "^0.2.0"
     https-did-resolver "^0.1.0"
-    jsontokens "^0.7.8"
     mnid "^0.1.1"
-    nacl-did "^0.4.0"
     uport-did-resolver "^0.0.7"
     uport-lite "^1.0.5"
 

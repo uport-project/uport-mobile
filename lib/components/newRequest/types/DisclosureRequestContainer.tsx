@@ -19,10 +19,9 @@ import { formatWeiAsEth } from 'uPortMobile/lib/helpers/conversions'
 // Actions
 import { authorizeRequest, cancelRequest, clearRequest, authorizeAccount } from 'uPortMobile/lib/actions/requestActions'
 // Data model
-import disclosureRequestModel, { DisclosureRequestModelType } from './DisclosureRequestModel'
+import disclosureRequestModel, { DisclosureRequestModelType, VerifiableClaimType, ClaimSpecType } from './DisclosureRequestModel'
 import { Container, Theme, Text } from '@kancha'
-import { Navigation } from 'react-native-navigation'
-
+import { VerifiableClaimsSpec, UserInfo } from 'uPortMobile/lib/types/Credentials'
 export interface DisclosureRequestContainerProps {
   componentId: string
 }
@@ -43,9 +42,9 @@ interface StateFromProps {
   pushWorking: boolean
   createSubAccount: boolean
   pushError: boolean
-  requested: any
-  verified: boolean
-  missing: boolean
+  requested: UserInfo
+  verified: VerifiableClaimType[]
+  missing: ClaimSpecType[]
   missingRequired: boolean
   uportVerified: boolean
   interactionStats: any
@@ -68,9 +67,9 @@ const mapStateToProps = (state: any) => {
   /**
    * Cast selectors to accept additional argument
    */
-  const requestedProfileClaimsTyped: (state: any, requested: any) => any = requestedOwnClaims
-  const requestedVerifiableClaimsTyped: (state: any, request: any) => any = requestedVerifiableClaims
-  const missingClaimsTypes: (state: any, verified: boolean) => any = missingClaims
+  const requestedProfileClaimsTyped: (state: any, requested: any) => UserInfo = requestedOwnClaims
+  const requestedVerifiableClaimsTyped: (state: any, request: any) => VerifiableClaimType[] = requestedVerifiableClaims
+  const missingClaimsTypes: (state: any, verified: boolean) => ClaimSpecType[] = missingClaims
   const networkSettingsForAddressTyped: (state: any, account: any) => any = networkSettingsForAddress
   const workingTyped: (state: any, action: string) => any = working
   const pushErrorTyped: (state: any, action: string) => any = errorMessage
@@ -82,11 +81,11 @@ const mapStateToProps = (state: any) => {
   const networkName = network.name
   const client = clientProfile(state)
   const currentIdentity = Mori.toJs(publicUport(state)) // Mori
-  const requested = requestedProfileClaimsTyped(state, request && request.requested)
-  const verified =
-    request && request.verified ? requestedVerifiableClaimsTyped(state, request && request.requested) : []
-  const missing = request && request.verified ? missingClaimsTypes(state, request.verified) : []
-  const missingRequired = !!missing.find((spec: any) => spec.essential)
+  const requested = requestedProfileClaimsTyped(state, request)
+  const verified = request ? requestedVerifiableClaimsTyped(state, request) : []
+  const missing = request ? missingClaimsTypes(state, request) : []
+  const missingRequired = !!missing.find(spec => !!(spec && spec.essential))
+
   const uportVerified = request && request.client_id ? VERIFIED_BY_UPORT[request.client_id] : false
   const pushWorking = workingTyped(state, 'push')
   const pushError = pushErrorTyped(state, 'push')

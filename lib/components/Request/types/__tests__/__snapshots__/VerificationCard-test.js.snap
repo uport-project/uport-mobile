@@ -5,7 +5,6 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <VerificationCard
     address={null}
-    attestationsForTypeAndValue={[Function]}
     authorizeRequest={[Function]}
     cancelRequest={[Function]}
     claims={
