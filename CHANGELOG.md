@@ -1,5 +1,12 @@
 # Change Log
 
+## [v449](https://github.com/uport-project/uport-mobile/tree/v449) (2019-04-26)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v448...v449)
+
+**Merged pull requests:**
+
+- Upgrade RNN to 2.x [\#107](https://github.com/uport-project/uport-mobile/pull/107) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v448](https://github.com/uport-project/uport-mobile/tree/v448) (2019-04-26)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v447...v448)
 
