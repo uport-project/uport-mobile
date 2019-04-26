@@ -96,6 +96,11 @@ interface ListItemProps {
    * Show bottom divider line
    */
   dividerBottom?: boolean
+
+  /**
+   * Provide a testID for e2e tests
+   */
+  testID?: string
 }
 
 /** Move to kancha utils */
@@ -122,6 +127,8 @@ const ListItem: React.FunctionComponent<ListItemProps> = props => {
       onPress={onPressAction}
       underlayColor={Theme.colors.primary.underlay}
       disabled={props.disabled}
+      testID={props.testID}
+      accessibilityLabel={props.testID}
     >
       <Container flex={1} flexDirection={'row'}>
         {props.avatarComponent && (

@@ -1,5 +1,38 @@
 # Change Log
 
+## [v447](https://github.com/uport-project/uport-mobile/tree/v447) (2019-04-26)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v446...v447)
+
+**Merged pull requests:**
+
+- Fixed expiresIn in verReq [\#131](https://github.com/uport-project/uport-mobile/pull/131) ([simonas-notcat](https://github.com/simonas-notcat))
+- Caleuche production URL [\#119](https://github.com/uport-project/uport-mobile/pull/119) ([jasonhealy](https://github.com/jasonhealy))
+
+## [v446](https://github.com/uport-project/uport-mobile/tree/v446) (2019-04-23)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v445...v446)
+
+**Merged pull requests:**
+
+- Change scanner permission logic [\#130](https://github.com/uport-project/uport-mobile/pull/130) ([jasonhealy](https://github.com/jasonhealy))
+
+## [v445](https://github.com/uport-project/uport-mobile/tree/v445) (2019-04-23)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v444...v445)
+
+**Merged pull requests:**
+
+- Fix android camera permissions [\#129](https://github.com/uport-project/uport-mobile/pull/129) ([jasonhealy](https://github.com/jasonhealy))
+- Add accessibility labels to buttons [\#128](https://github.com/uport-project/uport-mobile/pull/128) ([jasonhealy](https://github.com/jasonhealy))
+- Warn account recovery on correct menu item [\#127](https://github.com/uport-project/uport-mobile/pull/127) ([jasonhealy](https://github.com/jasonhealy))
+- Use RNUportSigner library  [\#123](https://github.com/uport-project/uport-mobile/pull/123) ([aldigjo](https://github.com/aldigjo))
+
+## [v444](https://github.com/uport-project/uport-mobile/tree/v444) (2019-04-19)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v443...v444)
+
+**Merged pull requests:**
+
+- Handle milliseconds in expiry [\#126](https://github.com/uport-project/uport-mobile/pull/126) ([jasonhealy](https://github.com/jasonhealy))
+- Handle exeptions in sagas [\#125](https://github.com/uport-project/uport-mobile/pull/125) ([simonas-notcat](https://github.com/simonas-notcat))
+
 ## [v443](https://github.com/uport-project/uport-mobile/tree/v443) (2019-04-18)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v442...v443)
 

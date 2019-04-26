@@ -28,6 +28,9 @@ import { handleURL } from './actions/requestActions'
 import { registerDeviceForNotifications } from 'uPortMobile/lib/actions/snsRegistrationActions'
 import { track, screen } from 'uPortMobile/lib/actions/metricActions'
 import { colors } from 'uPortMobile/lib/styles/globalStyles'
+import { RNUportSigner, RNUportHDSigner } from 'react-native-uport-signer'
+import { print } from 'util';
+import console = require('console');
 
 const isIOS = Platform.OS === 'ios' ? true : false
 
@@ -189,8 +192,8 @@ export async function startAppModernUI() {
 export async function startOnboarding() {
   let startupScreen = 'onboarding2.Welcome'
 
-  if (NativeModules.NativeSignerModule && NativeModules.NativeSignerModule.hasSecureKeyguard) {
-    const hasSecureKeyguard = await NativeModules.NativeSignerModule.hasSecureKeyguard()
+  if (RNUportSigner && RNUportSigner.hasSecureKeyguard) {
+    const hasSecureKeyguard = await RNUportSigner.hasSecureKeyguard()
     if (!hasSecureKeyguard) {
       startupScreen = 'onboarding.securityBlock'
     }
