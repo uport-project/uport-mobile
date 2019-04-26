@@ -34,7 +34,7 @@ import { formatWeiAsEth } from 'uPortMobile/lib/helpers/conversions'
 // Actions
 import { authorizeRequest, cancelRequest, clearRequest, authorizeAccount } from 'uPortMobile/lib/actions/requestActions'
 
-import { Container, Text, Banner, Icon, Button, Screen, Section, ListItem, IndicatorBar } from '@kancha'
+import { Container, Text, Banner, Icon, Button, Screen, Section, ListItem, IndicatorBar, Theme } from '@kancha'
 import DisclosureRequestModel from './DisclosureRequestModel'
 
 interface DisclosureCardProps {
@@ -131,7 +131,7 @@ export const DisclosureCard: React.FC<DisclosureCardProps> = props => {
 
           <IndicatorBar text={requestModel.title} />
           {requestModel.description && (
-            <Container padding>
+            <Container padding backgroundColor={Theme.colors.primary.background}>
               <Text type={Text.Types.Body}>{requestModel.description}</Text>
             </Container>
           )}

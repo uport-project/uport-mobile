@@ -83,7 +83,7 @@ const disclosureRequestItemModel = (props: any) => {
     const account = props.account && [
       {
         key: 'accountaddress',
-        type: 'Address',
+        type: 'Account address',
         value: props.account,
       },
     ]
@@ -129,9 +129,9 @@ const DisclosureRequestModel = (props: any): DisclosureRequestModelType | null =
   if (props.actType !== 'none' && !props.account && props.accountAuthorized === false) {
     return {
       title: 'Create Account',
-      description: `You need to create an ethereum keypair to interact with ${props.client.name}`,
+      description: `You need to create an ethereum account to interact with ${props.client.name}`,
       actionButton: {
-        text: 'Create New Account',
+        text: 'Create',
         action: props.authorizeAccount,
         disabled: props.pushWorking || !!props.error,
       },
