@@ -1,5 +1,13 @@
 # Change Log
 
+## [v447](https://github.com/uport-project/uport-mobile/tree/v447) (2019-04-26)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v446...v447)
+
+**Merged pull requests:**
+
+- Fixed expiresIn in verReq [\#131](https://github.com/uport-project/uport-mobile/pull/131) ([simonas-notcat](https://github.com/simonas-notcat))
+- Caleuche production URL [\#119](https://github.com/uport-project/uport-mobile/pull/119) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v446](https://github.com/uport-project/uport-mobile/tree/v446) (2019-04-23)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v445...v446)
 
