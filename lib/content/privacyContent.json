@@ -38,8 +38,8 @@
       ]
     },
     {
-      "title": "SHARING OF PERSONAL INFORMATION",
-      "section": "3",
+      "title": "Sharing of Personal Information",
+      "section": "4",
       "clauses": [
         {
           "number": "3.1",
@@ -49,8 +49,8 @@
       ]
     },
     {
-      "title": "INTERNATIONAL TRANSFER",
-      "section": "3",
+      "title": "International Transfer",
+      "section": "5",
       "clauses": [
         {
           "number": "3.1",
@@ -60,8 +60,8 @@
       ]
     },
     {
-      "title": "HOW INFORMATION IS SECURED",
-      "section": "3",
+      "title": "How Information is Secured",
+      "section": "6",
       "clauses": [
         {
           "number": "3.1",
@@ -71,8 +71,8 @@
       ]
     },
     {
-      "title": "INFORMATION CHOICES AND CHANGES",
-      "section": "3",
+      "title": "Information Choices and Changes",
+      "section": "7",
       "clauses": [
         {
           "number": "3.1",
@@ -82,8 +82,8 @@
       ]
     },
     {
-      "title": "CONTACT INFORMATION",
-      "section": "3",
+      "title": "Contact Information",
+      "section": "8",
       "clauses": [
         {
           "number": "3.1",
@@ -93,8 +93,8 @@
       ]
     },
     {
-      "title": "CHANGES TO THIS PRIVACY POLICY",
-      "section": "3",
+      "title": "Changes to this Privacy Policy",
+      "section": "9",
       "clauses": [
         {
           "number": "3.1",
@@ -104,8 +104,8 @@
       ]
     },
     {
-      "title": "NOTICE TO CALIFORNIA RESIDENTS",
-      "section": "3",
+      "title": "Notice to California Residents",
+      "section": "10",
       "clauses": [
         {
           "number": "3.1",
@@ -115,8 +115,8 @@
       ]
     },
     {
-      "title": "NOTICE TO EU DATA SUBJECTS",
-      "section": "3",
+      "title": "Notice to EU Data Subjects",
+      "section": "11",
       "clauses": [
         {
           "number": "3.1",
@@ -127,7 +127,7 @@
     },
     {
       "title": "Use for New Purposes",
-      "section": "3",
+      "section": "12",
       "clauses": [
         {
           "number": "3.1",
@@ -136,28 +136,6 @@
         }
       ]
     },
-    {
-      "title": "CHANGES TO THIS PRIVACY POLICY",
-      "section": "3",
-      "clauses": [
-        {
-          "number": "3.1",
-          "title": "",
-          "content": ""
-        }
-      ]
-    },
-    {
-      "title": "CHANGES TO THIS PRIVACY POLICY",
-      "section": "3",
-      "clauses": [
-        {
-          "number": "3.1",
-          "title": "",
-          "content": ""
-        }
-      ]
-    }
   ]
 }
 

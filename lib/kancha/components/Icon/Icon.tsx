@@ -68,6 +68,8 @@ interface IconsStatic {
   edit: string
   more: string
   checkmark: string
+  scan: string
+  qrcode: string
 }
 
 const Icons: IconsStatic = {
@@ -79,21 +81,22 @@ const Icons: IconsStatic = {
   checkbox_checked: Device.isIOS ? 'ios-checkmark-circle' : 'md-checkmark-circle',
   rocket: Device.isIOS ? 'ios-rocket' : 'md-rocket',
   share: Device.isIOS ? 'ios-share' : 'md-share',
-  close: 'x',
-  edit: 'edit',
-  more: 'ios-more',
+  scan: Device.isIOS ? 'ios-qr-scanner' : 'md-qr-scanner',
   checkmark: Device.isIOS ? 'ios-checkmark' : 'md-checkmark',
-  qrcode: 'qrcode',
+  edit: Device.isIOS ? 'edit' : 'edit',
+  more: Device.isIOS ? 'ios-more' : 'ios-more',
+  qrcode: Device.isIOS ? 'qrcode' : 'qrcode',
+  close: Device.isIOS ? 'x' : 'x',
 }
 
-const Icon: React.FunctionComponent<IconProps> & { Names: IconsStatic } = ({
-  font,
-  name,
-  size,
-  color,
-  animated,
-  image,
-}: IconProps) => {
+const IconImageSource = (font: string, icon: string, size: number) => {
+  return IconSets[font].getImageSource(icon, size)
+}
+
+const Icon: React.FunctionComponent<IconProps> & {
+  Names: IconsStatic
+  getImageSource: (font: string, icon: string, size: number) => any
+} = ({ font, name, size, color, animated, image }: IconProps) => {
   const IconFont = font ? IconSets[font] : Ionicons
   const spinValue = new Animated.Value(0)
 
@@ -127,5 +130,6 @@ Icon.defaultProps = {
 }
 
 Icon.Names = Icons
+Icon.getImageSource = IconImageSource
 
 export default Icon

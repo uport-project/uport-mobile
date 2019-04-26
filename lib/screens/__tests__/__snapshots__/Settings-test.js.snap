@@ -2355,11 +2355,7 @@ ShallowWrapper {
     connections={Array []}
     dispatch={[Function]}
     hasHDWallet={false}
-    navigator={
-      FakeNavigator {
-        "event": [Function],
-      }
-    }
+    navigator={FakeNavigator {}}
     seedConfirmed={null}
     version="256"
   />,
