@@ -58,6 +58,7 @@ exports[`renders a connected Scanner 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ScannerScreen
+    componentId="TEST"
     handleQRCodeURL={[Function]}
   />,
   Symbol(enzyme.__renderer__): Object {

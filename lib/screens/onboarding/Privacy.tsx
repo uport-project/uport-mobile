@@ -1,14 +1,12 @@
 import * as React from 'react'
-import { Navigator, NavigatorStyle } from 'react-native-navigation'
+import { Navigation } from 'react-native-navigation'
 import { Screen, Container, Text, NavBar } from '@kancha'
 
 import termsConditions from 'uPortMobile/lib/content/privacyContent.json'
 
-interface PrivacyProps {
-  navigator: Navigator
-}
+interface PrivacyProps extends Kancha.NavigationScreen {}
 
-const Privacy: React.FC<PrivacyProps> = props => {
+const Privacy: React.FC<PrivacyProps> = ({ componentId }) => {
   return (
     <Screen statusBarHidden type={Screen.Types.Primary} config={Screen.Config.Scroll}>
       <Container padding>

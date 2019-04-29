@@ -1,22 +1,13 @@
 import * as React from 'react'
 import { ViewStyle, SafeAreaView } from 'react-native'
-import { Container, ScannerControl, Text } from '@kancha'
+import { Container, Button, Text, Icon } from '@kancha'
 import { RNCamera } from 'react-native-camera'
 
 interface ScannerProps {
   /**
-   * Scanner enabled
-   */
-  isEnabled: boolean
-  /**
    * Callback when barcode has been read
    */
   onBarcodeRead: (event: any) => void
-  /**
-   * Callback when barcode has been read
-   */
-  startScanner: () => void
-
   /**
    * Close the scanner
    */
@@ -57,25 +48,24 @@ const PendingPermission = () => {
   )
 }
 
-const QRCodeScanner: React.FC<ScannerProps> = ({
-  isEnabled,
-  onBarcodeRead,
-  startScanner,
-  closeScanner,
-  hasPermission,
-}) => {
+const QRCodeScanner: React.FC<ScannerProps> = ({ onBarcodeRead, closeScanner, hasPermission }) => {
   const scannerViewStyles: ViewStyle = {
     flex: 1,
     justifyContent: 'flex-end',
-    borderWidth: 5,
-    borderRadius: 40,
-    borderColor: isEnabled ? 'rgba(255,0,0, 0.3)' : 'rgba(0,0,0, 0)',
+    alignItems: 'center',
   }
 
   return hasPermission ? (
     <RNCamera captureAudio={false} onBarCodeRead={onBarcodeRead} style={{ flex: 1 }}>
       <SafeAreaView style={scannerViewStyles}>
-        <ScannerControl startScanner={startScanner} working={isEnabled} closeScanner={closeScanner} />
+        <Container paddingBottom={35}>
+          <Button
+            type={Button.Types.Secondary}
+            onPress={() => closeScanner()}
+            block={Button.Block.Clear}
+            buttonText={'Close'}
+          />
+        </Container>
       </SafeAreaView>
     </RNCamera>
   ) : (

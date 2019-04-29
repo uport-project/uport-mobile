@@ -1,5 +1,27 @@
 # Change Log
 
+## [v449](https://github.com/uport-project/uport-mobile/tree/v449) (2019-04-26)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v448...v449)
+
+**Merged pull requests:**
+
+- Upgrade RNN to 2.x [\#107](https://github.com/uport-project/uport-mobile/pull/107) ([jasonhealy](https://github.com/jasonhealy))
+
+## [v448](https://github.com/uport-project/uport-mobile/tree/v448) (2019-04-26)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v447...v448)
+
+**Merged pull requests:**
+
+- Fix migration of accounts [\#106](https://github.com/uport-project/uport-mobile/pull/106) ([pelle](https://github.com/pelle))
+
+## [v447](https://github.com/uport-project/uport-mobile/tree/v447) (2019-04-26)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v446...v447)
+
+**Merged pull requests:**
+
+- Fixed expiresIn in verReq [\#131](https://github.com/uport-project/uport-mobile/pull/131) ([simonas-notcat](https://github.com/simonas-notcat))
+- Caleuche production URL [\#119](https://github.com/uport-project/uport-mobile/pull/119) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v446](https://github.com/uport-project/uport-mobile/tree/v446) (2019-04-23)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v445...v446)
 

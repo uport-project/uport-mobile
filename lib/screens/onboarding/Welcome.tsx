@@ -1,8 +1,9 @@
 import * as React from 'react'
 import { Image } from 'react-native'
-import { Navigator } from 'react-native-navigation'
 import { connect } from 'react-redux'
 import { Screen, Container, Button, Text, Images } from '@kancha'
+import SCREENS from '../Screens'
+import { Navigation } from 'react-native-navigation'
 
 import { track } from 'uPortMobile/lib/actions/metricActions'
 import { segmentId } from 'uPortMobile/lib/selectors/identities'
@@ -10,8 +11,8 @@ import { segmentId } from 'uPortMobile/lib/selectors/identities'
 import TESTID from 'uPortMobile/lib/e2e/testIDs'
 
 interface WelcomeProps {
-  navigator: Navigator
   trackSegment: (event: any) => any
+  componentId: string
 }
 
 class Welcome extends React.Component<WelcomeProps> {
@@ -41,7 +42,13 @@ class Welcome extends React.Component<WelcomeProps> {
                 bold
                 fullWidth
                 buttonText={'Get Started'}
-                onPress={() => this.props.navigator.push({ screen: 'onboarding2.Learn' })}
+                onPress={() =>
+                  Navigation.push(this.props.componentId, {
+                    component: {
+                      name: SCREENS.Learn,
+                    },
+                  })
+                }
                 type={Button.Types.Custom}
                 block={Button.Block.Filled}
               />
@@ -50,7 +57,13 @@ class Welcome extends React.Component<WelcomeProps> {
                 bold
                 fullWidth
                 buttonText={'Recover Identity'}
-                onPress={() => this.props.navigator.push({ screen: 'recovery.seedInstructions' })}
+                onPress={() =>
+                  Navigation.push(this.props.componentId, {
+                    component: {
+                      name: SCREENS.RECOVERY.RestoreSeedInstructions,
+                    },
+                  })
+                }
                 type={Button.Types.Custom}
                 block={Button.Block.Clear}
               />
@@ -78,6 +91,6 @@ export const mapDispatchToProps = (dispatch: any) => {
 }
 
 export default connect(
-  mapDispatchToProps,
+  mapStateToProps,
   mapDispatchToProps,
 )(Welcome)
