@@ -22,31 +22,44 @@ exports[`DisclosureCard missing claims renders disabled button and descriptions 
   />
   <View
     style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        undefined,
+      ]
     }
   >
     <View
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-          },
-          undefined,
-        ]
+        Object {
+          "marginBottom": 16,
+          "marginTop": 16,
+        }
       }
     >
-      <View
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
-          Object {
-            "marginBottom": 16,
-            "marginTop": 16,
-          }
+          Array [
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+              "fontFamily": undefined,
+              "fontSize": 13,
+            },
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+            },
+          ]
         }
       >
+        You've 
+        interacted
+         with 
+        Coinbase
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -64,31 +77,9 @@ exports[`DisclosureCard missing claims renders disabled button and descriptions 
             ]
           }
         >
-          You've 
-          interacted
-           with 
-          Coinbase
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                  "fontFamily": undefined,
-                  "fontSize": 13,
-                },
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                },
-              ]
-            }
-          >
-             once 
-          </Text>
+           once 
         </Text>
-      </View>
+      </Text>
     </View>
   </View>
   <View
@@ -697,31 +688,44 @@ exports[`DisclosureCard missing claims renders disabled button and descriptions 
   />
   <View
     style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        undefined,
+      ]
     }
   >
     <View
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-          },
-          undefined,
-        ]
+        Object {
+          "marginBottom": 16,
+          "marginTop": 16,
+        }
       }
     >
-      <View
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
-          Object {
-            "marginBottom": 16,
-            "marginTop": 16,
-          }
+          Array [
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+              "fontFamily": undefined,
+              "fontSize": 13,
+            },
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+            },
+          ]
         }
       >
+        You've 
+        interacted
+         with 
+        Coinbase
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -739,31 +743,9 @@ exports[`DisclosureCard missing claims renders disabled button and descriptions 
             ]
           }
         >
-          You've 
-          interacted
-           with 
-          Coinbase
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                  "fontFamily": undefined,
-                  "fontSize": 13,
-                },
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                },
-              ]
-            }
-          >
-             once 
-          </Text>
+           once 
         </Text>
-      </View>
+      </Text>
     </View>
   </View>
   <View
@@ -1649,31 +1631,44 @@ exports[`DisclosureCard missing claims renders disabled button and descriptions 
   />
   <View
     style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        undefined,
+      ]
     }
   >
     <View
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-          },
-          undefined,
-        ]
+        Object {
+          "marginBottom": 16,
+          "marginTop": 16,
+        }
       }
     >
-      <View
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
-          Object {
-            "marginBottom": 16,
-            "marginTop": 16,
-          }
+          Array [
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+              "fontFamily": undefined,
+              "fontSize": 13,
+            },
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+            },
+          ]
         }
       >
+        You've 
+        interacted
+         with 
+        Coinbase
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -1691,31 +1686,9 @@ exports[`DisclosureCard missing claims renders disabled button and descriptions 
             ]
           }
         >
-          You've 
-          interacted
-           with 
-          Coinbase
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                  "fontFamily": undefined,
-                  "fontSize": 13,
-                },
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                },
-              ]
-            }
-          >
-             once 
-          </Text>
+           once 
         </Text>
-      </View>
+      </Text>
     </View>
   </View>
   <View
@@ -2363,31 +2336,44 @@ exports[`DisclosureCard missing claims renders enabled button and descriptions f
   />
   <View
     style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        undefined,
+      ]
     }
   >
     <View
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-          },
-          undefined,
-        ]
+        Object {
+          "marginBottom": 16,
+          "marginTop": 16,
+        }
       }
     >
-      <View
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
-          Object {
-            "marginBottom": 16,
-            "marginTop": 16,
-          }
+          Array [
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+              "fontFamily": undefined,
+              "fontSize": 13,
+            },
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+            },
+          ]
         }
       >
+        You've 
+        interacted
+         with 
+        Coinbase
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -2405,31 +2391,9 @@ exports[`DisclosureCard missing claims renders enabled button and descriptions f
             ]
           }
         >
-          You've 
-          interacted
-           with 
-          Coinbase
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                  "fontFamily": undefined,
-                  "fontSize": 13,
-                },
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                },
-              ]
-            }
-          >
-             once 
-          </Text>
+           once 
         </Text>
-      </View>
+      </Text>
     </View>
   </View>
   <View
@@ -3019,7 +2983,6 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <DisclosureCard
     accountAuthorized={false}
     accountProfile={null}
-    accountProfileLookup={[Function]}
     authorizeAccount={[Function]}
     authorizeRequest={[Function]}
     authorized={false}
@@ -3071,24 +3034,15 @@ ShallowWrapper {
           }
         />,
         null,
-        <Component
-          style={
+        <InteractionStats
+          actionText="interacted"
+          counterParty={null}
+          stats={
             Object {
-              "flexDirection": "row",
-              "justifyContent": "center",
+              "shared": 0,
             }
           }
-        >
-          <InteractionStats
-            actionText="interacted"
-            counterParty={null}
-            stats={
-              Object {
-                "shared": 0,
-              }
-            }
-          />
-        </Component>,
+        />,
         <Component
           style={
             Object {
@@ -3227,38 +3181,16 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
-          "children": <InteractionStats
-            actionText="interacted"
-            counterParty={null}
-            stats={
-              Object {
-                "shared": 0,
-              }
-            }
-          />,
-          "style": Object {
-            "flexDirection": "row",
-            "justifyContent": "center",
+          "actionText": "interacted",
+          "counterParty": null,
+          "stats": Object {
+            "shared": 0,
           },
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "actionText": "interacted",
-            "counterParty": null,
-            "stats": Object {
-              "shared": 0,
-            },
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
+        "rendered": null,
         "type": [Function],
       },
       Object {
@@ -3632,24 +3564,15 @@ ShallowWrapper {
             }
           />,
           null,
-          <Component
-            style={
+          <InteractionStats
+            actionText="interacted"
+            counterParty={null}
+            stats={
               Object {
-                "flexDirection": "row",
-                "justifyContent": "center",
+                "shared": 0,
               }
             }
-          >
-            <InteractionStats
-              actionText="interacted"
-              counterParty={null}
-              stats={
-                Object {
-                  "shared": 0,
-                }
-              }
-            />
-          </Component>,
+          />,
           <Component
             style={
               Object {
@@ -3788,38 +3711,16 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
-            "children": <InteractionStats
-              actionText="interacted"
-              counterParty={null}
-              stats={
-                Object {
-                  "shared": 0,
-                }
-              }
-            />,
-            "style": Object {
-              "flexDirection": "row",
-              "justifyContent": "center",
+            "actionText": "interacted",
+            "counterParty": null,
+            "stats": Object {
+              "shared": 0,
             },
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "actionText": "interacted",
-              "counterParty": null,
-              "stats": Object {
-                "shared": 0,
-              },
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
+          "rendered": null,
           "type": [Function],
         },
         Object {
@@ -4252,31 +4153,44 @@ exports[`DisclosureCard renders correctly with a full disclosure request 1`] = `
   />
   <View
     style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        undefined,
+      ]
     }
   >
     <View
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-          },
-          undefined,
-        ]
+        Object {
+          "marginBottom": 16,
+          "marginTop": 16,
+        }
       }
     >
-      <View
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
-          Object {
-            "marginBottom": 16,
-            "marginTop": 16,
-          }
+          Array [
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+              "fontFamily": undefined,
+              "fontSize": 13,
+            },
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+            },
+          ]
         }
       >
+        You've 
+        interacted
+         with 
+        Coinbase
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -4294,31 +4208,9 @@ exports[`DisclosureCard renders correctly with a full disclosure request 1`] = `
             ]
           }
         >
-          You've 
-          interacted
-           with 
-          Coinbase
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                  "fontFamily": undefined,
-                  "fontSize": 13,
-                },
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                },
-              ]
-            }
-          >
-             once 
-          </Text>
+           once 
         </Text>
-      </View>
+      </Text>
     </View>
   </View>
   <View
@@ -4435,31 +4327,44 @@ exports[`DisclosureCard renders correctly with a full disclosure request and cli
   />
   <View
     style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        undefined,
+      ]
     }
   >
     <View
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-          },
-          undefined,
-        ]
+        Object {
+          "marginBottom": 16,
+          "marginTop": 16,
+        }
       }
     >
-      <View
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
-          Object {
-            "marginBottom": 16,
-            "marginTop": 16,
-          }
+          Array [
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+              "fontFamily": undefined,
+              "fontSize": 13,
+            },
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+            },
+          ]
         }
       >
+        You've 
+        interacted
+         with 
+        Coinbase
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -4477,31 +4382,9 @@ exports[`DisclosureCard renders correctly with a full disclosure request and cli
             ]
           }
         >
-          You've 
-          interacted
-           with 
-          Coinbase
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                  "fontFamily": undefined,
-                  "fontSize": 13,
-                },
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                },
-              ]
-            }
-          >
-             once 
-          </Text>
+           once 
         </Text>
-      </View>
+      </Text>
     </View>
   </View>
   <View
@@ -4618,31 +4501,44 @@ exports[`DisclosureCard renders correctly with a full disclosure request and ver
   />
   <View
     style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        undefined,
+      ]
     }
   >
     <View
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-          },
-          undefined,
-        ]
+        Object {
+          "marginBottom": 16,
+          "marginTop": 16,
+        }
       }
     >
-      <View
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
-          Object {
-            "marginBottom": 16,
-            "marginTop": 16,
-          }
+          Array [
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+              "fontFamily": undefined,
+              "fontSize": 13,
+            },
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+            },
+          ]
         }
       >
+        You've 
+        interacted
+         with 
+        Coinbase
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -4660,31 +4556,9 @@ exports[`DisclosureCard renders correctly with a full disclosure request and ver
             ]
           }
         >
-          You've 
-          interacted
-           with 
-          Coinbase
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                  "fontFamily": undefined,
-                  "fontSize": 13,
-                },
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                },
-              ]
-            }
-          >
-             once 
-          </Text>
+           once 
         </Text>
-      </View>
+      </Text>
     </View>
   </View>
   <View
@@ -5311,31 +5185,44 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
   />
   <View
     style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        undefined,
+      ]
     }
   >
     <View
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-          },
-          undefined,
-        ]
+        Object {
+          "marginBottom": 16,
+          "marginTop": 16,
+        }
       }
     >
-      <View
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
-          Object {
-            "marginBottom": 16,
-            "marginTop": 16,
-          }
+          Array [
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+              "fontFamily": undefined,
+              "fontSize": 13,
+            },
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+            },
+          ]
         }
       >
+        You've 
+        interacted
+         with 
+        Coinbase
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -5353,31 +5240,9 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
             ]
           }
         >
-          You've 
-          interacted
-           with 
-          Coinbase
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                  "fontFamily": undefined,
-                  "fontSize": 13,
-                },
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                },
-              ]
-            }
-          >
-             once 
-          </Text>
+           once 
         </Text>
-      </View>
+      </Text>
     </View>
   </View>
   <View
@@ -5494,31 +5359,44 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
   />
   <View
     style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        undefined,
+      ]
     }
   >
     <View
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-          },
-          undefined,
-        ]
+        Object {
+          "marginBottom": 16,
+          "marginTop": 16,
+        }
       }
     >
-      <View
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
-          Object {
-            "marginBottom": 16,
-            "marginTop": 16,
-          }
+          Array [
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+              "fontFamily": undefined,
+              "fontSize": 13,
+            },
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+            },
+          ]
         }
       >
+        You've 
+        interacted
+         with 
+        Coinbase
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -5536,31 +5414,9 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
             ]
           }
         >
-          You've 
-          interacted
-           with 
-          Coinbase
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                  "fontFamily": undefined,
-                  "fontSize": 13,
-                },
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                },
-              ]
-            }
-          >
-             once 
-          </Text>
+           once 
         </Text>
-      </View>
+      </Text>
     </View>
   </View>
   <View
@@ -5677,31 +5533,44 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
   />
   <View
     style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        undefined,
+      ]
     }
   >
     <View
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-          },
-          undefined,
-        ]
+        Object {
+          "marginBottom": 16,
+          "marginTop": 16,
+        }
       }
     >
-      <View
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
-          Object {
-            "marginBottom": 16,
-            "marginTop": 16,
-          }
+          Array [
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+              "fontFamily": undefined,
+              "fontSize": 13,
+            },
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+            },
+          ]
         }
       >
+        You've 
+        interacted
+         with 
+        Coinbase
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -5719,31 +5588,9 @@ exports[`DisclosureCard renders correctly with a full disclosure request with pu
             ]
           }
         >
-          You've 
-          interacted
-           with 
-          Coinbase
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                  "fontFamily": undefined,
-                  "fontSize": 13,
-                },
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                },
-              ]
-            }
-          >
-             once 
-          </Text>
+           once 
         </Text>
-      </View>
+      </Text>
     </View>
   </View>
   <View
@@ -5860,31 +5707,44 @@ exports[`DisclosureCard renders correctly with a segregated account request and 
   />
   <View
     style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        undefined,
+      ]
     }
   >
     <View
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-          },
-          undefined,
-        ]
+        Object {
+          "marginBottom": 16,
+          "marginTop": 16,
+        }
       }
     >
-      <View
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
-          Object {
-            "marginBottom": 16,
-            "marginTop": 16,
-          }
+          Array [
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+              "fontFamily": undefined,
+              "fontSize": 13,
+            },
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+            },
+          ]
         }
       >
+        You've 
+        interacted
+         with 
+        Coinbase
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -5902,31 +5762,9 @@ exports[`DisclosureCard renders correctly with a segregated account request and 
             ]
           }
         >
-          You've 
-          interacted
-           with 
-          Coinbase
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                  "fontFamily": undefined,
-                  "fontSize": 13,
-                },
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                },
-              ]
-            }
-          >
-             once 
-          </Text>
+           once 
         </Text>
-      </View>
+      </Text>
     </View>
   </View>
   <View
@@ -6043,31 +5881,44 @@ exports[`DisclosureCard renders correctly with a simple request and client info 
   />
   <View
     style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        undefined,
+      ]
     }
   >
     <View
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-          },
-          undefined,
-        ]
+        Object {
+          "marginBottom": 16,
+          "marginTop": 16,
+        }
       }
     >
-      <View
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
-          Object {
-            "marginBottom": 16,
-            "marginTop": 16,
-          }
+          Array [
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+              "fontFamily": undefined,
+              "fontSize": 13,
+            },
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+            },
+          ]
         }
       >
+        You've 
+        interacted
+         with 
+        Coinbase
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -6085,31 +5936,9 @@ exports[`DisclosureCard renders correctly with a simple request and client info 
             ]
           }
         >
-          You've 
-          interacted
-           with 
-          Coinbase
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                  "fontFamily": undefined,
-                  "fontSize": 13,
-                },
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                },
-              ]
-            }
-          >
-             once 
-          </Text>
+           once 
         </Text>
-      </View>
+      </Text>
     </View>
   </View>
   <View
@@ -6226,31 +6055,44 @@ exports[`DisclosureCard renders correctly with error 1`] = `
   />
   <View
     style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        undefined,
+      ]
     }
   >
     <View
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-          },
-          undefined,
-        ]
+        Object {
+          "marginBottom": 16,
+          "marginTop": 16,
+        }
       }
     >
-      <View
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
-          Object {
-            "marginBottom": 16,
-            "marginTop": 16,
-          }
+          Array [
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+              "fontFamily": undefined,
+              "fontSize": 13,
+            },
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+            },
+          ]
         }
       >
+        You've 
+        interacted
+         with 
+        Coinbase
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -6268,31 +6110,9 @@ exports[`DisclosureCard renders correctly with error 1`] = `
             ]
           }
         >
-          You've 
-          interacted
-           with 
-          Coinbase
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                  "fontFamily": undefined,
-                  "fontSize": 13,
-                },
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                },
-              ]
-            }
-          >
-             once 
-          </Text>
+           once 
         </Text>
-      </View>
+      </Text>
     </View>
   </View>
   <View
@@ -6429,31 +6249,44 @@ exports[`DisclosureCard unpublished identity renders correctly after publishing 
   />
   <View
     style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        undefined,
+      ]
     }
   >
     <View
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-          },
-          undefined,
-        ]
+        Object {
+          "marginBottom": 16,
+          "marginTop": 16,
+        }
       }
     >
-      <View
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
-          Object {
-            "marginBottom": 16,
-            "marginTop": 16,
-          }
+          Array [
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+              "fontFamily": undefined,
+              "fontSize": 13,
+            },
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+            },
+          ]
         }
       >
+        You've 
+        interacted
+         with 
+        Coinbase
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -6471,31 +6304,9 @@ exports[`DisclosureCard unpublished identity renders correctly after publishing 
             ]
           }
         >
-          You've 
-          interacted
-           with 
-          Coinbase
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                  "fontFamily": undefined,
-                  "fontSize": 13,
-                },
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                },
-              ]
-            }
-          >
-             once 
-          </Text>
+           once 
         </Text>
-      </View>
+      </Text>
     </View>
   </View>
   <View
@@ -6612,31 +6423,44 @@ exports[`DisclosureCard unpublished identity renders correctly with identity not
   />
   <View
     style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        undefined,
+      ]
     }
   >
     <View
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-          },
-          undefined,
-        ]
+        Object {
+          "marginBottom": 16,
+          "marginTop": 16,
+        }
       }
     >
-      <View
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
-          Object {
-            "marginBottom": 16,
-            "marginTop": 16,
-          }
+          Array [
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+              "fontFamily": undefined,
+              "fontSize": 13,
+            },
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+            },
+          ]
         }
       >
+        You've 
+        interacted
+         with 
+        Coinbase
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -6654,31 +6478,9 @@ exports[`DisclosureCard unpublished identity renders correctly with identity not
             ]
           }
         >
-          You've 
-          interacted
-           with 
-          Coinbase
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                  "fontFamily": undefined,
-                  "fontSize": 13,
-                },
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                },
-              ]
-            }
-          >
-             once 
-          </Text>
+           once 
         </Text>
-      </View>
+      </Text>
     </View>
   </View>
   <View
@@ -6795,31 +6597,44 @@ exports[`DisclosureCard with network with no existing account for network render
   />
   <View
     style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        undefined,
+      ]
     }
   >
     <View
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-          },
-          undefined,
-        ]
+        Object {
+          "marginBottom": 16,
+          "marginTop": 16,
+        }
       }
     >
-      <View
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
-          Object {
-            "marginBottom": 16,
-            "marginTop": 16,
-          }
+          Array [
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+              "fontFamily": undefined,
+              "fontSize": 13,
+            },
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+            },
+          ]
         }
       >
+        You've 
+        interacted
+         with 
+        Coinbase
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -6837,31 +6652,9 @@ exports[`DisclosureCard with network with no existing account for network render
             ]
           }
         >
-          You've 
-          interacted
-           with 
-          Coinbase
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                  "fontFamily": undefined,
-                  "fontSize": 13,
-                },
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                },
-              ]
-            }
-          >
-             once 
-          </Text>
+           once 
         </Text>
-      </View>
+      </Text>
     </View>
   </View>
   <View
@@ -6978,31 +6771,44 @@ exports[`DisclosureCard with network with no existing segregated account for cli
   />
   <View
     style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        undefined,
+      ]
     }
   >
     <View
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-          },
-          undefined,
-        ]
+        Object {
+          "marginBottom": 16,
+          "marginTop": 16,
+        }
       }
     >
-      <View
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
-          Object {
-            "marginBottom": 16,
-            "marginTop": 16,
-          }
+          Array [
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+              "fontFamily": undefined,
+              "fontSize": 13,
+            },
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+            },
+          ]
         }
       >
+        You've 
+        interacted
+         with 
+        Coinbase
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -7020,31 +6826,9 @@ exports[`DisclosureCard with network with no existing segregated account for cli
             ]
           }
         >
-          You've 
-          interacted
-           with 
-          Coinbase
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                  "fontFamily": undefined,
-                  "fontSize": 13,
-                },
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                },
-              ]
-            }
-          >
-             once 
-          </Text>
+           once 
         </Text>
-      </View>
+      </Text>
     </View>
   </View>
   <View
@@ -7161,31 +6945,44 @@ exports[`DisclosureCard with network with pre-existing account renders correctly
   />
   <View
     style={
-      Object {
-        "flexDirection": "row",
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        undefined,
+      ]
     }
   >
     <View
       style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-          },
-          undefined,
-        ]
+        Object {
+          "marginBottom": 16,
+          "marginTop": 16,
+        }
       }
     >
-      <View
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
-          Object {
-            "marginBottom": 16,
-            "marginTop": 16,
-          }
+          Array [
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+              "fontFamily": undefined,
+              "fontSize": 13,
+            },
+            Object {
+              "color": "rgba(138,155,161,1.0)",
+            },
+          ]
         }
       >
+        You've 
+        interacted
+         with 
+        Coinbase
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -7203,31 +7000,9 @@ exports[`DisclosureCard with network with pre-existing account renders correctly
             ]
           }
         >
-          You've 
-          interacted
-           with 
-          Coinbase
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                  "fontFamily": undefined,
-                  "fontSize": 13,
-                },
-                Object {
-                  "color": "rgba(138,155,161,1.0)",
-                },
-              ]
-            }
-          >
-             once 
-          </Text>
+           once 
         </Text>
-      </View>
+      </Text>
     </View>
   </View>
   <View
