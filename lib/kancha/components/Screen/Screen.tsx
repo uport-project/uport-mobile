@@ -126,7 +126,7 @@ const Screen: React.FunctionComponent<ScreenProps> & {
    */
   const scrollViewContent = (
     <React.Fragment>
-      <KeyboardAwareScrollView style={scrollViewStyle}>
+      <KeyboardAwareScrollView style={scrollViewStyle} contentInsetAdjustmentBehavior={'never'}>
         {props.expandingHeaderContent && (
           <React.Fragment>
             <Container backgroundColor={props.headerBackgroundColor}>{props.expandingHeaderContent}</Container>
