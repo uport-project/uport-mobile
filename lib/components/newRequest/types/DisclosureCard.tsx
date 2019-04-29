@@ -37,6 +37,10 @@ import { authorizeRequest, cancelRequest, clearRequest, authorizeAccount } from 
 import { Container, Text, Banner, Icon, Button, Screen, Section, ListItem, IndicatorBar, Theme } from '@kancha'
 import DisclosureRequestModel from './DisclosureRequestModel'
 
+/**
+ * These REDUX props will be moved to the Disclosure RequestModel making that the connected HOC.
+ * This component will become a non-redux component.
+ */
 interface DisclosureCardProps {
   currentIdentity: string
   client: any
@@ -71,16 +75,19 @@ interface DisclosureCardProps {
 }
 
 /**
- * Dumb request component. Please DO NOT litter with conditional logic.
- * All business logic should live in the RequestModel
+ * Dumb request component. Please DO NOT litter JSX template with conditional logic :D
+ * All business logic should live in the RequestModel. This allows react to reuse more of the UI between renders
  */
 export const DisclosureCard: React.FC<DisclosureCardProps> = props => {
   const requestModel = DisclosureRequestModel(props)
   return (
     <Screen
+      config={Screen.Config.Scroll}
+      type={Screen.Types.Secondary}
+      statusBarHidden
       footerNavComponent={
         requestModel && (
-          <Container>
+          <Container backgroundColor={Theme.colors.primary.background}>
             <Text textAlign={'center'} type={Text.Types.SectionHeader}>
               {requestModel.statsMessage}
             </Text>
@@ -108,9 +115,6 @@ export const DisclosureCard: React.FC<DisclosureCardProps> = props => {
           </Container>
         )
       }
-      config={Screen.Config.Scroll}
-      type={Screen.Types.Secondary}
-      statusBarHidden
     >
       {requestModel && (
         <Container>

@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Request, Screen, Container, Button, Text } from '@kancha'
+import { Navigation } from 'react-native-navigation'
 
 interface RequestScreenProps {
   navigator: any
@@ -19,7 +20,7 @@ class RequestScreen extends React.Component<RequestScreenProps, RequestScreenSta
      * Close modal
      */
 
-    this.props.navigator.dismissModal()
+    Navigation.dismissAllModals()
   }
 
   render() {

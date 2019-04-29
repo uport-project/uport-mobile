@@ -82,6 +82,7 @@ export function registerScreens(redux: any) {
 
 
   registerComponentWithRedux(redux)(SCREENS.Request, require('../components/Request/index').default)
+  registerComponentWithRedux(redux)(SCREENS.StaticRequest, require('../screens/requests/Request').default)
   registerComponentWithRedux(redux)(SCREENS.NewRequest, require('../components/newRequest/index').default)
   registerComponentWithRedux(redux)(SCREENS.NestedInfo, require('../components/shared/NestedInfo').default)
 

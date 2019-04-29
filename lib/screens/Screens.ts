@@ -32,6 +32,7 @@ export default {
   KeyChain: 'KeyChain',
 
   Request: 'Request',
+  StaticRequest: 'StaticRequest',
   NewRequest: 'NewRequest',
   NestedInfo: 'NestedInfo',
 

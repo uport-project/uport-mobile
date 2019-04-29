@@ -124,7 +124,7 @@ export class Settings extends React.Component<SettingsProps, SettingsState> {
         </Section>
         {this.state.devMode && (
           <Section title={'Developer Options'}>
-            <ListItem last onPress={() => this.goToScreen('screen.DesignSystem')}>
+            <ListItem last onPress={() => this.goToScreen(SCREENS.DesignSystem)}>
               Design System
             </ListItem>
           </Section>

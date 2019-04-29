@@ -99,7 +99,8 @@ const Screen: React.FunctionComponent<ScreenProps> & {
 } = props => {
   const scrollViewStyle: ViewStyle = {
     backgroundColor: props.type && Theme.colors[props.type].background,
-    // ...(props.footerNavComponent ? { paddingBottom: 100 } : {}),
+    // borderWidth: 1,
+    // borderColor: 'red',
   }
 
   const safeAreaViewStyle = {
@@ -135,7 +136,7 @@ const Screen: React.FunctionComponent<ScreenProps> & {
       </KeyboardAwareScrollView>
 
       {props.footerNavComponent && (
-        <SafeAreaView>
+        <SafeAreaView style={{ backgroundColor: Theme.colors.primary.background }}>
           <Container paddingTop dividerTop={props.footerNavDivider}>
             {props.footerNavComponent}
           </Container>
@@ -151,7 +152,7 @@ const Screen: React.FunctionComponent<ScreenProps> & {
       <Container flex={1}>{props.config === ScreenConfigs.SafeNoScroll ? mainContent : scrollViewContent}</Container>
 
       {props.footerNavComponent && props.config === ScreenConfigs.SafeNoScroll && (
-        <Container paddingBottom paddingTop dividerTop={props.footerNavDivider}>
+        <Container paddingTop dividerTop={props.footerNavDivider}>
           {props.footerNavComponent}
         </Container>
       )}

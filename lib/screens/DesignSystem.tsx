@@ -1,5 +1,7 @@
 import * as React from 'react'
 import { Container, Text, ListItem, Screen, Section } from '@kancha'
+import SCREENS from 'uPortMobile/lib/screens/Screens'
+import { Navigation } from 'react-native-navigation'
 
 interface FakeAvatarProps {}
 
@@ -16,10 +18,14 @@ class DesignSystem extends React.Component<any> {
             <ListItem
               avatarComponent={<FakeAvatar />}
               onPress={() => {
-                this.props.navigator.showModal({
-                  screen: 'screen.Request',
-                  navigatorStyle: {
-                    navBarHidden: true,
+                Navigation.showModal({
+                  component: {
+                    name: SCREENS.StaticRequest,
+                    options: {
+                      topBar: {
+                        visible: false,
+                      },
+                    },
                   },
                 })
               }}
