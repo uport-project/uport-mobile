@@ -91,4 +91,9 @@ export function registerScreens(redux: any) {
    */
   registerComponentWithRedux(redux)(SCREENS.MIGRATION.Complete, require('../components/Migrations/MigrationComplete').default)
   registerComponentWithRedux(redux)(SCREENS.MIGRATION.Legacy, require('../components/Migrations/LegacyMigration').default)
+
+  /**
+   * Dummy screens
+   */
+  registerComponentWithRedux(redux)(SCREENS.Dummy, require('../screens/Blank').default)
 }

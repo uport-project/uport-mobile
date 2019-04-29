@@ -191,6 +191,25 @@ export async function startMain() {
     },
   })
 
+  // Navigation.setRoot({
+  //   root: {
+  //     stack: {
+  //       children: [
+  //         {
+  //           component: {
+  //             name: SCREENS.Dummy,
+  //             options: {
+  //               topBar: {
+  //                 visible: false,
+  //               },
+  //             },
+  //           },
+  //         },
+  //       ],
+  //     },
+  //   },
+  // })
+
   /**
    * Begin root
    */

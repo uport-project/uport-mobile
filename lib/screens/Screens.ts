@@ -57,4 +57,9 @@ export default {
     Legacy: 'MigrationLegacy',
     Complete: 'MigrationComplete',
   },
+
+  /**
+   * For testing stuff
+   */
+  Dummy: 'Dummy',
 }
