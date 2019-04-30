@@ -26,6 +26,7 @@ export { default as NavBar } from './components/NavBar/NavBar'
 export { default as Input } from './components/Input/Input'
 export { default as Scanner } from './components/Scanner/Scanner'
 export { default as ScannerControl } from './components/ScannerControl/ScannerControl'
+export { default as Credential } from './components/Credential/Credential'
 
 export { default as Request } from './components/Request/Request'
 export { default as Banner } from './components/Banner/Banner'

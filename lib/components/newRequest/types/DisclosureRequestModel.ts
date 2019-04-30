@@ -1,20 +1,25 @@
 import { capitalizeFirstLetter } from 'uPortMobile/lib/utilities/string'
+import { string } from 'prop-types'
 
 /**
  * Types for the disclourse request
  */
-interface DisclosureRequestModelType {
+export interface DisclosureRequestModelType {
+  requestId: string
+  componentId: string
   title: string
   description: string
   actionButton: RequestActionButton
   cancelButton: RequestActionButton
-  showEthereumAccounts: boolean
   statsMessage: any // To Type
   requestItems: any // To Type
   appBranding: any // To Type
+  verifiedCredentials: any[] // To Type
+  missingCredentials: any[] // To Type
+  error: string | null
 }
 
-interface RequestActionButton {
+export interface RequestActionButton {
   disabled: boolean
   text: string
   action: (requestId: string, type?: string) => any
@@ -26,7 +31,7 @@ const parseErrorMessage = (message: string) => {
 }
 
 /**
- * Move to utils
+ * Count stats
  */
 const countStats = (stats: { [key: string]: number }) => {
   let total = 0
@@ -50,43 +55,49 @@ const interactionStatsMessage = (intStats: any, client: string) => {
  */
 const disclosureRequestItemModel = (props: any) => {
   if (!!props.actType && (props.actType === 'none' || props.accountAuthorized === true)) {
-    const requested =
-      props.requested &&
-      Object.keys(props.requested).map((claim, index) => {
-        return {
-          key: index + claim,
-          type: capitalizeFirstLetter(claim),
-          value: typeof props.requested[claim] !== 'object' ? props.requested[claim] : null,
-        }
-      })
+    const requested = props.requested
+      ? Object.keys(props.requested).map((claim, index) => {
+          return {
+            key: index + claim,
+            type: capitalizeFirstLetter(claim),
+            value: typeof props.requested[claim] !== 'object' ? props.requested[claim] : null,
+          }
+        })
+      : []
 
-    const pushStatus = props.pushPermissions && [
-      {
-        key: 'pushStatus',
-        type: 'Push Notifications',
-        value: props.snsRegistered
-          ? 'Allow'
-          : props.pushWorking
-          ? 'Registering'
-          : capitalizeFirstLetter(props.pushError) || 'Not available',
-      },
-    ]
+    const pushStatus = props.pushPermissions
+      ? [
+          {
+            key: 'pushStatus',
+            type: 'Push Notifications',
+            value: props.snsRegistered
+              ? 'Allow'
+              : props.pushWorking
+              ? 'Registering'
+              : capitalizeFirstLetter(props.pushError) || 'Not available',
+          },
+        ]
+      : []
 
-    const network = props.network && [
-      {
-        key: 'requestednetwork',
-        type: 'Network',
-        value: capitalizeFirstLetter(props.networkName),
-      },
-    ]
+    const network = props.network
+      ? [
+          {
+            key: 'requestednetwork',
+            type: 'Network',
+            value: capitalizeFirstLetter(props.networkName),
+          },
+        ]
+      : []
 
-    const account = props.account && [
-      {
-        key: 'accountaddress',
-        type: 'Account address',
-        value: props.account,
-      },
-    ]
+    const account = props.account
+      ? [
+          {
+            key: 'accountaddress',
+            type: 'Account address',
+            value: props.account,
+          },
+        ]
+      : []
 
     return [...requested, ...pushStatus, ...network, ...account]
   }
@@ -94,13 +105,14 @@ const disclosureRequestItemModel = (props: any) => {
   return []
 }
 
-const ethereumAccount = (props: any) => {
-  if (props.actType !== 'none' && props.account && props.accountAuthorized === false) {
-    // console.tron.log(props.client)
-    return {}
-  }
+const disclosureRequestVCModel = (props: any) => {
+  /** Parse the data here if needed */
+  return props.verified
+}
 
-  return null
+const disclosureRequestMissingCredentialModel = (props: any) => {
+  /** Parse the data here if needed */
+  return props.missing
 }
 
 /**
@@ -111,6 +123,8 @@ const DisclosureRequestModel = (props: any): DisclosureRequestModelType | null =
    * Global for all disclosure request
    */
   const disclosureRequestCommon = {
+    requestId: props.requestId,
+    componentId: props.componentId,
     appBranding: {
       profileImage: props.client && props.client.avatar,
       bannerImage: props.client && props.client.bannerImage,
@@ -118,7 +132,9 @@ const DisclosureRequestModel = (props: any): DisclosureRequestModelType | null =
     },
     statsMessage: interactionStatsMessage(props.interactionStats, props.client && props.client.name),
     requestItems: disclosureRequestItemModel(props),
-    ethereumAccount: ethereumAccount(props),
+    verifiedCredentials: disclosureRequestVCModel(props),
+    missingCredentials: disclosureRequestMissingCredentialModel(props),
+    error: props.error ? parseErrorMessage(props.error) : null,
   }
 
   /**
@@ -140,7 +156,6 @@ const DisclosureRequestModel = (props: any): DisclosureRequestModelType | null =
         action: props.cancelRequest,
         disabled: false,
       },
-      showEthereumAccounts: false,
       ...disclosureRequestCommon,
     }
   }
@@ -174,7 +189,6 @@ const DisclosureRequestModel = (props: any): DisclosureRequestModelType | null =
         action: props.cancelRequest,
         disabled: false,
       },
-      showEthereumAccounts: false,
       ...disclosureRequestCommon,
     }
   }

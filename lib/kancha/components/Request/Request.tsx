@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Container, Text, Section, ListItem, Button, Icon } from '@kancha'
+import { Container, Text, Section, ListItem, Button, Icon, Credential } from '@kancha'
 
 import { ImageBackground, ViewStyle, Image } from 'react-native'
 
@@ -43,9 +43,8 @@ const RequestContent: React.FC<any> = () => {
     <Section noTopMargin noTopBorder>
       <ListItem title={'Title of item'}>Main Item Name</ListItem>
       <ListItem title={'Title of item'}>Main Item Name</ListItem>
-      <ListItem last title={'Title of item'}>
-        Main Item Name
-      </ListItem>
+      <ListItem title={'Title of item'}>Main Item Name</ListItem>
+      <Credential claimType={'Hello World'} componentId={'TEST'} missing />
     </Section>
   )
 }

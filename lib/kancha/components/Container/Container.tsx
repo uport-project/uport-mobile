@@ -114,7 +114,11 @@ interface ContainerProps {
   /** Add addionaly custom styles for a container. Use sparingly!! */
   viewStyle?: ViewStyle
 
+  /** Disable the view from being able to detect interactions */
   disabled?: boolean
+
+  /** A shadow level to apply */
+  shadow?: number
 }
 
 const Container: React.FunctionComponent<ContainerProps> = props => {
@@ -152,6 +156,16 @@ const Container: React.FunctionComponent<ContainerProps> = props => {
     ...(props.b !== undefined ? { position: 'absolute', bottom: props.b, width: '100%' } : {}),
     ...(props.r !== undefined ? { position: 'absolute', bottom: props.r, width: '100%' } : {}),
     ...(props.disabled ? { opacity: 0.5 } : {}),
+    ...(props.shadow
+      ? {
+          shadowColor: '#ffffff',
+          shadowOpacity: 0.2,
+          shadowRadius: props.shadow * 5,
+          backgroundColor: props.backgroundColor
+            ? props.background && Theme.colors[props.background].background
+            : '#ffffff',
+        }
+      : {}),
 
     /** Margins */
     marginBottom: typeof props.marginBottom === 'boolean' ? Theme.spacing.default : props.marginBottom,
