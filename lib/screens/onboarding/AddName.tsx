@@ -61,7 +61,7 @@ class AddName extends React.Component<AddNameProps> {
           </Container>
           <Container padding>
             <Text type={Text.Types.SubTitle} textAlign={'center'}>
-              Your name will not be shared with us or any other party until you choose to do so. You can change your
+              Your name will not be shared with us or any other party until you choose to do so. You can change this
               name at anytime.
             </Text>
           </Container>

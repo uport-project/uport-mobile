@@ -15,7 +15,7 @@ const Slide: React.FC<SlideProps> = ({ image, heading, content }) => {
   return (
     <Container flex={1}>
       <Container flex={1} alignItems={'center'} justifyContent={'center'}>
-        <Container backgroundColor={'#958CF6'} br={120} w={240} h={240} alignItems={'center'} justifyContent={'center'}>
+        <Container backgroundColor={'#FFFFFF'} br={120} w={240} h={240} alignItems={'center'} justifyContent={'center'}>
           <Image source={image} />
         </Container>
       </Container>

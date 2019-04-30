@@ -157,7 +157,7 @@ class AddAvatar extends React.Component<AddAvatarProps, AddAvatarState> {
         </Container>
         <Container padding>
           <Text type={Text.Types.SubTitle} textAlign={'center'}>
-            Congrats! You have successfully created a uPort identity. --- Here we can delay for 1600ms before
+            Congrats! You have successfully created a Haven Identity. Use it across Haven and the uPort ecosystem! --- Here we can delay for 1600ms before
             redirecting to main app ----
           </Text>
         </Container>

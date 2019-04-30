@@ -1,8 +1,8 @@
-app_identifier("me.uport") # The bundle identifier of your app
-apple_id("ios-certificates@uport.me") # Your Apple email address
+app_identifier("com.nodehaven.havenid") # The bundle identifier of your app
+apple_id("michael.bazzi@icloud.com") # Your Apple email address
 
-itc_team_id("118263247") # iTunes Connect Team ID
-team_id("82SAVLYZ3K") # Developer Portal Team ID
+# itc_team_id("118263247") # iTunes Connect Team ID
+team_id("FNARU2VLQ9") # Developer Portal Team ID
 
 # For more information about the Appfile, see:
 #     https://docs.fastlane.tools/advanced/#appfile

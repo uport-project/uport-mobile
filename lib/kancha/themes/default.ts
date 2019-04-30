@@ -12,7 +12,7 @@ const COLORS = {
   LIGHT_GREY: '#BBBBBB',
   MEDIUM_GREY: '#CCCCCC',
   DARK_GREY: '',
-  ROYAL_PURPLE: '#6A54D1',
+  ROYAL_PURPLE: '#143a8d', // Changed to Blue but keeping const same name for references
   CRIMSON_RED: '#D63A59',
   WASHED_GREEN: '#3DCF8A',
   SUNNY_ORANGE: '#E89835',

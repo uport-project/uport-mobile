@@ -158,10 +158,10 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
 
           <Container alignItems={'center'} paddingBottom paddingTop>
             <Text type={Text.Types.H2} bold>
-              Personalize uPort
+              Personalize Haven ID
             </Text>
             <Container paddingTop={5} paddingBottom>
-              <Text type={Text.Types.SubTitle}>Add your name and optional photo</Text>
+              <Text type={Text.Types.SubTitle}>Add your name and an optional photo</Text>
             </Container>
           </Container>
           <Container justifyContent={'center'} alignItems={'center'} paddingBottom>
@@ -267,8 +267,8 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
 
           <Container padding>
             <Text type={Text.Types.SubTitle} textAlign={'center'}>
-              You have successfully created a uPort DID identity. Your private keys have been saved securely to your
-              device
+              You have successfully created a Haven Decentralized ID. Your private keys have been saved securely to your
+              device.
             </Text>
           </Container>
         </Container>
