@@ -11,12 +11,24 @@ export interface DisclosureRequestModelType {
   description: string
   actionButton: RequestActionButton
   cancelButton: RequestActionButton
-  statsMessage: any // To Type
-  requestItems: any // To Type
-  appBranding: any // To Type
+  statsMessage: string
+  requestItems: RequestItem[] // To Type
+  appBranding: AppBranding // To Type
   verifiedCredentials: any[] // To Type
   missingCredentials: any[] // To Type
   error: string | null
+}
+
+interface RequestItem {
+  key: string
+  type: string
+  value: string | number
+}
+
+interface AppBranding {
+  profileImage: string
+  bannerImage: string
+  requestor: string
 }
 
 export interface RequestActionButton {
@@ -54,8 +66,9 @@ const interactionStatsMessage = (intStats: any, client: string) => {
  * Disclose request items model
  */
 const disclosureRequestItemModel = (props: any) => {
+  // console.tron.log(props)
   if (!!props.actType && (props.actType === 'none' || props.accountAuthorized === true)) {
-    const requested = props.requested
+    const requested: RequestItem[] = props.requested
       ? Object.keys(props.requested).map((claim, index) => {
           return {
             key: index + claim,
@@ -64,8 +77,8 @@ const disclosureRequestItemModel = (props: any) => {
           }
         })
       : []
-
-    const pushStatus = props.pushPermissions
+    //**Hidden */
+    const pushStatus: RequestItem[] = props.pushPermissions
       ? [
           {
             key: 'pushStatus',
@@ -78,8 +91,8 @@ const disclosureRequestItemModel = (props: any) => {
           },
         ]
       : []
-
-    const network = props.network
+    //**Hidden */
+    const network: RequestItem[] = props.network
       ? [
           {
             key: 'requestednetwork',
@@ -88,8 +101,8 @@ const disclosureRequestItemModel = (props: any) => {
           },
         ]
       : []
-
-    const account = props.account
+    //**Hidden */
+    const account: RequestItem[] = props.account
       ? [
           {
             key: 'accountaddress',
@@ -99,7 +112,7 @@ const disclosureRequestItemModel = (props: any) => {
         ]
       : []
 
-    return [...requested, ...pushStatus, ...network, ...account]
+    return requested
   }
 
   return []

@@ -119,6 +119,9 @@ interface ContainerProps {
 
   /** A shadow level to apply */
   shadow?: number
+
+  /** An opacity level. Use 1, 2, 3 etc  */
+  opacity?: number
 }
 
 const Container: React.FunctionComponent<ContainerProps> = props => {

@@ -40,12 +40,6 @@ import SCREENS from 'uPortMobile/lib/screens/Screens'
  * All business logic should live in the RequestModel. This allows react to reuse more of the UI between renders
  */
 export const DisclosureCard: React.FC<DisclosureRequestModelType> = requestModel => {
-  // const requestModel = DisclosureRequestModel(props)
-
-  // tslint:disable-next-line:no-console
-  // console.tron.log(props)
-  // console.tron.log(requestModel)
-
   return (
     <Screen
       config={Screen.Config.Scroll}
@@ -54,9 +48,12 @@ export const DisclosureCard: React.FC<DisclosureRequestModelType> = requestModel
       footerNavComponent={
         requestModel && (
           <Container backgroundColor={Theme.colors.primary.background}>
-            <Text textAlign={'center'} type={Text.Types.SectionHeader} warn={!!requestModel.error}>
-              {requestModel.error ? requestModel.error : requestModel.statsMessage}
-            </Text>
+            <Container paddingHorizontal>
+              <Text textAlign={'center'} type={Text.Types.SectionHeader} warn={!!requestModel.error}>
+                {requestModel.error ? requestModel.error : requestModel.statsMessage}
+              </Text>
+            </Container>
+
             <Container flexDirection={'row'} padding>
               <Container flex={1} paddingRight>
                 <Button
@@ -119,16 +116,15 @@ export const DisclosureCard: React.FC<DisclosureRequestModelType> = requestModel
           )}
           {requestModel.verifiedCredentials.length > 0 && (
             <Section noTopBorder noTopMargin>
-              {requestModel.verifiedCredentials.map((item: any, index: number) => {
+              {requestModel.verifiedCredentials.map((vc: any, index: number) => {
                 return (
                   <Credential
-                    key={item.vc.iss + '-' + index}
-                    issuer={item.issuer}
-                    verification={item.vc}
-                    claimType={item.claimType}
+                    key={vc.iss + '-' + index}
+                    issuer={vc.issuer}
+                    verification={vc}
+                    claimType={vc.claimType}
                     screen={SCREENS.Credential}
                     componentId={requestModel.componentId}
-                    missing={false}
                   />
                 )
               })}
@@ -137,7 +133,11 @@ export const DisclosureCard: React.FC<DisclosureRequestModelType> = requestModel
           {requestModel.missingCredentials.length > 0 && (
             <Section noTopBorder noTopMargin>
               {requestModel.missingCredentials.map((item: any, index: number) => {
-                return <Credential key={item.type + '-' + index} claimType={item.type} spec={item} missing />
+                return (
+                  item.essential && (
+                    <Credential key={item.type + '-' + index} claimType={item.type} spec={item} missing />
+                  )
+                )
               })}
             </Section>
           )}

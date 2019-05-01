@@ -3,6 +3,8 @@
  */
 export { default as Device } from './utilities/device'
 export { default as Strings } from './utilities/strings'
+export { default as Domain } from './utilities/domain'
+export { default as Issuer } from './utilities/issuer'
 
 /**
  * Theme & Constants

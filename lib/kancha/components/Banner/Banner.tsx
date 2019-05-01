@@ -4,7 +4,7 @@ import { Container, Text } from '@kancha'
 
 const Logo: React.FC<any> = props => {
   return (
-    <Container backgroundColor={'#FFFFFF'} br={10}>
+    <Container backgroundColor={'#FFFFFF'} br={10} viewStyle={{ overflow: 'hidden' }}>
       <Image resizeMode={'cover'} source={props.image} style={{ width: 70, height: 70 }} />
     </Container>
   )

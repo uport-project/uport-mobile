@@ -133,7 +133,7 @@ const Button: React.FC<ButtonProps> & {
     ...(fullWidth ? {} : { maxWidth: 300 }),
     borderRadius: Theme.roundedCorners.buttons,
     ...(centered ? { alignSelf: 'center' } : {}),
-    ...(disabled ? { opacity: 0.8 } : {}),
+    ...(disabled ? { opacity: 0.2 } : {}),
   }
 
   return navButton ? (
