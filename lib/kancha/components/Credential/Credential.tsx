@@ -40,9 +40,11 @@ const Credential: React.FC<CredentialProps> = props => {
     borderColor: Theme.colors.primary.accessories,
   }
 
+  type borderStyle = 'dotted' | 'dashed' | 'solid' | undefined
+
   const requiredBorder = {
     // @ts-ignore
-    borderStyle: 'dotted',
+    borderStyle: 'dotted' as borderStyle,
     borderColor: Theme.colors.warning.accessories,
   }
 

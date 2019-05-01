@@ -40,6 +40,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
           "bottom": 0,
         }
       }
+      contentInsetAdjustmentBehavior="never"
       getTextInputRefs={[Function]}
       onContentSizeChange={[Function]}
       onLayout={[Function]}
@@ -3357,6 +3358,7 @@ exports[`SettingsRoot renders without exploding 1`] = `
           "bottom": 0,
         }
       }
+      contentInsetAdjustmentBehavior="never"
       getTextInputRefs={[Function]}
       onContentSizeChange={[Function]}
       onLayout={[Function]}
