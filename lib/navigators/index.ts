@@ -5,6 +5,7 @@ import store from '../store/store'
 import { screen } from 'uPortMobile/lib/actions/metricActions'
 import requestQueue from '../utilities/requestQueue'
 import { handleURL } from '../actions/requestActions'
+
 /**
  * Register screens and components for react native navigation
  */
