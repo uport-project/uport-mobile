@@ -1,8 +1,9 @@
-import { NativeModules } from 'react-native'
 import { Navigation } from 'react-native-navigation'
 import { Theme, Icon, Device } from '../kancha'
 import SCREENS from '../screens/Screens'
 import { RNUportSigner } from 'react-native-uport-signer'
+import store from '../store/store'
+import { registerDeviceForNotifications } from 'uPortMobile/lib/actions/snsRegistrationActions'
 
 /**
  * This is called by the startUpSaga when the app is ready to launch
@@ -336,4 +337,9 @@ export async function startMain() {
   if (Device.isAndroid) {
     listenForAndroidFabButtonEvent()
   }
+
+  /**
+   * Register for notifications
+   */
+  store.dispatch(registerDeviceForNotifications())
 }

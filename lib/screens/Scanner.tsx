@@ -116,7 +116,7 @@ export class ScannerScreen extends React.Component<ScannerScreenProps, ScannerSc
     return (
       <Screen config={Screen.Config.NoScroll} type={Screen.Types.Primary}>
         <Container flex={1}>
-          {this.state.appState === 'active' && (
+          {this.state.appState === 'active' && this.state.isEnabled && (
             <Scanner
               hasPermission={this.state.hasPermission}
               onBarcodeRead={this.onBarCodeRead}
