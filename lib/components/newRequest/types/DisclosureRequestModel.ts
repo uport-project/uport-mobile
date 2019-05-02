@@ -158,7 +158,9 @@ const DisclosureRequestModel = (props: any): DisclosureRequestModelType | null =
   if (props.actType !== 'none' && !props.account && props.accountAuthorized === false) {
     return {
       title: 'Create Account',
-      description: `You need to create an ethereum account to interact with ${props.client.name}`,
+      description: `You need to create an ethereum account to interact with ${
+        disclosureRequestCommon.appBranding.requestor
+      }`,
       actionButton: {
         text: 'Create',
         action: props.authorizeAccount,

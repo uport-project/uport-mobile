@@ -17,14 +17,15 @@ import { formatWeiAsEth } from 'uPortMobile/lib/helpers/conversions'
 
 // Actions
 import { authorizeRequest, cancelRequest, clearRequest, authorizeAccount } from 'uPortMobile/lib/actions/requestActions'
-
 // Data model
 import disclosureRequestModel, { DisclosureRequestModelType } from './DisclosureRequestModel'
-
 import { Container } from '@kancha'
 
 export interface DisclosureRequestContainerProps {
   componentId: string
+}
+
+interface StateFromProps {
   currentIdentity: string
   client: any
   account: any
@@ -49,7 +50,9 @@ export interface DisclosureRequestContainerProps {
   snsRegistered: boolean
   ethBalance: number
   usdBalance: number
+}
 
+interface DispatchFromProps {
   clearRequest: () => void
   authorizeAccount: (activity: string, type: string) => void
   authorizeRequest: (activity: string) => void
@@ -60,7 +63,6 @@ export interface DisclosureRequestContainerProps {
 const mapStateToProps = (state: any) => {
   const NETWORKS: { [index: string]: any } = networks
   const VERIFIED_BY_UPORT: { [index: string]: any } = verifiedByUport
-
   /**
    * Cast selectors to accept additional argument
    */
@@ -147,10 +149,10 @@ const withDisclosureRequestCardModel = <P extends object>(
 ) => {
   const WithDisclosureRequestCardModel: React.FC<DisclosureRequestContainerProps> = props => {
     const requestModelProps = disclosureRequestModel(props)
-    return requestModelProps ? <WrappedComponent {...requestModelProps} /> : <Container />
+    return requestModelProps ? <WrappedComponent {...requestModelProps} {...props} /> : <Container />
   }
 
-  return connect(
+  return connect<StateFromProps, DispatchFromProps, void>(
     mapStateToProps,
     mapDispatchToProps,
   )(WithDisclosureRequestCardModel)
