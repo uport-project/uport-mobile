@@ -1,5 +1,12 @@
 # Change Log
 
+## [v450](https://github.com/uport-project/uport-mobile/tree/v450) (2019-05-02)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v449...v450)
+
+**Merged pull requests:**
+
+- Fixing app crash when scanning QR [\#133](https://github.com/uport-project/uport-mobile/pull/133) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v449](https://github.com/uport-project/uport-mobile/tree/v449) (2019-04-26)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v448...v449)
 
