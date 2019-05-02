@@ -7,6 +7,11 @@ export { default as Domain } from './utilities/domain'
 export { default as Issuer } from './utilities/issuer'
 
 /**
+ * Services
+ */
+export { default as Toaster } from './services/toast'
+
+/**
  * Theme & Constants
  */
 export { Images } from './constants/imagePaths'
@@ -29,6 +34,7 @@ export { default as Input } from './components/Input/Input'
 export { default as Scanner } from './components/Scanner/Scanner'
 export { default as ScannerControl } from './components/ScannerControl/ScannerControl'
 export { default as Credential } from './components/Credential/Credential'
+export { default as Toast } from './components/Toast/Toast'
 
 export { default as Request } from './components/Request/Request'
 export { default as Banner } from './components/Banner/Banner'

@@ -63,3 +63,7 @@ export default {
    */
   Dummy: 'Dummy',
 }
+
+export const COMPONENTS = {
+  Toast: 'Toast',
+}

@@ -2,7 +2,8 @@
  * Screens
  */
 import { Navigation } from 'react-native-navigation'
-import SCREENS from './Screens'
+import SCREENS, { COMPONENTS } from './Screens'
+import { Toast } from '@kancha'
 
 
 // import DataBackupInstructions from '../components/Backup/DataBackupInstructions'
@@ -96,4 +97,9 @@ export function registerScreens(redux: any) {
    * Dummy screens
    */
   registerComponentWithRedux(redux)(SCREENS.Dummy, require('../screens/Blank').default)
+
+  /**
+   * Register single compoent for use in overlay
+   */
+  Navigation.registerComponent(COMPONENTS.Toast, () => Toast)
 }
