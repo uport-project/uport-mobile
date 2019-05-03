@@ -97,8 +97,10 @@ const Credential: React.FC<CredentialProps> = props => {
                 </Text>
               </Container>
               {!props.missing && <Text type={Text.Types.SubTitle}>{props.issuer && props.issuer.name}</Text>}
-              {props.missing && !props.spec.essential && <Text type={Text.Types.SubTitle}>Missing credential</Text>}
-              {props.missing && props.spec.essential && (
+              {props.missing && (!props.spec || !props.spec.essential) && (
+                <Text type={Text.Types.SubTitle}>Missing credential</Text>
+              )}
+              {props.missing && props.spec && props.spec.essential && (
                 <Text type={Text.Types.SubTitle} warn>
                   Required Credential
                 </Text>

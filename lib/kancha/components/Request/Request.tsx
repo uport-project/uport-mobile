@@ -50,7 +50,13 @@ const RequestContent: React.FC<any> = () => {
 }
 
 const Logo: React.FC<any> = () => {
-  return <Image source={require('uPortMobile/assets/images/sample-logo.png')} borderRadius={10} />
+  return (
+    <Image
+      source={require('uPortMobile/assets/images/sample-logo.png')}
+      borderRadius={10}
+      style={{ height: 60, width: 60 }}
+    />
+  )
 }
 
 const Banner: React.FC<any> = () => {
@@ -67,8 +73,7 @@ const Banner: React.FC<any> = () => {
         flex={1}
         alignItems={'center'}
         justifyContent={'center'}
-        paddingTop
-      >
+        paddingTop>
         <Logo />
         <Container paddingTop>
           <Text type={Text.Types.H3} textColor={'#FFFFFF'}>
