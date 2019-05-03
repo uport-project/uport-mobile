@@ -1,5 +1,4 @@
 import { capitalizeFirstLetter } from 'uPortMobile/lib/utilities/string'
-import { string } from 'prop-types'
 
 /**
  * Types for the disclourse request
@@ -65,57 +64,16 @@ const interactionStatsMessage = (intStats: any, client: string) => {
 /**
  * Disclose request items model
  */
-const disclosureRequestItemModel = (props: any) => {
-  // console.tron.log(props)
-  if (!!props.actType && (props.actType === 'none' || props.accountAuthorized === true)) {
-    const requested: RequestItem[] = props.requested
-      ? Object.keys(props.requested).map((claim, index) => {
-          return {
-            key: index + claim,
-            type: capitalizeFirstLetter(claim),
-            value: typeof props.requested[claim] !== 'object' ? props.requested[claim] : null,
-          }
-        })
-      : []
-    //**Hidden */
-    const pushStatus: RequestItem[] = props.pushPermissions
-      ? [
-          {
-            key: 'pushStatus',
-            type: 'Push Notifications',
-            value: props.snsRegistered
-              ? 'Allow'
-              : props.pushWorking
-              ? 'Registering'
-              : capitalizeFirstLetter(props.pushError) || 'Not available',
-          },
-        ]
-      : []
-    //**Hidden */
-    const network: RequestItem[] = props.network
-      ? [
-          {
-            key: 'requestednetwork',
-            type: 'Network',
-            value: capitalizeFirstLetter(props.networkName),
-          },
-        ]
-      : []
-    //**Hidden */
-    const account: RequestItem[] = props.account
-      ? [
-          {
-            key: 'accountaddress',
-            type: 'Account address',
-            value: props.account,
-          },
-        ]
-      : []
-
-    return requested
-  }
-
-  return []
+const disclosureRequestItemModel = (props: any): RequestItem[] => {
+  return props.requested
+    ? Object.keys(props.requested).map((claim, index) => {
+        return {
+          key: index + claim,
+          type: capitalizeFirstLetter(claim),
+          value: typeof props.requested[claim] !== 'object' ? props.requested[claim] : null,
+        }
+      })
+    : []
 }
 
 const disclosureRequestVCModel = (props: any) => {

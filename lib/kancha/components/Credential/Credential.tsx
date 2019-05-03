@@ -67,8 +67,7 @@ const Credential: React.FC<CredentialProps> = props => {
             passProps: { verification: props.verification, claimType: props.claimType },
           },
         })
-      }
-    >
+      }>
       <Container>
         <Container flexDirection={'row'}>
           <Container
@@ -81,8 +80,7 @@ const Credential: React.FC<CredentialProps> = props => {
                 ? Theme.colors.secondary.background
                 : Theme.colors.primary.brand
             }
-            viewStyle={{ borderBottomLeftRadius: 5, borderTopLeftRadius: 5 }}
-          >
+            viewStyle={{ borderBottomLeftRadius: 5, borderTopLeftRadius: 5 }}>
             {props.issuer ? (
               <Container padding={3} backgroundColor={Theme.colors.primary.background} br={4}>
                 <Avatar size={40} source={props.issuer} />}
@@ -92,16 +90,14 @@ const Credential: React.FC<CredentialProps> = props => {
             )}
           </Container>
           <Container flex={1}>
-            <Container paddingLeft paddingTop paddingBottom>
+            <Container paddingLeft paddingTop paddingBottom paddingRight>
               <Container paddingBottom={5}>
                 <Text type={Text.Types.H4} bold>
                   {capitalizeFirstLetter(props.claimType)}
                 </Text>
               </Container>
               {!props.missing && <Text type={Text.Types.SubTitle}>{props.issuer && props.issuer.name}</Text>}
-              {props.missing && !props.spec.essential && (
-                <Text type={Text.Types.SubTitle}>Optional / Missing credential?</Text>
-              )}
+              {props.missing && !props.spec.essential && <Text type={Text.Types.SubTitle}>Missing credential</Text>}
               {props.missing && props.spec.essential && (
                 <Text type={Text.Types.SubTitle} warn>
                   Required Credential
@@ -125,15 +121,13 @@ const Credential: React.FC<CredentialProps> = props => {
                       <TouchableHighlight
                         key={iss.did}
                         onPress={() => Linking.openURL(iss.url)}
-                        underlayColor={Theme.colors.primary.underlay}
-                      >
+                        underlayColor={Theme.colors.primary.underlay}>
                         <Container
                           flexDirection={'row'}
                           paddingLeft
                           dividerTop
                           justifyContent={'space-between'}
-                          padding
-                        >
+                          padding>
                           <Text>{Domain(iss.url)}</Text>
                           <Icon name={'link'} color={Theme.colors.primary.accessories} size={18} />
                         </Container>
