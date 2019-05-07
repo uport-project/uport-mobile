@@ -138,8 +138,6 @@ export function* migrate(): any {
     if (createOwnershipLink) {
       const link = yield call(createAttestationToken, oldRoot, newRoot, { owns: oldRoot })
       yield put(handleURL(`me.uport:req/${link}`, { popup: false }))
-    } else {
-      yield put(updateIdentity(oldRoot, { parent: newRoot }))
     }
   } else {
     yield put(
