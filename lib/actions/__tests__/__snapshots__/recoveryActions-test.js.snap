@@ -28,6 +28,7 @@ Object {
 
 exports[`creates a START_SEED_RECOVERY action 1`] = `
 Object {
+  "componentId": 123,
   "phrase": "some secret phase",
   "type": "START_SEED_RECOVERY",
 }
