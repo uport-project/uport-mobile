@@ -21,6 +21,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.widget.ImageView;
+import android.graphics.drawable.Drawable;
+import android.support.v4.content.ContextCompat;
+import android.widget.LinearLayout;
+import android.os.SystemClock;
 
 import com.reactnativenavigation.NavigationActivity;
 
@@ -29,36 +33,46 @@ public class MainActivity extends NavigationActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // setSplashLayout();
+    }
+
+    @Override
+    protected void addDefaultSplashLayout() {
+        LinearLayout splash = new LinearLayout(this);
+        Drawable splash_background = ContextCompat.getDrawable(getApplicationContext(), R.drawable.splash);
+        splash.setBackground(splash_background);
+        setContentView(splash);
+        // SystemClock.sleep(1000 * 5);
     }
 
     // private void setSplashLayout() {
-    //     ImageView img = new ImageView(this);
-    //     img.setImageDrawable(getDrawable(R.drawable.ic_android));
-    //     setContentView(img);
+    // ImageView img = new ImageView(this);
+    // img.setImageDrawable(getDrawable(R.drawable.ic_android));
+    // setContentView(img);
     // }
 
     // @Override
     // protected void onNewIntent(Intent intent) {
-    //     super.onNewIntent(intent);
-    //     // This activity is coerced into a single instance in the manifest (`launchMode="singleTask"`)
-    //     // making this callback the place to capture deep links and pass them to react.
-    //     NavigationApplication.instance.getReactGateway().onNewIntent(intent);
-    //     NavigationApplication.instance.getActivityCallbacks().onNewIntent(intent);
+    // super.onNewIntent(intent);
+    // // This activity is coerced into a single instance in the manifest
+    // (`launchMode="singleTask"`)
+    // // making this callback the place to capture deep links and pass them to
+    // react.
+    // NavigationApplication.instance.getReactGateway().onNewIntent(intent);
+    // NavigationApplication.instance.getActivityCallbacks().onNewIntent(intent);
     // }
 
     // @Override
     // protected void onResume() {
-    //     super.onResume();
-    //     if (NavigationApplication.instance.isReactContextInitialized()) {
-    //         //in case the app is resumed into an already initialized react-context,
-    //         // the splash needs to disappear
-    //         finish();
-    //     }
+    // super.onResume();
+    // if (NavigationApplication.instance.isReactContextInitialized()) {
+    // //in case the app is resumed into an already initialized react-context,
+    // // the splash needs to disappear
+    // finish();
     // }
-    
+    // }
+
     // @Override
     // public int getSplashLayout() {
-    //     return R.layout.splash;
+    // return R.layout.splash;
     // }
 }

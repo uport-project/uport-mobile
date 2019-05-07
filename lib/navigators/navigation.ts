@@ -83,6 +83,11 @@ const startOnboarding = async () => {
           {
             component: {
               name: STARTUP_SCREEN,
+              options: {
+                topBar: {
+                  visible: false,
+                },
+              },
             },
           },
         ],
