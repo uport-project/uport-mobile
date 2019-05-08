@@ -7879,7 +7879,7 @@ react-native-passcode-auth@blendlabs/react-native-passcode-auth#b79815e509ee082a
   version "1.0.0"
   resolved "https://codeload.github.com/blendlabs/react-native-passcode-auth/tar.gz/b79815e509ee082a5d83ccf0ea5e652e3567335c"
 
-react-native-permissions@^1.0.6:
+react-native-permissions@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-1.1.1.tgz#4876004681ff8556454613d85249b01baff9b35b"
   integrity sha512-t0Ujm177bagjUOSzhpmkSz+LqFW04HnY9TeZFavDCmV521fQvFz82aD+POXqWsAdsJVOK3umJYBNNqCjC3g0hQ==

@@ -134,7 +134,7 @@
     "react-native-navigation": "^2.18.5",
     "react-native-passcode-android": "uport-project/react-native-passcode-android#feature/support-api21",
     "react-native-passcode-auth": "blendlabs/react-native-passcode-auth#b79815e509ee082a5d83ccf0ea5e652e3567335c",
-    "react-native-permissions": "^1.0.6",
+    "react-native-permissions": "^1.1.1",
     "react-native-qrcode": "^0.2.6",
     "react-native-randombytes": "^3.0.0",
     "react-native-share": "^1.1.3",

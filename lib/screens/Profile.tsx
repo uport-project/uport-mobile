@@ -109,8 +109,7 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
       <Screen
         config={Screen.Config.Scroll}
         headerBackgroundColor={Theme.colors.primary.brand}
-        expandingHeaderContent={this.renderHeader()}
-      >
+        expandingHeaderContent={this.renderHeader()}>
         {this.renderInfoBar()}
         {this.renderIdentitySwitcher()}
         {this.renderPersonalInformation()}
@@ -132,8 +131,7 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
               zIndex: 1,
               borderRadius: 8,
               padding: 5,
-            }}
-          >
+            }}>
             <Text textColor={Theme.colors.inverted.text}>Update avatar</Text>
           </TouchableOpacity>
         )}
@@ -159,8 +157,7 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
         alignItems={'center'}
         flex={1}
         backgroundColor={Theme.colors.primary.background}
-        dividerBottom
-      >
+        dividerBottom>
         <Container flex={3} alignItems={'center'}>
           <Button
             block={Button.Block.Clear}
@@ -211,8 +208,7 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
                 contentRight={address}
                 key={address}
                 onPress={() => this.switchIdentity(address)}
-                last={index === 1}
-              >
+                last={index === 1}>
                 {name}
               </ListItem>
             )
@@ -233,8 +229,7 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
                 last={true} /** Remove divider */
                 key={item.type}
                 editMode={this.state.editMode}
-                updateItem={(value: string) => this.handleChange({ [item.type]: value })}
-              >
+                updateItem={(value: string) => this.handleChange({ [item.type]: value })}>
                 {item.value}
               </ListItem>
             )
@@ -266,8 +261,7 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
                       },
                     },
                   })
-                }
-              >
+                }>
                 {account.name}
               </ListItem>
             )
@@ -449,7 +443,7 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
     photoSelectionHandler({
       cameraStatus: null,
       photoStatus: null,
-      segmentId: '',
+      segmentId: null,
       addFn: this.props.editMyInfo,
     })
   }
