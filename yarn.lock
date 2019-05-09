@@ -7860,10 +7860,10 @@ react-native-keyboard-aware-scrollview@^2.0.0:
   resolved "https://registry.yarnpkg.com/react-native-keyboard-aware-scrollview/-/react-native-keyboard-aware-scrollview-2.0.0.tgz#a7e2cc31b7230893db5dc05eb6fed3f358500a55"
   integrity sha512-VAkwrmNl00bjTLXcvB3EMxuJ06kEBVRfpUq61X0Wl6Gdy1iSQpv04dVbZZ3KIflA9VhAlE0HFPltLLXIGjf2Ug==
 
-react-native-navigation@^2.16.0:
-  version "2.16.0"
-  resolved "https://registry.yarnpkg.com/react-native-navigation/-/react-native-navigation-2.16.0.tgz#017e4c6ad58aa979f75742abf9d7dedda55cd268"
-  integrity sha512-2vVsaIxxNYRuGmIvrhGo0lGGHA0JCKEcHTmsY6RoxAmQ4fUuz4/OGmKu12yDjduQWOOYTTWw4J2YT9ZYmDOVag==
+react-native-navigation@^2.18.5:
+  version "2.18.5"
+  resolved "https://registry.yarnpkg.com/react-native-navigation/-/react-native-navigation-2.18.5.tgz#e4e89f2aa2b03b9569803e1a61a28a6683c3800a"
+  integrity sha512-NMOTHlfbL02Y1yK/IR44gNrwqs6lqrFEcPk/KG0JHbpD3xvltE946p1DZMWcxBOvjaccaHs5M3u1ywait5rdPA==
   dependencies:
     hoist-non-react-statics "3.x.x"
     lodash "4.17.x"
@@ -7879,7 +7879,7 @@ react-native-passcode-auth@blendlabs/react-native-passcode-auth#b79815e509ee082a
   version "1.0.0"
   resolved "https://codeload.github.com/blendlabs/react-native-passcode-auth/tar.gz/b79815e509ee082a5d83ccf0ea5e652e3567335c"
 
-react-native-permissions@^1.0.6:
+react-native-permissions@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-1.1.1.tgz#4876004681ff8556454613d85249b01baff9b35b"
   integrity sha512-t0Ujm177bagjUOSzhpmkSz+LqFW04HnY9TeZFavDCmV521fQvFz82aD+POXqWsAdsJVOK3umJYBNNqCjC3g0hQ==
