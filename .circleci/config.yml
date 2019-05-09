@@ -90,13 +90,13 @@ jobs:
             - ~/.bundle
       - restore_cache:
           keys:
-            - android-{{ arch }}-v2-{{ checksum "build.gradle" }}
-            - android-{{ arch }}-v2
+            - android-{{ arch }}-v3-{{ checksum "build.gradle" }}
+            - android-{{ arch }}-v3
       - run:
           name: get android dependencies
           command: ./gradlew androidDependencies
       - save_cache:
-          key: android-{{ arch }}-v2-{{ checksum "build.gradle" }}
+          key: android-{{ arch }}-v3-{{ checksum "build.gradle" }}
           paths:
             - .gradle
             - ~/.gradle
