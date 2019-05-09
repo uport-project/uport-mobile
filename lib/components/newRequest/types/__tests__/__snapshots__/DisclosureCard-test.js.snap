@@ -206,7 +206,7 @@ exports[`DisclosureCard missing claims renders disabled button and descriptions 
           style={
             Array [
               Object {
-                "color": undefined,
+                "color": "rgba(74,74,74,1)",
                 "flex": 0,
                 "fontSize": 12,
                 "fontWeight": "bold",
@@ -483,7 +483,7 @@ exports[`DisclosureCard missing claims renders disabled button and descriptions 
             style={
               Array [
                 Object {
-                  "color": undefined,
+                  "color": "rgba(74,74,74,1)",
                   "flex": 0,
                   "fontSize": 12,
                   "fontWeight": "bold",
@@ -881,7 +881,7 @@ exports[`DisclosureCard missing claims renders disabled button and descriptions 
           style={
             Array [
               Object {
-                "color": undefined,
+                "color": "rgba(74,74,74,1)",
                 "flex": 0,
                 "fontSize": 12,
                 "fontWeight": "bold",
@@ -1158,7 +1158,7 @@ exports[`DisclosureCard missing claims renders disabled button and descriptions 
             style={
               Array [
                 Object {
-                  "color": undefined,
+                  "color": "rgba(74,74,74,1)",
                   "flex": 0,
                   "fontSize": 12,
                   "fontWeight": "bold",
@@ -1833,7 +1833,7 @@ exports[`DisclosureCard missing claims renders disabled button and descriptions 
           style={
             Array [
               Object {
-                "color": undefined,
+                "color": "rgba(74,74,74,1)",
                 "flex": 0,
                 "fontSize": 12,
                 "fontWeight": "bold",
@@ -2110,7 +2110,7 @@ exports[`DisclosureCard missing claims renders disabled button and descriptions 
             style={
               Array [
                 Object {
-                  "color": undefined,
+                  "color": "rgba(74,74,74,1)",
                   "flex": 0,
                   "fontSize": 12,
                   "fontWeight": "bold",
@@ -2547,7 +2547,7 @@ exports[`DisclosureCard missing claims renders enabled button and descriptions f
           style={
             Array [
               Object {
-                "color": undefined,
+                "color": "rgba(74,74,74,1)",
                 "flex": 0,
                 "fontSize": 12,
                 "fontWeight": "bold",
@@ -2824,7 +2824,7 @@ exports[`DisclosureCard missing claims renders enabled button and descriptions f
             style={
               Array [
                 Object {
-                  "color": undefined,
+                  "color": "rgba(74,74,74,1)",
                   "flex": 0,
                   "fontSize": 12,
                   "fontWeight": "bold",
@@ -4802,7 +4802,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request and ver
           style={
             Array [
               Object {
-                "color": undefined,
+                "color": "rgba(74,74,74,1)",
                 "flex": 0,
                 "fontSize": 12,
                 "fontWeight": "bold",
@@ -5079,7 +5079,7 @@ exports[`DisclosureCard renders correctly with a full disclosure request and ver
             style={
               Array [
                 Object {
-                  "color": undefined,
+                  "color": "rgba(74,74,74,1)",
                   "flex": 0,
                   "fontSize": 12,
                   "fontWeight": "bold",
