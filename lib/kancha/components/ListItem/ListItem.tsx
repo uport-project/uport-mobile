@@ -128,8 +128,7 @@ const ListItem: React.FunctionComponent<ListItemProps> = props => {
       underlayColor={Theme.colors.primary.underlay}
       disabled={props.disabled}
       testID={props.testID}
-      accessibilityLabel={props.testID}
-    >
+      accessibilityLabel={props.testID}>
       <Container flex={1} flexDirection={'row'}>
         {props.avatarComponent && (
           <Container alignItems={'center'} justifyContent={'center'} paddingLeft paddingTop={8} paddingBottom={8}>
@@ -150,15 +149,14 @@ const ListItem: React.FunctionComponent<ListItemProps> = props => {
           marginLeft
           paddingTop={10}
           paddingBottom={10}
-          paddingRight
-        >
+          paddingRight>
           <Container flexDirection={'row'} flex={1} viewStyle={{ overflow: 'hidden' }}>
             <Container flex={1}>
               {props.title && <Text type={Text.Types.SubTitle}>{props.title}</Text>}
               {props.editMode ? (
                 <Container>
                   <TextInput
-                    style={{ fontSize: 18, padding: 0, flex: 1 }}
+                    style={{ fontSize: 18, padding: 0, flex: 1, color: '#000000' }}
                     defaultValue={(props.children && props.children.toString()) || ''}
                     onChangeText={props.updateItem}
                     placeholder={'Not provided'}
