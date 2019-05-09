@@ -1,5 +1,12 @@
 # Change Log
 
+## [v453](https://github.com/uport-project/uport-mobile/tree/v453) (2019-05-09)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v452...v453)
+
+**Merged pull requests:**
+
+- Bugfixes: Release v450 [\#137](https://github.com/uport-project/uport-mobile/pull/137) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v452](https://github.com/uport-project/uport-mobile/tree/v452) (2019-05-07)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v451...v452)
 
