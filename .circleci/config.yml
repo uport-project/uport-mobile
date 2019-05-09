@@ -57,14 +57,13 @@ jobs:
       - store_artifacts:
           path: test-results
 
-
   android:
     working_directory: ~/uport-mobile/android
     docker:
       - image: circleci/android:api-28-node8-alpha
         environment:
           YARN_VERSION: 1.2.1
-          ANDROID_HOME:  /opt/android/sdk
+          ANDROID_HOME: /opt/android/sdk
           GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xms256m -Xmx3072m -XX:+HeapDumpOnOutOfMemoryError" -Dorg.gradle.daemon=true -Dorg.gradle.parallel=true'
           TERM: dumb
           LC_ALL: en_US.UTF-8
@@ -77,14 +76,14 @@ jobs:
 
       - restore_cache:
           keys:
-            - bundle-{{ arch }}-v7-{{ checksum "Gemfile.lock" }}
-            - bundle-{{ arch }}-v7
+            - bundle-{{ arch }}-v8-{{ checksum "Gemfile.lock" }}
+            - bundle-{{ arch }}-v8
       - run: bundle install
       - run: wget https://releases.hashicorp.com/vault/0.10.1/vault_0.10.1_linux_amd64.zip -O ~/vault.zip
       - run: unzip ~/vault.zip -d ~/vault/
 
       - save_cache:
-          key: bundle-{{ arch }}-v7-{{ checksum "Gemfile.lock" }}
+          key: bundle-{{ arch }}-v8-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
             - .bundle
@@ -129,7 +128,7 @@ jobs:
       LC_ALL: en_US.UTF-8
       LANG: en_US.UTF-8
     macos:
-      xcode: "10.1.0"
+      xcode: '10.1.0'
     shell: /bin/bash --login -o pipefail
     steps:
       - checkout:
@@ -160,8 +159,7 @@ jobs:
             yarn
       - run:
           name: Fastlane
-          command:
-            cd ~/uport-mobile/ios && bundle exec fastlane buildTheApp
+          command: cd ~/uport-mobile/ios && bundle exec fastlane buildTheApp
       - persist_to_workspace:
           root: ~/uport-mobile
           paths:
@@ -186,8 +184,8 @@ jobs:
           at: ~/uport-mobile
       - restore_cache:
           keys:
-            - bundle-{{ arch }}-v7-{{ checksum "Gemfile.lock" }}
-            - bundle-{{ arch }}-v7
+            - bundle-{{ arch }}-v8-{{ checksum "Gemfile.lock" }}
+            - bundle-{{ arch }}-v8
       - run: bundle install
       - run: wget https://releases.hashicorp.com/vault/0.10.1/vault_0.10.1_linux_amd64.zip -O ~/vault.zip
       - run: unzip ~/vault.zip -d ~/vault/
@@ -201,7 +199,7 @@ jobs:
       LC_ALL: en_US.UTF-8
       LANG: en_US.UTF-8
     macos:
-      xcode: "10.1.0"
+      xcode: '10.1.0'
     shell: /bin/bash --login -o pipefail
     steps:
       - checkout:
