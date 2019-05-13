@@ -102,16 +102,12 @@ const DisclosureRequestModel = (props: any): DisclosureRequestModelType | null =
       requestor: props.client && props.client.name,
     },
     statsMessage: interactionStatsMessage(props.interactionStats, props.client && props.client.name),
-    requestItems: disclosureRequestItemModel(props),
-    verifiedCredentials: disclosureRequestVCModel(props),
-    missingCredentials: disclosureRequestMissingCredentialModel(props),
     error: props.error ? parseErrorMessage(props.error) : null,
   }
 
   /**
    * Create New Account
    *
-   * props.actType !== 'none' && props.account && props.interactionStats && props.accountAuthorized === false
    */
   if (props.actType !== 'none' && !props.account && props.accountAuthorized === false) {
     return {
@@ -130,6 +126,9 @@ const DisclosureRequestModel = (props: any): DisclosureRequestModelType | null =
         disabled: false,
       },
       ...disclosureRequestCommon,
+      requestItems: [],
+      verifiedCredentials: [],
+      missingCredentials: [],
     }
   }
   /**
@@ -163,6 +162,9 @@ const DisclosureRequestModel = (props: any): DisclosureRequestModelType | null =
         disabled: false,
       },
       ...disclosureRequestCommon,
+      requestItems: disclosureRequestItemModel(props),
+      verifiedCredentials: disclosureRequestVCModel(props),
+      missingCredentials: disclosureRequestMissingCredentialModel(props),
     }
   }
 

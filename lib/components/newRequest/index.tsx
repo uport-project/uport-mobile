@@ -16,7 +16,8 @@
 // along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
 //
 import React from 'react'
-import { Container } from '@kancha'
+import { ActivityIndicator } from 'react-native'
+import { Container, Theme, Text } from '@kancha'
 import DisclosureCard from './types/DisclosureCard'
 import TransactionCard from './types/TransactionCard'
 import { SafeAreaView } from 'react-native'
@@ -46,7 +47,14 @@ const RequestScreenManager: React.FC<RequestManagerProps> = ({ requestType, comp
         </Container>
       )
     default:
-      return <Container />
+      return (
+        <Container alignItems={'center'} justifyContent={'center'} flex={1}>
+          <ActivityIndicator size="large" color={Theme.colors.primary.accessories} />
+          <Container padding>
+            <Text type={Text.Types.Body}>Loading request</Text>
+          </Container>
+        </Container>
+      )
   }
 }
 
