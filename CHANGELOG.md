@@ -1,5 +1,12 @@
 # Change Log
 
+## [v454](https://github.com/uport-project/uport-mobile/tree/v454) (2019-05-14)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v453...v454)
+
+**Merged pull requests:**
+
+- Fixing default text  [\#139](https://github.com/uport-project/uport-mobile/pull/139) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v453](https://github.com/uport-project/uport-mobile/tree/v453) (2019-05-09)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v452...v453)
 
