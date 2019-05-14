@@ -45,6 +45,11 @@ class Welcome extends React.Component<WelcomeProps> {
                   Navigation.push(this.props.componentId, {
                     component: {
                       name: SCREENS.Learn,
+                      options: {
+                        topBar: {
+                          elevation: 0,
+                        },
+                      },
                     },
                   })
                 }
