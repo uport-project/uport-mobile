@@ -1,5 +1,15 @@
 # Change Log
 
+## [v456](https://github.com/uport-project/uport-mobile/tree/v456) (2019-05-14)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v455...v456)
+
+**Merged pull requests:**
+
+- Set scan icon on app load instead [\#140](https://github.com/uport-project/uport-mobile/pull/140) ([jasonhealy](https://github.com/jasonhealy))
+
+## [v455](https://github.com/uport-project/uport-mobile/tree/v455) (2019-05-14)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v454...v455)
+
 ## [v454](https://github.com/uport-project/uport-mobile/tree/v454) (2019-05-14)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v453...v454)
 
