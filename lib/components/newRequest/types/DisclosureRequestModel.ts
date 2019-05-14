@@ -119,6 +119,7 @@ const DisclosureRequestModel = (props: any): DisclosureRequestModelType | null =
         text: 'Create',
         action: props.authorizeAccount,
         disabled: props.pushWorking || !!props.error,
+        actionType: 'new',
       },
       cancelButton: {
         text: 'Cancel',
