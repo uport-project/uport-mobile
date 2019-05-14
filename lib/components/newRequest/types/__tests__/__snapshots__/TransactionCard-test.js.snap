@@ -235,18 +235,23 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
             ellipsizeMode="tail"
             style={
               Object {
+                "color": "rgba(74,74,74,1)",
                 "fontSize": 14,
               }
             }
           >
-             
             0
-             ETH 
+             ETH
           </Text>
           <Text
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+              }
+            }
           >
              
             $0
@@ -271,6 +276,7 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
           }
         >
           <Icon
+            color="rgba(74,74,74,1)"
             name="ios-refresh"
             size={24}
           />
@@ -677,18 +683,23 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
             ellipsizeMode="tail"
             style={
               Object {
+                "color": "rgba(74,74,74,1)",
                 "fontSize": 14,
               }
             }
           >
-             
             0
-             ETH 
+             ETH
           </Text>
           <Text
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+              }
+            }
           >
              
             $0
@@ -713,6 +724,7 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
           }
         >
           <Icon
+            color="rgba(74,74,74,1)"
             name="ios-refresh"
             size={24}
           />
@@ -1119,18 +1131,23 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
             ellipsizeMode="tail"
             style={
               Object {
+                "color": "rgba(74,74,74,1)",
                 "fontSize": 14,
               }
             }
           >
-             
             0
-             ETH 
+             ETH
           </Text>
           <Text
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+              }
+            }
           >
              
             $0
@@ -1155,6 +1172,7 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
           }
         >
           <Icon
+            color="rgba(74,74,74,1)"
             name="ios-refresh"
             size={24}
           />
@@ -1512,18 +1530,23 @@ exports[`TransactionCard renders correctly with destination being invalid destin
             ellipsizeMode="tail"
             style={
               Object {
+                "color": "rgba(74,74,74,1)",
                 "fontSize": 14,
               }
             }
           >
-             
             0
-             ETH 
+             ETH
           </Text>
           <Text
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+              }
+            }
           >
              
             $0
@@ -1548,6 +1571,7 @@ exports[`TransactionCard renders correctly with destination being invalid destin
           }
         >
           <Icon
+            color="rgba(74,74,74,1)"
             name="ios-refresh"
             size={24}
           />
@@ -1946,18 +1970,23 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
             ellipsizeMode="tail"
             style={
               Object {
+                "color": "rgba(74,74,74,1)",
                 "fontSize": 14,
               }
             }
           >
-             
             0
-             ETH 
+             ETH
           </Text>
           <Text
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+              }
+            }
           >
              
             $0
@@ -1982,6 +2011,7 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
           }
         >
           <Icon
+            color="rgba(74,74,74,1)"
             name="ios-refresh"
             size={24}
           />
@@ -2339,18 +2369,23 @@ exports[`TransactionCard renders correctly with only request 1`] = `
             ellipsizeMode="tail"
             style={
               Object {
+                "color": "rgba(74,74,74,1)",
                 "fontSize": 14,
               }
             }
           >
-             
             0
-             ETH 
+             ETH
           </Text>
           <Text
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+              }
+            }
           >
              
             $0
@@ -2375,6 +2410,7 @@ exports[`TransactionCard renders correctly with only request 1`] = `
           }
         >
           <Icon
+            color="rgba(74,74,74,1)"
             name="ios-refresh"
             size={24}
           />
@@ -2732,18 +2768,23 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
             ellipsizeMode="tail"
             style={
               Object {
+                "color": "rgba(74,74,74,1)",
                 "fontSize": 14,
               }
             }
           >
-             
             0
-             ETH 
+             ETH
           </Text>
           <Text
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+              }
+            }
           >
              
             $0
@@ -2768,6 +2809,7 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
           }
         >
           <Icon
+            color="rgba(74,74,74,1)"
             name="ios-refresh"
             size={24}
           />
@@ -3174,18 +3216,23 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
             ellipsizeMode="tail"
             style={
               Object {
+                "color": "rgba(74,74,74,1)",
                 "fontSize": 14,
               }
             }
           >
-             
             0
-             ETH 
+             ETH
           </Text>
           <Text
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+              }
+            }
           >
              
             $0
@@ -3210,6 +3257,7 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
           }
         >
           <Icon
+            color="rgba(74,74,74,1)"
             name="ios-refresh"
             size={24}
           />
@@ -3567,18 +3615,23 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
             ellipsizeMode="tail"
             style={
               Object {
+                "color": "rgba(74,74,74,1)",
                 "fontSize": 14,
               }
             }
           >
-             
             0
-             ETH 
+             ETH
           </Text>
           <Text
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+              }
+            }
           >
              
             $0
@@ -3603,6 +3656,7 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
           }
         >
           <Icon
+            color="rgba(74,74,74,1)"
             name="ios-refresh"
             size={24}
           />
@@ -3960,18 +4014,23 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
             ellipsizeMode="tail"
             style={
               Object {
+                "color": "rgba(74,74,74,1)",
                 "fontSize": 14,
               }
             }
           >
-             
             0
-             ETH 
+             ETH
           </Text>
           <Text
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+              }
+            }
           >
              
             $0
@@ -3996,6 +4055,7 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
           }
         >
           <Icon
+            color="rgba(74,74,74,1)"
             name="ios-refresh"
             size={24}
           />
