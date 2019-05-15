@@ -89,7 +89,7 @@ export class Settings extends React.Component<SettingsProps> {
         </Section>
         <Section>
           <ListItem onPress={() => this.goToScreen(SCREENS.Privacy)}>Privacy Policy</ListItem>
-          <ListItem last accessoryRight={'v1.2 (5/24/2018)'} onPress={() => this.goToScreen(SCREENS.Terms)}>
+          <ListItem last accessoryRight={'v1.2 (5/9/2019)'} onPress={() => this.goToScreen(SCREENS.Terms)}>
             Terms &amp; Conditions
           </ListItem>
         </Section>
