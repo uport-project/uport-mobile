@@ -34,7 +34,7 @@ const CreateAccountModel = {
 
 const ShareAccountModel = {
   title: 'Share to login',
-  description: '',
+  description: null,
   actionButton: {
     text: 'Login',
   },

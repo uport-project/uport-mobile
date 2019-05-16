@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { TouchableHighlight, TouchableOpacity, ViewStyle } from 'react-native'
-import { Text, Theme, Container } from '@kancha'
+import { TouchableHighlight, TouchableOpacity, TouchableNativeFeedback, ViewStyle } from 'react-native'
+import { Text, Theme, Container, Device } from '@kancha'
 
 /**
  *  Implemenation details: Will move static types to theor own file or namespace later
@@ -142,8 +142,7 @@ const Button: React.FC<ButtonProps> & {
         textDecorationLine={textDecorationLine}
         type={Text.Types.NavButton}
         buttonTextColor={disabled ? 'secondary' : type}
-        block={block}
-      >
+        block={block}>
         {buttonText}
       </Text>
     </TouchableOpacity>
@@ -154,8 +153,7 @@ const Button: React.FC<ButtonProps> & {
       disabled={disabled}
       onPress={onPress}
       style={style}
-      underlayColor={block === ButtonBlocks.Clear || iconButton ? 'transparent' : type && Theme.colors[type].underlay}
-    >
+      underlayColor={block === ButtonBlocks.Clear || iconButton ? 'transparent' : type && Theme.colors[type].underlay}>
       <Container flexDirection={'row'}>
         {icon && icon}
         <Text
@@ -163,8 +161,7 @@ const Button: React.FC<ButtonProps> & {
           type={Text.Types.Button}
           buttonTextColor={disabled ? 'secondary' : type}
           block={block}
-          bold={bold}
-        >
+          bold={bold}>
           {buttonText}
         </Text>
       </Container>

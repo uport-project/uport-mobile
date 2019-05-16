@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
+import { ActivityIndicator } from 'react-native'
 
 // Selectors
 import { clientProfile, currentRequest, externalProfile } from 'uPortMobile/lib/selectors/requests'
@@ -19,7 +20,8 @@ import { formatWeiAsEth } from 'uPortMobile/lib/helpers/conversions'
 import { authorizeRequest, cancelRequest, clearRequest, authorizeAccount } from 'uPortMobile/lib/actions/requestActions'
 // Data model
 import disclosureRequestModel, { DisclosureRequestModelType } from './DisclosureRequestModel'
-import { Container } from '@kancha'
+import { Container, Theme, Text } from '@kancha'
+import { Navigation } from 'react-native-navigation'
 
 export interface DisclosureRequestContainerProps {
   componentId: string
@@ -136,7 +138,9 @@ const mapDispatchToProps = (dispatch: any) => ({
     dispatch(clearRequest())
   },
   authorizeAccount: (activity: string, type: string) => dispatch(authorizeAccount(activity, type)),
-  authorizeRequest: (activity: string) => dispatch(authorizeRequest(activity)),
+  authorizeRequest: (activity: string) => {
+    dispatch(authorizeRequest(activity))
+  },
   cancelRequest: (activity: string) => dispatch(cancelRequest(activity)),
   accountProfileLookup: (clientId: string) => Mori.toJs(dispatch(externalProfile(clientId))),
 })
@@ -149,7 +153,16 @@ const withDisclosureRequestCardModel = <P extends object>(
 ) => {
   const WithDisclosureRequestCardModel: React.FC<DisclosureRequestContainerProps> = props => {
     const requestModelProps = disclosureRequestModel(props)
-    return requestModelProps ? <WrappedComponent {...requestModelProps} {...props} /> : <Container />
+    return requestModelProps && requestModelProps.requestId ? (
+      <WrappedComponent {...requestModelProps} />
+    ) : (
+      <Container alignItems={'center'} justifyContent={'center'} flex={1}>
+        <ActivityIndicator size="large" color={Theme.colors.primary.accessories} />
+        <Container padding>
+          <Text type={Text.Types.Body}>Loading request</Text>
+        </Container>
+      </Container>
+    )
   }
 
   return connect<StateFromProps, DispatchFromProps, void>(
