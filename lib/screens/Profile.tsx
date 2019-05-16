@@ -356,7 +356,6 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
   formattedAccountList(): EthereumAccountListItem[] {
     return this.props.accounts.map(
       (account: any, index: number): EthereumAccountListItem => {
-        console.tron.log(account)
         const accountProfile = account.clientId ? this.props.accountProfileLookup(account.clientId) : null
         const networkName = account.network.charAt(0).toUpperCase() + account.network.slice(1).toLowerCase()
         return {
