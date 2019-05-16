@@ -23,21 +23,25 @@ import { Container, Text, Theme } from '@kancha'
 interface SectionProps {
   title?: string
   sectionTitleType?: string
+  noTopMargin?: boolean
+  noTopBorder?: boolean
 }
 
 const Section: React.FunctionComponent<SectionProps> = props => {
   return (
-    <Container marginTop={Theme.spacing.section}>
-      <Container paddingLeft>
-        <Text
-          paddingBottom
-          bold={!!props.sectionTitleType}
-          type={props.sectionTitleType ? props.sectionTitleType : Text.Types.SectionHeader}
-        >
-          {props.title}
-        </Text>
-      </Container>
-      <Container dividerTop dividerBottom background={'primary'}>
+    <Container marginTop={props.noTopMargin ? 0 : Theme.spacing.section}>
+      {props.title && (
+        <Container paddingLeft>
+          <Text
+            paddingBottom
+            bold={!!props.sectionTitleType}
+            type={props.sectionTitleType ? props.sectionTitleType : Text.Types.SectionHeader}
+          >
+            {props.title}
+          </Text>
+        </Container>
+      )}
+      <Container dividerTop={!props.noTopBorder} dividerBottom background={'primary'}>
         {props.children}
       </Container>
     </Container>

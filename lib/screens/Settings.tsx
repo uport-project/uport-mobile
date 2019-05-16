@@ -19,7 +19,7 @@
 
 import * as React from 'react'
 import { connect } from 'react-redux'
-import { Screen, ListItem, Section, Theme, Device } from '@kancha'
+import { Screen, ListItem, Section, Device, Container } from '@kancha'
 import { Navigation } from 'react-native-navigation'
 import SCREENS from '../screens/Screens'
 import { connections } from 'uPortMobile/lib/selectors/identities'
@@ -34,9 +34,22 @@ interface SettingsProps {
   channel: string
 }
 
-export class Settings extends React.Component<SettingsProps> {
+interface SettingsState {
+  devMode: boolean
+  count: number
+}
+
+export class Settings extends React.Component<SettingsProps, SettingsState> {
   constructor(props: SettingsProps) {
     super(props)
+
+    /**
+     * Enable devmode in simulator by default
+     */
+    this.state = {
+      devMode: __DEV__ ? true : false,
+      count: 0,
+    }
   }
 
   goToScreen(screenID: string) {
@@ -54,11 +67,26 @@ export class Settings extends React.Component<SettingsProps> {
     })
   }
 
+  incrementDeveloperModeCount() {
+    this.setState(state => {
+      return {
+        count: state.count + 1,
+        devMode: state.count >= 10,
+      }
+    })
+  }
+
   render() {
     return (
       <Screen>
         <Section>
-          <ListItem accessoryRight={`${this.props.version} (${this.props.channel})`}>App Version</ListItem>
+          <ListItem
+            accessoryRight={`${this.props.version} (${this.props.channel})`}
+            onPress={() => this.incrementDeveloperModeCount()}
+            hideForwardArrow
+          >
+            Version
+          </ListItem>
           <ListItem onPress={() => this.goToScreen(SCREENS.UPortId)}>uPort ID</ListItem>
           <ListItem onPress={() => this.goToScreen(SCREENS.TryUport)}>Try uPort</ListItem>
           <ListItem externalLink={'https://uport.zendesk.com/hc/en-us/requests/new'} last>
@@ -94,6 +122,14 @@ export class Settings extends React.Component<SettingsProps> {
             Terms &amp; Conditions
           </ListItem>
         </Section>
+        {this.state.devMode && (
+          <Section title={'Developer Options'}>
+            <ListItem last onPress={() => this.goToScreen(SCREENS.DesignSystem)}>
+              Design System
+            </ListItem>
+          </Section>
+        )}
+        <Container paddingBottom />
       </Screen>
     )
   }

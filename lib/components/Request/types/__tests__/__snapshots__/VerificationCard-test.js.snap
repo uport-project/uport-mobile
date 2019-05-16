@@ -76,7 +76,6 @@ ShallowWrapper {
               }
             >
               from:
-               
               <Text
                 accessible={true}
                 allowFontScaling={true}
@@ -150,7 +149,6 @@ ShallowWrapper {
                 }
               >
                 from:
-                 
                 <Text
                   accessible={true}
                   allowFontScaling={true}
@@ -193,7 +191,6 @@ ShallowWrapper {
                   }
                 >
                   from:
-                   
                   <Text
                     accessible={true}
                     allowFontScaling={true}
@@ -225,7 +222,6 @@ ShallowWrapper {
                   "allowFontScaling": true,
                   "children": Array [
                     "from:",
-                    " ",
                     <Text
                       accessible={true}
                       allowFontScaling={true}
@@ -248,7 +244,6 @@ ShallowWrapper {
                 "ref": null,
                 "rendered": Array [
                   "from:",
-                  " ",
                   Object {
                     "instance": null,
                     "key": undefined,
@@ -377,7 +372,6 @@ ShallowWrapper {
                 }
               >
                 from:
-                 
                 <Text
                   accessible={true}
                   allowFontScaling={true}
@@ -451,7 +445,6 @@ ShallowWrapper {
                   }
                 >
                   from:
-                   
                   <Text
                     accessible={true}
                     allowFontScaling={true}
@@ -494,7 +487,6 @@ ShallowWrapper {
                     }
                   >
                     from:
-                     
                     <Text
                       accessible={true}
                       allowFontScaling={true}
@@ -526,7 +518,6 @@ ShallowWrapper {
                     "allowFontScaling": true,
                     "children": Array [
                       "from:",
-                      " ",
                       <Text
                         accessible={true}
                         allowFontScaling={true}
@@ -549,7 +540,6 @@ ShallowWrapper {
                   "ref": null,
                   "rendered": Array [
                     "from:",
-                    " ",
                     Object {
                       "instance": null,
                       "key": undefined,
