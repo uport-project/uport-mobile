@@ -166,8 +166,7 @@ const Screen: React.FunctionComponent<ScreenProps> & {
     <ImageBackground
       style={{ flex: 1 }}
       source={props.backgroundImage ? props.backgroundImage : {}}
-      resizeMode={'cover'}
-    >
+      resizeMode={'cover'}>
       {safeAreaView}
     </ImageBackground>
   )
