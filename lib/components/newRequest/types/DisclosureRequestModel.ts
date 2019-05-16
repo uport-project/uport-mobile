@@ -7,7 +7,7 @@ export interface DisclosureRequestModelType {
   requestId: string
   componentId: string
   title: string
-  description: string
+  description: string | null
   actionButton: RequestActionButton
   cancelButton: RequestActionButton
   statsMessage: string
@@ -150,7 +150,7 @@ const DisclosureRequestModel = (props: any): DisclosureRequestModelType | null =
   if (props.actType === 'none' || props.accountAuthorized === true) {
     return {
       title: 'Share to login',
-      description: ``,
+      description: null,
       actionButton: {
         text: 'Login',
         action: props.authorizeRequest,

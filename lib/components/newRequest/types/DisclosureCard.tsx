@@ -17,7 +17,6 @@
 //
 import React from 'react'
 import { DisclosureRequestModelType } from './DisclosureRequestModel'
-
 import {
   Container,
   Text,
@@ -53,7 +52,6 @@ export const DisclosureCard: React.FC<DisclosureRequestModelType> = requestModel
                 {requestModel.error ? requestModel.error : requestModel.statsMessage}
               </Text>
             </Container>
-
             <Container flexDirection={'row'} padding>
               <Container flex={1} paddingRight>
                 <Button
@@ -78,25 +76,15 @@ export const DisclosureCard: React.FC<DisclosureRequestModelType> = requestModel
             </Container>
           </Container>
         )
-      }
-    >
+      }>
       {requestModel && (
         <Container>
-          <Container viewStyle={{ position: 'absolute', zIndex: 10, top: 20, right: 20 }}>
-            <Button
-              iconButton
-              noPadding
-              icon={<Icon name={Icon.Names.close} font={'evil'} color={'#FFFFFF'} size={30} />}
-              onPress={() => requestModel.cancelButton.action(requestModel.requestId)}
-            />
-          </Container>
           <Banner
             httpsResolveStatus={'OKAY'}
             backgroundImage={requestModel.appBranding.bannerImage}
             avatar={requestModel.appBranding.profileImage}
             requestor={requestModel.appBranding.requestor}
           />
-
           <IndicatorBar text={requestModel.title} />
           {requestModel.description && (
             <Container padding backgroundColor={Theme.colors.primary.background}>
