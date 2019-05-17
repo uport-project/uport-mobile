@@ -48,6 +48,8 @@ ShallowWrapper {
           style={
             Object {
               "backgroundColor": "#FFFFFF",
+              "borderBottomColor": "rgba(216,216,216,1)",
+              "borderBottomWidth": 0.5,
               "padding": 22,
             }
           }
@@ -90,6 +92,15 @@ ShallowWrapper {
             <ExpirationItem />
           </Component>
         </Component>,
+        <UseCredentialCard
+          authorizeRequest={[Function]}
+          claim={
+            Object {
+              "loading": "loading",
+            }
+          }
+          request={Object {}}
+        />,
         <Component
           style={
             Object {
@@ -107,8 +118,8 @@ ShallowWrapper {
           />
         </Component>,
         <AcceptCancelGroup
-          acceptText="Accept"
-          cancelText="Delete"
+          acceptText="Save"
+          cancelText="Decline"
           onAccept={[Function]}
           onCancel={[Function]}
         />,
@@ -166,6 +177,8 @@ ShallowWrapper {
           ],
           "style": Object {
             "backgroundColor": "#FFFFFF",
+            "borderBottomColor": "rgba(216,216,216,1)",
+            "borderBottomWidth": 0.5,
             "padding": 22,
           },
         },
@@ -285,6 +298,21 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "authorizeRequest": [Function],
+          "claim": Object {
+            "loading": "loading",
+          },
+          "request": Object {},
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
         "nodeType": "class",
         "props": Object {
           "children": <NestedInfo
@@ -321,8 +349,8 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "acceptText": "Accept",
-          "cancelText": "Delete",
+          "acceptText": "Save",
+          "cancelText": "Decline",
           "onAccept": [Function],
           "onCancel": [Function],
         },
@@ -344,6 +372,8 @@ ShallowWrapper {
             style={
               Object {
                 "backgroundColor": "#FFFFFF",
+                "borderBottomColor": "rgba(216,216,216,1)",
+                "borderBottomWidth": 0.5,
                 "padding": 22,
               }
             }
@@ -386,6 +416,15 @@ ShallowWrapper {
               <ExpirationItem />
             </Component>
           </Component>,
+          <UseCredentialCard
+            authorizeRequest={[Function]}
+            claim={
+              Object {
+                "loading": "loading",
+              }
+            }
+            request={Object {}}
+          />,
           <Component
             style={
               Object {
@@ -403,8 +442,8 @@ ShallowWrapper {
             />
           </Component>,
           <AcceptCancelGroup
-            acceptText="Accept"
-            cancelText="Delete"
+            acceptText="Save"
+            cancelText="Decline"
             onAccept={[Function]}
             onCancel={[Function]}
           />,
@@ -462,6 +501,8 @@ ShallowWrapper {
             ],
             "style": Object {
               "backgroundColor": "#FFFFFF",
+              "borderBottomColor": "rgba(216,216,216,1)",
+              "borderBottomWidth": 0.5,
               "padding": 22,
             },
           },
@@ -581,6 +622,21 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "authorizeRequest": [Function],
+            "claim": Object {
+              "loading": "loading",
+            },
+            "request": Object {},
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
           "nodeType": "class",
           "props": Object {
             "children": <NestedInfo
@@ -617,8 +673,8 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "acceptText": "Accept",
-            "cancelText": "Delete",
+            "acceptText": "Save",
+            "cancelText": "Decline",
             "onAccept": [Function],
             "onCancel": [Function],
           },
