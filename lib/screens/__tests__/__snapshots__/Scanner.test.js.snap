@@ -31,7 +31,7 @@ exports[`renders a Scanner Screen 1`] = `
     style={
       Object {
         "alignItems": undefined,
-        "backgroundColor": undefined,
+        "backgroundColor": "#000000",
         "borderRadius": undefined,
         "flex": 1,
         "flexDirection": undefined,
@@ -76,6 +76,7 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": <Container
+        backgroundColor="#000000"
         flex={1}
       />,
       "config": "noScroll",
@@ -89,6 +90,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
+        "backgroundColor": "#000000",
         "children": false,
         "flex": 1,
       },
@@ -105,6 +107,7 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": <Container
+          backgroundColor="#000000"
           flex={1}
         />,
         "config": "noScroll",
@@ -118,6 +121,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "backgroundColor": "#000000",
           "children": false,
           "flex": 1,
         },
