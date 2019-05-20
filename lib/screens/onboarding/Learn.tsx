@@ -20,7 +20,7 @@ const Learn: React.FC<LearnProps> = props => {
       backgroundImage={Images.backgrounds.purpleGradientHalve}
       statusBarHidden
       footerNavComponent={
-        <Container alignItems={'center'}>
+        <Container alignItems={'center'} paddingBottom>
           <Container w={300}>
             <Button
               testID={TESTID.ONBOARDING_LEARN_CONTINUE}

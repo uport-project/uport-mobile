@@ -20,7 +20,7 @@ const ScannerControl: React.FC<ScannerControl> = ({ closeScanner }) => {
     >
       <Container flex={3} alignItems={'center'} justifyContent={'center'}>
         <TouchableOpacity onPress={() => closeScanner()}>
-          <Icon name={'close'} font={'feather'} size={40} color={'white'} />
+          {/* <Icon name={'close'} font={'feather'} size={40} color={'white'} /> */}
         </TouchableOpacity>
       </Container>
       <Container alignItems={'center'} justifyContent={'space-between'} />

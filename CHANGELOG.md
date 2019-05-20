@@ -1,5 +1,16 @@
 # Change Log
 
+## [v457](https://github.com/uport-project/uport-mobile/tree/v457) (2019-05-20)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v456...v457)
+
+**Merged pull requests:**
+
+- Fix null render [\#142](https://github.com/uport-project/uport-mobile/pull/142) ([jasonhealy](https://github.com/jasonhealy))
+- Use credential link [\#141](https://github.com/uport-project/uport-mobile/pull/141) ([jasonhealy](https://github.com/jasonhealy))
+- Update cache keys for android [\#138](https://github.com/uport-project/uport-mobile/pull/138) ([jasonhealy](https://github.com/jasonhealy))
+- \[WIP\] Disclosure request new ui [\#134](https://github.com/uport-project/uport-mobile/pull/134) ([jasonhealy](https://github.com/jasonhealy))
+- OpenID like Claims Spec [\#132](https://github.com/uport-project/uport-mobile/pull/132) ([pelle](https://github.com/pelle))
+
 ## [v456](https://github.com/uport-project/uport-mobile/tree/v456) (2019-05-14)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v455...v456)
 
