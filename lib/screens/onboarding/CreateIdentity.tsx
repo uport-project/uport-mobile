@@ -116,8 +116,9 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
         type={Screen.Types.Primary}
         config={Screen.Config.SafeScroll}
         statusBarHidden
+        footerNavDivider
         footerNavComponent={
-          <Container alignItems={'center'}>
+          <Container alignItems={'center'} paddingBottom>
             <Container w={300}>
               <Button
                 testID={TESTID.ONBOARDING_CREATE_IDENTITY}
@@ -133,8 +134,7 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
               />
             </Container>
           </Container>
-        }
-      >
+        }>
         {this.renderUserAddingInfo()}
       </Screen>
     )
@@ -151,8 +151,7 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
             onRequestClose={() => ''}
             animationType={'slide'}
             transparent={true}
-            visible={this.state.identityCreationSuccess}
-          >
+            visible={this.state.identityCreationSuccess}>
             {this.renderIdentityCreationSuccess()}
           </Modal>
 
@@ -206,8 +205,7 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
                     options: navOptions,
                   },
                 })
-              }
-            >
+              }>
               Accept terms and conditions
             </ListItem>
             <ListItem
@@ -226,8 +224,7 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
                     options: navOptions,
                   },
                 })
-              }
-            >
+              }>
               Accept privacy policy
             </ListItem>
           </Section>
@@ -247,8 +244,7 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
           marginLeft
           marginRight
           background={'primary'}
-          viewStyle={{ shadowRadius: 30, elevation: 4, shadowColor: 'black', shadowOpacity: 0.2, borderRadius: 5 }}
-        >
+          viewStyle={{ shadowRadius: 30, elevation: 4, shadowColor: 'black', shadowOpacity: 0.2, borderRadius: 5 }}>
           <Container alignItems={'center'} paddingBottom paddingTop>
             <Text type={Text.Types.H2} bold>
               You are all set!

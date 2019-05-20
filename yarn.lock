@@ -5954,7 +5954,7 @@ jsonpointer@^4.0.0:
   resolved "https://registry.yarnpkg.com/jsonpointer/-/jsonpointer-4.0.1.tgz#4fd92cb34e0e9db3c89c8622ecf51f9b978c6cb9"
   integrity sha1-T9kss04OnbPInIYi7PUfm5eMbLk=
 
-jsontokens@^0.7.7, jsontokens@^0.7.8:
+jsontokens@^0.7.7:
   version "0.7.8"
   resolved "https://registry.yarnpkg.com/jsontokens/-/jsontokens-0.7.8.tgz#9210bb98944ee93a156c72754c1c281b2c52d419"
   integrity sha512-vTZ06cDSDoFeXJUnZNFHsh8aP+L3Xz5Ke7XPb6nyT3n5wb9uxyq4TE8gUl0H4hmzSe/YIrDi+mneuHIh37AMiA==
@@ -6659,7 +6659,14 @@ module-deps@^6.0.0:
     through2 "^2.0.0"
     xtend "^4.0.0"
 
-moment@^2.17.1:
+moment-timezone@^0.5.25:
+  version "0.5.25"
+  resolved "https://registry.yarnpkg.com/moment-timezone/-/moment-timezone-0.5.25.tgz#a11bfa2f74e088327f2cd4c08b3e7bdf55957810"
+  integrity sha512-DgEaTyN/z0HFaVcVbSyVCUU6HeFdnNC3vE4c9cgu2dgMTvjBUBdBzWfasTBmAW45u5OIMeCJtU8yNjM22DHucw==
+  dependencies:
+    moment ">= 2.9.0"
+
+"moment@>= 2.9.0", moment@^2.17.1:
   version "2.24.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
   integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
@@ -7860,10 +7867,10 @@ react-native-keyboard-aware-scrollview@^2.0.0:
   resolved "https://registry.yarnpkg.com/react-native-keyboard-aware-scrollview/-/react-native-keyboard-aware-scrollview-2.0.0.tgz#a7e2cc31b7230893db5dc05eb6fed3f358500a55"
   integrity sha512-VAkwrmNl00bjTLXcvB3EMxuJ06kEBVRfpUq61X0Wl6Gdy1iSQpv04dVbZZ3KIflA9VhAlE0HFPltLLXIGjf2Ug==
 
-react-native-navigation@^2.16.0:
-  version "2.16.0"
-  resolved "https://registry.yarnpkg.com/react-native-navigation/-/react-native-navigation-2.16.0.tgz#017e4c6ad58aa979f75742abf9d7dedda55cd268"
-  integrity sha512-2vVsaIxxNYRuGmIvrhGo0lGGHA0JCKEcHTmsY6RoxAmQ4fUuz4/OGmKu12yDjduQWOOYTTWw4J2YT9ZYmDOVag==
+react-native-navigation@^2.18.5:
+  version "2.18.5"
+  resolved "https://registry.yarnpkg.com/react-native-navigation/-/react-native-navigation-2.18.5.tgz#e4e89f2aa2b03b9569803e1a61a28a6683c3800a"
+  integrity sha512-NMOTHlfbL02Y1yK/IR44gNrwqs6lqrFEcPk/KG0JHbpD3xvltE946p1DZMWcxBOvjaccaHs5M3u1ywait5rdPA==
   dependencies:
     hoist-non-react-statics "3.x.x"
     lodash "4.17.x"
@@ -7879,7 +7886,7 @@ react-native-passcode-auth@blendlabs/react-native-passcode-auth#b79815e509ee082a
   version "1.0.0"
   resolved "https://codeload.github.com/blendlabs/react-native-passcode-auth/tar.gz/b79815e509ee082a5d83ccf0ea5e652e3567335c"
 
-react-native-permissions@^1.0.6:
+react-native-permissions@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-1.1.1.tgz#4876004681ff8556454613d85249b01baff9b35b"
   integrity sha512-t0Ujm177bagjUOSzhpmkSz+LqFW04HnY9TeZFavDCmV521fQvFz82aD+POXqWsAdsJVOK3umJYBNNqCjC3g0hQ==
@@ -8418,6 +8425,11 @@ reselect@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/reselect/-/reselect-3.0.1.tgz#efdaa98ea7451324d092b2b2163a6a1d7a9a2147"
   integrity sha1-79qpjqdFEyTQkrKyFjpqHXqaIUc=
+
+reselect@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/reselect/-/reselect-4.0.0.tgz#f2529830e5d3d0e021408b246a206ef4ea4437f7"
+  integrity sha512-qUgANli03jjAyGlnbYVAV5vvnOmJnODyABz51RdBN7M4WaVu8mecZWgyQNkG8Yqe3KRGRt0l4K4B3XVEULC4CA==
 
 resolve-cwd@^2.0.0:
   version "2.0.0"
@@ -9627,19 +9639,17 @@ unset-value@^1.0.0:
     has-value "^0.3.1"
     isobject "^3.0.0"
 
-uport-credentials@^1.1.7:
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/uport-credentials/-/uport-credentials-1.1.7.tgz#32171e9bb54784f6d44057dfd24ab4e056714dea"
-  integrity sha512-wOmfRYLjaTHpUv94aYLwkliZTIe3tTyLe12jP42ykWVc8p1tddhidN2e2oRNAV9JfPxvOGQHxLK1jNlhMf2q9Q==
+uport-credentials@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/uport-credentials/-/uport-credentials-1.2.0.tgz#c1d6353f375372a4cce19434289bceccf31a5c06"
+  integrity sha512-+3dMgTIaAlGj14UHztAa2XkC/5ngnMEoDHc5e4RxE6jKvGQCEmEcckBU4P9yZ+Oy2akYq7DVTNfiDDQGmp5T5w==
   dependencies:
     did-jwt "^0.1.3"
     did-resolver "^0.0.6"
-    ethjs-util "^0.1.3"
+    elliptic "^6.4.1"
     ethr-did-resolver "^0.2.0"
     https-did-resolver "^0.1.0"
-    jsontokens "^0.7.8"
     mnid "^0.1.1"
-    nacl-did "^0.4.0"
     uport-did-resolver "^0.0.7"
     uport-lite "^1.0.5"
 

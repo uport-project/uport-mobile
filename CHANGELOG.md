@@ -1,5 +1,61 @@
 # Change Log
 
+## [v457](https://github.com/uport-project/uport-mobile/tree/v457) (2019-05-20)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v456...v457)
+
+**Merged pull requests:**
+
+- Fix null render [\#142](https://github.com/uport-project/uport-mobile/pull/142) ([jasonhealy](https://github.com/jasonhealy))
+- Use credential link [\#141](https://github.com/uport-project/uport-mobile/pull/141) ([jasonhealy](https://github.com/jasonhealy))
+- Update cache keys for android [\#138](https://github.com/uport-project/uport-mobile/pull/138) ([jasonhealy](https://github.com/jasonhealy))
+- \[WIP\] Disclosure request new ui [\#134](https://github.com/uport-project/uport-mobile/pull/134) ([jasonhealy](https://github.com/jasonhealy))
+- OpenID like Claims Spec [\#132](https://github.com/uport-project/uport-mobile/pull/132) ([pelle](https://github.com/pelle))
+
+## [v456](https://github.com/uport-project/uport-mobile/tree/v456) (2019-05-14)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v455...v456)
+
+**Merged pull requests:**
+
+- Set scan icon on app load instead [\#140](https://github.com/uport-project/uport-mobile/pull/140) ([jasonhealy](https://github.com/jasonhealy))
+
+## [v455](https://github.com/uport-project/uport-mobile/tree/v455) (2019-05-14)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v454...v455)
+
+## [v454](https://github.com/uport-project/uport-mobile/tree/v454) (2019-05-14)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v453...v454)
+
+**Merged pull requests:**
+
+- Fixing default text  [\#139](https://github.com/uport-project/uport-mobile/pull/139) ([jasonhealy](https://github.com/jasonhealy))
+
+## [v453](https://github.com/uport-project/uport-mobile/tree/v453) (2019-05-09)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v452...v453)
+
+**Merged pull requests:**
+
+- Bugfixes: Release v450 [\#137](https://github.com/uport-project/uport-mobile/pull/137) ([jasonhealy](https://github.com/jasonhealy))
+
+## [v452](https://github.com/uport-project/uport-mobile/tree/v452) (2019-05-07)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v451...v452)
+
+**Merged pull requests:**
+
+- Fix Migrations [\#136](https://github.com/uport-project/uport-mobile/pull/136) ([pelle](https://github.com/pelle))
+
+## [v451](https://github.com/uport-project/uport-mobile/tree/v451) (2019-05-06)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v450...v451)
+
+**Merged pull requests:**
+
+- Commenting out migrations saga [\#135](https://github.com/uport-project/uport-mobile/pull/135) ([simonas-notcat](https://github.com/simonas-notcat))
+
+## [v450](https://github.com/uport-project/uport-mobile/tree/v450) (2019-05-02)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v449...v450)
+
+**Merged pull requests:**
+
+- Fixing app crash when scanning QR [\#133](https://github.com/uport-project/uport-mobile/pull/133) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v449](https://github.com/uport-project/uport-mobile/tree/v449) (2019-04-26)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v448...v449)
 

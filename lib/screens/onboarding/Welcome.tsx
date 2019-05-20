@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Image } from 'react-native'
 import { connect } from 'react-redux'
-import { Screen, Container, Button, Text, Images } from '@kancha'
+import { Screen, Container, Button, Text, Images, Theme } from '@kancha'
 import SCREENS from '../Screens'
 import { Navigation } from 'react-native-navigation'
 
@@ -26,8 +26,7 @@ class Welcome extends React.Component<WelcomeProps> {
         backgroundImage={Images.backgrounds.purpleGradientWithPattern}
         type={Screen.Types.Custom}
         config={Screen.Config.SafeNoScroll}
-        statusBarHidden
-      >
+        statusBarHidden>
         <Container flex={1}>
           <Container flex={1} justifyContent={'space-around'} alignItems={'center'} paddingTop={50}>
             <Image source={Images.branding.logoWhite} style={{ height: 100 }} resizeMode={'contain'} />
@@ -46,6 +45,11 @@ class Welcome extends React.Component<WelcomeProps> {
                   Navigation.push(this.props.componentId, {
                     component: {
                       name: SCREENS.Learn,
+                      options: {
+                        topBar: {
+                          elevation: 0,
+                        },
+                      },
                     },
                   })
                 }
@@ -61,6 +65,15 @@ class Welcome extends React.Component<WelcomeProps> {
                   Navigation.push(this.props.componentId, {
                     component: {
                       name: SCREENS.RECOVERY.RestoreSeedInstructions,
+                      options: {
+                        topBar: {
+                          backButton: {
+                            title: 'Back',
+                            color: Theme.colors.primary.brand,
+                            visible: true,
+                          },
+                        },
+                      },
                     },
                   })
                 }

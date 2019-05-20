@@ -2,7 +2,8 @@
  * Screens
  */
 import { Navigation } from 'react-native-navigation'
-import SCREENS from './Screens'
+import SCREENS, { COMPONENTS } from './Screens'
+import { Toast } from '@kancha'
 
 
 // import DataBackupInstructions from '../components/Backup/DataBackupInstructions'
@@ -33,8 +34,6 @@ export function registerScreens(redux: any) {
   registerComponentWithRedux(redux)(SCREENS.Contacts, require('./Contacts').default)
   registerComponentWithRedux(redux)(SCREENS.Contact, require('./Contact').default)
   registerComponentWithRedux(redux)(SCREENS.ShareContact, require('./ShareContact').default)
-  registerComponentWithRedux(redux)(SCREENS.Account, require('./Account').default)
-  registerComponentWithRedux(redux)(SCREENS.AccountFunding, require('./AccountFunding').default)
   registerComponentWithRedux(redux)(SCREENS.Notifications, require('./Notifications').default)
   registerComponentWithRedux(redux)(SCREENS.Settings, require('./Settings').default)
   registerComponentWithRedux(redux)(SCREENS.Profile, require('./Profile').default)
@@ -82,6 +81,7 @@ export function registerScreens(redux: any) {
 
 
   registerComponentWithRedux(redux)(SCREENS.Request, require('../components/Request/index').default)
+  registerComponentWithRedux(redux)(SCREENS.StaticRequest, require('../screens/requests/Request').default)
   registerComponentWithRedux(redux)(SCREENS.NewRequest, require('../components/newRequest/index').default)
   registerComponentWithRedux(redux)(SCREENS.NestedInfo, require('../components/shared/NestedInfo').default)
 
@@ -90,4 +90,14 @@ export function registerScreens(redux: any) {
    */
   registerComponentWithRedux(redux)(SCREENS.MIGRATION.Complete, require('../components/Migrations/MigrationComplete').default)
   registerComponentWithRedux(redux)(SCREENS.MIGRATION.Legacy, require('../components/Migrations/LegacyMigration').default)
+
+  /**
+   * Dummy screens
+   */
+  registerComponentWithRedux(redux)(SCREENS.Dummy, require('../screens/Blank').default)
+
+  /**
+   * Register single compoent for use in overlay
+   */
+  Navigation.registerComponent(COMPONENTS.Toast, () => Toast)
 }

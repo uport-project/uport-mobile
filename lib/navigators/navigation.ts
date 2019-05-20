@@ -1,8 +1,9 @@
-import { NativeModules } from 'react-native'
 import { Navigation } from 'react-native-navigation'
 import { Theme, Icon, Device } from '../kancha'
 import SCREENS from '../screens/Screens'
 import { RNUportSigner } from 'react-native-uport-signer'
+import store from '../store/store'
+import { registerDeviceForNotifications } from 'uPortMobile/lib/actions/snsRegistrationActions'
 
 /**
  * This is called by the startUpSaga when the app is ready to launch
@@ -34,6 +35,23 @@ const listenForAndroidFabButtonEvent = () => {
             topBar: {
               visible: false,
             },
+          },
+        },
+      })
+    }
+  })
+}
+
+/**
+ * Global listener for IOS Scan button
+ */
+const listenerForIOSScanButton = () => {
+  Navigation.events().registerNavigationButtonPressedListener(({ buttonId }) => {
+    if (buttonId === 'scanButton') {
+      Navigation.mergeOptions('Scanner', {
+        sideMenu: {
+          right: {
+            visible: true,
           },
         },
       })
@@ -82,6 +100,11 @@ const startOnboarding = async () => {
           {
             component: {
               name: STARTUP_SCREEN,
+              options: {
+                topBar: {
+                  visible: false,
+                },
+              },
             },
           },
         ],
@@ -114,6 +137,13 @@ export async function startMain() {
   const notificationsIcon = await Icon.getImageSource('feather', 'bell', 26)
   const settingsIcon = await Icon.getImageSource('feather', 'settings', 26)
   const scanIcon = await Icon.getImageSource('ionicons', Icon.Names.scan, 30)
+  const rightButtonsCredentialScreen = Device.isIOS
+    ? {
+        id: 'scanButton',
+        icon: scanIcon,
+        color: 'white',
+      }
+    : {}
 
   /**
    * Some options have not been updated in the nav library so we need to override it :(
@@ -161,11 +191,31 @@ export async function startMain() {
     },
   })
 
+  // Navigation.setRoot({
+  //   root: {
+  //     stack: {
+  //       children: [
+  //         {
+  //           component: {
+  //             name: SCREENS.Dummy,
+  //             options: {
+  //               topBar: {
+  //                 visible: false,
+  //               },
+  //             },
+  //           },
+  //         },
+  //       ],
+  //     },
+  //   },
+  // })
+
   /**
    * Begin root
    */
   Navigation.setRoot({
     root: {
+      // @ts-ignore
       sideMenu: {
         right: {
           component: {
@@ -184,7 +234,17 @@ export async function startMain() {
                       component: {
                         name: SCREENS.Credentials,
                         options: {
-                          topBar: navBarText('Credentials'),
+                          topBar: {
+                            rightButtons: [rightButtonsCredentialScreen],
+                            title: {
+                              text: 'Credentials',
+                              color: Theme.colors.inverted.text,
+                            },
+                            largeTitle: {
+                              visible: true,
+                              color: Theme.colors.inverted.text,
+                            },
+                          },
                           bottomTab: {
                             icon: credentialsIcon,
                             iconColor: Theme.colors.primary.accessories,
@@ -335,5 +395,12 @@ export async function startMain() {
    */
   if (Device.isAndroid) {
     listenForAndroidFabButtonEvent()
+  } else if (Device.isIOS) {
+    listenerForIOSScanButton()
   }
+
+  /**
+   * Register for notifications
+   */
+  store.dispatch(registerDeviceForNotifications())
 }

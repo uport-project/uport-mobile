@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { TouchableOpacity, Share } from 'react-native'
+import { TouchableOpacity, Share, Alert, Clipboard } from 'react-native'
 import { Screen, Container, Text, Section, ListItem, Button, Theme, Icon } from '@kancha'
 import Avatar from 'uPortMobile/lib/components/shared/Avatar'
 
@@ -9,7 +9,7 @@ import { wei2eth } from 'uPortMobile/lib/helpers/conversions'
 import { currentAddress, ownClaims, myAccounts, allIdentities } from 'uPortMobile/lib/selectors/identities'
 import { externalProfile } from 'uPortMobile/lib/selectors/requests'
 import { editMyInfo, updateShareToken } from 'uPortMobile/lib/actions/myInfoActions'
-import { addClaims, addImage, switchIdentity } from 'uPortMobile/lib/actions/uportActions'
+import { addClaims, addImage, switchIdentity, refreshBalance } from 'uPortMobile/lib/actions/uportActions'
 import { onlyLatestAttestationsWithIssuer } from 'uPortMobile/lib/selectors/attestations'
 import SCREENS from '../screens/Screens'
 import photoSelectionHandler from 'uPortMobile/lib/utilities/photoSelection'
@@ -25,6 +25,7 @@ interface EthereumAccountListItem {
   network: string
   balance: string
   address: string
+  hexaddress: string
   accountProfile: any
   isLast: boolean
 }
@@ -66,6 +67,7 @@ interface UserProfileProps {
   editMyInfo: (change: any) => void
   addImage: (address: string, claimType: string, image: any) => void
   switchIdentity: (address: string) => void
+  refreshBalance: (address: string) => void
 }
 
 interface UserProfileState {
@@ -109,12 +111,13 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
       <Screen
         config={Screen.Config.Scroll}
         headerBackgroundColor={Theme.colors.primary.brand}
-        expandingHeaderContent={this.renderHeader()}
-      >
-        {this.renderInfoBar()}
-        {this.renderIdentitySwitcher()}
-        {this.renderPersonalInformation()}
-        {this.renderEthereumAccounts()}
+        expandingHeaderContent={this.renderHeader()}>
+        <Container paddingBottom>
+          {this.renderInfoBar()}
+          {this.renderIdentitySwitcher()}
+          {this.renderPersonalInformation()}
+          {this.renderEthereumAccounts()}
+        </Container>
       </Screen>
     )
   }
@@ -132,8 +135,7 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
               zIndex: 1,
               borderRadius: 8,
               padding: 5,
-            }}
-          >
+            }}>
             <Text textColor={Theme.colors.inverted.text}>Update avatar</Text>
           </TouchableOpacity>
         )}
@@ -159,8 +161,7 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
         alignItems={'center'}
         flex={1}
         backgroundColor={Theme.colors.primary.background}
-        dividerBottom
-      >
+        dividerBottom>
         <Container flex={3} alignItems={'center'}>
           <Button
             block={Button.Block.Clear}
@@ -211,8 +212,7 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
                 contentRight={address}
                 key={address}
                 onPress={() => this.switchIdentity(address)}
-                last={index === 1}
-              >
+                last={index === 1}>
                 {name}
               </ListItem>
             )
@@ -233,8 +233,7 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
                 last={true} /** Remove divider */
                 key={item.type}
                 editMode={this.state.editMode}
-                updateItem={(value: string) => this.handleChange({ [item.type]: value })}
-              >
+                updateItem={(value: string) => this.handleChange({ [item.type]: value })}>
                 {item.value}
               </ListItem>
             )
@@ -243,32 +242,43 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
       </Section>
     )
   }
+  showAlert(account: EthereumAccountListItem) {
+    const title = account.network.toLowerCase() === 'mainnet' ? 'Mainnet Ethereum Account' : 'Testnet Ethereum Account'
+    const message =
+      account.network.toLowerCase() === 'mainnet'
+        ? `Copy your Mainnet ethereum adddress to your clipboard ${account.hexaddress}`
+        : `Warning! This is a testnet account (${
+            account.network
+          }). Do not send real ETH to this account or you will lose it. ${account.hexaddress}.`
 
+    Alert.alert(
+      title,
+      message,
+      [{ text: 'Cancel' }, { text: 'Copy', onPress: () => Clipboard.setString(account.hexaddress) }],
+      {
+        cancelable: true,
+      },
+    )
+  }
   renderEthereumAccounts() {
     return (
       this.props.accounts.length > 0 && (
-        <Section title={'Ethereum Accounts'} sectionTitleType={Text.Types.SectionHeader}>
+        <Section title={'Ethereum Accounts for signing'} sectionTitleType={Text.Types.SectionHeader}>
           {this.formattedAccountList().map((account: EthereumAccountListItem, index: number) => {
             return (
               <ListItem
-                title={account.network}
-                key={account.address}
-                contentRight={account.balance}
-                last={account.isLast}
-                onPress={() =>
-                  Navigation.push(this.props.componentId, {
-                    component: {
-                      name: SCREENS.Account,
-                      passProps: {
-                        address: account.address,
-                        network: account.network,
-                        accountProfile: account.accountProfile,
-                      },
-                    },
-                  })
+                avatarComponent={
+                  <TouchableOpacity onPress={() => this.props.refreshBalance(account.address)}>
+                    <Icon name={'sync'} color={Theme.colors.primary.accessories} />
+                  </TouchableOpacity>
                 }
-              >
-                {account.name}
+                title={account.name + ' - ' + account.network}
+                key={account.address}
+                accessoryRight={account.balance}
+                last={account.isLast}
+                hideForwardArrow
+                onPress={() => this.showAlert(account)}>
+                {account.hexaddress.slice(0, 15) + '...'}
               </ListItem>
             )
           })}
@@ -353,6 +363,7 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
           network: networkName,
           balance: account.balance && account.balance.ethBalance && `${wei2eth(account.balance.ethBalance)} ETH`,
           address: account.address,
+          hexaddress: account.hexaddress,
           accountProfile,
           isLast: this.props.accounts.length === index + 1,
         }
@@ -449,7 +460,7 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
     photoSelectionHandler({
       cameraStatus: null,
       photoStatus: null,
-      segmentId: '',
+      segmentId: null,
       addFn: this.props.editMyInfo,
     })
   }
@@ -526,6 +537,7 @@ export const mapDispatchToProps = (dispatch: any) => {
     switchIdentity: (address: string) => {
       dispatch(switchIdentity(address))
     },
+    refreshBalance: (address: string) => dispatch(refreshBalance(address)),
   }
 }
 
