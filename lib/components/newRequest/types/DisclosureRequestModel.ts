@@ -1,8 +1,22 @@
 import { capitalizeFirstLetter } from 'uPortMobile/lib/utilities/string'
+import { UserInfo } from 'uPortMobile/lib/types/Credentials'
 
 /**
  * Types for the disclourse request
  */
+
+export interface ClaimSpecType {
+  essential?: boolean
+  reason?: string
+  claimType: string
+}
+
+export interface VerifiableClaimType {
+  iss: string
+  issuer: any
+  claimType: string
+}
+
 export interface DisclosureRequestModelType {
   requestId: string
   componentId: string
@@ -13,8 +27,8 @@ export interface DisclosureRequestModelType {
   statsMessage: string
   requestItems: RequestItem[] // To Type
   appBranding: AppBranding // To Type
-  verifiedCredentials: any[] // To Type
-  missingCredentials: any[] // To Type
+  verifiedCredentials: VerifiableClaimType[] // To Type
+  missingCredentials: ClaimSpecType[] // To Type
   error: string | null
 }
 
@@ -61,29 +75,26 @@ const interactionStatsMessage = (intStats: any, client: string) => {
     : `You have interacted with ${client} ${countStats(intStats)} times`
 }
 
+function objectToRequestItems(claims: UserInfo): RequestItem[] {
+  return claims
+    ? Object.keys(claims).map((claim, index) => {
+      return {
+        key: index + claim,
+        type: capitalizeFirstLetter(claim),
+        value: typeof claims[claim] !== 'object' ? claims[claim] : null,
+      }
+    })
+    : []
+}
 /**
  * Disclose request items model
  */
-const disclosureRequestItemModel = (props: any): RequestItem[] => {
-  return props.requested
-    ? Object.keys(props.requested).map((claim, index) => {
-        return {
-          key: index + claim,
-          type: capitalizeFirstLetter(claim),
-          value: typeof props.requested[claim] !== 'object' ? props.requested[claim] : null,
-        }
-      })
-    : []
+function disclosureRequestItemModel({requested} : any): RequestItem[] {
+  return objectToRequestItems(requested) || []
 }
 
-const disclosureRequestVCModel = (props: any) => {
-  /** Parse the data here if needed */
-  return props.verified
-}
-
-const disclosureRequestMissingCredentialModel = (props: any) => {
-  /** Parse the data here if needed */
-  return props.missing
+function disclosureRequestVCModel({ verified }: any): any[] {
+  return verified || []
 }
 
 /**
@@ -165,7 +176,7 @@ const DisclosureRequestModel = (props: any): DisclosureRequestModelType | null =
       ...disclosureRequestCommon,
       requestItems: disclosureRequestItemModel(props),
       verifiedCredentials: disclosureRequestVCModel(props),
-      missingCredentials: disclosureRequestMissingCredentialModel(props),
+      missingCredentials: props.missing || []
     }
   }
 

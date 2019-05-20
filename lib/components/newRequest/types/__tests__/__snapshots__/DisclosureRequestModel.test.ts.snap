@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Disclosure Request Model Create Account: creates a data model for disclosure request 1`] = `
+Object {
+  "actionButton": Object {
+    "action": undefined,
+    "actionType": "new",
+    "disabled": false,
+    "text": "Create",
+  },
+  "appBranding": Object {
+    "bannerImage": "",
+    "profileImage": "",
+    "requestor": "Uport Test Labs",
+  },
+  "cancelButton": Object {
+    "action": undefined,
+    "disabled": false,
+    "text": "Cancel",
+  },
+  "componentId": undefined,
+  "description": "You need to create an ethereum account to interact with Uport Test Labs",
+  "error": null,
+  "missingCredentials": Array [],
+  "requestId": undefined,
+  "requestItems": Array [],
+  "statsMessage": "You have never interacted with Uport Test Labs",
+  "title": "Create Account",
+  "verifiedCredentials": Array [],
+}
+`;
+
+exports[`Disclosure Request Model Share Account: creates a data model for disclosure request 1`] = `
+Object {
+  "actionButton": Object {
+    "action": undefined,
+    "actionType": "none",
+    "disabled": undefined,
+    "text": "Login",
+  },
+  "appBranding": Object {
+    "bannerImage": "",
+    "profileImage": "",
+    "requestor": "Uport Test Labs",
+  },
+  "cancelButton": Object {
+    "action": undefined,
+    "disabled": false,
+    "text": "Cancel",
+  },
+  "componentId": undefined,
+  "description": null,
+  "error": null,
+  "missingCredentials": Array [],
+  "requestId": undefined,
+  "requestItems": Array [],
+  "statsMessage": "You have never interacted with Uport Test Labs",
+  "title": "Share to login",
+  "verifiedCredentials": Array [],
+}
+`;
+
+exports[`Disclosure Request Model with missing credentials 1`] = `
+Object {
+  "actionButton": Object {
+    "action": undefined,
+    "actionType": "none",
+    "disabled": undefined,
+    "text": "Login",
+  },
+  "appBranding": Object {
+    "bannerImage": "",
+    "profileImage": "",
+    "requestor": "Uport Test Labs",
+  },
+  "cancelButton": Object {
+    "action": undefined,
+    "disabled": false,
+    "text": "Cancel",
+  },
+  "componentId": undefined,
+  "description": null,
+  "error": null,
+  "missingCredentials": Array [
+    Object {
+      "claimType": "name",
+      "essential": true,
+      "reason": "We need this",
+    },
+    Object {
+      "claimType": "email",
+      "reason": "We dont need this",
+    },
+  ],
+  "requestId": undefined,
+  "requestItems": Array [],
+  "statsMessage": "You have never interacted with Uport Test Labs",
+  "title": "Share to login",
+  "verifiedCredentials": Array [],
+}
+`;
+
+exports[`Disclosure Request Model with user info 1`] = `
+Object {
+  "actionButton": Object {
+    "action": undefined,
+    "actionType": "none",
+    "disabled": undefined,
+    "text": "Login",
+  },
+  "appBranding": Object {
+    "bannerImage": "",
+    "profileImage": "",
+    "requestor": "Uport Test Labs",
+  },
+  "cancelButton": Object {
+    "action": undefined,
+    "disabled": false,
+    "text": "Cancel",
+  },
+  "componentId": undefined,
+  "description": null,
+  "error": null,
+  "missingCredentials": Array [],
+  "requestId": undefined,
+  "requestItems": Array [
+    Object {
+      "key": "0name",
+      "type": "Name",
+      "value": "Bob Smith",
+    },
+    Object {
+      "key": "1email",
+      "type": "Email",
+      "value": "bob@email.com",
+    },
+  ],
+  "statsMessage": "You have never interacted with Uport Test Labs",
+  "title": "Share to login",
+  "verifiedCredentials": Array [],
+}
+`;
+
+exports[`Disclosure Request Model with verified credentials 1`] = `
+Object {
+  "actionButton": Object {
+    "action": undefined,
+    "actionType": "none",
+    "disabled": undefined,
+    "text": "Login",
+  },
+  "appBranding": Object {
+    "bannerImage": "",
+    "profileImage": "",
+    "requestor": "Uport Test Labs",
+  },
+  "cancelButton": Object {
+    "action": undefined,
+    "disabled": false,
+    "text": "Cancel",
+  },
+  "componentId": undefined,
+  "description": null,
+  "error": null,
+  "missingCredentials": Array [],
+  "requestId": undefined,
+  "requestItems": Array [],
+  "statsMessage": "You have never interacted with Uport Test Labs",
+  "title": "Share to login",
+  "verifiedCredentials": Array [
+    Object {
+      "claimType": "name",
+      "iss": "0x1a",
+      "issuer": Object {},
+    },
+    Object {
+      "claimType": "email",
+      "iss": "0x1b",
+      "issuer": Object {},
+    },
+  ],
+}
+`;

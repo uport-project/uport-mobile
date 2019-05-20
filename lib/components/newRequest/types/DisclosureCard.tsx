@@ -123,7 +123,7 @@ export const DisclosureCard: React.FC<DisclosureRequestModelType> = requestModel
               {requestModel.missingCredentials.map((item: any, index: number) => {
                 return (
                   item.essential && (
-                    <Credential key={item.type + '-' + index} claimType={item.type} spec={item} missing />
+                    <Credential key={item.claimType + '-' + index} claimType={item.claimType} spec={item} missing />
                   )
                 )
               })}

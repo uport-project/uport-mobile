@@ -16,7 +16,7 @@ exports[`ExpirationItem renders ExpirationItem in milliseconds 1`] = `
     }
   >
     Exp: 
-    Mar 1st 2020
+    Feb 29th 2020
   </Text>
 </View>
 `;
@@ -37,7 +37,7 @@ exports[`ExpirationItem renders ExpirationItem in seconds 1`] = `
     }
   >
     Exp: 
-    Mar 1st 2020
+    Feb 29th 2020
   </Text>
 </View>
 `;
