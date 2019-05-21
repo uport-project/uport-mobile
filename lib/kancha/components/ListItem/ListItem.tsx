@@ -101,6 +101,11 @@ interface ListItemProps {
    * Provide a testID for e2e tests
    */
   testID?: string
+
+  /**
+   * Disbale accessbilityLabel on this item to allow sub items use to them
+   */
+  accessible?: boolean
 }
 
 /** Move to kancha utils */
@@ -128,6 +133,7 @@ const ListItem: React.FunctionComponent<ListItemProps> = props => {
       underlayColor={Theme.colors.primary.underlay}
       disabled={props.disabled}
       testID={props.testID}
+      accessible={props.accessible}
       accessibilityLabel={props.testID}>
       <Container flex={1} flexDirection={'row'}>
         {props.avatarComponent && (
@@ -192,6 +198,10 @@ const ListItem: React.FunctionComponent<ListItemProps> = props => {
       </Container>
     </TouchableHighlight>
   )
+}
+
+ListItem.defaultProps = {
+  accessible: true,
 }
 
 export default ListItem

@@ -191,6 +191,7 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
         <Container>
           <Section>
             <ListItem
+              accessible={false}
               avatarComponent={
                 <Checkbox
                   testID={TESTID.ONBOARDING_TERMS_RADIO}
@@ -209,6 +210,7 @@ class CreateIdentity extends React.Component<CreateIdentityProps, CreateIdentity
               Accept terms and conditions
             </ListItem>
             <ListItem
+              accessible={false}
               last
               avatarComponent={
                 <Checkbox
