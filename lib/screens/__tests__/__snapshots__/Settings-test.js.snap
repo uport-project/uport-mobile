@@ -2600,6 +2600,7 @@ ShallowWrapper {
       "children": Array [
         <Section>
           <ListItem
+            accessible={true}
             accessoryRight="256 (undefined)"
             hideForwardArrow={true}
             onPress={[Function]}
@@ -2607,16 +2608,19 @@ ShallowWrapper {
             Version
           </ListItem>
           <ListItem
+            accessible={true}
             onPress={[Function]}
           >
             uPort ID
           </ListItem>
           <ListItem
+            accessible={true}
             onPress={[Function]}
           >
             Try uPort
           </ListItem>
           <ListItem
+            accessible={true}
             externalLink="https://uport.zendesk.com/hc/en-us/requests/new"
             last={true}
           >
@@ -2626,16 +2630,19 @@ ShallowWrapper {
         false,
         <Section>
           <ListItem
+            accessible={true}
             onPress={[Function]}
           >
             Device
           </ListItem>
           <ListItem
+            accessible={true}
             onPress={[Function]}
           >
             System Messages
           </ListItem>
           <ListItem
+            accessible={true}
             last={true}
             onPress={[Function]}
           >
@@ -2644,11 +2651,13 @@ ShallowWrapper {
         </Section>,
         <Section>
           <ListItem
+            accessible={true}
             onPress={[Function]}
           >
             Privacy Policy
           </ListItem>
           <ListItem
+            accessible={true}
             accessoryRight="v1.2 (5/24/2018)"
             last={true}
             onPress={[Function]}
@@ -2660,6 +2669,7 @@ ShallowWrapper {
           title="Developer Options"
         >
           <ListItem
+            accessible={true}
             last={true}
             onPress={[Function]}
           >
@@ -2684,6 +2694,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <ListItem
+              accessible={true}
               accessoryRight="256 (undefined)"
               hideForwardArrow={true}
               onPress={[Function]}
@@ -2691,16 +2702,19 @@ ShallowWrapper {
               Version
             </ListItem>,
             <ListItem
+              accessible={true}
               onPress={[Function]}
             >
               uPort ID
             </ListItem>,
             <ListItem
+              accessible={true}
               onPress={[Function]}
             >
               Try uPort
             </ListItem>,
             <ListItem
+              accessible={true}
               externalLink="https://uport.zendesk.com/hc/en-us/requests/new"
               last={true}
             >
@@ -2715,6 +2729,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
+              "accessible": true,
               "accessoryRight": "256 (undefined)",
               "children": "Version",
               "hideForwardArrow": true,
@@ -2729,6 +2744,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
+              "accessible": true,
               "children": "uPort ID",
               "onPress": [Function],
             },
@@ -2741,6 +2757,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
+              "accessible": true,
               "children": "Try uPort",
               "onPress": [Function],
             },
@@ -2753,6 +2770,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
+              "accessible": true,
               "children": "Support",
               "externalLink": "https://uport.zendesk.com/hc/en-us/requests/new",
               "last": true,
@@ -2772,17 +2790,20 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <ListItem
+              accessible={true}
               onPress={[Function]}
             >
               Device
             </ListItem>,
             false,
             <ListItem
+              accessible={true}
               onPress={[Function]}
             >
               System Messages
             </ListItem>,
             <ListItem
+              accessible={true}
               last={true}
               onPress={[Function]}
             >
@@ -2797,6 +2818,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
+              "accessible": true,
               "children": "Device",
               "onPress": [Function],
             },
@@ -2810,6 +2832,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
+              "accessible": true,
               "children": "System Messages",
               "onPress": [Function],
             },
@@ -2822,6 +2845,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
+              "accessible": true,
               "children": "Network",
               "last": true,
               "onPress": [Function],
@@ -2840,11 +2864,13 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <ListItem
+              accessible={true}
               onPress={[Function]}
             >
               Privacy Policy
             </ListItem>,
             <ListItem
+              accessible={true}
               accessoryRight="v1.2 (5/24/2018)"
               last={true}
               onPress={[Function]}
@@ -2860,6 +2886,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
+              "accessible": true,
               "children": "Privacy Policy",
               "onPress": [Function],
             },
@@ -2872,6 +2899,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
+              "accessible": true,
               "accessoryRight": "v1.2 (5/24/2018)",
               "children": "Terms & Conditions",
               "last": true,
@@ -2890,6 +2918,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": <ListItem
+            accessible={true}
             last={true}
             onPress={[Function]}
           >
@@ -2903,6 +2932,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "accessible": true,
             "children": "Design System",
             "last": true,
             "onPress": [Function],
@@ -2936,6 +2966,7 @@ ShallowWrapper {
         "children": Array [
           <Section>
             <ListItem
+              accessible={true}
               accessoryRight="256 (undefined)"
               hideForwardArrow={true}
               onPress={[Function]}
@@ -2943,16 +2974,19 @@ ShallowWrapper {
               Version
             </ListItem>
             <ListItem
+              accessible={true}
               onPress={[Function]}
             >
               uPort ID
             </ListItem>
             <ListItem
+              accessible={true}
               onPress={[Function]}
             >
               Try uPort
             </ListItem>
             <ListItem
+              accessible={true}
               externalLink="https://uport.zendesk.com/hc/en-us/requests/new"
               last={true}
             >
@@ -2962,16 +2996,19 @@ ShallowWrapper {
           false,
           <Section>
             <ListItem
+              accessible={true}
               onPress={[Function]}
             >
               Device
             </ListItem>
             <ListItem
+              accessible={true}
               onPress={[Function]}
             >
               System Messages
             </ListItem>
             <ListItem
+              accessible={true}
               last={true}
               onPress={[Function]}
             >
@@ -2980,11 +3017,13 @@ ShallowWrapper {
           </Section>,
           <Section>
             <ListItem
+              accessible={true}
               onPress={[Function]}
             >
               Privacy Policy
             </ListItem>
             <ListItem
+              accessible={true}
               accessoryRight="v1.2 (5/24/2018)"
               last={true}
               onPress={[Function]}
@@ -2996,6 +3035,7 @@ ShallowWrapper {
             title="Developer Options"
           >
             <ListItem
+              accessible={true}
               last={true}
               onPress={[Function]}
             >
@@ -3020,6 +3060,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <ListItem
+                accessible={true}
                 accessoryRight="256 (undefined)"
                 hideForwardArrow={true}
                 onPress={[Function]}
@@ -3027,16 +3068,19 @@ ShallowWrapper {
                 Version
               </ListItem>,
               <ListItem
+                accessible={true}
                 onPress={[Function]}
               >
                 uPort ID
               </ListItem>,
               <ListItem
+                accessible={true}
                 onPress={[Function]}
               >
                 Try uPort
               </ListItem>,
               <ListItem
+                accessible={true}
                 externalLink="https://uport.zendesk.com/hc/en-us/requests/new"
                 last={true}
               >
@@ -3051,6 +3095,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "accessible": true,
                 "accessoryRight": "256 (undefined)",
                 "children": "Version",
                 "hideForwardArrow": true,
@@ -3065,6 +3110,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "accessible": true,
                 "children": "uPort ID",
                 "onPress": [Function],
               },
@@ -3077,6 +3123,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "accessible": true,
                 "children": "Try uPort",
                 "onPress": [Function],
               },
@@ -3089,6 +3136,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "accessible": true,
                 "children": "Support",
                 "externalLink": "https://uport.zendesk.com/hc/en-us/requests/new",
                 "last": true,
@@ -3108,17 +3156,20 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <ListItem
+                accessible={true}
                 onPress={[Function]}
               >
                 Device
               </ListItem>,
               false,
               <ListItem
+                accessible={true}
                 onPress={[Function]}
               >
                 System Messages
               </ListItem>,
               <ListItem
+                accessible={true}
                 last={true}
                 onPress={[Function]}
               >
@@ -3133,6 +3184,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "accessible": true,
                 "children": "Device",
                 "onPress": [Function],
               },
@@ -3146,6 +3198,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "accessible": true,
                 "children": "System Messages",
                 "onPress": [Function],
               },
@@ -3158,6 +3211,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "accessible": true,
                 "children": "Network",
                 "last": true,
                 "onPress": [Function],
@@ -3176,11 +3230,13 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <ListItem
+                accessible={true}
                 onPress={[Function]}
               >
                 Privacy Policy
               </ListItem>,
               <ListItem
+                accessible={true}
                 accessoryRight="v1.2 (5/24/2018)"
                 last={true}
                 onPress={[Function]}
@@ -3196,6 +3252,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "accessible": true,
                 "children": "Privacy Policy",
                 "onPress": [Function],
               },
@@ -3208,6 +3265,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "accessible": true,
                 "accessoryRight": "v1.2 (5/24/2018)",
                 "children": "Terms & Conditions",
                 "last": true,
@@ -3226,6 +3284,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": <ListItem
+              accessible={true}
               last={true}
               onPress={[Function]}
             >
@@ -3239,6 +3298,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
+              "accessible": true,
               "children": "Design System",
               "last": true,
               "onPress": [Function],
