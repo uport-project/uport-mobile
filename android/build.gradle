@@ -23,7 +23,7 @@ buildscript {
     ext {
         kotlin_version = "1.2.61"
         build_tools_version = "28.0.3"
-        gradle_tools_version = "3.1.4"
+        gradle_tools_version = "3.3.1"
         google_tools_version = "3.1.2"
 
         //check for updates at https://docs.fabric.io/android/changelog.html#fabric-gradle-plugin

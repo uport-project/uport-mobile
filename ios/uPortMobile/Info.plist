@@ -107,6 +107,8 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSAllowsArbitraryLoads</key>
+  <true/>
 	<key>NSAppleMusicUsageDescription</key>
 	<string>This app does not require media library access</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
