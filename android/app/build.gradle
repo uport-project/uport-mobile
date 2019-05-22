@@ -174,7 +174,7 @@ android {
         multiDexKeepFile file('multidex-config.txt')
 
         missingDimensionStrategy 'react-native-camera', 'general'
-        missingDimensionStrategy "RNN.reactNativeVersion", "reactNative55"
+        missingDimensionStrategy "RNN.reactNativeVersion", "reactNative57_5"
 
     }
 

@@ -58,7 +58,7 @@ public class MainApplication extends NavigationApplication implements ShareAppli
         ReactNativeHost host = new NavigationReactNativeHost(this, isDebug(), createAdditionalReactPackages()) {
             @Override
             protected String getJSMainModuleName() {
-                return "index.android";
+                return "index";
             }
         };
         return new ReactGateway(this, isDebug(), host);
