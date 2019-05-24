@@ -1,5 +1,14 @@
 # Change Log
 
+## [v458](https://github.com/uport-project/uport-mobile/tree/v458) (2019-05-24)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v457...v458)
+
+**Merged pull requests:**
+
+- \[Fixed \#166188674\] [\#147](https://github.com/uport-project/uport-mobile/pull/147) ([simonas-notcat](https://github.com/simonas-notcat))
+- Upgrade rn-uport-signer [\#145](https://github.com/uport-project/uport-mobile/pull/145) ([aldigjo](https://github.com/aldigjo))
+- Enable accessibility to be switched off for list items [\#144](https://github.com/uport-project/uport-mobile/pull/144) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v457](https://github.com/uport-project/uport-mobile/tree/v457) (2019-05-20)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v456...v457)
 
