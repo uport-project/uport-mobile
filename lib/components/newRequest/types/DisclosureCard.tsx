@@ -86,7 +86,7 @@ export const DisclosureCard: React.FC<DisclosureRequestModelType> = requestModel
             requestor={requestModel.appBranding.requestor}
           />
           <IndicatorBar text={requestModel.title} />
-          {requestModel.description && (
+          {requestModel.description !== null && (
             <Container padding backgroundColor={Theme.colors.primary.background}>
               <Text type={Text.Types.Body}>{requestModel.description}</Text>
             </Container>
