@@ -1,3 +1,3 @@
-jest.mock('react-native-fetch-blob', () => {
+jest.mock('rn-fetch-blob', () => {
   return {}
 })

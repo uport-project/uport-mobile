@@ -274,7 +274,7 @@ dependencies {
     implementation project(':react-native-svg')
     implementation project(':react-native-navigation')
     implementation project(':react-native-device-info')
-    implementation project(':react-native-fetch-blob')
+    implementation project(':rn-fetch-blob')
     implementation project(':react-native-vector-icons')
     implementation project(':react-native-passcode-android')
     implementation project(':react-native-randombytes')
