@@ -1,5 +1,13 @@
 # Change Log
 
+## [v459](https://github.com/uport-project/uport-mobile/tree/v459) (2019-05-25)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v458...v459)
+
+**Merged pull requests:**
+
+- \[Support\] Fix android failed build on CI [\#149](https://github.com/uport-project/uport-mobile/pull/149) ([mirceanis](https://github.com/mirceanis))
+- re-enable migrations [\#148](https://github.com/uport-project/uport-mobile/pull/148) ([pelle](https://github.com/pelle))
+
 ## [v458](https://github.com/uport-project/uport-mobile/tree/v458) (2019-05-24)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v457...v458)
 
