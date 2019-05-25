@@ -102,7 +102,7 @@ jobs:
             - ~/.gradle
 
       - run: PATH=$PATH:$HOME/vault && bash ../scripts/pull_google_services.sh
-      - run: ./gradlew :app:deliverArchives -x bundleReleaseJsAndAssets
+      - run: ./gradlew :app:deliverArchives -x bundleReleaseJsAndAssets --no-parallel
 
       - run:
           name: tests
