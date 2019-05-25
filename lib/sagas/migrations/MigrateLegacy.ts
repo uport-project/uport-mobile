@@ -148,9 +148,7 @@ export function* migrate(): any {
     )
   }
   yield put(saveMessage(step, 'New mainnet identity is created'))
-  if (backedup) {
-    yield call(handleStartSwitchingSettingsChange, { isOn: true })
-  }
+  yield call(handleStartSwitchingSettingsChange, { isOn: true })
   return true
 }
 
