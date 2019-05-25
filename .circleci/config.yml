@@ -90,23 +90,23 @@ jobs:
             - ~/.bundle
       - restore_cache:
           keys:
-            - android-{{ arch }}-v3-{{ checksum "build.gradle" }}
-            - android-{{ arch }}-v3
+            - android-{{ arch }}-v4-{{ checksum "build.gradle" }}
+            - android-{{ arch }}-v4
       - run:
           name: get android dependencies
-          command: ./gradlew androidDependencies
+          command: ./gradlew :app:dependencies androidDependencies --no-parallel --no-daemon
       - save_cache:
-          key: android-{{ arch }}-v3-{{ checksum "build.gradle" }}
+          key: android-{{ arch }}-v4-{{ checksum "build.gradle" }}
           paths:
             - .gradle
             - ~/.gradle
 
       - run: PATH=$PATH:$HOME/vault && bash ../scripts/pull_google_services.sh
-      - run: ./gradlew :app:deliverArchives -x bundleReleaseJsAndAssets --no-parallel
+      - run: ./gradlew :app:deliverArchives -x bundleReleaseJsAndAssets --no-parallel --no-daemon
 
       - run:
           name: tests
-          command: cd ~/uport-mobile/android && ./gradlew :app:lint :app:test -x bundleReleaseJsAndAssets
+          command: cd ~/uport-mobile/android && ./gradlew :app:lint :app:test -x bundleReleaseJsAndAssets --no-parallel --no-daemon
 
       - persist_to_workspace:
           root: ~/uport-mobile
