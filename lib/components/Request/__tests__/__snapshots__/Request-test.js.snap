@@ -44,9 +44,6 @@ exports[`Request Component renders a request without a type 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "#6A54D1",
@@ -141,9 +138,6 @@ exports[`Request Component returns a AttestationCard when the request type is at
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "#6A54D1",
@@ -238,9 +232,6 @@ exports[`Request Component returns a AttestationCard when the request type is at
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "#6A54D1",
@@ -335,9 +326,6 @@ exports[`Request Component returns a ConnectionCard when the request type is con
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "#6A54D1",
@@ -432,9 +420,6 @@ exports[`Request Component returns a ConnectionCard when the request type is con
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "#6A54D1",

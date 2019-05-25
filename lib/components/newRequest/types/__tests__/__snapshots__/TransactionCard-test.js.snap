@@ -40,9 +40,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi with arg
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -101,9 +98,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi with arg
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -116,9 +110,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi with arg
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -130,9 +121,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi with arg
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -230,9 +218,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi with arg
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -244,9 +229,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi with arg
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -296,9 +278,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi with arg
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -354,9 +333,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi with arg
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -367,9 +343,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi with arg
           Function
         </Text>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -407,8 +380,12 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi with arg
           }
           testID="APPROVE_BUTTON"
         >
+<<<<<<< HEAD
           <View
             pointerEvents="auto"
+=======
+          <Text
+>>>>>>> bump snapshots
             style={
               Object {
                 "alignItems": undefined,
@@ -493,9 +470,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi without 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -554,9 +528,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi without 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -569,9 +540,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi without 
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -583,9 +551,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi without 
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -683,9 +648,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi without 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -697,9 +659,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi without 
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -749,9 +708,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi without 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -837,9 +793,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi without 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -850,9 +803,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi without 
           Function
         </Text>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -890,8 +840,12 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi without 
           }
           testID="APPROVE_BUTTON"
         >
+<<<<<<< HEAD
           <View
             pointerEvents="auto"
+=======
+          <Text
+>>>>>>> bump snapshots
             style={
               Object {
                 "alignItems": undefined,
@@ -976,9 +930,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with both client 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -1037,9 +988,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with both client 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -1052,9 +1000,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with both client 
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -1066,9 +1011,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with both client 
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -1133,9 +1075,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with both client 
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -1166,9 +1105,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with both client 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -1180,9 +1116,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with both client 
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -1232,9 +1165,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with both client 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -1294,8 +1224,12 @@ exports[`TransactionCard MetaIdentityManager renders correctly with both client 
           }
           testID="APPROVE_BUTTON"
         >
+<<<<<<< HEAD
           <View
             pointerEvents="auto"
+=======
+          <Text
+>>>>>>> bump snapshots
             style={
               Object {
                 "alignItems": undefined,
@@ -1380,9 +1314,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -1441,9 +1372,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -1456,9 +1384,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -1470,9 +1395,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -1537,9 +1459,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -1570,9 +1489,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -1584,9 +1500,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -1636,9 +1549,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -1718,9 +1628,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": undefined,
@@ -1735,8 +1642,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
               Error:
             </Text>
             <Text
-              accessible={true}
-              allowFontScaling={true}
               ellipsizeMode="tail"
               style={
                 Object {
@@ -1820,9 +1725,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -1881,9 +1783,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -1896,9 +1795,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -1910,9 +1806,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -1977,9 +1870,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -2010,9 +1900,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -2024,9 +1911,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -2076,9 +1960,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -2138,8 +2019,12 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
           }
           testID="APPROVE_BUTTON"
         >
+<<<<<<< HEAD
           <View
             pointerEvents="auto"
+=======
+          <Text
+>>>>>>> bump snapshots
             style={
               Object {
                 "alignItems": undefined,
@@ -2224,9 +2109,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with only request
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -2285,9 +2167,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with only request
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -2300,9 +2179,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with only request
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -2314,9 +2190,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with only request
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -2414,9 +2287,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with only request
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -2428,9 +2298,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with only request
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -2480,9 +2347,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with only request
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -2542,8 +2406,12 @@ exports[`TransactionCard MetaIdentityManager renders correctly with only request
           }
           testID="APPROVE_BUTTON"
         >
+<<<<<<< HEAD
           <View
             pointerEvents="auto"
+=======
+          <Text
+>>>>>>> bump snapshots
             style={
               Object {
                 "alignItems": undefined,
@@ -2628,9 +2496,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -2689,9 +2554,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -2704,9 +2566,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -2718,9 +2577,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -2818,9 +2674,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -2832,9 +2685,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -2884,9 +2734,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -2922,7 +2769,54 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
       <View
         style={
           Object {
+<<<<<<< HEAD
             "margin": 10,
+=======
+            "backgroundColor": "#FFFFFF",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginLeft": 8,
+            "marginRight": 8,
+            "paddingBottom": 15,
+            "paddingLeft": 15,
+            "paddingRight": 15,
+            "paddingTop": 15,
+            "shadowColor": "rgb(200, 200, 200)",
+            "shadowOffset": Object {
+              "height": 1.5,
+              "width": 0,
+            },
+            "shadowOpacity": 0.5,
+            "shadowRadius": 16,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 14,
+            }
+          }
+        >
+          Function
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 14,
+            }
+          }
+        >
+          Set Attributes
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "rgba(246,247,248,1)",
+>>>>>>> bump snapshots
           }
         }
       >
@@ -2946,8 +2840,12 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
           }
           testID="APPROVE_BUTTON"
         >
+<<<<<<< HEAD
           <View
             pointerEvents="auto"
+=======
+          <Text
+>>>>>>> bump snapshots
             style={
               Object {
                 "alignItems": undefined,
@@ -3032,9 +2930,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -3093,9 +2988,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -3108,9 +3000,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -3122,9 +3011,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -3222,9 +3108,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -3236,9 +3119,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -3288,9 +3168,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -3350,8 +3227,12 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
           }
           testID="APPROVE_BUTTON"
         >
+<<<<<<< HEAD
           <View
             pointerEvents="auto"
+=======
+          <Text
+>>>>>>> bump snapshots
             style={
               Object {
                 "alignItems": undefined,
@@ -3436,9 +3317,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -3497,9 +3375,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -3512,9 +3387,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -3526,9 +3398,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -3626,9 +3495,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -3640,9 +3506,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -3692,9 +3555,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -3754,8 +3614,12 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
           }
           testID="APPROVE_BUTTON"
         >
+<<<<<<< HEAD
           <View
             pointerEvents="auto"
+=======
+          <Text
+>>>>>>> bump snapshots
             style={
               Object {
                 "alignItems": undefined,
@@ -3840,9 +3704,6 @@ exports[`TransactionCard keyPair renders correctly with abi with args and a no v
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -3901,9 +3762,6 @@ exports[`TransactionCard keyPair renders correctly with abi with args and a no v
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -3916,9 +3774,6 @@ exports[`TransactionCard keyPair renders correctly with abi with args and a no v
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -3930,9 +3785,6 @@ exports[`TransactionCard keyPair renders correctly with abi with args and a no v
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -4030,9 +3882,6 @@ exports[`TransactionCard keyPair renders correctly with abi with args and a no v
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -4044,9 +3893,6 @@ exports[`TransactionCard keyPair renders correctly with abi with args and a no v
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -4096,9 +3942,6 @@ exports[`TransactionCard keyPair renders correctly with abi with args and a no v
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -4164,6 +4007,7 @@ exports[`TransactionCard keyPair renders correctly with abi with args and a no v
             }
           }
         >
+<<<<<<< HEAD
           Function
         </Text>
         <Text
@@ -10117,6 +9961,9 @@ exports[`TransactionCard keyPair transaction sent not mined renders correctly 1`
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+=======
+          <Text
+>>>>>>> bump snapshots
             style={
               Array [
                 Object {

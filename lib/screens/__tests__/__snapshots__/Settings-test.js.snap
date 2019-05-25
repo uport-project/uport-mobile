@@ -2,6 +2,7 @@
 
 exports[`SettingsRoot renders Settings screen with 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   style={
     Object {
       "backgroundColor": "#EFEEF3",
@@ -279,9 +280,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -345,9 +343,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                         }
                       >
                         <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
                           style={
                             Object {
                               "color": "#BBBBBB",
@@ -506,9 +501,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -724,9 +716,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -940,9 +929,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -1214,9 +1200,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -1432,9 +1415,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -1648,9 +1628,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -1922,9 +1899,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -2138,9 +2112,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -2204,9 +2175,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                         }
                       >
                         <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
                           style={
                             Object {
                               "color": "#BBBBBB",
@@ -2279,9 +2247,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#BBBBBB",
@@ -2464,9 +2429,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -2572,6 +2534,7 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
 </RCTSafeAreaView>
 `;
 
+<<<<<<< HEAD
 exports[`SettingsRoot renders a connected SettingsRoot as expected 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
@@ -3377,9 +3340,13 @@ ShallowWrapper {
   Symbol(enzyme.__childContext__): null,
 }
 `;
+=======
+exports[`SettingsRoot renders a connected SettingsRoot as expected 1`] = `ShallowWrapper {}`;
+>>>>>>> bump snapshots
 
 exports[`SettingsRoot renders without exploding 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   style={
     Object {
       "backgroundColor": "#EFEEF3",
@@ -3657,9 +3624,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -3723,9 +3687,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
                         }
                       >
                         <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
                           style={
                             Object {
                               "color": "#BBBBBB",
@@ -3884,9 +3845,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -4102,9 +4060,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -4318,9 +4273,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -4592,9 +4544,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -4810,9 +4759,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -5026,9 +4972,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -5300,9 +5243,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -5516,9 +5456,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -5582,9 +5519,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
                         }
                       >
                         <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
                           style={
                             Object {
                               "color": "#BBBBBB",
@@ -5657,9 +5591,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#BBBBBB",
@@ -5842,9 +5773,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",

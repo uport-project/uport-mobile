@@ -1,5 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+<<<<<<< HEAD
 exports[`VerificationCard renders a connected VerificationCard as expected 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
@@ -690,3 +691,6 @@ ShallowWrapper {
   Symbol(enzyme.__childContext__): null,
 }
 `;
+=======
+exports[`VerificationCard renders a connected VerificationCard as expected 1`] = `ShallowWrapper {}`;
+>>>>>>> bump snapshots

@@ -2,9 +2,6 @@
 
 exports[`renders Text p 1`] = `
 <Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
   style={
     Array [
       Object {
@@ -45,9 +42,6 @@ exports[`renders Text p 1`] = `
 
 exports[`renders Text title 1`] = `
 <Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
   style={
     Array [
       Object {

@@ -3,9 +3,6 @@
 exports[`ExpirationItem renders ExpirationItem in milliseconds 1`] = `
 <View>
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "color": "rgba(74,74,74,1)",
@@ -24,9 +21,6 @@ exports[`ExpirationItem renders ExpirationItem in milliseconds 1`] = `
 exports[`ExpirationItem renders ExpirationItem in seconds 1`] = `
 <View>
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "color": "rgba(74,74,74,1)",
