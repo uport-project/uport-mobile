@@ -1,5 +1,12 @@
 # Change Log
 
+## [v461](https://github.com/uport-project/uport-mobile/tree/v461) (2019-05-27)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v460...v461)
+
+**Merged pull requests:**
+
+- Tx card button + account balance fixes [\#151](https://github.com/uport-project/uport-mobile/pull/151) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v460](https://github.com/uport-project/uport-mobile/tree/v460) (2019-05-27)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v459...v460)
 
