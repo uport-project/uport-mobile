@@ -1,5 +1,12 @@
 # Change Log
 
+## [v460](https://github.com/uport-project/uport-mobile/tree/v460) (2019-05-27)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v459...v460)
+
+**Merged pull requests:**
+
+- Fix restoration of migrated identities [\#150](https://github.com/uport-project/uport-mobile/pull/150) ([pelle](https://github.com/pelle))
+
 ## [v459](https://github.com/uport-project/uport-mobile/tree/v459) (2019-05-25)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v458...v459)
 
