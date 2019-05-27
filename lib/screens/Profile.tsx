@@ -361,7 +361,8 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
         return {
           name: accountProfile ? accountProfile.name : 'Ethereum Account',
           network: networkName,
-          balance: account.balance && account.balance.ethBalance && `${wei2eth(account.balance.ethBalance)} ETH`,
+          balance:
+            account.balance && account.balance.ethBalance ? `${wei2eth(account.balance.ethBalance)} ETH` : `${0} ETH`,
           address: account.address,
           hexaddress: account.hexaddress,
           accountProfile,
