@@ -96,6 +96,7 @@ describe('MigrateLegacy', () => {
                 [select(hasAttestations), false],
                 [select(hasMainnetAccounts), false],
                 [select(subAccounts, legacyDID), []],
+                [call(handleStartSwitchingSettingsChange, { isOn: true }), undefined]
               ])
               .put(
                 storeIdentity({
@@ -119,6 +120,7 @@ describe('MigrateLegacy', () => {
                 }),
               )
               .put(saveMessage(step, 'New mainnet identity is created'))
+              .call(handleStartSwitchingSettingsChange, { isOn: true })
               .returns(true)
               .run()
           })
@@ -142,6 +144,7 @@ describe('MigrateLegacy', () => {
                     [call(canSignFor, 'account1'), true],
                     [call(canSignFor, 'account2'), true],
                     [call(canSignFor, 'account3'), true],
+                    [call(handleStartSwitchingSettingsChange, { isOn: true }), undefined]
                   ])
                   .put(
                     storeIdentity({
@@ -165,6 +168,7 @@ describe('MigrateLegacy', () => {
                     }),
                   )
                   .put(saveMessage(step, 'New mainnet identity is created'))
+                  .call(handleStartSwitchingSettingsChange, { isOn: true })
                   .returns(true)
                   .run()
               })
@@ -188,6 +192,7 @@ describe('MigrateLegacy', () => {
                     [call(canSignFor, 'account1'), false],
                     [call(canSignFor, 'account2'), false],
                     [call(canSignFor, 'account3'), true],
+                    [call(handleStartSwitchingSettingsChange, { isOn: true }), undefined]
                   ])
                   .put(
                     storeIdentity({
@@ -223,6 +228,7 @@ describe('MigrateLegacy', () => {
                     }),
                   )
                   .put(saveMessage(step, 'New mainnet identity is created'))
+                  .call(handleStartSwitchingSettingsChange, { isOn: true })
                   .returns(true)
                   .run()
               })
@@ -246,6 +252,7 @@ describe('MigrateLegacy', () => {
                 [call(createIdentityKeyPair), { address: newDID }],
                 [select(ownClaimsMap), own],
                 [select(subAccounts, legacyDID), []],
+                [call(handleStartSwitchingSettingsChange, { isOn: true }), undefined]
               ])
               .put(resetHDWallet())
               .call(createIdentityKeyPair)
@@ -257,6 +264,7 @@ describe('MigrateLegacy', () => {
                 }),
               )
               .put(saveMessage(step, 'New mainnet identity is created'))
+              .call(handleStartSwitchingSettingsChange, { isOn: true })
               .returns(true)
               .run()
           })
@@ -276,6 +284,7 @@ describe('MigrateLegacy', () => {
                 [call(createIdentityKeyPair), { address: newDID }],
                 [select(ownClaimsMap), own],
                 [select(subAccounts, legacyDID), []],
+                [call(handleStartSwitchingSettingsChange, { isOn: true }), undefined]
               ])
               .call(createIdentityKeyPair)
               .put(updateIdentity(newDID, { own }))
@@ -286,6 +295,7 @@ describe('MigrateLegacy', () => {
                 }),
               )
               .put(saveMessage(step, 'New mainnet identity is created'))
+              .call(handleStartSwitchingSettingsChange, { isOn: true })
               .returns(true)
               .run()
           })
@@ -308,6 +318,7 @@ describe('MigrateLegacy', () => {
                     [call(canSignFor, 'account1'), true],
                     [call(canSignFor, 'account2'), true],
                     [call(canSignFor, 'account3'), true],
+                    [call(handleStartSwitchingSettingsChange, { isOn: true }), undefined]
                   ])
                   .call(createIdentityKeyPair)
                   .put(updateIdentity(newDID, { own }))
@@ -318,6 +329,7 @@ describe('MigrateLegacy', () => {
                     }),
                   )
                   .put(saveMessage(step, 'New mainnet identity is created'))
+                  .call(handleStartSwitchingSettingsChange, { isOn: true })
                   .returns(true)
                   .run()
               })
@@ -341,6 +353,7 @@ describe('MigrateLegacy', () => {
                     [call(canSignFor, 'account1'), false],
                     [call(canSignFor, 'account2'), false],
                     [call(canSignFor, 'account3'), true],
+                    [call(handleStartSwitchingSettingsChange, { isOn: true }), undefined]
                   ])
                   .call(createIdentityKeyPair)
                   .put(updateIdentity(newDID, { own }))
@@ -363,6 +376,7 @@ describe('MigrateLegacy', () => {
                     }),
                   )
                   .put(saveMessage(step, 'New mainnet identity is created'))
+                  .call(handleStartSwitchingSettingsChange, { isOn: true })
                   .returns(true)
                   .run()
               })
@@ -390,6 +404,7 @@ describe('MigrateLegacy', () => {
               [call(encryptionPublicKey, { idIndex: 0, actIndex: 0 }), encPublicKey],
               [select(ownClaimsMap), own],
               [select(subAccounts, legacyDID), []],
+              [call(handleStartSwitchingSettingsChange, { isOn: true }), undefined]
             ])
             .put(
               storeIdentity({
@@ -407,6 +422,7 @@ describe('MigrateLegacy', () => {
               }),
             )
             .put(saveMessage(step, 'New mainnet identity is created'))
+            .call(handleStartSwitchingSettingsChange, { isOn: true })
             .returns(true)
             .run()
         })
@@ -469,6 +485,7 @@ describe('MigrateLegacy', () => {
                 [call(encryptionPublicKey, { idIndex: 0, actIndex: 0 }), encPublicKey],
                 [select(ownClaimsMap), own],
                 [select(subAccounts, legacyDID), []],
+                [call(handleStartSwitchingSettingsChange, { isOn: true }), undefined]
               ])
               .put(
                 storeIdentity({
@@ -490,6 +507,7 @@ describe('MigrateLegacy', () => {
               .put(storeExternalUport(legacyDID, own))
               .put(storeConnection(newDID, 'knows', legacyDID))
               .put(saveMessage(step, 'New mainnet identity is created'))
+              .call(handleStartSwitchingSettingsChange, { isOn: true })
               .returns(true)
               .run()
           })  
@@ -512,6 +530,7 @@ describe('MigrateLegacy', () => {
                 [call(encryptionPublicKey, { idIndex: 0, actIndex: 0 }), encPublicKey],
                 [select(ownClaimsMap), own],
                 [select(subAccounts, legacyDID), []],
+                [call(handleStartSwitchingSettingsChange, { isOn: true }), undefined]
               ])
               .put(
                 storeIdentity({
@@ -533,6 +552,7 @@ describe('MigrateLegacy', () => {
               .put(storeExternalUport(legacyDID, own))
               .put(storeConnection(newDID, 'knows', legacyDID))
               .put(saveMessage(step, 'New mainnet identity is created'))
+              .call(handleStartSwitchingSettingsChange, { isOn: true })
               .returns(true)
               .run()
           })
@@ -558,6 +578,7 @@ describe('MigrateLegacy', () => {
                   [call(canSignFor, 'account1'), true],
                   [call(canSignFor, 'account2'), true],
                   [call(canSignFor, 'account3'), true],
+                  [call(handleStartSwitchingSettingsChange, { isOn: true }), undefined]
                 ])
                 .put(
                   storeIdentity({
@@ -575,6 +596,7 @@ describe('MigrateLegacy', () => {
                   }),
                 )
                 .put(saveMessage(step, 'New mainnet identity is created'))
+                .call(handleStartSwitchingSettingsChange, { isOn: true })
                 .returns(true)
                 .run()
             })
@@ -598,6 +620,7 @@ describe('MigrateLegacy', () => {
                   [call(canSignFor, 'account1'), false],
                   [call(canSignFor, 'account2'), false],
                   [call(canSignFor, 'account3'), true],
+                  [call(handleStartSwitchingSettingsChange, { isOn: true }), undefined]
                 ])
                 .put(
                   storeIdentity({
@@ -628,6 +651,7 @@ describe('MigrateLegacy', () => {
                 )
                 .put(saveMessage(step, 'New mainnet identity is created'))
                 .returns(true)
+                .call(handleStartSwitchingSettingsChange, { isOn: true })
                 .run()
             })
           })
@@ -650,12 +674,14 @@ describe('MigrateLegacy', () => {
               [call(createIdentityKeyPair), { address: newDID }],
               [select(ownClaimsMap), own],
               [select(subAccounts, legacyDID), []],
+              [call(handleStartSwitchingSettingsChange, { isOn: true }), undefined]
             ])
             .put(resetHDWallet())
             .call(createIdentityKeyPair)
             .put(updateIdentity(newDID, { own }))
             .put(saveMessage(step, 'New mainnet identity is created'))
             .returns(true)
+            .call(handleStartSwitchingSettingsChange, { isOn: true })
             .run()
         })
       })
@@ -674,11 +700,13 @@ describe('MigrateLegacy', () => {
               [call(createIdentityKeyPair), { address: newDID }],
               [select(ownClaimsMap), own],
               [select(subAccounts, legacyDID), []],
+              [call(handleStartSwitchingSettingsChange, { isOn: true }), undefined]
             ])
             .call(createIdentityKeyPair)
             .put(updateIdentity(newDID, { own }))
             .put(saveMessage(step, 'New mainnet identity is created'))
             .returns(true)
+            .call(handleStartSwitchingSettingsChange, { isOn: true })
             .run()
         })
       })
