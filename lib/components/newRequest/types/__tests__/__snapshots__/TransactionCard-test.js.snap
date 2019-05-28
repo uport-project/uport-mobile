@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TransactionCard renders correctly with abi with args and a no value 1`] = `
+exports[`TransactionCard MetaIdentityManager renders correctly with abi with args and a no value 1`] = `
 <View
   style={
     Object {
@@ -240,7 +240,7 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
               }
             }
           >
-            0
+            0.1235
              ETH
           </Text>
           <Text
@@ -254,7 +254,7 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
             }
           >
              
-            $0
+            $123.44
              
           </Text>
         </View>
@@ -453,7 +453,7 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
 </View>
 `;
 
-exports[`TransactionCard renders correctly with abi without args and value 1`] = `
+exports[`TransactionCard MetaIdentityManager renders correctly with abi without args and value 1`] = `
 <View
   style={
     Object {
@@ -693,7 +693,7 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
               }
             }
           >
-            0
+            0.1235
              ETH
           </Text>
           <Text
@@ -707,7 +707,7 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
             }
           >
              
-            $0
+            $123.44
              
           </Text>
         </View>
@@ -906,7 +906,7 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
 </View>
 `;
 
-exports[`TransactionCard renders correctly with both client and destination 1`] = `
+exports[`TransactionCard MetaIdentityManager renders correctly with both client and destination 1`] = `
 <View
   style={
     Object {
@@ -1146,7 +1146,7 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
               }
             }
           >
-            0
+            0.1235
              ETH
           </Text>
           <Text
@@ -1160,7 +1160,7 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
             }
           >
              
-            $0
+            $123.44
              
           </Text>
         </View>
@@ -1310,7 +1310,7 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
 </View>
 `;
 
-exports[`TransactionCard renders correctly with destination being invalid destination 1`] = `
+exports[`TransactionCard MetaIdentityManager renders correctly with destination being invalid destination 1`] = `
 <View
   style={
     Object {
@@ -1550,7 +1550,7 @@ exports[`TransactionCard renders correctly with destination being invalid destin
               }
             }
           >
-            0
+            0.1235
              ETH
           </Text>
           <Text
@@ -1564,7 +1564,7 @@ exports[`TransactionCard renders correctly with destination being invalid destin
             }
           >
              
-            $0
+            $123.44
              
           </Text>
         </View>
@@ -1750,7 +1750,7 @@ exports[`TransactionCard renders correctly with destination being invalid destin
 </View>
 `;
 
-exports[`TransactionCard renders correctly with destination being validated 1`] = `
+exports[`TransactionCard MetaIdentityManager renders correctly with destination being validated 1`] = `
 <View
   style={
     Object {
@@ -1990,7 +1990,7 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
               }
             }
           >
-            0
+            0.1235
              ETH
           </Text>
           <Text
@@ -2004,7 +2004,7 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
             }
           >
              
-            $0
+            $123.44
              
           </Text>
         </View>
@@ -2154,7 +2154,815 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
 </View>
 `;
 
-exports[`TransactionCard renders correctly with only request 1`] = `
+exports[`TransactionCard MetaIdentityManager renders correctly with only request 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "flex": 0,
+      "flexDirection": "column",
+      "justifyContent": "flex-end",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 0,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "marginBottom": 16,
+            "marginTop": 16,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "rgba(138,155,161,1.0)",
+                "fontFamily": undefined,
+                "fontSize": 13,
+              },
+              Object {
+                "color": "rgba(255, 255, 255, 0.7)",
+              },
+            ]
+          }
+        >
+          You have never 
+          interacted
+           with 
+          this dApp
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#F6F5FE",
+          "borderTopLeftRadius": 12,
+          "borderTopRightRadius": 12,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+          }
+        }
+      >
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+              "paddingBottom": 10,
+              "paddingLeft": 24,
+              "paddingRight": 20,
+              "paddingTop": 14,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#6A54D1",
+                "fontSize": 16,
+              }
+            }
+          >
+            Close
+          </Text>
+        </View>
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(74,74,74,1)",
+            "fontFamily": "Montserrat",
+            "fontSize": 20,
+            "lineHeight": 26,
+            "marginLeft": 23,
+          }
+        }
+      />
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(74,74,74,1)",
+            "fontSize": 12,
+            "marginBottom": 5,
+            "marginLeft": 24,
+            "marginTop": 10,
+          }
+        }
+      >
+        Selected Account
+      </Text>
+      <View
+        elevation={10}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "backgroundColor": "white",
+            "borderRadius": 3,
+            "borderTopWidth": 0,
+            "elevation": 10,
+            "flex": 0,
+            "flexDirection": "row",
+            "marginLeft": 8,
+            "marginRight": 8,
+            "overflow": "visible",
+            "paddingLeft": 5,
+            "paddingRight": 5,
+            "shadowColor": "rgb(33, 21, 100)",
+            "shadowOffset": Object {
+              "height": 0.5,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 16,
+            "zIndex": 10,
+          }
+        }
+      >
+        <View>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "flex": 0,
+                  "justifyContent": "center",
+                },
+                Object {
+                  "borderRadius": 30,
+                  "height": 60,
+                  "width": 60,
+                },
+              ]
+            }
+          >
+            <Image
+              resizeMode="cover"
+              source={
+                Object {
+                  "testUri": "../../../assets/images/eth-symbol2.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "borderRadius": 30,
+                    "height": 60,
+                    "width": 60,
+                  },
+                  Object {
+                    "position": "absolute",
+                  },
+                  Array [
+                    Object {
+                      "borderRadius": 30,
+                      "height": 60,
+                      "width": 60,
+                    },
+                    undefined,
+                  ],
+                ]
+              }
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "flex": 1,
+              "paddingTop": 5,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+                "fontSize": 14,
+              }
+            }
+          >
+            0.1235
+             ETH
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+              }
+            }
+          >
+             
+            $123.44
+             
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "flex": 0,
+              "marginLeft": 8,
+              "opacity": 1,
+            }
+          }
+        >
+          <Icon
+            color="rgba(74,74,74,1)"
+            name="ios-refresh"
+            size={24}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginBottom": 5,
+            "marginLeft": 24,
+            "marginRight": 24,
+            "marginTop": 5,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 10,
+            }
+          }
+        >
+          DETAILS
+        </Text>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+              "padding": 3,
+            }
+          }
+        >
+          <Icon
+            color="#6A54D1"
+            name="ios-information-circle-outline"
+            size={15}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "margin": 10,
+          }
+        }
+      >
+        <View
+          accessibilityLabel="APPROVE_BUTTON"
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A54D1",
+              "borderRadius": 8,
+              "padding": 15,
+            }
+          }
+          testID="APPROVE_BUTTON"
+        >
+          <View
+            pointerEvents="auto"
+            style={
+              Object {
+                "alignItems": undefined,
+                "backgroundColor": undefined,
+                "borderRadius": undefined,
+                "flex": undefined,
+                "flexDirection": "row",
+                "height": undefined,
+                "justifyContent": undefined,
+                "marginBottom": undefined,
+                "marginLeft": undefined,
+                "marginRight": undefined,
+                "marginTop": undefined,
+                "padding": undefined,
+                "paddingBottom": undefined,
+                "paddingHorizontal": undefined,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+                "paddingTop": undefined,
+                "width": undefined,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontSize": 18,
+                }
+              }
+            >
+              Approve Transaction
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TransactionCard MetaIdentityManager renders correctly with request and a 0 value 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "flex": 0,
+      "flexDirection": "column",
+      "justifyContent": "flex-end",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 0,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "marginBottom": 16,
+            "marginTop": 16,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "rgba(138,155,161,1.0)",
+                "fontFamily": undefined,
+                "fontSize": 13,
+              },
+              Object {
+                "color": "rgba(255, 255, 255, 0.7)",
+              },
+            ]
+          }
+        >
+          You have never 
+          interacted
+           with 
+          this dApp
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#F6F5FE",
+          "borderTopLeftRadius": 12,
+          "borderTopRightRadius": 12,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+          }
+        }
+      >
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+              "paddingBottom": 10,
+              "paddingLeft": 24,
+              "paddingRight": 20,
+              "paddingTop": 14,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#6A54D1",
+                "fontSize": 16,
+              }
+            }
+          >
+            Close
+          </Text>
+        </View>
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(74,74,74,1)",
+            "fontFamily": "Montserrat",
+            "fontSize": 20,
+            "lineHeight": 26,
+            "marginLeft": 23,
+          }
+        }
+      />
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(74,74,74,1)",
+            "fontSize": 12,
+            "marginBottom": 5,
+            "marginLeft": 24,
+            "marginTop": 10,
+          }
+        }
+      >
+        Selected Account
+      </Text>
+      <View
+        elevation={10}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "backgroundColor": "white",
+            "borderRadius": 3,
+            "borderTopWidth": 0,
+            "elevation": 10,
+            "flex": 0,
+            "flexDirection": "row",
+            "marginLeft": 8,
+            "marginRight": 8,
+            "overflow": "visible",
+            "paddingLeft": 5,
+            "paddingRight": 5,
+            "shadowColor": "rgb(33, 21, 100)",
+            "shadowOffset": Object {
+              "height": 0.5,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 16,
+            "zIndex": 10,
+          }
+        }
+      >
+        <View>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "flex": 0,
+                  "justifyContent": "center",
+                },
+                Object {
+                  "borderRadius": 30,
+                  "height": 60,
+                  "width": 60,
+                },
+              ]
+            }
+          >
+            <Image
+              resizeMode="cover"
+              source={
+                Object {
+                  "testUri": "../../../assets/images/eth-symbol2.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "borderRadius": 30,
+                    "height": 60,
+                    "width": 60,
+                  },
+                  Object {
+                    "position": "absolute",
+                  },
+                  Array [
+                    Object {
+                      "borderRadius": 30,
+                      "height": 60,
+                      "width": 60,
+                    },
+                    undefined,
+                  ],
+                ]
+              }
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "flex": 1,
+              "paddingTop": 5,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+                "fontSize": 14,
+              }
+            }
+          >
+            0.1235
+             ETH
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+              }
+            }
+          >
+             
+            $123.44
+             
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "flex": 0,
+              "marginLeft": 8,
+              "opacity": 1,
+            }
+          }
+        >
+          <Icon
+            color="rgba(74,74,74,1)"
+            name="ios-refresh"
+            size={24}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginBottom": 5,
+            "marginLeft": 24,
+            "marginRight": 24,
+            "marginTop": 5,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 10,
+            }
+          }
+        >
+          DETAILS
+        </Text>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+              "padding": 3,
+            }
+          }
+        >
+          <Icon
+            color="#6A54D1"
+            name="ios-information-circle-outline"
+            size={15}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "margin": 10,
+          }
+        }
+      >
+        <View
+          accessibilityLabel="APPROVE_BUTTON"
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A54D1",
+              "borderRadius": 8,
+              "padding": 15,
+            }
+          }
+          testID="APPROVE_BUTTON"
+        >
+          <View
+            pointerEvents="auto"
+            style={
+              Object {
+                "alignItems": undefined,
+                "backgroundColor": undefined,
+                "borderRadius": undefined,
+                "flex": undefined,
+                "flexDirection": "row",
+                "height": undefined,
+                "justifyContent": undefined,
+                "marginBottom": undefined,
+                "marginLeft": undefined,
+                "marginRight": undefined,
+                "marginTop": undefined,
+                "padding": undefined,
+                "paddingBottom": undefined,
+                "paddingHorizontal": undefined,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+                "paddingTop": undefined,
+                "width": undefined,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontSize": 18,
+                }
+              }
+            >
+              Approve Transaction
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TransactionCard MetaIdentityManager renders correctly with request and a value 1`] = `
 <View
   style={
     Object {
@@ -2558,7 +3366,7 @@ exports[`TransactionCard renders correctly with only request 1`] = `
 </View>
 `;
 
-exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
+exports[`TransactionCard MetaIdentityManager renders correctly with request and a value with insufficient balance 1`] = `
 <View
   style={
     Object {
@@ -2813,6 +3621,410 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
           >
              
             $0
+             
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "flex": 0,
+              "marginLeft": 8,
+              "opacity": 1,
+            }
+          }
+        >
+          <Icon
+            color="rgba(74,74,74,1)"
+            name="ios-refresh"
+            size={24}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginBottom": 5,
+            "marginLeft": 24,
+            "marginRight": 24,
+            "marginTop": 5,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 10,
+            }
+          }
+        >
+          DETAILS
+        </Text>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+              "padding": 3,
+            }
+          }
+        >
+          <Icon
+            color="#6A54D1"
+            name="ios-information-circle-outline"
+            size={15}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "margin": 10,
+          }
+        }
+      >
+        <View
+          accessibilityLabel="APPROVE_BUTTON"
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A54D1",
+              "borderRadius": 8,
+              "padding": 15,
+            }
+          }
+          testID="APPROVE_BUTTON"
+        >
+          <View
+            pointerEvents="auto"
+            style={
+              Object {
+                "alignItems": undefined,
+                "backgroundColor": undefined,
+                "borderRadius": undefined,
+                "flex": undefined,
+                "flexDirection": "row",
+                "height": undefined,
+                "justifyContent": undefined,
+                "marginBottom": undefined,
+                "marginLeft": undefined,
+                "marginRight": undefined,
+                "marginTop": undefined,
+                "padding": undefined,
+                "paddingBottom": undefined,
+                "paddingHorizontal": undefined,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+                "paddingTop": undefined,
+                "width": undefined,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontSize": 18,
+                }
+              }
+            >
+              Approve Transaction
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TransactionCard keyPair renders correctly with abi with args and a no value 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "flex": 0,
+      "flexDirection": "column",
+      "justifyContent": "flex-end",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 0,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "marginBottom": 16,
+            "marginTop": 16,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "rgba(138,155,161,1.0)",
+                "fontFamily": undefined,
+                "fontSize": 13,
+              },
+              Object {
+                "color": "rgba(255, 255, 255, 0.7)",
+              },
+            ]
+          }
+        >
+          You have never 
+          interacted
+           with 
+          this dApp
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#F6F5FE",
+          "borderTopLeftRadius": 12,
+          "borderTopRightRadius": 12,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+          }
+        }
+      >
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+              "paddingBottom": 10,
+              "paddingLeft": 24,
+              "paddingRight": 20,
+              "paddingTop": 14,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#6A54D1",
+                "fontSize": 16,
+              }
+            }
+          >
+            Close
+          </Text>
+        </View>
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(74,74,74,1)",
+            "fontFamily": "Montserrat",
+            "fontSize": 20,
+            "lineHeight": 26,
+            "marginLeft": 23,
+          }
+        }
+      />
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(74,74,74,1)",
+            "fontSize": 12,
+            "marginBottom": 5,
+            "marginLeft": 24,
+            "marginTop": 10,
+          }
+        }
+      >
+        Selected Account
+      </Text>
+      <View
+        elevation={10}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "backgroundColor": "white",
+            "borderRadius": 3,
+            "borderTopWidth": 0,
+            "elevation": 10,
+            "flex": 0,
+            "flexDirection": "row",
+            "marginLeft": 8,
+            "marginRight": 8,
+            "overflow": "visible",
+            "paddingLeft": 5,
+            "paddingRight": 5,
+            "shadowColor": "rgb(33, 21, 100)",
+            "shadowOffset": Object {
+              "height": 0.5,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 16,
+            "zIndex": 10,
+          }
+        }
+      >
+        <View>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "flex": 0,
+                  "justifyContent": "center",
+                },
+                Object {
+                  "borderRadius": 30,
+                  "height": 60,
+                  "width": 60,
+                },
+              ]
+            }
+          >
+            <Image
+              resizeMode="cover"
+              source={
+                Object {
+                  "testUri": "../../../assets/images/eth-symbol2.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "borderRadius": 30,
+                    "height": 60,
+                    "width": 60,
+                  },
+                  Object {
+                    "position": "absolute",
+                  },
+                  Array [
+                    Object {
+                      "borderRadius": 30,
+                      "height": 60,
+                      "width": 60,
+                    },
+                    undefined,
+                  ],
+                ]
+              }
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "flex": 1,
+              "paddingTop": 5,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+                "fontSize": 14,
+              }
+            }
+          >
+            0.1235
+             ETH
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+              }
+            }
+          >
+             
+            $123.44
              
           </Text>
         </View>
@@ -2935,8 +4147,95 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
             }
           }
         >
-          Set Attributes
+          Update Stuff
         </Text>
+      </View>
+      <View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 10,
+              "marginBottom": 5,
+              "marginLeft": 24,
+              "marginTop": 15,
+            }
+          }
+        >
+          NETWORK FEE
+        </Text>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginLeft": 8,
+              "marginRight": 8,
+              "paddingBottom": 10,
+              "paddingLeft": 15,
+              "paddingRight": 15,
+              "paddingTop": 10,
+              "shadowColor": "rgb(200, 200, 200)",
+              "shadowOffset": Object {
+                "height": 1.5,
+                "width": 0,
+              },
+              "shadowOpacity": 0.5,
+              "shadowRadius": 16,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+                "fontSize": 14,
+              }
+            }
+          >
+            Average
+          </Text>
+          <View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontSize": 14,
+                  "textAlign": "right",
+                }
+              }
+            >
+              $
+              USD
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontSize": 12,
+                  "textAlign": "right",
+                }
+              }
+            >
+               ETH
+               
+            </Text>
+          </View>
+        </View>
       </View>
       <View
         style={
@@ -3011,7 +4310,3048 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
 </View>
 `;
 
-exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
+exports[`TransactionCard keyPair renders correctly with abi without args and value 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "flex": 0,
+      "flexDirection": "column",
+      "justifyContent": "flex-end",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 0,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "marginBottom": 16,
+            "marginTop": 16,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "rgba(138,155,161,1.0)",
+                "fontFamily": undefined,
+                "fontSize": 13,
+              },
+              Object {
+                "color": "rgba(255, 255, 255, 0.7)",
+              },
+            ]
+          }
+        >
+          You have never 
+          interacted
+           with 
+          this dApp
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#F6F5FE",
+          "borderTopLeftRadius": 12,
+          "borderTopRightRadius": 12,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+          }
+        }
+      >
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+              "paddingBottom": 10,
+              "paddingLeft": 24,
+              "paddingRight": 20,
+              "paddingTop": 14,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#6A54D1",
+                "fontSize": 16,
+              }
+            }
+          >
+            Close
+          </Text>
+        </View>
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(74,74,74,1)",
+            "fontFamily": "Montserrat",
+            "fontSize": 20,
+            "lineHeight": 26,
+            "marginLeft": 23,
+          }
+        }
+      />
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(74,74,74,1)",
+            "fontSize": 12,
+            "marginBottom": 5,
+            "marginLeft": 24,
+            "marginTop": 10,
+          }
+        }
+      >
+        Selected Account
+      </Text>
+      <View
+        elevation={10}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "backgroundColor": "white",
+            "borderRadius": 3,
+            "borderTopWidth": 0,
+            "elevation": 10,
+            "flex": 0,
+            "flexDirection": "row",
+            "marginLeft": 8,
+            "marginRight": 8,
+            "overflow": "visible",
+            "paddingLeft": 5,
+            "paddingRight": 5,
+            "shadowColor": "rgb(33, 21, 100)",
+            "shadowOffset": Object {
+              "height": 0.5,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 16,
+            "zIndex": 10,
+          }
+        }
+      >
+        <View>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "flex": 0,
+                  "justifyContent": "center",
+                },
+                Object {
+                  "borderRadius": 30,
+                  "height": 60,
+                  "width": 60,
+                },
+              ]
+            }
+          >
+            <Image
+              resizeMode="cover"
+              source={
+                Object {
+                  "testUri": "../../../assets/images/eth-symbol2.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "borderRadius": 30,
+                    "height": 60,
+                    "width": 60,
+                  },
+                  Object {
+                    "position": "absolute",
+                  },
+                  Array [
+                    Object {
+                      "borderRadius": 30,
+                      "height": 60,
+                      "width": 60,
+                    },
+                    undefined,
+                  ],
+                ]
+              }
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "flex": 1,
+              "paddingTop": 5,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+                "fontSize": 14,
+              }
+            }
+          >
+            0.1235
+             ETH
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+              }
+            }
+          >
+             
+            $123.44
+             
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "flex": 0,
+              "marginLeft": 8,
+              "opacity": 1,
+            }
+          }
+        >
+          <Icon
+            color="rgba(74,74,74,1)"
+            name="ios-refresh"
+            size={24}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginBottom": 5,
+            "marginLeft": 24,
+            "marginRight": 24,
+            "marginTop": 5,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 10,
+            }
+          }
+        >
+          DETAILS
+        </Text>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+              "padding": 3,
+            }
+          }
+        >
+          <Icon
+            color="#6A54D1"
+            name="ios-information-circle-outline"
+            size={15}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginLeft": 8,
+            "marginRight": 8,
+            "paddingBottom": 15,
+            "paddingLeft": 15,
+            "paddingRight": 15,
+            "paddingTop": 15,
+            "shadowColor": "rgb(200, 200, 200)",
+            "shadowOffset": Object {
+              "height": 1.5,
+              "width": 0,
+            },
+            "shadowOpacity": 0.5,
+            "shadowRadius": 16,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 14,
+            }
+          }
+        >
+          Function
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 14,
+            }
+          }
+        >
+          Buy Tokens
+        </Text>
+      </View>
+      <View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 10,
+              "marginBottom": 5,
+              "marginLeft": 24,
+              "marginTop": 15,
+            }
+          }
+        >
+          NETWORK FEE
+        </Text>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginLeft": 8,
+              "marginRight": 8,
+              "paddingBottom": 10,
+              "paddingLeft": 15,
+              "paddingRight": 15,
+              "paddingTop": 10,
+              "shadowColor": "rgb(200, 200, 200)",
+              "shadowOffset": Object {
+                "height": 1.5,
+                "width": 0,
+              },
+              "shadowOpacity": 0.5,
+              "shadowRadius": 16,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+                "fontSize": 14,
+              }
+            }
+          >
+            Average
+          </Text>
+          <View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontSize": 14,
+                  "textAlign": "right",
+                }
+              }
+            >
+              $
+              USD
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontSize": 12,
+                  "textAlign": "right",
+                }
+              }
+            >
+               ETH
+               
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "margin": 10,
+          }
+        }
+      >
+        <View
+          accessibilityLabel="APPROVE_BUTTON"
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A54D1",
+              "borderRadius": 8,
+              "padding": 15,
+            }
+          }
+          testID="APPROVE_BUTTON"
+        >
+          <View
+            pointerEvents="auto"
+            style={
+              Object {
+                "alignItems": undefined,
+                "backgroundColor": undefined,
+                "borderRadius": undefined,
+                "flex": undefined,
+                "flexDirection": "row",
+                "height": undefined,
+                "justifyContent": undefined,
+                "marginBottom": undefined,
+                "marginLeft": undefined,
+                "marginRight": undefined,
+                "marginTop": undefined,
+                "padding": undefined,
+                "paddingBottom": undefined,
+                "paddingHorizontal": undefined,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+                "paddingTop": undefined,
+                "width": undefined,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontSize": 18,
+                }
+              }
+            >
+              Approve Transaction
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TransactionCard keyPair renders correctly with both client and destination 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "flex": 0,
+      "flexDirection": "column",
+      "justifyContent": "flex-end",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 0,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "marginBottom": 16,
+            "marginTop": 16,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "rgba(138,155,161,1.0)",
+                "fontFamily": undefined,
+                "fontSize": 13,
+              },
+              Object {
+                "color": "rgba(255, 255, 255, 0.7)",
+              },
+            ]
+          }
+        >
+          You have never 
+          interacted
+           with 
+          this dApp
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#F6F5FE",
+          "borderTopLeftRadius": 12,
+          "borderTopRightRadius": 12,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+          }
+        }
+      >
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+              "paddingBottom": 10,
+              "paddingLeft": 24,
+              "paddingRight": 20,
+              "paddingTop": 14,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#6A54D1",
+                "fontSize": 16,
+              }
+            }
+          >
+            Close
+          </Text>
+        </View>
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(74,74,74,1)",
+            "fontFamily": "Montserrat",
+            "fontSize": 20,
+            "lineHeight": 26,
+            "marginLeft": 23,
+          }
+        }
+      />
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(74,74,74,1)",
+            "fontSize": 12,
+            "marginBottom": 5,
+            "marginLeft": 24,
+            "marginTop": 10,
+          }
+        }
+      >
+        Selected Account
+      </Text>
+      <View
+        elevation={10}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "backgroundColor": "white",
+            "borderRadius": 3,
+            "borderTopWidth": 0,
+            "elevation": 10,
+            "flex": 0,
+            "flexDirection": "row",
+            "marginLeft": 8,
+            "marginRight": 8,
+            "overflow": "visible",
+            "paddingLeft": 5,
+            "paddingRight": 5,
+            "shadowColor": "rgb(33, 21, 100)",
+            "shadowOffset": Object {
+              "height": 0.5,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 16,
+            "zIndex": 10,
+          }
+        }
+      >
+        <View>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "flex": 0,
+                  "justifyContent": "center",
+                },
+                Object {
+                  "borderRadius": 30,
+                  "height": 60,
+                  "width": 60,
+                },
+                Object {
+                  "backgroundColor": "rgba(216,216,216,1)",
+                },
+                Object {
+                  "padding": 15,
+                },
+              ]
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "fontFamily": undefined,
+                    "fontSize": 15,
+                    "textAlign": "center",
+                  },
+                  Object {
+                    "fontSize": 36,
+                  },
+                  Object {
+                    "fontSize": 20,
+                  },
+                ]
+              }
+            >
+              C
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "flex": 1,
+              "paddingTop": 5,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+                "fontSize": 14,
+              }
+            }
+          >
+            0.1235
+             ETH
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+              }
+            }
+          >
+             
+            $123.44
+             
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "flex": 0,
+              "marginLeft": 8,
+              "opacity": 1,
+            }
+          }
+        >
+          <Icon
+            color="rgba(74,74,74,1)"
+            name="ios-refresh"
+            size={24}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginBottom": 5,
+            "marginLeft": 24,
+            "marginRight": 24,
+            "marginTop": 5,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 10,
+            }
+          }
+        >
+          DETAILS
+        </Text>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+              "padding": 3,
+            }
+          }
+        >
+          <Icon
+            color="#6A54D1"
+            name="ios-information-circle-outline"
+            size={15}
+          />
+        </View>
+      </View>
+      <View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 10,
+              "marginBottom": 5,
+              "marginLeft": 24,
+              "marginTop": 15,
+            }
+          }
+        >
+          NETWORK FEE
+        </Text>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginLeft": 8,
+              "marginRight": 8,
+              "paddingBottom": 10,
+              "paddingLeft": 15,
+              "paddingRight": 15,
+              "paddingTop": 10,
+              "shadowColor": "rgb(200, 200, 200)",
+              "shadowOffset": Object {
+                "height": 1.5,
+                "width": 0,
+              },
+              "shadowOpacity": 0.5,
+              "shadowRadius": 16,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+                "fontSize": 14,
+              }
+            }
+          >
+            Average
+          </Text>
+          <View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontSize": 14,
+                  "textAlign": "right",
+                }
+              }
+            >
+              $
+              0.50
+              USD
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontSize": 12,
+                  "textAlign": "right",
+                }
+              }
+            >
+              0.002
+               ETH
+               
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "margin": 10,
+          }
+        }
+      >
+        <View
+          accessibilityLabel="APPROVE_BUTTON"
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A54D1",
+              "borderRadius": 8,
+              "padding": 15,
+            }
+          }
+          testID="APPROVE_BUTTON"
+        >
+          <View
+            pointerEvents="auto"
+            style={
+              Object {
+                "alignItems": undefined,
+                "backgroundColor": undefined,
+                "borderRadius": undefined,
+                "flex": undefined,
+                "flexDirection": "row",
+                "height": undefined,
+                "justifyContent": undefined,
+                "marginBottom": undefined,
+                "marginLeft": undefined,
+                "marginRight": undefined,
+                "marginTop": undefined,
+                "padding": undefined,
+                "paddingBottom": undefined,
+                "paddingHorizontal": undefined,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+                "paddingTop": undefined,
+                "width": undefined,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontSize": 18,
+                }
+              }
+            >
+              Approve Transaction
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TransactionCard keyPair renders correctly with destination being invalid destination 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "flex": 0,
+      "flexDirection": "column",
+      "justifyContent": "flex-end",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 0,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "marginBottom": 16,
+            "marginTop": 16,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "rgba(138,155,161,1.0)",
+                "fontFamily": undefined,
+                "fontSize": 13,
+              },
+              Object {
+                "color": "rgba(255, 255, 255, 0.7)",
+              },
+            ]
+          }
+        >
+          You have never 
+          interacted
+           with 
+          this dApp
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#F6F5FE",
+          "borderTopLeftRadius": 12,
+          "borderTopRightRadius": 12,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+          }
+        }
+      >
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+              "paddingBottom": 10,
+              "paddingLeft": 24,
+              "paddingRight": 20,
+              "paddingTop": 14,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#6A54D1",
+                "fontSize": 16,
+              }
+            }
+          >
+            Close
+          </Text>
+        </View>
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(74,74,74,1)",
+            "fontFamily": "Montserrat",
+            "fontSize": 20,
+            "lineHeight": 26,
+            "marginLeft": 23,
+          }
+        }
+      />
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(74,74,74,1)",
+            "fontSize": 12,
+            "marginBottom": 5,
+            "marginLeft": 24,
+            "marginTop": 10,
+          }
+        }
+      >
+        Selected Account
+      </Text>
+      <View
+        elevation={10}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "backgroundColor": "white",
+            "borderRadius": 3,
+            "borderTopWidth": 0,
+            "elevation": 10,
+            "flex": 0,
+            "flexDirection": "row",
+            "marginLeft": 8,
+            "marginRight": 8,
+            "overflow": "visible",
+            "paddingLeft": 5,
+            "paddingRight": 5,
+            "shadowColor": "rgb(33, 21, 100)",
+            "shadowOffset": Object {
+              "height": 0.5,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 16,
+            "zIndex": 10,
+          }
+        }
+      >
+        <View>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "flex": 0,
+                  "justifyContent": "center",
+                },
+                Object {
+                  "borderRadius": 30,
+                  "height": 60,
+                  "width": 60,
+                },
+                Object {
+                  "backgroundColor": "rgba(216,216,216,1)",
+                },
+                Object {
+                  "padding": 15,
+                },
+              ]
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "fontFamily": undefined,
+                    "fontSize": 15,
+                    "textAlign": "center",
+                  },
+                  Object {
+                    "fontSize": 36,
+                  },
+                  Object {
+                    "fontSize": 20,
+                  },
+                ]
+              }
+            >
+              C
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "flex": 1,
+              "paddingTop": 5,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+                "fontSize": 14,
+              }
+            }
+          >
+            0.1235
+             ETH
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+              }
+            }
+          >
+             
+            $123.44
+             
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "flex": 0,
+              "marginLeft": 8,
+              "opacity": 1,
+            }
+          }
+        >
+          <Icon
+            color="rgba(74,74,74,1)"
+            name="ios-refresh"
+            size={24}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginBottom": 5,
+            "marginLeft": 24,
+            "marginRight": 24,
+            "marginTop": 5,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 10,
+            }
+          }
+        >
+          DETAILS
+        </Text>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+              "padding": 3,
+            }
+          }
+        >
+          <Icon
+            color="#6A54D1"
+            name="ios-information-circle-outline"
+            size={15}
+          />
+        </View>
+      </View>
+      <View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 10,
+              "marginBottom": 5,
+              "marginLeft": 24,
+              "marginTop": 15,
+            }
+          }
+        >
+          NETWORK FEE
+        </Text>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginLeft": 8,
+              "marginRight": 8,
+              "paddingBottom": 10,
+              "paddingLeft": 15,
+              "paddingRight": 15,
+              "paddingTop": 10,
+              "shadowColor": "rgb(200, 200, 200)",
+              "shadowOffset": Object {
+                "height": 1.5,
+                "width": 0,
+              },
+              "shadowOpacity": 0.5,
+              "shadowRadius": 16,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+                "fontSize": 14,
+              }
+            }
+          >
+            Average
+          </Text>
+          <View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontSize": 14,
+                  "textAlign": "right",
+                }
+              }
+            >
+              $
+              0.50
+              USD
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontSize": 12,
+                  "textAlign": "right",
+                }
+              }
+            >
+              0.002
+               ETH
+               
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "stretch",
+              "alignSelf": "stretch",
+              "borderColor": "#CCCCCC",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "flex": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-evenly",
+              "marginBottom": 10,
+              "marginLeft": 30,
+              "marginRight": 30,
+              "padding": 10,
+              "paddingLeft": 10,
+              "paddingRight": 10,
+            },
+            Object {
+              "flex": 0,
+              "marginBottom": 30,
+            },
+            Object {
+              "backgroundColor": undefined,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "column",
+              "justifyContent": "center",
+              "paddingLeft": 10,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": undefined,
+                  "fontFamily": undefined,
+                  "fontSize": 18,
+                  "letterSpacing": 1,
+                  "lineHeight": 24,
+                  "paddingRight": 5,
+                }
+              }
+            >
+              Error:
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": undefined,
+                  "fontFamily": undefined,
+                  "fontSize": 12,
+                  "letterSpacing": 1,
+                  "lineHeight": 15,
+                }
+              }
+            >
+              Unverifiable ropsten address
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexBasis": 40,
+              "flexDirection": "row",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Icon
+            name="ios-alert"
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "fontSize": 30,
+                "marginTop": 2,
+                "padding": 10,
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TransactionCard keyPair renders correctly with destination being validated 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "flex": 0,
+      "flexDirection": "column",
+      "justifyContent": "flex-end",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 0,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "marginBottom": 16,
+            "marginTop": 16,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "rgba(138,155,161,1.0)",
+                "fontFamily": undefined,
+                "fontSize": 13,
+              },
+              Object {
+                "color": "rgba(255, 255, 255, 0.7)",
+              },
+            ]
+          }
+        >
+          You have never 
+          interacted
+           with 
+          this dApp
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#F6F5FE",
+          "borderTopLeftRadius": 12,
+          "borderTopRightRadius": 12,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+          }
+        }
+      >
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+              "paddingBottom": 10,
+              "paddingLeft": 24,
+              "paddingRight": 20,
+              "paddingTop": 14,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#6A54D1",
+                "fontSize": 16,
+              }
+            }
+          >
+            Close
+          </Text>
+        </View>
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(74,74,74,1)",
+            "fontFamily": "Montserrat",
+            "fontSize": 20,
+            "lineHeight": 26,
+            "marginLeft": 23,
+          }
+        }
+      />
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(74,74,74,1)",
+            "fontSize": 12,
+            "marginBottom": 5,
+            "marginLeft": 24,
+            "marginTop": 10,
+          }
+        }
+      >
+        Selected Account
+      </Text>
+      <View
+        elevation={10}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "backgroundColor": "white",
+            "borderRadius": 3,
+            "borderTopWidth": 0,
+            "elevation": 10,
+            "flex": 0,
+            "flexDirection": "row",
+            "marginLeft": 8,
+            "marginRight": 8,
+            "overflow": "visible",
+            "paddingLeft": 5,
+            "paddingRight": 5,
+            "shadowColor": "rgb(33, 21, 100)",
+            "shadowOffset": Object {
+              "height": 0.5,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 16,
+            "zIndex": 10,
+          }
+        }
+      >
+        <View>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "flex": 0,
+                  "justifyContent": "center",
+                },
+                Object {
+                  "borderRadius": 30,
+                  "height": 60,
+                  "width": 60,
+                },
+                Object {
+                  "backgroundColor": "rgba(216,216,216,1)",
+                },
+                Object {
+                  "padding": 15,
+                },
+              ]
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "fontFamily": undefined,
+                    "fontSize": 15,
+                    "textAlign": "center",
+                  },
+                  Object {
+                    "fontSize": 36,
+                  },
+                  Object {
+                    "fontSize": 20,
+                  },
+                ]
+              }
+            >
+              C
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "flex": 1,
+              "paddingTop": 5,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+                "fontSize": 14,
+              }
+            }
+          >
+            0.1235
+             ETH
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+              }
+            }
+          >
+             
+            $123.44
+             
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "flex": 0,
+              "marginLeft": 8,
+              "opacity": 1,
+            }
+          }
+        >
+          <Icon
+            color="rgba(74,74,74,1)"
+            name="ios-refresh"
+            size={24}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginBottom": 5,
+            "marginLeft": 24,
+            "marginRight": 24,
+            "marginTop": 5,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 10,
+            }
+          }
+        >
+          DETAILS
+        </Text>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+              "padding": 3,
+            }
+          }
+        >
+          <Icon
+            color="#6A54D1"
+            name="ios-information-circle-outline"
+            size={15}
+          />
+        </View>
+      </View>
+      <View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 10,
+              "marginBottom": 5,
+              "marginLeft": 24,
+              "marginTop": 15,
+            }
+          }
+        >
+          NETWORK FEE
+        </Text>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginLeft": 8,
+              "marginRight": 8,
+              "paddingBottom": 10,
+              "paddingLeft": 15,
+              "paddingRight": 15,
+              "paddingTop": 10,
+              "shadowColor": "rgb(200, 200, 200)",
+              "shadowOffset": Object {
+                "height": 1.5,
+                "width": 0,
+              },
+              "shadowOpacity": 0.5,
+              "shadowRadius": 16,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+                "fontSize": 14,
+              }
+            }
+          >
+            Average
+          </Text>
+          <View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontSize": 14,
+                  "textAlign": "right",
+                }
+              }
+            >
+              $
+              0.50
+              USD
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontSize": 12,
+                  "textAlign": "right",
+                }
+              }
+            >
+              0.002
+               ETH
+               
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "margin": 10,
+          }
+        }
+      >
+        <View
+          accessibilityLabel="APPROVE_BUTTON"
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A54D1",
+              "borderRadius": 8,
+              "padding": 15,
+            }
+          }
+          testID="APPROVE_BUTTON"
+        >
+          <View
+            pointerEvents="auto"
+            style={
+              Object {
+                "alignItems": undefined,
+                "backgroundColor": undefined,
+                "borderRadius": undefined,
+                "flex": undefined,
+                "flexDirection": "row",
+                "height": undefined,
+                "justifyContent": undefined,
+                "marginBottom": undefined,
+                "marginLeft": undefined,
+                "marginRight": undefined,
+                "marginTop": undefined,
+                "padding": undefined,
+                "paddingBottom": undefined,
+                "paddingHorizontal": undefined,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+                "paddingTop": undefined,
+                "width": undefined,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontSize": 18,
+                }
+              }
+            >
+              Approve Transaction
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TransactionCard keyPair renders correctly with only request 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "flex": 0,
+      "flexDirection": "column",
+      "justifyContent": "flex-end",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 0,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "marginBottom": 16,
+            "marginTop": 16,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "rgba(138,155,161,1.0)",
+                "fontFamily": undefined,
+                "fontSize": 13,
+              },
+              Object {
+                "color": "rgba(255, 255, 255, 0.7)",
+              },
+            ]
+          }
+        >
+          You have never 
+          interacted
+           with 
+          this dApp
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#F6F5FE",
+          "borderTopLeftRadius": 12,
+          "borderTopRightRadius": 12,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+          }
+        }
+      >
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+              "paddingBottom": 10,
+              "paddingLeft": 24,
+              "paddingRight": 20,
+              "paddingTop": 14,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#6A54D1",
+                "fontSize": 16,
+              }
+            }
+          >
+            Close
+          </Text>
+        </View>
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(74,74,74,1)",
+            "fontFamily": "Montserrat",
+            "fontSize": 20,
+            "lineHeight": 26,
+            "marginLeft": 23,
+          }
+        }
+      />
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(74,74,74,1)",
+            "fontSize": 12,
+            "marginBottom": 5,
+            "marginLeft": 24,
+            "marginTop": 10,
+          }
+        }
+      >
+        Selected Account
+      </Text>
+      <View
+        elevation={10}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "backgroundColor": "white",
+            "borderRadius": 3,
+            "borderTopWidth": 0,
+            "elevation": 10,
+            "flex": 0,
+            "flexDirection": "row",
+            "marginLeft": 8,
+            "marginRight": 8,
+            "overflow": "visible",
+            "paddingLeft": 5,
+            "paddingRight": 5,
+            "shadowColor": "rgb(33, 21, 100)",
+            "shadowOffset": Object {
+              "height": 0.5,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 16,
+            "zIndex": 10,
+          }
+        }
+      >
+        <View>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "flex": 0,
+                  "justifyContent": "center",
+                },
+                Object {
+                  "borderRadius": 30,
+                  "height": 60,
+                  "width": 60,
+                },
+              ]
+            }
+          >
+            <Image
+              resizeMode="cover"
+              source={
+                Object {
+                  "testUri": "../../../assets/images/eth-symbol2.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "borderRadius": 30,
+                    "height": 60,
+                    "width": 60,
+                  },
+                  Object {
+                    "position": "absolute",
+                  },
+                  Array [
+                    Object {
+                      "borderRadius": 30,
+                      "height": 60,
+                      "width": 60,
+                    },
+                    undefined,
+                  ],
+                ]
+              }
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "flex": 1,
+              "paddingTop": 5,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+                "fontSize": 14,
+              }
+            }
+          >
+            0.1235
+             ETH
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+              }
+            }
+          >
+             
+            $123.44
+             
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "flex": 0,
+              "marginLeft": 8,
+              "opacity": 1,
+            }
+          }
+        >
+          <Icon
+            color="rgba(74,74,74,1)"
+            name="ios-refresh"
+            size={24}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginBottom": 5,
+            "marginLeft": 24,
+            "marginRight": 24,
+            "marginTop": 5,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 10,
+            }
+          }
+        >
+          DETAILS
+        </Text>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+              "padding": 3,
+            }
+          }
+        >
+          <Icon
+            color="#6A54D1"
+            name="ios-information-circle-outline"
+            size={15}
+          />
+        </View>
+      </View>
+      <View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 10,
+              "marginBottom": 5,
+              "marginLeft": 24,
+              "marginTop": 15,
+            }
+          }
+        >
+          NETWORK FEE
+        </Text>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginLeft": 8,
+              "marginRight": 8,
+              "paddingBottom": 10,
+              "paddingLeft": 15,
+              "paddingRight": 15,
+              "paddingTop": 10,
+              "shadowColor": "rgb(200, 200, 200)",
+              "shadowOffset": Object {
+                "height": 1.5,
+                "width": 0,
+              },
+              "shadowOpacity": 0.5,
+              "shadowRadius": 16,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+                "fontSize": 14,
+              }
+            }
+          >
+            Average
+          </Text>
+          <View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontSize": 14,
+                  "textAlign": "right",
+                }
+              }
+            >
+              $
+              0.50
+              USD
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontSize": 12,
+                  "textAlign": "right",
+                }
+              }
+            >
+              0.002
+               ETH
+               
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "margin": 10,
+          }
+        }
+      >
+        <View
+          accessibilityLabel="APPROVE_BUTTON"
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A54D1",
+              "borderRadius": 8,
+              "padding": 15,
+            }
+          }
+          testID="APPROVE_BUTTON"
+        >
+          <View
+            pointerEvents="auto"
+            style={
+              Object {
+                "alignItems": undefined,
+                "backgroundColor": undefined,
+                "borderRadius": undefined,
+                "flex": undefined,
+                "flexDirection": "row",
+                "height": undefined,
+                "justifyContent": undefined,
+                "marginBottom": undefined,
+                "marginLeft": undefined,
+                "marginRight": undefined,
+                "marginTop": undefined,
+                "padding": undefined,
+                "paddingBottom": undefined,
+                "paddingHorizontal": undefined,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+                "paddingTop": undefined,
+                "width": undefined,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontSize": 18,
+                }
+              }
+            >
+              Approve Transaction
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TransactionCard keyPair renders correctly with request and a 0 value 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "flex": 0,
+      "flexDirection": "column",
+      "justifyContent": "flex-end",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 0,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "marginBottom": 16,
+            "marginTop": 16,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "rgba(138,155,161,1.0)",
+                "fontFamily": undefined,
+                "fontSize": 13,
+              },
+              Object {
+                "color": "rgba(255, 255, 255, 0.7)",
+              },
+            ]
+          }
+        >
+          You have never 
+          interacted
+           with 
+          this dApp
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#F6F5FE",
+          "borderTopLeftRadius": 12,
+          "borderTopRightRadius": 12,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+          }
+        }
+      >
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+              "paddingBottom": 10,
+              "paddingLeft": 24,
+              "paddingRight": 20,
+              "paddingTop": 14,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#6A54D1",
+                "fontSize": 16,
+              }
+            }
+          >
+            Close
+          </Text>
+        </View>
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(74,74,74,1)",
+            "fontFamily": "Montserrat",
+            "fontSize": 20,
+            "lineHeight": 26,
+            "marginLeft": 23,
+          }
+        }
+      />
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(74,74,74,1)",
+            "fontSize": 12,
+            "marginBottom": 5,
+            "marginLeft": 24,
+            "marginTop": 10,
+          }
+        }
+      >
+        Selected Account
+      </Text>
+      <View
+        elevation={10}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "backgroundColor": "white",
+            "borderRadius": 3,
+            "borderTopWidth": 0,
+            "elevation": 10,
+            "flex": 0,
+            "flexDirection": "row",
+            "marginLeft": 8,
+            "marginRight": 8,
+            "overflow": "visible",
+            "paddingLeft": 5,
+            "paddingRight": 5,
+            "shadowColor": "rgb(33, 21, 100)",
+            "shadowOffset": Object {
+              "height": 0.5,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 16,
+            "zIndex": 10,
+          }
+        }
+      >
+        <View>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "flex": 0,
+                  "justifyContent": "center",
+                },
+                Object {
+                  "borderRadius": 30,
+                  "height": 60,
+                  "width": 60,
+                },
+              ]
+            }
+          >
+            <Image
+              resizeMode="cover"
+              source={
+                Object {
+                  "testUri": "../../../assets/images/eth-symbol2.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "borderRadius": 30,
+                    "height": 60,
+                    "width": 60,
+                  },
+                  Object {
+                    "position": "absolute",
+                  },
+                  Array [
+                    Object {
+                      "borderRadius": 30,
+                      "height": 60,
+                      "width": 60,
+                    },
+                    undefined,
+                  ],
+                ]
+              }
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "flex": 1,
+              "paddingTop": 5,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+                "fontSize": 14,
+              }
+            }
+          >
+            0.1235
+             ETH
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+              }
+            }
+          >
+             
+            $123.44
+             
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "flex": 0,
+              "marginLeft": 8,
+              "opacity": 1,
+            }
+          }
+        >
+          <Icon
+            color="rgba(74,74,74,1)"
+            name="ios-refresh"
+            size={24}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginBottom": 5,
+            "marginLeft": 24,
+            "marginRight": 24,
+            "marginTop": 5,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 10,
+            }
+          }
+        >
+          DETAILS
+        </Text>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+              "padding": 3,
+            }
+          }
+        >
+          <Icon
+            color="#6A54D1"
+            name="ios-information-circle-outline"
+            size={15}
+          />
+        </View>
+      </View>
+      <View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 10,
+              "marginBottom": 5,
+              "marginLeft": 24,
+              "marginTop": 15,
+            }
+          }
+        >
+          NETWORK FEE
+        </Text>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginLeft": 8,
+              "marginRight": 8,
+              "paddingBottom": 10,
+              "paddingLeft": 15,
+              "paddingRight": 15,
+              "paddingTop": 10,
+              "shadowColor": "rgb(200, 200, 200)",
+              "shadowOffset": Object {
+                "height": 1.5,
+                "width": 0,
+              },
+              "shadowOpacity": 0.5,
+              "shadowRadius": 16,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+                "fontSize": 14,
+              }
+            }
+          >
+            Average
+          </Text>
+          <View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontSize": 14,
+                  "textAlign": "right",
+                }
+              }
+            >
+              $
+              0.50
+              USD
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontSize": 12,
+                  "textAlign": "right",
+                }
+              }
+            >
+              0.002
+               ETH
+               
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "margin": 10,
+          }
+        }
+      >
+        <View
+          accessibilityLabel="APPROVE_BUTTON"
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A54D1",
+              "borderRadius": 8,
+              "padding": 15,
+            }
+          }
+          testID="APPROVE_BUTTON"
+        >
+          <View
+            pointerEvents="auto"
+            style={
+              Object {
+                "alignItems": undefined,
+                "backgroundColor": undefined,
+                "borderRadius": undefined,
+                "flex": undefined,
+                "flexDirection": "row",
+                "height": undefined,
+                "justifyContent": undefined,
+                "marginBottom": undefined,
+                "marginLeft": undefined,
+                "marginRight": undefined,
+                "marginTop": undefined,
+                "padding": undefined,
+                "paddingBottom": undefined,
+                "paddingHorizontal": undefined,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+                "paddingTop": undefined,
+                "width": undefined,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontSize": 18,
+                }
+              }
+            >
+              Approve Transaction
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TransactionCard keyPair renders correctly with request and a value 1`] = `
 <View
   style={
     Object {
@@ -3342,6 +7682,95 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
           />
         </View>
       </View>
+      <View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 10,
+              "marginBottom": 5,
+              "marginLeft": 24,
+              "marginTop": 15,
+            }
+          }
+        >
+          NETWORK FEE
+        </Text>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginLeft": 8,
+              "marginRight": 8,
+              "paddingBottom": 10,
+              "paddingLeft": 15,
+              "paddingRight": 15,
+              "paddingTop": 10,
+              "shadowColor": "rgb(200, 200, 200)",
+              "shadowOffset": Object {
+                "height": 1.5,
+                "width": 0,
+              },
+              "shadowOpacity": 0.5,
+              "shadowRadius": 16,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+                "fontSize": 14,
+              }
+            }
+          >
+            Average
+          </Text>
+          <View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontSize": 14,
+                  "textAlign": "right",
+                }
+              }
+            >
+              $
+              0.50
+              USD
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontSize": 12,
+                  "textAlign": "right",
+                }
+              }
+            >
+              0.002
+               ETH
+               
+            </Text>
+          </View>
+        </View>
+      </View>
       <View
         style={
           Object {
@@ -3415,7 +7844,636 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
 </View>
 `;
 
-exports[`TransactionCard renders correctly with request and a value 1`] = `
+exports[`TransactionCard keyPair renders correctly with request and a value with insufficient balance 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "flex": 0,
+      "flexDirection": "column",
+      "justifyContent": "flex-end",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 0,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "marginBottom": 16,
+            "marginTop": 16,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "rgba(138,155,161,1.0)",
+                "fontFamily": undefined,
+                "fontSize": 13,
+              },
+              Object {
+                "color": "rgba(255, 255, 255, 0.7)",
+              },
+            ]
+          }
+        >
+          You have never 
+          interacted
+           with 
+          this dApp
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#F6F5FE",
+          "borderTopLeftRadius": 12,
+          "borderTopRightRadius": 12,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+          }
+        }
+      >
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+              "paddingBottom": 10,
+              "paddingLeft": 24,
+              "paddingRight": 20,
+              "paddingTop": 14,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#6A54D1",
+                "fontSize": 16,
+              }
+            }
+          >
+            Close
+          </Text>
+        </View>
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(74,74,74,1)",
+            "fontFamily": "Montserrat",
+            "fontSize": 20,
+            "lineHeight": 26,
+            "marginLeft": 23,
+          }
+        }
+      />
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(74,74,74,1)",
+            "fontSize": 12,
+            "marginBottom": 5,
+            "marginLeft": 24,
+            "marginTop": 10,
+          }
+        }
+      >
+        Selected Account
+      </Text>
+      <View
+        elevation={10}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "backgroundColor": "white",
+            "borderRadius": 3,
+            "borderTopWidth": 0,
+            "elevation": 10,
+            "flex": 0,
+            "flexDirection": "row",
+            "marginLeft": 8,
+            "marginRight": 8,
+            "overflow": "visible",
+            "paddingLeft": 5,
+            "paddingRight": 5,
+            "shadowColor": "rgb(33, 21, 100)",
+            "shadowOffset": Object {
+              "height": 0.5,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 16,
+            "zIndex": 10,
+          }
+        }
+      >
+        <View>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "flex": 0,
+                  "justifyContent": "center",
+                },
+                Object {
+                  "borderRadius": 30,
+                  "height": 60,
+                  "width": 60,
+                },
+              ]
+            }
+          >
+            <Image
+              resizeMode="cover"
+              source={
+                Object {
+                  "testUri": "../../../assets/images/eth-symbol2.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "borderRadius": 30,
+                    "height": 60,
+                    "width": 60,
+                  },
+                  Object {
+                    "position": "absolute",
+                  },
+                  Array [
+                    Object {
+                      "borderRadius": 30,
+                      "height": 60,
+                      "width": 60,
+                    },
+                    undefined,
+                  ],
+                ]
+              }
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "flex": 1,
+              "paddingTop": 5,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+                "fontSize": 14,
+              }
+            }
+          >
+            0
+             ETH
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+              }
+            }
+          >
+             
+            $0
+             
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "flex": 0,
+              "marginLeft": 8,
+              "opacity": 1,
+            }
+          }
+        >
+          <Icon
+            color="rgba(74,74,74,1)"
+            name="ios-refresh"
+            size={24}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "borderBottomColor": "#E0DFE6",
+            "borderBottomWidth": 1,
+            "borderTopColor": "#E0DFE6",
+            "borderTopWidth": 1,
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "justifyContent": "space-between",
+            "marginBottom": 10,
+            "marginTop": 10,
+            "padding": 10,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "rgba(155,155,155,1)",
+                  "fontSize": 14,
+                  "lineHeight": 19,
+                  "textAlign": "center",
+                },
+                Object {
+                  "color": "black",
+                  "textAlign": "left",
+                },
+              ]
+            }
+          >
+            You will need to add funds to fully interact with this app. Add funds now?
+          </Text>
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "rgba(155,155,155,1)",
+                    "fontSize": 14,
+                    "lineHeight": 19,
+                    "textAlign": "center",
+                  },
+                  Object {
+                    "color": "#6A54D1",
+                    "textAlign": "left",
+                    "textDecorationLine": "underline",
+                  },
+                ]
+              }
+            >
+              Request free 
+              Rinkeby
+               Ether
+              <Icon
+                color="#6A54D1"
+                name="external-link"
+                size={16}
+              />
+            </Text>
+          </View>
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "flex": 0,
+              "marginLeft": 8,
+              "opacity": 1,
+            }
+          }
+        >
+          <Icon
+            color="rgba(91,91,91,1)"
+            name="ios-copy"
+            size={32}
+          />
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "flex": 0,
+              "marginLeft": 16,
+              "opacity": 1,
+            }
+          }
+        >
+          <Icon
+            color="rgba(91,91,91,1)"
+            name="ios-share"
+            size={32}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginBottom": 5,
+            "marginLeft": 24,
+            "marginRight": 24,
+            "marginTop": 5,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 10,
+            }
+          }
+        >
+          DETAILS
+        </Text>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+              "padding": 3,
+            }
+          }
+        >
+          <Icon
+            color="#6A54D1"
+            name="ios-information-circle-outline"
+            size={15}
+          />
+        </View>
+      </View>
+      <View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 10,
+              "marginBottom": 5,
+              "marginLeft": 24,
+              "marginTop": 15,
+            }
+          }
+        >
+          NETWORK FEE
+        </Text>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginLeft": 8,
+              "marginRight": 8,
+              "paddingBottom": 10,
+              "paddingLeft": 15,
+              "paddingRight": 15,
+              "paddingTop": 10,
+              "shadowColor": "rgb(200, 200, 200)",
+              "shadowOffset": Object {
+                "height": 1.5,
+                "width": 0,
+              },
+              "shadowOpacity": 0.5,
+              "shadowRadius": 16,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+                "fontSize": 14,
+              }
+            }
+          >
+            Average
+          </Text>
+          <View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontSize": 14,
+                  "textAlign": "right",
+                }
+              }
+            >
+              $
+              0.50
+              USD
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontSize": 12,
+                  "textAlign": "right",
+                }
+              }
+            >
+              0.002
+               ETH
+               
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "margin": 10,
+          }
+        }
+      >
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A54D1",
+              "borderRadius": 8,
+              "opacity": 0.2,
+              "padding": 15,
+            }
+          }
+        >
+          <View
+            pointerEvents="auto"
+            style={
+              Object {
+                "alignItems": undefined,
+                "backgroundColor": undefined,
+                "borderRadius": undefined,
+                "flex": undefined,
+                "flexDirection": "row",
+                "height": undefined,
+                "justifyContent": undefined,
+                "marginBottom": undefined,
+                "marginLeft": undefined,
+                "marginRight": undefined,
+                "marginTop": undefined,
+                "padding": undefined,
+                "paddingBottom": undefined,
+                "paddingHorizontal": undefined,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+                "paddingTop": undefined,
+                "width": undefined,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontSize": 18,
+                }
+              }
+            >
+              Insufficient funds
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TransactionCard keyPair transaction sent mined failed renders correctly 1`] = `
 <View
   style={
     Object {
@@ -3746,55 +8804,186 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
           />
         </View>
       </View>
+      <View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 10,
+              "marginBottom": 5,
+              "marginLeft": 24,
+              "marginTop": 15,
+            }
+          }
+        >
+          NETWORK FEE
+        </Text>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginLeft": 8,
+              "marginRight": 8,
+              "paddingBottom": 10,
+              "paddingLeft": 15,
+              "paddingRight": 15,
+              "paddingTop": 10,
+              "shadowColor": "rgb(200, 200, 200)",
+              "shadowOffset": Object {
+                "height": 1.5,
+                "width": 0,
+              },
+              "shadowOpacity": 0.5,
+              "shadowRadius": 16,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+                "fontSize": 14,
+              }
+            }
+          >
+            Average
+          </Text>
+          <View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontSize": 14,
+                  "textAlign": "right",
+                }
+              }
+            >
+              $
+              0.50
+              USD
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontSize": 12,
+                  "textAlign": "right",
+                }
+              }
+            >
+              0.002
+               ETH
+               
+            </Text>
+          </View>
+        </View>
+      </View>
       <View
+        accessibilityComponentType="button"
+        accessibilityTraits={
+          Array [
+            "button",
+          ]
+        }
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "margin": 10,
+            "opacity": 1,
           }
         }
       >
         <View
-          accessibilityLabel="APPROVE_BUTTON"
-          accessible={true}
-          isTVSelectable={true}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {},
+            ]
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#007AFF",
+                  "fontSize": 18,
+                  "padding": 8,
+                  "textAlign": "center",
+                },
+              ]
+            }
+          >
+            See Transaction
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "stretch",
+              "alignSelf": "stretch",
+              "borderColor": "#CCCCCC",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "flex": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-evenly",
+              "marginBottom": 10,
+              "marginLeft": 30,
+              "marginRight": 30,
+              "padding": 10,
+              "paddingLeft": 10,
+              "paddingRight": 10,
+            },
+            Object {
+              "borderRadius": 8,
+              "flex": 0,
+              "marginBottom": 30,
+            },
+            Object {
+              "backgroundColor": undefined,
+            },
+          ]
+        }
+      >
+        <View
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#6A54D1",
-              "borderRadius": 8,
-              "padding": 15,
+              "flexDirection": "column",
+              "justifyContent": "center",
+              "paddingLeft": 10,
             }
           }
-          testID="APPROVE_BUTTON"
         >
           <View
-            pointerEvents="auto"
             style={
               Object {
-                "alignItems": undefined,
-                "backgroundColor": undefined,
-                "borderRadius": undefined,
-                "flex": undefined,
                 "flexDirection": "row",
-                "height": undefined,
-                "justifyContent": undefined,
-                "marginBottom": undefined,
-                "marginLeft": undefined,
-                "marginRight": undefined,
-                "marginTop": undefined,
-                "padding": undefined,
-                "paddingBottom": undefined,
-                "paddingHorizontal": undefined,
-                "paddingLeft": undefined,
-                "paddingRight": undefined,
-                "paddingTop": undefined,
-                "width": undefined,
               }
             }
           >
@@ -3804,14 +8993,56 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
               ellipsizeMode="tail"
               style={
                 Object {
-                  "color": "#FFFFFF",
+                  "color": undefined,
+                  "fontFamily": undefined,
                   "fontSize": 18,
+                  "letterSpacing": 1,
+                  "lineHeight": 24,
+                  "paddingRight": 5,
                 }
               }
             >
-              Approve Transaction
+              Error:
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": undefined,
+                  "fontFamily": undefined,
+                  "fontSize": 12,
+                  "letterSpacing": 1,
+                  "lineHeight": 15,
+                }
+              }
+            >
+              Transaction failed.
             </Text>
           </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexBasis": 40,
+              "flexDirection": "row",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Icon
+            name="ios-alert"
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "fontSize": 30,
+                "marginTop": 2,
+                "padding": 10,
+              }
+            }
+          />
         </View>
       </View>
     </View>
@@ -3819,7 +9050,7 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
 </View>
 `;
 
-exports[`TransactionCard renders correctly with request and a value with insufficient balance 1`] = `
+exports[`TransactionCard keyPair transaction sent mined successfully renders correctly 1`] = `
 <View
   style={
     Object {
@@ -4150,15 +9381,308 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
           />
         </View>
       </View>
+      <View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 10,
+              "marginBottom": 5,
+              "marginLeft": 24,
+              "marginTop": 15,
+            }
+          }
+        >
+          NETWORK FEE
+        </Text>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginLeft": 8,
+              "marginRight": 8,
+              "paddingBottom": 10,
+              "paddingLeft": 15,
+              "paddingRight": 15,
+              "paddingTop": 10,
+              "shadowColor": "rgb(200, 200, 200)",
+              "shadowOffset": Object {
+                "height": 1.5,
+                "width": 0,
+              },
+              "shadowOpacity": 0.5,
+              "shadowRadius": 16,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+                "fontSize": 14,
+              }
+            }
+          >
+            Average
+          </Text>
+          <View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontSize": 14,
+                  "textAlign": "right",
+                }
+              }
+            >
+              $
+              0.50
+              USD
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontSize": 12,
+                  "textAlign": "right",
+                }
+              }
+            >
+              0.002
+               ETH
+               
+            </Text>
+          </View>
+        </View>
+      </View>
       <View
+        accessibilityComponentType="button"
+        accessibilityTraits={
+          Array [
+            "button",
+          ]
+        }
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "margin": 10,
+            "opacity": 1,
           }
         }
       >
         <View
-          accessibilityLabel="APPROVE_BUTTON"
+          style={
+            Array [
+              Object {},
+            ]
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#007AFF",
+                  "fontSize": 18,
+                  "padding": 8,
+                  "textAlign": "center",
+                },
+              ]
+            }
+          >
+            See Transaction
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "stretch",
+              "alignSelf": "stretch",
+              "borderColor": "#CCCCCC",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "flex": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-evenly",
+              "marginBottom": 10,
+              "marginLeft": 30,
+              "marginRight": 30,
+              "padding": 10,
+              "paddingLeft": 10,
+              "paddingRight": 10,
+            },
+            Object {
+              "borderRadius": 8,
+              "flex": 0,
+              "marginBottom": 30,
+            },
+            Object {
+              "backgroundColor": "rgba(54,184,123,1)",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "column",
+              "justifyContent": "center",
+              "paddingLeft": 10,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#FFFFFF",
+                "fontFamily": undefined,
+                "fontSize": 18,
+                "letterSpacing": 1,
+                "lineHeight": 24,
+              }
+            }
+          >
+            Transaction Successful
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexBasis": 40,
+              "flexDirection": "row",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Icon
+            color="#FFFFFF"
+            name="ios-checkmark-circle"
+            style={
+              Object {
+                "fontSize": 20,
+                "marginTop": 2,
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TransactionCard keyPair transaction sent not mined renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "flex": 0,
+      "flexDirection": "column",
+      "justifyContent": "flex-end",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 0,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "marginBottom": 16,
+            "marginTop": 16,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "rgba(138,155,161,1.0)",
+                "fontFamily": undefined,
+                "fontSize": 13,
+              },
+              Object {
+                "color": "rgba(255, 255, 255, 0.7)",
+              },
+            ]
+          }
+        >
+          You have never 
+          interacted
+           with 
+          this dApp
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#F6F5FE",
+          "borderTopLeftRadius": 12,
+          "borderTopRightRadius": 12,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "flex-start",
+          }
+        }
+      >
+        <View
           accessible={true}
           isTVSelectable={true}
           onResponderGrant={[Function]}
@@ -4169,53 +9693,454 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "alignItems": "center",
-              "backgroundColor": "#6A54D1",
-              "borderRadius": 8,
-              "padding": 15,
+              "opacity": 1,
+              "paddingBottom": 10,
+              "paddingLeft": 24,
+              "paddingRight": 20,
+              "paddingTop": 14,
             }
           }
-          testID="APPROVE_BUTTON"
         >
-          <View
-            pointerEvents="auto"
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
             style={
               Object {
-                "alignItems": undefined,
-                "backgroundColor": undefined,
-                "borderRadius": undefined,
-                "flex": undefined,
-                "flexDirection": "row",
-                "height": undefined,
-                "justifyContent": undefined,
-                "marginBottom": undefined,
-                "marginLeft": undefined,
-                "marginRight": undefined,
-                "marginTop": undefined,
-                "padding": undefined,
-                "paddingBottom": undefined,
-                "paddingHorizontal": undefined,
-                "paddingLeft": undefined,
-                "paddingRight": undefined,
-                "paddingTop": undefined,
-                "width": undefined,
+                "color": "#6A54D1",
+                "fontSize": 16,
               }
             }
           >
+            Close
+          </Text>
+        </View>
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(74,74,74,1)",
+            "fontFamily": "Montserrat",
+            "fontSize": 20,
+            "lineHeight": 26,
+            "marginLeft": 23,
+          }
+        }
+      />
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "rgba(74,74,74,1)",
+            "fontSize": 12,
+            "marginBottom": 5,
+            "marginLeft": 24,
+            "marginTop": 10,
+          }
+        }
+      >
+        Selected Account
+      </Text>
+      <View
+        elevation={10}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "backgroundColor": "white",
+            "borderRadius": 3,
+            "borderTopWidth": 0,
+            "elevation": 10,
+            "flex": 0,
+            "flexDirection": "row",
+            "marginLeft": 8,
+            "marginRight": 8,
+            "overflow": "visible",
+            "paddingLeft": 5,
+            "paddingRight": 5,
+            "shadowColor": "rgb(33, 21, 100)",
+            "shadowOffset": Object {
+              "height": 0.5,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 16,
+            "zIndex": 10,
+          }
+        }
+      >
+        <View>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "flex": 0,
+                  "justifyContent": "center",
+                },
+                Object {
+                  "borderRadius": 30,
+                  "height": 60,
+                  "width": 60,
+                },
+              ]
+            }
+          >
+            <Image
+              resizeMode="cover"
+              source={
+                Object {
+                  "testUri": "../../../assets/images/eth-symbol2.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "borderRadius": 30,
+                    "height": 60,
+                    "width": 60,
+                  },
+                  Object {
+                    "position": "absolute",
+                  },
+                  Array [
+                    Object {
+                      "borderRadius": 30,
+                      "height": 60,
+                      "width": 60,
+                    },
+                    undefined,
+                  ],
+                ]
+              }
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "flex": 1,
+              "paddingTop": 5,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+                "fontSize": 14,
+              }
+            }
+          >
+            0
+             ETH
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+              }
+            }
+          >
+             
+            $0
+             
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "flex": 0,
+              "marginLeft": 8,
+              "opacity": 1,
+            }
+          }
+        >
+          <Icon
+            color="rgba(74,74,74,1)"
+            name="ios-refresh"
+            size={24}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginBottom": 5,
+            "marginLeft": 24,
+            "marginRight": 24,
+            "marginTop": 5,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 10,
+            }
+          }
+        >
+          DETAILS
+        </Text>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+              "padding": 3,
+            }
+          }
+        >
+          <Icon
+            color="#6A54D1"
+            name="ios-information-circle-outline"
+            size={15}
+          />
+        </View>
+      </View>
+      <View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "rgba(74,74,74,1)",
+              "fontSize": 10,
+              "marginBottom": 5,
+              "marginLeft": 24,
+              "marginTop": 15,
+            }
+          }
+        >
+          NETWORK FEE
+        </Text>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginLeft": 8,
+              "marginRight": 8,
+              "paddingBottom": 10,
+              "paddingLeft": 15,
+              "paddingRight": 15,
+              "paddingTop": 10,
+              "shadowColor": "rgb(200, 200, 200)",
+              "shadowOffset": Object {
+                "height": 1.5,
+                "width": 0,
+              },
+              "shadowOpacity": 0.5,
+              "shadowRadius": 16,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "rgba(74,74,74,1)",
+                "fontSize": 14,
+              }
+            }
+          >
+            Average
+          </Text>
+          <View>
             <Text
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
               style={
                 Object {
-                  "color": "#FFFFFF",
-                  "fontSize": 18,
+                  "color": "rgba(74,74,74,1)",
+                  "fontSize": 14,
+                  "textAlign": "right",
                 }
               }
             >
-              Approve Transaction
+              $
+              0.50
+              USD
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "rgba(74,74,74,1)",
+                  "fontSize": 12,
+                  "textAlign": "right",
+                }
+              }
+            >
+              0.002
+               ETH
+               
             </Text>
           </View>
+        </View>
+      </View>
+      <View
+        accessibilityComponentType="button"
+        accessibilityTraits={
+          Array [
+            "button",
+          ]
+        }
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {},
+            ]
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#007AFF",
+                  "fontSize": 18,
+                  "padding": 8,
+                  "textAlign": "center",
+                },
+              ]
+            }
+          >
+            See Transaction
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "stretch",
+              "alignSelf": "stretch",
+              "borderColor": "#CCCCCC",
+              "borderRadius": 8,
+              "borderWidth": 1,
+              "flex": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-evenly",
+              "marginBottom": 10,
+              "marginLeft": 30,
+              "marginRight": 30,
+              "padding": 10,
+              "paddingLeft": 10,
+              "paddingRight": 10,
+            },
+            Object {
+              "flex": 0,
+              "marginBottom": 30,
+            },
+            Object {
+              "backgroundColor": "rgba(155,155,155,1)",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "column",
+              "justifyContent": "center",
+              "paddingLeft": 10,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#FFFFFF",
+                "fontFamily": undefined,
+                "fontSize": 18,
+                "letterSpacing": 1,
+                "lineHeight": 24,
+                "paddingRight": 5,
+              }
+            }
+          >
+            Transaction Pending
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexBasis": 40,
+              "flexDirection": "row",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <ActivityIndicator
+            animating={true}
+            color="#FFFFFF"
+            hidesWhenStopped={true}
+            size="small"
+          />
         </View>
       </View>
     </View>
