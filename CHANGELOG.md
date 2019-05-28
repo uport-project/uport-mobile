@@ -1,5 +1,12 @@
 # Change Log
 
+## [v462](https://github.com/uport-project/uport-mobile/tree/v462) (2019-05-28)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v461...v462)
+
+**Merged pull requests:**
+
+- Fixed universal links on iOS and Android [\#152](https://github.com/uport-project/uport-mobile/pull/152) ([simonas-notcat](https://github.com/simonas-notcat))
+
 ## [v461](https://github.com/uport-project/uport-mobile/tree/v461) (2019-05-27)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v460...v461)
 
