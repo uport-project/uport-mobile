@@ -1,9 +1,11 @@
+import { Linking } from 'react-native'
 import { Navigation } from 'react-native-navigation'
 import { Theme, Icon, Device } from '../kancha'
 import SCREENS from '../screens/Screens'
 import { RNUportSigner } from 'react-native-uport-signer'
 import store from '../store/store'
 import { registerDeviceForNotifications } from 'uPortMobile/lib/actions/snsRegistrationActions'
+import { handleURL } from '../actions/requestActions'
 
 /**
  * This is called by the startUpSaga when the app is ready to launch
@@ -403,4 +405,14 @@ export async function startMain() {
    * Register for notifications
    */
   store.dispatch(registerDeviceForNotifications())
+
+  
+  Linking.getInitialURL().then(url => {
+    store.dispatch(handleURL(url))
+  })
+
+  Linking.addEventListener('url', (event) => {
+    if (event && event.url) store.dispatch(handleURL(event.url))
+  })
+  
 }
