@@ -8,18 +8,17 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - yarn-{{ arch }}-v4-{{ checksum "yarn.lock" }}
-            - yarn-{{ arch }}-v4
+            - yarn-{{ arch }}-v5-{{ checksum "yarn.lock" }}
+            - yarn-{{ arch }}-v5
       - run:
           name: install-dependencies
           command: |
             sudo npm i -g  codecov node-gyp
             yarn
       - save_cache:
-          key: yarn-{{ arch }}-v4-{{ checksum "yarn.lock" }}
+          key: yarn-{{ arch }}-v5-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
-            - /usr/local/lib/node_modules
       - persist_to_workspace:
           root: ~/uport-mobile
           paths:
@@ -35,8 +34,11 @@ jobs:
           at: ~/uport-mobile
       - restore_cache:
           keys:
-            - yarn-{{ arch }}-v4-{{ checksum "yarn.lock" }}
-            - yarn-{{ arch }}-v4
+            - yarn-{{ arch }}-v5-{{ checksum "yarn.lock" }}
+            - yarn-{{ arch }}-v5
+      - run:
+          name: install tools
+          command: sudo npm i -g  codecov node-gyp
       - run:
           name: jest tests
           command: |
@@ -63,8 +65,8 @@ jobs:
           at: ~/uport-mobile
       - restore_cache:
           keys:
-            - yarn-{{ arch }}-v4-{{ checksum "yarn.lock" }}
-            - yarn-{{ arch }}-v4
+            - yarn-{{ arch }}-v5-{{ checksum "yarn.lock" }}
+            - yarn-{{ arch }}-v5
       - run:
           name: package react native android bundle independently
           command: yarn package-android --max-workers=3
