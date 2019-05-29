@@ -146,6 +146,10 @@ export async function startMain() {
         color: 'white',
       }
     : {}
+  const defaultProfileEditButton = {
+    id: 'edit',
+    text: 'Edit',
+  }
 
   /**
    * Some options have not been updated in the nav library so we need to override it :(
@@ -275,7 +279,18 @@ export async function startMain() {
                       component: {
                         name: SCREENS.Profile,
                         options: {
-                          topBar: navBarText('', true),
+                          topBar: {
+                            noBorder: true,
+                            rightButtons: [defaultProfileEditButton],
+                            title: {
+                              text: '',
+                              color: Theme.colors.inverted.text,
+                            },
+                            largeTitle: {
+                              visible: true,
+                              color: Theme.colors.inverted.text,
+                            },
+                          },
                           bottomTab: {
                             icon: profileIcon,
                             iconColor: Theme.colors.primary.accessories,
@@ -406,13 +421,11 @@ export async function startMain() {
    */
   store.dispatch(registerDeviceForNotifications())
 
-  
   Linking.getInitialURL().then(url => {
     store.dispatch(handleURL(url))
   })
 
-  Linking.addEventListener('url', (event) => {
+  Linking.addEventListener('url', event => {
     if (event && event.url) store.dispatch(handleURL(event.url))
   })
-  
 }
