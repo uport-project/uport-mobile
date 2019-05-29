@@ -12,9 +12,7 @@ jobs:
             - yarn-{{ arch }}-v5
       - run:
           name: install-dependencies
-          command: |
-            sudo npm i -g  codecov node-gyp
-            yarn
+          command: yarn
       - save_cache:
           key: yarn-{{ arch }}-v5-{{ checksum "yarn.lock" }}
           paths:
@@ -94,7 +92,7 @@ jobs:
           at: ~/uport-mobile
 
       - run: wget https://releases.hashicorp.com/vault/0.10.1/vault_0.10.1_linux_amd64.zip -O ~/vault.zip
-      - run: unzip ~/vault.zip -d ../tools/vault/
+      - run: mkdir -p ./tools/vault/ && unzip ~/vault.zip -d ./tools/vault/
 
       - restore_cache:
           keys:
@@ -142,7 +140,7 @@ jobs:
           command: ./gradlew --stop
       - run:
           name: get google services json
-          command: PATH="$PATH:$(pwd)/../vault" && bash ../scripts/pull_google_services.sh
+          command: PATH="$PATH:$(pwd)/tools/vault" && bash ../scripts/pull_google_services.sh
       - run:
           name: build the release APK
           command: ./gradlew :app:deliverArchives -x bundleReleaseJsAndAssets --no-parallel --max-workers 1
@@ -236,7 +234,7 @@ jobs:
             - .bundle
             - ~/.bundle
 
-      - run: PATH="$PATH:$(pwd)/../vault" && bash ../scripts/pull_service_key.sh && fastlane android internal; rm -f ../google-play-key-file.json
+      - run: PATH="$PATH:$(pwd)/tools/vault" && bash ../scripts/pull_service_key.sh && fastlane android internal; rm -f ../google-play-key-file.json
 
   deploy-ios:
     working_directory: ~/uport-mobile
@@ -288,7 +286,7 @@ workflows:
       - android-dependencies:
           requires:
             - vault
-            - package-android-bundle
+            - node-dependencies
           filters:
             tags:
               only: /.*/
