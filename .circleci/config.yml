@@ -2,27 +2,27 @@ version: 2
 jobs:
   node-dependencies:
     working_directory: ~/uport-mobile
-      docker:
-          - image: circleci/node:8
-      steps:
-        - checkout
-        - restore_cache:
-            keys:
-              - yarn-{{ arch }}-v3-{{ checksum "yarn.lock" }}
-              - yarn-{{ arch }}-v3
-        - run:
-            name: install-dependencies
-            command: |
-              sudo npm i -g  codecov node-gyp
-              yarn
-        - save_cache:
-            key: yarn-{{ arch }}-v3-{{ checksum "yarn.lock" }}
-            paths:
-              - ~/.cache/yarn
-        - persist_to_workspace:
-            root: ~/uport-mobile
-            paths:
-              - node_modules
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - yarn-{{ arch }}-v3-{{ checksum "yarn.lock" }}
+            - yarn-{{ arch }}-v3
+      - run:
+          name: install-dependencies
+          command: |
+            sudo npm i -g  codecov node-gyp
+            yarn
+      - save_cache:
+          key: yarn-{{ arch }}-v3-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+      - persist_to_workspace:
+          root: ~/uport-mobile
+          paths:
+            - node_modules
 
   node-test:
     working_directory: ~/uport-mobile
