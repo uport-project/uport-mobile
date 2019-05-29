@@ -383,11 +383,12 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
       <View
         style={
           Object {
-            "backgroundColor": "rgba(246,247,248,1)",
+            "margin": 10,
           }
         }
       >
         <View
+          accessibilityLabel="APPROVE_BUTTON"
           accessible={true}
           isTVSelectable={true}
           onResponderGrant={[Function]}
@@ -397,50 +398,54 @@ exports[`TransactionCard renders correctly with abi with args and a no value 1`]
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Array [
-              Object {
-                "borderRadius": 8,
-                "flex": 1,
-                "flexDirection": "row",
-                "justifyContent": "center",
-                "margin": 15,
-                "padding": 10,
-              },
-              Array [
-                Object {
-                  "backgroundColor": "rgba(91,84,199,1)",
-                  "padding": 15,
-                },
-                Object {
-                  "marginBottom": 30,
-                  "marginLeft": 30,
-                  "marginRight": 30,
-                  "marginTop": 10,
-                },
-              ],
-            ]
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A54D1",
+              "borderRadius": 8,
+              "padding": 15,
+            }
           }
+          testID="APPROVE_BUTTON"
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
+          <View
+            pointerEvents="auto"
             style={
-              Array [
-                Object {
-                  "fontFamily": "Montserrat",
-                  "fontSize": 18,
-                  "textAlign": "center",
-                },
-                Object {
-                  "color": "#FFFFFF",
-                },
-                Object {},
-              ]
+              Object {
+                "alignItems": undefined,
+                "backgroundColor": undefined,
+                "borderRadius": undefined,
+                "flex": undefined,
+                "flexDirection": "row",
+                "height": undefined,
+                "justifyContent": undefined,
+                "marginBottom": undefined,
+                "marginLeft": undefined,
+                "marginRight": undefined,
+                "marginTop": undefined,
+                "padding": undefined,
+                "paddingBottom": undefined,
+                "paddingHorizontal": undefined,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+                "paddingTop": undefined,
+                "width": undefined,
+              }
             }
           >
-            Approve Transaction
-          </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontSize": 18,
+                }
+              }
+            >
+              Approve Transaction
+            </Text>
+          </View>
         </View>
       </View>
     </View>
@@ -831,11 +836,12 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
       <View
         style={
           Object {
-            "backgroundColor": "rgba(246,247,248,1)",
+            "margin": 10,
           }
         }
       >
         <View
+          accessibilityLabel="APPROVE_BUTTON"
           accessible={true}
           isTVSelectable={true}
           onResponderGrant={[Function]}
@@ -845,50 +851,54 @@ exports[`TransactionCard renders correctly with abi without args and value 1`] =
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Array [
-              Object {
-                "borderRadius": 8,
-                "flex": 1,
-                "flexDirection": "row",
-                "justifyContent": "center",
-                "margin": 15,
-                "padding": 10,
-              },
-              Array [
-                Object {
-                  "backgroundColor": "rgba(91,84,199,1)",
-                  "padding": 15,
-                },
-                Object {
-                  "marginBottom": 30,
-                  "marginLeft": 30,
-                  "marginRight": 30,
-                  "marginTop": 10,
-                },
-              ],
-            ]
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A54D1",
+              "borderRadius": 8,
+              "padding": 15,
+            }
           }
+          testID="APPROVE_BUTTON"
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
+          <View
+            pointerEvents="auto"
             style={
-              Array [
-                Object {
-                  "fontFamily": "Montserrat",
-                  "fontSize": 18,
-                  "textAlign": "center",
-                },
-                Object {
-                  "color": "#FFFFFF",
-                },
-                Object {},
-              ]
+              Object {
+                "alignItems": undefined,
+                "backgroundColor": undefined,
+                "borderRadius": undefined,
+                "flex": undefined,
+                "flexDirection": "row",
+                "height": undefined,
+                "justifyContent": undefined,
+                "marginBottom": undefined,
+                "marginLeft": undefined,
+                "marginRight": undefined,
+                "marginTop": undefined,
+                "padding": undefined,
+                "paddingBottom": undefined,
+                "paddingHorizontal": undefined,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+                "paddingTop": undefined,
+                "width": undefined,
+              }
             }
           >
-            Approve Transaction
-          </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontSize": 18,
+                }
+              }
+            >
+              Approve Transaction
+            </Text>
+          </View>
         </View>
       </View>
     </View>
@@ -1230,11 +1240,12 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
       <View
         style={
           Object {
-            "backgroundColor": "rgba(246,247,248,1)",
+            "margin": 10,
           }
         }
       >
         <View
+          accessibilityLabel="APPROVE_BUTTON"
           accessible={true}
           isTVSelectable={true}
           onResponderGrant={[Function]}
@@ -1244,50 +1255,54 @@ exports[`TransactionCard renders correctly with both client and destination 1`] 
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Array [
-              Object {
-                "borderRadius": 8,
-                "flex": 1,
-                "flexDirection": "row",
-                "justifyContent": "center",
-                "margin": 15,
-                "padding": 10,
-              },
-              Array [
-                Object {
-                  "backgroundColor": "rgba(91,84,199,1)",
-                  "padding": 15,
-                },
-                Object {
-                  "marginBottom": 30,
-                  "marginLeft": 30,
-                  "marginRight": 30,
-                  "marginTop": 10,
-                },
-              ],
-            ]
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A54D1",
+              "borderRadius": 8,
+              "padding": 15,
+            }
           }
+          testID="APPROVE_BUTTON"
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
+          <View
+            pointerEvents="auto"
             style={
-              Array [
-                Object {
-                  "fontFamily": "Montserrat",
-                  "fontSize": 18,
-                  "textAlign": "center",
-                },
-                Object {
-                  "color": "#FFFFFF",
-                },
-                Object {},
-              ]
+              Object {
+                "alignItems": undefined,
+                "backgroundColor": undefined,
+                "borderRadius": undefined,
+                "flex": undefined,
+                "flexDirection": "row",
+                "height": undefined,
+                "justifyContent": undefined,
+                "marginBottom": undefined,
+                "marginLeft": undefined,
+                "marginRight": undefined,
+                "marginTop": undefined,
+                "padding": undefined,
+                "paddingBottom": undefined,
+                "paddingHorizontal": undefined,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+                "paddingTop": undefined,
+                "width": undefined,
+              }
             }
           >
-            Approve Transaction
-          </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontSize": 18,
+                }
+              }
+            >
+              Approve Transaction
+            </Text>
+          </View>
         </View>
       </View>
     </View>
@@ -2069,11 +2084,12 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
       <View
         style={
           Object {
-            "backgroundColor": "rgba(246,247,248,1)",
+            "margin": 10,
           }
         }
       >
         <View
+          accessibilityLabel="APPROVE_BUTTON"
           accessible={true}
           isTVSelectable={true}
           onResponderGrant={[Function]}
@@ -2083,50 +2099,54 @@ exports[`TransactionCard renders correctly with destination being validated 1`] 
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Array [
-              Object {
-                "borderRadius": 8,
-                "flex": 1,
-                "flexDirection": "row",
-                "justifyContent": "center",
-                "margin": 15,
-                "padding": 10,
-              },
-              Array [
-                Object {
-                  "backgroundColor": "rgba(91,84,199,1)",
-                  "padding": 15,
-                },
-                Object {
-                  "marginBottom": 30,
-                  "marginLeft": 30,
-                  "marginRight": 30,
-                  "marginTop": 10,
-                },
-              ],
-            ]
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A54D1",
+              "borderRadius": 8,
+              "padding": 15,
+            }
           }
+          testID="APPROVE_BUTTON"
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
+          <View
+            pointerEvents="auto"
             style={
-              Array [
-                Object {
-                  "fontFamily": "Montserrat",
-                  "fontSize": 18,
-                  "textAlign": "center",
-                },
-                Object {
-                  "color": "#FFFFFF",
-                },
-                Object {},
-              ]
+              Object {
+                "alignItems": undefined,
+                "backgroundColor": undefined,
+                "borderRadius": undefined,
+                "flex": undefined,
+                "flexDirection": "row",
+                "height": undefined,
+                "justifyContent": undefined,
+                "marginBottom": undefined,
+                "marginLeft": undefined,
+                "marginRight": undefined,
+                "marginTop": undefined,
+                "padding": undefined,
+                "paddingBottom": undefined,
+                "paddingHorizontal": undefined,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+                "paddingTop": undefined,
+                "width": undefined,
+              }
             }
           >
-            Approve Transaction
-          </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontSize": 18,
+                }
+              }
+            >
+              Approve Transaction
+            </Text>
+          </View>
         </View>
       </View>
     </View>
@@ -2468,11 +2488,12 @@ exports[`TransactionCard renders correctly with only request 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "rgba(246,247,248,1)",
+            "margin": 10,
           }
         }
       >
         <View
+          accessibilityLabel="APPROVE_BUTTON"
           accessible={true}
           isTVSelectable={true}
           onResponderGrant={[Function]}
@@ -2482,50 +2503,54 @@ exports[`TransactionCard renders correctly with only request 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Array [
-              Object {
-                "borderRadius": 8,
-                "flex": 1,
-                "flexDirection": "row",
-                "justifyContent": "center",
-                "margin": 15,
-                "padding": 10,
-              },
-              Array [
-                Object {
-                  "backgroundColor": "rgba(91,84,199,1)",
-                  "padding": 15,
-                },
-                Object {
-                  "marginBottom": 30,
-                  "marginLeft": 30,
-                  "marginRight": 30,
-                  "marginTop": 10,
-                },
-              ],
-            ]
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A54D1",
+              "borderRadius": 8,
+              "padding": 15,
+            }
           }
+          testID="APPROVE_BUTTON"
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
+          <View
+            pointerEvents="auto"
             style={
-              Array [
-                Object {
-                  "fontFamily": "Montserrat",
-                  "fontSize": 18,
-                  "textAlign": "center",
-                },
-                Object {
-                  "color": "#FFFFFF",
-                },
-                Object {},
-              ]
+              Object {
+                "alignItems": undefined,
+                "backgroundColor": undefined,
+                "borderRadius": undefined,
+                "flex": undefined,
+                "flexDirection": "row",
+                "height": undefined,
+                "justifyContent": undefined,
+                "marginBottom": undefined,
+                "marginLeft": undefined,
+                "marginRight": undefined,
+                "marginTop": undefined,
+                "padding": undefined,
+                "paddingBottom": undefined,
+                "paddingHorizontal": undefined,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+                "paddingTop": undefined,
+                "width": undefined,
+              }
             }
           >
-            Approve Transaction
-          </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontSize": 18,
+                }
+              }
+            >
+              Approve Transaction
+            </Text>
+          </View>
         </View>
       </View>
     </View>
@@ -2916,11 +2941,12 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "rgba(246,247,248,1)",
+            "margin": 10,
           }
         }
       >
         <View
+          accessibilityLabel="APPROVE_BUTTON"
           accessible={true}
           isTVSelectable={true}
           onResponderGrant={[Function]}
@@ -2930,50 +2956,54 @@ exports[`TransactionCard renders correctly with publicUportTransaction 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Array [
-              Object {
-                "borderRadius": 8,
-                "flex": 1,
-                "flexDirection": "row",
-                "justifyContent": "center",
-                "margin": 15,
-                "padding": 10,
-              },
-              Array [
-                Object {
-                  "backgroundColor": "rgba(91,84,199,1)",
-                  "padding": 15,
-                },
-                Object {
-                  "marginBottom": 30,
-                  "marginLeft": 30,
-                  "marginRight": 30,
-                  "marginTop": 10,
-                },
-              ],
-            ]
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A54D1",
+              "borderRadius": 8,
+              "padding": 15,
+            }
           }
+          testID="APPROVE_BUTTON"
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
+          <View
+            pointerEvents="auto"
             style={
-              Array [
-                Object {
-                  "fontFamily": "Montserrat",
-                  "fontSize": 18,
-                  "textAlign": "center",
-                },
-                Object {
-                  "color": "#FFFFFF",
-                },
-                Object {},
-              ]
+              Object {
+                "alignItems": undefined,
+                "backgroundColor": undefined,
+                "borderRadius": undefined,
+                "flex": undefined,
+                "flexDirection": "row",
+                "height": undefined,
+                "justifyContent": undefined,
+                "marginBottom": undefined,
+                "marginLeft": undefined,
+                "marginRight": undefined,
+                "marginTop": undefined,
+                "padding": undefined,
+                "paddingBottom": undefined,
+                "paddingHorizontal": undefined,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+                "paddingTop": undefined,
+                "width": undefined,
+              }
             }
           >
-            Approve Transaction
-          </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontSize": 18,
+                }
+              }
+            >
+              Approve Transaction
+            </Text>
+          </View>
         </View>
       </View>
     </View>
@@ -3315,11 +3345,12 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "rgba(246,247,248,1)",
+            "margin": 10,
           }
         }
       >
         <View
+          accessibilityLabel="APPROVE_BUTTON"
           accessible={true}
           isTVSelectable={true}
           onResponderGrant={[Function]}
@@ -3329,50 +3360,54 @@ exports[`TransactionCard renders correctly with request and a 0 value 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Array [
-              Object {
-                "borderRadius": 8,
-                "flex": 1,
-                "flexDirection": "row",
-                "justifyContent": "center",
-                "margin": 15,
-                "padding": 10,
-              },
-              Array [
-                Object {
-                  "backgroundColor": "rgba(91,84,199,1)",
-                  "padding": 15,
-                },
-                Object {
-                  "marginBottom": 30,
-                  "marginLeft": 30,
-                  "marginRight": 30,
-                  "marginTop": 10,
-                },
-              ],
-            ]
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A54D1",
+              "borderRadius": 8,
+              "padding": 15,
+            }
           }
+          testID="APPROVE_BUTTON"
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
+          <View
+            pointerEvents="auto"
             style={
-              Array [
-                Object {
-                  "fontFamily": "Montserrat",
-                  "fontSize": 18,
-                  "textAlign": "center",
-                },
-                Object {
-                  "color": "#FFFFFF",
-                },
-                Object {},
-              ]
+              Object {
+                "alignItems": undefined,
+                "backgroundColor": undefined,
+                "borderRadius": undefined,
+                "flex": undefined,
+                "flexDirection": "row",
+                "height": undefined,
+                "justifyContent": undefined,
+                "marginBottom": undefined,
+                "marginLeft": undefined,
+                "marginRight": undefined,
+                "marginTop": undefined,
+                "padding": undefined,
+                "paddingBottom": undefined,
+                "paddingHorizontal": undefined,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+                "paddingTop": undefined,
+                "width": undefined,
+              }
             }
           >
-            Approve Transaction
-          </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontSize": 18,
+                }
+              }
+            >
+              Approve Transaction
+            </Text>
+          </View>
         </View>
       </View>
     </View>
@@ -3714,11 +3749,12 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "rgba(246,247,248,1)",
+            "margin": 10,
           }
         }
       >
         <View
+          accessibilityLabel="APPROVE_BUTTON"
           accessible={true}
           isTVSelectable={true}
           onResponderGrant={[Function]}
@@ -3728,50 +3764,54 @@ exports[`TransactionCard renders correctly with request and a value 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Array [
-              Object {
-                "borderRadius": 8,
-                "flex": 1,
-                "flexDirection": "row",
-                "justifyContent": "center",
-                "margin": 15,
-                "padding": 10,
-              },
-              Array [
-                Object {
-                  "backgroundColor": "rgba(91,84,199,1)",
-                  "padding": 15,
-                },
-                Object {
-                  "marginBottom": 30,
-                  "marginLeft": 30,
-                  "marginRight": 30,
-                  "marginTop": 10,
-                },
-              ],
-            ]
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A54D1",
+              "borderRadius": 8,
+              "padding": 15,
+            }
           }
+          testID="APPROVE_BUTTON"
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
+          <View
+            pointerEvents="auto"
             style={
-              Array [
-                Object {
-                  "fontFamily": "Montserrat",
-                  "fontSize": 18,
-                  "textAlign": "center",
-                },
-                Object {
-                  "color": "#FFFFFF",
-                },
-                Object {},
-              ]
+              Object {
+                "alignItems": undefined,
+                "backgroundColor": undefined,
+                "borderRadius": undefined,
+                "flex": undefined,
+                "flexDirection": "row",
+                "height": undefined,
+                "justifyContent": undefined,
+                "marginBottom": undefined,
+                "marginLeft": undefined,
+                "marginRight": undefined,
+                "marginTop": undefined,
+                "padding": undefined,
+                "paddingBottom": undefined,
+                "paddingHorizontal": undefined,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+                "paddingTop": undefined,
+                "width": undefined,
+              }
             }
           >
-            Approve Transaction
-          </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontSize": 18,
+                }
+              }
+            >
+              Approve Transaction
+            </Text>
+          </View>
         </View>
       </View>
     </View>
@@ -4113,11 +4153,12 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
       <View
         style={
           Object {
-            "backgroundColor": "rgba(246,247,248,1)",
+            "margin": 10,
           }
         }
       >
         <View
+          accessibilityLabel="APPROVE_BUTTON"
           accessible={true}
           isTVSelectable={true}
           onResponderGrant={[Function]}
@@ -4127,50 +4168,54 @@ exports[`TransactionCard renders correctly with request and a value with insuffi
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Array [
-              Object {
-                "borderRadius": 8,
-                "flex": 1,
-                "flexDirection": "row",
-                "justifyContent": "center",
-                "margin": 15,
-                "padding": 10,
-              },
-              Array [
-                Object {
-                  "backgroundColor": "rgba(91,84,199,1)",
-                  "padding": 15,
-                },
-                Object {
-                  "marginBottom": 30,
-                  "marginLeft": 30,
-                  "marginRight": 30,
-                  "marginTop": 10,
-                },
-              ],
-            ]
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#6A54D1",
+              "borderRadius": 8,
+              "padding": 15,
+            }
           }
+          testID="APPROVE_BUTTON"
         >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
+          <View
+            pointerEvents="auto"
             style={
-              Array [
-                Object {
-                  "fontFamily": "Montserrat",
-                  "fontSize": 18,
-                  "textAlign": "center",
-                },
-                Object {
-                  "color": "#FFFFFF",
-                },
-                Object {},
-              ]
+              Object {
+                "alignItems": undefined,
+                "backgroundColor": undefined,
+                "borderRadius": undefined,
+                "flex": undefined,
+                "flexDirection": "row",
+                "height": undefined,
+                "justifyContent": undefined,
+                "marginBottom": undefined,
+                "marginLeft": undefined,
+                "marginRight": undefined,
+                "marginTop": undefined,
+                "padding": undefined,
+                "paddingBottom": undefined,
+                "paddingHorizontal": undefined,
+                "paddingLeft": undefined,
+                "paddingRight": undefined,
+                "paddingTop": undefined,
+                "width": undefined,
+              }
             }
           >
-            Approve Transaction
-          </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontSize": 18,
+                }
+              }
+            >
+              Approve Transaction
+            </Text>
+          </View>
         </View>
       </View>
     </View>

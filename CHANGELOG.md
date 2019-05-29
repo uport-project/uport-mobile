@@ -1,5 +1,57 @@
 # Change Log
 
+## [v464](https://github.com/uport-project/uport-mobile/tree/v464) (2019-05-29)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v463...v464)
+
+**Merged pull requests:**
+
+- Declare edit button on startup nav config [\#154](https://github.com/uport-project/uport-mobile/pull/154) ([jasonhealy](https://github.com/jasonhealy))
+
+## [v463](https://github.com/uport-project/uport-mobile/tree/v463) (2019-05-29)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v462...v463)
+
+**Merged pull requests:**
+
+- \[Support\] update fastlane [\#153](https://github.com/uport-project/uport-mobile/pull/153) ([mirceanis](https://github.com/mirceanis))
+
+## [v462](https://github.com/uport-project/uport-mobile/tree/v462) (2019-05-28)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v461...v462)
+
+**Merged pull requests:**
+
+- Fixed universal links on iOS and Android [\#152](https://github.com/uport-project/uport-mobile/pull/152) ([simonas-notcat](https://github.com/simonas-notcat))
+
+## [v461](https://github.com/uport-project/uport-mobile/tree/v461) (2019-05-27)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v460...v461)
+
+**Merged pull requests:**
+
+- Tx card button + account balance fixes [\#151](https://github.com/uport-project/uport-mobile/pull/151) ([jasonhealy](https://github.com/jasonhealy))
+
+## [v460](https://github.com/uport-project/uport-mobile/tree/v460) (2019-05-27)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v459...v460)
+
+**Merged pull requests:**
+
+- Fix restoration of migrated identities [\#150](https://github.com/uport-project/uport-mobile/pull/150) ([pelle](https://github.com/pelle))
+
+## [v459](https://github.com/uport-project/uport-mobile/tree/v459) (2019-05-25)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v458...v459)
+
+**Merged pull requests:**
+
+- \[Support\] Fix android failed build on CI [\#149](https://github.com/uport-project/uport-mobile/pull/149) ([mirceanis](https://github.com/mirceanis))
+- re-enable migrations [\#148](https://github.com/uport-project/uport-mobile/pull/148) ([pelle](https://github.com/pelle))
+
+## [v458](https://github.com/uport-project/uport-mobile/tree/v458) (2019-05-24)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v457...v458)
+
+**Merged pull requests:**
+
+- \[Fixed \#166188674\] [\#147](https://github.com/uport-project/uport-mobile/pull/147) ([simonas-notcat](https://github.com/simonas-notcat))
+- Upgrade rn-uport-signer [\#145](https://github.com/uport-project/uport-mobile/pull/145) ([aldigjo](https://github.com/aldigjo))
+- Enable accessibility to be switched off for list items [\#144](https://github.com/uport-project/uport-mobile/pull/144) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v457](https://github.com/uport-project/uport-mobile/tree/v457) (2019-05-20)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v456...v457)
 

@@ -1,9 +1,11 @@
+import { Linking } from 'react-native'
 import { Navigation } from 'react-native-navigation'
 import { Theme, Icon, Device } from '../kancha'
 import SCREENS from '../screens/Screens'
 import { RNUportSigner } from 'react-native-uport-signer'
 import store from '../store/store'
 import { registerDeviceForNotifications } from 'uPortMobile/lib/actions/snsRegistrationActions'
+import { handleURL } from '../actions/requestActions'
 
 /**
  * This is called by the startUpSaga when the app is ready to launch
@@ -144,6 +146,10 @@ export async function startMain() {
         color: 'white',
       }
     : {}
+  const defaultProfileEditButton = {
+    id: 'edit',
+    text: 'Edit',
+  }
 
   /**
    * Some options have not been updated in the nav library so we need to override it :(
@@ -273,7 +279,18 @@ export async function startMain() {
                       component: {
                         name: SCREENS.Profile,
                         options: {
-                          topBar: navBarText('', true),
+                          topBar: {
+                            noBorder: true,
+                            rightButtons: [defaultProfileEditButton],
+                            title: {
+                              text: '',
+                              color: Theme.colors.inverted.text,
+                            },
+                            largeTitle: {
+                              visible: true,
+                              color: Theme.colors.inverted.text,
+                            },
+                          },
                           bottomTab: {
                             icon: profileIcon,
                             iconColor: Theme.colors.primary.accessories,
@@ -403,4 +420,12 @@ export async function startMain() {
    * Register for notifications
    */
   store.dispatch(registerDeviceForNotifications())
+
+  Linking.getInitialURL().then(url => {
+    store.dispatch(handleURL(url))
+  })
+
+  Linking.addEventListener('url', event => {
+    if (event && event.url) store.dispatch(handleURL(event.url))
+  })
 }

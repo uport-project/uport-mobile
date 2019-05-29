@@ -83,7 +83,7 @@ const Credential: React.FC<CredentialProps> = props => {
             viewStyle={{ borderBottomLeftRadius: 5, borderTopLeftRadius: 5 }}>
             {props.issuer ? (
               <Container padding={3} backgroundColor={Theme.colors.primary.background} br={4}>
-                <Avatar size={40} source={props.issuer} />}
+                <Avatar size={40} source={props.issuer} />
               </Container>
             ) : (
               <Container padding={3} w={40} />
