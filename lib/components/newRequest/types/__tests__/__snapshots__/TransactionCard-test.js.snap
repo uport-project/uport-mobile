@@ -787,6 +787,36 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi without 
       <View
         style={
           Object {
+            "borderTopColor": "rgba(226,226,226,1)",
+            "borderTopWidth": 1,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "paddingBottom": 17,
+            "paddingLeft": 24,
+            "paddingRight": 24,
+            "paddingTop": 17,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Value
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          1.01 ETH
+           
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
             "backgroundColor": "#FFFFFF",
             "flexDirection": "row",
             "justifyContent": "space-between",
@@ -4217,6 +4247,7 @@ exports[`TransactionCard keyPair renders correctly with abi with args and a no v
               }
             >
               $
+              0.07
               USD
             </Text>
             <Text
@@ -4231,6 +4262,7 @@ exports[`TransactionCard keyPair renders correctly with abi with args and a no v
                 }
               }
             >
+              0.0003
                ETH
                
             </Text>
@@ -4644,6 +4676,36 @@ exports[`TransactionCard keyPair renders correctly with abi without args and val
       <View
         style={
           Object {
+            "borderTopColor": "rgba(226,226,226,1)",
+            "borderTopWidth": 1,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "paddingBottom": 17,
+            "paddingLeft": 24,
+            "paddingRight": 24,
+            "paddingTop": 17,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Value
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          1.01 ETH
+           
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
             "backgroundColor": "#FFFFFF",
             "flexDirection": "row",
             "justifyContent": "space-between",
@@ -4757,6 +4819,7 @@ exports[`TransactionCard keyPair renders correctly with abi without args and val
               }
             >
               $
+              0.07
               USD
             </Text>
             <Text
@@ -4771,6 +4834,7 @@ exports[`TransactionCard keyPair renders correctly with abi without args and val
                 }
               }
             >
+              0.0003
                ETH
                
             </Text>
@@ -5248,7 +5312,7 @@ exports[`TransactionCard keyPair renders correctly with both client and destinat
               }
             >
               $
-              0.50
+              0.07
               USD
             </Text>
             <Text
@@ -5263,7 +5327,7 @@ exports[`TransactionCard keyPair renders correctly with both client and destinat
                 }
               }
             >
-              0.002
+              0.0003
                ETH
                
             </Text>
@@ -5741,7 +5805,7 @@ exports[`TransactionCard keyPair renders correctly with destination being invali
               }
             >
               $
-              0.50
+              0.07
               USD
             </Text>
             <Text
@@ -5756,7 +5820,7 @@ exports[`TransactionCard keyPair renders correctly with destination being invali
                 }
               }
             >
-              0.002
+              0.0003
                ETH
                
             </Text>
@@ -6270,7 +6334,7 @@ exports[`TransactionCard keyPair renders correctly with destination being valida
               }
             >
               $
-              0.50
+              0.07
               USD
             </Text>
             <Text
@@ -6285,7 +6349,7 @@ exports[`TransactionCard keyPair renders correctly with destination being valida
                 }
               }
             >
-              0.002
+              0.0003
                ETH
                
             </Text>
@@ -6763,7 +6827,7 @@ exports[`TransactionCard keyPair renders correctly with only request 1`] = `
               }
             >
               $
-              0.50
+              0.07
               USD
             </Text>
             <Text
@@ -6778,7 +6842,7 @@ exports[`TransactionCard keyPair renders correctly with only request 1`] = `
                 }
               }
             >
-              0.002
+              0.0003
                ETH
                
             </Text>
@@ -7256,7 +7320,7 @@ exports[`TransactionCard keyPair renders correctly with request and a 0 value 1`
               }
             >
               $
-              0.50
+              0.07
               USD
             </Text>
             <Text
@@ -7271,7 +7335,7 @@ exports[`TransactionCard keyPair renders correctly with request and a 0 value 1`
                 }
               }
             >
-              0.002
+              0.0003
                ETH
                
             </Text>
@@ -7749,7 +7813,7 @@ exports[`TransactionCard keyPair renders correctly with request and a value 1`] 
               }
             >
               $
-              0.50
+              0.07
               USD
             </Text>
             <Text
@@ -7764,7 +7828,7 @@ exports[`TransactionCard keyPair renders correctly with request and a value 1`] 
                 }
               }
             >
-              0.002
+              0.0003
                ETH
                
             </Text>
@@ -8379,7 +8443,7 @@ exports[`TransactionCard keyPair renders correctly with request and a value with
               }
             >
               $
-              0.50
+              0.07
               USD
             </Text>
             <Text
@@ -8394,7 +8458,7 @@ exports[`TransactionCard keyPair renders correctly with request and a value with
                 }
               }
             >
-              0.002
+              0.0003
                ETH
                
             </Text>
@@ -8871,7 +8935,7 @@ exports[`TransactionCard keyPair transaction sent mined failed renders correctly
               }
             >
               $
-              0.50
+              0.07
               USD
             </Text>
             <Text
@@ -8886,7 +8950,7 @@ exports[`TransactionCard keyPair transaction sent mined failed renders correctly
                 }
               }
             >
-              0.002
+              0.0003
                ETH
                
             </Text>
@@ -9448,7 +9512,7 @@ exports[`TransactionCard keyPair transaction sent mined successfully renders cor
               }
             >
               $
-              0.50
+              0.07
               USD
             </Text>
             <Text
@@ -9463,7 +9527,7 @@ exports[`TransactionCard keyPair transaction sent mined successfully renders cor
                 }
               }
             >
-              0.002
+              0.0003
                ETH
                
             </Text>
@@ -9999,7 +10063,7 @@ exports[`TransactionCard keyPair transaction sent not mined renders correctly 1`
               }
             >
               $
-              0.50
+              0.07
               USD
             </Text>
             <Text
@@ -10014,7 +10078,7 @@ exports[`TransactionCard keyPair transaction sent not mined renders correctly 1`
                 }
               }
             >
-              0.002
+              0.0003
                ETH
                
             </Text>
