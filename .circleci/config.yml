@@ -1,34 +1,41 @@
 version: 2
 jobs:
-  node:
+  node-dependencies:
+    working_directory: ~/uport-mobile
+      docker:
+          - image: circleci/node:8
+      steps:
+        - checkout
+        - restore_cache:
+            keys:
+              - yarn-{{ arch }}-v3-{{ checksum "yarn.lock" }}
+              - yarn-{{ arch }}-v3
+        - run:
+            name: install-dependencies
+            command: |
+              sudo npm i -g  codecov node-gyp
+              yarn
+        - save_cache:
+            key: yarn-{{ arch }}-v3-{{ checksum "yarn.lock" }}
+            paths:
+              - ~/.cache/yarn
+        - persist_to_workspace:
+            root: ~/uport-mobile
+            paths:
+              - node_modules
+
+  node-test:
     working_directory: ~/uport-mobile
     docker:
       - image: circleci/node:8
     steps:
       - checkout
+      - attach_workspace:
+          at: ~/uport-mobile
       - restore_cache:
           keys:
-            - yarn-{{ arch }}-v2-{{ checksum "yarn.lock" }}
-            - yarn-{{ arch }}-v2
-      - restore_cache:
-          keys:
-            - node-{{ arch }}-v2-{{ checksum "package.json" }}
-            - node-{{ arch }}-v2
-
-      - run:
-          name: install-dependencies
-          command: |
-            sudo npm i -g  codecov node-gyp
-            yarn
-
-      - save_cache:
-          key: yarn-{{ arch }}-v2-{{ checksum "yarn.lock" }}
-          paths:
-            - ~/.cache/yarn
-      - save_cache:
-          key: node-{{ arch }}-v2-{{ checksum "package.json" }}
-          paths:
-            - node_modules
+            - yarn-{{ arch }}-v3-{{ checksum "yarn.lock" }}
+            - yarn-{{ arch }}-v3
       - run:
           name: jest tests
           command: |
@@ -36,7 +43,6 @@ jobs:
             yarn run test --ci --coverage --maxWorkers=3 && codecov
           environment:
             JEST_JUNIT_OUTPUT: test-results/jest/junit.xml
-
       - run:
           name: code-coverage
           command: bash <(curl -s https://codecov.io/bash)
@@ -45,6 +51,28 @@ jobs:
           path: test-results
       - store_artifacts:
           path: test-results
+
+  package-android-bundle:
+    working_directory: ~/uport-mobile
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/uport-mobile
+      - restore_cache:
+          keys:
+            - yarn-{{ arch }}-v2-{{ checksum "yarn.lock" }}
+            - yarn-{{ arch }}-v2
+      - run:
+          name: package react native android bundle independently
+          command: yarn package-android --max-workers=3
+      - persist_to_workspace:
+          root: ~/uport-mobile
+          paths:
+            - node_modules
+            - android/app/build/jsbundle/assets
+            - android/app/build/jsbundle/res
 
   android:
     working_directory: ~/uport-mobile/android
@@ -185,6 +213,7 @@ jobs:
       - run: unzip ~/vault.zip -d ~/vault/
 
       - run: PATH=$PATH:$HOME/vault && bash ../scripts/pull_service_key.sh && fastlane android internal; rm -f ../google-play-key-file.json
+
   deploy-ios:
     working_directory: ~/uport-mobile
     environment:
@@ -216,14 +245,26 @@ workflows:
           filters:
             tags:
               only: /.*/
-      - node:
+      - node-dependencies:
+          filters:
+            tags:
+              only: /.*/
+      - node-test:
+          requires:
+            - node-dependencies
+          filters:
+            tags:
+              only: /.*/
+      - package-android-bundle:
+          requires:
+            - node-dependencies
           filters:
             tags:
               only: /.*/
       - android:
           requires:
             - vault
-            - node
+            - package-android-bundle
           filters:
             tags:
               only: /.*/
