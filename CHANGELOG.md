@@ -1,5 +1,12 @@
 # Change Log
 
+## [v463](https://github.com/uport-project/uport-mobile/tree/v463) (2019-05-29)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v462...v463)
+
+**Merged pull requests:**
+
+- \[Support\] update fastlane [\#153](https://github.com/uport-project/uport-mobile/pull/153) ([mirceanis](https://github.com/mirceanis))
+
 ## [v462](https://github.com/uport-project/uport-mobile/tree/v462) (2019-05-28)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v461...v462)
 
