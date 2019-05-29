@@ -4,20 +4,20 @@ export const OnboardingContent = ({ onboarding }: any): OnboardingSwiperSlide[] 
   return [
     {
       key: 'slide-1',
-      heading: 'Take back control',
-      content: 'Recieve and store important information about yourself',
+      heading: 'Take Back Control',
+      content: 'Own your data and identity, share it on your terms.',
       image: onboarding.shield,
     },
     {
       key: 'slide-2',
-      heading: 'Protect your privacy',
-      content: 'Nobody can see the information you store unless you share it with them',
+      heading: 'Redefining Privacy Protection',
+      content: 'Nobody can access information you store unless you share it with them. Not even us.',
       image: onboarding.eye,
     },
     {
       key: 'slide-3',
-      heading: 'Sign up and sign in',
-      content: 'Enjoy quick, seamless, and often free access to new services',
+      heading: 'Sign Up for Self-Sovereignty',
+      content: 'Enjoy seamless access to the Haven Cloud and anywhere uPort ID is accepted! ',
       image: onboarding.apps,
     },
   ]
