@@ -1,5 +1,12 @@
 # Change Log
 
+## [v464](https://github.com/uport-project/uport-mobile/tree/v464) (2019-05-29)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v463...v464)
+
+**Merged pull requests:**
+
+- Declare edit button on startup nav config [\#154](https://github.com/uport-project/uport-mobile/pull/154) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v463](https://github.com/uport-project/uport-mobile/tree/v463) (2019-05-29)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v462...v463)
 

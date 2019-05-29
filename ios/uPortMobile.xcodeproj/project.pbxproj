@@ -401,12 +401,12 @@
 			remoteGlobalIDString = 7B49FEBB1E95090800DEB3EA;
 			remoteInfo = ReactNativeNavigationTests;
 		};
-		C8D312DC2269198A003E3199 /* PBXContainerItemProxy */ = {
+		96F748DE229EB39D001021F4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C8D312D12269198A003E3199 /* Pods.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = E0DE6F743640C50AB8DCC15E25BF482C;
-			remoteInfo = CoreEthereum;
+			remoteGlobalIDString = A760859C13EFCAF993249BDCFFF5613C;
+			remoteInfo = EthCore;
 		};
 		C8D312DE2269198A003E3199 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1378,7 +1378,7 @@
 		C8D312D22269198A003E3199 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C8D312DD2269198A003E3199 /* libCoreEthereum.a */,
+				96F748DF229EB39D001021F4 /* libEthCore.a */,
 				C8D312DF2269198A003E3199 /* libISO8601DateFormatter.a */,
 				C8D312E12269198A003E3199 /* libPods-RNUportSigner.a */,
 				C8D312E32269198A003E3199 /* libUPTEthereumSigner.a */,
@@ -1950,11 +1950,11 @@
 			remoteRef = 96D5BFC62273450F005F91A7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C8D312DD2269198A003E3199 /* libCoreEthereum.a */ = {
+		96F748DF229EB39D001021F4 /* libEthCore.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libCoreEthereum.a;
-			remoteRef = C8D312DC2269198A003E3199 /* PBXContainerItemProxy */;
+			path = libEthCore.a;
+			remoteRef = 96F748DE229EB39D001021F4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		C8D312DF2269198A003E3199 /* libISO8601DateFormatter.a */ = {
@@ -2403,7 +2403,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				COPY_HEADERS_RUN_UNIFDEF = NO;
-				CURRENT_PROJECT_VERSION = 463;
+				CURRENT_PROJECT_VERSION = 464;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 82SAVLYZ3K;
 				ENABLE_BITCODE = NO;
@@ -2472,7 +2472,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				COPY_HEADERS_RUN_UNIFDEF = NO;
-				CURRENT_PROJECT_VERSION = 463;
+				CURRENT_PROJECT_VERSION = 464;
 				DEVELOPMENT_TEAM = 82SAVLYZ3K;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
