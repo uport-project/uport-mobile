@@ -41,17 +41,6 @@ jobs:
           name: code-coverage
           command: bash <(curl -s https://codecov.io/bash)
 
-      - run:
-          name: package react native android bundle independently
-          command: yarn package-android --max-workers=3
-
-      - persist_to_workspace:
-          root: ~/uport-mobile
-          paths:
-            - node_modules
-            - android/app/build/jsbundle/assets
-            - android/app/build/jsbundle/res
-
       - store_test_results:
           path: test-results
       - store_artifacts:
@@ -64,7 +53,6 @@ jobs:
         environment:
           YARN_VERSION: 1.2.1
           ANDROID_HOME: /opt/android/sdk
-          GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xms256m -Xmx3072m -XX:+HeapDumpOnOutOfMemoryError" -Dorg.gradle.daemon=true -Dorg.gradle.parallel=true'
           TERM: dumb
           LC_ALL: en_US.UTF-8
           LANG: en_US.UTF-8
