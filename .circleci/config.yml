@@ -77,6 +77,46 @@ jobs:
             - android/app/build/jsbundle/assets
             - android/app/build/jsbundle/res
 
+  android-dependencies:
+    working_directory: ~/uport-mobile/android
+    docker:
+      - image: circleci/android:api-28-node8-alpha
+        environment:
+          YARN_VERSION: 1.2.1
+          ANDROID_HOME: /opt/android/sdk
+          TERM: dumb
+          LC_ALL: en_US.UTF-8
+          LANG: en_US.UTF-8
+    steps:
+      - checkout:
+          path: ~/uport-mobile
+      - attach_workspace:
+          at: ~/uport-mobile
+
+      - run: wget https://releases.hashicorp.com/vault/0.10.1/vault_0.10.1_linux_amd64.zip -O ~/vault.zip
+      - run: unzip ~/vault.zip -d ../tools/vault/
+
+      - restore_cache:
+          keys:
+            - android-{{ arch }}-v4-{{ checksum "build.gradle" }}
+            - android-{{ arch }}-v4
+      - run:
+          name: ensure daemon is fresh
+          command: ./gradlew --stop
+      - run:
+          name: get android dependencies
+          command: ./gradlew :app:dependencies androidDependencies
+      - save_cache:
+          key: android-{{ arch }}-v4-{{ checksum "build.gradle" }}
+          paths:
+            - .gradle
+            - ~/.gradle
+
+      - persist_to_workspace:
+          root: ~/uport-mobile
+          paths:
+            - tools/vault
+
   android:
     working_directory: ~/uport-mobile/android
     docker:
@@ -95,37 +135,14 @@ jobs:
 
       - restore_cache:
           keys:
-            - bundle-{{ arch }}-v8-{{ checksum "Gemfile.lock" }}
-            - bundle-{{ arch }}-v8
-      - run: bundle install
-      - run: wget https://releases.hashicorp.com/vault/0.10.1/vault_0.10.1_linux_amd64.zip -O ~/vault.zip
-      - run: unzip ~/vault.zip -d ~/vault/
-
-      - save_cache:
-          key: bundle-{{ arch }}-v8-{{ checksum "Gemfile.lock" }}
-          paths:
-            - vendor/bundle
-            - .bundle
-            - ~/.bundle
-      - restore_cache:
-          keys:
             - android-{{ arch }}-v4-{{ checksum "build.gradle" }}
             - android-{{ arch }}-v4
       - run:
           name: ensure daemon is fresh
           command: ./gradlew --stop
       - run:
-          name: get android dependencies
-          command: ./gradlew :app:dependencies androidDependencies --no-parallel
-      - save_cache:
-          key: android-{{ arch }}-v4-{{ checksum "build.gradle" }}
-          paths:
-            - .gradle
-            - ~/.gradle
-
-      - run:
           name: get google services json
-          command: PATH=$PATH:$HOME/vault && bash ../scripts/pull_google_services.sh
+          command: PATH="$PATH:$(pwd)/../vault" && bash ../scripts/pull_google_services.sh
       - run:
           name: build the release APK
           command: ./gradlew :app:deliverArchives -x bundleReleaseJsAndAssets --no-parallel --max-workers 1
@@ -212,10 +229,14 @@ jobs:
             - bundle-{{ arch }}-v8-{{ checksum "Gemfile.lock" }}
             - bundle-{{ arch }}-v8
       - run: bundle install
-      - run: wget https://releases.hashicorp.com/vault/0.10.1/vault_0.10.1_linux_amd64.zip -O ~/vault.zip
-      - run: unzip ~/vault.zip -d ~/vault/
+      - save_cache:
+          key: bundle-{{ arch }}-v8-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+            - .bundle
+            - ~/.bundle
 
-      - run: PATH=$PATH:$HOME/vault && bash ../scripts/pull_service_key.sh && fastlane android internal; rm -f ../google-play-key-file.json
+      - run: PATH="$PATH:$(pwd)/../vault" && bash ../scripts/pull_service_key.sh && fastlane android internal; rm -f ../google-play-key-file.json
 
   deploy-ios:
     working_directory: ~/uport-mobile
@@ -264,9 +285,16 @@ workflows:
           filters:
             tags:
               only: /.*/
-      - android:
+      - android-dependencies:
           requires:
             - vault
+            - package-android-bundle
+          filters:
+            tags:
+              only: /.*/
+      - android:
+          requires:
+            - android-dependencies
             - package-android-bundle
           filters:
             tags:
