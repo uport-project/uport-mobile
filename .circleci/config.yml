@@ -113,7 +113,7 @@ jobs:
       - persist_to_workspace:
           root: ~/uport-mobile
           paths:
-            - tools/vault
+            - android/tools/vault
 
   android:
     working_directory: ~/uport-mobile/android
