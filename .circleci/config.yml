@@ -81,20 +81,26 @@ jobs:
             - android-{{ arch }}-v4-{{ checksum "build.gradle" }}
             - android-{{ arch }}-v4
       - run:
+          name: ensure daemon is fresh
+          command: ./gradlew --stop
+      - run:
           name: get android dependencies
-          command: ./gradlew :app:dependencies androidDependencies --no-parallel --no-daemon
+          command: ./gradlew :app:dependencies androidDependencies --no-parallel
       - save_cache:
           key: android-{{ arch }}-v4-{{ checksum "build.gradle" }}
           paths:
             - .gradle
             - ~/.gradle
 
-      - run: PATH=$PATH:$HOME/vault && bash ../scripts/pull_google_services.sh
-      - run: ./gradlew :app:deliverArchives -x bundleReleaseJsAndAssets --no-parallel --no-daemon
-
+      - run:
+          name: get google services json
+          command: PATH=$PATH:$HOME/vault && bash ../scripts/pull_google_services.sh
+      - run:
+          name: build the release APK
+          command: ./gradlew :app:deliverArchives -x bundleReleaseJsAndAssets --no-parallel --max-workers 1
       - run:
           name: tests
-          command: cd ~/uport-mobile/android && ./gradlew :app:lint :app:test -x bundleReleaseJsAndAssets --no-parallel --no-daemon
+          command: ./gradlew :app:lint :app:test -x bundleReleaseJsAndAssets --no-parallel --max-workers 1
 
       - persist_to_workspace:
           root: ~/uport-mobile
