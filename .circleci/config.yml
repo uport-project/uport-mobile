@@ -143,6 +143,9 @@ jobs:
           command: PATH="$PATH:$(pwd)/tools/vault" && bash ../scripts/pull_google_services.sh
       - run:
           name: build the release APK
+          command: ./gradlew :app:compileReleaseSources  -x bundleReleaseJsAndAssets --no-parallel --max-workers 1
+      - run:
+          name: build the release APK
           command: ./gradlew :app:deliverArchives -x bundleReleaseJsAndAssets --no-parallel --max-workers 1
       - run:
           name: tests
