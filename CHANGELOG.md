@@ -1,5 +1,12 @@
 # Change Log
 
+## [v465](https://github.com/uport-project/uport-mobile/tree/v465) (2019-05-30)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v464...v465)
+
+**Merged pull requests:**
+
+- Enable migrations [\#156](https://github.com/uport-project/uport-mobile/pull/156) ([simonas-notcat](https://github.com/simonas-notcat))
+
 ## [v464](https://github.com/uport-project/uport-mobile/tree/v464) (2019-05-29)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v463...v464)
 
