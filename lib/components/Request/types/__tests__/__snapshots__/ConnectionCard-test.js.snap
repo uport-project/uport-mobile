@@ -1523,9 +1523,16 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
               "fontSize": 18,
               "textAlign": "center",
             },
-            Object {
-              "color": "#FFFFFF",
-            },
+            Array [
+              Object {
+                "fontFamily": "Montserrat",
+                "fontSize": 18,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#FFFFFF",
+              },
+            ],
             Object {},
           ]
         }
@@ -2207,9 +2214,16 @@ exports[`ConnectionCard renders correctly with an unkown contact 1`] = `
               "fontSize": 18,
               "textAlign": "center",
             },
-            Object {
-              "color": "#FFFFFF",
-            },
+            Array [
+              Object {
+                "fontFamily": "Montserrat",
+                "fontSize": 18,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#FFFFFF",
+              },
+            ],
             Object {},
           ]
         }
