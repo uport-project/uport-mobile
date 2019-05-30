@@ -1,4 +1,6 @@
 .idea/
+tools/vault/
+
 # Created by https://www.gitignore.io/api/linux,xcode,macos,android,windows,reactnative,androidstudio
 
 ### Android ###
