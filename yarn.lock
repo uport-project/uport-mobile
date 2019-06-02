@@ -7173,10 +7173,8 @@ morgan@^1.9.0:
     on-finished "~2.3.0"
     on-headers "~1.0.1"
 
-mori@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/mori/-/mori-0.3.2.tgz#1a53da165287f3bef0cab62398c4931bece80a3f"
-  integrity sha1-GlPaFlKH877wyrYjmMSTG+zoCj8=
+"mori@file:./locals/mori":
+  version "0.4.0-uport-1"
 
 ms@2.0.0:
   version "2.0.0"

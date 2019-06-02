@@ -114,7 +114,7 @@
     "metro-minify-terser": "0.53.0",
     "mnid": "^0.1.1",
     "moment": "^2.17.1",
-    "mori": "^0.3.2",
+    "mori": "file:./locals/mori",
     "nacl-did": "^0.4.0",
     "node-libs-browser": "^2.1.0",
     "number-to-bn": "^1.7.0",

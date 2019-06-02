@@ -1,84 +1,94 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`sets massages full saved state correctly 1`] = `
-pa {
-  "e": Array [
+Za {
+  "B": null,
+  "F": 139268,
+  "f": Array [
     "byAddress",
-    pa {
-      "e": Array [
+    Za {
+      "B": null,
+      "F": 139268,
+      "f": Array [
         "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
-        pa {
-          "e": Array [
+        Za {
+          "B": null,
+          "F": 139268,
+          "f": Array [
             "address",
             "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
             "own",
-            pa {
-              "e": Array [
+            Za {
+              "B": null,
+              "F": 139268,
+              "f": Array [
                 "name",
                 "Alice",
                 "phone",
                 "555-555-5555",
                 "connections",
-                pa {
-                  "e": Array [
+                Za {
+                  "B": null,
+                  "F": 139268,
+                  "f": Array [
                     "knows",
-                    $g {
-                      "Wa": pa {
-                        "e": Array [
+                    Xg {
+                      "B": null,
+                      "F": 139268,
+                      "ib": Za {
+                        "B": null,
+                        "F": 139268,
+                        "f": Array [
                           "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
                           null,
                         ],
-                        "g": 1,
-                        "j": 16647951,
-                        "k": null,
-                        "p": null,
-                        "q": 8196,
+                        "h": 1,
+                        "s": 16647951,
+                        "u": null,
                       },
-                      "j": 15077647,
-                      "k": null,
-                      "p": null,
-                      "q": 8196,
+                      "s": 15077647,
+                      "u": null,
                     },
                     "worksWith",
-                    $g {
-                      "Wa": pa {
-                        "e": Array [
+                    Xg {
+                      "B": null,
+                      "F": 139268,
+                      "ib": Za {
+                        "B": null,
+                        "F": 139268,
+                        "f": Array [
                           "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
                           null,
                           "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
                           null,
                         ],
-                        "g": 2,
-                        "j": 16647951,
-                        "k": null,
-                        "p": null,
-                        "q": 8196,
+                        "h": 2,
+                        "s": 16647951,
+                        "u": null,
                       },
-                      "j": 15077647,
-                      "k": null,
-                      "p": null,
-                      "q": 8196,
+                      "s": 15077647,
+                      "u": null,
                     },
                   ],
-                  "g": 2,
-                  "j": 16647951,
-                  "k": null,
-                  "p": null,
-                  "q": 8196,
+                  "h": 2,
+                  "s": 16647951,
+                  "u": null,
                 },
               ],
-              "g": 3,
-              "j": 16647951,
-              "k": null,
-              "p": null,
-              "q": 8196,
+              "h": 3,
+              "s": 16647951,
+              "u": null,
             },
             "activities",
-            pa {
-              "e": Array [
+            Za {
+              "B": null,
+              "F": 139268,
+              "f": Array [
                 "10",
-                pa {
-                  "e": Array [
+                Za {
+                  "B": null,
+                  "F": 139268,
+                  "f": Array [
                     "id",
                     10,
                     "type",
@@ -88,15 +98,15 @@ pa {
                     "to",
                     "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
                   ],
-                  "g": 4,
-                  "j": 16647951,
-                  "k": null,
-                  "p": null,
-                  "q": 8196,
+                  "h": 4,
+                  "s": 16647951,
+                  "u": null,
                 },
                 "11",
-                pa {
-                  "e": Array [
+                Za {
+                  "B": null,
+                  "F": 139268,
+                  "f": Array [
                     "id",
                     11,
                     "type",
@@ -106,117 +116,113 @@ pa {
                     "to",
                     "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
                   ],
-                  "g": 4,
-                  "j": 16647951,
-                  "k": null,
-                  "p": null,
-                  "q": 8196,
+                  "h": 4,
+                  "s": 16647951,
+                  "u": null,
                 },
               ],
-              "g": 2,
-              "j": 16647951,
-              "k": null,
-              "p": null,
-              "q": 8196,
+              "h": 2,
+              "s": 16647951,
+              "u": null,
             },
           ],
-          "g": 3,
-          "j": 16647951,
-          "k": null,
-          "p": null,
-          "q": 8196,
+          "h": 3,
+          "s": 16647951,
+          "u": null,
         },
       ],
-      "g": 1,
-      "j": 16647951,
-      "k": null,
-      "p": null,
-      "q": 8196,
+      "h": 1,
+      "s": 16647951,
+      "u": null,
     },
     "currentIdentity",
     "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
   ],
-  "g": 2,
-  "j": 16647951,
-  "k": null,
-  "p": null,
-  "q": 8196,
+  "h": 2,
+  "s": 16647951,
+  "u": null,
 }
 `;
 
 exports[`sets massages identity correctly 1`] = `
-pa {
-  "e": Array [
+Za {
+  "B": null,
+  "F": 139268,
+  "f": Array [
     "address",
     "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
     "own",
-    pa {
-      "e": Array [
+    Za {
+      "B": null,
+      "F": 139268,
+      "f": Array [
         "name",
         "Alice",
         "phone",
         "555-555-5555",
         "connections",
-        pa {
-          "e": Array [
+        Za {
+          "B": null,
+          "F": 139268,
+          "f": Array [
             "knows",
-            $g {
-              "Wa": pa {
-                "e": Array [
+            Xg {
+              "B": null,
+              "F": 139268,
+              "ib": Za {
+                "B": null,
+                "F": 139268,
+                "f": Array [
                   "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
                   null,
                 ],
-                "g": 1,
-                "j": 16647951,
-                "k": null,
-                "p": null,
-                "q": 8196,
+                "h": 1,
+                "s": 16647951,
+                "u": null,
               },
-              "j": 15077647,
-              "k": null,
-              "p": null,
-              "q": 8196,
+              "s": 15077647,
+              "u": null,
             },
             "worksWith",
-            $g {
-              "Wa": pa {
-                "e": Array [
+            Xg {
+              "B": null,
+              "F": 139268,
+              "ib": Za {
+                "B": null,
+                "F": 139268,
+                "f": Array [
                   "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc01",
                   null,
                   "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
                   null,
                 ],
-                "g": 2,
-                "j": 16647951,
-                "k": null,
-                "p": null,
-                "q": 8196,
+                "h": 2,
+                "s": 16647951,
+                "u": null,
               },
-              "j": 15077647,
-              "k": null,
-              "p": null,
-              "q": 8196,
+              "s": 15077647,
+              "u": null,
             },
           ],
-          "g": 2,
-          "j": 16647951,
-          "k": null,
-          "p": null,
-          "q": 8196,
+          "h": 2,
+          "s": 16647951,
+          "u": null,
         },
       ],
-      "g": 3,
-      "j": 16647951,
-      "k": null,
-      "p": null,
-      "q": 8196,
+      "h": 3,
+      "s": 16647951,
+      "u": null,
     },
     "activities",
-    pa {
-      "e": Array [
+    Za {
+      "B": null,
+      "F": 139268,
+      "f": Array [
         "10",
-        pa {
-          "e": Array [
+        Za {
+          "B": null,
+          "F": 139268,
+          "f": Array [
             "id",
             10,
             "type",
@@ -226,15 +232,15 @@ pa {
             "to",
             "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
           ],
-          "g": 4,
-          "j": 16647951,
-          "k": null,
-          "p": null,
-          "q": 8196,
+          "h": 4,
+          "s": 16647951,
+          "u": null,
         },
         "11",
-        pa {
-          "e": Array [
+        Za {
+          "B": null,
+          "F": 139268,
+          "f": Array [
             "id",
             11,
             "type",
@@ -244,24 +250,18 @@ pa {
             "to",
             "0x1bc5cbf71b068642fc5e89c5e3d0bdb3e366bc02",
           ],
-          "g": 4,
-          "j": 16647951,
-          "k": null,
-          "p": null,
-          "q": 8196,
+          "h": 4,
+          "s": 16647951,
+          "u": null,
         },
       ],
-      "g": 2,
-      "j": 16647951,
-      "k": null,
-      "p": null,
-      "q": 8196,
+      "h": 2,
+      "s": 16647951,
+      "u": null,
     },
   ],
-  "g": 3,
-  "j": 16647951,
-  "k": null,
-  "p": null,
-  "q": 8196,
+  "h": 3,
+  "s": 16647951,
+  "u": null,
 }
 `;
