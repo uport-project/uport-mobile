@@ -18,13 +18,15 @@
 import React from 'react'
 import { ActivityIndicator } from 'react-native'
 import { Container, Theme, Text } from '@kancha'
-import DisclosureCard from './types/DisclosureCard'
-import TransactionCard from './types/TransactionCard'
+import DisclosureCard from './types/disclosure/DisclosureCard'
+import TransactionCard from './types/transaction/TransactionCard'
+import AcceptCredential from './types/credential/AcceptCredential'
 import { SafeAreaView } from 'react-native'
 
 const REQUEST_TYPE = {
   DISCLOSURE: 'disclosure',
   SIGN: 'sign',
+  CREDENTIAL: 'attestation',
 }
 
 interface RequestManagerProps {
@@ -34,6 +36,8 @@ interface RequestManagerProps {
 
 const RequestScreenManager: React.FC<RequestManagerProps> = ({ requestType, componentId }) => {
   switch (requestType) {
+    case REQUEST_TYPE.DISCLOSURE:
+      return <AcceptCredential componentId={componentId} />
     case REQUEST_TYPE.DISCLOSURE:
       return <DisclosureCard componentId={componentId} />
     case REQUEST_TYPE.SIGN:
