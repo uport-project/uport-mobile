@@ -18,9 +18,9 @@
 import React from 'react'
 import { ActivityIndicator } from 'react-native'
 import { Container, Theme, Text } from '@kancha'
-import DisclosureCard from './types/disclosure/DisclosureCard'
+import DisclosureCard from 'uPortMobile/lib/screens/requests/disclosure/DisclosureCard'
 import TransactionCard from './types/transaction/TransactionCard'
-import AcceptCredential from './types/credential/AcceptCredential'
+import AcceptCredential from 'uPortMobile/lib/screens/requests/credentials/AcceptCredentialContainer'
 import { SafeAreaView } from 'react-native'
 
 const REQUEST_TYPE = {
@@ -36,8 +36,8 @@ interface RequestManagerProps {
 
 const RequestScreenManager: React.FC<RequestManagerProps> = ({ requestType, componentId }) => {
   switch (requestType) {
-    case REQUEST_TYPE.DISCLOSURE:
-      return <AcceptCredential componentId={componentId} />
+    case REQUEST_TYPE.CREDENTIAL:
+      return <AcceptCredential />
     case REQUEST_TYPE.DISCLOSURE:
       return <DisclosureCard componentId={componentId} />
     case REQUEST_TYPE.SIGN:

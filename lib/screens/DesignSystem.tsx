@@ -24,7 +24,7 @@ class DesignSystem extends React.Component<any> {
               onPress={() => {
                 Navigation.showModal({
                   component: {
-                    name: SCREENS.StaticRequest,
+                    name: SCREENS.AcceptCredential,
                     options: {
                       topBar: {
                         visible: false,

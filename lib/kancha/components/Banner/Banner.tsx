@@ -12,35 +12,51 @@ const Logo: React.FC<any> = props => {
 
 interface BannerProps {
   backgroundImage: any
+  backgroundColor?: string
   avatar: any
   requestor: string
   httpsResolveStatus: any
+  size?: 'small' | 'medium'
+  subTitle?: string
+}
+
+const bannerSize: { [index: string]: number } = {
+  small: 180,
+  medium: 250,
 }
 
 const Banner: React.FC<BannerProps> = props => {
   const BannerStyle: ViewStyle = {
     backgroundColor: '#333333',
     flex: 1,
-    height: 250,
+    height: bannerSize[props.size ? props.size : bannerSize.medium],
   }
   return (
     <ImageBackground source={props.backgroundImage} style={BannerStyle}>
       <Container
-        backgroundColor={'rgba(0,0,0,0.5)'}
+        backgroundColor={props.backgroundColor ? props.backgroundColor : 'rgba(0,0,0,0.5)'}
         flex={1}
         alignItems={'center'}
         justifyContent={'center'}
-        paddingTop
-      >
+        paddingTop>
         <Logo image={props.avatar} />
         <Container paddingTop>
           <Text type={Text.Types.H3} textColor={'#FFFFFF'}>
             {props.requestor || 'No name provided'}
           </Text>
+          <Container paddingTop={5}>
+            <Text type={Text.Types.SubTitle} textColor={'#FFFFFF'}>
+              {props.subTitle && props.subTitle}
+            </Text>
+          </Container>
         </Container>
       </Container>
     </ImageBackground>
   )
+}
+
+Banner.defaultProps = {
+  size: 'medium',
 }
 
 export default Banner

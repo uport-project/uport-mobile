@@ -15,47 +15,36 @@
 // You should have received a copy of the GNU General Public License
 // along with uPort Mobile App.  If not, see <http://www.gnu.org/licenses/>.
 //
-// Framework
+import * as React from 'react'
 import { connect } from 'react-redux'
-// Components
-import { VerificationCard } from 'uPortMobile/lib/components/Verifications/VerificationCard'
-// Selectors
+
 import { currentRequest } from 'uPortMobile/lib/selectors/requests'
 import { currentAddress } from 'uPortMobile/lib/selectors/identities'
 import { externalProfile } from 'uPortMobile/lib/selectors/requests'
 
 import Mori from 'mori'
 import { sha3_256 } from 'js-sha3'
-
-// Actions
 import { cancelRequest } from 'uPortMobile/lib/actions/requestActions'
 import { removeAttestation } from 'uPortMobile/lib/actions/uportActions'
+
+import AcceptCredential from './AcceptCredential'
+
+interface AcceptCredentialProps {
+  verification: any
+}
 
 const mapStateToProps = (state: any, ownProps: any) => {
   const request = currentRequest(state) || {}
   const address = (request && request.target) || currentAddress(state)
   const verification = request.attestations ? request.attestations[0] : { claim: { loading: 'loading' } }
   const claimType = Object.keys(verification.claim)[0]
-  const claimValue = verification.claim[claimType]
-  // const claims =
-  //   typeof claimValue === 'object'
-  //     ? // Object.keys(claimValue).map(key => ({key: key, value: claimValue[key]}))
-  //       Object.keys(claimValue).reduce((accumulator, current) => {
-  //         if (typeof claimValue[current] !== 'object') {
-  //           accumulator.push({ key: current, value: claimValue[current] })
-  //         }
-  //         return accumulator
-  //       }, [])
-  //     : Object.keys(verification.claim).map(key => ({ key, value: verification.claim[key] }))
 
   return {
     ...ownProps,
     address,
     verification,
-    // claims,
     title: claimType,
     issuer: Mori.toJs(externalProfile(state, verification.iss)) || {},
-    showActions: true,
     request,
   }
 }
@@ -74,4 +63,4 @@ export const mapDispatchToProps = (dispatch: any) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(VerificationCard)
+)(AcceptCredential)
