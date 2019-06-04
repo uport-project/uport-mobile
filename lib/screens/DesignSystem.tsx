@@ -36,6 +36,24 @@ class DesignSystem extends React.Component<any> {
               title={'First draft'}>
               Basic Request Card
             </ListItem>
+            <ListItem
+              last
+              avatarComponent={<FakeAvatar />}
+              onPress={() => {
+                Navigation.showModal({
+                  component: {
+                    name: SCREENS.StaticRequest,
+                    options: {
+                      topBar: {
+                        visible: false,
+                      },
+                    },
+                  },
+                })
+              }}
+              title={'First draft'}>
+              Basic Request Card
+            </ListItem>
           </Section>
           <Section title={'LIST ITEMS'}>
             <ListItem

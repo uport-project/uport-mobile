@@ -33,26 +33,20 @@ class RequestScreen extends React.Component<RequestScreenProps, RequestScreenSta
             </Text>
             <Container flexDirection={'row'} padding>
               <Container flex={1} paddingRight>
-                {' '}
                 <Button
                   depth={1}
                   buttonText={'Decline'}
                   block={Button.Block.Clear}
                   type={Button.Types.Warning}
-                  onPress={() => {
-                    ''
-                  }}
+                  onPress={() => ''}
                 />
               </Container>
               <Container flex={2}>
-                {' '}
                 <Button
                   buttonText={'Accept'}
                   block={Button.Block.Filled}
                   type={Button.Types.Primary}
-                  onPress={() => {
-                    ''
-                  }}
+                  onPress={() => ''}
                 />
               </Container>
             </Container>
@@ -60,8 +54,7 @@ class RequestScreen extends React.Component<RequestScreenProps, RequestScreenSta
         }
         config={Screen.Config.Scroll}
         type={Screen.Types.Secondary}
-        statusBarHidden
-      >
+        statusBarHidden>
         <Request dismissRequest={this.closeRequestScreen} />
       </Screen>
     )

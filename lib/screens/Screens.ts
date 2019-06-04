@@ -32,7 +32,6 @@ export default {
   KeyChain: 'KeyChain',
 
   Request: 'Request',
-  StaticRequest: 'StaticRequest',
   NewRequest: 'NewRequest',
   NestedInfo: 'NestedInfo',
 
@@ -62,6 +61,8 @@ export default {
    * For testing stuff
    */
   Dummy: 'Dummy',
+  StaticRequest: 'StaticRequest',
+  AcceptCredential: 'AcceptCredential',
 }
 
 export const COMPONENTS = {

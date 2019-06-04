@@ -81,7 +81,6 @@ export function registerScreens(redux: any) {
 
 
   registerComponentWithRedux(redux)(SCREENS.Request, require('../components/Request/index').default)
-  registerComponentWithRedux(redux)(SCREENS.StaticRequest, require('../screens/requests/Request').default)
   registerComponentWithRedux(redux)(SCREENS.NewRequest, require('../components/newRequest/index').default)
   registerComponentWithRedux(redux)(SCREENS.NestedInfo, require('../components/shared/NestedInfo').default)
 
@@ -95,6 +94,8 @@ export function registerScreens(redux: any) {
    * Dummy screens
    */
   registerComponentWithRedux(redux)(SCREENS.Dummy, require('../screens/Blank').default)
+  registerComponentWithRedux(redux)(SCREENS.StaticRequest, require('../screens/requests/Request').default)
+  registerComponentWithRedux(redux)(SCREENS.AcceptCredential, require('../screens/requests/AcceptCredential').default)
 
   /**
    * Register single compoent for use in overlay
