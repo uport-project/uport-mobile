@@ -18,7 +18,7 @@ UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationE
 const parseContentValueItem = (contentItem: any) => {
   const imageUrlPattern = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/g
   if (typeof contentItem === 'boolean') {
-    return contentItem.toString()
+    return contentItem ? 'Yes' : 'No'
   } else if (typeof contentItem === 'number') {
     return contentItem
   } else if (typeof contentItem === 'string' && imageUrlPattern.test(contentItem)) {
