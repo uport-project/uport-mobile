@@ -28,6 +28,7 @@ import { cancelRequest } from 'uPortMobile/lib/actions/requestActions'
 import { removeAttestation } from 'uPortMobile/lib/actions/uportActions'
 
 import AcceptCredential from './AcceptCredential'
+import String from 'string'
 
 interface AcceptCredentialProps {
   verification: any
@@ -43,7 +44,9 @@ const mapStateToProps = (state: any, ownProps: any) => {
     ...ownProps,
     address,
     verification,
-    title: claimType,
+    title: String(claimType)
+      .humanize()
+      .titleCase().s,
     issuer: Mori.toJs(externalProfile(state, verification.iss)) || {},
     request,
   }

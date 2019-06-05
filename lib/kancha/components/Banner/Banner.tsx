@@ -40,11 +40,11 @@ const Banner: React.FC<BannerProps> = props => {
         justifyContent={'center'}
         paddingTop>
         <Logo image={props.avatar} />
-        <Container paddingTop>
+        <Container paddingTop alignItems={'center'}>
           <Text type={Text.Types.H3} textColor={'#FFFFFF'}>
             {props.requestor || 'No name provided'}
           </Text>
-          <Container paddingTop={5}>
+          <Container paddingTop={5} alignItems={'center'}>
             <Text type={Text.Types.SubTitle} textColor={'#FFFFFF'}>
               {props.subTitle && props.subTitle}
             </Text>

@@ -72,6 +72,8 @@ interface IconsStatic {
   checkmark: string
   scan: string
   qrcode: string
+  add: string
+  remove: string
 }
 
 const Icons: IconsStatic = {
@@ -89,6 +91,8 @@ const Icons: IconsStatic = {
   edit: Device.isIOS ? 'edit' : 'edit',
   more: Device.isIOS ? 'ios-more' : 'ios-more',
   qrcode: Device.isIOS ? 'qrcode' : 'qrcode',
+  add: 'ios-add-circle-outline',
+  remove: 'ios-remove-circle',
 }
 
 const IconImageSource = (font: string, icon: string, size: number) => {

@@ -18,41 +18,35 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
 
-import { currentRequest } from 'uPortMobile/lib/selectors/requests'
-import { currentAddress } from 'uPortMobile/lib/selectors/identities'
-import { externalProfile } from 'uPortMobile/lib/selectors/requests'
-
-import Mori from 'mori'
-import { sha3_256 } from 'js-sha3'
-import { cancelRequest } from 'uPortMobile/lib/actions/requestActions'
-import { removeAttestation } from 'uPortMobile/lib/actions/uportActions'
-
-import { Container, CredentialExplorer, Screen, Banner, Card, Text, ListItem, Section } from '@kancha'
+import { Container, CredentialExplorer, Screen, Banner, Card, Text, IndicatorBar, Section, Theme } from '@kancha'
 
 interface AcceptCredentialProps {
   verification: any
+  address: string
+  title: string
+  issuer: any
+  request: any
 }
 
 export const AcceptCredential: React.FC<AcceptCredentialProps> = props => {
   return (
     <Screen statusBarHidden config={Screen.Config.Scroll}>
       <Container padding>
-        <Container marginTop={50} marginBottom={30}>
-          {/* <Text type={Text.Types.Body}>Onfido sent you a credential. Some better text info here...</Text> */}
-        </Container>
+        <Container marginTop={50} marginBottom={30} />
         <Container flexDirection={'row'} justifyContent={'flex-end'} marginBottom>
           <Text>Decline Save</Text>
         </Container>
         <Card>
           <Banner
             size="small"
-            requestor={'My Credential'}
-            subTitle={'Onfido Identity Inc.'}
+            requestor={props.title}
+            subTitle={props.issuer.name}
             avatar={''}
             httpsResolveStatus={'OKAY'}
             backgroundImage={''}
           />
-          <Section noTopBorder>
+          <IndicatorBar text={'You have received a credential'} />
+          <Section noTopBorder noTopMargin>
             <CredentialExplorer claim={props.verification.claim} />
           </Section>
         </Card>
@@ -61,34 +55,4 @@ export const AcceptCredential: React.FC<AcceptCredentialProps> = props => {
   )
 }
 
-const mapStateToProps = (state: any, ownProps: any) => {
-  const request = currentRequest(state) || {}
-  const address = (request && request.target) || currentAddress(state)
-  const verification = request.attestations ? request.attestations[0] : { claim: { loading: 'loading' } }
-  const claimType = Object.keys(verification.claim)[0]
-
-  return {
-    ...ownProps,
-    address,
-    verification,
-    title: claimType,
-    issuer: Mori.toJs(externalProfile(state, verification.iss)) || {},
-    request,
-  }
-}
-
-export const mapDispatchToProps = (dispatch: any) => ({
-  authorizeRequest: (activity: any) => dispatch(cancelRequest(activity.id)),
-  cancelRequest: (activity: any) => {
-    dispatch(cancelRequest(activity.id))
-    const attestation = activity.attestations && activity.attestations[0]
-    if (attestation) {
-      dispatch(removeAttestation(attestation.sub, sha3_256(attestation.token)))
-    }
-  },
-})
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(AcceptCredential)
+export default AcceptCredential
