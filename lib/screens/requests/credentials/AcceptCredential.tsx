@@ -18,7 +18,18 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
 
-import { Container, CredentialExplorer, Screen, Banner, Card, Text, IndicatorBar, Section, Theme } from '@kancha'
+import {
+  Container,
+  CredentialExplorer,
+  Screen,
+  Banner,
+  Card,
+  Text,
+  IndicatorBar,
+  Section,
+  Theme,
+  Button,
+} from '@kancha'
 
 interface AcceptCredentialProps {
   verification: any
@@ -26,6 +37,9 @@ interface AcceptCredentialProps {
   title: string
   issuer: any
   request: any
+
+  authorizeRequest: (request: any) => void
+  cancelRequest: (request: any) => void
 }
 
 export const AcceptCredential: React.FC<AcceptCredentialProps> = props => {
@@ -34,16 +48,29 @@ export const AcceptCredential: React.FC<AcceptCredentialProps> = props => {
       <Container padding>
         <Container marginTop={50} marginBottom={30} />
         <Container flexDirection={'row'} justifyContent={'flex-end'} marginBottom>
-          <Text>Decline Save</Text>
+          <Button
+            type={Button.Types.Secondary}
+            block={Button.Block.Clear}
+            onPress={() => props.cancelRequest(props.request)}
+            navButton
+            buttonText={'Decline'}
+          />
+          <Button
+            type={Button.Types.Confirm}
+            block={Button.Block.Clear}
+            onPress={() => props.authorizeRequest(props.request)}
+            navButton
+            buttonText={'Accept'}
+          />
         </Container>
         <Card>
           <Banner
             size="small"
             requestor={props.title}
-            subTitle={props.issuer.name}
-            avatar={''}
+            subTitle={`Issued by ` + props.issuer.name}
+            avatar={props.issuer.avatar && props.issuer.avatar}
             httpsResolveStatus={'OKAY'}
-            backgroundImage={''}
+            backgroundImage={props.issuer.bannerImage && props.issuer.bannerImage}
           />
           <IndicatorBar text={'You have received a credential'} />
           <Section noTopBorder noTopMargin>

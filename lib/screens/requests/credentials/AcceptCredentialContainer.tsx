@@ -28,7 +28,11 @@ import { cancelRequest } from 'uPortMobile/lib/actions/requestActions'
 import { removeAttestation } from 'uPortMobile/lib/actions/uportActions'
 
 import AcceptCredential from './AcceptCredential'
-import String from 'string'
+import S from 'string'
+/**
+ * Refactor the parsers and move to kancah utils
+ */
+import { parseClaimItem } from 'uPortMobile/lib/utilities/parseClaims'
 
 interface AcceptCredentialProps {
   verification: any
@@ -39,14 +43,13 @@ const mapStateToProps = (state: any, ownProps: any) => {
   const address = (request && request.target) || currentAddress(state)
   const verification = request.attestations ? request.attestations[0] : { claim: { loading: 'loading' } }
   const claimType = Object.keys(verification.claim)[0]
+  const { claimCardHeader } = parseClaimItem(verification)
 
   return {
     ...ownProps,
     address,
     verification,
-    title: String(claimType)
-      .humanize()
-      .titleCase().s,
+    title: claimCardHeader,
     issuer: Mori.toJs(externalProfile(state, verification.iss)) || {},
     request,
   }
