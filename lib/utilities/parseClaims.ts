@@ -105,3 +105,22 @@ export const renderCrendentialItem = (contentItem: any) => {
    */
   return false
 }
+
+export interface UportmarketPlaceConfig {
+  serviceProviders: any[]
+}
+
+export const extractMarketPlaceData = (claim: any): UportmarketPlaceConfig | false => {
+  let uportConfig = ''
+  Object.keys(claim).map(key => {
+    if (typeof claim[key] === 'object') {
+      Object.keys(claim[key]).map(subbkey => {
+        if (subbkey === 'uportConfig' && typeof claim[key][subbkey] === 'object') {
+          uportConfig = claim[key][subbkey]
+          return
+        }
+      })
+    }
+  })
+  return typeof uportConfig === 'object' && uportConfig
+}

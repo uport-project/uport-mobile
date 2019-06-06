@@ -32,53 +32,8 @@ import { Navigation } from 'react-native-navigation'
 /**
  * Refactor the parsers and move to kancah utils
  */
-import { parseClaimItem } from 'uPortMobile/lib/utilities/parseClaims'
-
-interface UportmarketPlaceConfig {
-  serviceProviders: any[]
-}
-
-const extractMarketPlaceData = (claim: any): UportmarketPlaceConfig | false => {
-  let uportConfig = ''
-  Object.keys(claim).map(key => {
-    if (typeof claim[key] === 'object') {
-      Object.keys(claim[key]).map(subbkey => {
-        if (subbkey === 'uportConfig' && typeof claim[key][subbkey] === 'object') {
-          uportConfig = claim[key][subbkey]
-          return
-        }
-      })
-    }
-  })
-  return typeof uportConfig === 'object' && uportConfig
-}
-
-const showMarketPlaceModal = (config: UportmarketPlaceConfig) => {
-  Navigation.showModal({
-    // @ts-ignore
-    stack: {
-      children: [
-        {
-          component: {
-            name: 'MarketPlace',
-            passProps: {
-              config,
-            },
-            options: {
-              modalPresentationStyle: 'overFullScreen',
-              layout: {
-                backgroundColor: 'rgba(0,0,0,0.4)',
-              },
-              topBar: {
-                visible: false,
-              },
-            },
-          },
-        },
-      ],
-    },
-  })
-}
+import { parseClaimItem, extractMarketPlaceData } from 'uPortMobile/lib/utilities/parseClaims'
+import { showMarketPlaceModal } from 'uPortMobile/lib/utilities/requestScreenManager'
 
 interface AcceptCredentialProps {
   verification: any

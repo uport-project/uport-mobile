@@ -44,10 +44,40 @@ interface AcceptCredentialProps {
 
 export const AcceptCredential: React.FC<AcceptCredentialProps> = props => {
   return (
-    <Screen statusBarHidden config={Screen.Config.Scroll}>
-      <Container padding>
-        <Container marginTop={50} marginBottom={30} />
-        <Container flexDirection={'row'} justifyContent={'flex-end'} marginBottom>
+    <Screen
+      statusBarHidden
+      config={Screen.Config.Scroll}
+      footerNavComponent={
+        <Container backgroundColor={Theme.colors.primary.background}>
+          <Container paddingHorizontal>
+            <Text textAlign={'center'} type={Text.Types.SectionHeader}>
+              {'You have received a credential'}
+            </Text>
+          </Container>
+          <Container flexDirection={'row'} padding>
+            <Container flex={1} paddingRight>
+              <Button
+                depth={1}
+                buttonText={'Decline'}
+                block={Button.Block.Clear}
+                type={Button.Types.Warning}
+                onPress={() => props.cancelRequest(props.request)}
+              />
+            </Container>
+            <Container flex={2}>
+              <Button
+                buttonText={'Accept'}
+                block={Button.Block.Filled}
+                type={Button.Types.Primary}
+                onPress={() => props.authorizeRequest(props.request, props.verification.claim)}
+              />
+            </Container>
+          </Container>
+        </Container>
+      }>
+      <Container paddingLeft paddingRight paddingTop={80}>
+        {/* <Container marginTop={50} marginBottom={30} /> */}
+        {/* <Container flexDirection={'row'} justifyContent={'flex-end'} marginBottom>
           <Button
             type={Button.Types.Secondary}
             block={Button.Block.Clear}
@@ -62,7 +92,7 @@ export const AcceptCredential: React.FC<AcceptCredentialProps> = props => {
             navButton
             buttonText={'Accept'}
           />
-        </Container>
+        </Container> */}
         <Card>
           <Banner
             size="small"
@@ -72,7 +102,6 @@ export const AcceptCredential: React.FC<AcceptCredentialProps> = props => {
             httpsResolveStatus={'OKAY'}
             backgroundImage={props.issuer.bannerImage && props.issuer.bannerImage}
           />
-          <IndicatorBar text={'You have received a credential'} />
           <Section noTopBorder noTopMargin>
             <CredentialExplorer claim={props.verification.claim} />
           </Section>

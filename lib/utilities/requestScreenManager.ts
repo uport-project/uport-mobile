@@ -1,5 +1,6 @@
 import { Navigation } from 'react-native-navigation'
 import SCREENS from 'uPortMobile/lib/screens/Screens'
+import { UportmarketPlaceConfig } from 'uPortMobile/lib/utilities/parseClaims'
 
 const requestScreenManager = (requestType: string) => {
   switch (requestType) {
@@ -40,6 +41,33 @@ const requestScreenManager = (requestType: string) => {
         },
       })
   }
+}
+
+export const showMarketPlaceModal = (config: UportmarketPlaceConfig) => {
+  Navigation.showModal({
+    // @ts-ignore
+    stack: {
+      children: [
+        {
+          component: {
+            name: 'MarketPlace',
+            passProps: {
+              config,
+            },
+            options: {
+              modalPresentationStyle: 'overFullScreen',
+              layout: {
+                backgroundColor: 'rgba(0,0,0,0.4)',
+              },
+              topBar: {
+                visible: false,
+              },
+            },
+          },
+        },
+      ],
+    },
+  })
 }
 
 export default requestScreenManager
