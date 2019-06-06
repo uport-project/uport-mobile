@@ -11,31 +11,9 @@ interface ServiceProviders {
   logo: string
 }
 
-const serviceProviders: ServiceProviders[] = [
-  {
-    referenceId: '55e345',
-    product: 'Home Loans',
-    provider: 'Ally',
-    url: 'https://www.ally.com/home-loans/mortgage/',
-    logo: 'https://cdn6.aptoide.com/imgs/5/f/7/5f74c0034e337647b3f3fa7fad409428_icon.png?w=240',
-  },
-  {
-    referenceId: '567856',
-    product: 'Personal Loan',
-    provider: 'HSBC',
-    url: 'https://www.ally.com/home-loans/mortgage/',
-    logo: 'https://cdn6.aptoide.com/imgs/5/f/7/5f74c0034e337647b3f3fa7fad409428_icon.png?w=240',
-  },
-  {
-    referenceId: '234789',
-    product: 'Plum Savings',
-    provider: 'PLUM',
-    url: 'https://www.ally.com/home-loans/mortgage/',
-    logo: 'https://cdn6.aptoide.com/imgs/5/f/7/5f74c0034e337647b3f3fa7fad409428_icon.png?w=240',
-  },
-]
-
-interface MarketPlaceProps {}
+interface MarketPlaceProps {
+  config: any
+}
 
 const MarketPlace: React.FC<MarketPlaceProps> = props => {
   return (
@@ -49,7 +27,7 @@ const MarketPlace: React.FC<MarketPlaceProps> = props => {
         <Text type={Text.Types.Body}>Discover services that accept Onfido ID. Enjoy seamless and easy onboarding.</Text>
       </Container>
       <Container padding>
-        {serviceProviders.map((provider: ServiceProviders) => {
+        {props.config.serviceProviders.map((provider: ServiceProviders) => {
           return (
             <Card key={provider.referenceId} marginBottom onPress={() => Linking.openURL(provider.url)}>
               <Container padding flexDirection={'row'} alignItems={'center'}>
