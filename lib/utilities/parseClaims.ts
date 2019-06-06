@@ -41,6 +41,7 @@ export interface ClaimTreeNormalised {
   title: string
   hasChildren: boolean
   isListItem: boolean
+  hidden: boolean
   value: any
 }
 
@@ -76,6 +77,7 @@ export const normaliseClaimTree = (claimObject: any, level: number = 0, isListIt
       hasChildren: valueisObject || valueisArray,
       isList: valueisArray,
       isListItem: !valueisObject && !valueisArray && isListItem,
+      hidden: k === 'uportConfig',
       value:
         valueisObject || valueisArray ? normaliseClaimTree(claimObject[k], level + 1, valueisArray) : claimObject[k],
     }

@@ -20,11 +20,11 @@ const MarketPlace: React.FC<MarketPlaceProps> = props => {
     <Card>
       <Container padding>
         <Text bold type={Text.Types.H3}>
-          Your Onfido ID is reusable!
+          {props.config.title}
         </Text>
       </Container>
       <Container paddingLeft paddingRight paddingBottom>
-        <Text type={Text.Types.Body}>Discover services that accept Onfido ID. Enjoy seamless and easy onboarding.</Text>
+        <Text type={Text.Types.Body}>{props.config.description}</Text>
       </Container>
       <Container padding>
         {props.config.serviceProviders.map((provider: ServiceProviders) => {
@@ -53,7 +53,7 @@ const MarketPlace: React.FC<MarketPlaceProps> = props => {
           fullWidth
           type={Button.Types.Primary}
           block={Button.Block.Clear}
-          buttonText={'Use it later'}
+          buttonText={props.config.dismiss}
           onPress={() => Navigation.dismissAllModals()}
         />
       </Container>

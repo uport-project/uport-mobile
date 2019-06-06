@@ -84,7 +84,7 @@ class CredentialExplorer extends React.Component<CredentialExplorerProps, Creden
           <Container key={item.key} flexDirection={'row'}>
             <Container w={item.level} backgroundColor={'#000000'} />
             <Container flex={1}>
-              {!isTopLevelSingleKey(this.props.claim, item.level) && (
+              {!isTopLevelSingleKey(this.props.claim, item.level) && !item.hidden && (
                 <ListItem
                   disabled={!item.hasChildren}
                   avatarComponent={
