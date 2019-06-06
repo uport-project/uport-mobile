@@ -3,39 +3,19 @@ import String from 'string'
 import { LayoutAnimation, NativeModules, Image, Linking } from 'react-native'
 import { Container, ListItem, Text, Icon } from '@kancha'
 
-import { normaliseClaimTree, ClaimTreeNormalised } from 'uPortMobile/lib/utilities/parseClaims'
+import {
+  normaliseClaimTree,
+  ClaimTreeNormalised,
+  isTopLevelSingleKey,
+  renderCrendentialItem,
+} from 'uPortMobile/lib/utilities/parseClaims'
 
 const { UIManager } = NativeModules
+
 /**
  * Android needs this for animations
  */
 UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true)
-
-/**
- * Examine the data type of the individual item in a claim and return the appropriate UI
- */
-
-const parseContentValueItem = (contentItem: any) => {
-  const imageUrlPattern = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/g
-  if (typeof contentItem === 'boolean') {
-    return contentItem ? 'Yes' : 'No'
-  } else if (typeof contentItem === 'number') {
-    return contentItem
-  } else if (typeof contentItem === 'string' && imageUrlPattern.test(contentItem)) {
-    /**
-     * Return null if we think it's an image url
-     */
-    return null
-  } else if (typeof contentItem === 'string' && contentItem.startsWith('https://')) {
-    return Linking.openURL(contentItem)
-  } else if (typeof contentItem === 'string') {
-    return contentItem
-  }
-  /**
-   * Return false if nothing is found
-   */
-  return false
-}
 
 interface CredentialExplorerProps {
   claim: any
@@ -46,12 +26,18 @@ interface CredentialExplorerState {
 }
 
 class CredentialExplorer extends React.Component<CredentialExplorerProps, CredentialExplorerState> {
-  constructor(props: CredentialExplorerProps) {
-    super(props)
-    this.state = {}
-  }
+  /**
+   * Initialise empty state
+   */
+  state: CredentialExplorerState = {}
 
+  /**
+   * Save the open / closed state to a dynamic state key that gets generated as you interact
+   */
   revealChildren(stateKey: string) {
+    /**
+     * Custom animation curve
+     */
     LayoutAnimation.configureNext({
       duration: 500,
       create: { type: 'linear', property: 'opacity' },
@@ -72,14 +58,9 @@ class CredentialExplorer extends React.Component<CredentialExplorerProps, Creden
      * Normalise claim into predicatable array structure
      */
     const normalisedClaimTree: ClaimTreeNormalised[] = normaliseClaimTree(this.props.claim)
-
+    // console.tron.log(normalisedClaimTree)
     /**
-     * Function to check if we only have one key in the claim
-     */
-    const isOnlyKeyInClaim = (level: number): boolean => normalisedClaimTree.length === 1 && level === 0
-
-    /**
-     * Recursive function to iterate over a normalised claim to create an accordion
+     * Recursive function to re-iterate over a normalised claim to create an accordion
      */
     const collapsibleCredential = (claims: any[]) => {
       /**
@@ -89,37 +70,40 @@ class CredentialExplorer extends React.Component<CredentialExplorerProps, Creden
         /**
          * Simple flags for UI to decise what to do with data types
          */
-        const isObject = item.hasChildren && (this.state[item.key] || isOnlyKeyInClaim(item.level)) && !item.isList
-        const isList = item.hasChildren && (this.state[item.key] || isOnlyKeyInClaim(item.level)) && item.isList
-        const sectionClosed = item.hasChildren && (this.state[item.key] || isOnlyKeyInClaim(item.level))
+        const isObjectVisible =
+          item.hasChildren &&
+          (this.state[item.key] || isTopLevelSingleKey(this.props.claim, item.level)) &&
+          !item.isList
+        const isListVisible =
+          item.hasChildren && (this.state[item.key] || isTopLevelSingleKey(this.props.claim, item.level)) && item.isList
+        const sectionClosed =
+          item.hasChildren && (this.state[item.key] || isTopLevelSingleKey(this.props.claim, item.level))
         const sectionExpanded = item.hasChildren && !this.state[item.key]
 
         return (
           <Container key={item.key} flexDirection={'row'}>
             <Container w={item.level} backgroundColor={'#000000'} />
             <Container flex={1}>
-              <ListItem
-                disabled={!item.hasChildren}
-                avatarComponent={
-                  <Container>
-                    <Icon size={20} name={sectionClosed ? 'remove' : sectionExpanded ? 'add' : ''} />
-                  </Container>
-                }
-                last={true}
-                hideForwardArrow
-                onPress={() => this.revealChildren(item.key)}
-                title={!item.hasChildren && item.title}>
-                {!item.hasChildren
-                  ? parseContentValueItem(item.value)
-                  : isOnlyKeyInClaim(item.level)
-                  ? item.keyName
-                  : item.title}
-              </ListItem>
-              {parseContentValueItem(item.value) === null && (
+              {!isTopLevelSingleKey(this.props.claim, item.level) && (
+                <ListItem
+                  disabled={!item.hasChildren}
+                  avatarComponent={
+                    <Container>
+                      <Icon size={20} name={sectionClosed ? 'remove' : sectionExpanded ? 'add' : ''} />
+                    </Container>
+                  }
+                  last={true}
+                  hideForwardArrow
+                  onPress={() => this.revealChildren(item.key)}
+                  title={!item.hasChildren && item.title}>
+                  {!item.hasChildren ? renderCrendentialItem(item.value) : item.title}
+                </ListItem>
+              )}
+              {renderCrendentialItem(item.value) === null && (
                 <Image source={{ uri: item.value }} style={{ height: 150 }} resizeMode={'cover'} />
               )}
-              {isObject && collapsibleCredential(item.value)}
-              {isList && (
+              {isObjectVisible && collapsibleCredential(item.value)}
+              {isListVisible && (
                 <Container dividerBottom={sectionExpanded}>
                   {item.value.map((listItem: any) => {
                     return (
@@ -133,7 +117,7 @@ class CredentialExplorer extends React.Component<CredentialExplorerProps, Creden
                           <Container flexDirection={'row'} br={5} flex={1}>
                             <Container w={item.level} backgroundColor={'#000000'} />
                             <Container flex={1}>
-                              <ListItem last>{parseContentValueItem(listItem.value)}</ListItem>
+                              <ListItem last>{renderCrendentialItem(listItem.value)}</ListItem>
                             </Container>
                           </Container>
                         )}

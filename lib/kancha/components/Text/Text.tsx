@@ -100,6 +100,16 @@ interface KanchaTextProps {
    * Decoration for button text
    */
   textDecorationLine?: 'none' | 'underline' | 'line-through' | 'underline line-through' | undefined
+
+  /**
+   * Transform the text
+   */
+  transform?: 'uppercase' | 'lowercase' | undefined
+
+  /**
+   * Transform the text
+   */
+  textStyle?: TextStyle
 }
 
 const KanchaText: React.FC<KanchaTextProps> & { Types: Kancha.TextTypesStatic } = props => {
@@ -120,6 +130,8 @@ const KanchaText: React.FC<KanchaTextProps> & { Types: Kancha.TextTypesStatic } 
     ...(props.paddingBottom && typeof props.paddingBottom === 'boolean'
       ? { paddingBottom: Theme.spacing.default }
       : {}),
+    ...(props.transform ? { textTransform: props.transform } : {}),
+    ...(props.textStyle ? { ...props.textStyle } : {}),
   }
 
   return <Text style={styles}>{props.children}</Text>

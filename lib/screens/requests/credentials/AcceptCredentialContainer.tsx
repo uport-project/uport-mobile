@@ -28,11 +28,57 @@ import { cancelRequest } from 'uPortMobile/lib/actions/requestActions'
 import { removeAttestation } from 'uPortMobile/lib/actions/uportActions'
 
 import AcceptCredential from './AcceptCredential'
-import S from 'string'
+import { Navigation } from 'react-native-navigation'
 /**
  * Refactor the parsers and move to kancah utils
  */
 import { parseClaimItem } from 'uPortMobile/lib/utilities/parseClaims'
+
+interface UportmarketPlaceConfig {
+  serviceProviders: any[]
+}
+
+const extractMarketPlaceData = (claim: any): UportmarketPlaceConfig | false => {
+  let uportConfig = ''
+  Object.keys(claim).map(key => {
+    if (typeof claim[key] === 'object') {
+      Object.keys(claim[key]).map(subbkey => {
+        if (subbkey === 'uportConfig' && typeof claim[key][subbkey] === 'object') {
+          uportConfig = claim[key][subbkey]
+          return
+        }
+      })
+    }
+  })
+  return typeof uportConfig === 'object' && uportConfig
+}
+
+const showMarketPlaceModal = (config: UportmarketPlaceConfig) => {
+  Navigation.showModal({
+    // @ts-ignore
+    stack: {
+      children: [
+        {
+          component: {
+            name: 'MarketPlace',
+            passProps: {
+              config,
+            },
+            options: {
+              modalPresentationStyle: 'overFullScreen',
+              layout: {
+                backgroundColor: 'rgba(0,0,0,0.4)',
+              },
+              topBar: {
+                visible: false,
+              },
+            },
+          },
+        },
+      ],
+    },
+  })
+}
 
 interface AcceptCredentialProps {
   verification: any
@@ -56,7 +102,16 @@ const mapStateToProps = (state: any, ownProps: any) => {
 }
 
 export const mapDispatchToProps = (dispatch: any) => ({
-  authorizeRequest: (activity: any) => dispatch(cancelRequest(activity.id)),
+  authorizeRequest: (activity: any, claim: any) => {
+    dispatch(cancelRequest(activity.id))
+    const config = extractMarketPlaceData(claim)
+
+    if (config) {
+      setTimeout(() => {
+        showMarketPlaceModal(config)
+      }, 500)
+    }
+  },
   cancelRequest: (activity: any) => {
     dispatch(cancelRequest(activity.id))
     const attestation = activity.attestations && activity.attestations[0]

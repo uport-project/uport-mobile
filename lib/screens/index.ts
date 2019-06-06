@@ -5,22 +5,6 @@ import { Navigation } from 'react-native-navigation'
 import SCREENS, { COMPONENTS } from './Screens'
 import { Toast } from '@kancha'
 
-
-// import DataBackupInstructions from '../components/Backup/DataBackupInstructions'
-// import DataBackupSuccess from '../components/Backup/DataBackupSuccess'
-// import CreateSeedInstructions from '../components/Backup/SeedBackupInstructions'
-// import CreateSeedPhrase from '../components/Backup/SeedBackupPhrase'
-// import CreateSeedPhraseConfirm from '../components/Backup/SeedBackupConfirm'
-// import CreateSeedSuccess from '../components/Backup/SeedBackupSuccess'
-
-// import RestoreSeedInstructions from '../components/Recovery/SeedRecoveryInstructions'
-// import RestoreSeedPhrase from '../components/Recovery/SeedRecoveryPhrase'
-// import RestoreSeedSuccess from '../components/Recovery/SeedRecoverySuccess'
-
-/**
- * Wrapper component for redux
- * @TODO Refactor all screens registers to use require
- */
 const registerComponentWithRedux = (redux: any) => (name: string, component: any) => {
   Navigation.registerComponentWithRedux(name, () => component, redux.Provider, redux.store)
 }
@@ -54,6 +38,7 @@ export function registerScreens(redux: any) {
    * Modal screens
    */
   registerComponentWithRedux(redux)(SCREENS.ProfileQRCode, require('uPortMobile/lib/components/shared/QRCodeModal').default)
+  registerComponentWithRedux(redux)(SCREENS.MarketPlace, require('../screens/MarketPlace').default)
 
   /**
    * Settings screens

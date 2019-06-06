@@ -37,6 +37,8 @@ export default {
 
   SecurityBlock: 'SecurityBlock',
 
+  MarketPlace: 'MarketPlace',
+
   BACKUP: {
     DataBackupInstructions: 'DataBackupInstructions',
     DataBackupSuccess: 'DataBackupSuccess',

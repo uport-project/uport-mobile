@@ -38,7 +38,7 @@ interface AcceptCredentialProps {
   issuer: any
   request: any
 
-  authorizeRequest: (request: any) => void
+  authorizeRequest: (request: any, claim: any) => void
   cancelRequest: (request: any) => void
 }
 
@@ -58,7 +58,7 @@ export const AcceptCredential: React.FC<AcceptCredentialProps> = props => {
           <Button
             type={Button.Types.Confirm}
             block={Button.Block.Clear}
-            onPress={() => props.authorizeRequest(props.request)}
+            onPress={() => props.authorizeRequest(props.request, props.verification.claim)}
             navButton
             buttonText={'Accept'}
           />
