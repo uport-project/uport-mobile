@@ -168,7 +168,7 @@ Array [
                 pointerEvents="auto"
                 style={
                   Object {
-                    "alignItems": undefined,
+                    "alignItems": "center",
                     "backgroundColor": undefined,
                     "borderRadius": undefined,
                     "flex": undefined,
@@ -206,7 +206,7 @@ Array [
                   pointerEvents="auto"
                   style={
                     Object {
-                      "alignItems": undefined,
+                      "alignItems": "center",
                       "backgroundColor": undefined,
                       "borderRadius": undefined,
                       "flex": undefined,
@@ -881,7 +881,7 @@ Array [
                 pointerEvents="auto"
                 style={
                   Object {
-                    "alignItems": undefined,
+                    "alignItems": "center",
                     "backgroundColor": undefined,
                     "borderRadius": undefined,
                     "flex": undefined,
@@ -919,7 +919,7 @@ Array [
                   pointerEvents="auto"
                   style={
                     Object {
-                      "alignItems": undefined,
+                      "alignItems": "center",
                       "backgroundColor": undefined,
                       "borderRadius": undefined,
                       "flex": undefined,
@@ -1920,7 +1920,7 @@ Array [
                 pointerEvents="auto"
                 style={
                   Object {
-                    "alignItems": undefined,
+                    "alignItems": "center",
                     "backgroundColor": undefined,
                     "borderRadius": undefined,
                     "flex": undefined,
@@ -1958,7 +1958,7 @@ Array [
                   pointerEvents="auto"
                   style={
                     Object {
-                      "alignItems": undefined,
+                      "alignItems": "center",
                       "backgroundColor": undefined,
                       "borderRadius": undefined,
                       "flex": undefined,
@@ -3137,7 +3137,7 @@ Array [
                 pointerEvents="auto"
                 style={
                   Object {
-                    "alignItems": undefined,
+                    "alignItems": "center",
                     "backgroundColor": undefined,
                     "borderRadius": undefined,
                     "flex": undefined,
@@ -3175,7 +3175,7 @@ Array [
                   pointerEvents="auto"
                   style={
                     Object {
-                      "alignItems": undefined,
+                      "alignItems": "center",
                       "backgroundColor": undefined,
                       "borderRadius": undefined,
                       "flex": undefined,
