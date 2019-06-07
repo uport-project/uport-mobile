@@ -1252,9 +1252,16 @@ exports[`NetworkCard renders new request correctly 1`] = `
               "fontSize": 18,
               "textAlign": "center",
             },
-            Object {
-              "color": "#FFFFFF",
-            },
+            Array [
+              Object {
+                "fontFamily": "Montserrat",
+                "fontSize": 18,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#FFFFFF",
+              },
+            ],
             Object {},
           ]
         }
@@ -1679,9 +1686,16 @@ exports[`NetworkCard renders request with errors 1`] = `
               "fontSize": 18,
               "textAlign": "center",
             },
-            Object {
-              "color": "#FFFFFF",
-            },
+            Array [
+              Object {
+                "fontFamily": "Montserrat",
+                "fontSize": 18,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#FFFFFF",
+              },
+            ],
             Object {
               "color": "rgba(185, 185, 185, 1)",
             },
