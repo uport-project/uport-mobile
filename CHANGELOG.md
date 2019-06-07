@@ -1,5 +1,14 @@
 # Change Log
 
+## [v466](https://github.com/uport-project/uport-mobile/tree/v466) (2019-06-07)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v465...v466)
+
+**Merged pull requests:**
+
+- Check if any events are available and not just a 200 status [\#159](https://github.com/uport-project/uport-mobile/pull/159) ([pelle](https://github.com/pelle))
+- Fix transaction card and gas calculations [\#158](https://github.com/uport-project/uport-mobile/pull/158) ([pelle](https://github.com/pelle))
+- \[Support\] limit ci memory usage [\#157](https://github.com/uport-project/uport-mobile/pull/157) ([mirceanis](https://github.com/mirceanis))
+
 ## [v465](https://github.com/uport-project/uport-mobile/tree/v465) (2019-05-30)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v464...v465)
 
