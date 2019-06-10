@@ -38,7 +38,7 @@ interface AcceptCredentialProps {
   issuer: any
   request: any
 
-  authorizeRequest: (request: any, claim: any) => void
+  authorizeRequest: (request: any, iss: string) => void
   cancelRequest: (request: any) => void
 }
 
@@ -69,30 +69,13 @@ export const AcceptCredential: React.FC<AcceptCredentialProps> = props => {
                 buttonText={'Accept'}
                 block={Button.Block.Filled}
                 type={Button.Types.Primary}
-                onPress={() => props.authorizeRequest(props.request, props.verification.claim)}
+                onPress={() => props.authorizeRequest(props.request, props.verification.iss)}
               />
             </Container>
           </Container>
         </Container>
       }>
       <Container paddingLeft paddingRight paddingTop={80}>
-        {/* <Container marginTop={50} marginBottom={30} /> */}
-        {/* <Container flexDirection={'row'} justifyContent={'flex-end'} marginBottom>
-          <Button
-            type={Button.Types.Secondary}
-            block={Button.Block.Clear}
-            onPress={() => props.cancelRequest(props.request)}
-            navButton
-            buttonText={'Decline'}
-          />
-          <Button
-            type={Button.Types.Confirm}
-            block={Button.Block.Clear}
-            onPress={() => props.authorizeRequest(props.request, props.verification.claim)}
-            navButton
-            buttonText={'Accept'}
-          />
-        </Container> */}
         <Card>
           <Banner
             size="small"

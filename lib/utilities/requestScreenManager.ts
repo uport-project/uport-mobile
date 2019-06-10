@@ -1,6 +1,7 @@
 import { Navigation } from 'react-native-navigation'
 import SCREENS from 'uPortMobile/lib/screens/Screens'
 import { UportmarketPlaceConfig } from 'uPortMobile/lib/utilities/parseClaims'
+import fetchMarketPlaceData from 'uPortMobile/lib/utilities/fetchMarketplace'
 
 const requestScreenManager = (requestType: string) => {
   switch (requestType) {
@@ -43,31 +44,42 @@ const requestScreenManager = (requestType: string) => {
   }
 }
 
-export const showMarketPlaceModal = (config: UportmarketPlaceConfig) => {
-  Navigation.showModal({
-    // @ts-ignore
-    stack: {
-      children: [
-        {
-          component: {
-            name: 'MarketPlace',
-            passProps: {
-              config,
-            },
-            options: {
-              modalPresentationStyle: 'overFullScreen',
-              layout: {
-                backgroundColor: 'rgba(0,0,0,0.4)',
+export const showMarketPlaceModal = async (iss: string, _config?: UportmarketPlaceConfig) => {
+  const showModal = (config: UportmarketPlaceConfig) => {
+    Navigation.showModal({
+      // @ts-ignore
+      stack: {
+        children: [
+          {
+            component: {
+              name: 'MarketPlace',
+              passProps: {
+                config,
               },
-              topBar: {
-                visible: false,
+              options: {
+                modalPresentationStyle: 'overFullScreen',
+                layout: {
+                  backgroundColor: 'rgba(0,0,0,0.4)',
+                },
+                topBar: {
+                  visible: false,
+                },
               },
             },
           },
-        },
-      ],
-    },
-  })
+        ],
+      },
+    })
+  }
+
+  if (!_config) {
+    const config = await fetchMarketPlaceData(iss)
+    if (config) {
+      setTimeout(() => showModal(config), 500)
+    }
+  } else {
+    showModal(_config)
+  }
 }
 
 export default requestScreenManager

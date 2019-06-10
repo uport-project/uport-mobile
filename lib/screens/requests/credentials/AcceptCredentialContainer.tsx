@@ -32,7 +32,7 @@ import { Navigation } from 'react-native-navigation'
 /**
  * Refactor the parsers and move to kancah utils
  */
-import { parseClaimItem, extractMarketPlaceData } from 'uPortMobile/lib/utilities/parseClaims'
+import { parseClaimItem } from 'uPortMobile/lib/utilities/parseClaims'
 import { showMarketPlaceModal } from 'uPortMobile/lib/utilities/requestScreenManager'
 
 interface AcceptCredentialProps {
@@ -57,15 +57,10 @@ const mapStateToProps = (state: any, ownProps: any) => {
 }
 
 export const mapDispatchToProps = (dispatch: any) => ({
-  authorizeRequest: (activity: any, claim: any) => {
+  authorizeRequest: (activity: any, iss: any) => {
+    // tslint:disable-next-line:no-console
     dispatch(cancelRequest(activity.id))
-    const config = extractMarketPlaceData(claim)
-
-    if (config) {
-      setTimeout(() => {
-        showMarketPlaceModal(config)
-      }, 500)
-    }
+    showMarketPlaceModal(iss)
   },
   cancelRequest: (activity: any) => {
     dispatch(cancelRequest(activity.id))

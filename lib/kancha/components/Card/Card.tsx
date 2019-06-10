@@ -6,6 +6,10 @@ interface Card extends ContainerProps {
   onPress?: () => void
 }
 
+/**
+ * Card component inherits all properties from Container. It has a default shadow and border radius. If an onPress function
+ * is provided then it becomes a button
+ */
 const Card: React.FC<Card> = props => {
   const br = 5
   return (
@@ -21,7 +25,7 @@ const Card: React.FC<Card> = props => {
           elevation: 3,
         }}
         {...props}>
-        <Container flex={1} br={br}>
+        <Container flex={1} br={br} viewStyle={{ overflow: 'hidden' }}>
           {props.children}
         </Container>
       </Container>
