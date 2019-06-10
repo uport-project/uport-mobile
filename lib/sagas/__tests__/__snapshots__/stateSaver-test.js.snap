@@ -1,24 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`sets massages full saved state correctly 1`] = `
-Za {
+jl {
   "B": null,
   "F": 139268,
   "f": Array [
     "byAddress",
-    Za {
+    jl {
       "B": null,
       "F": 139268,
       "f": Array [
         "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
-        Za {
+        jl {
           "B": null,
           "F": 139268,
           "f": Array [
             "address",
             "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
             "own",
-            Za {
+            jl {
               "B": null,
               "F": 139268,
               "f": Array [
@@ -27,15 +27,15 @@ Za {
                 "phone",
                 "555-555-5555",
                 "connections",
-                Za {
+                jl {
                   "B": null,
                   "F": 139268,
                   "f": Array [
                     "knows",
-                    Xg {
+                    gi {
                       "B": null,
                       "F": 139268,
-                      "ib": Za {
+                      "ib": jl {
                         "B": null,
                         "F": 139268,
                         "f": Array [
@@ -50,10 +50,10 @@ Za {
                       "u": null,
                     },
                     "worksWith",
-                    Xg {
+                    gi {
                       "B": null,
                       "F": 139268,
-                      "ib": Za {
+                      "ib": jl {
                         "B": null,
                         "F": 139268,
                         "f": Array [
@@ -80,12 +80,12 @@ Za {
               "u": null,
             },
             "activities",
-            Za {
+            jl {
               "B": null,
               "F": 139268,
               "f": Array [
                 "10",
-                Za {
+                jl {
                   "B": null,
                   "F": 139268,
                   "f": Array [
@@ -103,7 +103,7 @@ Za {
                   "u": null,
                 },
                 "11",
-                Za {
+                jl {
                   "B": null,
                   "F": 139268,
                   "f": Array [
@@ -145,14 +145,14 @@ Za {
 `;
 
 exports[`sets massages identity correctly 1`] = `
-Za {
+jl {
   "B": null,
   "F": 139268,
   "f": Array [
     "address",
     "0x9df0e9759b17f34e9123adbe6d3f25d54b72ad6a",
     "own",
-    Za {
+    jl {
       "B": null,
       "F": 139268,
       "f": Array [
@@ -161,15 +161,15 @@ Za {
         "phone",
         "555-555-5555",
         "connections",
-        Za {
+        jl {
           "B": null,
           "F": 139268,
           "f": Array [
             "knows",
-            Xg {
+            gi {
               "B": null,
               "F": 139268,
-              "ib": Za {
+              "ib": jl {
                 "B": null,
                 "F": 139268,
                 "f": Array [
@@ -184,10 +184,10 @@ Za {
               "u": null,
             },
             "worksWith",
-            Xg {
+            gi {
               "B": null,
               "F": 139268,
-              "ib": Za {
+              "ib": jl {
                 "B": null,
                 "F": 139268,
                 "f": Array [
@@ -214,12 +214,12 @@ Za {
       "u": null,
     },
     "activities",
-    Za {
+    jl {
       "B": null,
       "F": 139268,
       "f": Array [
         "10",
-        Za {
+        jl {
           "B": null,
           "F": 139268,
           "f": Array [
@@ -237,7 +237,7 @@ Za {
           "u": null,
         },
         "11",
-        Za {
+        jl {
           "B": null,
           "F": 139268,
           "f": Array [

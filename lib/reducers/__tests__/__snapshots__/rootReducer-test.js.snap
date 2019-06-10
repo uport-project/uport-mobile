@@ -12,7 +12,7 @@ Object {
     "key": "contacts",
     "selectedContact": false,
   },
-  "events": Za {
+  "events": jl {
     "B": null,
     "F": 139268,
     "f": Array [],
@@ -28,7 +28,7 @@ Object {
     "metaTx": true,
     "sandbox": false,
   },
-  "hdwallet": Za {
+  "hdwallet": jl {
     "B": null,
     "F": 139268,
     "f": Array [],
@@ -36,27 +36,27 @@ Object {
     "s": 16647951,
     "u": null,
   },
-  "history": de {
+  "history": Fr {
     "F": 8192,
     "s": 65937614,
     "u": null,
   },
-  "hub": Za {
+  "hub": jl {
     "B": null,
     "F": 139268,
     "f": Array [
       "head",
       null,
       "events",
-      Pf {
+      sl {
         "B": -2017569654,
         "Ca": null,
         "F": 139264,
-        "Fa": Y {
+        "Fa": $u {
           "B": -2017569654,
           "F": 139268,
           "h": 0,
-          "root": lf {
+          "root": Tu {
             "M": null,
             "f": Array [
               null,
@@ -119,7 +119,7 @@ Object {
     "newbie": false,
     "userData": Object {},
   },
-  "recovery": Za {
+  "recovery": jl {
     "B": null,
     "F": 139268,
     "f": Array [],
@@ -136,7 +136,7 @@ Object {
     "dataBackup": false,
   },
   "sns": Object {},
-  "status": Za {
+  "status": jl {
     "B": null,
     "F": 139268,
     "f": Array [],
@@ -144,7 +144,7 @@ Object {
     "s": 16647951,
     "u": null,
   },
-  "uport": Za {
+  "uport": jl {
     "B": null,
     "F": 139268,
     "f": Array [],
@@ -170,7 +170,7 @@ Object {
     "key": "contacts",
     "selectedContact": false,
   },
-  "events": Za {
+  "events": jl {
     "B": null,
     "F": 139268,
     "f": Array [],
@@ -186,7 +186,7 @@ Object {
     "metaTx": true,
     "sandbox": false,
   },
-  "hdwallet": Za {
+  "hdwallet": jl {
     "B": null,
     "F": 139268,
     "f": Array [],
@@ -194,27 +194,27 @@ Object {
     "s": 16647951,
     "u": null,
   },
-  "history": de {
+  "history": Fr {
     "F": 8192,
     "s": 65937614,
     "u": null,
   },
-  "hub": Za {
+  "hub": jl {
     "B": null,
     "F": 139268,
     "f": Array [
       "head",
       null,
       "events",
-      Pf {
+      sl {
         "B": -2017569654,
         "Ca": null,
         "F": 139264,
-        "Fa": Y {
+        "Fa": $u {
           "B": -2017569654,
           "F": 139268,
           "h": 0,
-          "root": lf {
+          "root": Tu {
             "M": null,
             "f": Array [
               null,
@@ -277,7 +277,7 @@ Object {
     "newbie": false,
     "userData": Object {},
   },
-  "recovery": Za {
+  "recovery": jl {
     "B": null,
     "F": 139268,
     "f": Array [],
@@ -294,7 +294,7 @@ Object {
     "dataBackup": false,
   },
   "sns": Object {},
-  "status": Za {
+  "status": jl {
     "B": null,
     "F": 139268,
     "f": Array [],
@@ -302,7 +302,7 @@ Object {
     "s": 16647951,
     "u": null,
   },
-  "uport": Za {
+  "uport": jl {
     "B": null,
     "F": 139268,
     "f": Array [],
@@ -328,7 +328,7 @@ Object {
     "key": "contacts",
     "selectedContact": false,
   },
-  "events": Za {
+  "events": jl {
     "B": null,
     "F": 139268,
     "f": Array [],
@@ -344,7 +344,7 @@ Object {
     "metaTx": true,
     "sandbox": false,
   },
-  "hdwallet": Za {
+  "hdwallet": jl {
     "B": null,
     "F": 139268,
     "f": Array [],
@@ -352,27 +352,27 @@ Object {
     "s": 16647951,
     "u": null,
   },
-  "history": de {
+  "history": Fr {
     "F": 8192,
     "s": 65937614,
     "u": null,
   },
-  "hub": Za {
+  "hub": jl {
     "B": null,
     "F": 139268,
     "f": Array [
       "head",
       null,
       "events",
-      Pf {
+      sl {
         "B": -2017569654,
         "Ca": null,
         "F": 139264,
-        "Fa": Y {
+        "Fa": $u {
           "B": -2017569654,
           "F": 139268,
           "h": 0,
-          "root": lf {
+          "root": Tu {
             "M": null,
             "f": Array [
               null,
@@ -435,7 +435,7 @@ Object {
     "newbie": false,
     "userData": Object {},
   },
-  "recovery": Za {
+  "recovery": jl {
     "B": null,
     "F": 139268,
     "f": Array [],
@@ -453,7 +453,7 @@ Object {
     "dataBackup": false,
   },
   "sns": Object {},
-  "status": Za {
+  "status": jl {
     "B": null,
     "F": 139268,
     "f": Array [],
@@ -461,7 +461,7 @@ Object {
     "s": 16647951,
     "u": null,
   },
-  "uport": Za {
+  "uport": jl {
     "B": null,
     "F": 139268,
     "f": Array [],
@@ -487,7 +487,7 @@ Object {
     "key": "contacts",
     "selectedContact": false,
   },
-  "events": Za {
+  "events": jl {
     "B": null,
     "F": 139268,
     "f": Array [],
@@ -503,7 +503,7 @@ Object {
     "metaTx": true,
     "sandbox": false,
   },
-  "hdwallet": Za {
+  "hdwallet": jl {
     "B": null,
     "F": 139268,
     "f": Array [],
@@ -511,27 +511,27 @@ Object {
     "s": 16647951,
     "u": null,
   },
-  "history": de {
+  "history": Fr {
     "F": 8192,
     "s": 65937614,
     "u": null,
   },
-  "hub": Za {
+  "hub": jl {
     "B": null,
     "F": 139268,
     "f": Array [
       "head",
       null,
       "events",
-      Pf {
+      sl {
         "B": -2017569654,
         "Ca": null,
         "F": 139264,
-        "Fa": Y {
+        "Fa": $u {
           "B": -2017569654,
           "F": 139268,
           "h": 0,
-          "root": lf {
+          "root": Tu {
             "M": null,
             "f": Array [
               null,
@@ -594,7 +594,7 @@ Object {
     "newbie": false,
     "userData": Object {},
   },
-  "recovery": Za {
+  "recovery": jl {
     "B": null,
     "F": 139268,
     "f": Array [],
@@ -612,7 +612,7 @@ Object {
     "dataBackup": false,
   },
   "sns": Object {},
-  "status": Za {
+  "status": jl {
     "B": null,
     "F": 139268,
     "f": Array [],
@@ -620,7 +620,7 @@ Object {
     "s": 16647951,
     "u": null,
   },
-  "uport": Za {
+  "uport": jl {
     "B": null,
     "F": 139268,
     "f": Array [],
@@ -646,7 +646,7 @@ Object {
     "key": "contacts",
     "selectedContact": false,
   },
-  "events": Za {
+  "events": jl {
     "B": null,
     "F": 139268,
     "f": Array [],
@@ -662,7 +662,7 @@ Object {
     "metaTx": true,
     "sandbox": false,
   },
-  "hdwallet": Za {
+  "hdwallet": jl {
     "B": null,
     "F": 139268,
     "f": Array [],
@@ -670,27 +670,27 @@ Object {
     "s": 16647951,
     "u": null,
   },
-  "history": de {
+  "history": Fr {
     "F": 8192,
     "s": 65937614,
     "u": null,
   },
-  "hub": Za {
+  "hub": jl {
     "B": null,
     "F": 139268,
     "f": Array [
       "head",
       null,
       "events",
-      Pf {
+      sl {
         "B": -2017569654,
         "Ca": null,
         "F": 139264,
-        "Fa": Y {
+        "Fa": $u {
           "B": -2017569654,
           "F": 139268,
           "h": 0,
-          "root": lf {
+          "root": Tu {
             "M": null,
             "f": Array [
               null,
@@ -753,7 +753,7 @@ Object {
     "newbie": false,
     "userData": Object {},
   },
-  "recovery": Za {
+  "recovery": jl {
     "B": null,
     "F": 139268,
     "f": Array [],
@@ -771,7 +771,7 @@ Object {
     "dataBackup": false,
   },
   "sns": Object {},
-  "status": Za {
+  "status": jl {
     "B": null,
     "F": 139268,
     "f": Array [],
@@ -779,7 +779,7 @@ Object {
     "s": 16647951,
     "u": null,
   },
-  "uport": Za {
+  "uport": jl {
     "B": null,
     "F": 139268,
     "f": Array [],
