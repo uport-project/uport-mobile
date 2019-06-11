@@ -163,6 +163,7 @@
   },
   "devDependencies": {
     "@babel/runtime": "^7.1.2",
+    "@types/enzyme": "^3.9.3",
     "@types/jest": "^23.3.13",
     "@types/lodash": "^4.14.118",
     "@types/mockdate": "^2.0.0",

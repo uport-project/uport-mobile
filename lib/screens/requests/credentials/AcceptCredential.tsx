@@ -18,18 +18,7 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
 
-import {
-  Container,
-  CredentialExplorer,
-  Screen,
-  Banner,
-  Card,
-  Text,
-  IndicatorBar,
-  Section,
-  Theme,
-  Button,
-} from '@kancha'
+import { Container, CredentialExplorer, Screen, Banner, Card, Text, Section, Theme, Button } from '@kancha'
 
 interface AcceptCredentialProps {
   verification: any
