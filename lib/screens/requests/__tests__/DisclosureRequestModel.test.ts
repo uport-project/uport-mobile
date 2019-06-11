@@ -1,4 +1,4 @@
-import disclosureRequestModel from '.././DisclosureRequestModel'
+import disclosureRequestModel from '../disclosure/DisclosureRequestModel'
 
 describe('Disclosure Request Model', () => {
   it('Create Account: creates a data model for disclosure request', () => {
@@ -79,8 +79,8 @@ describe('Disclosure Request Model', () => {
       },
       requested: {
         name: 'Bob Smith',
-        email: 'bob@email.com'
-      }
+        email: 'bob@email.com',
+      },
     }
 
     const model = {
@@ -92,15 +92,18 @@ describe('Disclosure Request Model', () => {
       cancelButton: {
         text: 'Cancel',
       },
-      requestItems: [{
-        key: "0name",
-        type: "Name",
-        value: "Bob Smith"
-      }, {
-        key: '1email',
-        type: 'Email',
-        value: 'bob@email.com'
-      }]
+      requestItems: [
+        {
+          key: '0name',
+          type: 'Name',
+          value: 'Bob Smith',
+        },
+        {
+          key: '1email',
+          type: 'Email',
+          value: 'bob@email.com',
+        },
+      ],
     }
 
     const requestModel = disclosureRequestModel(props)
@@ -123,10 +126,7 @@ describe('Disclosure Request Model', () => {
         bannerImage: '',
         name: 'Uport Test Labs',
       },
-      verified: [
-        { iss: '0x1a', issuer: {}, claimType: 'name' },
-        { iss: '0x1b', issuer: {}, claimType: 'email' }
-      ]
+      verified: [{ iss: '0x1a', issuer: {}, claimType: 'name' }, { iss: '0x1b', issuer: {}, claimType: 'email' }],
     }
 
     const model = {
@@ -140,8 +140,8 @@ describe('Disclosure Request Model', () => {
       },
       verifiedCredentials: [
         { iss: '0x1a', issuer: {}, claimType: 'name' },
-        { iss: '0x1b', issuer: {}, claimType: 'email' }
-      ]
+        { iss: '0x1b', issuer: {}, claimType: 'email' },
+      ],
     }
 
     const requestModel = disclosureRequestModel(props)
@@ -154,7 +154,6 @@ describe('Disclosure Request Model', () => {
     expect(requestModel).toMatchSnapshot()
   })
 
-
   it('with missing credentials', () => {
     const props = {
       actType: 'none',
@@ -165,15 +164,17 @@ describe('Disclosure Request Model', () => {
         bannerImage: '',
         name: 'Uport Test Labs',
       },
-      missing: [{
-        claimType: 'name',
-        essential: true,
-        reason: 'We need this'
-      },
-      {
-        claimType: 'email',
-        reason: 'We dont need this'
-      }]
+      missing: [
+        {
+          claimType: 'name',
+          essential: true,
+          reason: 'We need this',
+        },
+        {
+          claimType: 'email',
+          reason: 'We dont need this',
+        },
+      ],
     }
 
     const model = {
@@ -185,15 +186,17 @@ describe('Disclosure Request Model', () => {
       cancelButton: {
         text: 'Cancel',
       },
-      missingCredentials: [{
-        claimType: 'name',
-        essential: true,
-        reason: 'We need this'
-      },
-      {
-        claimType: 'email',
-        reason: 'We dont need this'
-      }]
+      missingCredentials: [
+        {
+          claimType: 'name',
+          essential: true,
+          reason: 'We need this',
+        },
+        {
+          claimType: 'email',
+          reason: 'We dont need this',
+        },
+      ],
     }
 
     const requestModel = disclosureRequestModel(props)
@@ -205,5 +208,4 @@ describe('Disclosure Request Model', () => {
     expect(requestModel && requestModel.missingCredentials).toEqual(model.missingCredentials)
     expect(requestModel).toMatchSnapshot()
   })
-
 })

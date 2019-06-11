@@ -78,18 +78,18 @@ const interactionStatsMessage = (intStats: any, client: string) => {
 function objectToRequestItems(claims: UserInfo): RequestItem[] {
   return claims
     ? Object.keys(claims).map((claim, index) => {
-      return {
-        key: index + claim,
-        type: capitalizeFirstLetter(claim),
-        value: typeof claims[claim] !== 'object' ? claims[claim] : null,
-      }
-    })
+        return {
+          key: index + claim,
+          type: capitalizeFirstLetter(claim),
+          value: typeof claims[claim] !== 'object' ? claims[claim] : null,
+        }
+      })
     : []
 }
 /**
  * Disclose request items model
  */
-function disclosureRequestItemModel({requested} : any): RequestItem[] {
+function disclosureRequestItemModel({ requested }: any): RequestItem[] {
   return objectToRequestItems(requested) || []
 }
 
@@ -176,7 +176,7 @@ const DisclosureRequestModel = (props: any): DisclosureRequestModelType | null =
       ...disclosureRequestCommon,
       requestItems: disclosureRequestItemModel(props),
       verifiedCredentials: disclosureRequestVCModel(props),
-      missingCredentials: props.missing || []
+      missingCredentials: props.missing || [],
     }
   }
 

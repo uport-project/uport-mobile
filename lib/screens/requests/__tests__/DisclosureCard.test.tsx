@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import ConnectedDisclosureRequest, { DisclosureCard } from '../DisclosureCard'
+import ConnectedDisclosureRequest, { DisclosureCard } from '../disclosure/DisclosureCard'
 
 const DisclosureCardProps = {
   requestId: 'TEST',
@@ -38,16 +38,19 @@ describe('Disclosure Request Card', () => {
 
   describe('with user info', () => {
     const withCredentialsProps = {
-      ...DisclosureCardProps, 
-      requestItems: [{
-        key: "0name",
-        type: "Name",
-        value: "Bob Smith"
-      }, {
-        key: '1email',
-        type: 'Email',
-        value: 'bob@email.com'
-      }]
+      ...DisclosureCardProps,
+      requestItems: [
+        {
+          key: '0name',
+          type: 'Name',
+          value: 'Bob Smith',
+        },
+        {
+          key: '1email',
+          type: 'Email',
+          value: 'bob@email.com',
+        },
+      ],
     }
     it('renders dumb component', () => {
       const tree = renderer.create(<DisclosureCard {...withCredentialsProps} />).toJSON()
@@ -60,8 +63,8 @@ describe('Disclosure Request Card', () => {
       ...DisclosureCardProps,
       verifiedCredentials: [
         { iss: '0x1a', issuer: {}, claimType: 'name' },
-        { iss: '0x1b', issuer: {}, claimType: 'email' }
-      ]
+        { iss: '0x1b', issuer: {}, claimType: 'email' },
+      ],
     }
     it('renders dumb component', () => {
       const tree = renderer.create(<DisclosureCard {...withCredentialsProps} />).toJSON()
@@ -69,34 +72,24 @@ describe('Disclosure Request Card', () => {
     })
   })
 
-  
   describe('with missing claims', () => {
     const withCredentialsProps = {
       ...DisclosureCardProps,
-      missingCredentials: [{
-        claimType: 'name',
-        essential: true,
-        reason: 'We need this'
-      },
-      {
-        claimType: 'email',
-        reason: 'We dont need this'
-      }]
+      missingCredentials: [
+        {
+          claimType: 'name',
+          essential: true,
+          reason: 'We need this',
+        },
+        {
+          claimType: 'email',
+          reason: 'We dont need this',
+        },
+      ],
     }
     it('renders dumb component', () => {
       const tree = renderer.create(<DisclosureCard {...withCredentialsProps} />).toJSON()
       expect(tree).toMatchSnapshot()
     })
   })
-
-  // it('render connected component', () => {
-  //   const globalJest: any = global
-  //   const initialState = {}
-  //   const store = globalJest.mockStore(initialState)
-
-  //   const wrapper = globalJest
-  //     .shallow(<ConnectedDisclosureRequest componentId={'TESTID'} />, { context: { store } })
-  //     .toJSON()
-  //   expect(wrapper).toMatchSnapshot()
-  // })
 })

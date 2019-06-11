@@ -19,7 +19,11 @@ import { formatWeiAsEth } from 'uPortMobile/lib/helpers/conversions'
 // Actions
 import { authorizeRequest, cancelRequest, clearRequest, authorizeAccount } from 'uPortMobile/lib/actions/requestActions'
 // Data model
-import disclosureRequestModel, { DisclosureRequestModelType, VerifiableClaimType, ClaimSpecType } from './DisclosureRequestModel'
+import disclosureRequestModel, {
+  DisclosureRequestModelType,
+  VerifiableClaimType,
+  ClaimSpecType,
+} from './DisclosureRequestModel'
 import { Container, Theme, Text } from '@kancha'
 import { VerifiableClaimsSpec, UserInfo } from 'uPortMobile/lib/types/Credentials'
 export interface DisclosureRequestContainerProps {

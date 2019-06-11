@@ -24,6 +24,24 @@ class DesignSystem extends React.Component<any> {
               onPress={() => {
                 Navigation.showModal({
                   component: {
+                    name: SCREENS.AcceptCredential,
+                    options: {
+                      topBar: {
+                        visible: false,
+                      },
+                    },
+                  },
+                })
+              }}
+              title={'First draft'}>
+              Basic Request Card
+            </ListItem>
+            <ListItem
+              last
+              avatarComponent={<FakeAvatar />}
+              onPress={() => {
+                Navigation.showModal({
+                  component: {
                     name: SCREENS.StaticRequest,
                     options: {
                       topBar: {

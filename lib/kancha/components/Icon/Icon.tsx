@@ -72,11 +72,14 @@ interface IconsStatic {
   checkmark: string
   scan: string
   qrcode: string
+  add: string
+  remove: string
 }
 
 const Icons: IconsStatic = {
   forward: Device.isIOS ? 'ios-arrow-forward' : 'md-arrow-forward',
   link: Device.isIOS ? 'ios-link' : 'md-link',
+  externalLink: Device.isIOS ? 'external-link' : 'external-link',
   sync: Device.isIOS ? 'ios-sync' : 'md-sync',
   success: Device.isIOS ? 'ios-checkmark-circle-outline' : 'md-checkmark-circle-outline',
   checkbox_empty: Device.isIOS ? 'ios-radio-button-off' : 'md-radio-button-off',
@@ -89,6 +92,8 @@ const Icons: IconsStatic = {
   edit: Device.isIOS ? 'edit' : 'edit',
   more: Device.isIOS ? 'ios-more' : 'ios-more',
   qrcode: Device.isIOS ? 'qrcode' : 'qrcode',
+  add: 'ios-add-circle-outline',
+  remove: 'ios-remove-circle',
 }
 
 const IconImageSource = (font: string, icon: string, size: number) => {

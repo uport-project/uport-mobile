@@ -4,9 +4,10 @@ import { Container, Text, Theme } from '@kancha'
 
 interface IndicatorBarProps {
   text: string
+  backgroundColor?: string
 }
 
-const IndicatorBar: React.FC<IndicatorBarProps> = ({ text }) => {
+const IndicatorBar: React.FC<IndicatorBarProps> = ({ text, backgroundColor }) => {
   const triangle: ViewStyle = {
     width: 0,
     height: 0,
@@ -17,13 +18,13 @@ const IndicatorBar: React.FC<IndicatorBarProps> = ({ text }) => {
     borderBottomWidth: 15,
     borderLeftColor: 'transparent',
     borderRightColor: 'transparent',
-    borderBottomColor: '#222222',
+    borderBottomColor: backgroundColor ? backgroundColor : '#222222',
     transform: [{ rotate: '180deg' }],
   }
 
   return (
     <Container backgroundColor={Theme.colors.primary.background}>
-      <Container backgroundColor={'#222222'} padding>
+      <Container backgroundColor={backgroundColor ? backgroundColor : '#222222'} padding>
         <Text textColor={'#FFFFFF'} type={Text.Types.SectionHeader} textAlign={'center'}>
           {text}
         </Text>
