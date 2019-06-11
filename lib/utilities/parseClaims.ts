@@ -71,7 +71,7 @@ export const normaliseClaimTree = (claimObject: any, level: number = 0, isListIt
 
     return {
       level,
-      key: level + i + k.toLowerCase(),
+      key: level.toString() + i.toString() + k.toLowerCase(),
       keyName: k,
       title: parsedKeyName,
       hasChildren: valueisObject || valueisArray,
