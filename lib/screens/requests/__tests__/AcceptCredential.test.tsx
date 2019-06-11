@@ -1,6 +1,5 @@
 import * as React from 'react'
-import renderer from 'react-test-renderer'
-import { shallow } from 'enzyme'
+import { render, fireEvent } from 'react-native-testing-library'
 import AcceptCredential from '../credentials/AcceptCredential'
 
 const props = {
@@ -30,7 +29,7 @@ const props = {
 }
 
 describe('MarketPlaceModal', () => {
-  const component = renderer.create(<AcceptCredential {...props} />)
+  const component = render(<AcceptCredential {...props} />)
   const tree = component.toJSON()
 
   it('renders with props', () => {
@@ -38,24 +37,26 @@ describe('MarketPlaceModal', () => {
   })
 
   it('should have an accept button', () => {
-    const wrapper = renderer.create(<AcceptCredential {...props} />).root
-    const acceptButton = wrapper.findByProps({ buttonText: 'Accept' })
-
-    acceptButton.props().onPress()
-
-    expect(acceptButton).toBeDefined()
-    // expect(props.authorizeRequest).toHaveBeenCalled()
+    const { getByText } = component
+    expect(getByText('Accept')).toBeDefined()
   })
 
-  // it('should have an decline button', () => {
-  //   const wrapper = shallow(<AcceptCredential {...props} />)
-  //   const declineButton = wrapper.findWhere(node => node.prop('buttonText') === 'Decline')
-  //   // declineButton.props().onPress()
+  it('should have an decline button', () => {
+    const { getByText } = component
+    expect(getByText('Decline')).toBeDefined()
+  })
 
-  //   // expect(declineButton).toBeDefined()
-  //   // expect(props.cancelRequest).toHaveBeenCalled()
-  // })
+  it('should call authorize when accept', () => {
+    const { getByText } = component
 
-  // it('should fire function when accept it tapped', () => {})
-  // it('should fire function when decline it tapped', () => {})
+    fireEvent.press(getByText('Accept'))
+    expect(props.authorizeRequest).toHaveBeenCalled()
+  })
+
+  it('should call cancel when cancel when declined', () => {
+    const { getByText } = component
+
+    fireEvent.press(getByText('Decline'))
+    expect(props.cancelRequest).toHaveBeenCalled()
+  })
 })

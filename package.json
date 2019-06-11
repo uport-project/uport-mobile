@@ -197,6 +197,7 @@
     "moment-timezone": "^0.5.25",
     "nock": "^9.0.18",
     "prettier": "^1.15.3",
+    "react-native-testing-library": "^1.9.1",
     "react-native-typescript-transformer": "^1.2.10",
     "react-test-renderer": "^16.0.3",
     "reactotron-react-native": "^2.1.0",

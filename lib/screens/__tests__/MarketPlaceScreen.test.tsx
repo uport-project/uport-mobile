@@ -1,5 +1,5 @@
 import * as React from 'react'
-import renderer from 'react-test-renderer'
+import { render } from 'react-native-testing-library'
 import MarketPlaceModal from '../MarketPlace'
 
 const config = {
@@ -19,7 +19,7 @@ const config = {
 
 describe('MarketPlaceModal', () => {
   it('renders with props', () => {
-    const tree = renderer.create(<MarketPlaceModal config={config} />).toJSON()
+    const tree = render(<MarketPlaceModal config={config} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })
