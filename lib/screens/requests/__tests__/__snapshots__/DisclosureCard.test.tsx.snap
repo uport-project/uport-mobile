@@ -168,7 +168,7 @@ Array [
                 pointerEvents="auto"
                 style={
                   Object {
-                    "alignItems": undefined,
+                    "alignItems": "center",
                     "backgroundColor": undefined,
                     "borderRadius": undefined,
                     "flex": undefined,
@@ -202,6 +202,43 @@ Array [
                 >
                   No name provided
                 </Text>
+                <View
+                  pointerEvents="auto"
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": undefined,
+                      "borderRadius": undefined,
+                      "flex": undefined,
+                      "flexDirection": undefined,
+                      "height": undefined,
+                      "justifyContent": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "padding": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": 5,
+                      "width": undefined,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#FFFFFF",
+                        "fontSize": 14,
+                      }
+                    }
+                  />
+                </View>
               </View>
             </View>
           </View>
@@ -844,7 +881,7 @@ Array [
                 pointerEvents="auto"
                 style={
                   Object {
-                    "alignItems": undefined,
+                    "alignItems": "center",
                     "backgroundColor": undefined,
                     "borderRadius": undefined,
                     "flex": undefined,
@@ -878,6 +915,43 @@ Array [
                 >
                   No name provided
                 </Text>
+                <View
+                  pointerEvents="auto"
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": undefined,
+                      "borderRadius": undefined,
+                      "flex": undefined,
+                      "flexDirection": undefined,
+                      "height": undefined,
+                      "justifyContent": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "padding": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": 5,
+                      "width": undefined,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#FFFFFF",
+                        "fontSize": 14,
+                      }
+                    }
+                  />
+                </View>
               </View>
             </View>
           </View>
@@ -1846,7 +1920,7 @@ Array [
                 pointerEvents="auto"
                 style={
                   Object {
-                    "alignItems": undefined,
+                    "alignItems": "center",
                     "backgroundColor": undefined,
                     "borderRadius": undefined,
                     "flex": undefined,
@@ -1880,6 +1954,43 @@ Array [
                 >
                   No name provided
                 </Text>
+                <View
+                  pointerEvents="auto"
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": undefined,
+                      "borderRadius": undefined,
+                      "flex": undefined,
+                      "flexDirection": undefined,
+                      "height": undefined,
+                      "justifyContent": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "padding": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": 5,
+                      "width": undefined,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#FFFFFF",
+                        "fontSize": 14,
+                      }
+                    }
+                  />
+                </View>
               </View>
             </View>
           </View>
@@ -3026,7 +3137,7 @@ Array [
                 pointerEvents="auto"
                 style={
                   Object {
-                    "alignItems": undefined,
+                    "alignItems": "center",
                     "backgroundColor": undefined,
                     "borderRadius": undefined,
                     "flex": undefined,
@@ -3060,6 +3171,43 @@ Array [
                 >
                   No name provided
                 </Text>
+                <View
+                  pointerEvents="auto"
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": undefined,
+                      "borderRadius": undefined,
+                      "flex": undefined,
+                      "flexDirection": undefined,
+                      "height": undefined,
+                      "justifyContent": undefined,
+                      "marginBottom": undefined,
+                      "marginLeft": undefined,
+                      "marginRight": undefined,
+                      "marginTop": undefined,
+                      "padding": undefined,
+                      "paddingBottom": undefined,
+                      "paddingHorizontal": undefined,
+                      "paddingLeft": undefined,
+                      "paddingRight": undefined,
+                      "paddingTop": 5,
+                      "width": undefined,
+                    }
+                  }
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#FFFFFF",
+                        "fontSize": 14,
+                      }
+                    }
+                  />
+                </View>
               </View>
             </View>
           </View>

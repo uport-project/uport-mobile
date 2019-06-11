@@ -1,5 +1,12 @@
 # Change Log
 
+## [v467](https://github.com/uport-project/uport-mobile/tree/v467) (2019-06-11)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v466...v467)
+
+**Merged pull requests:**
+
+- Accept credential screen + Faux Marketplace [\#160](https://github.com/uport-project/uport-mobile/pull/160) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v466](https://github.com/uport-project/uport-mobile/tree/v466) (2019-06-07)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v465...v466)
 

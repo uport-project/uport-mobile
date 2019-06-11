@@ -197,215 +197,219 @@ export async function startMain() {
     },
   })
 
-  // Navigation.setRoot({
-  //   root: {
-  //     stack: {
-  //       children: [
-  //         {
-  //           component: {
-  //             name: SCREENS.Dummy,
-  //             options: {
-  //               topBar: {
-  //                 visible: false,
-  //               },
-  //             },
-  //           },
-  //         },
-  //       ],
-  //     },
-  //   },
-  // })
+  const SCREEN_DEV_MODE = false
 
-  /**
-   * Begin root
-   */
-  Navigation.setRoot({
-    root: {
-      // @ts-ignore
-      sideMenu: {
-        right: {
-          component: {
-            id: SCREENS.Scanner,
-            name: SCREENS.Scanner,
-          },
+  if (SCREEN_DEV_MODE) {
+    Navigation.setRoot({
+      root: {
+        stack: {
+          children: [
+            {
+              component: {
+                name: SCREENS.AcceptCredential,
+                options: {
+                  topBar: {
+                    visible: false,
+                  },
+                },
+              },
+            },
+          ],
         },
-        center: {
-          bottomTabs: {
-            id: 'MainTabsId',
-            children: [
-              {
-                stack: {
-                  children: [
-                    {
-                      component: {
-                        name: SCREENS.Credentials,
-                        options: {
-                          topBar: {
-                            rightButtons: [rightButtonsCredentialScreen],
-                            title: {
-                              text: 'Credentials',
-                              color: Theme.colors.inverted.text,
+      },
+    })
+  } else {
+    /**
+     * Begin root
+     */
+    Navigation.setRoot({
+      root: {
+        // @ts-ignore
+        sideMenu: {
+          right: {
+            component: {
+              id: SCREENS.Scanner,
+              name: SCREENS.Scanner,
+            },
+          },
+          center: {
+            bottomTabs: {
+              id: 'MainTabsId',
+              children: [
+                {
+                  stack: {
+                    children: [
+                      {
+                        component: {
+                          name: SCREENS.Credentials,
+                          options: {
+                            topBar: {
+                              rightButtons: [rightButtonsCredentialScreen],
+                              title: {
+                                text: 'Credentials',
+                                color: Theme.colors.inverted.text,
+                              },
+                              largeTitle: {
+                                visible: true,
+                                color: Theme.colors.inverted.text,
+                              },
                             },
-                            largeTitle: {
+                            bottomTab: {
+                              icon: credentialsIcon,
+                              iconColor: Theme.colors.primary.accessories,
+                              selectedIconColor: Theme.colors.primary.brand,
+                              iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
+                            },
+                            fab: {
+                              id: 'androidScan',
                               visible: true,
-                              color: Theme.colors.inverted.text,
+                              backgroundColor: Theme.colors.primary.brand,
+                              clickColor: '#FFF',
+                              rippleColor: '#ddd',
+                              icon: scanIcon,
+                              iconColor: '#FFF',
                             },
-                          },
-                          bottomTab: {
-                            icon: credentialsIcon,
-                            iconColor: Theme.colors.primary.accessories,
-                            selectedIconColor: Theme.colors.primary.brand,
-                            iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
-                          },
-                          fab: {
-                            id: 'androidScan',
-                            visible: true,
-                            backgroundColor: Theme.colors.primary.brand,
-                            clickColor: '#FFF',
-                            rippleColor: '#ddd',
-                            icon: scanIcon,
-                            iconColor: '#FFF',
                           },
                         },
                       },
-                    },
-                  ],
+                    ],
+                  },
                 },
-              },
-              {
-                stack: {
-                  children: [
-                    {
-                      component: {
-                        name: SCREENS.Profile,
-                        options: {
-                          topBar: {
-                            noBorder: true,
-                            rightButtons: [defaultProfileEditButton],
-                            title: {
-                              text: '',
-                              color: Theme.colors.inverted.text,
+                {
+                  stack: {
+                    children: [
+                      {
+                        component: {
+                          name: SCREENS.Profile,
+                          options: {
+                            topBar: {
+                              noBorder: true,
+                              rightButtons: [defaultProfileEditButton],
+                              title: {
+                                text: '',
+                                color: Theme.colors.inverted.text,
+                              },
+                              largeTitle: {
+                                visible: true,
+                                color: Theme.colors.inverted.text,
+                              },
                             },
-                            largeTitle: {
+                            bottomTab: {
+                              icon: profileIcon,
+                              iconColor: Theme.colors.primary.accessories,
+                              selectedIconColor: Theme.colors.primary.brand,
+                              iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
+                            },
+                            fab: {
+                              id: 'androidScan',
                               visible: true,
-                              color: Theme.colors.inverted.text,
+                              backgroundColor: Theme.colors.primary.brand,
+                              clickColor: '#FFF',
+                              rippleColor: '#ddd',
+                              icon: scanIcon,
+                              iconColor: '#FFF',
                             },
                           },
-                          bottomTab: {
-                            icon: profileIcon,
-                            iconColor: Theme.colors.primary.accessories,
-                            selectedIconColor: Theme.colors.primary.brand,
-                            iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
-                          },
-                          fab: {
-                            id: 'androidScan',
-                            visible: true,
-                            backgroundColor: Theme.colors.primary.brand,
-                            clickColor: '#FFF',
-                            rippleColor: '#ddd',
-                            icon: scanIcon,
-                            iconColor: '#FFF',
+                        },
+                      },
+                    ],
+                  },
+                },
+                {
+                  stack: {
+                    children: [
+                      {
+                        component: {
+                          name: SCREENS.Contacts,
+                          options: {
+                            topBar: navBarText('Contacts', true),
+                            bottomTab: {
+                              icon: contactsIcon,
+                              iconColor: Theme.colors.primary.accessories,
+                              selectedIconColor: Theme.colors.primary.brand,
+                              iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
+                            },
+                            fab: {
+                              id: 'androidScan',
+                              visible: true,
+                              backgroundColor: Theme.colors.primary.brand,
+                              clickColor: '#FFF',
+                              rippleColor: '#ddd',
+                              icon: scanIcon,
+                              iconColor: '#FFF',
+                            },
                           },
                         },
                       },
-                    },
-                  ],
+                    ],
+                  },
                 },
-              },
-              {
-                stack: {
-                  children: [
-                    {
-                      component: {
-                        name: SCREENS.Contacts,
-                        options: {
-                          topBar: navBarText('Contacts', true),
-                          bottomTab: {
-                            icon: contactsIcon,
-                            iconColor: Theme.colors.primary.accessories,
-                            selectedIconColor: Theme.colors.primary.brand,
-                            iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
-                          },
-                          fab: {
-                            id: 'androidScan',
-                            visible: true,
-                            backgroundColor: Theme.colors.primary.brand,
-                            clickColor: '#FFF',
-                            rippleColor: '#ddd',
-                            icon: scanIcon,
-                            iconColor: '#FFF',
+                {
+                  stack: {
+                    children: [
+                      {
+                        component: {
+                          name: SCREENS.Notifications,
+                          options: {
+                            topBar: navBarText('Notifications', true),
+                            bottomTab: {
+                              icon: notificationsIcon,
+                              iconColor: Theme.colors.primary.accessories,
+                              selectedIconColor: Theme.colors.primary.brand,
+                              iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
+                            },
+                            fab: {
+                              id: 'androidScan',
+                              visible: true,
+                              backgroundColor: Theme.colors.primary.brand,
+                              clickColor: '#FFF',
+                              rippleColor: '#ddd',
+                              icon: scanIcon,
+                              iconColor: '#FFF',
+                            },
                           },
                         },
                       },
-                    },
-                  ],
+                    ],
+                  },
                 },
-              },
-              {
-                stack: {
-                  children: [
-                    {
-                      component: {
-                        name: SCREENS.Notifications,
-                        options: {
-                          topBar: navBarText('Notifications', true),
-                          bottomTab: {
-                            icon: notificationsIcon,
-                            iconColor: Theme.colors.primary.accessories,
-                            selectedIconColor: Theme.colors.primary.brand,
-                            iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
-                          },
-                          fab: {
-                            id: 'androidScan',
-                            visible: true,
-                            backgroundColor: Theme.colors.primary.brand,
-                            clickColor: '#FFF',
-                            rippleColor: '#ddd',
-                            icon: scanIcon,
-                            iconColor: '#FFF',
+                {
+                  stack: {
+                    children: [
+                      {
+                        component: {
+                          name: SCREENS.Settings,
+                          options: {
+                            topBar: navBarText('Settings', true),
+                            bottomTab: {
+                              icon: settingsIcon,
+                              iconColor: Theme.colors.primary.accessories,
+                              selectedIconColor: Theme.colors.primary.brand,
+                              iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
+                            },
+                            fab: {
+                              id: 'androidScan',
+                              visible: true,
+                              backgroundColor: Theme.colors.primary.brand,
+                              clickColor: '#FFF',
+                              rippleColor: '#ddd',
+                              icon: scanIcon,
+                              iconColor: '#FFF',
+                            },
                           },
                         },
                       },
-                    },
-                  ],
+                    ],
+                  },
                 },
-              },
-              {
-                stack: {
-                  children: [
-                    {
-                      component: {
-                        name: SCREENS.Settings,
-                        options: {
-                          topBar: navBarText('Settings', true),
-                          bottomTab: {
-                            icon: settingsIcon,
-                            iconColor: Theme.colors.primary.accessories,
-                            selectedIconColor: Theme.colors.primary.brand,
-                            iconInsets: { top: 0, left: 0, bottom: -8, right: 0 },
-                          },
-                          fab: {
-                            id: 'androidScan',
-                            visible: true,
-                            backgroundColor: Theme.colors.primary.brand,
-                            clickColor: '#FFF',
-                            rippleColor: '#ddd',
-                            icon: scanIcon,
-                            iconColor: '#FFF',
-                          },
-                        },
-                      },
-                    },
-                  ],
-                },
-              },
-            ],
+              ],
+            },
           },
         },
       },
-    },
-  })
-  /** ^^ End root ^^ */
+    })
+    /** ^^ End root ^^ */
+  }
 
   /**
    * Set up global listener for android fab button
