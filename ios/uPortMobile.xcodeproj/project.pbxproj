@@ -35,6 +35,7 @@
 		601B76DD1D410D3F00F62DDB /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601B76DB1D410D3F00F62DDB /* Fabric.framework */; };
 		601B76DE1D410D3F00F62DDB /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601B76DC1D410D3F00F62DDB /* Crashlytics.framework */; };
 		641C9A161E17390C008A4D38 /* libRCTPushNotification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 641C9A131E1738F3008A4D38 /* libRCTPushNotification.a */; };
+		646FCC7222B0FD12007D8B04 /* libRNCNetInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 646FCC6F22B0FCF7007D8B04 /* libRNCNetInfo.a */; };
 		64E31FBD1DF234CF0062465A /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D17E3DCF1DEDEF6B00C460F9 /* libRCTAnimation.a */; };
 		64E86406229A067B004F1B20 /* libRNCAsyncStorage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E863F7229A0660004F1B20 /* libRNCAsyncStorage.a */; };
 		70F06EA01FC5C160000BD332 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70F06E6E1FC5C15F000BD332 /* GoogleService-Info.plist */; };
@@ -289,6 +290,20 @@
 			proxyType = 2;
 			remoteGlobalIDString = 3D383D621EBD27B9005632C8;
 			remoteInfo = "double-conversion-tvOS";
+		};
+		646FCC6E22B0FCF7007D8B04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 646FCC6922B0FCF7007D8B04 /* RNCNetInfo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNCNetInfo;
+		};
+		646FCC7022B0FCF7007D8B04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 646FCC6922B0FCF7007D8B04 /* RNCNetInfo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B5027B1B2237B30F00F1AABA;
+			remoteInfo = "RNCNetInfo-tvOS";
 		};
 		647D32151E3004800033F1BB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -699,6 +714,7 @@
 		62FA6261B132A60C0AFA99A4 /* Pods-uPortMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uPortMobileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-uPortMobileTests/Pods-uPortMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
 		641915B2200ECEB70042DA49 /* ReactNativePermissions.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativePermissions.xcodeproj; path = "../node_modules/react-native-permissions/ios/ReactNativePermissions.xcodeproj"; sourceTree = "<group>"; };
 		641C9A0D1E1738F3008A4D38 /* RCTPushNotification.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTPushNotification.xcodeproj; path = "../node_modules/react-native/Libraries/PushNotificationIOS/RCTPushNotification.xcodeproj"; sourceTree = "<group>"; };
+		646FCC6922B0FCF7007D8B04 /* RNCNetInfo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNCNetInfo.xcodeproj; path = "../node_modules/@react-native-community/netinfo/ios/RNCNetInfo.xcodeproj"; sourceTree = "<group>"; };
 		64BE8C84877D1A6F45E58FF9 /* Pods-uPortMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-uPortMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-uPortMobile/Pods-uPortMobile.release.xcconfig"; sourceTree = "<group>"; };
 		64E863C0229A0660004F1B20 /* RNCAsyncStorage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNCAsyncStorage.xcodeproj; path = "../node_modules/@react-native-community/async-storage/ios/RNCAsyncStorage.xcodeproj"; sourceTree = "<group>"; };
 		64E92F5B1D8CCCED0001FE7A /* uPort.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = uPort.entitlements; path = uPortMobile/uPort.entitlements; sourceTree = "<group>"; };
@@ -774,6 +790,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				646FCC7222B0FD12007D8B04 /* libRNCNetInfo.a in Frameworks */,
 				64E86406229A067B004F1B20 /* libRNCAsyncStorage.a in Frameworks */,
 				96CFFDC02295665E003A9AAB /* JavaScriptCore.framework in Frameworks */,
 				96D5BFC82273452F005F91A7 /* libReactNativeNavigation.a in Frameworks */,
@@ -1209,6 +1226,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		646FCC6A22B0FCF7007D8B04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				646FCC6F22B0FCF7007D8B04 /* libRNCNetInfo.a */,
+				646FCC7122B0FCF7007D8B04 /* libRNCNetInfo-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		647D31F81E3004800033F1BB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -1263,6 +1289,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				646FCC6922B0FCF7007D8B04 /* RNCNetInfo.xcodeproj */,
 				64E863C0229A0660004F1B20 /* RNCAsyncStorage.xcodeproj */,
 				96D5BFBF2273450F005F91A7 /* ReactNativeNavigation.xcodeproj */,
 				C8D312D12269198A003E3199 /* Pods.xcodeproj */,
@@ -1613,6 +1640,10 @@
 					ProjectRef = 64E863C0229A0660004F1B20 /* RNCAsyncStorage.xcodeproj */;
 				},
 				{
+					ProductGroup = 646FCC6A22B0FCF7007D8B04 /* Products */;
+					ProjectRef = 646FCC6922B0FCF7007D8B04 /* RNCNetInfo.xcodeproj */;
+				},
+				{
 					ProductGroup = 647D31F81E3004800033F1BB /* Products */;
 					ProjectRef = 44373E1AA3B34FD18D6872EB /* RNDeviceInfo.xcodeproj */;
 				},
@@ -1860,6 +1891,20 @@
 			fileType = archive.ar;
 			path = "libdouble-conversion.a";
 			remoteRef = 646B0A571F6F5B9200A74A09 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		646FCC6F22B0FCF7007D8B04 /* libRNCNetInfo.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNCNetInfo.a;
+			remoteRef = 646FCC6E22B0FCF7007D8B04 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		646FCC7122B0FCF7007D8B04 /* libRNCNetInfo-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRNCNetInfo-tvOS.a";
+			remoteRef = 646FCC7022B0FCF7007D8B04 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		647D32161E3004800033F1BB /* libRNDeviceInfo.a */ = {
