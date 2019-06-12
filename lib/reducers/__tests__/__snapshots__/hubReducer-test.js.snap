@@ -3,14 +3,12 @@
 exports[`clears queue 1`] = `
 Object {
   "events": Array [],
-  "head": null,
 }
 `;
 
 exports[`clears queue 2`] = `
 Object {
   "events": Array [],
-  "head": null,
 }
 `;
 
@@ -32,7 +30,6 @@ exports[`marks as doNotQueue 1`] = `
 Object {
   "doNotQueue": true,
   "events": Array [],
-  "head": null,
 }
 `;
 
@@ -40,7 +37,6 @@ exports[`marks as doNotQueue 2`] = `
 Object {
   "doNotQueue": true,
   "events": Array [],
-  "head": null,
 }
 `;
 
@@ -70,7 +66,6 @@ Object {
       "type": "BOOM",
     },
   ],
-  "head": null,
 }
 `;
 
@@ -82,7 +77,6 @@ Object {
       "type": "BOOM",
     },
   ],
-  "head": null,
 }
 `;
 
@@ -157,14 +151,12 @@ Object {
 exports[`takes queued event 1`] = `
 Object {
   "events": Array [],
-  "head": null,
 }
 `;
 
 exports[`takes queued event 2`] = `
 Object {
   "events": Array [],
-  "head": null,
 }
 `;
 
