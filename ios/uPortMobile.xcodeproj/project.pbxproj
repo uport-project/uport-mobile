@@ -2196,7 +2196,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
+			shellScript = "export NODE_BINARY=node NODE_ARGS=\"--max-old-space-size=8192\"\n ../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		601B76DA1D410CD300F62DDB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
