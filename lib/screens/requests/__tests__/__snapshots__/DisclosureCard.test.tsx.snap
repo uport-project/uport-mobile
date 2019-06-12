@@ -226,9 +226,6 @@ Array [
                   }
                 >
                   <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    ellipsizeMode="tail"
                     style={
                       Object {
                         "color": "#FFFFFF",
@@ -923,9 +920,6 @@ Array [
                   }
                 >
                   <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    ellipsizeMode="tail"
                     style={
                       Object {
                         "color": "#FFFFFF",
@@ -1937,9 +1931,6 @@ Array [
                   }
                 >
                   <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    ellipsizeMode="tail"
                     style={
                       Object {
                         "color": "#FFFFFF",
@@ -3126,9 +3117,6 @@ Array [
                   }
                 >
                   <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    ellipsizeMode="tail"
                     style={
                       Object {
                         "color": "#FFFFFF",
