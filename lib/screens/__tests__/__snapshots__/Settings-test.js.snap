@@ -2,6 +2,7 @@
 
 exports[`SettingsRoot renders Settings screen with 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   style={
     Object {
       "backgroundColor": "#EFEEF3",
@@ -279,9 +280,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -345,9 +343,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                         }
                       >
                         <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
                           style={
                             Object {
                               "color": "#BBBBBB",
@@ -506,9 +501,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -724,9 +716,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -940,9 +929,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -1214,9 +1200,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -1432,9 +1415,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -1648,9 +1628,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -1922,9 +1899,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -2138,9 +2112,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -2204,9 +2175,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                         }
                       >
                         <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
                           style={
                             Object {
                               "color": "#BBBBBB",
@@ -2279,9 +2247,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#BBBBBB",
@@ -2464,9 +2429,6 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -2572,814 +2534,11 @@ exports[`SettingsRoot renders Settings screen with 1`] = `
 </RCTSafeAreaView>
 `;
 
-exports[`SettingsRoot renders a connected SettingsRoot as expected 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Settings
-    connections={Array []}
-    dispatch={[Function]}
-    hasHDWallet={false}
-    navigator={FakeNavigator {}}
-    seedConfirmed={null}
-    version="256"
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "function",
-    "props": Object {
-      "children": Array [
-        <Section>
-          <ListItem
-            accessible={true}
-            accessoryRight="256 (undefined)"
-            hideForwardArrow={true}
-            onPress={[Function]}
-          >
-            Version
-          </ListItem>
-          <ListItem
-            accessible={true}
-            onPress={[Function]}
-          >
-            uPort ID
-          </ListItem>
-          <ListItem
-            accessible={true}
-            onPress={[Function]}
-          >
-            Try uPort
-          </ListItem>
-          <ListItem
-            accessible={true}
-            externalLink="https://uport.zendesk.com/hc/en-us/requests/new"
-            last={true}
-          >
-            Support
-          </ListItem>
-        </Section>,
-        false,
-        <Section>
-          <ListItem
-            accessible={true}
-            onPress={[Function]}
-          >
-            Device
-          </ListItem>
-          <ListItem
-            accessible={true}
-            onPress={[Function]}
-          >
-            System Messages
-          </ListItem>
-          <ListItem
-            accessible={true}
-            last={true}
-            onPress={[Function]}
-          >
-            Network
-          </ListItem>
-        </Section>,
-        <Section>
-          <ListItem
-            accessible={true}
-            onPress={[Function]}
-          >
-            Privacy Policy
-          </ListItem>
-          <ListItem
-            accessible={true}
-            accessoryRight="v1.2 (5/24/2018)"
-            last={true}
-            onPress={[Function]}
-          >
-            Terms & Conditions
-          </ListItem>
-        </Section>,
-        <Section
-          title="Developer Options"
-        >
-          <ListItem
-            accessible={true}
-            last={true}
-            onPress={[Function]}
-          >
-            Design System
-          </ListItem>
-        </Section>,
-        <Container
-          paddingBottom={true}
-        />,
-      ],
-      "config": "safeScroll",
-      "keyboardAvoiding": false,
-      "statusBarHidden": false,
-      "type": "secondary",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "children": Array [
-            <ListItem
-              accessible={true}
-              accessoryRight="256 (undefined)"
-              hideForwardArrow={true}
-              onPress={[Function]}
-            >
-              Version
-            </ListItem>,
-            <ListItem
-              accessible={true}
-              onPress={[Function]}
-            >
-              uPort ID
-            </ListItem>,
-            <ListItem
-              accessible={true}
-              onPress={[Function]}
-            >
-              Try uPort
-            </ListItem>,
-            <ListItem
-              accessible={true}
-              externalLink="https://uport.zendesk.com/hc/en-us/requests/new"
-              last={true}
-            >
-              Support
-            </ListItem>,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "accessible": true,
-              "accessoryRight": "256 (undefined)",
-              "children": "Version",
-              "hideForwardArrow": true,
-              "onPress": [Function],
-            },
-            "ref": null,
-            "rendered": "Version",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "accessible": true,
-              "children": "uPort ID",
-              "onPress": [Function],
-            },
-            "ref": null,
-            "rendered": "uPort ID",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "accessible": true,
-              "children": "Try uPort",
-              "onPress": [Function],
-            },
-            "ref": null,
-            "rendered": "Try uPort",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "accessible": true,
-              "children": "Support",
-              "externalLink": "https://uport.zendesk.com/hc/en-us/requests/new",
-              "last": true,
-            },
-            "ref": null,
-            "rendered": "Support",
-            "type": [Function],
-          },
-        ],
-        "type": [Function],
-      },
-      false,
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "children": Array [
-            <ListItem
-              accessible={true}
-              onPress={[Function]}
-            >
-              Device
-            </ListItem>,
-            false,
-            <ListItem
-              accessible={true}
-              onPress={[Function]}
-            >
-              System Messages
-            </ListItem>,
-            <ListItem
-              accessible={true}
-              last={true}
-              onPress={[Function]}
-            >
-              Network
-            </ListItem>,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "accessible": true,
-              "children": "Device",
-              "onPress": [Function],
-            },
-            "ref": null,
-            "rendered": "Device",
-            "type": [Function],
-          },
-          false,
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "accessible": true,
-              "children": "System Messages",
-              "onPress": [Function],
-            },
-            "ref": null,
-            "rendered": "System Messages",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "accessible": true,
-              "children": "Network",
-              "last": true,
-              "onPress": [Function],
-            },
-            "ref": null,
-            "rendered": "Network",
-            "type": [Function],
-          },
-        ],
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "children": Array [
-            <ListItem
-              accessible={true}
-              onPress={[Function]}
-            >
-              Privacy Policy
-            </ListItem>,
-            <ListItem
-              accessible={true}
-              accessoryRight="v1.2 (5/24/2018)"
-              last={true}
-              onPress={[Function]}
-            >
-              Terms & Conditions
-            </ListItem>,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "accessible": true,
-              "children": "Privacy Policy",
-              "onPress": [Function],
-            },
-            "ref": null,
-            "rendered": "Privacy Policy",
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "accessible": true,
-              "accessoryRight": "v1.2 (5/24/2018)",
-              "children": "Terms & Conditions",
-              "last": true,
-              "onPress": [Function],
-            },
-            "ref": null,
-            "rendered": "Terms & Conditions",
-            "type": [Function],
-          },
-        ],
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "children": <ListItem
-            accessible={true}
-            last={true}
-            onPress={[Function]}
-          >
-            Design System
-          </ListItem>,
-          "title": "Developer Options",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "accessible": true,
-            "children": "Design System",
-            "last": true,
-            "onPress": [Function],
-          },
-          "ref": null,
-          "rendered": "Design System",
-          "type": [Function],
-        },
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "paddingBottom": true,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "children": Array [
-          <Section>
-            <ListItem
-              accessible={true}
-              accessoryRight="256 (undefined)"
-              hideForwardArrow={true}
-              onPress={[Function]}
-            >
-              Version
-            </ListItem>
-            <ListItem
-              accessible={true}
-              onPress={[Function]}
-            >
-              uPort ID
-            </ListItem>
-            <ListItem
-              accessible={true}
-              onPress={[Function]}
-            >
-              Try uPort
-            </ListItem>
-            <ListItem
-              accessible={true}
-              externalLink="https://uport.zendesk.com/hc/en-us/requests/new"
-              last={true}
-            >
-              Support
-            </ListItem>
-          </Section>,
-          false,
-          <Section>
-            <ListItem
-              accessible={true}
-              onPress={[Function]}
-            >
-              Device
-            </ListItem>
-            <ListItem
-              accessible={true}
-              onPress={[Function]}
-            >
-              System Messages
-            </ListItem>
-            <ListItem
-              accessible={true}
-              last={true}
-              onPress={[Function]}
-            >
-              Network
-            </ListItem>
-          </Section>,
-          <Section>
-            <ListItem
-              accessible={true}
-              onPress={[Function]}
-            >
-              Privacy Policy
-            </ListItem>
-            <ListItem
-              accessible={true}
-              accessoryRight="v1.2 (5/24/2018)"
-              last={true}
-              onPress={[Function]}
-            >
-              Terms & Conditions
-            </ListItem>
-          </Section>,
-          <Section
-            title="Developer Options"
-          >
-            <ListItem
-              accessible={true}
-              last={true}
-              onPress={[Function]}
-            >
-              Design System
-            </ListItem>
-          </Section>,
-          <Container
-            paddingBottom={true}
-          />,
-        ],
-        "config": "safeScroll",
-        "keyboardAvoiding": false,
-        "statusBarHidden": false,
-        "type": "secondary",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "children": Array [
-              <ListItem
-                accessible={true}
-                accessoryRight="256 (undefined)"
-                hideForwardArrow={true}
-                onPress={[Function]}
-              >
-                Version
-              </ListItem>,
-              <ListItem
-                accessible={true}
-                onPress={[Function]}
-              >
-                uPort ID
-              </ListItem>,
-              <ListItem
-                accessible={true}
-                onPress={[Function]}
-              >
-                Try uPort
-              </ListItem>,
-              <ListItem
-                accessible={true}
-                externalLink="https://uport.zendesk.com/hc/en-us/requests/new"
-                last={true}
-              >
-                Support
-              </ListItem>,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "accessible": true,
-                "accessoryRight": "256 (undefined)",
-                "children": "Version",
-                "hideForwardArrow": true,
-                "onPress": [Function],
-              },
-              "ref": null,
-              "rendered": "Version",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "accessible": true,
-                "children": "uPort ID",
-                "onPress": [Function],
-              },
-              "ref": null,
-              "rendered": "uPort ID",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "accessible": true,
-                "children": "Try uPort",
-                "onPress": [Function],
-              },
-              "ref": null,
-              "rendered": "Try uPort",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "accessible": true,
-                "children": "Support",
-                "externalLink": "https://uport.zendesk.com/hc/en-us/requests/new",
-                "last": true,
-              },
-              "ref": null,
-              "rendered": "Support",
-              "type": [Function],
-            },
-          ],
-          "type": [Function],
-        },
-        false,
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "children": Array [
-              <ListItem
-                accessible={true}
-                onPress={[Function]}
-              >
-                Device
-              </ListItem>,
-              false,
-              <ListItem
-                accessible={true}
-                onPress={[Function]}
-              >
-                System Messages
-              </ListItem>,
-              <ListItem
-                accessible={true}
-                last={true}
-                onPress={[Function]}
-              >
-                Network
-              </ListItem>,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "accessible": true,
-                "children": "Device",
-                "onPress": [Function],
-              },
-              "ref": null,
-              "rendered": "Device",
-              "type": [Function],
-            },
-            false,
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "accessible": true,
-                "children": "System Messages",
-                "onPress": [Function],
-              },
-              "ref": null,
-              "rendered": "System Messages",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "accessible": true,
-                "children": "Network",
-                "last": true,
-                "onPress": [Function],
-              },
-              "ref": null,
-              "rendered": "Network",
-              "type": [Function],
-            },
-          ],
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "children": Array [
-              <ListItem
-                accessible={true}
-                onPress={[Function]}
-              >
-                Privacy Policy
-              </ListItem>,
-              <ListItem
-                accessible={true}
-                accessoryRight="v1.2 (5/24/2018)"
-                last={true}
-                onPress={[Function]}
-              >
-                Terms & Conditions
-              </ListItem>,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "accessible": true,
-                "children": "Privacy Policy",
-                "onPress": [Function],
-              },
-              "ref": null,
-              "rendered": "Privacy Policy",
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "accessible": true,
-                "accessoryRight": "v1.2 (5/24/2018)",
-                "children": "Terms & Conditions",
-                "last": true,
-                "onPress": [Function],
-              },
-              "ref": null,
-              "rendered": "Terms & Conditions",
-              "type": [Function],
-            },
-          ],
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "children": <ListItem
-              accessible={true}
-              last={true}
-              onPress={[Function]}
-            >
-              Design System
-            </ListItem>,
-            "title": "Developer Options",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "accessible": true,
-              "children": "Design System",
-              "last": true,
-              "onPress": [Function],
-            },
-            "ref": null,
-            "rendered": "Design System",
-            "type": [Function],
-          },
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "paddingBottom": true,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    "context": Object {
-      "store": Object {
-        "clearActions": [Function],
-        "dispatch": [Function],
-        "getActions": [Function],
-        "getState": [Function],
-        "replaceReducer": [Function],
-        "subscribe": [Function],
-      },
-      "storeSubscription": Subscription {
-        "listeners": Object {
-          "clear": [Function],
-          "get": [Function],
-          "notify": [Function],
-          "subscribe": [Function],
-        },
-        "onStateChange": [Function],
-        "parentSub": undefined,
-        "store": Object {
-          "clearActions": [Function],
-          "dispatch": [Function],
-          "getActions": [Function],
-          "getState": [Function],
-          "replaceReducer": [Function],
-          "subscribe": [Function],
-        },
-        "unsubscribe": [Function],
-      },
-    },
-  },
-  Symbol(enzyme.__childContext__): null,
-}
-`;
+exports[`SettingsRoot renders a connected SettingsRoot as expected 1`] = `ShallowWrapper {}`;
 
 exports[`SettingsRoot renders without exploding 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   style={
     Object {
       "backgroundColor": "#EFEEF3",
@@ -3657,9 +2816,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -3723,9 +2879,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
                         }
                       >
                         <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
                           style={
                             Object {
                               "color": "#BBBBBB",
@@ -3884,9 +3037,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -4102,9 +3252,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -4318,9 +3465,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -4592,9 +3736,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -4810,9 +3951,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -5026,9 +4164,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -5300,9 +4435,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -5516,9 +4648,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -5582,9 +4711,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
                         }
                       >
                         <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
                           style={
                             Object {
                               "color": "#BBBBBB",
@@ -5657,9 +4783,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#BBBBBB",
@@ -5842,9 +4965,6 @@ exports[`SettingsRoot renders without exploding 1`] = `
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",

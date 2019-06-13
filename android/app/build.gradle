@@ -174,7 +174,7 @@ android {
         multiDexKeepFile file('multidex-config.txt')
 
         missingDimensionStrategy 'react-native-camera', 'general'
-        missingDimensionStrategy "RNN.reactNativeVersion", "reactNative55"
+        missingDimensionStrategy "RNN.reactNativeVersion", "reactNative57_5"
 
     }
 
@@ -184,7 +184,7 @@ android {
             reset()
             enable enableSeparateBuildPerCPUArchitecture
             universalApk false  // If true, also generate a universal APK
-            include "armeabi-v7a", "x86"
+            include "armeabi-v7a", "x86", "arm64-v8a", "x86-64"
         }
     }
 
@@ -226,7 +226,7 @@ android {
             variant.outputs.each { output ->
                 // For each separate APK per architecture, set a unique version code as described here:
                 // http://tools.android.com/tech-docs/new-build-system/user-guide/apk-splits
-                def versionCodes = ["armeabi-v7a": 1, "x86": 2]
+                def versionCodes = ["armeabi-v7a":1, "x86":2, "arm64-v8a": 3, "x86-64": 4]
                 def abi = output.getFilter(OutputFile.ABI)
                 if (abi != null) {  // null for the universal-debug, universal-release variants
                     output.versionCodeOverride =
@@ -266,6 +266,9 @@ configurations.all {
 }
 
 dependencies {
+    implementation project(':react-native-community-netinfo')
+    implementation project(':@react-native-community_async-storage')
+    implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation project(':react-native-share')
     implementation(project(':react-native-firebase')) {
         transitive = false
@@ -273,7 +276,7 @@ dependencies {
     implementation project(':react-native-svg')
     implementation project(':react-native-navigation')
     implementation project(':react-native-device-info')
-    implementation project(':react-native-fetch-blob')
+    implementation project(':rn-fetch-blob')
     implementation project(':react-native-vector-icons')
     implementation project(':react-native-passcode-android')
     implementation project(':react-native-randombytes')

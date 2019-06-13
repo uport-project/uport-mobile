@@ -51,6 +51,9 @@ import com.reactnativenavigation.NavigationApplication;
 import com.reactnativenavigation.react.NavigationReactNativeHost;
 import com.reactnativenavigation.react.ReactGateway;
 
+import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
+import com.reactnativecommunity.netinfo.NetInfoPackage;
+
 public class MainApplication extends NavigationApplication implements ShareApplication {
 
     @Override
@@ -58,7 +61,7 @@ public class MainApplication extends NavigationApplication implements ShareAppli
         ReactNativeHost host = new NavigationReactNativeHost(this, isDebug(), createAdditionalReactPackages()) {
             @Override
             protected String getJSMainModuleName() {
-                return "index.android";
+                return "index";
             }
         };
         return new ReactGateway(this, isDebug(), host);
@@ -97,7 +100,8 @@ public class MainApplication extends NavigationApplication implements ShareAppli
                 new RNFirebaseMessagingPackage(), new SvgPackage(), new RNDeviceInfo(), new RNFetchBlobPackage(),
                 new VectorIconsPackage(), new RNCameraPackage(), new RandomBytesPackage(), new ImagePickerPackage(),
                 new AuthenticationScreenPackage(), new MySNSPackage(), new IntentLauncherPackage(),
-                new RNUportSignerPackage(), new RNFirebaseAnalyticsPackage());
+                new RNUportSignerPackage(), new RNFirebaseAnalyticsPackage(), new AsyncStoragePackage(),
+                new NetInfoPackage());
     }
 
 }

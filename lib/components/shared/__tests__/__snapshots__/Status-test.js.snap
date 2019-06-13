@@ -14,9 +14,6 @@ exports[`container renders error status 1`] = `
   }
 >
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -48,9 +45,6 @@ exports[`container renders offline status 1`] = `
   }
 >
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -116,9 +110,6 @@ exports[`container renders working status 2`] = `
     }
   />
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -159,9 +150,6 @@ exports[`renders activity indicator and error if working 1`] = `
     }
   />
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -204,9 +192,6 @@ exports[`renders activity indicator and message if working 1`] = `
     }
   />
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -261,9 +246,6 @@ exports[`renders error 1`] = `
   }
 >
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -295,9 +277,6 @@ exports[`renders message 1`] = `
   }
 >
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -327,9 +306,6 @@ exports[`renders message with custom color 1`] = `
   }
 >
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -363,9 +339,6 @@ exports[`renders offline message if offline 1`] = `
   }
 >
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -395,9 +368,6 @@ exports[`renders offline message in custom color if offline 1`] = `
   }
 >
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Array [
         Object {

@@ -1,857 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ConnectionCard renders a connected Connection Card index as expected 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <ConnectionCard
-    authorizeRequest={[Function]}
-    cancelRequest={[Function]}
-    clearRequest={[Function]}
-    contact={Object {}}
-    navigator={FakeNavigator {}}
-    request={Object {}}
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "class",
-    "props": Object {
-      "children": Array [
-        <Component
-          style={
-            Object {
-              "backgroundColor": undefined,
-              "flexDirection": "row",
-              "height": 120.00000000000001,
-              "justifyContent": "flex-start",
-              "width": 750,
-            }
-          }
-        >
-          <TouchableOpacity
-            activeOpacity={0.2}
-            onPress={[Function]}
-            style={
-              Object {
-                "height": 80,
-                "marginBottom": 15,
-                "width": 80,
-              }
-            }
-          >
-            <Icon
-              name="ios-close"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                  "fontSize": 40,
-                  "marginLeft": 20,
-                  "marginTop": 20,
-                }
-              }
-            />
-          </TouchableOpacity>
-        </Component>,
-        <Component
-          style={
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "borderColor": "#FFFFFF",
-              "borderRadius": 5,
-              "height": 200,
-              "justifyContent": "center",
-              "marginTop": -100,
-              "shadowColor": "rgb(16,18,32)",
-              "shadowOffset": Object {
-                "height": 2,
-                "width": 0,
-              },
-              "shadowOpacity": 0.2,
-              "width": 200,
-            }
-          }
-        >
-          <Avatar
-            size={184}
-            source={Object {}}
-          />
-        </Component>,
-        <Component
-          style={
-            Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": undefined,
-              "borderRadius": 60,
-              "height": 58,
-              "justifyContent": "center",
-              "marginTop": 30.000000000000004,
-              "paddingLeft": 8,
-              "paddingRight": 8,
-            }
-          }
-        >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Object {
-                "color": "#FFFFFF",
-                "fontFamily": undefined,
-                "fontSize": 13,
-                "letterSpacing": 1,
-                "lineHeight": 15,
-                "textAlign": "center",
-              }
-            }
-          >
-            CONTRACT
-          </Text>
-        </Component>,
-        <Component
-          style={
-            Object {
-              "flex": 1,
-            }
-          }
-        >
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Object {
-                "color": undefined,
-                "fontFamily": undefined,
-                "fontSize": 20,
-                "lineHeight": 24,
-                "marginBottom": 20,
-                "marginTop": 16,
-                "textAlign": "center",
-              }
-            }
-          />
-        </Component>,
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-        >
-          Cannot add yourself
-        </Text>,
-      ],
-      "style": Object {
-        "alignItems": "stretch",
-        "flex": 1,
-      },
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": <TouchableOpacity
-            activeOpacity={0.2}
-            onPress={[Function]}
-            style={
-              Object {
-                "height": 80,
-                "marginBottom": 15,
-                "width": 80,
-              }
-            }
-          >
-            <Icon
-              name="ios-close"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                  "fontSize": 40,
-                  "marginLeft": 20,
-                  "marginTop": 20,
-                }
-              }
-            />
-          </TouchableOpacity>,
-          "style": Object {
-            "backgroundColor": undefined,
-            "flexDirection": "row",
-            "height": 120.00000000000001,
-            "justifyContent": "flex-start",
-            "width": 750,
-          },
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "activeOpacity": 0.2,
-            "children": <Icon
-              name="ios-close"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                  "fontSize": 40,
-                  "marginLeft": 20,
-                  "marginTop": 20,
-                }
-              }
-            />,
-            "onPress": [Function],
-            "style": Object {
-              "height": 80,
-              "marginBottom": 15,
-              "width": 80,
-            },
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "name": "ios-close",
-              "style": Object {
-                "color": "#FFFFFF",
-                "fontSize": 40,
-                "marginLeft": 20,
-                "marginTop": 20,
-              },
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          "type": [Function],
-        },
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": <Avatar
-            size={184}
-            source={Object {}}
-          />,
-          "style": Object {
-            "alignItems": "center",
-            "alignSelf": "center",
-            "borderColor": "#FFFFFF",
-            "borderRadius": 5,
-            "height": 200,
-            "justifyContent": "center",
-            "marginTop": -100,
-            "shadowColor": "rgb(16,18,32)",
-            "shadowOffset": Object {
-              "height": 2,
-              "width": 0,
-            },
-            "shadowOpacity": 0.2,
-            "width": 200,
-          },
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "size": 184,
-            "source": Object {},
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Object {
-                "color": "#FFFFFF",
-                "fontFamily": undefined,
-                "fontSize": 13,
-                "letterSpacing": 1,
-                "lineHeight": 15,
-                "textAlign": "center",
-              }
-            }
-          >
-            CONTRACT
-          </Text>,
-          "style": Object {
-            "alignItems": "center",
-            "alignSelf": "center",
-            "backgroundColor": undefined,
-            "borderRadius": 60,
-            "height": 58,
-            "justifyContent": "center",
-            "marginTop": 30.000000000000004,
-            "paddingLeft": 8,
-            "paddingRight": 8,
-          },
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "accessible": true,
-            "allowFontScaling": true,
-            "children": "CONTRACT",
-            "ellipsizeMode": "tail",
-            "style": Object {
-              "color": "#FFFFFF",
-              "fontFamily": undefined,
-              "fontSize": 13,
-              "letterSpacing": 1,
-              "lineHeight": 15,
-              "textAlign": "center",
-            },
-          },
-          "ref": null,
-          "rendered": "CONTRACT",
-          "type": [Function],
-        },
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Object {
-                "color": undefined,
-                "fontFamily": undefined,
-                "fontSize": 20,
-                "lineHeight": 24,
-                "marginBottom": 20,
-                "marginTop": 16,
-                "textAlign": "center",
-              }
-            }
-          />,
-          "style": Object {
-            "flex": 1,
-          },
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "accessible": true,
-            "allowFontScaling": true,
-            "children": null,
-            "ellipsizeMode": "tail",
-            "style": Object {
-              "color": undefined,
-              "fontFamily": undefined,
-              "fontSize": 20,
-              "lineHeight": 24,
-              "marginBottom": 20,
-              "marginTop": 16,
-              "textAlign": "center",
-            },
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "accessible": true,
-          "allowFontScaling": true,
-          "children": "Cannot add yourself",
-          "ellipsizeMode": "tail",
-        },
-        "ref": null,
-        "rendered": "Cannot add yourself",
-        "type": [Function],
-      },
-    ],
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": Array [
-          <Component
-            style={
-              Object {
-                "backgroundColor": undefined,
-                "flexDirection": "row",
-                "height": 120.00000000000001,
-                "justifyContent": "flex-start",
-                "width": 750,
-              }
-            }
-          >
-            <TouchableOpacity
-              activeOpacity={0.2}
-              onPress={[Function]}
-              style={
-                Object {
-                  "height": 80,
-                  "marginBottom": 15,
-                  "width": 80,
-                }
-              }
-            >
-              <Icon
-                name="ios-close"
-                style={
-                  Object {
-                    "color": "#FFFFFF",
-                    "fontSize": 40,
-                    "marginLeft": 20,
-                    "marginTop": 20,
-                  }
-                }
-              />
-            </TouchableOpacity>
-          </Component>,
-          <Component
-            style={
-              Object {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "borderColor": "#FFFFFF",
-                "borderRadius": 5,
-                "height": 200,
-                "justifyContent": "center",
-                "marginTop": -100,
-                "shadowColor": "rgb(16,18,32)",
-                "shadowOffset": Object {
-                  "height": 2,
-                  "width": 0,
-                },
-                "shadowOpacity": 0.2,
-                "width": 200,
-              }
-            }
-          >
-            <Avatar
-              size={184}
-              source={Object {}}
-            />
-          </Component>,
-          <Component
-            style={
-              Object {
-                "alignItems": "center",
-                "alignSelf": "center",
-                "backgroundColor": undefined,
-                "borderRadius": 60,
-                "height": 58,
-                "justifyContent": "center",
-                "marginTop": 30.000000000000004,
-                "paddingLeft": 8,
-                "paddingRight": 8,
-              }
-            }
-          >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                  "fontFamily": undefined,
-                  "fontSize": 13,
-                  "letterSpacing": 1,
-                  "lineHeight": 15,
-                  "textAlign": "center",
-                }
-              }
-            >
-              CONTRACT
-            </Text>
-          </Component>,
-          <Component
-            style={
-              Object {
-                "flex": 1,
-              }
-            }
-          >
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": undefined,
-                  "fontFamily": undefined,
-                  "fontSize": 20,
-                  "lineHeight": 24,
-                  "marginBottom": 20,
-                  "marginTop": 16,
-                  "textAlign": "center",
-                }
-              }
-            />
-          </Component>,
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-          >
-            Cannot add yourself
-          </Text>,
-        ],
-        "style": Object {
-          "alignItems": "stretch",
-          "flex": 1,
-        },
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": <TouchableOpacity
-              activeOpacity={0.2}
-              onPress={[Function]}
-              style={
-                Object {
-                  "height": 80,
-                  "marginBottom": 15,
-                  "width": 80,
-                }
-              }
-            >
-              <Icon
-                name="ios-close"
-                style={
-                  Object {
-                    "color": "#FFFFFF",
-                    "fontSize": 40,
-                    "marginLeft": 20,
-                    "marginTop": 20,
-                  }
-                }
-              />
-            </TouchableOpacity>,
-            "style": Object {
-              "backgroundColor": undefined,
-              "flexDirection": "row",
-              "height": 120.00000000000001,
-              "justifyContent": "flex-start",
-              "width": 750,
-            },
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "activeOpacity": 0.2,
-              "children": <Icon
-                name="ios-close"
-                style={
-                  Object {
-                    "color": "#FFFFFF",
-                    "fontSize": 40,
-                    "marginLeft": 20,
-                    "marginTop": 20,
-                  }
-                }
-              />,
-              "onPress": [Function],
-              "style": Object {
-                "height": 80,
-                "marginBottom": 15,
-                "width": 80,
-              },
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "name": "ios-close",
-                "style": Object {
-                  "color": "#FFFFFF",
-                  "fontSize": 40,
-                  "marginLeft": 20,
-                  "marginTop": 20,
-                },
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": [Function],
-          },
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": <Avatar
-              size={184}
-              source={Object {}}
-            />,
-            "style": Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "borderColor": "#FFFFFF",
-              "borderRadius": 5,
-              "height": 200,
-              "justifyContent": "center",
-              "marginTop": -100,
-              "shadowColor": "rgb(16,18,32)",
-              "shadowOffset": Object {
-                "height": 2,
-                "width": 0,
-              },
-              "shadowOpacity": 0.2,
-              "width": 200,
-            },
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "size": 184,
-              "source": Object {},
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": "#FFFFFF",
-                  "fontFamily": undefined,
-                  "fontSize": 13,
-                  "letterSpacing": 1,
-                  "lineHeight": 15,
-                  "textAlign": "center",
-                }
-              }
-            >
-              CONTRACT
-            </Text>,
-            "style": Object {
-              "alignItems": "center",
-              "alignSelf": "center",
-              "backgroundColor": undefined,
-              "borderRadius": 60,
-              "height": 58,
-              "justifyContent": "center",
-              "marginTop": 30.000000000000004,
-              "paddingLeft": 8,
-              "paddingRight": 8,
-            },
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "accessible": true,
-              "allowFontScaling": true,
-              "children": "CONTRACT",
-              "ellipsizeMode": "tail",
-              "style": Object {
-                "color": "#FFFFFF",
-                "fontFamily": undefined,
-                "fontSize": 13,
-                "letterSpacing": 1,
-                "lineHeight": 15,
-                "textAlign": "center",
-              },
-            },
-            "ref": null,
-            "rendered": "CONTRACT",
-            "type": [Function],
-          },
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              style={
-                Object {
-                  "color": undefined,
-                  "fontFamily": undefined,
-                  "fontSize": 20,
-                  "lineHeight": 24,
-                  "marginBottom": 20,
-                  "marginTop": 16,
-                  "textAlign": "center",
-                }
-              }
-            />,
-            "style": Object {
-              "flex": 1,
-            },
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "accessible": true,
-              "allowFontScaling": true,
-              "children": null,
-              "ellipsizeMode": "tail",
-              "style": Object {
-                "color": undefined,
-                "fontFamily": undefined,
-                "fontSize": 20,
-                "lineHeight": 24,
-                "marginBottom": 20,
-                "marginTop": 16,
-                "textAlign": "center",
-              },
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "accessible": true,
-            "allowFontScaling": true,
-            "children": "Cannot add yourself",
-            "ellipsizeMode": "tail",
-          },
-          "ref": null,
-          "rendered": "Cannot add yourself",
-          "type": [Function],
-        },
-      ],
-      "type": [Function],
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    "context": Object {
-      "store": Object {
-        "clearActions": [Function],
-        "dispatch": [Function],
-        "getActions": [Function],
-        "getState": [Function],
-        "replaceReducer": [Function],
-        "subscribe": [Function],
-      },
-      "storeSubscription": Subscription {
-        "listeners": Object {
-          "clear": [Function],
-          "get": [Function],
-          "notify": [Function],
-          "subscribe": [Function],
-        },
-        "onStateChange": [Function],
-        "parentSub": undefined,
-        "store": Object {
-          "clearActions": [Function],
-          "dispatch": [Function],
-          "getActions": [Function],
-          "getState": [Function],
-          "replaceReducer": [Function],
-          "subscribe": [Function],
-        },
-        "unsubscribe": [Function],
-      },
-    },
-  },
-}
-`;
+exports[`ConnectionCard renders a connected Connection Card index as expected 1`] = `ShallowWrapper {}`;
 
 exports[`ConnectionCard renders correctly with a authorizedAt Request 1`] = `
 <View
@@ -948,9 +97,6 @@ exports[`ConnectionCard renders correctly with a authorizedAt Request 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -986,9 +132,6 @@ exports[`ConnectionCard renders correctly with a authorizedAt Request 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#FFFFFF",
@@ -1011,9 +154,6 @@ exports[`ConnectionCard renders correctly with a authorizedAt Request 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": undefined,
@@ -1031,9 +171,6 @@ exports[`ConnectionCard renders correctly with a authorizedAt Request 1`] = `
   </View>
   <View>
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#ffffff",
@@ -1144,9 +281,6 @@ exports[`ConnectionCard renders correctly with a cancelled Request 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -1182,9 +316,6 @@ exports[`ConnectionCard renders correctly with a cancelled Request 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#FFFFFF",
@@ -1207,9 +338,6 @@ exports[`ConnectionCard renders correctly with a cancelled Request 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": undefined,
@@ -1227,9 +355,6 @@ exports[`ConnectionCard renders correctly with a cancelled Request 1`] = `
   </View>
   <View>
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#ffffff",
@@ -1340,9 +465,6 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -1378,9 +500,6 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#FFFFFF",
@@ -1403,9 +522,6 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": undefined,
@@ -1463,9 +579,6 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -1513,9 +626,6 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -1639,9 +749,6 @@ exports[`ConnectionCard renders correctly with a contact that is me 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -1677,9 +784,6 @@ exports[`ConnectionCard renders correctly with a contact that is me 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#FFFFFF",
@@ -1702,9 +806,6 @@ exports[`ConnectionCard renders correctly with a contact that is me 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": undefined,
@@ -1722,9 +823,6 @@ exports[`ConnectionCard renders correctly with a contact that is me 1`] = `
   </View>
   <View>
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#ffffff",
@@ -1835,9 +933,6 @@ exports[`ConnectionCard renders correctly with a existing Request 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -1873,9 +968,6 @@ exports[`ConnectionCard renders correctly with a existing Request 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#FFFFFF",
@@ -1898,9 +990,6 @@ exports[`ConnectionCard renders correctly with a existing Request 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": undefined,
@@ -1918,9 +1007,6 @@ exports[`ConnectionCard renders correctly with a existing Request 1`] = `
   </View>
   <View>
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#ffffff",
@@ -2071,9 +1157,6 @@ exports[`ConnectionCard renders correctly with an unkown contact 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#FFFFFF",
@@ -2096,9 +1179,6 @@ exports[`ConnectionCard renders correctly with an unkown contact 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": undefined,
@@ -2154,9 +1234,6 @@ exports[`ConnectionCard renders correctly with an unkown contact 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -2204,9 +1281,6 @@ exports[`ConnectionCard renders correctly with an unkown contact 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Array [
             Object {

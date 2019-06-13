@@ -40,9 +40,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi with arg
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -101,9 +98,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi with arg
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -116,9 +110,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi with arg
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -130,9 +121,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi with arg
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -230,9 +218,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi with arg
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -244,9 +229,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi with arg
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -296,9 +278,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi with arg
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -354,9 +333,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi with arg
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -367,9 +343,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi with arg
           Function
         </Text>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -433,9 +406,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi with arg
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "#FFFFFF",
@@ -493,9 +463,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi without 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -554,9 +521,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi without 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -569,9 +533,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi without 
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -583,9 +544,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi without 
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -683,9 +641,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi without 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -697,9 +652,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi without 
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -749,9 +701,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi without 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -798,18 +747,10 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi without 
           }
         }
       >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-        >
+        <Text>
           Value
         </Text>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-        >
+        <Text>
           1.01 ETH
            
         </Text>
@@ -837,9 +778,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi without 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -850,9 +788,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi without 
           Function
         </Text>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -916,9 +851,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi without 
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "#FFFFFF",
@@ -976,9 +908,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with both client 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -1037,9 +966,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with both client 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -1052,9 +978,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with both client 
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -1066,9 +989,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with both client 
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -1133,9 +1053,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with both client 
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -1166,9 +1083,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with both client 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -1180,9 +1094,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with both client 
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -1232,9 +1143,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with both client 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -1320,9 +1228,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with both client 
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "#FFFFFF",
@@ -1380,9 +1285,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -1441,9 +1343,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -1456,9 +1355,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -1470,9 +1366,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -1537,9 +1430,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -1570,9 +1460,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -1584,9 +1471,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -1636,9 +1520,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -1718,9 +1599,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": undefined,
@@ -1735,8 +1613,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
               Error:
             </Text>
             <Text
-              accessible={true}
-              allowFontScaling={true}
               ellipsizeMode="tail"
               style={
                 Object {
@@ -1820,9 +1696,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -1881,9 +1754,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -1896,9 +1766,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -1910,9 +1777,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -1977,9 +1841,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -2010,9 +1871,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -2024,9 +1882,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -2076,9 +1931,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -2164,9 +2016,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "#FFFFFF",
@@ -2224,9 +2073,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with only request
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -2285,9 +2131,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with only request
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -2300,9 +2143,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with only request
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -2314,9 +2154,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with only request
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -2414,9 +2251,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with only request
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -2428,9 +2262,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with only request
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -2480,9 +2311,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with only request
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -2568,9 +2396,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with only request
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "#FFFFFF",
@@ -2628,9 +2453,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -2689,9 +2511,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -2704,9 +2523,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -2718,9 +2534,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -2818,9 +2631,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -2832,9 +2642,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -2884,9 +2691,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -2972,9 +2776,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "#FFFFFF",
@@ -3032,9 +2833,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -3093,9 +2891,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -3108,9 +2903,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -3122,9 +2914,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -3222,9 +3011,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -3236,9 +3022,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -3288,9 +3071,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -3376,9 +3156,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "#FFFFFF",
@@ -3436,9 +3213,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -3497,9 +3271,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -3512,9 +3283,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -3526,9 +3294,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -3626,9 +3391,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -3640,9 +3402,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -3692,9 +3451,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -3780,9 +3536,6 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "#FFFFFF",
@@ -3840,9 +3593,6 @@ exports[`TransactionCard keyPair renders correctly with abi with args and a no v
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -3901,9 +3651,6 @@ exports[`TransactionCard keyPair renders correctly with abi with args and a no v
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -3916,9 +3663,6 @@ exports[`TransactionCard keyPair renders correctly with abi with args and a no v
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -3930,9 +3674,6 @@ exports[`TransactionCard keyPair renders correctly with abi with args and a no v
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -4030,9 +3771,6 @@ exports[`TransactionCard keyPair renders correctly with abi with args and a no v
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -4044,9 +3782,6 @@ exports[`TransactionCard keyPair renders correctly with abi with args and a no v
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -4096,9 +3831,6 @@ exports[`TransactionCard keyPair renders correctly with abi with args and a no v
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -4154,9 +3886,6 @@ exports[`TransactionCard keyPair renders correctly with abi with args and a no v
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -4167,9 +3896,6 @@ exports[`TransactionCard keyPair renders correctly with abi with args and a no v
           Function
         </Text>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -4182,9 +3908,6 @@ exports[`TransactionCard keyPair renders correctly with abi with args and a no v
       </View>
       <View>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -4221,9 +3944,6 @@ exports[`TransactionCard keyPair renders correctly with abi with args and a no v
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -4235,9 +3955,6 @@ exports[`TransactionCard keyPair renders correctly with abi with args and a no v
           </Text>
           <View>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
@@ -4251,9 +3968,6 @@ exports[`TransactionCard keyPair renders correctly with abi with args and a no v
               USD
             </Text>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
@@ -4322,9 +4036,6 @@ exports[`TransactionCard keyPair renders correctly with abi with args and a no v
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "#FFFFFF",
@@ -4382,9 +4093,6 @@ exports[`TransactionCard keyPair renders correctly with abi without args and val
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -4443,9 +4151,6 @@ exports[`TransactionCard keyPair renders correctly with abi without args and val
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -4458,9 +4163,6 @@ exports[`TransactionCard keyPair renders correctly with abi without args and val
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -4472,9 +4174,6 @@ exports[`TransactionCard keyPair renders correctly with abi without args and val
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -4572,9 +4271,6 @@ exports[`TransactionCard keyPair renders correctly with abi without args and val
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -4586,9 +4282,6 @@ exports[`TransactionCard keyPair renders correctly with abi without args and val
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -4638,9 +4331,6 @@ exports[`TransactionCard keyPair renders correctly with abi without args and val
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -4687,18 +4377,10 @@ exports[`TransactionCard keyPair renders correctly with abi without args and val
           }
         }
       >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-        >
+        <Text>
           Value
         </Text>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-        >
+        <Text>
           1.01 ETH
            
         </Text>
@@ -4726,9 +4408,6 @@ exports[`TransactionCard keyPair renders correctly with abi without args and val
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -4739,9 +4418,6 @@ exports[`TransactionCard keyPair renders correctly with abi without args and val
           Function
         </Text>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -4754,9 +4430,6 @@ exports[`TransactionCard keyPair renders correctly with abi without args and val
       </View>
       <View>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -4793,9 +4466,6 @@ exports[`TransactionCard keyPair renders correctly with abi without args and val
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -4807,9 +4477,6 @@ exports[`TransactionCard keyPair renders correctly with abi without args and val
           </Text>
           <View>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
@@ -4823,9 +4490,6 @@ exports[`TransactionCard keyPair renders correctly with abi without args and val
               USD
             </Text>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
@@ -4894,9 +4558,6 @@ exports[`TransactionCard keyPair renders correctly with abi without args and val
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "#FFFFFF",
@@ -4954,9 +4615,6 @@ exports[`TransactionCard keyPair renders correctly with both client and destinat
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -5015,9 +4673,6 @@ exports[`TransactionCard keyPair renders correctly with both client and destinat
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -5030,9 +4685,6 @@ exports[`TransactionCard keyPair renders correctly with both client and destinat
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -5044,9 +4696,6 @@ exports[`TransactionCard keyPair renders correctly with both client and destinat
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -5111,9 +4760,6 @@ exports[`TransactionCard keyPair renders correctly with both client and destinat
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -5144,9 +4790,6 @@ exports[`TransactionCard keyPair renders correctly with both client and destinat
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -5158,9 +4801,6 @@ exports[`TransactionCard keyPair renders correctly with both client and destinat
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -5210,9 +4850,6 @@ exports[`TransactionCard keyPair renders correctly with both client and destinat
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -5247,9 +4884,6 @@ exports[`TransactionCard keyPair renders correctly with both client and destinat
       </View>
       <View>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -5286,9 +4920,6 @@ exports[`TransactionCard keyPair renders correctly with both client and destinat
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -5300,9 +4931,6 @@ exports[`TransactionCard keyPair renders correctly with both client and destinat
           </Text>
           <View>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
@@ -5316,9 +4944,6 @@ exports[`TransactionCard keyPair renders correctly with both client and destinat
               USD
             </Text>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
@@ -5387,9 +5012,6 @@ exports[`TransactionCard keyPair renders correctly with both client and destinat
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "#FFFFFF",
@@ -5447,9 +5069,6 @@ exports[`TransactionCard keyPair renders correctly with destination being invali
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -5508,9 +5127,6 @@ exports[`TransactionCard keyPair renders correctly with destination being invali
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -5523,9 +5139,6 @@ exports[`TransactionCard keyPair renders correctly with destination being invali
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -5537,9 +5150,6 @@ exports[`TransactionCard keyPair renders correctly with destination being invali
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -5604,9 +5214,6 @@ exports[`TransactionCard keyPair renders correctly with destination being invali
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -5637,9 +5244,6 @@ exports[`TransactionCard keyPair renders correctly with destination being invali
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -5651,9 +5255,6 @@ exports[`TransactionCard keyPair renders correctly with destination being invali
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -5703,9 +5304,6 @@ exports[`TransactionCard keyPair renders correctly with destination being invali
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -5740,9 +5338,6 @@ exports[`TransactionCard keyPair renders correctly with destination being invali
       </View>
       <View>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -5779,9 +5374,6 @@ exports[`TransactionCard keyPair renders correctly with destination being invali
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -5793,9 +5385,6 @@ exports[`TransactionCard keyPair renders correctly with destination being invali
           </Text>
           <View>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
@@ -5809,9 +5398,6 @@ exports[`TransactionCard keyPair renders correctly with destination being invali
               USD
             </Text>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
@@ -5874,9 +5460,6 @@ exports[`TransactionCard keyPair renders correctly with destination being invali
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": undefined,
@@ -5891,8 +5474,6 @@ exports[`TransactionCard keyPair renders correctly with destination being invali
               Error:
             </Text>
             <Text
-              accessible={true}
-              allowFontScaling={true}
               ellipsizeMode="tail"
               style={
                 Object {
@@ -5976,9 +5557,6 @@ exports[`TransactionCard keyPair renders correctly with destination being valida
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -6037,9 +5615,6 @@ exports[`TransactionCard keyPair renders correctly with destination being valida
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -6052,9 +5627,6 @@ exports[`TransactionCard keyPair renders correctly with destination being valida
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -6066,9 +5638,6 @@ exports[`TransactionCard keyPair renders correctly with destination being valida
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -6133,9 +5702,6 @@ exports[`TransactionCard keyPair renders correctly with destination being valida
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -6166,9 +5732,6 @@ exports[`TransactionCard keyPair renders correctly with destination being valida
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -6180,9 +5743,6 @@ exports[`TransactionCard keyPair renders correctly with destination being valida
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -6232,9 +5792,6 @@ exports[`TransactionCard keyPair renders correctly with destination being valida
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -6269,9 +5826,6 @@ exports[`TransactionCard keyPair renders correctly with destination being valida
       </View>
       <View>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -6308,9 +5862,6 @@ exports[`TransactionCard keyPair renders correctly with destination being valida
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -6322,9 +5873,6 @@ exports[`TransactionCard keyPair renders correctly with destination being valida
           </Text>
           <View>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
@@ -6338,9 +5886,6 @@ exports[`TransactionCard keyPair renders correctly with destination being valida
               USD
             </Text>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
@@ -6409,9 +5954,6 @@ exports[`TransactionCard keyPair renders correctly with destination being valida
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "#FFFFFF",
@@ -6469,9 +6011,6 @@ exports[`TransactionCard keyPair renders correctly with only request 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -6530,9 +6069,6 @@ exports[`TransactionCard keyPair renders correctly with only request 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -6545,9 +6081,6 @@ exports[`TransactionCard keyPair renders correctly with only request 1`] = `
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -6559,9 +6092,6 @@ exports[`TransactionCard keyPair renders correctly with only request 1`] = `
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -6659,9 +6189,6 @@ exports[`TransactionCard keyPair renders correctly with only request 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -6673,9 +6200,6 @@ exports[`TransactionCard keyPair renders correctly with only request 1`] = `
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -6725,9 +6249,6 @@ exports[`TransactionCard keyPair renders correctly with only request 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -6762,9 +6283,6 @@ exports[`TransactionCard keyPair renders correctly with only request 1`] = `
       </View>
       <View>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -6801,9 +6319,6 @@ exports[`TransactionCard keyPair renders correctly with only request 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -6815,9 +6330,6 @@ exports[`TransactionCard keyPair renders correctly with only request 1`] = `
           </Text>
           <View>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
@@ -6831,9 +6343,6 @@ exports[`TransactionCard keyPair renders correctly with only request 1`] = `
               USD
             </Text>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
@@ -6902,9 +6411,6 @@ exports[`TransactionCard keyPair renders correctly with only request 1`] = `
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "#FFFFFF",
@@ -6962,9 +6468,6 @@ exports[`TransactionCard keyPair renders correctly with request and a 0 value 1`
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -7023,9 +6526,6 @@ exports[`TransactionCard keyPair renders correctly with request and a 0 value 1`
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -7038,9 +6538,6 @@ exports[`TransactionCard keyPair renders correctly with request and a 0 value 1`
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -7052,9 +6549,6 @@ exports[`TransactionCard keyPair renders correctly with request and a 0 value 1`
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -7152,9 +6646,6 @@ exports[`TransactionCard keyPair renders correctly with request and a 0 value 1`
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -7166,9 +6657,6 @@ exports[`TransactionCard keyPair renders correctly with request and a 0 value 1`
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -7218,9 +6706,6 @@ exports[`TransactionCard keyPair renders correctly with request and a 0 value 1`
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -7255,9 +6740,6 @@ exports[`TransactionCard keyPair renders correctly with request and a 0 value 1`
       </View>
       <View>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -7294,9 +6776,6 @@ exports[`TransactionCard keyPair renders correctly with request and a 0 value 1`
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -7308,9 +6787,6 @@ exports[`TransactionCard keyPair renders correctly with request and a 0 value 1`
           </Text>
           <View>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
@@ -7324,9 +6800,6 @@ exports[`TransactionCard keyPair renders correctly with request and a 0 value 1`
               USD
             </Text>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
@@ -7395,9 +6868,6 @@ exports[`TransactionCard keyPair renders correctly with request and a 0 value 1`
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "#FFFFFF",
@@ -7455,9 +6925,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value 1`] 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -7516,9 +6983,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value 1`] 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -7531,9 +6995,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value 1`] 
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -7545,9 +7006,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value 1`] 
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -7645,9 +7103,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value 1`] 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -7659,9 +7114,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value 1`] 
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -7711,9 +7163,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value 1`] 
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -7748,9 +7197,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value 1`] 
       </View>
       <View>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -7787,9 +7233,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value 1`] 
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -7801,9 +7244,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value 1`] 
           </Text>
           <View>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
@@ -7817,9 +7257,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value 1`] 
               USD
             </Text>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
@@ -7888,9 +7325,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value 1`] 
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "#FFFFFF",
@@ -7948,9 +7382,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value with
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -8009,9 +7440,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value with
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -8024,9 +7452,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value with
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -8038,9 +7463,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value with
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -8138,9 +7560,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value with
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -8152,9 +7571,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value with
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -8214,9 +7630,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value with
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -8250,9 +7663,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value with
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Array [
                   Object {
@@ -8341,9 +7751,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value with
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -8378,9 +7785,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value with
       </View>
       <View>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -8417,9 +7821,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value with
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -8431,9 +7832,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value with
           </Text>
           <View>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
@@ -8447,9 +7845,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value with
               USD
             </Text>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
@@ -8517,9 +7912,6 @@ exports[`TransactionCard keyPair renders correctly with request and a value with
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "#FFFFFF",
@@ -8577,9 +7969,6 @@ exports[`TransactionCard keyPair transaction sent mined failed renders correctly
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -8638,9 +8027,6 @@ exports[`TransactionCard keyPair transaction sent mined failed renders correctly
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -8653,9 +8039,6 @@ exports[`TransactionCard keyPair transaction sent mined failed renders correctly
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -8667,9 +8050,6 @@ exports[`TransactionCard keyPair transaction sent mined failed renders correctly
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -8767,9 +8147,6 @@ exports[`TransactionCard keyPair transaction sent mined failed renders correctly
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -8781,9 +8158,6 @@ exports[`TransactionCard keyPair transaction sent mined failed renders correctly
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -8833,9 +8207,6 @@ exports[`TransactionCard keyPair transaction sent mined failed renders correctly
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -8870,9 +8241,6 @@ exports[`TransactionCard keyPair transaction sent mined failed renders correctly
       </View>
       <View>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -8909,9 +8277,6 @@ exports[`TransactionCard keyPair transaction sent mined failed renders correctly
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -8923,9 +8288,6 @@ exports[`TransactionCard keyPair transaction sent mined failed renders correctly
           </Text>
           <View>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
@@ -8939,9 +8301,6 @@ exports[`TransactionCard keyPair transaction sent mined failed renders correctly
               USD
             </Text>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
@@ -8958,12 +8317,8 @@ exports[`TransactionCard keyPair transaction sent mined failed renders correctly
         </View>
       </View>
       <View
-        accessibilityComponentType="button"
-        accessibilityTraits={
-          Array [
-            "button",
-          ]
-        }
+        accessibilityRole="button"
+        accessibilityStates={Array []}
         accessible={true}
         isTVSelectable={true}
         onResponderGrant={[Function]}
@@ -8986,9 +8341,6 @@ exports[`TransactionCard keyPair transaction sent mined failed renders correctly
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -9052,9 +8404,6 @@ exports[`TransactionCard keyPair transaction sent mined failed renders correctly
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": undefined,
@@ -9069,8 +8418,6 @@ exports[`TransactionCard keyPair transaction sent mined failed renders correctly
               Error:
             </Text>
             <Text
-              accessible={true}
-              allowFontScaling={true}
               ellipsizeMode="tail"
               style={
                 Object {
@@ -9154,9 +8501,6 @@ exports[`TransactionCard keyPair transaction sent mined successfully renders cor
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -9215,9 +8559,6 @@ exports[`TransactionCard keyPair transaction sent mined successfully renders cor
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -9230,9 +8571,6 @@ exports[`TransactionCard keyPair transaction sent mined successfully renders cor
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -9244,9 +8582,6 @@ exports[`TransactionCard keyPair transaction sent mined successfully renders cor
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -9344,9 +8679,6 @@ exports[`TransactionCard keyPair transaction sent mined successfully renders cor
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -9358,9 +8690,6 @@ exports[`TransactionCard keyPair transaction sent mined successfully renders cor
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -9410,9 +8739,6 @@ exports[`TransactionCard keyPair transaction sent mined successfully renders cor
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -9447,9 +8773,6 @@ exports[`TransactionCard keyPair transaction sent mined successfully renders cor
       </View>
       <View>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -9486,9 +8809,6 @@ exports[`TransactionCard keyPair transaction sent mined successfully renders cor
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -9500,9 +8820,6 @@ exports[`TransactionCard keyPair transaction sent mined successfully renders cor
           </Text>
           <View>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
@@ -9516,9 +8833,6 @@ exports[`TransactionCard keyPair transaction sent mined successfully renders cor
               USD
             </Text>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
@@ -9535,12 +8849,8 @@ exports[`TransactionCard keyPair transaction sent mined successfully renders cor
         </View>
       </View>
       <View
-        accessibilityComponentType="button"
-        accessibilityTraits={
-          Array [
-            "button",
-          ]
-        }
+        accessibilityRole="button"
+        accessibilityStates={Array []}
         accessible={true}
         isTVSelectable={true}
         onResponderGrant={[Function]}
@@ -9563,9 +8873,6 @@ exports[`TransactionCard keyPair transaction sent mined successfully renders cor
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -9622,9 +8929,6 @@ exports[`TransactionCard keyPair transaction sent mined successfully renders cor
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#FFFFFF",
@@ -9705,9 +9009,6 @@ exports[`TransactionCard keyPair transaction sent not mined renders correctly 1`
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -9766,9 +9067,6 @@ exports[`TransactionCard keyPair transaction sent not mined renders correctly 1`
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#6A54D1",
@@ -9781,9 +9079,6 @@ exports[`TransactionCard keyPair transaction sent not mined renders correctly 1`
         </View>
       </View>
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -9795,9 +9090,6 @@ exports[`TransactionCard keyPair transaction sent not mined renders correctly 1`
         }
       />
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "rgba(74,74,74,1)",
@@ -9895,9 +9187,6 @@ exports[`TransactionCard keyPair transaction sent not mined renders correctly 1`
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -9909,9 +9198,6 @@ exports[`TransactionCard keyPair transaction sent not mined renders correctly 1`
              ETH
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -9961,9 +9247,6 @@ exports[`TransactionCard keyPair transaction sent not mined renders correctly 1`
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -9998,9 +9281,6 @@ exports[`TransactionCard keyPair transaction sent not mined renders correctly 1`
       </View>
       <View>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
           style={
             Object {
               "color": "rgba(74,74,74,1)",
@@ -10037,9 +9317,6 @@ exports[`TransactionCard keyPair transaction sent not mined renders correctly 1`
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -10051,9 +9328,6 @@ exports[`TransactionCard keyPair transaction sent not mined renders correctly 1`
           </Text>
           <View>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
@@ -10067,9 +9341,6 @@ exports[`TransactionCard keyPair transaction sent not mined renders correctly 1`
               USD
             </Text>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "rgba(74,74,74,1)",
@@ -10086,12 +9357,8 @@ exports[`TransactionCard keyPair transaction sent not mined renders correctly 1`
         </View>
       </View>
       <View
-        accessibilityComponentType="button"
-        accessibilityTraits={
-          Array [
-            "button",
-          ]
-        }
+        accessibilityRole="button"
+        accessibilityStates={Array []}
         accessible={true}
         isTVSelectable={true}
         onResponderGrant={[Function]}
@@ -10114,9 +9381,6 @@ exports[`TransactionCard keyPair transaction sent not mined renders correctly 1`
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Array [
                 Object {
@@ -10172,9 +9436,6 @@ exports[`TransactionCard keyPair transaction sent not mined renders correctly 1`
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#FFFFFF",

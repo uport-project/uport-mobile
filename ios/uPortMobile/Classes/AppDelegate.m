@@ -32,20 +32,24 @@
   [FIRApp configure];
   [RNFirebaseNotifications configure];
   
-  NSURL *jsCodeLocation;
-  
-  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
+  RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
 
-  self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-  self.window.backgroundColor =  [UIColor colorWithRed:0.99 green:0.99 blue:0.99 alpha:1];
-  
-  [ReactNativeNavigation bootstrap:jsCodeLocation launchOptions:launchOptions];
+  [ReactNativeNavigation bootstrap:[self sourceURLForBridge: bridge] launchOptions:launchOptions];
   
   [Fabric with:@[[Crashlytics class]]];
   RCTSetLogThreshold(RCTLogLevelInfo);
   RCTSetLogFunction(CrashlyticsReactLogFunction);
 
   return YES;
+}
+
+- (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
+{
+#if DEBUG
+  return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+#else
+  return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+#endif
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {

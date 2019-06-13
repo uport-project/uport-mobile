@@ -75,6 +75,7 @@ Array [
           }
         >
           <View
+            accessibilityIgnoresInvertColors={true}
             style={
               Object {
                 "backgroundColor": "#333333",
@@ -190,9 +191,6 @@ Array [
                 }
               >
                 <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
                   style={
                     Object {
                       "color": "#FFFFFF",
@@ -228,9 +226,6 @@ Array [
                   }
                 >
                   <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    ellipsizeMode="tail"
                     style={
                       Object {
                         "color": "#FFFFFF",
@@ -293,9 +288,6 @@ Array [
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#FFFFFF",
@@ -397,9 +389,6 @@ Array [
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "#333333",
@@ -416,6 +405,7 @@ Array [
     </View>
   </RCTScrollView>,
   <RCTSafeAreaView
+    emulateUnlessSupported={true}
     style={
       Object {
         "backgroundColor": "#FFFFFF",
@@ -498,9 +488,6 @@ Array [
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#BBBBBB",
@@ -606,9 +593,6 @@ Array [
                 }
               >
                 <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
                   style={
                     Object {
                       "color": "#D63A59",
@@ -691,9 +675,6 @@ Array [
                 }
               >
                 <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
                   style={
                     Object {
                       "color": "#FFFFFF",
@@ -788,6 +769,7 @@ Array [
           }
         >
           <View
+            accessibilityIgnoresInvertColors={true}
             style={
               Object {
                 "backgroundColor": "#333333",
@@ -903,9 +885,6 @@ Array [
                 }
               >
                 <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
                   style={
                     Object {
                       "color": "#FFFFFF",
@@ -941,9 +920,6 @@ Array [
                   }
                 >
                   <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    ellipsizeMode="tail"
                     style={
                       Object {
                         "color": "#FFFFFF",
@@ -1006,9 +982,6 @@ Array [
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#FFFFFF",
@@ -1110,9 +1083,6 @@ Array [
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "#333333",
@@ -1376,9 +1346,6 @@ Array [
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -1391,9 +1358,6 @@ Array [
                           </Text>
                         </View>
                         <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
                           style={
                             Object {
                               "color": "#D63A59",
@@ -1429,9 +1393,6 @@ Array [
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -1455,6 +1416,7 @@ Array [
     </View>
   </RCTScrollView>,
   <RCTSafeAreaView
+    emulateUnlessSupported={true}
     style={
       Object {
         "backgroundColor": "#FFFFFF",
@@ -1537,9 +1499,6 @@ Array [
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#BBBBBB",
@@ -1645,9 +1604,6 @@ Array [
                 }
               >
                 <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
                   style={
                     Object {
                       "color": "#D63A59",
@@ -1730,9 +1686,6 @@ Array [
                 }
               >
                 <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
                   style={
                     Object {
                       "color": "#FFFFFF",
@@ -1827,6 +1780,7 @@ Array [
           }
         >
           <View
+            accessibilityIgnoresInvertColors={true}
             style={
               Object {
                 "backgroundColor": "#333333",
@@ -1942,9 +1896,6 @@ Array [
                 }
               >
                 <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
                   style={
                     Object {
                       "color": "#FFFFFF",
@@ -1980,9 +1931,6 @@ Array [
                   }
                 >
                   <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    ellipsizeMode="tail"
                     style={
                       Object {
                         "color": "#FFFFFF",
@@ -2045,9 +1993,6 @@ Array [
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#FFFFFF",
@@ -2149,9 +2094,6 @@ Array [
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "#333333",
@@ -2334,9 +2276,6 @@ Array [
                         }
                       >
                         <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
                           style={
                             Object {
                               "color": "#BBBBBB",
@@ -2372,9 +2311,6 @@ Array [
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -2558,9 +2494,6 @@ Array [
                         }
                       >
                         <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
                           style={
                             Object {
                               "color": "#BBBBBB",
@@ -2596,9 +2529,6 @@ Array [
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -2672,6 +2602,7 @@ Array [
     </View>
   </RCTScrollView>,
   <RCTSafeAreaView
+    emulateUnlessSupported={true}
     style={
       Object {
         "backgroundColor": "#FFFFFF",
@@ -2754,9 +2685,6 @@ Array [
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#BBBBBB",
@@ -2862,9 +2790,6 @@ Array [
                 }
               >
                 <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
                   style={
                     Object {
                       "color": "#D63A59",
@@ -2947,9 +2872,6 @@ Array [
                 }
               >
                 <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
                   style={
                     Object {
                       "color": "#FFFFFF",
@@ -3044,6 +2966,7 @@ Array [
           }
         >
           <View
+            accessibilityIgnoresInvertColors={true}
             style={
               Object {
                 "backgroundColor": "#333333",
@@ -3159,9 +3082,6 @@ Array [
                 }
               >
                 <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
                   style={
                     Object {
                       "color": "#FFFFFF",
@@ -3197,9 +3117,6 @@ Array [
                   }
                 >
                   <Text
-                    accessible={true}
-                    allowFontScaling={true}
-                    ellipsizeMode="tail"
                     style={
                       Object {
                         "color": "#FFFFFF",
@@ -3262,9 +3179,6 @@ Array [
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#FFFFFF",
@@ -3366,9 +3280,6 @@ Array [
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "#333333",
@@ -3680,9 +3591,6 @@ Array [
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -3695,9 +3603,6 @@ Array [
                           </Text>
                         </View>
                         <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
                           style={
                             Object {
                               "color": "#BBBBBB",
@@ -3958,9 +3863,6 @@ Array [
                           }
                         >
                           <Text
-                            accessible={true}
-                            allowFontScaling={true}
-                            ellipsizeMode="tail"
                             style={
                               Object {
                                 "color": "#333333",
@@ -3973,9 +3875,6 @@ Array [
                           </Text>
                         </View>
                         <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          ellipsizeMode="tail"
                           style={
                             Object {
                               "color": "#BBBBBB",
@@ -3995,6 +3894,7 @@ Array [
     </View>
   </RCTScrollView>,
   <RCTSafeAreaView
+    emulateUnlessSupported={true}
     style={
       Object {
         "backgroundColor": "#FFFFFF",
@@ -4077,9 +3977,6 @@ Array [
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#BBBBBB",
@@ -4185,9 +4082,6 @@ Array [
                 }
               >
                 <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
                   style={
                     Object {
                       "color": "#D63A59",
@@ -4270,9 +4164,6 @@ Array [
                 }
               >
                 <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
                   style={
                     Object {
                       "color": "#FFFFFF",

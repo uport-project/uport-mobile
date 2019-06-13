@@ -2,6 +2,7 @@
 
 exports[`renders Settings screen with 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   style={
     Object {
       "backgroundColor": "#FFFFFF",
@@ -132,9 +133,6 @@ exports[`renders Settings screen with 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#BBBBBB",
@@ -171,9 +169,6 @@ exports[`renders Settings screen with 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#333333",
@@ -207,9 +202,6 @@ Information We Get From Others. We may get information about you from other thir
 
               </Text>
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#333333",
@@ -252,9 +244,6 @@ We may use your personal information to protect, investigate, and deter against 
 
               </Text>
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#333333",
@@ -303,9 +292,6 @@ You may exercise choices regarding the use of cookies from Google Analytics by g
 
               </Text>
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#333333",
@@ -372,9 +358,6 @@ Legal Basis
 
               </Text>
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#333333",
@@ -426,9 +409,6 @@ To better understand the interests of our customers and our website visitors.
 
               </Text>
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#333333",

@@ -210,7 +210,7 @@ describe('checkup', () => {
       })
 
       describe('unable to sign', () => {
-        describe('has attestations', () => {
+        it('has attestations', () => {
           return expectSaga(migrationsSaga)
             .provide([
               [select(currentAddress), root],
@@ -228,7 +228,7 @@ describe('checkup', () => {
             .silentRun()
         })
 
-        describe('without attestations', () => {
+        it('without attestations', () => {
           return expectSaga(migrationsSaga)
             .provide([
               [select(currentAddress), root],
