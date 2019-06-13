@@ -3,9 +3,6 @@
 exports[`renders TextInput with label 1`] = `
 <View>
   <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
     style={
       Object {
         "color": "rgba(130, 130, 130, 1)",
@@ -40,6 +37,7 @@ exports[`renders TextInput with label 1`] = `
       label="Test"
       placeholder="Placeholder"
       placeholderTextColor="rgba(224,223,230, 1)"
+      rejectResponderTermination={true}
       style={
         Array [
           Object {
@@ -81,6 +79,7 @@ exports[`renders TextInput without label 1`] = `
       keyboardAppearance="light"
       placeholder="Placeholder"
       placeholderTextColor="rgba(224,223,230, 1)"
+      rejectResponderTermination={true}
       style={
         Array [
           Object {

@@ -45,9 +45,6 @@ exports[`CardStateBox renders error correctly 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": undefined,
@@ -62,8 +59,6 @@ exports[`CardStateBox renders error correctly 1`] = `
         Error:
       </Text>
       <Text
-        accessible={true}
-        allowFontScaling={true}
         ellipsizeMode="tail"
         style={
           Object {
@@ -142,9 +137,6 @@ exports[`CardStateBox renders pending correctly 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#FFFFFF",
@@ -217,9 +209,6 @@ exports[`CardStateBox renders success correctly 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Object {
           "color": "#FFFFFF",

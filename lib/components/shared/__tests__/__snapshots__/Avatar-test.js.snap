@@ -327,9 +327,6 @@ exports[`renders initials if only name is passed in 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -375,9 +372,6 @@ exports[`renders initials if only name passed in and custom size 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {

@@ -122,9 +122,6 @@ exports[`MarketPlaceModal renders with props 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#333333",
@@ -160,9 +157,6 @@ exports[`MarketPlaceModal renders with props 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "#333333",
@@ -360,9 +354,6 @@ exports[`MarketPlaceModal renders with props 1`] = `
                     }
                   >
                     <Text
-                      accessible={true}
-                      allowFontScaling={true}
-                      ellipsizeMode="tail"
                       style={
                         Object {
                           "color": "#BBBBBB",
@@ -373,9 +364,6 @@ exports[`MarketPlaceModal renders with props 1`] = `
                       PRODUCT PROVIDER
                     </Text>
                     <Text
-                      accessible={true}
-                      allowFontScaling={true}
-                      ellipsizeMode="tail"
                       style={
                         Object {
                           "color": "#333333",
@@ -492,9 +480,6 @@ exports[`MarketPlaceModal renders with props 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#6A54D1",

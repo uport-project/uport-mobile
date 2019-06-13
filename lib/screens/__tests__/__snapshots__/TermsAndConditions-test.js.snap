@@ -2,6 +2,7 @@
 
 exports[`renders Settings screen with 1`] = `
 <RCTSafeAreaView
+  emulateUnlessSupported={true}
   style={
     Object {
       "backgroundColor": "#EFEEF3",
@@ -132,9 +133,6 @@ exports[`renders Settings screen with 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#BBBBBB",
@@ -171,9 +169,6 @@ exports[`renders Settings screen with 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#333333",
@@ -213,9 +208,6 @@ DID
 By using the uPort app, you acknowledge, accept and consent to the creation of a decentralized identity (DID) for you.  DID is essentially a public address, a string that serves asan “on-chain identifier.”  Because uPort is an identity platform on the Ethereum blockchain,  DIDs are linked to the Ethereum blockchain as transactions.  As a user of uPort, you acknowledge that because transactions on the Ethereum blockchain are immutable, the record of your DID’s on-chain transactions are also immutable and cannot be deleted from the Ethereum blockchain.  Your DID, as it is designed in the uPort mobile application, is not tied to your natural name or personal information, and uPort does not collect data that would enable the two to be linked or associated together. 
               </Text>
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#333333",
@@ -259,9 +251,6 @@ uPort allows you to affirmatively opt-in and choose to send and store an encrypt
 
               </Text>
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#333333",
@@ -290,9 +279,6 @@ uPort may, in its sole discretion, terminate or suspend all or part of the Servi
 The following provisions of the Terms survive any termination of these Terms: INDEMNITY; WARRANTY DISCLAIMERS; LIMITATION ON LIABILITY; OUR PROPRIETARY RIGHTS; LINKS; TERMINATION; NO THIRD PARTY BENEFICIARIES; BINDING ARBITRATION AND CLASS ACTION WAIVER; GENERAL INFORMATION.
               </Text>
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#333333",

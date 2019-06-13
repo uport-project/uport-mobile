@@ -21,9 +21,6 @@ exports[`InteractionStats renders nothing if no counter party 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -67,9 +64,6 @@ exports[`InteractionStats renders short address if no name is present 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -113,9 +107,6 @@ exports[`InteractionStats renders with "2 times" if exactly 2 as stats 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -134,9 +125,6 @@ exports[`InteractionStats renders with "2 times" if exactly 2 as stats 1`] = `
        with 
       Coinbase
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -178,9 +166,6 @@ exports[`InteractionStats renders with "once" if exactly 1 as stats 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -199,9 +184,6 @@ exports[`InteractionStats renders with "once" if exactly 1 as stats 1`] = `
        with 
       Coinbase
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -243,9 +225,6 @@ exports[`InteractionStats renders you have never if 0 stats 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -289,9 +268,6 @@ exports[`InteractionStats renders you have never if no stats 1`] = `
     }
   >
     <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
       style={
         Array [
           Object {

@@ -1006,6 +1006,7 @@ exports[`CountrySelector renders with country selected 1`] = `
   onScroll={[Function]}
   onScrollBeginDrag={[Function]}
   onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
   renderItem={[Function]}
   scrollEventThrottle={50}
   stickyHeaderIndices={Array []}
@@ -1047,9 +1048,6 @@ exports[`CountrySelector renders with country selected 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -1096,9 +1094,6 @@ exports[`CountrySelector renders with country selected 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -1145,9 +1140,6 @@ exports[`CountrySelector renders with country selected 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -1203,9 +1195,6 @@ exports[`CountrySelector renders with country selected 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -1252,9 +1241,6 @@ exports[`CountrySelector renders with country selected 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -1301,9 +1287,6 @@ exports[`CountrySelector renders with country selected 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -1350,9 +1333,6 @@ exports[`CountrySelector renders with country selected 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -1399,9 +1379,6 @@ exports[`CountrySelector renders with country selected 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -1448,9 +1425,6 @@ exports[`CountrySelector renders with country selected 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -1497,9 +1471,6 @@ exports[`CountrySelector renders with country selected 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -2530,6 +2501,7 @@ exports[`CountrySelector renders without country selected 1`] = `
   onScroll={[Function]}
   onScrollBeginDrag={[Function]}
   onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
   renderItem={[Function]}
   scrollEventThrottle={50}
   stickyHeaderIndices={Array []}
@@ -2571,9 +2543,6 @@ exports[`CountrySelector renders without country selected 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -2620,9 +2589,6 @@ exports[`CountrySelector renders without country selected 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -2669,9 +2635,6 @@ exports[`CountrySelector renders without country selected 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -2718,9 +2681,6 @@ exports[`CountrySelector renders without country selected 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -2767,9 +2727,6 @@ exports[`CountrySelector renders without country selected 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -2816,9 +2773,6 @@ exports[`CountrySelector renders without country selected 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -2865,9 +2819,6 @@ exports[`CountrySelector renders without country selected 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -2914,9 +2865,6 @@ exports[`CountrySelector renders without country selected 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -2963,9 +2911,6 @@ exports[`CountrySelector renders without country selected 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
@@ -3012,9 +2957,6 @@ exports[`CountrySelector renders without country selected 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
             style={
               Object {
                 "color": "rgba(74,74,74,1)",
