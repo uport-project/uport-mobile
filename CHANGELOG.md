@@ -1,5 +1,12 @@
 # Change Log
 
+## [v468](https://github.com/uport-project/uport-mobile/tree/v468) (2019-06-13)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v467...v468)
+
+**Merged pull requests:**
+
+- Upgrade React Native to 0.59 [\#146](https://github.com/uport-project/uport-mobile/pull/146) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v467](https://github.com/uport-project/uport-mobile/tree/v467) (2019-06-11)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v466...v467)
 
