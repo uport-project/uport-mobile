@@ -24,7 +24,6 @@ import com.crashlytics.android.Crashlytics;
 import com.facebook.common.logging.FLog;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
-import com.horcrux.svg.SvgPackage;
 import com.imagepicker.ImagePickerPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.oblador.vectoricons.VectorIconsPackage;
@@ -97,7 +96,7 @@ public class MainApplication extends NavigationApplication implements ShareAppli
     protected List<ReactPackage> getPackages() {
         return Arrays.<ReactPackage>asList(new RNSharePackage(), new RNFirebasePackage(),
                 new RNFirebaseRemoteConfigPackage(), new RNFirebaseNotificationsPackage(),
-                new RNFirebaseMessagingPackage(), new SvgPackage(), new RNDeviceInfo(), new RNFetchBlobPackage(),
+                new RNFirebaseMessagingPackage(), new RNDeviceInfo(), new RNFetchBlobPackage(),
                 new VectorIconsPackage(), new RNCameraPackage(), new RandomBytesPackage(), new ImagePickerPackage(),
                 new AuthenticationScreenPackage(), new MySNSPackage(), new IntentLauncherPackage(),
                 new RNUportSignerPackage(), new RNFirebaseAnalyticsPackage(), new AsyncStoragePackage(),
