@@ -273,7 +273,6 @@ dependencies {
     implementation(project(':react-native-firebase')) {
         transitive = false
     }
-    implementation project(':react-native-svg')
     implementation project(':react-native-navigation')
     implementation project(':react-native-device-info')
     implementation project(':rn-fetch-blob')
