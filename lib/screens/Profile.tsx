@@ -45,7 +45,6 @@ interface SelfClaim {
 
 interface UserProfileProps {
   [index: string]: any
-  navigator: Navigator
   avatar: any
   name: string
   email: string
@@ -74,7 +73,7 @@ interface UserProfileState {
   editMode: boolean
 }
 
-class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
+export class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
   constructor(props: UserProfileProps) {
     super(props)
 
