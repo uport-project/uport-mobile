@@ -23,8 +23,6 @@ project(':@react-native-community_async-storage').projectDir = new File(rootProj
 rootProject.name = 'uPortMobile'
 include ':react-native-firebase'
 project(':react-native-firebase').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-firebase/android')
-include ':react-native-svg'
-project(':react-native-svg').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-svg/android')
 include ':react-native-fcm'
 project(':react-native-fcm').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-fcm/android')
 include ':react-native-device-info'

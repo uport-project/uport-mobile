@@ -77,6 +77,7 @@ const startOnboarding = async () => {
       background: {
         color: 'transparent',
       },
+      // @ts-ignore
       buttonColor: 'white',
       backButton: {
         title: 'Back',
@@ -185,6 +186,7 @@ export async function startMain() {
         translucent: false,
       },
       elevation: 0,
+      // @ts-ignore
       buttonColor: 'white',
       backButton: {
         title: 'Back',

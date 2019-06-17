@@ -37,7 +37,6 @@
       "./jest-setup/react-native-vector-icons.js",
       "./jest-setup/enzyme.js",
       "./jest-setup/store.js",
-      "./jest-setup/react-native-svg.js",
       "./jest-setup/react-native-firebase.js",
       "./jest-setup/react-native-device-info.js",
       "./jest-setup/react-native-camera.js",
@@ -61,7 +60,8 @@
       "/node_modules/",
       "lib/contracts/",
       "lib/browserified/",
-      "-test"
+      "-test",
+      "lib/kancha/"
     ],
     "testMatch": [
       "**/__tests__/*.+(ts|tsx|js|jsx)"
@@ -85,6 +85,7 @@
   "dependencies": {
     "@react-native-community/async-storage": "^1.4.1",
     "@react-native-community/netinfo": "^3.2.1",
+    "@types/redux-mock-store": "^1.0.1",
     "analytics-react-native": "^1.1.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "base64url": "^3.0.0",
@@ -141,7 +142,6 @@
     "react-native-qrcode": "^0.2.6",
     "react-native-randombytes": "^3.0.0",
     "react-native-share": "^1.1.3",
-    "react-native-svg": "5.5.1",
     "react-native-swiper": "^1.5.14",
     "react-native-tab-view": "^1.3.0",
     "react-native-touch-id": "^3.0.0",
@@ -165,9 +165,9 @@
     "world-countries": "^1.8.1"
   },
   "devDependencies": {
-    "@types/enzyme": "^3.9.3",
     "@babel/core": "^7.3.4",
     "@babel/runtime": "^7.3.4",
+    "@types/enzyme": "^3.9.3",
     "@types/jest": "^23.3.13",
     "@types/lodash": "^4.14.118",
     "@types/mockdate": "^2.0.0",
@@ -196,8 +196,8 @@
     "moment-timezone": "^0.5.25",
     "nock": "^9.0.18",
     "prettier": "^1.15.3",
-    "react-native-testing-library": "^1.9.1",
     "react-dom": "^16.8.6",
+    "react-native-testing-library": "^1.9.1",
     "react-native-typescript-transformer": "^1.2.10",
     "react-test-renderer": "16.8.3",
     "reactotron-react-native": "^2.1.0",

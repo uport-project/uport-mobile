@@ -94,6 +94,7 @@ const Icons: IconsStatic = {
   qrcode: Device.isIOS ? 'qrcode' : 'qrcode',
   add: 'ios-add-circle-outline',
   remove: 'ios-remove-circle',
+  bell: 'bell',
 }
 
 const IconImageSource = (font: string, icon: string, size: number) => {

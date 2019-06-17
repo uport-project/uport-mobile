@@ -53,5 +53,3 @@ exports[`renders a Scanner Screen 1`] = `
   />
 </View>
 `;
-
-exports[`renders a connected Scanner 1`] = `ShallowWrapper {}`;

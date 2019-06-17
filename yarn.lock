@@ -1042,6 +1042,13 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
+"@types/redux-mock-store@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@types/redux-mock-store/-/redux-mock-store-1.0.1.tgz#90ca701d640aef7c007f564a9a4f8dc03180b0f7"
+  integrity sha512-1egEnh2/+sRRKImnCo5EMVm0Uxu4fBHeLHk/inhSp/VpE93It8lk3gYeNfehUgXd6OzqP5LLA9kzO9x7o3WfwA==
+  dependencies:
+    redux "^4.0.0"
+
 "@types/stack-utils@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-1.0.1.tgz#0a851d3bd96498fa25c33ab7278ed3bd65f06c3e"
@@ -2731,11 +2738,6 @@ cliui@^5.0.0:
     strip-ansi "^5.2.0"
     wrap-ansi "^5.1.0"
 
-clone@^1.0.2:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
-  integrity sha1-2jCcwmPfFZlMaIypAheco8fNfH4=
-
 co@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/co/-/co-4.6.0.tgz#6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184"
@@ -2754,7 +2756,7 @@ collection-visit@^1.0.0:
     map-visit "^1.0.0"
     object-visit "^1.0.0"
 
-color-convert@^1.3.0, color-convert@^1.9.0:
+color-convert@^1.9.0:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-1.9.3.tgz#bb71850690e1f136567de629d2d5471deda4c1e8"
   integrity sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==
@@ -2766,31 +2768,10 @@ color-name@1.1.3:
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.3.tgz#a7d0558bd89c42f795dd42328f740831ca53bc25"
   integrity sha1-p9BVi9icQveV3UIyj3QIMcpTvCU=
 
-color-name@^1.0.0:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
-  integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
-
-color-string@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/color-string/-/color-string-0.3.0.tgz#27d46fb67025c5c2fa25993bfbf579e47841b991"
-  integrity sha1-J9RvtnAlxcL6JZk7+/V55HhBuZE=
-  dependencies:
-    color-name "^1.0.0"
-
 color-support@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/color-support/-/color-support-1.1.3.tgz#93834379a1cc9a0c61f82f52f0d04322251bd5a2"
   integrity sha512-qiBjkpbMLO/HL68y+lh4q0/O1MZFj2RX6X/KmMa3+gJD3z+WwI1ZzDHysvqHGS3mP6mznPckpXmw1nI9cJjyRg==
-
-color@^0.11.1:
-  version "0.11.4"
-  resolved "https://registry.yarnpkg.com/color/-/color-0.11.4.tgz#6d7b5c74fb65e841cd48792ad1ed5e07b904d764"
-  integrity sha1-bXtcdPtl6EHNSHkq0e1eB7kE12Q=
-  dependencies:
-    clone "^1.0.2"
-    color-convert "^1.3.0"
-    color-string "^0.3.0"
 
 combine-source-map@^0.8.0, combine-source-map@~0.8.0:
   version "0.8.0"
@@ -6397,7 +6378,7 @@ lodash.throttle@^4.1.1:
   resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
   integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
 
-lodash@4.17.x, lodash@=4.17.11, lodash@^4.0.0, lodash@^4.15.0, lodash@^4.16.6, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.6.1:
+lodash@4.17.x, lodash@=4.17.11, lodash@^4.0.0, lodash@^4.15.0, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.6.1:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
   integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
@@ -8501,14 +8482,6 @@ react-native-share@^1.1.3:
   resolved "https://registry.yarnpkg.com/react-native-share/-/react-native-share-1.1.3.tgz#513ea61075e2bb945d33cfda120e12592916299e"
   integrity sha512-vKAJqgkEt7HjsF0HUwgom+E0FbmFNVZNncHwby1+O8/mXlKugh+Ym6rvv+A2ASHmD5TXKohJMYT2+jYofzPORA==
 
-react-native-svg@5.5.1:
-  version "5.5.1"
-  resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-5.5.1.tgz#633d882077f048f05c721ebb793cd073e846ba1f"
-  integrity sha1-Yz2IIHfwSPBcch67eTzQc+hGuh8=
-  dependencies:
-    color "^0.11.1"
-    lodash "^4.16.6"
-
 react-native-swiper@^1.5.14:
   version "1.5.14"
   resolved "https://registry.yarnpkg.com/react-native-swiper/-/react-native-swiper-1.5.14.tgz#1c6f949ca377186300f972bb0f30d24062c899aa"
@@ -8553,9 +8526,9 @@ react-native-uport-signer@1.3.2:
   integrity sha512-kbiIJIaA9qL1kDMqJI4nM0+x8MRrgXfDjSjnksbnbpELa3WkIEdqBckA0u/nCgEXi0uyx1ytR0YzCLL1W/gOig==
 
 react-native-vector-icons@^6.1.0:
-  version "6.4.2"
-  resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-6.4.2.tgz#ee0b097e783387544ed160a3192a437c097e551d"
-  integrity sha512-G7Y5HksOQkCanFWKJ+fjwP38XL8tQREOSnw7jrbq28AFrrv41YtafOF4uDSDS7HxMRXs17HeEzn24OzJb63iuA==
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-6.5.0.tgz#bf925f62a47fed2f02a26392eed385058b7f137e"
+  integrity sha512-24Y5hkNTbpwK4OQFQQhJ20vBFWltGOcunJPztjO7E/4QpF3YmpbZIWjjf07wHOAlpeqCz3gEWr5iDI0Y2zLNnA==
   dependencies:
     lodash "^4.0.0"
     prop-types "^15.6.2"
@@ -10888,9 +10861,9 @@ yargs-parser@^11.1.1:
     decamelize "^1.2.0"
 
 yargs-parser@^13.1.0:
-  version "13.1.0"
-  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-13.1.0.tgz#7016b6dd03e28e1418a510e258be4bff5a31138f"
-  integrity sha512-Yq+32PrijHRri0vVKQEm+ys8mbqWjLiwQkMFNXEENutzLPP0bE4Lcd4iA3OQY5HF+GD3xXxf0MEHb8E4/SA3AA==
+  version "13.1.1"
+  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-13.1.1.tgz#d26058532aa06d365fe091f6a1fc06b2f7e5eca0"
+  integrity sha512-oVAVsHz6uFrg3XQheFII8ESO2ssAf9luWuAd6Wexsu4F3OtIW0o8IribPXYrD4WC24LWtPrJlGy87y5udK+dxQ==
   dependencies:
     camelcase "^5.0.0"
     decamelize "^1.2.0"

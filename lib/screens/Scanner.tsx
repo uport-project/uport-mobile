@@ -14,7 +14,7 @@ import { handleURL } from 'uPortMobile/lib/actions/requestActions'
 const SCANNER_TIMEOUT = 10000
 
 interface ScannerScreenProps {
-  navigator: Navigator
+  componentId: string
   handleQRCodeURL: (event: any) => void
 }
 
