@@ -1,5 +1,12 @@
 # Change Log
 
+## [v469](https://github.com/uport-project/uport-mobile/tree/v469) (2019-06-18)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v468...v469)
+
+**Merged pull requests:**
+
+- Fixing issues with RN upgrade [\#161](https://github.com/uport-project/uport-mobile/pull/161) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v468](https://github.com/uport-project/uport-mobile/tree/v468) (2019-06-13)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v467...v468)
 

@@ -19,25 +19,21 @@
 
 import 'react-native'
 import React from 'react'
-import ConnectedSettings, { Settings } from '../Settings'
-import FakeNavigator from '../../components/testHelpers/FakeNavigator'
-import renderer from 'react-test-renderer'
+import { Settings } from '../Settings'
+import { render } from 'react-native-testing-library'
 
 describe('SettingsRoot', () => {
-  it('renders without exploding', () => {
-    const tree = renderer.create(<Settings navigator={new FakeNavigator()} version='256' />).toJSON()
+  it('renders with props', () => {
+    const tree = render(
+      <Settings
+        componentId="TEST"
+        connections={[]}
+        hasHDWallet={false}
+        seedConfirmed={true}
+        version={'TEST'}
+        channel={'TEST'}
+      />,
+    ).toJSON()
     expect(tree).toMatchSnapshot()
-  })
-  it('renders Settings screen with', () => {
-    const tree = renderer.create(<Settings navigator={new FakeNavigator()} version='256' />).toJSON()
-    expect(tree).toMatchSnapshot()
-  })
-
-  it('renders a connected SettingsRoot as expected', () => {
-    const initialState = {}
-    const wrapper = global.shallow(<ConnectedSettings navigator={new FakeNavigator()} version='256' />, {
-      context: { store: global.mockStore(initialState) },
-    })
-    expect(wrapper.dive()).toMatchSnapshot()
   })
 })

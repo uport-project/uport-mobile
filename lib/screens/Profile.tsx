@@ -45,7 +45,6 @@ interface SelfClaim {
 
 interface UserProfileProps {
   [index: string]: any
-  navigator: Navigator
   avatar: any
   name: string
   email: string
@@ -74,7 +73,7 @@ interface UserProfileState {
   editMode: boolean
 }
 
-class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
+export class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
   constructor(props: UserProfileProps) {
     super(props)
 
@@ -165,6 +164,7 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
         <Container flex={3} alignItems={'center'}>
           <Button
             block={Button.Block.Clear}
+            icon={<Icon name={'success'} color={Theme.colors.primary.accessories} />}
             onPress={() =>
               Navigation.mergeOptions(this.props.componentId, {
                 bottomTabs: {
@@ -172,10 +172,9 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
                 },
               })
             }
-            buttonText={Mori.count(this.props.verifications)}
           />
-          <Container paddingTop={5}>
-            <Text type={Text.Types.ListItemNote}>Credentials</Text>
+          <Container>
+            <Text type={Text.Types.ListItemNote}>{Mori.count(this.props.verifications)} Credentials</Text>
           </Container>
         </Container>
         <Container flex={3} alignItems={'center'}>
