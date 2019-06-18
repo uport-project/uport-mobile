@@ -13,7 +13,6 @@ export function registerScreens(redux: any) {
   /**
    * Top level screens
    */
-  registerComponentWithRedux(redux)(SCREENS.Credentials, require('./Credentials').default)
   registerComponentWithRedux(redux)(SCREENS.Dashboard, require('./Dashboard').default)
   registerComponentWithRedux(redux)(SCREENS.Credential, require('./Credential').default)
   registerComponentWithRedux(redux)(SCREENS.Contacts, require('./Contacts').default)

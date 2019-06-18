@@ -19,7 +19,7 @@ const fetchSignPosts = async (updater: (response: any) => void) => {
   updater(json)
 }
 
-const Dashboard: React.FC<DashboardProps> = props => {
+export const Dashboard: React.FC<DashboardProps> = props => {
   const [signPosts, updateSignPosts] = useState([])
   const showSignPosts =
     signPosts.length > 0 &&
