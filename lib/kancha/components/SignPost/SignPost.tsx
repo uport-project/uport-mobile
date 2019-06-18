@@ -1,9 +1,9 @@
 import * as React from 'react'
-import { Image } from 'react-native'
+import { Image, TouchableOpacity, Linking } from 'react-native'
 
 import { Container, Text, Card, Colors, Icon, Theme } from '@kancha'
 
-export interface SignPostCard {
+export interface SignPostCardType {
   id: string
   title: string
   subtitle: string
@@ -18,25 +18,33 @@ export interface SignPostCard {
 }
 
 interface SignPostProps {
-  card: SignPostCard
+  card: SignPostCardType
 }
 
 const SignPost: React.FC<SignPostProps> = ({ card }) => {
   return (
     <Card marginBottom>
-      <Container padding backgroundColor={card.headerColor} flexDirection={'row'} alignItems={'flex-start'}>
-        <Container marginRight>
-          <Image source={{ uri: card.logo }} style={{ width: 40, height: 40, borderRadius: 5 }} />
+      <TouchableOpacity onPress={() => Linking.openURL(card.url)}>
+        <Container
+          padding
+          backgroundColor={card.headerColor}
+          flexDirection={'row'}
+          alignItems={'flex-start'}
+          justifyContent={'center'}>
+          <Container marginRight>
+            <Image source={{ uri: card.logo }} style={{ width: 40, height: 40, borderRadius: 5 }} />
+          </Container>
+          <Container flex={1}>
+            <Text textColor={'#ffffff'} type={Text.Types.SubTitle}>
+              {card.subtitle}
+            </Text>
+            <Text bold textColor={'#ffffff'} type={Text.Types.H3}>
+              {card.title}
+            </Text>
+          </Container>
+          <Icon name="externalLink" font="feather" color={'#ffffff'} />
         </Container>
-        <Container flex={1}>
-          <Text textColor={'#ffffff'} type={Text.Types.SubTitle}>
-            {card.subtitle}
-          </Text>
-          <Text bold textColor={'#ffffff'} type={Text.Types.H3}>
-            {card.title}
-          </Text>
-        </Container>
-      </Container>
+      </TouchableOpacity>
       <Container flex={1} padding paddingRight={30}>
         {card.content.description && (
           <Container>

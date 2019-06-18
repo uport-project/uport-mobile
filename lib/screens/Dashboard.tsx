@@ -1,70 +1,59 @@
-import * as React from 'react'
-import { Image } from 'react-native'
+import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
-import { Navigation } from 'react-native-navigation'
-
-import { Screen, Container, Text, Card, Credential, Theme, Colors, Icon, SignPost } from '@kancha'
-
-import { ownClaims } from 'uPortMobile/lib/selectors/identities'
-import { parseClaimItem, extractClaimType } from 'uPortMobile/lib/utilities/parseClaims'
+import { Screen, Container, Text, Card, Credential, Theme, Colors, Icon, SignPost, SignPostCardType } from '@kancha'
+import SCREENS from './Screens'
+import { parseClaimItem } from 'uPortMobile/lib/utilities/parseClaims'
 import { onlyLatestAttestationsWithIssuer } from 'uPortMobile/lib/selectors/attestations'
 
-import SCREENS from './Screens'
-
-interface SignPostCard {
-  id: string
-  title: string
-  subtitle: string
-  logo: string
-  url: string
-  headerColor: string
-  content: {
-    description?: string
-    list?: string[]
-    footNote?: string
-  }
+interface DashboardProps {
+  credentials: any[]
+  componentId: string
 }
 
-const SIGN_POSTS = [
-  {
-    id: 'uportlandia',
-    title: 'Visit uPortlandia',
-    subtitle: 'Get your first credential',
-    logo: 'https://uport-mobile-store.s3.us-east-2.amazonaws.com/static-assets/uportlandia-logo.png',
-    url: 'https://',
-    headerColor: '#6A54D1',
-    content: {
-      list: [
-        'Discover how to manage your data with uPort',
-        'Connect with services and build network that you fully control',
-        'Request, recieve and share information about yourself',
-      ],
-    },
-  },
-  {
-    id: 'onfido',
-    title: 'Get OnFido ID',
-    subtitle: 'Get verified in 5 minutes',
-    url: 'https://',
-    logo: 'https://uport-mobile-store.s3.us-east-2.amazonaws.com/static-assets/onfido-logo.png',
-    headerColor: '#3640f5',
-    content: {
-      description: 'Verify yourself to to get one-click access to financial services',
-      footNote: 'Did you know????',
-    },
-  },
-]
+const fetchSignPosts = async (updater: (response: any) => void) => {
+  const response = await fetch(
+    'https://uport-mobile-store.s3.us-east-2.amazonaws.com/dashboard-signposts/signposts.json',
+  )
+  const json = await response.json()
 
-interface DashboardProps {}
+  updater(json)
+}
 
 const Dashboard: React.FC<DashboardProps> = props => {
-  const signPosts = SIGN_POSTS.map((card: SignPostCard) => {
-    return <SignPost key={card.id} card={card} />
-  })
+  const [signPosts, updateSignPosts] = useState([])
+  const showSignPosts =
+    signPosts.length > 0 &&
+    props.credentials.length === 0 &&
+    signPosts.map((card: SignPostCardType) => {
+      return <SignPost key={card.id} card={card} />
+    })
 
+  useEffect(() => {
+    fetchSignPosts(updateSignPosts)
+  }, [])
+
+  const showCredentials = props.credentials.map(credential => {
+    const { claimCardHeader } = parseClaimItem(credential)
+
+    return (
+      <Container key={credential.token} marginBottom>
+        <Credential
+          componentId={props.componentId}
+          screen={SCREENS.Credential}
+          verification={credential}
+          claimType={claimCardHeader}
+          issuer={credential.issuer}
+          noMargin
+        />
+      </Container>
+    )
+  })
   return (
     <Screen>
-      <Container padding>{signPosts}</Container>
+      <Container padding>
+        {showSignPosts}
+        {showCredentials}
+      </Container>
     </Screen>
   )
 }
@@ -75,11 +64,4 @@ const mapStateToProps = (state: any) => {
   }
 }
 
-export const mapDispatchToProps = (dispatch: any) => {
-  return {}
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(Dashboard)
+export default connect(mapStateToProps)(Dashboard)

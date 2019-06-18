@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { TouchableOpacity, TouchableHighlight, Linking, ViewStyle } from 'react-native'
-import { Container, Text, Domain, Issuer, Icon } from '@kancha'
+import { Container, Text, Domain, Issuer, Icon, Colors } from '@kancha'
 import { Navigation } from 'react-native-navigation'
 
 /**
@@ -18,6 +18,7 @@ interface CredentialProps {
   verification?: any
   issuer?: any
   spec?: any
+  noMargin?: boolean
 }
 
 const Credential: React.FC<CredentialProps> = props => {
@@ -52,6 +53,7 @@ const Credential: React.FC<CredentialProps> = props => {
     ...baseStyle,
     ...(props.missing ? border : shadow),
     ...(props.spec && props.spec.essential ? requiredBorder : {}),
+    ...(props.noMargin ? { margin: 0 } : {}),
   }
 
   return (
@@ -78,7 +80,7 @@ const Credential: React.FC<CredentialProps> = props => {
                 ? Theme.colors.warning.background
                 : props.missing
                 ? Theme.colors.secondary.background
-                : Theme.colors.primary.brand
+                : Colors.CHARCOAL
             }
             viewStyle={{ borderBottomLeftRadius: 5, borderTopLeftRadius: 5 }}>
             {props.issuer ? (
