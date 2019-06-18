@@ -4,14 +4,14 @@ interface IndexSignature {
 
 interface TextDefaultThemeMapTypes extends IndexSignature {}
 
-const COLORS = {
+export const COLORS = {
   BLACK: '#000000',
   WHITE: '#FFFFFF',
   CHARCOAL: '#333333',
   LIGHTEST_GREY: '#EFEEF3',
   LIGHT_GREY: '#BBBBBB',
   MEDIUM_GREY: '#CCCCCC',
-  DARK_GREY: '',
+  DARK_GREY: '#333333',
   ROYAL_PURPLE: '#6A54D1',
   CRIMSON_RED: '#D63A59',
   WASHED_GREEN: '#3DCF8A',

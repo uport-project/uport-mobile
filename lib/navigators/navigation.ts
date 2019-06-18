@@ -243,7 +243,7 @@ export async function startMain() {
                     children: [
                       {
                         component: {
-                          name: SCREENS.Credentials,
+                          name: SCREENS.Dashboard,
                           options: {
                             topBar: {
                               rightButtons: [rightButtonsCredentialScreen],

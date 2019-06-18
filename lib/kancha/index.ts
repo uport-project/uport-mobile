@@ -15,7 +15,7 @@ export { default as Toaster } from './services/toast'
  * Theme & Constants
  */
 export { Images } from './constants/imagePaths'
-export { Theme, TextThemeMap } from './themes/default'
+export { Theme, TextThemeMap, COLORS as Colors } from './themes/default'
 
 /**
  * Components
@@ -25,6 +25,7 @@ export { default as Checkbox } from './components/Checkbox/Checkbox'
 export { default as Container } from './components/Container/Container'
 export { ContainerProps } from './components/Container/Container'
 export { default as Card } from './components/Card/Card'
+export { default as SignPost } from './components/SignPost/SignPost'
 export { default as Icon } from './components/Icon/Icon'
 export { default as Screen } from './components/Screen/Screen'
 export { default as Text } from './components/Text/Text'
