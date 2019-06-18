@@ -68,6 +68,7 @@ jobs:
       - run:
           name: package react native android bundle independently
           command: yarn package-android --max-workers=3
+          no_output_timeout: 30m
       - persist_to_workspace:
           root: ~/uport-mobile
           paths:
