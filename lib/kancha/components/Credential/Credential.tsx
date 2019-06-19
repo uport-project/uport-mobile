@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { TouchableOpacity, TouchableHighlight, Linking, ViewStyle } from 'react-native'
+import { TouchableOpacity, TouchableHighlight, Linking, ViewStyle, StyleSheet } from 'react-native'
 import { Container, Text, Domain, Issuer, Icon, Colors } from '@kancha'
 import { Navigation } from 'react-native-navigation'
 
@@ -78,11 +78,14 @@ const Credential: React.FC<CredentialProps> = props => {
             backgroundColor={
               props.missing && props.spec && props.spec.essential
                 ? Theme.colors.warning.background
-                : props.missing
-                ? Theme.colors.secondary.background
-                : Colors.CHARCOAL
+                : Theme.colors.primary.background
             }
-            viewStyle={{ borderBottomLeftRadius: 5, borderTopLeftRadius: 5 }}>
+            viewStyle={{
+              borderBottomLeftRadius: 5,
+              borderTopLeftRadius: 5,
+              borderRightWidth: StyleSheet.hairlineWidth,
+              borderColor: Theme.colors.primary.accessories,
+            }}>
             {props.issuer ? (
               <Container padding={3} backgroundColor={Theme.colors.primary.background} br={4}>
                 <Avatar size={40} source={props.issuer} />
