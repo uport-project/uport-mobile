@@ -116,7 +116,7 @@ const Screen: React.FunctionComponent<ScreenProps> & {
   const mainContent = (
     <React.Fragment>
       <Container background={props.type} flex={1}>
-        <StatusBar hidden={props.statusBarHidden} animated />
+        <StatusBar barStyle="light-content" hidden={props.statusBarHidden} animated />
         {props.children}
       </Container>
     </React.Fragment>

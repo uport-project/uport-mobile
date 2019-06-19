@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Privacy Policy should render 1`] = `
+<View
+  pointerEvents="auto"
+  style={
+    Object {
+      "alignItems": undefined,
+      "backgroundColor": "#FFFFFF",
+      "borderRadius": undefined,
+      "flex": 1,
+      "flexDirection": undefined,
+      "height": undefined,
+      "justifyContent": undefined,
+      "marginBottom": undefined,
+      "marginLeft": undefined,
+      "marginRight": undefined,
+      "marginTop": undefined,
+      "padding": undefined,
+      "paddingBottom": undefined,
+      "paddingHorizontal": undefined,
+      "paddingLeft": undefined,
+      "paddingRight": undefined,
+      "paddingTop": undefined,
+      "width": undefined,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <RCTWebView
+      injectedJavaScript="(function() {
+  document.querySelector('.w-nav').style.display = 'none'
+  document.querySelector('#home').style.marginTop = '-100px'
+  document.querySelector('#home').style.height = '200px'
+  document.querySelector('#about').style.paddingTop = '20px'
+  document.querySelector('.footer-section').style.display = 'none'
+  document.querySelector('.hide-mobile-app').style.display = 'none'
+})()"
+      messagingEnabled={false}
+      onLoadingError={[Function]}
+      onLoadingFinish={[Function]}
+      onLoadingStart={[Function]}
+      onMessage={[Function]}
+      onShouldStartLoadWithRequest={[Function]}
+      scalesPageToFit={false}
+      source={
+        Object {
+          "uri": "https://www.uport.me/privacy-policy",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "flex": 1,
+          },
+          Object {
+            "backgroundColor": "#ffffff",
+          },
+          undefined,
+          Object {
+            "flex": 0,
+            "height": 0,
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(255,255,255,0.8)",
+          "flex": 1,
+          "height": 100,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <ActivityIndicator
+        animating={true}
+        color="#999999"
+        hidesWhenStopped={true}
+        size="small"
+      />
+    </View>
+  </View>
+</View>
+`;
