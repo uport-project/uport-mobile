@@ -208,9 +208,11 @@ exports[`Dashboard should render with props 1`] = `
                       style={
                         Object {
                           "alignItems": "center",
-                          "backgroundColor": "#333333",
+                          "backgroundColor": "#FFFFFF",
                           "borderBottomLeftRadius": 5,
+                          "borderColor": "#BBBBBB",
                           "borderRadius": undefined,
+                          "borderRightWidth": 0.5,
                           "borderTopLeftRadius": 5,
                           "flex": undefined,
                           "flexDirection": undefined,

@@ -1224,7 +1224,9 @@ Array [
                           "alignItems": "center",
                           "backgroundColor": "#D63A59",
                           "borderBottomLeftRadius": 5,
+                          "borderColor": "#BBBBBB",
                           "borderRadius": undefined,
+                          "borderRightWidth": 0.5,
                           "borderTopLeftRadius": 5,
                           "flex": undefined,
                           "flexDirection": undefined,
@@ -3419,9 +3421,11 @@ Array [
                       style={
                         Object {
                           "alignItems": "center",
-                          "backgroundColor": "#333333",
+                          "backgroundColor": "#FFFFFF",
                           "borderBottomLeftRadius": 5,
+                          "borderColor": "#BBBBBB",
                           "borderRadius": undefined,
+                          "borderRightWidth": 0.5,
                           "borderTopLeftRadius": 5,
                           "flex": undefined,
                           "flexDirection": undefined,
@@ -3691,9 +3695,11 @@ Array [
                       style={
                         Object {
                           "alignItems": "center",
-                          "backgroundColor": "#333333",
+                          "backgroundColor": "#FFFFFF",
                           "borderBottomLeftRadius": 5,
+                          "borderColor": "#BBBBBB",
                           "borderRadius": undefined,
+                          "borderRightWidth": 0.5,
                           "borderTopLeftRadius": 5,
                           "flex": undefined,
                           "flexDirection": undefined,
