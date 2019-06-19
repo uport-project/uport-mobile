@@ -4966,9 +4966,11 @@ exports[`DesignSystem renders with props 1`] = `
                           style={
                             Object {
                               "alignItems": "center",
-                              "backgroundColor": "#6A54D1",
+                              "backgroundColor": "#FFFFFF",
                               "borderBottomLeftRadius": 5,
+                              "borderColor": "#BBBBBB",
                               "borderRadius": undefined,
+                              "borderRightWidth": 0.5,
                               "borderTopLeftRadius": 5,
                               "flex": undefined,
                               "flexDirection": undefined,
@@ -5265,9 +5267,11 @@ exports[`DesignSystem renders with props 1`] = `
                           style={
                             Object {
                               "alignItems": "center",
-                              "backgroundColor": "#EFEEF3",
+                              "backgroundColor": "#FFFFFF",
                               "borderBottomLeftRadius": 5,
+                              "borderColor": "#BBBBBB",
                               "borderRadius": undefined,
+                              "borderRightWidth": 0.5,
                               "borderTopLeftRadius": 5,
                               "flex": undefined,
                               "flexDirection": undefined,
@@ -5559,9 +5563,11 @@ exports[`DesignSystem renders with props 1`] = `
                           style={
                             Object {
                               "alignItems": "center",
-                              "backgroundColor": "#EFEEF3",
+                              "backgroundColor": "#FFFFFF",
                               "borderBottomLeftRadius": 5,
+                              "borderColor": "#BBBBBB",
                               "borderRadius": undefined,
+                              "borderRightWidth": 0.5,
                               "borderTopLeftRadius": 5,
                               "flex": undefined,
                               "flexDirection": undefined,
@@ -5893,7 +5899,9 @@ exports[`DesignSystem renders with props 1`] = `
                               "alignItems": "center",
                               "backgroundColor": "#D63A59",
                               "borderBottomLeftRadius": 5,
+                              "borderColor": "#BBBBBB",
                               "borderRadius": undefined,
+                              "borderRightWidth": 0.5,
                               "borderTopLeftRadius": 5,
                               "flex": undefined,
                               "flexDirection": undefined,
@@ -6188,7 +6196,9 @@ exports[`DesignSystem renders with props 1`] = `
                               "alignItems": "center",
                               "backgroundColor": "#D63A59",
                               "borderBottomLeftRadius": 5,
+                              "borderColor": "#BBBBBB",
                               "borderRadius": undefined,
+                              "borderRightWidth": 0.5,
                               "borderTopLeftRadius": 5,
                               "flex": undefined,
                               "flexDirection": undefined,

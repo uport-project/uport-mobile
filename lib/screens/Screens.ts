@@ -2,6 +2,7 @@
  * Constant of all the screens in the app
  */
 export default {
+  Dashboard: 'Dashboard',
   Credentials: 'Credentials',
   Credential: 'Credential',
   Contacts: 'Contacts',

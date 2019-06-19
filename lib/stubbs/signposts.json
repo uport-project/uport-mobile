@@ -1,0 +1,29 @@
+[
+  {
+    "id": "uportlandia",
+    "title": "Visit uPortlandia",
+    "subtitle": "Get your first credential",
+    "logo": "",
+    "url": "https://",
+    "headerColor": "#6A54D1",
+    "content": {
+      "list": [
+        "Discover how to manage your data with uPort",
+        "Connect with services and build network that you fully control",
+        "Request, recieve and share information about yourself"
+      ]
+    }
+  },
+  {
+    "id": "onfido",
+    "title": "Get OnFido ID",
+    "subtitle": "Get verified in 5 minutes",
+    "url": "https://",
+    "logo": "",
+    "headerColor": "#3640f5",
+    "content": {
+      "description": "Verify yourself to to get one-click access to financial services",
+      "footNote": "Did you know????"
+    }
+  }
+]
