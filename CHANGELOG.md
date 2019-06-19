@@ -1,5 +1,14 @@
 # Change Log
 
+## [v470](https://github.com/uport-project/uport-mobile/tree/v470) (2019-06-19)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v469...v470)
+
+**Merged pull requests:**
+
+- Show privacy policy from web [\#164](https://github.com/uport-project/uport-mobile/pull/164) ([jasonhealy](https://github.com/jasonhealy))
+- Adding Onfido CTA [\#163](https://github.com/uport-project/uport-mobile/pull/163) ([jasonhealy](https://github.com/jasonhealy))
+- \[Support\] increase packager timeout on CI [\#162](https://github.com/uport-project/uport-mobile/pull/162) ([mirceanis](https://github.com/mirceanis))
+
 ## [v469](https://github.com/uport-project/uport-mobile/tree/v469) (2019-06-18)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v468...v469)
 
