@@ -35,18 +35,15 @@ jobs:
             - yarn-{{ arch }}-v5-{{ checksum "yarn.lock" }}
             - yarn-{{ arch }}-v5
       - run:
-          name: install tools
-          command: sudo npm i -g  codecov node-gyp
-      - run:
           name: jest tests
           command: |
             mkdir -p test-results/jest
-            yarn run test --ci --coverage --maxWorkers=3 && codecov
+            yarn run test --ci --coverage --maxWorkers=3
           environment:
             JEST_JUNIT_OUTPUT: test-results/jest/junit.xml
       - run:
           name: code-coverage
-          command: bash <(curl -s https://codecov.io/bash)
+          command: yarn codecov
 
       - store_test_results:
           path: test-results
