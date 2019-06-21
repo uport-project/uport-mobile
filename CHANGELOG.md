@@ -1,5 +1,14 @@
 # Change Log
 
+## [v471](https://github.com/uport-project/uport-mobile/tree/v471) (2019-06-21)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v470...v471)
+
+**Merged pull requests:**
+
+- Fixed gaslimit and network fee display issues [\#167](https://github.com/uport-project/uport-mobile/pull/167) ([simonas-notcat](https://github.com/simonas-notcat))
+- Fix padding and crashing notification [\#166](https://github.com/uport-project/uport-mobile/pull/166) ([jasonhealy](https://github.com/jasonhealy))
+- Remove codecov token from repo [\#165](https://github.com/uport-project/uport-mobile/pull/165) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v470](https://github.com/uport-project/uport-mobile/tree/v470) (2019-06-19)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v469...v470)
 
