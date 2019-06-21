@@ -10,17 +10,16 @@ interface DashboardProps {
   componentId: string
 }
 
-const fetchSignPosts = async (updater: (response: any) => void) => {
-  const response = await fetch(
-    'https://uport-mobile-store.s3.us-east-2.amazonaws.com/dashboard-signposts/signposts.json',
-  )
-  const json = await response.json()
-
-  updater(json)
-}
-
 export const Dashboard: React.FC<DashboardProps> = props => {
   const [signPosts, updateSignPosts] = useState([])
+  const fetchSignPosts = async () => {
+    const response = await fetch(
+      'https://uport-mobile-store.s3.us-east-2.amazonaws.com/dashboard-signposts/signposts.json',
+    )
+    const json = await response.json()
+
+    updateSignPosts(json)
+  }
   const showSignPosts =
     signPosts.length > 0 &&
     props.credentials.length === 0 &&
@@ -29,7 +28,7 @@ export const Dashboard: React.FC<DashboardProps> = props => {
     })
 
   useEffect(() => {
-    fetchSignPosts(updateSignPosts)
+    fetchSignPosts()
   }, [])
 
   const showCredentials = props.credentials.map(credential => {

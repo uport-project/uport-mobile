@@ -45,7 +45,7 @@ const SignPost: React.FC<SignPostProps> = ({ card }) => {
           <Icon name="externalLink" font="feather" color={'#ffffff'} />
         </Container>
       </TouchableOpacity>
-      <Container flex={1} padding paddingRight={30}>
+      <Container flex={1} paddingTop paddingLeft paddingBottom paddingRight={30}>
         {card.content.description && (
           <Container>
             <Text>{card.content.description}</Text>
