@@ -1,5 +1,8 @@
 # Change Log
 
+## [v472](https://github.com/uport-project/uport-mobile/tree/v472) (2019-06-25)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v471...v472)
+
 ## [v471](https://github.com/uport-project/uport-mobile/tree/v471) (2019-06-21)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v470...v471)
 
