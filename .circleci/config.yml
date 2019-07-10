@@ -198,6 +198,17 @@ jobs:
       - run:
           name: Fastlane
           command: cd ~/uport-mobile/ios && bundle exec fastlane buildTheApp
+      - run:
+          name: Build debug version of app
+          command: |
+            yarn global add react-native-cli
+            yarn
+            react-native run-ios
+      - run:      
+          command: |
+            ./testsuites/terminal.scpt
+            sleep 5
+            python testsuites/test.py    
       - persist_to_workspace:
           root: ~/uport-mobile
           paths:
