@@ -88,7 +88,6 @@
     "@react-native-community/netinfo": "^3.2.1",
     "@types/redux-mock-store": "^1.0.1",
     "analytics-react-native": "^1.1.0",
-    "appium": "^1.14.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "base64url": "^3.0.0",
     "bignumber.js": "^4.0.2",
@@ -162,7 +161,6 @@
     "uport-identity": "2.0.0-beta",
     "uport-lite": "^1.0.5",
     "url-parse": "^1.1.7",
-    "wd": "^1.11.3",
     "web3": "^0.19.1",
     "whatwg-fetch": "^2.0.1",
     "world-countries": "^1.8.1"
@@ -182,6 +180,7 @@
     "@types/react-native-vector-icons": "^4.6.4",
     "@types/react-redux": "^7.0.0",
     "@types/react-test-renderer": "^16.0.3",
+    "appium": "^1.14.0",
     "babel-jest": "^24.8.0",
     "browserify": "^16.2.0",
     "codecov": "^3.5.0",
@@ -218,7 +217,8 @@
     "tslint-config-prettier": "^1.17.0",
     "tslint-eslint-rules": "^5.4.0",
     "tslint-react": "^3.6.0",
-    "typescript": "^3.2.4"
+    "typescript": "^3.2.4",
+    "wd": "^1.11.3"
   },
   "browser": {
     "stream": false,

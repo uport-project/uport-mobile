@@ -180,6 +180,7 @@ jobs:
       - run:
             name: Install appium server
             command: |
+              npm install
               pip install Appium-Python-Client      
       - restore_cache:
           keys:
