@@ -212,9 +212,9 @@ jobs:
             react-native run-ios
       - run:      
           command: |
-            ./testsuites/terminal.scpt
+            npm run start-appium-server
             sleep 5
-            python testsuites/test.py    
+            npm run run-appium-tests
       - persist_to_workspace:
           root: ~/uport-mobile
           paths:
