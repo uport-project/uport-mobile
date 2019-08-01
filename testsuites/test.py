@@ -63,8 +63,11 @@ class identityTests(unittest.TestCase):
         
 
          # notifications permissions
-        self.assertTrue(select_element(self.wd, "Allow").is_displayed()) 
-        select_element(self.wd, "Allow").click()
+        if self.assertFalse(select_element(self.wd, "Allow").is_displayed()): 
+            select_element(self.wd, "").click()
+        else:
+            select_element(self.wd, "Allow").click()
+          
 
         #verify did is created
         #self.assertTrue(select_element(self.wd, "uPort ID ").is_displayed()) 
