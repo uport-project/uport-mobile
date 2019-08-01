@@ -65,7 +65,7 @@ class identityTests(unittest.TestCase):
          # notifications permissions
         if self.assertFalse(select_element(self.wd, "Allow").is_displayed()): 
             select_element(self.wd, "").click()
-        else:
+        elif self.assertTrue(select_element(self.wd, "Allow").is_displayed()):
             select_element(self.wd, "Allow").click()
           
 
