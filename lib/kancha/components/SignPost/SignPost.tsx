@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Image, TouchableOpacity, Linking } from 'react-native'
-
+import { connect } from 'react-redux'
+import { track } from 'uPortMobile/lib/actions/metricActions'
 import { Container, Text, Card, Colors, Icon, Theme } from '@kancha'
 
 export interface SignPostCardType {
@@ -19,41 +20,42 @@ export interface SignPostCardType {
 
 interface SignPostProps {
   card: SignPostCardType
+  openURL: (request: any) => void
 }
 
-const SignPost: React.FC<SignPostProps> = ({ card }) => {
+const SignPost: React.FC<SignPostProps> = props => {
   return (
     <Card marginBottom>
-      <TouchableOpacity onPress={() => Linking.openURL(card.url)}>
+      <TouchableOpacity onPress={() => props.openURL(props.card)}>
         <Container
           padding
-          backgroundColor={card.headerColor}
+          backgroundColor={props.card.headerColor}
           flexDirection={'row'}
           alignItems={'flex-start'}
           justifyContent={'center'}>
           <Container marginRight>
-            <Image source={{ uri: card.logo }} style={{ width: 40, height: 40, borderRadius: 5 }} />
+            <Image source={{ uri: props.card.logo }} style={{ width: 40, height: 40, borderRadius: 5 }} />
           </Container>
           <Container flex={1}>
             <Text textColor={'#ffffff'} type={Text.Types.SubTitle}>
-              {card.subtitle}
+              {props.card.subtitle}
             </Text>
             <Text bold textColor={'#ffffff'} type={Text.Types.H3}>
-              {card.title}
+              {props.card.title}
             </Text>
           </Container>
           <Icon name="externalLink" font="feather" color={'#ffffff'} />
         </Container>
       </TouchableOpacity>
       <Container flex={1} paddingTop paddingLeft paddingBottom paddingRight={30}>
-        {card.content.description && (
+        {props.card.content.description && (
           <Container>
-            <Text>{card.content.description}</Text>
+            <Text>{props.card.content.description}</Text>
           </Container>
         )}
-        {card.content.list && (
+        {props.card.content.list && (
           <Container>
-            {card.content.list.map((item: string) => {
+            {props.card.content.list.map((item: string) => {
               return (
                 <Container key={item} marginBottom={10} flexDirection={'row'} alignItems={'center'}>
                   <Container marginRight>
@@ -67,9 +69,9 @@ const SignPost: React.FC<SignPostProps> = ({ card }) => {
             })}
           </Container>
         )}
-        {card.content.footNote && (
+        {props.card.content.footNote && (
           <Container paddingTop>
-            <Text type={Text.Types.ListItemNote}>{card.content.footNote}</Text>
+            <Text type={Text.Types.ListItemNote}>{props.card.content.footNote}</Text>
           </Container>
         )}
       </Container>
@@ -77,4 +79,17 @@ const SignPost: React.FC<SignPostProps> = ({ card }) => {
   )
 }
 
-export default SignPost
+
+const mapStateToProps = (state: any, ownProps: any) => ownProps
+
+const mapDispatchToProps = (dispatch: any) => ({
+  openURL: (card: SignPostCardType) => {
+    dispatch(track(`Opened linked ${card.id}`))
+    Linking.openURL(card.url)
+  }
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(SignPost)
