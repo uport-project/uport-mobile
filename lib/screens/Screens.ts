@@ -39,6 +39,7 @@ export default {
   SecurityBlock: 'SecurityBlock',
 
   MarketPlace: 'MarketPlace',
+  Survey: 'Survey',
 
   BACKUP: {
     DataBackupInstructions: 'DataBackupInstructions',

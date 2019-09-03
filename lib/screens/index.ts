@@ -38,7 +38,7 @@ export function registerScreens(redux: any) {
    */
   registerComponentWithRedux(redux)(SCREENS.ProfileQRCode, require('uPortMobile/lib/components/shared/QRCodeModal').default)
   registerComponentWithRedux(redux)(SCREENS.MarketPlace, require('../screens/MarketPlace').default)
-
+  registerComponentWithRedux(redux)(SCREENS.Survey, require('../screens/Survey').default)
   /**
    * Settings screens
    */

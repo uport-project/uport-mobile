@@ -40,6 +40,7 @@ export { default as Credential } from './components/Credential/Credential'
 export { default as CredentialExplorer } from './components/CredentialExplorer/CredentialExplorer'
 export { default as MarketPlace } from './components/MarketPlace/MarketPlace'
 export { default as Toast } from './components/Toast/Toast'
+export { default as Survey } from './components/Survey/Survey'
 
 export { default as Request } from './components/Request/Request'
 export { default as Banner } from './components/Banner/Banner'
