@@ -33,7 +33,7 @@ import { Navigation } from 'react-native-navigation'
  * Refactor the parsers and move to kancah utils
  */
 import { parseClaimItem } from 'uPortMobile/lib/utilities/parseClaims'
-import { showMarketPlaceModal } from 'uPortMobile/lib/utilities/requestScreenManager'
+import { showMarketPlaceModal, showSurveyModal } from 'uPortMobile/lib/utilities/requestScreenManager'
 
 interface AcceptCredentialProps {
   verification: any
@@ -61,6 +61,7 @@ export const mapDispatchToProps = (dispatch: any) => ({
     // tslint:disable-next-line:no-console
     dispatch(cancelRequest(activity.id))
     showMarketPlaceModal(iss)
+    showSurveyModal(iss)
   },
   cancelRequest: (activity: any) => {
     dispatch(cancelRequest(activity.id))

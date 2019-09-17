@@ -19,7 +19,7 @@ const config = {
 
 describe('MarketPlaceModal', () => {
   it('renders with props', () => {
-    const tree = render(<MarketPlaceModal config={config} />).toJSON()
+    const tree = render(<MarketPlaceModal config={config} componentId={"test"}/>).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

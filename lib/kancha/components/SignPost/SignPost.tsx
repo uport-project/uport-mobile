@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { Image, TouchableOpacity, Linking } from 'react-native'
-
 import { Container, Text, Card, Colors, Icon, Theme } from '@kancha'
 
 export interface SignPostCardType {
@@ -19,12 +18,13 @@ export interface SignPostCardType {
 
 interface SignPostProps {
   card: SignPostCardType
+  onPress: () => void
 }
 
-const SignPost: React.FC<SignPostProps> = ({ card }) => {
+const SignPost: React.FC<SignPostProps> = ({ card, onPress }) => {
   return (
     <Card marginBottom>
-      <TouchableOpacity onPress={() => Linking.openURL(card.url)}>
+      <TouchableOpacity onPress={onPress}>
         <Container
           padding
           backgroundColor={card.headerColor}

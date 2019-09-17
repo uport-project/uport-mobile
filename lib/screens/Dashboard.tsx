@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from 'react'
+import { Linking } from 'react-native'
 import { connect } from 'react-redux'
 import { Screen, Container, Text, Card, Credential, Theme, Colors, Icon, SignPost, SignPostCardType } from '@kancha'
 import SCREENS from './Screens'
+import { track } from 'uPortMobile/lib/actions/metricActions'
 import { parseClaimItem } from 'uPortMobile/lib/utilities/parseClaims'
+
 import { onlyLatestAttestationsWithIssuer } from 'uPortMobile/lib/selectors/attestations'
 
 interface DashboardProps {
   credentials: any[]
   componentId: string
+  openURL: (url: string, eventName: string) => void
 }
 
 export const Dashboard: React.FC<DashboardProps> = props => {
@@ -24,7 +28,7 @@ export const Dashboard: React.FC<DashboardProps> = props => {
     signPosts.length > 0 &&
     props.credentials.length === 0 &&
     signPosts.map((card: SignPostCardType) => {
-      return <SignPost key={card.id} card={card} />
+      return <SignPost key={card.id} card={card} onPress={() => props.openURL(card.url, card.id)}/>
     })
 
   useEffect(() => {
@@ -63,4 +67,11 @@ const mapStateToProps = (state: any) => {
   }
 }
 
-export default connect(mapStateToProps)(Dashboard)
+const mapDispatchToProps = (dispatch: any) => ({
+  openURL: (url: string, eventName: string) => {
+    dispatch(track(`Opened linked ${eventName}`))
+    Linking.openURL(url)
+  }
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard)

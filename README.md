@@ -11,6 +11,8 @@ Using uPort you can:
 
 This mobile wallet is your connection to the uPort platform, an interoperable identity network for a secure, private, decentralized web. uPort provides open protocols for decentralized identity and interoperable messaging that enable trusted source attribution for all web communication. By allowing message recipients to trust message senders without centralized servers, we can create an entirely new framework for building applications, and many developers are already building on this system.
 
+[FAQ and helpdesk support](http://bit.ly/uPort_helpdesk)
+
 ## Getting started
 
 ### JavaScript environment setup
