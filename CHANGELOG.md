@@ -1,5 +1,21 @@
 # Change Log
 
+## [v474](https://github.com/uport-project/uport-mobile/tree/v474) (2019-09-17)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v473...v474)
+
+**Merged pull requests:**
+
+- Bump mixin-deep from 1.3.1 to 1.3.2 [\#182](https://github.com/uport-project/uport-mobile/pull/182) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump lodash-es from 4.17.11 to 4.17.15 [\#181](https://github.com/uport-project/uport-mobile/pull/181) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump lodash from 4.17.11 to 4.17.13 [\#180](https://github.com/uport-project/uport-mobile/pull/180) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Update README.md [\#179](https://github.com/uport-project/uport-mobile/pull/179) ([beckkles](https://github.com/beckkles))
+- Feature/167981388 onfido survey [\#178](https://github.com/uport-project/uport-mobile/pull/178) ([aldigjo](https://github.com/aldigjo))
+- track Onfido cta [\#176](https://github.com/uport-project/uport-mobile/pull/176) ([aldigjo](https://github.com/aldigjo))
+- Fix CFBundleDisplayName build error [\#169](https://github.com/uport-project/uport-mobile/pull/169) ([jasonhealy](https://github.com/jasonhealy))
+
+## [v473](https://github.com/uport-project/uport-mobile/tree/v473) (2019-07-03)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v472...v473)
+
 ## [v472](https://github.com/uport-project/uport-mobile/tree/v472) (2019-06-25)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v471...v472)
 
