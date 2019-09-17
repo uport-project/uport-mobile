@@ -12,6 +12,7 @@ interface ServiceProviders {
 }
 
 interface MarketPlaceProps {
+  componentId: string,
   config: any
 }
 
@@ -54,7 +55,7 @@ const MarketPlace: React.FC<MarketPlaceProps> = props => {
           type={Button.Types.Primary}
           block={Button.Block.Clear}
           buttonText={props.config.dismiss}
-          onPress={() => Navigation.dismissAllModals()}
+          onPress={() => Navigation.dismissModal(props.componentId)}
         />
       </Container>
     </Card>
