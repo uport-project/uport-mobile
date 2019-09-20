@@ -1,9 +1,7 @@
 module.exports = {
-    "extends": "airbnb",
-    "plugins": [
-        "react"
-    ],
-    "rules": {
-      "no-console": 0,
-    },
+  extends: 'airbnb',
+  plugins: ['react'],
+  rules: {
+    'no-console': 0,
+  },
 };
