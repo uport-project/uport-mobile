@@ -1,5 +1,15 @@
 # Change Log
 
+## [v476](https://github.com/uport-project/uport-mobile/tree/v476) (2019-09-22)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/vv475...v476)
+
+**Merged pull requests:**
+
+- fix Snorre's issue with verReq [\#183](https://github.com/uport-project/uport-mobile/pull/183) ([pelle](https://github.com/pelle))
+
+## [vv475](https://github.com/uport-project/uport-mobile/tree/vv475) (2019-09-17)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/vv474...vv475)
+
 ## [vv474](https://github.com/uport-project/uport-mobile/tree/vv474) (2019-09-17)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v473...vv474)
 
