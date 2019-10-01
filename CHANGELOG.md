@@ -1,5 +1,12 @@
 # Change Log
 
+## [v478](https://github.com/uport-project/uport-mobile/tree/v478) (2019-10-01)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v477...v478)
+
+**Merged pull requests:**
+
+- Update icons [\#186](https://github.com/uport-project/uport-mobile/pull/186) ([jasonhealy](https://github.com/jasonhealy))
+
 ## [v477](https://github.com/uport-project/uport-mobile/tree/v477) (2019-09-23)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v476...v477)
 
@@ -28,6 +35,7 @@
 - Update README.md [\#179](https://github.com/uport-project/uport-mobile/pull/179) ([beckkles](https://github.com/beckkles))
 - Feature/167981388 onfido survey [\#178](https://github.com/uport-project/uport-mobile/pull/178) ([aldigjo](https://github.com/aldigjo))
 - track Onfido cta [\#176](https://github.com/uport-project/uport-mobile/pull/176) ([aldigjo](https://github.com/aldigjo))
+- Fix CFBundleDisplayName build error [\#169](https://github.com/uport-project/uport-mobile/pull/169) ([jasonhealy](https://github.com/jasonhealy))
 
 ## [v473](https://github.com/uport-project/uport-mobile/tree/v473) (2019-07-03)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v472...v473)
@@ -49,7 +57,6 @@
 
 **Merged pull requests:**
 
-- Fix CFBundleDisplayName build error [\#169](https://github.com/uport-project/uport-mobile/pull/169) ([jasonhealy](https://github.com/jasonhealy))
 - Show privacy policy from web [\#164](https://github.com/uport-project/uport-mobile/pull/164) ([jasonhealy](https://github.com/jasonhealy))
 - Adding Onfido CTA [\#163](https://github.com/uport-project/uport-mobile/pull/163) ([jasonhealy](https://github.com/jasonhealy))
 - \[Support\] increase packager timeout on CI [\#162](https://github.com/uport-project/uport-mobile/pull/162) ([mirceanis](https://github.com/mirceanis))
@@ -349,7 +356,6 @@
 
 - Correct seed recovery screen [\#98](https://github.com/uport-project/uport-mobile/pull/98) ([jasonhealy](https://github.com/jasonhealy))
 - On-boarding tracking events [\#97](https://github.com/uport-project/uport-mobile/pull/97) ([jasonhealy](https://github.com/jasonhealy))
-- Bump release version to 1.6.1 [\#93](https://github.com/uport-project/uport-mobile/pull/93) ([jasonhealy](https://github.com/jasonhealy))
 
 ## [v428](https://github.com/uport-project/uport-mobile/tree/v428) (2019-03-28)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v427...v428)
@@ -374,6 +380,10 @@
 
 ## [v425](https://github.com/uport-project/uport-mobile/tree/v425) (2019-03-27)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v424...v425)
+
+**Merged pull requests:**
+
+- Bump release version to 1.6.1 [\#93](https://github.com/uport-project/uport-mobile/pull/93) ([jasonhealy](https://github.com/jasonhealy))
 
 ## [v424](https://github.com/uport-project/uport-mobile/tree/v424) (2019-03-27)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v423...v424)
@@ -486,6 +496,7 @@
 **Merged pull requests:**
 
 - execute callback if callbackUrl is included in claim when adding attestation [\#64](https://github.com/uport-project/uport-mobile/pull/64) ([mi-xu](https://github.com/mi-xu))
+- adding accessibility label for the left hand menu bar - used in autom… [\#63](https://github.com/uport-project/uport-mobile/pull/63) ([flaneuring](https://github.com/flaneuring))
 - Feature/pt162975683/typescript did resolvers [\#62](https://github.com/uport-project/uport-mobile/pull/62) ([mi-xu](https://github.com/mi-xu))
 - fix build for new vault [\#58](https://github.com/uport-project/uport-mobile/pull/58) ([mirceanis](https://github.com/mirceanis))
 
@@ -512,7 +523,6 @@
 
 **Merged pull requests:**
 
-- adding accessibility label for the left hand menu bar - used in autom… [\#63](https://github.com/uport-project/uport-mobile/pull/63) ([flaneuring](https://github.com/flaneuring))
 - Bugfix for PreHD migration crash on Android [\#54](https://github.com/uport-project/uport-mobile/pull/54) ([simonas-notcat](https://github.com/simonas-notcat))
 
 ## [v405](https://github.com/uport-project/uport-mobile/tree/v405) (2018-12-20)
