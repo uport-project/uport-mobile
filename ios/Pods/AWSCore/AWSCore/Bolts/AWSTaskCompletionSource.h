@@ -10,18 +10,16 @@
 
 #import <Foundation/Foundation.h>
 
-#import <AWSCore/AWSDefines.h>
-
 NS_ASSUME_NONNULL_BEGIN
 
-@class AWSTask AWS_GENERIC(AWSGenericType);
+@class AWSTask<__covariant ResultType>;
 
 /*!
  A AWSTaskCompletionSource represents the producer side of tasks.
  It is a task that also has methods for changing the state of the
  task by settings its completion values.
  */
-@interface AWSTaskCompletionSource AWS_GENERIC(__covariant AWSGenericType) : NSObject
+@interface AWSTaskCompletionSource<__covariant ResultType> : NSObject
 
 /*!
  Creates a new unfinished task.
@@ -31,28 +29,21 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  The task associated with this TaskCompletionSource.
  */
-@property (nonatomic, strong, readonly) AWSTask AWS_GENERIC(AWSGenericType) *task;
+@property (nonatomic, strong, readonly) AWSTask<ResultType> *task;
 
 /*!
  Completes the task by setting the result.
  Attempting to set this for a completed task will raise an exception.
  @param result The result of the task.
  */
-- (void)setResult:(nullable AWSGenericType)result;
+- (void)setResult:(nullable ResultType)result NS_SWIFT_NAME(set(result:));
 
 /*!
  Completes the task by setting the error.
  Attempting to set this for a completed task will raise an exception.
  @param error The error for the task.
  */
-- (void)setError:(NSError *)error;
-
-/*!
- Completes the task by setting an exception.
- Attempting to set this for a completed task will raise an exception.
- @param exception The exception for the task.
- */
-- (void)setException:(NSException *)exception;
+- (void)setError:(NSError *)error NS_SWIFT_NAME(set(error:));
 
 /*!
  Completes the task by marking it as cancelled.
@@ -64,21 +55,14 @@ NS_ASSUME_NONNULL_BEGIN
  Sets the result of the task if it wasn't already completed.
  @returns whether the new value was set.
  */
-- (BOOL)trySetResult:(nullable AWSGenericType)result;
+- (BOOL)trySetResult:(nullable ResultType)result NS_SWIFT_NAME(trySet(result:));
 
 /*!
  Sets the error of the task if it wasn't already completed.
  @param error The error for the task.
  @returns whether the new value was set.
  */
-- (BOOL)trySetError:(NSError *)error;
-
-/*!
- Sets the exception of the task if it wasn't already completed.
- @param exception The exception for the task.
- @returns whether the new value was set.
- */
-- (BOOL)trySetException:(NSException *)exception;
+- (BOOL)trySetError:(NSError *)error NS_SWIFT_NAME(trySet(error:));
 
 /*!
  Sets the cancellation state of the task if it wasn't already completed.

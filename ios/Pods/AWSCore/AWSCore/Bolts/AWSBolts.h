@@ -8,28 +8,20 @@
  *
  */
 
-#import <AWSCore/AWSBoltsVersion.h>
-#import <AWSCore/AWSCancellationToken.h>
-#import <AWSCore/AWSCancellationTokenRegistration.h>
-#import <AWSCore/AWSCancellationTokenSource.h>
-#import <AWSCore/AWSDefines.h>
-#import <AWSCore/AWSExecutor.h>
-#import <AWSCore/AWSTask.h>
-#import <AWSCore/AWSTaskCompletionSource.h>
+#import "AWSCancellationToken.h"
+#import "AWSCancellationTokenRegistration.h"
+#import "AWSCancellationTokenSource.h"
+#import "AWSExecutor.h"
+#import "AWSGeneric.h"
+#import "AWSTask.h"
+#import "AWSTaskCompletionSource.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
-/*! @abstract 80175001: There were multiple errors. */
-extern NSInteger const kAWSMultipleErrorsError;
-
-@interface AWSBolts : NSObject
-
-/*!
- Returns the version of the Bolts Framework as an NSString.
- @returns The NSString representation of the current version.
+/**
+ A string containing the version of the Bolts Framework used by the current application.
  */
-+ (NSString *)version;
-
-@end
+extern NSString *const AWSBoltsFrameworkVersionString;
 
 NS_ASSUME_NONNULL_END
