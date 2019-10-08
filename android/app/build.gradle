@@ -178,6 +178,10 @@ apply from: "../signing.gradle"
 android {
     compileSdkVersion compile_sdk_version
 
+    packagingOptions {
+        pickFirst 'lib/x86/libc++_shared.so'
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -244,6 +248,7 @@ android {
             }
         }
     }
+
     // applicationVariants are e.g. debug, release
     applicationVariants.all { variant ->
         if (variant.name.toLowerCase().contains("debug")) {
