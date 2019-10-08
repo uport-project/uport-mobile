@@ -1,8 +1,4 @@
 /*
-include ':@react-native-community_netinfo'
-project(':@react-native-community_netinfo').projectDir = new File(rootProject.projectDir, '../node_modules/@react-native-community/netinfo/android')
-include ':@react-native-community_async-storage'
-project(':@react-native-community_async-storage').projectDir = new File(rootProject.projectDir, '../node_modules/@react-native-community/async-storage/android')
  * Copyright (C) 2018 ConsenSys AG
  *
  * This file is part of uPort Mobile App.
@@ -22,16 +18,11 @@ project(':@react-native-community_async-storage').projectDir = new File(rootProj
 
 rootProject.name = 'uPortMobile'
 apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
-// include ':react-native-firebase'
-// project(':react-native-firebase').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-firebase/android')
-// include ':react-native-fcm'
-// project(':react-native-fcm').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-fcm/android')
-// include ':react-native-device-info'
-// project(':react-native-device-info').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-device-info/android')
-// include ':rn-fetch-blob'
-// project(':rn-fetch-blob').projectDir = new File(rootProject.projectDir, '../node_modules/rn-fetch-blob/android')
 
-// include ':app'
+include ':react-native-navigation'
+project(':react-native-navigation').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-navigation/lib/android/app/')
+
+include ':app'
 // include ':react-native-vector-icons'
 // project(':react-native-vector-icons').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-vector-icons/android')
 // include ':react-native-passcode-android'

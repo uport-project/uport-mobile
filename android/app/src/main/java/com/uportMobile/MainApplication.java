@@ -20,45 +20,17 @@ package com.uportMobile;
 import android.content.Context;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactNativeHost;
-
-// import com.RNFetchBlob.RNFetchBlobPackage;
-// import com.authentication.AuthenticationScreenPackage;
-// import com.bitgo.randombytes.RandomBytesPackage;
-// import com.crashlytics.android.Crashlytics;
-// import com.facebook.common.logging.FLog;
 import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
-
-// import com.imagepicker.ImagePickerPackage;
-// import com.learnium.RNDeviceInfo.RNDeviceInfo;
-// import com.oblador.vectoricons.VectorIconsPackage;
-// import com.poberwong.launcher.IntentLauncherPackage;
-// import com.reactlibrary.RNUportSignerPackage;
-
-// import org.reactnative.camera.RNCameraPackage;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
-// import io.fabric.sdk.android.Fabric;
-// import io.invertase.firebase.RNFirebasePackage;
-// import io.invertase.firebase.analytics.RNFirebaseAnalyticsPackage;
-// import io.invertase.firebase.config.RNFirebaseRemoteConfigPackage;
-// import io.invertase.firebase.notifications.RNFirebaseNotificationsPackage;
-// import io.invertase.firebase.messaging.RNFirebaseMessagingPackage;
+import com.reactnativenavigation.NavigationApplication;
+import com.reactnativenavigation.react.NavigationReactNativeHost;
+import com.reactnativenavigation.react.ReactGateway;
 
-// import cl.json.RNSharePackage;
-
-// import cl.json.ShareApplication;
-
-// import com.reactnativenavigation.NavigationApplication;
-// import com.reactnativenavigation.react.NavigationReactNativeHost;
-// import com.reactnativenavigation.react.ReactGateway;
-
-// import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
-// import com.reactnativecommunity.netinfo.NetInfoPackage;
-
-public class MainApplication extends NavigationApplication implements ShareApplication {
+public class MainApplication extends NavigationApplication {
 
     @Override
     protected ReactGateway createReactGateway() {
@@ -72,16 +44,6 @@ public class MainApplication extends NavigationApplication implements ShareAppli
     }
 
     @Override
-    public void onCreate() {
-        super.onCreate();
-        SoLoader.init(this, /* native exopackage */ false);
-        initializeFlipper(this); // Remove this line if you don't want Flipper enabled
-
-        // Fabric.with(this, new Crashlytics());
-        // FLog.setLoggingDelegate(ReactNativeFabricLogger.getInstance());
-    }
-
-    @Override
     public boolean isDebug() {
         // Make sure you are using BuildConfig from your own application
         return BuildConfig.DEBUG;
@@ -92,16 +54,6 @@ public class MainApplication extends NavigationApplication implements ShareAppli
         return getPackages();
     }
 
-    public boolean getUseDeveloperSupport() {
-        return BuildConfig.DEBUG;
-    }
-
-    @Override
-    public String getFileProviderAuthority() {
-        return "com.uportMobile.provider";
-    }
-
-    @Override
     protected List<ReactPackage> getPackages() {
         @SuppressWarnings("UnnecessaryLocalVariable")
         List<ReactPackage> packages = new PackageList(this).getPackages();
@@ -109,6 +61,16 @@ public class MainApplication extends NavigationApplication implements ShareAppli
         // example:
         // packages.add(new MyReactNativePackage());
         return packages;
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        SoLoader.init(this, /* native exopackage */ false);
+        initializeFlipper(this); // Remove this line if you don't want Flipper enabled
+
+        // Fabric.with(this, new Crashlytics());
+        // FLog.setLoggingDelegate(ReactNativeFabricLogger.getInstance());
     }
 
     /**
@@ -136,20 +98,5 @@ public class MainApplication extends NavigationApplication implements ShareAppli
             }
         }
     }
-
-    // protected List<ReactPackage> getPackages() {
-    // return Arrays.<ReactPackage>asList(new RNSharePackage(), new
-    // RNFirebasePackage(),
-    // new RNFirebaseRemoteConfigPackage(), new RNFirebaseNotificationsPackage(),
-    // new RNFirebaseMessagingPackage(), new RNDeviceInfo(), new
-    // RNFetchBlobPackage(),
-    // new VectorIconsPackage(), new RNCameraPackage(), new RandomBytesPackage(),
-    // new ImagePickerPackage(),
-    // new AuthenticationScreenPackage(), new MySNSPackage(), new
-    // IntentLauncherPackage(),
-    // new RNUportSignerPackage(), new RNFirebaseAnalyticsPackage(), new
-    // AsyncStoragePackage(),
-    // new NetInfoPackage());
-    // }
 
 }
