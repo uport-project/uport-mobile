@@ -359,7 +359,7 @@ PODS:
     - React
   - RNPasscodeAuth (1.1.0):
     - React
-  - RNShare (1.2.1):
+  - RNShare (2.0.0):
     - React
   - RNSVG (9.11.1):
     - React
@@ -612,7 +612,7 @@ SPEC CHECKSUMS:
   RNDeviceInfo: dc3cbee96cd2392cf03d6ff6191dc15f1606a166
   RNFS: a8fbe7060fa49157d819466404794ad9c58e58cf
   RNPasscodeAuth: 227c4d60d7171a5c02352077fa6d7272f53f17a8
-  RNShare: 48cf88cadf9ca2143cdaa557c1ec7f8808040ffc
+  RNShare: 8b171d4b43c1d886917fdd303bf7a4b87167b05c
   RNSVG: be27aa7c58819f97399388ae53d7fa0572f32c7f
   RNUportSigner: 4eba00a001717d1dcb9aecc24b757242dd8f56cd
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
