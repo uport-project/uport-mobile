@@ -18,7 +18,8 @@
     "android-release": "cd android && ./gradlew assembleRelease && cd ..",
     "package-android": "mkdir -p android/app/build/jsbundle/assets/ && mkdir -p android/app/build/jsbundle/res && react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/build/jsbundle/assets/index.android.bundle --assets-dest android/app/build/jsbundle/res",
     "package-android-release": "cd android && ./gradlew clean && cd - && mkdir -p android/app/build/jsbundle/assets/ && mkdir -p android/app/build/jsbundle/res && node node_modules/react-native/local-cli/cli.js bundle --platform android --dev false --entry-file index.js --bundle-output android/app/build/jsbundle/assets/index.android.bundle --assets-dest android/app/build/jsbundle/res && cd android && ./gradlew deliverArchives -x bundleReleaseJsAndAssets",
-    "package-android-dummy": "cd android && ./gradlew clean && cd - && yarn package-android && cd android && ./gradlew deliverArchives -x bundleReleaseJsAndAssets -PIGNORE_VAULT=true -PIGNORE_REPOSITORY_STATE=true"
+    "package-android-dummy": "cd android && ./gradlew clean && cd - && yarn package-android && cd android && ./gradlew deliverArchives -x bundleReleaseJsAndAssets -PIGNORE_VAULT=true -PIGNORE_REPOSITORY_STATE=true",
+    "postinstall": "npx jetify"
   },
   "jest": {
     "preset": "react-native",

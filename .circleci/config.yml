@@ -13,9 +13,6 @@ jobs:
       - run:
           name: install-dependencies
           command: yarn
-      - run:
-          name: jetify androidx
-          command: npx jetify
       - save_cache:
           key: yarn-{{ arch }}-v5-{{ checksum "yarn.lock" }}
           paths:
@@ -67,7 +64,7 @@ jobs:
             - yarn-{{ arch }}-v5
       - run:
           name: package react native android bundle independently
-          command: yarn package-android --max-workers=4
+          command: yarn package-android --max-workers=3
           no_output_timeout: 30m
       - persist_to_workspace:
           root: ~/uport-mobile
