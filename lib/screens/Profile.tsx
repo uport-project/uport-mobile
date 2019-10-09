@@ -246,9 +246,7 @@ export class UserProfile extends React.Component<UserProfileProps, UserProfileSt
     const message =
       account.network.toLowerCase() === 'mainnet'
         ? `Copy your Mainnet ethereum adddress to your clipboard ${account.hexaddress}`
-        : `Warning! This is a testnet account (${
-            account.network
-          }). Do not send real ETH to this account or you will lose it. ${account.hexaddress}.`
+        : `Warning! This is a testnet account (${account.network}). Do not send real ETH to this account or you will lose it. ${account.hexaddress}.`
 
     Alert.alert(
       title,
