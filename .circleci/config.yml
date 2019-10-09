@@ -13,6 +13,9 @@ jobs:
       - run:
           name: install-dependencies
           command: yarn
+     - run:
+          name: jetify androidx
+          command: npx jetify
       - save_cache:
           key: yarn-{{ arch }}-v5-{{ checksum "yarn.lock" }}
           paths:
