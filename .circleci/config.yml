@@ -64,7 +64,7 @@ jobs:
             - yarn-{{ arch }}-v5
       - run:
           name: package react native android bundle independently
-          command: NODE_BINARY="node --max_old_space_size=3072" & yarn package-android --max-workers=1
+          command: NODE_BINARY="node --max_old_space_size=3072" && yarn package-android --max-workers=1
           no_output_timeout: 30m
       - persist_to_workspace:
           root: ~/uport-mobile
