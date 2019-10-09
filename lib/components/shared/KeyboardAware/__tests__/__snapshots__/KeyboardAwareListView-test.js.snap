@@ -12,15 +12,32 @@ exports[`KeyboardAwareListView renders the KeyboardAwareListView 1`] = `
       "rowIdentities": Array [],
     }
   }
+  disableVirtualization={false}
+  getItem={[Function]}
+  getItemCount={[Function]}
+  horizontal={false}
+  initialNumToRender={10}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  numColumns={1}
   onContentSizeChange={[Function]}
+  onEndReachedThreshold={2}
   onLayout={[Function]}
+  onMomentumScrollEnd={[Function]}
   onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
   opacity={1}
-  renderScrollComponent={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
   scrollEventThrottle={200}
   scrollToBottomOnKBShow={false}
   scrollToInputAdditionalOffset={75}
   startScrolledToBottom={false}
+  stickyHeaderIndices={Array []}
+  updateCellsBatchingPeriod={50}
+  viewabilityConfigCallbackPairs={Array []}
+  windowSize={21}
 >
   <View />
 </RCTScrollView>

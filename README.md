@@ -26,6 +26,7 @@ After cloning this repository cd into the directory
 ```bash=
 $ yarn global add react-native-cli (to install CLI)
 $ yarn
+$ npx jetify
 ```
 
 ### Linking native libraries

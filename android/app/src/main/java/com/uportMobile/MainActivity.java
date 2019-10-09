@@ -17,30 +17,32 @@
  */
 package com.uportMobile;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.widget.ImageView;
-import android.graphics.drawable.Drawable;
-import android.support.v4.content.ContextCompat;
-import android.widget.LinearLayout;
-import android.os.SystemClock;
+// import android.content.Intent;
 
+// import androidx.annotation.Nullable;
+// import android.widget.ImageView;
+// import android.graphics.drawable.Drawable;
+// import android.support.v4.content.ContextCompat;
+// import android.widget.LinearLayout;
+// import android.os.SystemClock;
+
+import android.os.Bundle;
 import com.reactnativenavigation.NavigationActivity;
 
 public class MainActivity extends NavigationActivity {
 
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
+    // @Override
+    // protected void onCreate(Bundle savedInstanceState) {
+    // super.onCreate(savedInstanceState);
+    // }
 
-    @Override
-    protected void addDefaultSplashLayout() {
-        LinearLayout splash = new LinearLayout(this);
-        Drawable splash_background = ContextCompat.getDrawable(getApplicationContext(), R.drawable.splash);
-        splash.setBackground(splash_background);
-        setContentView(splash);
-        // SystemClock.sleep(1000 * 5);
-    }
+    // @Override
+    // protected void addDefaultSplashLayout() {
+    // LinearLayout splash = new LinearLayout(this);
+    // Drawable splash_background =
+    // ContextCompat.getDrawable(getApplicationContext(), R.drawable.splash);
+    // splash.setBackground(splash_background);
+    // setContentView(splash);
+    // // SystemClock.sleep(1000 * 5);
+    // }
 }

@@ -21,13 +21,14 @@
 buildscript {
 
     ext {
-        kotlin_version = "1.3.0"
+        kotlin_version = "1.3.10"
         build_tools_version = "28.0.3"
-        gradle_tools_version = "3.3.1"
-        google_tools_version = "3.1.2"
+        gradle_tools_version = "3.4.1"
+        google_tools_version = "4.2.0"
+        support_lib_version = "28.0.0"
 
         //check for updates at https://docs.fabric.io/android/changelog.html#fabric-gradle-plugin
-        fabric_tools_version = "1.25.4"
+        fabric_tools_version = "+"
 
         min_sdk_version = 21
         compile_sdk_version = 28
@@ -35,7 +36,6 @@ buildscript {
         target_sdk_version = compile_sdk_version
 
         constraint_layout_version = "1.1.2"
-        support_lib_version = "28.0.0"
         play_services_version = "12.0.1"
         aws_lib_version = "2.9.1"
         okhttp_version = "3.10.0"
@@ -53,12 +53,12 @@ buildscript {
     }
 
     repositories {
-        jcenter()
         google()
+        jcenter()
     }
 
     dependencies {
-        classpath "com.android.tools.build:gradle:$gradle_tools_version"
+        classpath("com.android.tools.build:gradle:$gradle_tools_version")
         classpath "com.google.gms:google-services:$google_tools_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
@@ -69,18 +69,19 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
-        jcenter()
+        mavenLocal()
         maven {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
-            url "$rootDir/../node_modules/react-native/android"
+            url("$rootDir/../node_modules/react-native/android")
         }
-        maven { url 'https://jitpack.io' }
-        maven { url "https://maven.google.com" }
         maven {
-           // Local Maven repo containing AARs with JSC library built for Android
-           url "$rootDir/../node_modules/jsc-android/dist"
+            // Android JSC is installed from npm
+            url("$rootDir/../node_modules/jsc-android/dist")
         }
+
+        google()
+        jcenter()
+        maven { url 'https://www.jitpack.io' }
     }
 }
 

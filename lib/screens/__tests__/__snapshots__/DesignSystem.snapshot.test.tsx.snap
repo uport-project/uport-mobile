@@ -163,7 +163,9 @@ exports[`DesignSystem renders with props 1`] = `
               >
                 <View
                   accessible={true}
+                  focusable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -439,7 +441,9 @@ exports[`DesignSystem renders with props 1`] = `
                 </View>
                 <View
                   accessible={true}
+                  focusable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -806,7 +810,9 @@ exports[`DesignSystem renders with props 1`] = `
               >
                 <View
                   accessible={true}
+                  focusable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -1083,7 +1089,9 @@ exports[`DesignSystem renders with props 1`] = `
                 </View>
                 <View
                   accessible={true}
+                  focusable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -1360,7 +1368,9 @@ exports[`DesignSystem renders with props 1`] = `
                 </View>
                 <View
                   accessible={true}
+                  focusable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -1626,7 +1636,9 @@ exports[`DesignSystem renders with props 1`] = `
                 </View>
                 <View
                   accessible={true}
+                  focusable={true}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -1983,7 +1995,9 @@ exports[`DesignSystem renders with props 1`] = `
               >
                 <View
                   accessible={true}
+                  focusable={false}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -2193,7 +2207,9 @@ exports[`DesignSystem renders with props 1`] = `
                 </View>
                 <View
                   accessible={true}
+                  focusable={false}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -2403,7 +2419,9 @@ exports[`DesignSystem renders with props 1`] = `
                 </View>
                 <View
                   accessible={true}
+                  focusable={false}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -2613,7 +2631,9 @@ exports[`DesignSystem renders with props 1`] = `
                 </View>
                 <View
                   accessible={true}
+                  focusable={false}
                   isTVSelectable={true}
+                  onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
@@ -3393,7 +3413,9 @@ exports[`DesignSystem renders with props 1`] = `
                 >
                   <View
                     accessible={true}
+                    focusable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -3474,7 +3496,9 @@ exports[`DesignSystem renders with props 1`] = `
                 >
                   <View
                     accessible={true}
+                    focusable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -3555,7 +3579,9 @@ exports[`DesignSystem renders with props 1`] = `
                 >
                   <View
                     accessible={true}
+                    focusable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -3636,7 +3662,9 @@ exports[`DesignSystem renders with props 1`] = `
                 >
                   <View
                     accessible={true}
+                    focusable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -3717,7 +3745,9 @@ exports[`DesignSystem renders with props 1`] = `
                 >
                   <View
                     accessible={true}
+                    focusable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -3891,7 +3921,9 @@ exports[`DesignSystem renders with props 1`] = `
                 >
                   <View
                     accessible={true}
+                    focusable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -3974,7 +4006,9 @@ exports[`DesignSystem renders with props 1`] = `
                 >
                   <View
                     accessible={true}
+                    focusable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -4057,7 +4091,9 @@ exports[`DesignSystem renders with props 1`] = `
                 >
                   <View
                     accessible={true}
+                    focusable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -4140,7 +4176,9 @@ exports[`DesignSystem renders with props 1`] = `
                 >
                   <View
                     accessible={true}
+                    focusable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -4223,7 +4261,9 @@ exports[`DesignSystem renders with props 1`] = `
                 >
                   <View
                     accessible={true}
+                    focusable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -4399,7 +4439,9 @@ exports[`DesignSystem renders with props 1`] = `
                 >
                   <View
                     accessible={true}
+                    focusable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -4479,7 +4521,9 @@ exports[`DesignSystem renders with props 1`] = `
                 >
                   <View
                     accessible={true}
+                    focusable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -4559,7 +4603,9 @@ exports[`DesignSystem renders with props 1`] = `
                 >
                   <View
                     accessible={true}
+                    focusable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -4639,7 +4685,9 @@ exports[`DesignSystem renders with props 1`] = `
                 >
                   <View
                     accessible={true}
+                    focusable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -4719,7 +4767,9 @@ exports[`DesignSystem renders with props 1`] = `
                 >
                   <View
                     accessible={true}
+                    focusable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -4892,7 +4942,9 @@ exports[`DesignSystem renders with props 1`] = `
                 >
                   <View
                     accessible={true}
+                    focusable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -5194,7 +5246,9 @@ exports[`DesignSystem renders with props 1`] = `
                 >
                   <View
                     accessible={true}
+                    focusable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -5490,7 +5544,9 @@ exports[`DesignSystem renders with props 1`] = `
                 >
                   <View
                     accessible={true}
+                    focusable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -5823,7 +5879,9 @@ exports[`DesignSystem renders with props 1`] = `
                 >
                   <View
                     accessible={true}
+                    focusable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -6120,7 +6178,9 @@ exports[`DesignSystem renders with props 1`] = `
                 >
                   <View
                     accessible={true}
+                    focusable={true}
                     isTVSelectable={true}
+                    onClick={[Function]}
                     onResponderGrant={[Function]}
                     onResponderMove={[Function]}
                     onResponderRelease={[Function]}
@@ -6485,7 +6545,9 @@ exports[`DesignSystem renders with props 1`] = `
                             </View>
                             <View
                               accessible={true}
+                              focusable={true}
                               isTVSelectable={true}
+                              onClick={[Function]}
                               onResponderGrant={[Function]}
                               onResponderMove={[Function]}
                               onResponderRelease={[Function]}

@@ -17,43 +17,20 @@
  */
 package com.uportMobile;
 
-import com.RNFetchBlob.RNFetchBlobPackage;
-import com.authentication.AuthenticationScreenPackage;
-import com.bitgo.randombytes.RandomBytesPackage;
-import com.crashlytics.android.Crashlytics;
-import com.facebook.common.logging.FLog;
+import android.content.Context;
+import com.facebook.react.PackageList;
+import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
-import com.facebook.react.shell.MainReactPackage;
-import com.imagepicker.ImagePickerPackage;
-import com.learnium.RNDeviceInfo.RNDeviceInfo;
-import com.oblador.vectoricons.VectorIconsPackage;
-import com.poberwong.launcher.IntentLauncherPackage;
-import com.reactlibrary.RNUportSignerPackage;
+import com.facebook.soloader.SoLoader;
 
-import org.reactnative.camera.RNCameraPackage;
-
-import java.util.Arrays;
+import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
-import io.fabric.sdk.android.Fabric;
-import io.invertase.firebase.RNFirebasePackage;
-import io.invertase.firebase.analytics.RNFirebaseAnalyticsPackage;
-import io.invertase.firebase.config.RNFirebaseRemoteConfigPackage;
-import io.invertase.firebase.notifications.RNFirebaseNotificationsPackage;
-import io.invertase.firebase.messaging.RNFirebaseMessagingPackage;
-
-import cl.json.RNSharePackage;
-import cl.json.ShareApplication;
-
-import com.facebook.react.ReactNativeHost;
 import com.reactnativenavigation.NavigationApplication;
 import com.reactnativenavigation.react.NavigationReactNativeHost;
 import com.reactnativenavigation.react.ReactGateway;
 
-import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
-import com.reactnativecommunity.netinfo.NetInfoPackage;
-
-public class MainApplication extends NavigationApplication implements ShareApplication {
+public class MainApplication extends NavigationApplication {
 
     @Override
     protected ReactGateway createReactGateway() {
@@ -67,13 +44,6 @@ public class MainApplication extends NavigationApplication implements ShareAppli
     }
 
     @Override
-    public void onCreate() {
-        super.onCreate();
-        Fabric.with(this, new Crashlytics());
-        FLog.setLoggingDelegate(ReactNativeFabricLogger.getInstance());
-    }
-
-    @Override
     public boolean isDebug() {
         // Make sure you are using BuildConfig from your own application
         return BuildConfig.DEBUG;
@@ -84,23 +54,49 @@ public class MainApplication extends NavigationApplication implements ShareAppli
         return getPackages();
     }
 
-    public boolean getUseDeveloperSupport() {
-        return BuildConfig.DEBUG;
+    protected List<ReactPackage> getPackages() {
+        @SuppressWarnings("UnnecessaryLocalVariable")
+        List<ReactPackage> packages = new PackageList(this).getPackages();
+        // Packages that cannot be autolinked yet can be added manually here, for
+        // example:
+        // packages.add(new MyReactNativePackage());
+        return packages;
     }
 
     @Override
-    public String getFileProviderAuthority() {
-        return "com.uportMobile.provider";
+    public void onCreate() {
+        super.onCreate();
+        SoLoader.init(this, /* native exopackage */ false);
+        initializeFlipper(this); // Remove this line if you don't want Flipper enabled
+
+        // Fabric.with(this, new Crashlytics());
+        // FLog.setLoggingDelegate(ReactNativeFabricLogger.getInstance());
     }
 
-    protected List<ReactPackage> getPackages() {
-        return Arrays.<ReactPackage>asList(new RNSharePackage(), new RNFirebasePackage(),
-                new RNFirebaseRemoteConfigPackage(), new RNFirebaseNotificationsPackage(),
-                new RNFirebaseMessagingPackage(), new RNDeviceInfo(), new RNFetchBlobPackage(),
-                new VectorIconsPackage(), new RNCameraPackage(), new RandomBytesPackage(), new ImagePickerPackage(),
-                new AuthenticationScreenPackage(), new MySNSPackage(), new IntentLauncherPackage(),
-                new RNUportSignerPackage(), new RNFirebaseAnalyticsPackage(), new AsyncStoragePackage(),
-                new NetInfoPackage());
+    /**
+     * Loads Flipper in React Native templates.
+     *
+     * @param context
+     */
+    private static void initializeFlipper(Context context) {
+        if (BuildConfig.DEBUG) {
+            try {
+                /*
+                 * We use reflection here to pick up the class that initializes Flipper, since
+                 * Flipper library is not available in release mode
+                 */
+                Class<?> aClass = Class.forName("com.facebook.flipper.ReactNativeFlipper");
+                aClass.getMethod("initializeFlipper", Context.class).invoke(null, context);
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            } catch (NoSuchMethodException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            } catch (InvocationTargetException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 }

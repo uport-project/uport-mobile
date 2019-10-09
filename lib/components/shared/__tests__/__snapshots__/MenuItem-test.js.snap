@@ -36,7 +36,9 @@ exports[`renders MenuItem with title 1`] = `
 exports[`renders MenuItem with title and internal link 1`] = `
 <View
   accessible={true}
+  focusable={true}
   isTVSelectable={true}
+  onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -109,7 +111,9 @@ exports[`renders MenuItem with title and internal link 1`] = `
 exports[`renders MenuItem with title and link 1`] = `
 <View
   accessible={true}
+  focusable={true}
   isTVSelectable={true}
+  onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -182,7 +186,9 @@ exports[`renders MenuItem with title and link 1`] = `
 exports[`renders MenuItem with title and onPress 1`] = `
 <View
   accessible={true}
+  focusable={true}
   isTVSelectable={true}
+  onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -292,7 +298,9 @@ exports[`renders MenuItem with title and value 1`] = `
 exports[`renders MenuItem with title, value and internal link 1`] = `
 <View
   accessible={true}
+  focusable={true}
   isTVSelectable={true}
+  onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -367,7 +375,9 @@ exports[`renders MenuItem with title, value and internal link 1`] = `
 exports[`renders MenuItem with title, value and link 1`] = `
 <View
   accessible={true}
+  focusable={true}
   isTVSelectable={true}
+  onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -442,7 +452,9 @@ exports[`renders MenuItem with title, value and link 1`] = `
 exports[`renders MenuItem with title, value and onPress 1`] = `
 <View
   accessible={true}
+  focusable={true}
   isTVSelectable={true}
+  onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}

@@ -123,10 +123,14 @@ const navBarText = (title: string, noBorder?: boolean) => {
       text: title,
       color: Theme.colors.inverted.text,
     },
-    largeTitle: {
-      visible: true,
-      color: Theme.colors.inverted.text,
+    background: {
+      color: Theme.colors.primary.brand,
+      translucent: false,
     },
+    // largeTitle: {
+    //   visible: true,
+    //   color: Theme.colors.inverted.text,
+    // },
   }
 }
 
@@ -251,10 +255,14 @@ export async function startMain() {
                                 text: 'Credentials',
                                 color: Theme.colors.inverted.text,
                               },
-                              largeTitle: {
-                                visible: true,
-                                color: Theme.colors.inverted.text,
+                              background: {
+                                color: Theme.colors.primary.brand,
+                                translucent: false,
                               },
+                              // largeTitle: {
+                              //   visible: true,
+                              //   color: Theme.colors.inverted.text,
+                              // },
                             },
                             bottomTab: {
                               icon: credentialsIcon,
@@ -270,6 +278,8 @@ export async function startMain() {
                               rippleColor: '#ddd',
                               icon: scanIcon,
                               iconColor: '#FFF',
+                              alignVertically: 'bottom',
+                              alignHorizontally: 'right',
                             },
                           },
                         },
@@ -291,10 +301,14 @@ export async function startMain() {
                                 text: '',
                                 color: Theme.colors.inverted.text,
                               },
-                              largeTitle: {
-                                visible: true,
-                                color: Theme.colors.inverted.text,
+                              background: {
+                                color: Theme.colors.primary.brand,
+                                translucent: false,
                               },
+                              // largeTitle: {
+                              //   visible: true,
+                              //   color: Theme.colors.inverted.text,
+                              // },
                             },
                             bottomTab: {
                               icon: profileIcon,
@@ -310,6 +324,8 @@ export async function startMain() {
                               rippleColor: '#ddd',
                               icon: scanIcon,
                               iconColor: '#FFF',
+                              alignVertically: 'bottom',
+                              alignHorizontally: 'right',
                             },
                           },
                         },
@@ -339,6 +355,8 @@ export async function startMain() {
                               rippleColor: '#ddd',
                               icon: scanIcon,
                               iconColor: '#FFF',
+                              alignVertically: 'bottom',
+                              alignHorizontally: 'right',
                             },
                           },
                         },
@@ -368,6 +386,8 @@ export async function startMain() {
                               rippleColor: '#ddd',
                               icon: scanIcon,
                               iconColor: '#FFF',
+                              alignVertically: 'bottom',
+                              alignHorizontally: 'right',
                             },
                           },
                         },
@@ -397,6 +417,8 @@ export async function startMain() {
                               rippleColor: '#ddd',
                               icon: scanIcon,
                               iconColor: '#FFF',
+                              alignVertically: 'bottom',
+                              alignHorizontally: 'right',
                             },
                           },
                         },

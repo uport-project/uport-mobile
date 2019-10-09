@@ -1,24 +1,24 @@
-/*
- Copyright 2010-2015 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-
- Licensed under the Apache License, Version 2.0 (the "License").
- You may not use this file except in compliance with the License.
- A copy of the License is located at
-
- http://aws.amazon.com/apache2.0
-
- or in the "license" file accompanying this file. This file is distributed
- on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
- express or implied. See the License for the specific language governing
- permissions and limitations under the License.
- */
+//
+// Copyright 2010-2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License").
+// You may not use this file except in compliance with the License.
+// A copy of the License is located at
+//
+// http://aws.amazon.com/apache2.0
+//
+// or in the "license" file accompanying this file. This file is distributed
+// on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+// express or implied. See the License for the specific language governing
+// permissions and limitations under the License.
+//
 
 #import "AWSClientContext.h"
 #import <UIKit/UIKit.h>
 #import <sys/types.h>
 #import <sys/sysctl.h>
 #import "AWSUICKeyChainStore.h"
-#import "AWSLogging.h"
+#import "AWSCocoaLumberjack.h"
 
 // Public constants
 NSString *const AWSClientContextVersion = @"1.0";
@@ -26,9 +26,9 @@ NSString *const AWSClientContextHeader = @"x-amz-Client-Context";
 NSString *const AWSClientContextHeaderEncoding = @"x-amz-Client-Context-Encoding";
 
 // Private constants
-NSString *const AWSClientContextUnknown = @"Unknown";
-NSString *const AWSClientContextKeychainService = @"com.amazonaws.AWSClientContext";
-NSString *const AWSClientContextKeychainInstallationIdKey = @"com.amazonaws.AWSClientContextKeychainInstallationIdKey";
+static NSString *const AWSClientContextUnknown = @"Unknown";
+static NSString *const AWSClientContextKeychainService = @"com.amazonaws.AWSClientContext";
+static NSString *const AWSClientContextKeychainInstallationIdKey = @"com.amazonaws.AWSClientContextKeychainInstallationIdKey";
 
 @interface AWSClientContext()
 
@@ -51,7 +51,7 @@ NSString *const AWSClientContextKeychainInstallationIdKey = @"com.amazonaws.AWSC
             _installationId = [keychain stringForKey:AWSClientContextKeychainInstallationIdKey];
         }
         if (_installationId == nil) {
-            AWSLogError(@"Failed to generate installation_id");
+            AWSDDLogError(@"Failed to generate installation_id");
         }
 
         NSString *appVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
@@ -85,8 +85,8 @@ NSString *const AWSClientContextKeychainInstallationIdKey = @"com.amazonaws.AWSC
 - (NSDictionary *)dictionaryRepresentation {
     NSDictionary *clientDetails = @{@"installation_id": self.installationId?self.installationId:@"UNKNOWN_INSTALLATION_ID",
                                     @"app_package_name": self.appPackageName,
-                                    @"app_version_name": self.appBuild,
-                                    @"app_version_code": self.appVersion,
+                                    @"app_version_name": self.appVersion,
+                                    @"app_version_code": self.appBuild,
                                     @"app_title": self.appName};
 
     NSDictionary *deviceDetails = @{@"model": self.deviceModel,
@@ -112,7 +112,7 @@ NSString *const AWSClientContextKeychainInstallationIdKey = @"com.amazonaws.AWSC
                                                        options:kNilOptions
                                                          error:&error];
     if (!JSONData) {
-        AWSLogError(@"Failed to serialize JSON Data. [%@]", error);
+        AWSDDLogError(@"Failed to serialize JSON Data. [%@]", error);
     }
 
     return [[NSString alloc] initWithData:JSONData
@@ -129,7 +129,7 @@ NSString *const AWSClientContextKeychainInstallationIdKey = @"com.amazonaws.AWSC
         [self.serviceDetails setValue:details
                                forKey:service];
     } else {
-        AWSLogError(@"'service' cannot be nil.");
+        AWSDDLogError(@"'service' cannot be nil.");
     }
 }
 

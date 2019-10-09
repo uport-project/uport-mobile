@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { WebView } from 'react-native'
+import { WebView } from 'react-native-webview'
 import { Screen } from '@kancha'
 
 interface PrivacyProps extends Kancha.NavigationScreen {}

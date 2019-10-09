@@ -1,10 +1,11 @@
+
 buildscript {
-    repositories {
-        maven { url 'https://maven.fabric.io/public' }
-        maven {
-            url "http://dl.bintray.com/kunickiaj/maven"
-        }
-    }
+    // repositories {
+    //     maven { url 'https://maven.fabric.io/public' }
+    //     maven {
+    //         url "http://dl.bintray.com/kunickiaj/maven"
+    //     }
+    // }
 
     dependencies {
         // These docs use an open ended version so that our plugin
@@ -12,7 +13,8 @@ buildscript {
 
         // We recommend changing it to the latest version from our changelog:
         //
-        classpath "io.fabric.tools:gradle:$fabric_tools_version"
+        // classpath "io.fabric.tools:gradle:$fabric_tools_version"
+        
     }
 }
 
@@ -40,12 +42,12 @@ apply plugin: "com.android.application"
  */
 
 // Put Fabric plugin after Android plugin
-apply plugin: 'io.fabric'
+// apply plugin: 'io.fabric'
 
 
-repositories {
-    maven { url 'https://maven.fabric.io/public' }
-}
+// repositories {
+//     maven { url 'https://maven.fabric.io/public' }
+// }
 
 import com.android.build.OutputFile
 
@@ -112,14 +114,16 @@ import com.android.build.OutputFile
  * ]
  */
 
-apply from: "../../node_modules/react-native/react.gradle"
-
 project.ext.react = [
-           // the name of the generated asset file containing your JS bundle
-           bundleAssetName: "index.android.bundle",
-           inputExcludes: ["android/**", "ios/**", 'fastlane/**', 'build/**'],
-           extraPackagerArgs: ["--max-workers=1"],
-        ]
+    entryFile: "index.js",
+    // the name of the generated asset file containing your JS bundle
+    bundleAssetName: "index.android.bundle",
+    inputExcludes: ["android/**", "ios/**", 'fastlane/**', 'build/**'],
+    extraPackagerArgs: ["--max-workers=1"],
+    enableHermes: false,  // clean and rebuild if changing
+]
+
+apply from: "../../node_modules/react-native/react.gradle"
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -136,6 +140,28 @@ def enableSeparateBuildPerCPUArchitecture = true
  */
 def enableProguardInReleaseBuilds = false
 
+/**
+ * The preferred build flavor of JavaScriptCore.
+ *
+ * For example, to use the international variant, you can use:
+ * `def jscFlavor = 'org.webkit:android-jsc-intl:+'`
+ *
+ * The international variant includes ICU i18n library and necessary data
+ * allowing to use e.g. `Date.toLocaleString` and `String.localeCompare` that
+ * give correct results when using with locales other than en-US.  Note that
+ * this variant is about 6MiB larger per architecture than default.
+ */
+def jscFlavor = 'org.webkit:android-jsc:+'
+/**
+ * Whether to enable the Hermes VM.
+ *
+ * This should be set on project.ext.react and mirrored here.  If it is not set
+ * on project.ext.react, JavaScript will not be compiled to Hermes Bytecode
+ * and the benefits of using Hermes will therefore be sharply reduced.
+ */
+def enableHermes = project.ext.react.get("enableHermes", false);
+
+
 // is gradle started for release build?
 // this is not bullet proof since there may exist some tasks that call for release but are not explicitly run
 boolean releaseRequested = false
@@ -151,9 +177,17 @@ apply from: "../signing.gradle"
 
 android {
     compileSdkVersion compile_sdk_version
-    buildToolsVersion build_tools_version
-    dexOptions {
-        jumboMode true
+
+    packagingOptions {
+        pickFirst 'lib/x86/libc++_shared.so'
+        pickFirst "lib/x86_64/libc++_shared.so"
+        pickFirst "lib/armeabi-v7a/libc++_shared.so"
+        pickFirst "lib/arm64-v8a/libc++_shared.so"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     sourceSets {
@@ -174,7 +208,7 @@ android {
         multiDexKeepFile file('multidex-config.txt')
 
         missingDimensionStrategy 'react-native-camera', 'general'
-        missingDimensionStrategy "RNN.reactNativeVersion", "reactNative57_5"
+        missingDimensionStrategy "RNN.reactNativeVersion", "reactNative60"
 
     }
 
@@ -205,6 +239,7 @@ android {
         debug {
             manifestPlaceholders = [excludeSystemAlertWindowPermission: "false"]
             versionNameSuffix "-debug"
+            signingConfig signingConfigs.debug
         }
         release {
             manifestPlaceholders = [excludeSystemAlertWindowPermission: "true"]
@@ -216,6 +251,7 @@ android {
             }
         }
     }
+
     // applicationVariants are e.g. debug, release
     applicationVariants.all { variant ->
         if (variant.name.toLowerCase().contains("debug")) {
@@ -225,8 +261,8 @@ android {
         } else {
             variant.outputs.each { output ->
                 // For each separate APK per architecture, set a unique version code as described here:
-                // http://tools.android.com/tech-docs/new-build-system/user-guide/apk-splits
-                def versionCodes = ["armeabi-v7a":1, "x86":2, "arm64-v8a": 3, "x86_64": 4]
+                // https://developer.android.com/studio/build/configure-apk-splits.html
+                def versionCodes = ["armeabi-v7a": 1, "x86": 2, "arm64-v8a": 3, "x86_64": 4]
                 def abi = output.getFilter(OutputFile.ABI)
                 if (abi != null) {  // null for the universal-debug, universal-release variants
                     output.versionCodeOverride =
@@ -243,75 +279,38 @@ android {
         disable 'RestrictedApi'
     }
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
+    
 }
 
 configurations.all {
 
     resolutionStrategy {
         force(
-                //added these to force a single version of google play services
-                "org.webkit:android-jsc:r236355",
-                //react-native-fcm
-                "com.google.firebase:firebase-core:$play_services_version",
-                "com.google.firebase:firebase-messaging:$play_services_version",
-                "com.google.android.gms:play-services-gcm:$play_services_version",
-                "com.android.support:support-v4:$support_lib_version",
-                "com.android.support:appcompat-v7:$support_lib_version",
+                // "com.google.firebase:firebase-core:$play_services_version",
+                // "com.google.firebase:firebase-messaging:$play_services_version",
+                // "com.google.android.gms:play-services-gcm:$play_services_version",
+                // "com.android.support:support-v4:$support_lib_version",
+                // "com.android.support:appcompat-v7:$support_lib_version",
         )
     }
 }
 
 dependencies {
-    
-   
+
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation project(':react-native-community-netinfo')
-    implementation project(':@react-native-community_async-storage')
-    implementation project(':react-native-share')
-    implementation(project(':react-native-firebase')) {
-        transitive = false
-    }
+    implementation "com.facebook.react:react-native:+"
     implementation project(':react-native-navigation')
-    implementation project(':react-native-device-info')
-    implementation project(':rn-fetch-blob')
-    implementation project(':react-native-vector-icons')
-    implementation project(':react-native-passcode-android')
-    implementation project(':react-native-randombytes')
-    implementation project(':react-native-image-picker')
-    implementation(project(':react-native-camera')) {
-        exclude group: "com.google.android.gms"
-        exclude group: "com.facebook.infer.annotation"
-    }
-    implementation project(':react-native-intent-launcher')
 
-    implementation project(':react-native-uport-signer')
-    implementation "com.facebook.react:react-native:$react_native_version"
+    implementation project(':react-native-firebase')
+    implementation "com.google.android.gms:play-services-base:16.1.0"
+    implementation "com.google.firebase:firebase-core:16.0.9"
 
-    implementation(
-            //required by react-native-firebase
-            "com.google.firebase:firebase-config:$play_services_version",
-    )
-    implementation(
-            //required by react-native-firebase
-            "com.google.firebase:firebase-messaging:$play_services_version",
-    )
-
-    // From node_modules
-    implementation("com.crashlytics.sdk.android:crashlytics:$crashlytics_version@aar") {
-        transitive = true
-    }
+    // implementation("com.crashlytics.sdk.android:crashlytics:$crashlytics_version@aar") {
+    //     transitive = true
+    // }
 
     implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
-
-    //noinspection GradleCompatible
-    implementation "com.android.support:appcompat-v7:$support_lib_version"
-    implementation "com.android.support:recyclerview-v7:$support_lib_version"
-    implementation "com.android.support:design:$support_lib_version"
 
     implementation "com.amazonaws:aws-android-sdk-core:$aws_lib_version"
     implementation "com.amazonaws:aws-android-sdk-s3:$aws_lib_version"
@@ -319,7 +318,15 @@ dependencies {
     implementation "com.amazonaws:aws-android-sdk-cognito:$aws_lib_version"
     implementation "com.amazonaws:aws-android-sdk-cognitoidentityprovider:$aws_lib_version"
     implementation "com.amazonaws:aws-android-sdk-sns:$aws_lib_version"
+    
 
+    if (enableHermes) {
+        def hermesPath = "../../node_modules/hermes-engine/android/";
+        debugImplementation files(hermesPath + "hermes-debug.aar")
+        releaseImplementation files(hermesPath + "hermes-release.aar")
+    } else {
+        implementation jscFlavor
+    }
     
 
 }
@@ -331,4 +338,6 @@ task copyDownloadableDepsToLibs(type: Copy) {
     into 'libs'
 }
 
+
 apply plugin: 'com.google.gms.google-services'
+apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)

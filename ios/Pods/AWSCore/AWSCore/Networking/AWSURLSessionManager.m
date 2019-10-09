@@ -1,25 +1,25 @@
-/*
- Copyright 2010-2015 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-
- Licensed under the Apache License, Version 2.0 (the "License").
- You may not use this file except in compliance with the License.
- A copy of the License is located at
-
- http://aws.amazon.com/apache2.0
-
- or in the "license" file accompanying this file. This file is distributed
- on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
- express or implied. See the License for the specific language governing
- permissions and limitations under the License.
- */
-
+//
+// Copyright 2010-2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License").
+// You may not use this file except in compliance with the License.
+// A copy of the License is located at
+//
+// http://aws.amazon.com/apache2.0
+//
+// or in the "license" file accompanying this file. This file is distributed
+// on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+// express or implied. See the License for the specific language governing
+// permissions and limitations under the License.
+//
 #import "AWSURLSessionManager.h"
 
 #import "AWSSynchronizedMutableDictionary.h"
-#import "AWSLogging.h"
+#import "AWSCocoaLumberjack.h"
 #import "AWSCategory.h"
 #import "AWSSignature.h"
 #import "AWSBolts.h"
+#import "AWSCredentialsProvider.h"
 
 #pragma mark - AWSURLSessionManagerDelegate
 
@@ -35,7 +35,7 @@ typedef NS_ENUM(NSInteger, AWSURLSessionTaskType) {
 @interface AWSURLSessionManagerDelegate : NSObject
 
 @property (nonatomic, assign) AWSURLSessionTaskType taskType;
-@property (nonatomic, copy) AWSNetworkingCompletionHandlerBlock dataTaskCompletionHandler;
+@property (nonatomic, strong) AWSTaskCompletionSource *taskCompletionSource;
 @property (nonatomic, strong) AWSNetworkingRequest *request;
 @property (nonatomic, strong) NSURL *uploadingFileURL;
 @property (nonatomic, strong) NSURL *downloadingFileURL;
@@ -60,7 +60,7 @@ typedef NS_ENUM(NSInteger, AWSURLSessionTaskType) {
     if (self = [super init]) {
         _taskType = AWSURLSessionTaskTypeUnknown;
     }
-    
+
     return self;
 }
 
@@ -82,6 +82,7 @@ typedef NS_ENUM(NSInteger, AWSURLSessionTaskType) {
 
 @property (nonatomic, strong) NSURLSession *session;
 @property (nonatomic, strong) AWSSynchronizedMutableDictionary *sessionManagerDelegates;
+@property (nonatomic) BOOL isSessionValid;
 
 @end
 
@@ -92,6 +93,10 @@ typedef NS_ENUM(NSInteger, AWSURLSessionTaskType) {
                                    reason:@"`- init` is not a valid initializer. Use `- initWithConfiguration` instead."
                                  userInfo:nil];
     return nil;
+}
+
+- (void)dealloc {
+    // Do nothing
 }
 
 - (instancetype)initWithConfiguration:(AWSNetworkingConfiguration *)configuration {
@@ -107,191 +112,183 @@ typedef NS_ENUM(NSInteger, AWSURLSessionTaskType) {
         if (configuration.timeoutIntervalForResource > 0) {
             sessionConfiguration.timeoutIntervalForResource = configuration.timeoutIntervalForResource;
         }
-
+        sessionConfiguration.allowsCellularAccess = configuration.allowsCellularAccess;
+        sessionConfiguration.sharedContainerIdentifier = configuration.sharedContainerIdentifier;
+        
         _session = [NSURLSession sessionWithConfiguration:sessionConfiguration
                                                  delegate:self
                                             delegateQueue:nil];
         _sessionManagerDelegates = [AWSSynchronizedMutableDictionary new];
+        _isSessionValid = YES;
     }
 
     return self;
 }
 
-- (void)dataTaskWithRequest:(AWSNetworkingRequest *)request
-          completionHandler:(AWSNetworkingCompletionHandlerBlock)completionHandler {
+- (AWSTask *)dataTaskWithRequest:(AWSNetworkingRequest *)request {
     [request assignProperties:self.configuration];
-    
+
     AWSURLSessionManagerDelegate *delegate = [AWSURLSessionManagerDelegate new];
-    delegate.dataTaskCompletionHandler = completionHandler;
+    delegate.taskCompletionSource = [AWSTaskCompletionSource taskCompletionSource];
     delegate.request = request;
     delegate.taskType = AWSURLSessionTaskTypeData;
     delegate.downloadingFileURL = request.downloadingFileURL;
     delegate.uploadingFileURL = request.uploadingFileURL;
     delegate.shouldWriteDirectly = request.shouldWriteDirectly;
-    
+
     [self taskWithDelegate:delegate];
+
+    return delegate.taskCompletionSource.task;
 }
 
 - (void)taskWithDelegate:(AWSURLSessionManagerDelegate *)delegate {
+    if (!self.session || !self.isSessionValid) {
+        delegate.taskCompletionSource.error = [NSError errorWithDomain:AWSNetworkingErrorDomain
+                                                                  code:AWSNetworkingErrorSessionInvalid
+                                                              userInfo:@{NSLocalizedDescriptionKey: @"URLSession is nil or invalidated"}];
+        return;
+    }
+
     if (delegate.downloadingFileURL) delegate.shouldWriteToFile = YES;
     delegate.responseData = nil;
     delegate.responseObject = nil;
     delegate.error = nil;
     NSMutableURLRequest *mutableRequest = [NSMutableURLRequest requestWithURL:delegate.request.URL];
     mutableRequest.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
-    
-    [[[[[[AWSTask taskWithResult:nil] continueWithBlock:^id(AWSTask *task) {
-        id signer = [delegate.request.requestInterceptors lastObject];
-        if (signer) {
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wundeclared-selector"
-            if ([signer respondsToSelector:@selector(credentialsProvider)]) {
-                id credentialsProvider = [signer performSelector:@selector(credentialsProvider)];
-                
-                if ([credentialsProvider respondsToSelector:@selector(refresh)]) {
-                    NSString *accessKey = nil;
-                    if ([credentialsProvider respondsToSelector:@selector(accessKey)]) {
-                        accessKey = [credentialsProvider performSelector:@selector(accessKey)];
-                    }
-                    
-                    NSString *secretKey = nil;
-                    if ([credentialsProvider respondsToSelector:@selector(secretKey)]) {
-                        secretKey = [credentialsProvider performSelector:@selector(secretKey)];
-                    }
-                    
-                    NSDate *expiration = nil;
-                    if  ([credentialsProvider respondsToSelector:@selector(expiration)]) {
-                        expiration = [credentialsProvider performSelector:@selector(expiration)];
-                    }
-                    
-                    /**
-                     Preemptively refresh credentials if any of the following is true:
-                     1. accessKey or secretKey is nil.
-                     2. the credentials expires within 10 minutes.
-                     */
-                    if ((!accessKey || !secretKey)
-                        || [expiration compare:[NSDate dateWithTimeIntervalSinceNow:10 * 60]] == NSOrderedAscending) {
-                        return [credentialsProvider performSelector:@selector(refresh)];
-                    }
-                }
-            }
-#pragma clang diagnostic pop
-        }
-        
-        return nil;
-    }] continueWithSuccessBlock:^id(AWSTask *task) {
-        AWSNetworkingRequest *request = delegate.request;
-        if (request.isCancelled) {
-            if (delegate.dataTaskCompletionHandler) {
-                AWSNetworkingCompletionHandlerBlock completionHandler = delegate.dataTaskCompletionHandler;
-                completionHandler(nil, [NSError errorWithDomain:AWSNetworkingErrorDomain
-                                                           code:AWSNetworkingErrorCancelled
-                                                       userInfo:nil]);
-            }
-            return nil;
-        }
-        
-        mutableRequest.HTTPMethod = [NSString aws_stringWithHTTPMethod:delegate.request.HTTPMethod];
-        
-        if ([request.requestSerializer respondsToSelector:@selector(serializeRequest:headers:parameters:)]) {
-            AWSTask *resultTask = [request.requestSerializer serializeRequest:mutableRequest
-                                                                     headers:request.headers
-                                                                  parameters:request.parameters];
-            //if serialization has error, abort task.
-            if (resultTask.error) {
-                return resultTask;
-            }
-        }
-        
-        AWSTask *sequencialTask = [AWSTask taskWithResult:nil];
-        for(id<AWSNetworkingRequestInterceptor>interceptor in request.requestInterceptors) {
-            if ([interceptor respondsToSelector:@selector(interceptRequest:)]) {
-                sequencialTask = [sequencialTask continueWithSuccessBlock:^id(AWSTask *task) {
-                    return [interceptor interceptRequest:mutableRequest];
-                }];
-            }
-        }
 
-        return task;
-    }] continueWithSuccessBlock:^id(AWSTask *task) {
+    AWSNetworkingRequest *request = delegate.request;
+    if (request.isCancelled) {
+        delegate.taskCompletionSource.error = [NSError errorWithDomain:AWSNetworkingErrorDomain
+                                                                  code:AWSNetworkingErrorCancelled
+                                                              userInfo:nil];
+        return;
+    }
+
+    mutableRequest.HTTPMethod = [NSString aws_stringWithHTTPMethod:delegate.request.HTTPMethod];
+
+    AWSTask *task = [AWSTask taskWithResult:nil];
+
+    if (request.requestSerializer) {
+        task = [request.requestSerializer serializeRequest:mutableRequest
+                                                   headers:request.headers
+                                                parameters:request.parameters];
+    }
+
+    for(id<AWSNetworkingRequestInterceptor>interceptor in request.requestInterceptors) {
+        task = [task continueWithSuccessBlock:^id(AWSTask *task) {
+            return [interceptor interceptRequest:mutableRequest];
+        }];
+    }
+
+    [[[task continueWithSuccessBlock:^id _Nullable(AWSTask * _Nonnull task) {
         AWSNetworkingRequest *request = delegate.request;
-        if ([request.requestSerializer respondsToSelector:@selector(validateRequest:)]) {
-            return [request.requestSerializer validateRequest:mutableRequest];
-        } else {
-            return [AWSTask taskWithResult:nil];
-        }
-    }] continueWithSuccessBlock:^id(AWSTask *task) {
+        return [request.requestSerializer validateRequest:mutableRequest];
+    }] continueWithSuccessBlock:^id _Nullable(AWSTask * _Nonnull task) {
         switch (delegate.taskType) {
             case AWSURLSessionTaskTypeData:
                 delegate.request.task = [self.session dataTaskWithRequest:mutableRequest];
                 break;
-                
+
             default:
                 break;
         }
-        
+
         if (delegate.request.task) {
+            if (!self.session || !self.isSessionValid) {
+                AWSDDLogError(@"Invalid AWSURLSessionTaskType.");
+                return [AWSTask taskWithError:[NSError errorWithDomain:AWSNetworkingErrorDomain
+                                                                  code:AWSNetworkingErrorSessionInvalid
+                                                              userInfo:@{NSLocalizedDescriptionKey: @"URLSession is nil or invalidated."}]];
+            }
+
             [self.sessionManagerDelegates setObject:delegate
                                              forKey:@(((NSURLSessionTask *)delegate.request.task).taskIdentifier)];
+
+            [self printHTTPHeadersAndBodyForRequest:delegate.request.task.originalRequest];
+
             [delegate.request.task resume];
         } else {
-            AWSLogError(@"Invalid AWSURLSessionTaskType.");
+            AWSDDLogError(@"Invalid AWSURLSessionTaskType.");
             return [AWSTask taskWithError:[NSError errorWithDomain:AWSNetworkingErrorDomain
-                                                             code:AWSNetworkingErrorUnknown
-                                                         userInfo:@{NSLocalizedDescriptionKey: @"Invalid AWSURLSessionTaskType."}]];
+                                                              code:AWSNetworkingErrorUnknown
+                                                          userInfo:@{NSLocalizedDescriptionKey: @"Invalid AWSURLSessionTaskType."}]];
         }
-        
+
         return nil;
     }] continueWithBlock:^id(AWSTask *task) {
         if (task.error) {
-            if (delegate.dataTaskCompletionHandler) {
-                AWSNetworkingCompletionHandlerBlock completionHandler = delegate.dataTaskCompletionHandler;
-                completionHandler(nil, task.error);
-            }
+            NSError *error = task.error;
+            delegate.taskCompletionSource.error = error;
         }
         return nil;
     }];
+}
+
+/**
+ Invalidates the underlying NSURLSession to avoid memory leaks. Internally, calls
+ `-[NSURLSession finishTasksAndInvalidate]` so that any in-process tasks are allowed
+ to complete before invalidating.
+
+ @warning Before calling this method, make sure no method is running on this manager.
+ */
+- (void)invalidate {
+    // Invalidate the session so its strong reference to self is released.
+    self.isSessionValid = NO;
+    [self.session finishTasksAndInvalidate];
+}
+
+#pragma mark - NSURLSessionDelegate
+
+- (void)URLSession:(NSURLSession *)session didBecomeInvalidWithError:(NSError *)error {
+    if (session == self.session) {
+        // If the session became invalid because of a call to `invalidate`, this should already be set, but we'll
+        // set it defensively in case there are other paths to invalidation.
+        self.isSessionValid = NO;
+        self.session = nil;
+    }
 }
 
 #pragma mark - NSURLSessionTaskDelegate
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)sessionTask didCompleteWithError:(NSError *)error {
     if (error) {
-        AWSLogError(@"Session task failed with error: %@", error);
+        AWSDDLogError(@"Session task failed with error: %@", error);
     }
-    
+
+    [self printHTTPHeadersForResponse:sessionTask.response];
+
     [[[AWSTask taskWithResult:nil] continueWithSuccessBlock:^id(AWSTask *task) {
         AWSURLSessionManagerDelegate *delegate = [self.sessionManagerDelegates objectForKey:@(sessionTask.taskIdentifier)];
-        
+
         if (delegate.responseFilehandle) {
             [delegate.responseFilehandle closeFile];
         }
-        
+
         if (!delegate.error) {
             delegate.error = error;
         }
-        
+
         //delete temporary file if the task contains error (e.g. has been canceled)
         if (error && delegate.tempDownloadedFileURL) {
             [[NSFileManager defaultManager] removeItemAtPath:delegate.tempDownloadedFileURL.path error:nil];
         }
-        
-        
+
+
         if (!delegate.error
             && [sessionTask.response isKindOfClass:[NSHTTPURLResponse class]]) {
             NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)sessionTask.response;
-            
+
             if (delegate.shouldWriteToFile) {
                 NSError *error = nil;
                 //move the downloaded file to user specified location if tempDownloadFileURL and downloadFileURL are different.
                 if (delegate.tempDownloadedFileURL && delegate.downloadingFileURL && [delegate.tempDownloadedFileURL isEqual:delegate.downloadingFileURL] == NO) {
-                    
+
                     if ([[NSFileManager defaultManager] fileExistsAtPath:delegate.downloadingFileURL.path]) {
-                        AWSLogWarn(@"Warning: target file already exists, will be overwritten at the file path: %@",delegate.downloadingFileURL);
+                        AWSDDLogWarn(@"Warning: target file already exists, will be overwritten at the file path: %@",delegate.downloadingFileURL);
                         [[NSFileManager defaultManager] removeItemAtPath:delegate.downloadingFileURL.path error:&error];
                     }
                     if (error) {
-                        AWSLogError(@"Delete File Error: [%@]",error);
+                        AWSDDLogError(@"Delete File Error: [%@]",error);
                     }
                     error = nil;
                     [[NSFileManager defaultManager] moveItemAtURL:delegate.tempDownloadedFileURL
@@ -334,11 +331,12 @@ typedef NS_ENUM(NSInteger, AWSURLSessionTaskType) {
                 }
             }
         }
-        
+
         if (delegate.error
             && ([sessionTask.response isKindOfClass:[NSHTTPURLResponse class]] || sessionTask.response == nil)
             && delegate.request.retryHandler) {
             AWSNetworkingRetryType retryType = [delegate.request.retryHandler shouldRetry:delegate.currentRetryCount
+                                                                          originalRequest:delegate.request
                                                                                  response:(NSHTTPURLResponse *)sessionTask.response
                                                                                      data:delegate.responseData
                                                                                     error:delegate.error];
@@ -356,24 +354,27 @@ typedef NS_ENUM(NSInteger, AWSURLSessionTaskType) {
                         } else {
                             // The response header does not have the 'Date' field.
                             // This should not happen.
-                            AWSLogError(@"Date header does not exist. Not able to fix the clock skew.");
+                            AWSDDLogError(@"Date header does not exist. Not able to fix the clock skew.");
                         }
                     }
                 }
-                    
+                    // Keep going to the next 'case' statement.
+
                 case AWSNetworkingRetryTypeShouldRefreshCredentialsAndRetry: {
                     id signer = [delegate.request.requestInterceptors lastObject];
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wundeclared-selector"
                     if ([signer respondsToSelector:@selector(credentialsProvider)]) {
-                        id credentialsProvider = [signer performSelector:@selector(credentialsProvider)];
-                        if ([credentialsProvider respondsToSelector:@selector(refresh)]) {
-                            [[credentialsProvider performSelector:@selector(refresh)] waitUntilFinished];
-                        }
+                        id<AWSCredentialsProvider> credentialsProvider = [signer performSelector:@selector(credentialsProvider)];
+                        [credentialsProvider invalidateCachedTemporaryCredentials];
                     }
-#pragma clang diagnostic pop
                 }
-                    
+                    // keep going to the next 'case' statement
+                case AWSNetworkingRetryTypeResetStreamAndRetry: {
+                    id retryHandler = delegate.request.retryHandler;
+                    if([retryHandler respondsToSelector:@selector(resetParameters:)]) {
+                        delegate.request.parameters = [delegate.request.retryHandler resetParameters:delegate.request.parameters];
+                    }
+                }
+                    // Keep going to the next 'case' statement.
                 case AWSNetworkingRetryTypeShouldRetry: {
                     NSTimeInterval timeIntervalToSleep = [delegate.request.retryHandler timeIntervalForRetry:delegate.currentRetryCount
                                                                                                     response:(NSHTTPURLResponse *)sessionTask.response
@@ -384,17 +385,20 @@ typedef NS_ENUM(NSInteger, AWSURLSessionTaskType) {
                     [self taskWithDelegate:delegate];
                 }
                     break;
-                    
+
                 case AWSNetworkingRetryTypeShouldNotRetry: {
-                    if (delegate.dataTaskCompletionHandler) {
-                        AWSNetworkingCompletionHandlerBlock completionHandler = delegate.dataTaskCompletionHandler;
-                        completionHandler(delegate.responseObject, delegate.error);
+                    if (delegate.error) {
+                        NSError *error = delegate.error;
+                        delegate.taskCompletionSource.error = error;
+                    } else if (delegate.responseObject) {
+                        id result = delegate.responseObject;
+                        delegate.taskCompletionSource.result = result;
                     }
                 }
                     break;
-                    
+
                 default:
-                    AWSLogError(@"Unknown retry type. This should not happen.");
+                    AWSDDLogError(@"Unknown retry type. This should not happen.");
                     NSAssert(NO, @"Unknown retry type. This should not happen.");
                     break;
             }
@@ -404,10 +408,13 @@ typedef NS_ENUM(NSInteger, AWSURLSessionTaskType) {
             if ([[retryHandler valueForKey:@"isClockSkewRetried"] boolValue]) {
                 [retryHandler setValue:@NO forKey:@"isClockSkewRetried"];
             }
-            
-            if (delegate.dataTaskCompletionHandler) {
-                AWSNetworkingCompletionHandlerBlock completionHandler = delegate.dataTaskCompletionHandler;
-                completionHandler(delegate.responseObject, delegate.error);
+
+            if (delegate.error) {
+                NSError *error = delegate.error;
+                delegate.taskCompletionSource.error = error;
+            } else if (delegate.responseObject) {
+                id result = delegate.responseObject;
+                delegate.taskCompletionSource.result = result;
             }
         }
         return nil;
@@ -420,8 +427,9 @@ typedef NS_ENUM(NSInteger, AWSURLSessionTaskType) {
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend {
     AWSURLSessionManagerDelegate *delegate = [self.sessionManagerDelegates objectForKey:@(task.taskIdentifier)];
     AWSNetworkingUploadProgressBlock uploadProgress = delegate.request.uploadProgress;
+    
     if (uploadProgress) {
-        
+
         NSURLSessionTask *sessionTask = delegate.request.task;
         int64_t originalDataLength = [[[sessionTask.originalRequest allHTTPHeaderFields] objectForKey:@"x-amz-decoded-content-length"] longLongValue];
         NSInputStream *inputStream = (AWSS3ChunkedEncodingInputStream *)sessionTask.originalRequest.HTTPBodyStream;
@@ -432,7 +440,7 @@ typedef NS_ENUM(NSInteger, AWSURLSessionTaskType) {
                 payloadBytesSent = bytesSent - (chunkedInputStream.totalLengthOfChunkSignatureSent - delegate.lastTotalLengthOfChunkSignatureSent);
             }
             delegate.lastTotalLengthOfChunkSignatureSent = chunkedInputStream.totalLengthOfChunkSignatureSent;
-            
+
             uploadProgress(payloadBytesSent, totalBytesSent - chunkedInputStream.totalLengthOfChunkSignatureSent, originalDataLength);
         }else {
             uploadProgress(bytesSent, totalBytesSent, totalBytesExpectedToSend);
@@ -449,90 +457,104 @@ typedef NS_ENUM(NSInteger, AWSURLSessionTaskType) {
     //If the response code is not 2xx, avoid write data to disk
     if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
         NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
-        if (httpResponse.statusCode >= 200 && httpResponse.statusCode < 300 ) {
+        
+        if (httpResponse.statusCode >= 200 && httpResponse.statusCode < 300) {
             // status is good, we can keep value of shouldWriteToFile
         } else {
             // got error status code, avoid write data to disk
             delegate.shouldWriteToFile = NO;
         }
     }
-    if (delegate.shouldWriteToFile) {
-        
-        if (delegate.shouldWriteDirectly) {
-            //If set (e..g by S3 Transfer Manager), downloaded data will be wrote to the downloadingFileURL directly, if the file already exists, it will appended to the end.
-            AWSLogDebug(@"DirectWrite is On, downloaded data will be wrote to the downloadingFileURL directly, if the file already exists, it will appended to the end.\
-                        Original file may be modified even the downloading task has been paused/cancelled later.");
-            
-            NSError *error = nil;
-            if ([[NSFileManager defaultManager] fileExistsAtPath:delegate.downloadingFileURL.path]) {
-                AWSLogDebug(@"target file already exists, will be appended at the file path: %@",delegate.downloadingFileURL);
-                delegate.responseFilehandle = [NSFileHandle fileHandleForUpdatingURL:delegate.downloadingFileURL error:&error];
-                if (error) {
-                    AWSLogError(@"Error: [%@]", error);
+    
+    @try {
+        if (delegate.shouldWriteToFile) {
+
+            if (delegate.shouldWriteDirectly) {
+                //If set (e..g by S3 Transfer Manager), downloaded data will be wrote to the downloadingFileURL directly, if the file already exists, it will appended to the end.
+                AWSDDLogDebug(@"DirectWrite is On, downloaded data will be wrote to the downloadingFileURL directly, if the file already exists, it will appended to the end.\
+                            Original file may be modified even the downloading task has been paused/cancelled later.");
+
+                NSError *error = nil;
+                if ([[NSFileManager defaultManager] fileExistsAtPath:delegate.downloadingFileURL.path]) {
+                    AWSDDLogDebug(@"target file already exists, will be appended at the file path: %@",delegate.downloadingFileURL);
+                    delegate.responseFilehandle = [NSFileHandle fileHandleForUpdatingURL:delegate.downloadingFileURL error:&error];
+                    if (error) {
+                        AWSDDLogError(@"Error: [%@]", error);
+                    }
+                    [delegate.responseFilehandle seekToEndOfFile];
+
+                } else {
+                    //Create the file
+                    if (![[NSFileManager defaultManager] createFileAtPath:delegate.downloadingFileURL.path contents:nil attributes:nil]) {
+                        AWSDDLogError(@"Error: Can not create file with file path:%@",delegate.downloadingFileURL.path);
+                    }
+                    error = nil;
+                    delegate.responseFilehandle = [NSFileHandle fileHandleForWritingToURL:delegate.downloadingFileURL error:&error];
+                    if (error) {
+                        AWSDDLogError(@"Error: [%@]", error);
+                    }
                 }
-                [delegate.responseFilehandle seekToEndOfFile];
-                
+
             } else {
-                //Create the file
-                if (![[NSFileManager defaultManager] createFileAtPath:delegate.downloadingFileURL.path contents:nil attributes:nil]) {
-                    AWSLogError(@"Error: Can not create file with file path:%@",delegate.downloadingFileURL.path);
+                NSError *error = nil;
+                //This is the normal case. downloaded data will be saved in a temporay folder and then moved to downloadingFileURL after downloading complete.
+                NSString *tempFileName = [NSString stringWithFormat:@"%@.%@",AWSMobileURLSessionManagerCacheDomain,[[NSProcessInfo processInfo] globallyUniqueString]];
+                NSString *tempDirPath = [NSTemporaryDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.fileCache",AWSMobileURLSessionManagerCacheDomain]];
+
+                //Create temp folder if not exist
+                [[NSFileManager defaultManager] createDirectoryAtPath:tempDirPath withIntermediateDirectories:NO attributes:nil error:nil];
+
+                delegate.tempDownloadedFileURL  = [NSURL fileURLWithPath:[tempDirPath stringByAppendingPathComponent:tempFileName]];
+
+                //Remove temp file if it has already exists
+                if ([[NSFileManager defaultManager] fileExistsAtPath:delegate.tempDownloadedFileURL.path]) {
+                    AWSDDLogWarn(@"Warning: target file already exists, will be overwritten at the file path: %@",delegate.tempDownloadedFileURL);
+                    [[NSFileManager defaultManager] removeItemAtPath:delegate.tempDownloadedFileURL.path error:&error];
+                }
+                if (error) {
+                    AWSDDLogError(@"Error: [%@]", error);
+                }
+
+                //Create new temp file
+                if (![[NSFileManager defaultManager] createFileAtPath:delegate.tempDownloadedFileURL.path contents:nil attributes:nil]) {
+                    AWSDDLogError(@"Error: Can not create file with file path:%@",delegate.tempDownloadedFileURL.path);
                 }
                 error = nil;
-                delegate.responseFilehandle = [NSFileHandle fileHandleForWritingToURL:delegate.downloadingFileURL error:&error];
+                delegate.responseFilehandle = [NSFileHandle fileHandleForWritingToURL:delegate.tempDownloadedFileURL error:&error];
                 if (error) {
-                    AWSLogError(@"Error: [%@]", error);
+                    AWSDDLogError(@"Error: [%@]", error);
                 }
             }
-            
-        } else {
-            NSError *error = nil;
-            //This is the normal case. downloaded data will be saved in a temporay folder and then moved to downloadingFileURL after downloading complete.
-            NSString *tempFileName = [NSString stringWithFormat:@"%@.%@",AWSMobileURLSessionManagerCacheDomain,[[NSProcessInfo processInfo] globallyUniqueString]];
-            NSString *tempDirPath = [NSTemporaryDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.fileCache",AWSMobileURLSessionManagerCacheDomain]];
-            
-            //Create temp folder if not exist
-            [[NSFileManager defaultManager] createDirectoryAtPath:tempDirPath withIntermediateDirectories:NO attributes:nil error:nil];
-            
-            delegate.tempDownloadedFileURL  = [NSURL fileURLWithPath:[tempDirPath stringByAppendingPathComponent:tempFileName]];
-            
-            //Remove temp file if it has already exists
-            if ([[NSFileManager defaultManager] fileExistsAtPath:delegate.tempDownloadedFileURL.path]) {
-                AWSLogWarn(@"Warning: target file already exists, will be overwritten at the file path: %@",delegate.tempDownloadedFileURL);
-                [[NSFileManager defaultManager] removeItemAtPath:delegate.tempDownloadedFileURL.path error:&error];
-            }
-            if (error) {
-                AWSLogError(@"Error: [%@]", error);
-            }
-            
-            //Create new temp file
-            if (![[NSFileManager defaultManager] createFileAtPath:delegate.tempDownloadedFileURL.path contents:nil attributes:nil]) {
-                AWSLogError(@"Error: Can not create file with file path:%@",delegate.tempDownloadedFileURL.path);
-            }
-            error = nil;
-            delegate.responseFilehandle = [NSFileHandle fileHandleForWritingToURL:delegate.tempDownloadedFileURL error:&error];
-            if (error) {
-                AWSLogError(@"Error: [%@]", error);
-            }
         }
-        
     }
-    
-    //    if([response isKindOfClass:[NSHTTPURLResponse class]]) {
-    //        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
-    //        if ([[[httpResponse allHeaderFields] objectForKey:@"Content-Length"] longLongValue] >= AWSMinimumDownloadTaskSize) {
-    //            completionHandler(NSURLSessionResponseBecomeDownload);
-    //            return;
-    //        }
-    //    }
-    
+    @catch (NSException *exception) {
+        NSString *desc = [NSString stringWithFormat:@"Failed to write data: %@", exception];
+        NSDictionary *userInfo = @{
+                                   NSLocalizedDescriptionKey:  desc
+                                   };
+        AWSDDLogError(@"Error: [%@]", exception);
+        delegate.error = [NSError errorWithDomain:AWSNetworkingErrorDomain code:AWSNetworkingErrorUnknown userInfo: userInfo];
+    }
     completionHandler(NSURLSessionResponseAllow);
 }
+
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
     AWSURLSessionManagerDelegate *delegate = [self.sessionManagerDelegates objectForKey:@(dataTask.taskIdentifier)];
     
     if (delegate.responseFilehandle) {
-        [delegate.responseFilehandle writeData:data];
+        @try{
+            [delegate.responseFilehandle writeData:data];
+        }
+        @catch (NSException *exception) {
+            NSString *desc = [NSString stringWithFormat:@"Failed to write data: %@", exception];
+            NSDictionary *userInfo = @{
+                                       NSLocalizedDescriptionKey:  desc
+                                       };
+            AWSDDLogError(@"Error: [%@]", exception);
+            delegate.error = [NSError errorWithDomain:AWSNetworkingErrorDomain code:AWSNetworkingErrorUnknown userInfo: userInfo];
+            [dataTask cancel];
+        }
     } else {
         if (!delegate.responseData) {
             delegate.responseData = [NSMutableData dataWithData:data];
@@ -543,7 +565,7 @@ typedef NS_ENUM(NSInteger, AWSURLSessionTaskType) {
     
     AWSNetworkingDownloadProgressBlock downloadProgress = delegate.request.downloadProgress;
     if (downloadProgress) {
-        
+
         int64_t bytesWritten = [data length];
         delegate.payloadTotalBytesWritten += bytesWritten;
         int64_t byteRangeStartPosition = 0;
@@ -561,4 +583,42 @@ typedef NS_ENUM(NSInteger, AWSURLSessionTaskType) {
     }
     
 }
+
+#pragma mark - Helper methods
+
+- (void)printHTTPHeadersAndBodyForRequest:(NSURLRequest *)request {
+    AWSDDLogDebug(@"Request headers:\n%@", request.allHTTPHeaderFields);
+    if([AWSDDLog sharedInstance].logLevel & AWSDDLogFlagDebug){
+        if(request.HTTPBody) {
+            NSMutableString *bodyString = [[NSMutableString alloc] initWithData:request.HTTPBody
+                                                                       encoding:NSUTF8StringEncoding];
+            
+            if ([request.URL.absoluteString containsString:@"cognito-idp."]) {
+                NSError *error = nil;
+                NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(Password)\":\".*?\""
+                                                                                       options:NSRegularExpressionCaseInsensitive
+                                                                                         error:&error];
+                [regex replaceMatchesInString:bodyString
+                                      options:0
+                                        range:NSMakeRange(0, bodyString.length)
+                                 withTemplate:@"$1\":\"[redacted]\""];
+            }
+            
+            if (bodyString.length <= 100 * 1024) {
+                AWSDDLogDebug(@"Request body:\n%@", bodyString);
+            } else {
+                AWSDDLogDebug(@"Request body (Partial data. The first 100KB is displayed.):\n%@", [bodyString substringWithRange:NSMakeRange(0, 100 * 1024)]);
+            }
+        }
+    }
+}
+
+- (void)printHTTPHeadersForResponse:(NSURLResponse *)response {
+    if([AWSDDLog sharedInstance].logLevel & AWSDDLogFlagDebug){
+        if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
+            AWSDDLogDebug(@"Response headers:\n%@", ((NSHTTPURLResponse *)response).allHeaderFields);
+        }
+    }
+}
+
 @end

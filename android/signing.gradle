@@ -206,10 +206,14 @@ def checkVaultEnvironment() {
 def doClearSecrets() {
     clearFields()
     vaultKeystoreTempFile?.with {
-        fillWithGarbage(vaultKeystoreTempFile)
-        println "deleting $vaultKeystoreTempFile"
-        vaultKeystoreTempFile?.delete()
-        println "deleted $vaultKeystoreTempFile"
+        try {
+            fillWithGarbage(vaultKeystoreTempFile)
+            println "deleting $vaultKeystoreTempFile"
+            vaultKeystoreTempFile?.delete()
+            println "deleted $vaultKeystoreTempFile"
+        } catch (ignored) {
+            //nop
+        }
     }
     vaultKeystoreTempFile = null
 }

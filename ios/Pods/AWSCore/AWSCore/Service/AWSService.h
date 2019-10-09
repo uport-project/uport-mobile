@@ -1,24 +1,50 @@
-/*
- Copyright 2010-2015 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-
- Licensed under the Apache License, Version 2.0 (the "License").
- You may not use this file except in compliance with the License.
- A copy of the License is located at
-
- http://aws.amazon.com/apache2.0
-
- or in the "license" file accompanying this file. This file is distributed
- on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
- express or implied. See the License for the specific language governing
- permissions and limitations under the License.
- */
+//
+// Copyright 2010-2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License").
+// You may not use this file except in compliance with the License.
+// A copy of the License is located at
+//
+// http://aws.amazon.com/apache2.0
+//
+// or in the "license" file accompanying this file. This file is distributed
+// on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+// express or implied. See the License for the specific language governing
+// permissions and limitations under the License.
+//
 
 #import <Foundation/Foundation.h>
 #import "AWSNetworking.h"
 #import "AWSCredentialsProvider.h"
 #import "AWSServiceEnum.h"
 
+//! SDK version for AWS Core
 FOUNDATION_EXPORT NSString *const AWSiOSSDKVersion;
+
+FOUNDATION_EXPORT NSString *const AWSServiceErrorDomain;
+
+typedef NS_ENUM(NSInteger, AWSServiceErrorType) {
+    AWSServiceErrorUnknown,
+    AWSServiceErrorRequestTimeTooSkewed,
+    AWSServiceErrorInvalidSignatureException,
+    AWSServiceErrorSignatureDoesNotMatch,
+    AWSServiceErrorRequestExpired,
+    AWSServiceErrorAuthFailure,
+    AWSServiceErrorAccessDeniedException,
+    AWSServiceErrorUnrecognizedClientException,
+    AWSServiceErrorIncompleteSignature,
+    AWSServiceErrorInvalidClientTokenId,
+    AWSServiceErrorMissingAuthenticationToken,
+    AWSServiceErrorAccessDenied,
+    AWSServiceErrorExpiredToken,
+    AWSServiceErrorInvalidAccessKeyId,
+    AWSServiceErrorInvalidToken,
+    AWSServiceErrorTokenRefreshRequired,
+    AWSServiceErrorAccessFailure,
+    AWSServiceErrorAuthMissingFailure,
+    AWSServiceErrorThrottling,
+    AWSServiceErrorThrottlingException,
+};
 
 @class AWSEndpoint;
 
@@ -28,6 +54,8 @@ FOUNDATION_EXPORT NSString *const AWSiOSSDKVersion;
  An abstract representation of AWS services.
  */
 @interface AWSService : NSObject
+
++ (NSDictionary<NSString *, NSNumber *> *)errorCodeDictionary;
 
 @end
 
@@ -52,10 +80,6 @@ FOUNDATION_EXPORT NSString *const AWSiOSSDKVersion;
  */
 + (instancetype)defaultServiceManager;
 
-- (AWSService *)serviceForKey:(id)key __attribute__ ((deprecated("Use '+ SERVICEForKey:' in each service client instead. e.g. '+ S3ForKey:' in AWSS3")));
-- (void)setService:(AWSService *)service forKey:(id)key __attribute__ ((deprecated("Use '+ registerSERVICEWithConfiguration:forKey:' in each service client instead. e.g. '+ registerS3WithConfiguration:forKey' in AWSS3")));
-- (void)removeServiceForKey:(id)key __attribute__ ((deprecated("Use '+ removeSERVICEForKey:' in each service client instead. e.g. '+ removeS3ForKey:' in AWSS3")));
-
 @end
 
 #pragma mark - AWSServiceConfiguration
@@ -69,6 +93,7 @@ FOUNDATION_EXPORT NSString *const AWSiOSSDKVersion;
 @property (nonatomic, strong, readonly) id<AWSCredentialsProvider> credentialsProvider;
 @property (nonatomic, strong, readonly) AWSEndpoint *endpoint;
 @property (nonatomic, readonly) NSString *userAgent;
+@property (nonatomic, readonly) BOOL localTestingEnabled;
 
 + (NSString *)baseUserAgent;
 
@@ -77,10 +102,16 @@ FOUNDATION_EXPORT NSString *const AWSiOSSDKVersion;
 - (instancetype)initWithRegion:(AWSRegionType)regionType
            credentialsProvider:(id<AWSCredentialsProvider>)credentialsProvider;
 
-- (void)addUserAgentProductToken:(NSString *)productToken;
+- (instancetype)initWithRegion:(AWSRegionType)regionType
+                   serviceType:(AWSServiceType)serviceType
+           credentialsProvider:(id<AWSCredentialsProvider>)credentialsProvider
+           localTestingEnabled:(BOOL)localTestingEnabled;
 
-+ (instancetype)configurationWithRegion:(AWSRegionType)regionType
-                    credentialsProvider:(id<AWSCredentialsProvider>)credentialsProvider __attribute__ ((deprecated("Use '- initWithRegion:credentialsProvider:' instead.")));
+- (instancetype)initWithRegion:(AWSRegionType)regionType
+                      endpoint:(AWSEndpoint *)endpoint
+           credentialsProvider:(id<AWSCredentialsProvider>)credentialsProvider;
+
+- (void)addUserAgentProductToken:(NSString *)productToken;
 
 @end
 
@@ -95,6 +126,9 @@ FOUNDATION_EXPORT NSString *const AWSiOSSDKVersion;
 @property (nonatomic, readonly) NSURL *URL;
 @property (nonatomic, readonly) NSString *hostName;
 @property (nonatomic, readonly) BOOL useUnsafeURL;
+@property (nonatomic, readonly) NSNumber *portNumber;
+
++ (NSString *)regionNameFromType:(AWSRegionType)regionType;
 
 - (instancetype)initWithRegion:(AWSRegionType)regionType
                        service:(AWSServiceType)serviceType
@@ -103,5 +137,17 @@ FOUNDATION_EXPORT NSString *const AWSiOSSDKVersion;
 - (instancetype)initWithRegion:(AWSRegionType)regionType
                        service:(AWSServiceType)serviceType
                            URL:(NSURL *)URL;
+
+- (instancetype)initWithRegion:(AWSRegionType)regionType
+                   serviceName:(NSString *)serviceName
+                           URL:(NSURL *)URL;
+
+- (instancetype)initWithURL:(NSURL *)URL;
+
+- (instancetype)initWithURLString:(NSString *)URLString;
+
+- (instancetype)initLocalEndpointWithRegion:(AWSRegionType)regionType
+                                    service:(AWSServiceType)serviceType
+                               useUnsafeURL:(BOOL)useUnsafeURL;
 
 @end

@@ -16,7 +16,7 @@ import java.io.StringWriter;
 
 import android.util.Log;
 
-import com.crashlytics.android.Crashlytics;
+// import com.crashlytics.android.Crashlytics;
 
 /**
  * Default implementation of {@link LoggingDelegate}.
@@ -32,19 +32,18 @@ public class ReactNativeFabricLogger implements LoggingDelegate {
     return sInstance;
   }
 
-    private ReactNativeFabricLogger() {
+  private ReactNativeFabricLogger() {
   }
 
   /**
-   * Sets an application tag that is used for checking if a log line is loggable and also
-   * to prefix to all log lines.
+   * Sets an application tag that is used for checking if a log line is loggable
+   * and also to prefix to all log lines.
    *
    * @param tag the tag
    */
   public void setApplicationTag(String tag) {
     mApplicationTag = tag;
   }
-
 
   @Override
   public void setMinimumLoggingLevel(int level) {
@@ -112,8 +111,9 @@ public class ReactNativeFabricLogger implements LoggingDelegate {
   }
 
   /**
-   * <p> Note: this gets forwarded to {@code android.util.Log.e} as {@code android.util.Log.wtf}
-   * might crash the app.
+   * <p>
+   * Note: this gets forwarded to {@code android.util.Log.e} as
+   * {@code android.util.Log.wtf} might crash the app.
    */
   @Override
   public void wtf(String tag, String msg) {
@@ -121,8 +121,9 @@ public class ReactNativeFabricLogger implements LoggingDelegate {
   }
 
   /**
-   * <p> Note: this gets forwarded to {@code android.util.Log.e} as {@code android.util.Log.wtf}
-   * might crash the app.
+   * <p>
+   * Note: this gets forwarded to {@code android.util.Log.e} as
+   * {@code android.util.Log.wtf} might crash the app.
    */
   @Override
   public void wtf(String tag, String msg, Throwable tr) {
@@ -138,7 +139,7 @@ public class ReactNativeFabricLogger implements LoggingDelegate {
     if (BuildConfig.DEBUG) {
       Log.println(priority, prefixTag(tag), msg);
     } else {
-      Crashlytics.log(priority, prefixTag(tag), msg);
+      // Crashlytics.log(priority, prefixTag(tag), msg);
     }
   }
 
@@ -146,7 +147,7 @@ public class ReactNativeFabricLogger implements LoggingDelegate {
     if (BuildConfig.DEBUG) {
       Log.println(priority, prefixTag(tag), getMsg(msg, tr));
     } else {
-      Crashlytics.log(priority, prefixTag(tag), msg);
+      // Crashlytics.log(priority, prefixTag(tag), msg);
     }
   }
 

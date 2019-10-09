@@ -10,12 +10,8 @@
 
 #import "AWSBolts.h"
 
-NSInteger const kAWSMultipleErrorsError = 80175001;
+NS_ASSUME_NONNULL_BEGIN
 
-@implementation AWSBolts
+NSString *const AWSBoltsFrameworkVersionString = @"1.8.4";
 
-+ (NSString *)version {
-    return AWS_BOLTS_VERSION;
-}
-
-@end
+NS_ASSUME_NONNULL_END
