@@ -13,7 +13,7 @@ jobs:
       - run:
           name: install-dependencies
           command: yarn
-     - run:
+      - run:
           name: jetify androidx
           command: npx jetify
       - save_cache:
