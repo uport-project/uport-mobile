@@ -94,8 +94,8 @@ jobs:
 
       - restore_cache:
           keys:
-            - android-{{ arch }}-v4-{{ checksum "build.gradle" }}
-            - android-{{ arch }}-v4
+            - android-{{ arch }}-v5-{{ checksum "build.gradle" }}
+            - android-{{ arch }}-v5
       - run:
           name: ensure daemon is fresh
           command: ./gradlew --stop
@@ -103,7 +103,7 @@ jobs:
           name: get android dependencies
           command: ./gradlew :app:dependencies androidDependencies
       - save_cache:
-          key: android-{{ arch }}-v4-{{ checksum "build.gradle" }}
+          key: android-{{ arch }}-v5-{{ checksum "build.gradle" }}
           paths:
             - .gradle
             - ~/.gradle
@@ -131,8 +131,8 @@ jobs:
 
       - restore_cache:
           keys:
-            - android-{{ arch }}-v4-{{ checksum "build.gradle" }}
-            - android-{{ arch }}-v4
+            - android-{{ arch }}-v5-{{ checksum "build.gradle" }}
+            - android-{{ arch }}-v5
       - run:
           name: ensure daemon is fresh
           command: ./gradlew --stop
