@@ -25,6 +25,7 @@ Object {
   "requestId": undefined,
   "requestItems": Array [],
   "statsMessage": "You have never interacted with Uport Test Labs",
+  "target": undefined,
   "title": "Create Account",
   "verifiedCredentials": Array [],
 }
@@ -55,6 +56,7 @@ Object {
   "requestId": undefined,
   "requestItems": Array [],
   "statsMessage": "You have never interacted with Uport Test Labs",
+  "target": undefined,
   "title": "Share to login",
   "verifiedCredentials": Array [],
 }
@@ -95,6 +97,7 @@ Object {
   "requestId": undefined,
   "requestItems": Array [],
   "statsMessage": "You have never interacted with Uport Test Labs",
+  "target": undefined,
   "title": "Share to login",
   "verifiedCredentials": Array [],
 }
@@ -136,6 +139,7 @@ Object {
     },
   ],
   "statsMessage": "You have never interacted with Uport Test Labs",
+  "target": undefined,
   "title": "Share to login",
   "verifiedCredentials": Array [],
 }
@@ -166,6 +170,7 @@ Object {
   "requestId": undefined,
   "requestItems": Array [],
   "statsMessage": "You have never interacted with Uport Test Labs",
+  "target": undefined,
   "title": "Share to login",
   "verifiedCredentials": Array [
     Object {

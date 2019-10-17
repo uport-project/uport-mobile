@@ -28,6 +28,7 @@ const DisclosureCardProps = {
   verifiedCredentials: [],
   missingCredentials: [],
   error: null,
+  target: 'Test'
 }
 
 describe('Disclosure Request Card', () => {
