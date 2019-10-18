@@ -28,7 +28,7 @@ exports[`renders a Scanner Screen 1`] = `
       style={
         Object {
           "alignItems": undefined,
-          "backgroundColor": "#6A54D1",
+          "backgroundColor": "#5952ff",
           "borderRadius": undefined,
           "flex": undefined,
           "flexDirection": undefined,

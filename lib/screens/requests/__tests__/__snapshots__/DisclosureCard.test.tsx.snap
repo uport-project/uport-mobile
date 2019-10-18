@@ -924,7 +924,7 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#6A54D1",
+                  "backgroundColor": "#5952ff",
                   "borderRadius": 8,
                   "maxWidth": 300,
                   "padding": 15,
@@ -2219,7 +2219,7 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#6A54D1",
+                  "backgroundColor": "#5952ff",
                   "borderRadius": 8,
                   "maxWidth": 300,
                   "padding": 15,
@@ -3405,7 +3405,7 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#6A54D1",
+                  "backgroundColor": "#5952ff",
                   "borderRadius": 8,
                   "maxWidth": 300,
                   "padding": 15,
@@ -4983,7 +4983,7 @@ Array [
               style={
                 Object {
                   "alignItems": "center",
-                  "backgroundColor": "#6A54D1",
+                  "backgroundColor": "#5952ff",
                   "borderRadius": 8,
                   "maxWidth": 300,
                   "padding": 15,

@@ -373,7 +373,7 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi with arg
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#6A54D1",
+              "backgroundColor": "#5952ff",
               "borderRadius": 8,
               "padding": 15,
             }
@@ -818,7 +818,7 @@ exports[`TransactionCard MetaIdentityManager renders correctly with abi without 
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#6A54D1",
+              "backgroundColor": "#5952ff",
               "borderRadius": 8,
               "padding": 15,
             }
@@ -1195,7 +1195,7 @@ exports[`TransactionCard MetaIdentityManager renders correctly with both client 
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#6A54D1",
+              "backgroundColor": "#5952ff",
               "borderRadius": 8,
               "padding": 15,
             }
@@ -1983,7 +1983,7 @@ exports[`TransactionCard MetaIdentityManager renders correctly with destination 
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#6A54D1",
+              "backgroundColor": "#5952ff",
               "borderRadius": 8,
               "padding": 15,
             }
@@ -2363,7 +2363,7 @@ exports[`TransactionCard MetaIdentityManager renders correctly with only request
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#6A54D1",
+              "backgroundColor": "#5952ff",
               "borderRadius": 8,
               "padding": 15,
             }
@@ -2743,7 +2743,7 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#6A54D1",
+              "backgroundColor": "#5952ff",
               "borderRadius": 8,
               "padding": 15,
             }
@@ -3123,7 +3123,7 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#6A54D1",
+              "backgroundColor": "#5952ff",
               "borderRadius": 8,
               "padding": 15,
             }
@@ -3503,7 +3503,7 @@ exports[`TransactionCard MetaIdentityManager renders correctly with request and 
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#6A54D1",
+              "backgroundColor": "#5952ff",
               "borderRadius": 8,
               "padding": 15,
             }
@@ -4003,7 +4003,7 @@ exports[`TransactionCard keyPair renders correctly with abi with args and a no v
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#6A54D1",
+              "backgroundColor": "#5952ff",
               "borderRadius": 8,
               "padding": 15,
             }
@@ -4525,7 +4525,7 @@ exports[`TransactionCard keyPair renders correctly with abi without args and val
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#6A54D1",
+              "backgroundColor": "#5952ff",
               "borderRadius": 8,
               "padding": 15,
             }
@@ -4979,7 +4979,7 @@ exports[`TransactionCard keyPair renders correctly with both client and destinat
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#6A54D1",
+              "backgroundColor": "#5952ff",
               "borderRadius": 8,
               "padding": 15,
             }
@@ -5921,7 +5921,7 @@ exports[`TransactionCard keyPair renders correctly with destination being valida
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#6A54D1",
+              "backgroundColor": "#5952ff",
               "borderRadius": 8,
               "padding": 15,
             }
@@ -6378,7 +6378,7 @@ exports[`TransactionCard keyPair renders correctly with only request 1`] = `
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#6A54D1",
+              "backgroundColor": "#5952ff",
               "borderRadius": 8,
               "padding": 15,
             }
@@ -6835,7 +6835,7 @@ exports[`TransactionCard keyPair renders correctly with request and a 0 value 1`
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#6A54D1",
+              "backgroundColor": "#5952ff",
               "borderRadius": 8,
               "padding": 15,
             }
@@ -7292,7 +7292,7 @@ exports[`TransactionCard keyPair renders correctly with request and a value 1`] 
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#6A54D1",
+              "backgroundColor": "#5952ff",
               "borderRadius": 8,
               "padding": 15,
             }
@@ -7879,7 +7879,7 @@ exports[`TransactionCard keyPair renders correctly with request and a value with
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "#6A54D1",
+              "backgroundColor": "#5952ff",
               "borderRadius": 8,
               "opacity": 0.2,
               "padding": 15,
