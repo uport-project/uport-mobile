@@ -91,7 +91,7 @@ export const DisclosureCard: React.FC<DisclosureRequestModelType> = requestModel
               <Text type={Text.Types.Body}>{requestModel.description}</Text>
             </Container>
           )}
-          {requestModel.requestItems.length > 0 && (
+          { requestModel.requestItems.length > 0 ? (
             <Section noTopBorder noTopMargin>
               {requestModel.requestItems.map((item: any, index: number) => {
                 return (
@@ -101,7 +101,12 @@ export const DisclosureCard: React.FC<DisclosureRequestModelType> = requestModel
                 )
               })}
             </Section>
-          )}
+          ) : requestModel.target && (
+            <Section noTopBorder noTopMargin>
+              <ListItem key={'did'} title={'Your uPort identifier'} last={true}>
+                <Text type={Text.Types.Body}>{`${requestModel.target.slice(0, 6)}...${requestModel.target.slice(requestModel.target.length-6, requestModel.target.length)}`}</Text>
+              </ListItem>
+            </Section> ) }
           {requestModel.verifiedCredentials.length > 0 && (
             <Section noTopBorder noTopMargin>
               {requestModel.verifiedCredentials.map((vc: any, index: number) => {

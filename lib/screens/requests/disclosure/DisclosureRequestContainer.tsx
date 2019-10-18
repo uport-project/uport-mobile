@@ -108,6 +108,7 @@ const mapStateToProps = (state: any) => {
     stats = Mori.toJs(Mori.get(interactionStats(state), request.client_id)) || 0
     shareStats = { shared: stats.share || 0 }
   }
+  let target = request.target ? request.target.split(':')[2] : null
   return {
     currentIdentity,
     client,
@@ -133,6 +134,7 @@ const mapStateToProps = (state: any) => {
     snsRegistered: !!endpointArn(state),
     ethBalance,
     usdBalance,
+    target
   }
 }
 

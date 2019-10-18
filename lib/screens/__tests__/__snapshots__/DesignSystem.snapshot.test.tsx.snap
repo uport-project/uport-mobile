@@ -3403,7 +3403,7 @@ exports[`DesignSystem renders with props 1`] = `
                     style={
                       Object {
                         "alignItems": "center",
-                        "backgroundColor": "#6A54D1",
+                        "backgroundColor": "#5952ff",
                         "borderRadius": 8,
                         "padding": 15,
                       }
@@ -3902,7 +3902,7 @@ exports[`DesignSystem renders with props 1`] = `
                       Object {
                         "alignItems": "center",
                         "backgroundColor": "#FFFFFF",
-                        "borderColor": "#6A54D1",
+                        "borderColor": "#5952ff",
                         "borderRadius": 8,
                         "borderWidth": 2,
                         "padding": 15,
