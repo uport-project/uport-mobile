@@ -17,6 +17,7 @@ export const COLORS = {
   WASHED_GREEN: '#3DCF8A',
   SUNNY_ORANGE: '#E89835',
   TRANSPARENT: 'transparent',
+  BLURPLE: '#5952ff'
 }
 
 /**
@@ -81,13 +82,13 @@ const DefaultTheme: Kancha.ThemeStatic = {
      * Not sure of this is harder to read than just showing the keys?
      */
     primary: ThemeColor(
-      COLORS.ROYAL_PURPLE,
+      COLORS.BLURPLE,
       COLORS.CHARCOAL,
       COLORS.WHITE,
       COLORS.MEDIUM_GREY,
       COLORS.LIGHT_GREY,
       COLORS.MEDIUM_GREY,
-      COLORS.ROYAL_PURPLE,
+      COLORS.BLURPLE,
       COLORS.WHITE,
       COLORS.ROYAL_PURPLE,
       COLORS.ROYAL_PURPLE,
