@@ -1,5 +1,12 @@
 # Change Log
 
+## [v479](https://github.com/uport-project/uport-mobile/tree/v479) (2019-10-18)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v478...v479)
+
+**Merged pull requests:**
+
+- Pass target address into disclosure card [\#188](https://github.com/uport-project/uport-mobile/pull/188) ([aldigjo](https://github.com/aldigjo))
+
 ## [v478](https://github.com/uport-project/uport-mobile/tree/v478) (2019-10-01)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v477...v478)
 
