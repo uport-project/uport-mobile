@@ -617,7 +617,7 @@ exports[`ConnectionCard renders correctly with a complete profile 1`] = `
           },
           Array [
             Object {
-              "backgroundColor": "rgba(91,84,199,1)",
+              "backgroundColor": "#5952ff",
               "padding": 15,
             },
             undefined,
@@ -1272,7 +1272,7 @@ exports[`ConnectionCard renders correctly with an unkown contact 1`] = `
           },
           Array [
             Object {
-              "backgroundColor": "rgba(91,84,199,1)",
+              "backgroundColor": "#5952ff",
               "padding": 15,
             },
             undefined,

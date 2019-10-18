@@ -18,6 +18,7 @@ export interface VerifiableClaimType {
 }
 
 export interface DisclosureRequestModelType {
+  target: string,
   requestId: string
   componentId: string
   title: string
@@ -106,6 +107,7 @@ const DisclosureRequestModel = (props: any): DisclosureRequestModelType | null =
    */
   const disclosureRequestCommon = {
     requestId: props.requestId,
+    target: props.target,
     componentId: props.componentId,
     appBranding: {
       profileImage: props.client && props.client.avatar,
