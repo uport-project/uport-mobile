@@ -22,6 +22,7 @@ export function registerScreens(redux: any) {
   registerComponentWithRedux(redux)(SCREENS.Profile, require('./Profile').default)
   registerComponentWithRedux(redux)(SCREENS.DesignSystem, require('./DesignSystem').default)
   registerComponentWithRedux(redux)(SCREENS.Scanner, require('./Scanner').default)
+  registerComponentWithRedux(redux)(SCREENS.NavBarTitle, require('uPortMobile/lib/components/shared/NavBarTitle').default)
 
   /**
    * Onboarding screens

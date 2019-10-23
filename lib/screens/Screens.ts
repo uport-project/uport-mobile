@@ -2,6 +2,7 @@
  * Constant of all the screens in the app
  */
 export default {
+  NavBarTitle: 'NavBarTitle',
   Dashboard: 'Dashboard',
   Credentials: 'Credentials',
   Credential: 'Credential',
