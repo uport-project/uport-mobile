@@ -120,13 +120,14 @@ const navBarText = (title: string, noBorder?: boolean) => {
   return {
     noBorder: noBorder && noBorder,
     title: {
-      text: title,
-      color: Theme.colors.inverted.text,
-    },
-    largeTitle: {
-      visible: true,
-      color: Theme.colors.inverted.text,
-    },
+      component: {
+        name: SCREENS.NavBarTitle,
+        alignment: 'fill',
+        passProps: {
+          title: title
+        }
+      }
+    }
   }
 }
 
@@ -248,13 +249,14 @@ export async function startMain() {
                             topBar: {
                               rightButtons: [rightButtonsCredentialScreen],
                               title: {
-                                text: 'Credentials',
-                                color: Theme.colors.inverted.text,
-                              },
-                              largeTitle: {
-                                visible: true,
-                                color: Theme.colors.inverted.text,
-                              },
+                                component: {
+                                  name: SCREENS.NavBarTitle,
+                                  alignment: 'fill',
+                                  passProps: {
+                                    title : 'Credentials'
+                                  }
+                                }
+                              }
                             },
                             bottomTab: {
                               icon: credentialsIcon,
