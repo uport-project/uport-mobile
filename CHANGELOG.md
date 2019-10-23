@@ -1,5 +1,12 @@
 # Change Log
 
+## [v480](https://github.com/uport-project/uport-mobile/tree/v480) (2019-10-23)
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v479...v480)
+
+**Merged pull requests:**
+
+- Custom nav bar title component [\#189](https://github.com/uport-project/uport-mobile/pull/189) ([aldigjo](https://github.com/aldigjo))
+
 ## [v479](https://github.com/uport-project/uport-mobile/tree/v479) (2019-10-18)
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v478...v479)
 
