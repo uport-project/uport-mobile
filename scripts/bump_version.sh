@@ -26,7 +26,7 @@ cd ${IOS_DIR} ; agvtool new-version -all ${new_version} ; cd -
 echo "generate changelog"
 
 cd ${ROOT_DIR}
-github_changelog_generator --no-issues --max-issues=200 --future-release=v${new_version}
+github_changelog_generator -u uport-project -p uport-mobile --no-issues --max-issues=200 --future-release=v${new_version}
 cd -
 
 echo "commit"
