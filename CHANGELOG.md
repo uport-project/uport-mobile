@@ -1,5 +1,13 @@
 # Changelog
 
+## [v482](https://github.com/uport-project/uport-mobile/tree/v482) (2020-01-22)
+
+[Full Changelog](https://github.com/uport-project/uport-mobile/compare/v481...v482)
+
+**Merged pull requests:**
+
+- fix\(ci\): bump fastlane on android to support new play API [\#210](https://github.com/uport-project/uport-mobile/pull/210) ([mirceanis](https://github.com/mirceanis))
+
 ## [v481](https://github.com/uport-project/uport-mobile/tree/v481) (2020-01-22)
 
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v480...v481)
@@ -80,7 +88,6 @@
 
 **Merged pull requests:**
 
-- Fixed gaslimit and network fee display issues [\#167](https://github.com/uport-project/uport-mobile/pull/167) ([simonas-notcat](https://github.com/simonas-notcat))
 - Fix padding and crashing notification [\#166](https://github.com/uport-project/uport-mobile/pull/166) ([jasonhealy](https://github.com/jasonhealy))
 - Remove codecov token from repo [\#165](https://github.com/uport-project/uport-mobile/pull/165) ([jasonhealy](https://github.com/jasonhealy))
 
@@ -116,6 +123,7 @@
 
 **Merged pull requests:**
 
+- Fixed gaslimit and network fee display issues [\#167](https://github.com/uport-project/uport-mobile/pull/167) ([simonas-notcat](https://github.com/simonas-notcat))
 - Accept credential screen + Faux Marketplace [\#160](https://github.com/uport-project/uport-mobile/pull/160) ([jasonhealy](https://github.com/jasonhealy))
 
 ## [v466](https://github.com/uport-project/uport-mobile/tree/v466) (2019-06-07)
@@ -454,6 +462,7 @@
 **Merged pull requests:**
 
 - Fix for tx card function params [\#94](https://github.com/uport-project/uport-mobile/pull/94) ([simonas-notcat](https://github.com/simonas-notcat))
+- Switch recovery screens in settings [\#87](https://github.com/uport-project/uport-mobile/pull/87) ([jasonhealy](https://github.com/jasonhealy))
 
 ## [v425](https://github.com/uport-project/uport-mobile/tree/v425) (2019-03-27)
 
@@ -486,10 +495,6 @@
 ## [v422](https://github.com/uport-project/uport-mobile/tree/v422) (2019-03-20)
 
 [Full Changelog](https://github.com/uport-project/uport-mobile/compare/v421...v422)
-
-**Merged pull requests:**
-
-- Switch recovery screens in settings [\#87](https://github.com/uport-project/uport-mobile/pull/87) ([jasonhealy](https://github.com/jasonhealy))
 
 ## [v421](https://github.com/uport-project/uport-mobile/tree/v421) (2019-03-20)
 
