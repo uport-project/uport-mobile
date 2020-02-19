@@ -182,7 +182,7 @@
     "@types/react-test-renderer": "^16.0.3",
     "babel-jest": "^24.8.0",
     "browserify": "^16.2.0",
-    "codecov": "^3.5.0",
+    "codecov": "^3.6.5",
     "derequire": "^2.0.6",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.1",
