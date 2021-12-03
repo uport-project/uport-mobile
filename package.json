@@ -18,7 +18,9 @@
     "android-release": "cd android && ./gradlew assembleRelease && cd ..",
     "package-android": "mkdir -p android/app/build/jsbundle/assets/ && mkdir -p android/app/build/jsbundle/res && react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/build/jsbundle/assets/index.android.bundle --assets-dest android/app/build/jsbundle/res",
     "package-android-release": "cd android && ./gradlew clean && cd - && mkdir -p android/app/build/jsbundle/assets/ && mkdir -p android/app/build/jsbundle/res && node node_modules/react-native/local-cli/cli.js bundle --platform android --dev false --entry-file index.js --bundle-output android/app/build/jsbundle/assets/index.android.bundle --assets-dest android/app/build/jsbundle/res && cd android && ./gradlew deliverArchives -x bundleReleaseJsAndAssets",
-    "package-android-dummy": "cd android && ./gradlew clean && cd - && yarn package-android && cd android && ./gradlew deliverArchives -x bundleReleaseJsAndAssets -PIGNORE_VAULT=true -PIGNORE_REPOSITORY_STATE=true"
+    "package-android-dummy": "cd android && ./gradlew clean && cd - && yarn package-android && cd android && ./gradlew deliverArchives -x bundleReleaseJsAndAssets -PIGNORE_VAULT=true -PIGNORE_REPOSITORY_STATE=true",
+    "start-appium-server": "./testsuites/terminal.scpt",
+    "run-appium-tests": "python testsuites/test.py"
   },
   "jest": {
     "preset": "react-native",
@@ -180,6 +182,7 @@
     "@types/react-native-vector-icons": "^4.6.4",
     "@types/react-redux": "^7.0.0",
     "@types/react-test-renderer": "^16.0.3",
+    "appium": "^1.14.0",
     "babel-jest": "^24.8.0",
     "browserify": "^16.2.0",
     "codecov": "^3.5.0",
@@ -216,7 +219,8 @@
     "tslint-config-prettier": "^1.17.0",
     "tslint-eslint-rules": "^5.4.0",
     "tslint-react": "^3.6.0",
-    "typescript": "^3.2.4"
+    "typescript": "^3.2.4",
+    "wd": "^1.11.3"
   },
   "browser": {
     "stream": false,

@@ -177,6 +177,12 @@ jobs:
             curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
       - attach_workspace:
           at: ~/uport-mobile
+      - run:
+            name: Install appium server
+            command: |
+              npm install -g appium
+              npm install wd
+              pip install Appium-Python-Client      
       - restore_cache:
           keys:
             - bundle-{{ arch }}-v4-ios-{{ checksum "Gemfile.lock" }}
@@ -198,6 +204,17 @@ jobs:
       - run:
           name: Fastlane
           command: cd ~/uport-mobile/ios && bundle exec fastlane buildTheApp
+      - run:
+          name: Build debug version of app
+          command: |
+            yarn global add react-native-cli
+            yarn
+            react-native run-ios
+      - run:      
+          command: |
+            npm run start-appium-server
+            sleep 5
+            npm run run-appium-tests
       - persist_to_workspace:
           root: ~/uport-mobile
           paths:
